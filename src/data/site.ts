@@ -18,7 +18,7 @@ export const site = {
     // Platzhalter – vor dem Launch ausfüllen (§ 5 DDG: ladungsfähige Anschrift + E-Mail sind Pflicht)
     street: '[Straße Hausnummer]',
     zip: '[PLZ]',
-    email: '[kontakt@domain.de]',
+    email: 'dominik.jaekel95@gmail.com',
   },
 
   // Fachliche Prüfung (E-E-A-T). Name/Qualifikation liefert Michi.

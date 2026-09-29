@@ -5,6 +5,8 @@ import Faq from '../../components/Faq.astro';
 import Footnotes from '../../components/Footnotes.astro';
 import AuthorBox from '../../components/AuthorBox.astro';
 import ProductTeaser from '../../components/ProductTeaser.astro';
+import AffiliateLinks from '../../components/AffiliateLinks.astro';
+import type { AffiliateKey } from '../../data/affiliate';
 import { getCollection, render } from 'astro:content';
 import { site } from '../../data/site';
 
@@ -73,6 +75,16 @@ const jsonLd = [
     </div>
 
     <ProductTeaser position={`artikel-${entry.id}`} />
+
+    {entry.data.affiliate.length > 0 && (
+      <AffiliateLinks
+        class="my-10"
+        products={entry.data.affiliate as AffiliateKey[]}
+        title={entry.data.affiliateTitle ?? 'Beispiele für Produkte'}
+        intro={entry.data.affiliateIntro ?? 'Beispiele, keine Empfehlung einer Marke. Das Set gibt es noch nicht – die Bausteine gibt es einzeln.'}
+        position={`artikel-${entry.id}`}
+      />
+    )}
 
     {entry.data.faq.length > 0 && <Faq items={entry.data.faq} id="artikel-faq" title="Häufige Fragen" />}
 

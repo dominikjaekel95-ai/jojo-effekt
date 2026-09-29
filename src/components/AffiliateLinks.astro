@@ -1,0 +1,40 @@
+---
+/**
+ * Liste mit Amazon-Partnerlinks. Jeder Link ist als „Werbung“ gekennzeichnet, öffnet in neuem Tab,
+ * trägt rel="sponsored nofollow" und wird per Plausible-Klasse als Event „Affiliate Klick“ gezählt.
+ * Unter der Liste steht der Amazon-Pflichtsatz. Regeln: src/data/affiliate.ts und CLAIMS.md Abschnitt E.
+ */
+import { affiliate, affiliateUrl, type AffiliateKey } from '../data/affiliate';
+
+interface Props {
+  /** Schlüssel aus affiliate.products, in Anzeigereihenfolge */
+  products: readonly AffiliateKey[];
+  title: string;
+  /** Einleitungssatz über der Liste */
+  intro?: string;
+  /** Kennung für die Auswertung, z. B. "danke" oder "artikel-protein-abnehmspritze" */
+  position: string;
+  class?: string;
+}
+const { products, title, intro, position, class: cls = '' } = Astro.props;
+const items = products.map((key) => ({ key, ...affiliate.products[key] }));
+---
+<aside class={`rounded-xl2 border border-line bg-white p-6 text-left ${cls}`} aria-labelledby={`aff-${position}`}>
+  <p class="eyebrow">Werbung</p>
+  <h2 id={`aff-${position}`} class="mt-2 text-xl leading-snug text-ink">{title}</h2>
+  {intro && <p class="mt-2 text-sm text-ink-2">{intro}</p>}
+  <ul class="mt-4 divide-y divide-line">
+    {items.map((p) => (
+      <li class="py-3">
+        <a
+          href={affiliateUrl(p.asin)}
+          rel="sponsored nofollow noopener"
+          target="_blank"
+          class={`font-semibold text-moss underline underline-offset-4 plausible-event-name=Affiliate+Klick plausible-event-asin=${p.asin} plausible-event-position=${position}`}
+        >{p.name} – bei Amazon ansehen (Werbung)</a>
+        <p class="mt-1 text-sm text-ink-2">{p.hint}</p>
+      </li>
+    ))}
+  </ul>
+  <p class="mt-4 text-xs text-ink-3">{affiliate.disclosure}</p>
+</aside>

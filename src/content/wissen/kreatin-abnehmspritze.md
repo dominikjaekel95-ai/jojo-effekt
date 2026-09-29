@@ -19,6 +19,9 @@ faq:
     a: "<p>Bei gesunden Nieren zeigen Studien über Jahre keine Schäden in üblichen Dosen. Kreatin erhöht allerdings den Laborwert Kreatinin, den Ärztinnen zur Beurteilung der Nierenfunktion nutzen – ohne dass die Nieren schlechter arbeiten. Bei bestehender Nierenerkrankung Kreatin nur nach ärztlicher Rücksprache.</p>"
   - q: "Wirkt Kreatin auch ohne Krafttraining?"
     a: "<p>Kaum. Die zugelassenen Angaben beziehen sich auf Schnellkrafttraining und auf die Verstärkung der Wirkung von Krafttraining. Wer nicht trainiert, spart sich das Geld besser.</p>"
+affiliate: ["creatineEsn", "creatineNe"]
+affiliateTitle: "Beispiele für Kreatin-Monohydrat"
+affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke. Es zählt der Rohstoff: reines Kreatin-Monohydrat, 3 g pro Tag, keine Mischungen mit Zusätzen."
 ---
 
 Zu Kreatin und Abnehmspritze gibt es im deutschsprachigen Netz fast nichts, obwohl die Kombination naheliegt: Unter GLP-1-Medikamenten gehen Muskeln verloren, und Kreatin ist das am besten untersuchte Supplement für Kraft und Training. Hier ist der Stand.

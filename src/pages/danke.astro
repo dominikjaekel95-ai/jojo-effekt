@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
+import AffiliateLinks from '../components/AffiliateLinks.astro';
 ---
 <Base title="Danke – du stehst auf der Liste" description="Vorbestellung eingetragen. Kein Geld, keine Verpflichtung. Wir melden uns, sobald die erste Charge in Produktion geht." path="/danke/" noindex>
   <section class="container-narrow py-20 text-center">
@@ -20,6 +21,13 @@ import { site } from '../data/site';
       </ol>
     </div>
     <p class="mt-8 text-ink-2">Bis dahin: <a href="/wissen/" class="font-semibold text-moss underline underline-offset-4">Was nach der Abnehmspritze passiert – mit Quellen</a></p>
+    <AffiliateLinks
+      class="mx-auto mt-8 max-w-xl"
+      products={['wheyNeutral', 'creatineNe', 'psyllium']}
+      title="Bis das Set da ist: Die Bausteine gibt es einzeln"
+      intro="Das Set gibt es noch nicht. Protein, Kreatin und Ballaststoffe gibt es aber heute schon – drei Beispiele, keine Empfehlung einer Marke."
+      position="danke"
+    />
     <p class="mt-6 text-sm font-medium text-ink">{site.doctorSentence}</p>
   </section>
 </Base>

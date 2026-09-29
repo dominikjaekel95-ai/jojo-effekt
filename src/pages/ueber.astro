@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+const title = 'Über uns: Wer hinter Nach der Spritze steht';
+const description = 'Wer die Seite macht, wie wir arbeiten, welche Quellen wir nutzen und was wir nicht behaupten. Ein Projekt aus Berlin, fachlich geprüft.';
+const jsonLd = [
+  { '@type': 'AboutPage', name: title, url: `${site.url}/ueber/`, isPartOf: { '@id': `${site.url}/#website` } },
+  { '@type': 'Person', '@id': `${site.url}/ueber/#dominik`, name: site.owner.name, jobTitle: 'Gründer', worksFor: { '@id': `${site.url}/#organization` } },
+  { '@type': 'Person', '@id': `${site.url}/ueber/#reviewer`, name: site.reviewer.name, jobTitle: site.reviewer.title },
+];
+---
+<Base title={title} description={description} path="/ueber/" jsonLd={jsonLd}>
+  <section class="container-narrow py-14">
+    <p class="eyebrow">Über uns</p>
+    <h1 class="mt-2 text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl">Wer hinter Nach der Spritze steht</h1>
+    <div class="prose-site mt-6">
+      <p>
+        Nach der Spritze ist ein Projekt von {site.owner.name} aus {site.owner.city}. Die Idee kam aus Gesprächen mit Menschen,
+        die die Abnehmspritze absetzen wollten oder mussten und keine Antwort auf die Frage fanden: Und jetzt? Die Antwort, die
+        wir bauen, ist ein 12-Wochen-Set aus Protein, Ballaststoffen, Kreatin und einem Trainingsprogramm. Ob es das Set geben
+        wird, hängt davon ab, ob genug Menschen es vorbestellen. Deshalb diese Seite.
+      </p>
+      <h2>Wie wir arbeiten</h2>
+      <ul>
+        <li><strong>Jede Zahl hat eine Quelle.</strong> Wir zitieren Originalstudien (STEP, SURMOUNT, S-LiTE, Meta-Analysen), keine Pressemeldungen über Studien. Die Quellen stehen unter jedem Artikel mit Link.</li>
+        <li><strong>Fachliche Prüfung.</strong> Alle Aussagen zu Ernährung, Training und gesundheitsbezogenen Angaben prüft {site.reviewer.name} ({site.reviewer.title}). Was er nicht vertreten würde, steht nicht auf der Seite.</li>
+        <li><strong>Nur zugelassene Angaben zum Set.</strong> Was wir über Protein, Kreatin und Ballaststoffe sagen, entspricht den in der EU zugelassenen gesundheitsbezogenen Angaben. Wir behaupten nicht, dass das Set die Spritze ersetzt oder den Jojo-Effekt verhindert.</li>
+        <li><strong>Keine Medikamentenberatung.</strong> Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt. Wir geben keine Dosierungen und keine Absetz-Anleitungen.</li>
+        <li><strong>Aktualisierung.</strong> Wenn neue Studien erscheinen, aktualisieren wir die Artikel und vermerken das Datum.</li>
+      </ul>
+      <h2>Wer schreibt</h2>
+      <p><strong>{site.owner.name}</strong> – Gründer. Recherchiert und schreibt die Artikel, baut das Set und beantwortet E-Mails persönlich.</p>
+      <p><strong>{site.reviewer.name}</strong> – {site.reviewer.title}. Fachliche Prüfung aller Inhalte, Festlegung der Mengen (Protein pro kg, Kreatin, Ballaststoffe) und der Liste „Für wen nicht“.</p>
+      <h2>Was wir mit Geld zu tun haben</h2>
+      <p>
+        Wir verdienen an dieser Seite derzeit nichts. Es gibt keine Werbung, keine Affiliate-Links, keine Kooperationen mit
+        Herstellern von Medikamenten oder Nahrungsergänzungen. Wenn das Set produziert wird, verkaufen wir es selbst. Das ist
+        unser Interessenkonflikt, und wir nennen ihn lieber, als ihn zu verstecken.
+      </p>
+      <h2>Kontakt</h2>
+      <p>Fragen, Kritik, Korrekturen: <a href={`mailto:${site.owner.email}`}>{site.owner.email}</a>. Anschrift im <a href="/impressum/">Impressum</a>.</p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,69 @@
+---
+/**
+ * Vorbestell-Formular.
+ * - Mit PUBLIC_TALLY_FORM_ID: eingebettetes Tally-Formular (EU, DSGVO-konform, cookiefrei).
+ *   In Tally unter „Settings → Redirect on completion“ die Danke-Seite eintragen: https://<domain>/danke/
+ * - Ohne ID: Platzhalter mit identischem Layout und denselben Feldern, damit Design und Ablauf prüfbar sind.
+ */
+import { site } from '../data/site';
+const id = site.tallyFormId;
+const embedSrc = id
+  ? `https://tally.so/embed/${id}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`
+  : '';
+---
+<div id="vorbestellen" class="card scroll-mt-24 border-moss/30 bg-white">
+  <p class="eyebrow">Vorbestellen</p>
+  <h3 class="mt-2 text-xl font-bold text-ink">Trag dich ein – ohne Zahlung</h3>
+  <p class="mt-2 text-sm text-ink-2">
+    Wir produzieren die erste Charge, sobald {site.preorderGoal} Vorbestellungen zusammen sind. Kein Geld jetzt,
+    keine Verpflichtung. Du bekommst als Erste Bescheid und entscheidest dann.
+  </p>
+
+  {id ? (
+    <div class="mt-5">
+      <iframe
+        data-tally-src={embedSrc}
+        loading="lazy"
+        width="100%"
+        height="520"
+        style="border:0"
+        title="Vorbestellung Nach der Spritze"
+      ></iframe>
+      <script is:inline src="https://tally.so/widgets/embed.js" async></script>
+    </div>
+  ) : (
+    <form class="mt-5 space-y-4" aria-describedby="form-hinweis" onsubmit="return false">
+      <fieldset class="space-y-4" disabled>
+        <div>
+          <label for="email" class="block text-sm font-medium text-ink">E-Mail-Adresse</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="du@beispiel.de"
+            class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2.5 text-ink placeholder:text-ink-3" />
+        </div>
+        <fieldset>
+          <legend class="text-sm font-medium text-ink">Wo stehst du gerade?</legend>
+          <div class="mt-2 grid gap-2 sm:grid-cols-3">
+            <label class="flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-sm"><input type="radio" name="status" value="nehme" /> Ich nehme aktuell</label>
+            <label class="flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-sm"><input type="radio" name="status" value="abgesetzt" /> Ich habe abgesetzt</label>
+            <label class="flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-sm"><input type="radio" name="status" value="ueberlege" /> Ich überlege</label>
+          </div>
+        </fieldset>
+        <label class="flex items-start gap-3 rounded-lg border border-moss/40 bg-moss-light/40 px-3 py-3 text-sm text-ink">
+          <input type="checkbox" name="zahlungsbereit" class="mt-0.5" />
+          <span>Ich würde {site.price.set} € für das 12-Wochen-Set zahlen.</span>
+        </label>
+        <div>
+          <label for="wunsch" class="block text-sm font-medium text-ink">Was bräuchtest du in der Zeit nach der Spritze? <span class="font-normal text-ink-3">(optional)</span></label>
+          <textarea id="wunsch" name="wunsch" rows="3" class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2.5 text-ink"></textarea>
+        </div>
+        <label class="flex items-start gap-3 text-xs text-ink-2">
+          <input type="checkbox" name="datenschutz" class="mt-0.5" />
+          <span>Ich bin einverstanden, dass meine Angaben zur Information über das Set gespeichert werden. Widerruf jederzeit. <a href="/datenschutz/" class="underline">Datenschutz</a></span>
+        </label>
+        <button type="submit" class="btn-primary w-full sm:w-auto">Vorbestellung eintragen</button>
+      </fieldset>
+      <p id="form-hinweis" class="rounded-lg border border-amber/50 bg-amber-light px-3 py-2 text-xs text-ink">
+        Platzhalter: Das Formular wird aktiv, sobald <code>PUBLIC_TALLY_FORM_ID</code> in der Umgebung gesetzt ist (siehe README).
+      </p>
+    </form>
+  )}
+</div>

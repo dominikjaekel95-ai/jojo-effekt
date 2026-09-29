@@ -1,0 +1,60 @@
+---
+import Base from '../../layouts/Base.astro';
+import Cta from '../../components/Cta.astro';
+import { getCollection } from 'astro:content';
+import { site } from '../../data/site';
+
+const artikel = (await getCollection('wissen')).sort((a, b) => a.data.order - b.data.order);
+const title = 'Wissen: Abnehmspritze absetzen, Jojo-Effekt, Muskeln erhalten';
+const description =
+  'Was nach der Abnehmspritze passiert und was nachweislich hilft: Jojo-Effekt, Absetzen, Muskelabbau, Protein, Kreatin und ein 12-Wochen-Plan. Mit Studien, fachlich geprüft.';
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    name: title,
+    description,
+    url: `${site.url}/wissen/`,
+    isPartOf: { '@id': `${site.url}/#website` },
+    hasPart: artikel.map((a) => ({ '@type': 'Article', headline: a.data.title, url: `${site.url}/wissen/${a.id}/` })),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Start', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Wissen', item: `${site.url}/wissen/` },
+    ],
+  },
+];
+---
+<Base title={title} description={description} path="/wissen/" jsonLd={jsonLd}>
+  <section class="container-wide py-14">
+    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › Wissen</nav>
+    <p class="eyebrow mt-6">Wissen</p>
+    <h1 class="mt-2 text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl">Nach der Abnehmspritze: die Fakten, mit Quellen</h1>
+    <p class="mt-4 max-w-2xl text-lg text-ink-2">
+      Was in Studien passiert, wenn die Spritze wegfällt, und was nachweislich hilft. Jede Zahl mit Quelle, jeder Artikel
+      fachlich geprüft, kein Verkaufston. Und immer: Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin
+      oder deinem Arzt.
+    </p>
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {artikel.map((a) => (
+        <a href={`/wissen/${a.id}/`} class="card group block no-underline hover:border-moss">
+          <p class="text-xs font-semibold uppercase tracking-wider text-moss">{a.data.category}</p>
+          <h2 class="mt-2 text-xl font-bold text-ink group-hover:text-moss">{a.data.title}</h2>
+          <p class="mt-2 text-ink-2">{a.data.description}</p>
+          <p class="mt-4 text-sm font-semibold text-moss">Lesen →</p>
+        </a>
+      ))}
+    </div>
+    <div class="mt-14 rounded-xl2 border border-line bg-white p-6">
+      <p class="eyebrow">Warum es diese Seite gibt</p>
+      <p class="mt-2 max-w-2xl text-ink-2">
+        Wir entwickeln ein 12-Wochen-Set für die Zeit nach der Abnehmspritze. Beim Recherchieren haben wir gemerkt: Die
+        wichtigsten Informationen zum Absetzen sind über Studien, Nachrichtenmeldungen und Anbieter-Blogs verstreut, und
+        oft widersprechen sie sich. Dieser Bereich fasst zusammen, was belegt ist. Das Set ist ein Lebensmittel mit Programm,
+        kein Medikament, und es verhindert den Jojo-Effekt nicht.
+      </p>
+      <div class="mt-4"><Cta position="wissen-hub" label="Zum 12-Wochen-Set" secondary /></div>
+    </div>
+  </section>
+</Base>

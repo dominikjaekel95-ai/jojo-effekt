@@ -1,0 +1,15 @@
+---
+import Logo from './Logo.astro';
+import { nav } from '../data/site';
+---
+<header class="sticky top-0 z-40 border-b border-line/70 bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/75">
+  <div class="container-wide flex h-16 items-center justify-between gap-4">
+    <a href="/" class="no-underline" aria-label="Nach der Spritze – Startseite"><Logo /></a>
+    <nav aria-label="Hauptnavigation" class="hidden items-center gap-6 text-sm font-medium text-ink-2 md:flex">
+      {nav.map((item) => (
+        <a href={item.href} class="hover:text-moss">{item.label}</a>
+      ))}
+    </nav>
+    <a href="/#vorbestellen" class="btn-primary !px-4 !py-2 text-sm plausible-event-name=Vorbestellen+Klick plausible-event-position=header">Vorbestellen</a>
+  </div>
+</header>

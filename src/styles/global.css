@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+/* Design-Tokens: ruhig, warm, kein Pharma-Blau. */
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --color-paper: #faf7f2;
+  --color-paper-2: #f2ede4;
+  --color-ink: #1c2430;
+  --color-ink-2: #3d4756;
+  --color-ink-3: #596374;
+  --color-line: #e3ddd2;
+
+  --color-moss: #2f6b5a;
+  --color-moss-dark: #24554a;
+  --color-moss-light: #dcebe4;
+  --color-amber: #d9962d;
+  --color-amber-dark: #8a5a12;
+  --color-amber-light: #fbefd9;
+  --color-clay: #b8563e;
+  --color-clay-light: #f7e3dc;
+
+  --radius-xl2: 1.25rem;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold transition-colors duration-150 no-underline;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+  :target {
+    scroll-margin-top: 5rem;
+  }
+  ::selection {
+    background: var(--color-moss-light);
+  }
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+    outline: 3px solid var(--color-amber);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply mx-auto w-full max-w-3xl px-4 sm:px-6;
+  }
+  .container-wide {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+  .btn-primary {
+    @apply btn bg-moss text-white hover:bg-moss-dark;
+  }
+  .btn-secondary {
+    @apply btn border border-line bg-white text-ink hover:border-moss hover:text-moss;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.14em] text-moss;
+  }
+  .h2 {
+    @apply text-2xl font-bold leading-tight tracking-tight text-ink sm:text-3xl;
+  }
+  .card {
+    @apply rounded-xl2 border border-line bg-white p-6 shadow-[0_1px_0_rgba(28,36,48,0.04)];
+  }
+  .fn {
+    @apply align-super text-[0.65em] font-semibold text-moss no-underline;
+  }
+  .prose-site {
+    @apply text-[1.05rem] leading-relaxed text-ink-2;
+  }
+  .prose-site h2 {
+    @apply mt-12 mb-4 text-2xl font-bold leading-tight tracking-tight text-ink scroll-mt-24;
+  }
+  .prose-site h3 {
+    @apply mt-8 mb-3 text-xl font-semibold text-ink;
+  }
+  .prose-site p {
+    @apply my-4;
+  }
+  .prose-site ul {
+    @apply my-4 list-disc space-y-2 pl-6;
+  }
+  .prose-site ol {
+    @apply my-4 list-decimal space-y-2 pl-6;
+  }
+  .prose-site a {
+    @apply text-moss underline decoration-moss/40 underline-offset-4 hover:decoration-moss;
+  }
+  .prose-site strong {
+    @apply font-semibold text-ink;
+  }
+  .prose-site blockquote {
+    @apply my-6 border-l-4 border-amber bg-amber-light/60 px-5 py-4 text-ink rounded-r-xl;
+  }
+  .prose-site blockquote p {
+    @apply my-0;
+  }
+  .prose-site table {
+    @apply my-6 w-full border-collapse text-sm sm:text-base;
+  }
+  .prose-site th {
+    @apply border-b-2 border-line px-3 py-2 text-left font-semibold text-ink;
+  }
+  .prose-site td {
+    @apply border-b border-line px-3 py-2 align-top;
+  }
+  .prose-site hr {
+    @apply my-10 border-line;
+  }
+  .prose-site sup a {
+    @apply no-underline font-semibold;
+  }
+}

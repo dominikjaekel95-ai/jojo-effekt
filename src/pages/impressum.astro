@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+<Base title="Impressum" description="Anbieterkennzeichnung nach § 5 DDG für Nach der Spritze." path="/impressum/">
+  <section class="container-narrow py-14">
+    <h1 class="text-3xl font-bold tracking-tight text-ink">Impressum</h1>
+    <div class="prose-site mt-6">
+      <h2>Angaben gemäß § 5 DDG</h2>
+      <p>
+        {site.owner.name}<br />
+        {site.owner.street}<br />
+        {site.owner.zip} {site.owner.city}<br />
+        Deutschland
+      </p>
+      <h2>Kontakt</h2>
+      <p>E-Mail: <a href={`mailto:${site.owner.email}`}>{site.owner.email}</a></p>
+      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>{site.owner.name}, Anschrift wie oben.</p>
+      <h2>Hinweis zum Projektstatus</h2>
+      <p>
+        Diese Website dient der Information und der Erfassung von Vorbestell-Interesse für ein geplantes Produkt. Es findet
+        derzeit kein Verkauf statt, es werden keine Zahlungen entgegengenommen und keine Verträge geschlossen. Die auf der
+        Seite genannten Preise sind geplante Preise ohne Bindungswirkung.
+      </p>
+      <h2>Haftung für Inhalte</h2>
+      <p>
+        Die Inhalte dieser Seite wurden mit größter Sorgfalt erstellt und beruhen auf den jeweils verlinkten Quellen. Für die
+        Richtigkeit, Vollständigkeit und Aktualität übernehmen wir keine Gewähr. Die Inhalte stellen keine medizinische
+        Beratung dar und ersetzen nicht das Gespräch mit einer Ärztin oder einem Arzt.
+      </p>
+      <h2>Haftung für Links</h2>
+      <p>
+        Diese Seite enthält Links zu externen Websites (u. a. Fachzeitschriften und Behörden). Auf deren Inhalte haben wir
+        keinen Einfluss; für sie ist der jeweilige Anbieter verantwortlich. Zum Zeitpunkt der Verlinkung waren keine
+        Rechtsverstöße erkennbar.
+      </p>
+      <h2>Urheberrecht</h2>
+      <p>
+        Die Inhalte und Illustrationen dieser Seite unterliegen dem deutschen Urheberrecht. Zitate aus wissenschaftlichen
+        Arbeiten sind als solche gekennzeichnet und verlinkt.
+      </p>
+      <h2>Streitbeilegung</h2>
+      <p>
+        Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+        teilzunehmen.
+      </p>
+    </div>
+  </section>
+</Base>

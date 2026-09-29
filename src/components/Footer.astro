@@ -1,0 +1,35 @@
+---
+import Logo from './Logo.astro';
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="mt-24 border-t border-line bg-paper-2">
+  <div class="container-wide grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
+    <div>
+      <Logo />
+      <p class="mt-4 max-w-md text-sm text-ink-2">
+        Ein Projekt von {site.owner.name}, {site.owner.city}. Lebensmittel und ein Ernährungs- und Trainingsprogramm –
+        kein Medikament, keine medizinische Beratung.
+      </p>
+      <p class="mt-3 max-w-md text-sm font-medium text-ink">{site.doctorSentence}</p>
+    </div>
+    <nav aria-label="Seiten" class="text-sm">
+      <p class="eyebrow mb-3">Seite</p>
+      <ul class="space-y-2">
+        <li><a href="/#set" class="hover:text-moss">Das Set</a></li>
+        <li><a href="/#preis" class="hover:text-moss">Preis und Vorbestellung</a></li>
+        <li><a href="/#faq" class="hover:text-moss">Häufige Fragen</a></li>
+        <li><a href="/wissen/" class="hover:text-moss">Wissen: Absetzen, Jojo-Effekt, Muskeln</a></li>
+        <li><a href="/ueber/" class="hover:text-moss">Über uns</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Rechtliches" class="text-sm">
+      <p class="eyebrow mb-3">Rechtliches</p>
+      <ul class="space-y-2">
+        <li><a href="/impressum/" class="hover:text-moss">Impressum</a></li>
+        <li><a href="/datenschutz/" class="hover:text-moss">Datenschutz</a></li>
+      </ul>
+      <p class="mt-6 text-xs text-ink-3">© {year} {site.name}. Keine Cookies, keine Tracker mit Profilbildung.</p>
+    </nav>
+  </div>
+</footer>

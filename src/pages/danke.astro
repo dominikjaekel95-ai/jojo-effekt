@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+<Base title="Danke – du stehst auf der Liste" description="Vorbestellung eingetragen. Kein Geld, keine Verpflichtung. Wir melden uns, sobald die erste Charge in Produktion geht." path="/danke/" noindex>
+  <section class="container-narrow py-20 text-center">
+    <p class="eyebrow">Danke</p>
+    <h1 class="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">Du stehst auf der Liste.</h1>
+    <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">
+      Ehrlich gesagt: Es gibt das Set noch nicht. Wir produzieren die erste Charge, sobald {site.preorderGoal} Menschen sagen,
+      dass sie es wollen. Du hast nichts bezahlt und bist zu nichts verpflichtet. Sobald es losgeht, bekommst du als Erste
+      eine E-Mail mit Preis und Bestellmöglichkeit – und entscheidest dann.
+    </p>
+    <div class="mx-auto mt-8 max-w-xl rounded-xl2 border border-line bg-white p-6 text-left text-sm text-ink-2">
+      <p class="font-semibold text-ink">Was jetzt passiert</p>
+      <ol class="mt-2 list-decimal space-y-1 pl-5">
+        <li>Du bekommst eine Bestätigungs-E-Mail. Bitte klick den Link darin, sonst dürfen wir dir nicht schreiben.</li>
+        <li>Wir melden uns nur mit Neuigkeiten zum Set. Kein Newsletter, keine Weitergabe.</li>
+        <li>Du kannst dich jederzeit per E-Mail austragen lassen.</li>
+      </ol>
+    </div>
+    <p class="mt-8 text-ink-2">Bis dahin: <a href="/wissen/" class="font-semibold text-moss underline underline-offset-4">Was nach der Abnehmspritze passiert – mit Quellen</a></p>
+    <p class="mt-6 text-sm font-medium text-ink">{site.doctorSentence}</p>
+  </section>
+</Base>

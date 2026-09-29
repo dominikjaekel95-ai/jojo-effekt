@@ -1,0 +1,88 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+<Base title="Datenschutzerklärung" description="Welche Daten Nach der Spritze verarbeitet: Hosting bei Vercel, Vorbestell-Formular bei Tally, Statistik mit Plausible – ohne Cookies." path="/datenschutz/">
+  <section class="container-narrow py-14">
+    <h1 class="text-3xl font-bold tracking-tight text-ink">Datenschutzerklärung</h1>
+    <p class="mt-3 text-sm text-ink-3">Stand: 30. September 2026</p>
+    <div class="prose-site mt-6">
+      <h2>1. Verantwortlicher</h2>
+      <p>
+        {site.owner.name}, {site.owner.street}, {site.owner.zip} {site.owner.city}, E-Mail:
+        <a href={`mailto:${site.owner.email}`}>{site.owner.email}</a> (siehe <a href="/impressum/">Impressum</a>).
+      </p>
+
+      <h2>2. Das Wichtigste in Kürze</h2>
+      <ul>
+        <li>Diese Seite setzt <strong>keine Cookies</strong> und nutzt keine Tracking-Dienste mit Profilbildung. Deshalb gibt es kein Cookie-Banner.</li>
+        <li>Wir verarbeiten deine E-Mail-Adresse nur, wenn du dich selbst in die Vorbestell-Liste einträgst.</li>
+        <li>Alle eingesetzten Dienstleister verarbeiten Daten in der EU oder unter EU-Standardvertragsklauseln.</li>
+      </ul>
+
+      <h2>3. Hosting (Vercel)</h2>
+      <p>
+        Die Seite wird bei Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA, gehostet; die Auslieferung erfolgt
+        über Server in Frankfurt am Main. Beim Aufruf werden technisch notwendige Daten (IP-Adresse, Zeitpunkt, aufgerufene
+        Seite, Browsertyp) in Server-Logs verarbeitet, um die Seite auszuliefern und Angriffe abzuwehren. Rechtsgrundlage ist
+        Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren Betrieb). Die Übermittlung in die USA stützt sich
+        auf EU-Standardvertragsklauseln und das EU-US Data Privacy Framework, dem Vercel angehört. Log-Daten werden nach
+        kurzer Zeit gelöscht.
+      </p>
+
+      <h2>4. Vorbestell-Formular (Tally)</h2>
+      <p>
+        Das Formular für die Vorbestell-Liste wird von Tally BV, Sint-Baafsplein 2, 9000 Gent, Belgien, bereitgestellt und
+        als eingebetteter Rahmen (iframe) geladen. Beim Laden des Formulars wird deine IP-Adresse an Tally übermittelt. Wenn
+        du das Formular absendest, speichert Tally in unserem Auftrag die eingegebenen Daten: E-Mail-Adresse, deine Angabe
+        zum Therapiestatus, deine Angabe zur Zahlungsbereitschaft und optional deinen Freitext.
+      </p>
+      <p>
+        <strong>Zweck:</strong> Erfassung des Interesses an dem geplanten Set und Information über Produktionsstart, Preis und
+        Bestellmöglichkeit. <strong>Rechtsgrundlage:</strong> deine Einwilligung, Art. 6 Abs. 1 lit. a DSGVO. Du bestätigst
+        deine E-Mail-Adresse per Double-Opt-in. <strong>Widerruf:</strong> jederzeit per E-Mail an
+        {site.owner.email}; wir löschen deine Daten dann umgehend. <strong>Speicherdauer:</strong> bis zum Widerruf,
+        spätestens 12 Monate nach Abschluss des Projekts. Mit Tally besteht ein Auftragsverarbeitungsvertrag; Tally hostet
+        in der EU.
+      </p>
+
+      <h2>5. Reichweitenmessung (Plausible Analytics)</h2>
+      <p>
+        Wir nutzen Plausible Analytics (Plausible Insights OÜ, Västriku tn 2, 50403 Tartu, Estland), gehostet in der EU.
+        Plausible setzt keine Cookies und speichert keine personenbezogenen Daten. Die IP-Adresse wird nur flüchtig zur
+        Bildung eines täglich wechselnden, nicht rückführbaren Kennzeichens verwendet und nicht gespeichert. Erfasst werden
+        aufgerufene Seiten, Verweisquelle, Gerätetyp, Land und Klicks auf den Button „Vorbestellen“. Rechtsgrundlage ist Art.
+        6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, die Nutzung der Seite zu verstehen). Ein Widerspruch ist nicht nötig,
+        weil keine personenbezogenen Daten verarbeitet werden; Details unter
+        <a href="https://plausible.io/data-policy" rel="noopener" target="_blank">plausible.io/data-policy</a>.
+      </p>
+
+      <h2>6. Schriftarten</h2>
+      <p>Die verwendete Schriftart wird von unserem eigenen Server geladen. Es findet keine Verbindung zu Google Fonts oder anderen Anbietern statt.</p>
+
+      <h2>7. E-Mail-Kontakt</h2>
+      <p>
+        Wenn du uns per E-Mail schreibst, verarbeiten wir deine Angaben zur Beantwortung der Anfrage (Art. 6 Abs. 1 lit. b
+        bzw. f DSGVO). Wir löschen die Korrespondenz, sobald die Anfrage erledigt ist und keine Aufbewahrungspflichten
+        entgegenstehen.
+      </p>
+
+      <h2>8. Externe Links</h2>
+      <p>
+        Die Seite verlinkt auf Studien und Fachquellen (z. B. JAMA, The Lancet, DGE, EUR-Lex). Beim Klick verlässt du unsere
+        Seite; es gelten die Datenschutzbestimmungen des jeweiligen Anbieters.
+      </p>
+
+      <h2>9. Deine Rechte</h2>
+      <p>
+        Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der
+        Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Eine erteilte Einwilligung kannst
+        du jederzeit mit Wirkung für die Zukunft widerrufen. Außerdem kannst du dich bei einer Aufsichtsbehörde beschweren,
+        z. B. bei der Berliner Beauftragten für Datenschutz und Informationsfreiheit, Alt-Moabit 59–61, 10555 Berlin.
+      </p>
+
+      <h2>10. Änderungen</h2>
+      <p>Wir passen diese Erklärung an, wenn sich Dienste oder Rechtslage ändern. Es gilt die jeweils hier veröffentlichte Fassung.</p>
+    </div>
+  </section>
+</Base>

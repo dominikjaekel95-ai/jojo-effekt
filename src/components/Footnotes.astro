@@ -1,0 +1,21 @@
+---
+import { getSources } from '../data/sources';
+interface Props { ids: readonly string[]; title?: string; id?: string }
+const { ids, title = 'Quellen', id = 'quellen' } = Astro.props;
+const list = getSources(ids);
+---
+<section id={id} aria-labelledby={`${id}-h`} class="mt-12 border-t border-line pt-6">
+  <h2 id={`${id}-h`} class="text-base font-semibold text-ink">{title}</h2>
+  <ol class="mt-3 space-y-2 text-sm text-ink-2">
+    {list.map((s, i) => (
+      <li id={`fn-${s.id}`} class="flex gap-2">
+        <span class="w-6 shrink-0 font-semibold text-moss">{i + 1}.</span>
+        <span>
+          {s.full}
+          {s.url && (<> <a href={s.url} rel="noopener nofollow" target="_blank" class="text-moss underline underline-offset-4">Zur Quelle</a></>)}
+          {s.note && <span class="block text-ink-3">{s.note}</span>}
+        </span>
+      </li>
+    ))}
+  </ol>
+</section>

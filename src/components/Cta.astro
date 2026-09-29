@@ -1,0 +1,12 @@
+---
+/**
+ * Primärer Call-to-Action. Scrollt zum Formular; Klick wird per Plausible-Klasse als Event gezählt.
+ */
+import { site } from '../data/site';
+interface Props { position: string; label?: string; class?: string; secondary?: boolean }
+const { position, label = `Vorbestellen – ${site.price.set} € für 12 Wochen`, class: cls = '', secondary = false } = Astro.props;
+---
+<a
+  href="/#vorbestellen"
+  class={`${secondary ? 'btn-secondary' : 'btn-primary'} plausible-event-name=Vorbestellen+Klick plausible-event-position=${position} ${cls}`}
+>{label}</a>

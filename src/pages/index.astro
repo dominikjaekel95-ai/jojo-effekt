@@ -1,0 +1,297 @@
+---
+import Base from '../layouts/Base.astro';
+import Cta from '../components/Cta.astro';
+import Fn from '../components/Fn.astro';
+import Footnotes from '../components/Footnotes.astro';
+import Faq from '../components/Faq.astro';
+import PreorderForm from '../components/PreorderForm.astro';
+import SetIllustration from '../components/SetIllustration.astro';
+import { site } from '../data/site';
+import { landingFaq, faqJsonLd } from '../data/faq';
+import { getCollection } from 'astro:content';
+
+// Reihenfolge der Fußnoten auf dieser Seite (Nummer = Position + 1)
+const fnIds = [
+  'rodriguez2025',
+  'wilding2021dxa',
+  'wilding2022ext',
+  'wu2025',
+  'leidy2015',
+  'euClaims',
+  'sardeli2018',
+  'jensen2024',
+  'who2020',
+  'kreider2017',
+  'dgeBallaststoffe',
+  'apothekerzeitung2026',
+] as const;
+const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
+
+const artikel = (await getCollection('wissen')).sort((a, b) => a.data.order - b.data.order).slice(0, 3);
+
+const title = 'Nach der Spritze: Muskeln behalten, Gewicht halten';
+const description = site.description;
+const jsonLd = [faqJsonLd(landingFaq)];
+---
+
+<Base title={title} description={description} path="/" jsonLd={jsonLd}>
+  <!-- ============ 1. HERO ============ -->
+  <section class="relative overflow-hidden">
+    <div class="container-wide grid items-center gap-10 py-14 sm:py-20 md:grid-cols-[1.1fr_0.9fr]">
+      <div>
+        <p class="eyebrow">Das 12-Wochen-Set für die Zeit nach der Abnehmspritze</p>
+        {/*
+          Überschriften-Varianten (A/B-Test später):
+          A (aktiv):  Nach der Spritze: Muskeln behalten, Gewicht halten.
+          B:          Absetzen ohne Absturz.
+          C:          Das 12-Wochen-Set für die Zeit nach der Abnehmspritze.
+        */}
+        <h1 class="mt-3 text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl">
+          Nach der Spritze: <span class="text-moss">Muskeln behalten,</span> Gewicht halten.
+        </h1>
+        <p class="mt-5 max-w-xl text-lg text-ink-2">
+          Protein, Ballaststoffe, Kreatin und ein Programm mit zwei Krafteinheiten pro Woche. Für alle, die die
+          Abnehmspritze absetzen oder reduzieren und das Erreichte nicht wieder verlieren wollen.
+        </p>
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <Cta position="hero" />
+          <a href="#set" class="btn-secondary">Was ist drin?</a>
+        </div>
+        <p class="mt-4 text-sm text-ink-3">
+          Kein Geld jetzt. Erste Charge ab {site.preorderGoal} Vorbestellungen. Du bekommst als Erste Bescheid.
+        </p>
+        <p class="mt-6 inline-block rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">
+          {site.doctorSentence}
+        </p>
+      </div>
+      <div class="mx-auto w-full max-w-md md:max-w-none">
+        <SetIllustration class="h-auto w-full" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. PROBLEM IN DREI ZAHLEN ============ -->
+  <section id="problem" class="bg-white py-16 scroll-mt-20" aria-labelledby="problem-h">
+    <div class="container-wide">
+      <p class="eyebrow">Das Problem</p>
+      <h2 id="problem-h" class="h2 mt-2 max-w-2xl">Die meisten setzen ab. Und dann kommt das Gewicht zurück – oft ohne die Muskeln.</h2>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <div class="card">
+          <p class="text-5xl font-bold tracking-tight text-moss">65 %</p>
+          <p class="mt-3 text-ink-2">
+            der Menschen ohne Typ-2-Diabetes setzen die Abnehmspritze innerhalb eines Jahres wieder ab.<Fn n={fn('rodriguez2025')} id="rodriguez2025" />
+          </p>
+        </div>
+        <div class="card">
+          <p class="text-5xl font-bold tracking-tight text-amber-dark">~40 %</p>
+          <p class="mt-3 text-ink-2">
+            des verlorenen Gewichts waren in einer Substudie von STEP 1 fettfreie Masse – darunter Muskeln, nicht Fett.<Fn n={fn('wilding2021dxa')} id="wilding2021dxa" />
+          </p>
+        </div>
+        <div class="card">
+          <p class="text-5xl font-bold tracking-tight text-clay">⅔</p>
+          <p class="mt-3 text-ink-2">
+            des verlorenen Gewichts waren ein Jahr nach dem Absetzen von Semaglutid im Mittel wieder da.<Fn n={fn('wilding2022ext')} id="wilding2022ext" />
+            Die Zunahme beginnt in Studien etwa acht Wochen nach der letzten Dosis.<Fn n={fn('wu2025')} id="wu2025" />
+          </p>
+        </div>
+      </div>
+      <p class="mt-6 max-w-2xl text-sm text-ink-3">
+        Regain nach dem Absetzen ist in den Studien die Regel, nicht die Ausnahme. Was in Studien den Unterschied macht:
+        genug Protein, Krafttraining, Dranbleiben. Das Set liefert Protein, Ballaststoffe und Kreatin und begleitet dich
+        durch zwei Krafteinheiten pro Woche.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 3. DAS SET ============ -->
+  <section id="set" class="py-16 scroll-mt-20" aria-labelledby="set-h">
+    <div class="container-wide">
+      <p class="eyebrow">Das Set</p>
+      <h2 id="set-h" class="h2 mt-2 max-w-2xl">Vier Bausteine, ein Ziel: das Erreichte halten.</h2>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="card border-t-4 border-t-moss">
+          <p class="text-xs font-semibold uppercase tracking-wider text-moss">Täglich · 1 Stick</p>
+          <h3 class="mt-2 text-lg font-bold">Protein-Stick</h3>
+          <p class="mt-2 text-sm text-ink-2">
+            Mindestens 20 g Protein pro Stick. Protein trägt zur Erhaltung von Muskelmasse bei.<Fn n={fn('euClaims')} id="euClaims" />
+            Ziel im Programm: 1,2 g Protein pro kg Körpergewicht am Tag<Fn n={fn('leidy2015')} id="leidy2015" /> – mit kleinem Appetit
+            schafft das kaum jemand. Der Stick schließt die Lücke.
+          </p>
+          <p class="mt-3 text-xs text-ink-3">Molke oder pflanzlich – du wählst bei der Vorbestellung.</p>
+        </article>
+        <article class="card border-t-4 border-t-amber">
+          <p class="text-xs font-semibold uppercase tracking-wider text-amber-dark">Täglich · 1 Stick</p>
+          <h3 class="mt-2 text-lg font-bold">Ballaststoff-Stick</h3>
+          <p class="mt-2 text-sm text-ink-2">
+            5 g Ballaststoffe pro Stick, geschmacksneutral, zum Einrühren in Wasser, Joghurt oder Suppe. Die DGE
+            empfiehlt mindestens 30 g am Tag<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> – mit kleineren Portionen wird das schwer.
+          </p>
+          <p class="mt-3 text-xs text-ink-3">Immer mit einem großen Glas Wasser einnehmen.</p>
+        </article>
+        <article class="card border-t-4 border-t-clay">
+          <p class="text-xs font-semibold uppercase tracking-wider text-clay">Täglich · 3 g</p>
+          <h3 class="mt-2 text-lg font-bold">Kreatin</h3>
+          <p class="mt-2 text-sm text-ink-2">
+            3 g Kreatin-Monohydrat am Tag. Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen
+            kurzzeitiger intensiver körperlicher Betätigung.<Fn n={fn('euClaims')} id="euClaims" /> Eines der am besten untersuchten
+            Supplemente überhaupt.<Fn n={fn('kreider2017')} id="kreider2017" />
+          </p>
+          <p class="mt-3 text-xs text-ink-3">Wirkt nur zusammen mit Krafttraining – deshalb gehört das Programm dazu.</p>
+        </article>
+        <article class="card border-t-4 border-t-ink">
+          <p class="text-xs font-semibold uppercase tracking-wider text-ink-2">12 Wochen</p>
+          <h3 class="mt-2 text-lg font-bold">Das Programm</h3>
+          <p class="mt-2 text-sm text-ink-2">
+            Zwei Krafteinheiten pro Woche à 30 Minuten, zuhause mit Bändern oder im Studio. Wöchentlicher Check-in per
+            E-Mail. Rezepte für kleine Portionen mit viel Protein. Wiegeprotokoll statt Kalorienzählen.
+          </p>
+          <p class="mt-3 text-xs text-ink-3">Für Einsteiger gemacht. Kein Vorwissen nötig.</p>
+        </article>
+      </div>
+      <div class="mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+        <Cta position="set" />
+        <span class="text-sm text-ink-3">{site.price.set} € für 12 Wochen · entspricht {site.price.setPerMonth} € im Monat</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. WAS DIE FORSCHUNG SAGT ============ -->
+  <section id="forschung" class="bg-white py-16 scroll-mt-20" aria-labelledby="forschung-h">
+    <div class="container-narrow">
+      <p class="eyebrow">Was die Forschung sagt</p>
+      <h2 id="forschung-h" class="h2 mt-2">Warum Protein, Krafttraining und Kreatin</h2>
+      <div class="prose-site mt-6">
+        <h3>Protein: Muskeln brauchen Baustoff, gerade wenn du wenig isst</h3>
+        <p>
+          Beim Abnehmen verliert der Körper nicht nur Fett. In einer Substudie der STEP-1-Studie entfielen rund 40 % des
+          Gewichtsverlusts unter Semaglutid auf fettfreie Masse.<Fn n={fn('wilding2021dxa')} id="wilding2021dxa" /> Übersichtsarbeiten
+          empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag, deutlich
+          mehr als die 0,8 g, die die DGE für Erwachsene als Minimum ansetzt.<Fn n={fn('leidy2015')} id="leidy2015" /> Wer unter der
+          Spritze wenig Appetit hat, kommt oft nicht einmal auf das Minimum. Protein trägt zur Erhaltung von
+          Muskelmasse bei.<Fn n={fn('euClaims')} id="euClaims" /><Fn n={fn('apothekerzeitung2026')} id="apothekerzeitung2026" />
+        </p>
+        <h3>Krafttraining: der stärkste Hebel gegen den Verlust von Muskelmasse – und gegen das Zurück</h3>
+        <p>
+          Eine Meta-Analyse zeigt: Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier
+          Masse weitgehend.<Fn n={fn('sardeli2018')} id="sardeli2018" /> Und in der dänischen S-LiTE-Studie hielten Teilnehmende, die
+          während der Therapie trainiert hatten, ihr Gewicht und ihre Körperzusammensetzung ein ganzes Jahr nach dem
+          Absetzen – wer nur das Medikament bekommen hatte, nahm im Schnitt 6 kg mehr wieder zu.<Fn n={fn('jensen2024')} id="jensen2024" />
+          Die WHO empfiehlt an mindestens zwei Tagen pro Woche muskelkräftigende Aktivitäten.<Fn n={fn('who2020')} id="who2020" />
+          Deshalb: zwei Einheiten, 30 Minuten, machbar.
+        </p>
+        <h3>Kreatin: gut untersucht, günstig, wirkt mit dem Training</h3>
+        <p>
+          Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver
+          körperlicher Betätigung.<Fn n={fn('euClaims')} id="euClaims" /> Kreatin-Monohydrat gilt in üblichen
+          Dosen bei gesunden Erwachsenen als sicher und gehört zu den am besten untersuchten
+          Nahrungsergänzungen.<Fn n={fn('kreider2017')} id="kreider2017" /> Ohne Training bringt es wenig – deshalb gibt es das Set
+          nur mit Programm.
+        </p>
+        <p class="text-sm text-ink-3">
+          Alle Aussagen zum Set entsprechen den in der EU zugelassenen gesundheitsbezogenen Angaben. Was wir nicht
+          sagen: dass das Set die Spritze ersetzt oder den Jojo-Effekt verhindert. Das kann kein Lebensmittel.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. FÜR WEN / FÜR WEN NICHT ============ -->
+  <section id="fuer-wen" class="py-16 scroll-mt-20" aria-labelledby="fuerwen-h">
+    <div class="container-wide">
+      <p class="eyebrow">Für wen</p>
+      <h2 id="fuerwen-h" class="h2 mt-2">Für wen das Set gedacht ist – und für wen nicht</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="card border-moss/30">
+          <h3 class="text-lg font-bold text-moss">Für dich, wenn du …</h3>
+          <ul class="mt-4 space-y-3 text-ink-2">
+            <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> die Abnehmspritze absetzt, reduzierst oder das planst und dein Gewicht halten willst.</li>
+            <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> unter der Spritze wenig gegessen hast und merkst, dass Kraft und Muskeln nachgelassen haben.</li>
+            <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> einen einfachen Plan willst: zwei Einheiten pro Woche, drei Sticks am Tag, ein Check-in.</li>
+            <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> keine Wunder erwartest, sondern etwas, das du 12 Wochen durchhalten kannst.</li>
+          </ul>
+        </div>
+        <div class="card border-clay/30">
+          <h3 class="text-lg font-bold text-clay">Nicht für dich, wenn du …</h3>
+          <ul class="mt-4 space-y-3 text-ink-2">
+            <li class="flex gap-3"><span class="text-clay" aria-hidden="true">✕</span> schwanger bist oder stillst.</li>
+            <li class="flex gap-3"><span class="text-clay" aria-hidden="true">✕</span> unter 18 bist.</li>
+            <li class="flex gap-3"><span class="text-clay" aria-hidden="true">✕</span> eine Nierenerkrankung hast – dann nur nach Rücksprache mit deiner Ärztin oder deinem Arzt, vor allem wegen Kreatin und Protein.</li>
+            <li class="flex gap-3"><span class="text-clay" aria-hidden="true">✕</span> Schluckbeschwerden hast (Ballaststoff-Stick nur mit viel Flüssigkeit).</li>
+            <li class="flex gap-3"><span class="text-clay" aria-hidden="true">✕</span> eine Essstörung hast oder hattest – bitte sprich zuerst mit deiner Behandlerin.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-8 max-w-2xl rounded-xl2 border border-amber/50 bg-amber-light px-5 py-4 text-base font-medium text-ink">
+        {site.doctorSentence} Das Set ist kein Medikament und keine Absetz-Anleitung.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 6. PREIS + VORBESTELLUNG ============ -->
+  <section id="preis" class="bg-white py-16 scroll-mt-20" aria-labelledby="preis-h">
+    <div class="container-wide grid gap-10 md:grid-cols-2 md:items-start">
+      <div>
+        <p class="eyebrow">Preis</p>
+        <h2 id="preis-h" class="h2 mt-2">{site.price.set} € für 12 Wochen. Oder {site.price.perMonth} € im Monat.</h2>
+        <p class="mt-4 text-ink-2">
+          Das 12-Wochen-Set kostet {site.price.set} € – das entspricht {site.price.setPerMonth} € pro Monat. Alternativ
+          {site.price.perMonth} € monatlich, jederzeit kündbar. Versand innerhalb Deutschlands inklusive.
+        </p>
+        <ul class="mt-6 space-y-2 text-ink-2">
+          <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> 84 Protein-Sticks (≥ 20 g Protein)</li>
+          <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> 84 Ballaststoff-Sticks (5 g Ballaststoffe)</li>
+          <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> 84 Portionen Kreatin-Monohydrat (3 g)</li>
+          <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> 12-Wochen-Programm: Trainingspläne, Rezepte, wöchentlicher Check-in</li>
+        </ul>
+        <div class="mt-8 rounded-xl2 border border-line bg-paper p-5">
+          <p class="text-sm font-semibold text-ink">Zum Vergleich</p>
+          <p class="mt-1 text-sm text-ink-2">
+            Die Abnehmspritze kostet Selbstzahler in Deutschland je nach Dosis etwa {site.price.injectionMin} bis
+            {site.price.injectionMax} € im Monat. Das Set kostet {site.price.setPerMonth} €.
+          </p>
+        </div>
+        <p class="mt-6 text-sm text-ink-3">
+          Ehrlich gesagt: Wir sammeln gerade Vorbestellungen, um zu sehen, ob es das Set geben soll. Erst ab
+          {site.preorderGoal} Vorbestellungen produzieren wir. Deshalb jetzt keine Zahlung, kein Countdown, keine
+          künstliche Knappheit.
+        </p>
+      </div>
+      <PreorderForm />
+    </div>
+  </section>
+
+  <!-- ============ 7. WISSEN (SEO-Hub-Teaser) ============ -->
+  <section id="wissen" class="py-16 scroll-mt-20" aria-labelledby="wissen-h">
+    <div class="container-wide">
+      <p class="eyebrow">Wissen</p>
+      <h2 id="wissen-h" class="h2 mt-2">Absetzen, Jojo-Effekt, Muskeln: die Fakten, mit Quellen</h2>
+      <p class="mt-3 max-w-2xl text-ink-2">
+        Was in Studien passiert, wenn die Spritze wegfällt, und was nachweislich hilft. Nüchtern, ohne Verkaufston,
+        fachlich geprüft.
+      </p>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        {artikel.map((a) => (
+          <a href={`/wissen/${a.id}/`} class="card group block no-underline hover:border-moss">
+            <p class="text-xs font-semibold uppercase tracking-wider text-moss">{a.data.category}</p>
+            <h3 class="mt-2 text-lg font-bold text-ink group-hover:text-moss">{a.data.title}</h3>
+            <p class="mt-2 text-sm text-ink-2">{a.data.description}</p>
+            <p class="mt-4 text-sm font-semibold text-moss">Lesen →</p>
+          </a>
+        ))}
+      </div>
+      <a href="/wissen/" class="mt-6 inline-block text-sm font-semibold text-moss underline underline-offset-4">Alle Artikel im Wissensbereich</a>
+    </div>
+  </section>
+
+  <!-- ============ 8. FAQ ============ -->
+  <section class="bg-white py-16">
+    <div class="container-narrow">
+      <Faq items={landingFaq} />
+      <div class="mt-10 text-center">
+        <Cta position="faq" />
+      </div>
+      <Footnotes ids={fnIds} />
+    </div>
+  </section>
+</Base>

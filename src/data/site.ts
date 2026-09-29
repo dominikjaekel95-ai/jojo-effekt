@@ -43,7 +43,7 @@ export const site = {
   theme: import.meta.env.PUBLIC_THEME ?? 'd1',
 
   // Externe Dienste (aus .env; leer = Platzhalter/aus)
-  tallyFormId: import.meta.env.PUBLIC_TALLY_FORM_ID ?? '',
+  tallyFormId: import.meta.env.PUBLIC_TALLY_FORM_ID || 'b5bO9o',
   plausibleDomain: import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN ?? '',
 
   // Pflichtsatz, der auf jeder Seite mit Produktbezug prominent steht

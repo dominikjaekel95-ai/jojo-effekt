@@ -119,7 +119,7 @@ export const sources: Record<string, Source> = {
     full:
       'Verordnung (EU) Nr. 432/2012 der Kommission zur Festlegung einer Liste zulässiger anderer gesundheitsbezogener Angaben über Lebensmittel; ergänzt u. a. durch Verordnung (EU) 2017/672 (Kreatin und Krafttraining ab 55 Jahren).',
     url: 'https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32012R0432',
-    note: 'Grundlage aller gesundheitsbezogenen Aussagen zum Set, siehe CLAIMS.md.',
+    note: 'Grundlage aller gesundheitsbezogenen Aussagen zum Set.',
   },
   kreider2017: {
     id: 'kreider2017',
@@ -198,27 +198,21 @@ export const sources: Record<string, Source> = {
     short: 'Fachinformation Wegovy (EMA-Produktinformation)',
     full: 'Europäische Arzneimittel-Agentur. Wegovy (Semaglutid): Zusammenfassung der Merkmale des Arzneimittels. Amsterdam: EMA.',
     url: 'https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy',
-    note: 'Dosisstufen 0,25 / 0,5 / 1 / 1,7 / 2,4 mg je vier Wochen; Halbwertszeit etwa eine Woche; bei geplanter Schwangerschaft mindestens zwei Monate vorher absetzen.',
+    note: 'Fünf Dosisstufen von 0,25 bis 2,4 mg; Halbwertszeit etwa eine Woche; bei geplanter Schwangerschaft mindestens zwei Monate vorher absetzen.',
   },
   fachinfoOzempic: {
     id: 'fachinfoOzempic',
     short: 'Fachinformation Ozempic (EMA-Produktinformation)',
     full: 'Europäische Arzneimittel-Agentur. Ozempic (Semaglutid): Zusammenfassung der Merkmale des Arzneimittels. Amsterdam: EMA.',
     url: 'https://www.ema.europa.eu/en/medicines/human/EPAR/ozempic',
-    note: 'Zugelassen zur Behandlung des Typ-2-Diabetes; Dosisstufen 0,25 / 0,5 / 1 / 2 mg; Halbwertszeit etwa eine Woche.',
+    note: 'Zugelassen zur Behandlung des Typ-2-Diabetes; vier Dosisstufen von 0,25 bis 2 mg; Halbwertszeit etwa eine Woche.',
   },
   fachinfoMounjaro: {
     id: 'fachinfoMounjaro',
     short: 'Fachinformation Mounjaro (EMA-Produktinformation)',
     full: 'Europäische Arzneimittel-Agentur. Mounjaro (Tirzepatid): Zusammenfassung der Merkmale des Arzneimittels. Amsterdam: EMA.',
     url: 'https://www.ema.europa.eu/en/medicines/human/EPAR/mounjaro',
-    note: 'Dosisstufen 2,5 bis 15 mg in Schritten von 2,5 mg je vier Wochen; Halbwertszeit etwa fünf Tage.',
-  },
-  apothekerzeitung2026: {
-    id: 'apothekerzeitung2026',
-    short: 'Apothekerzeitung 2/2026: Protein und Kreatin',
-    full: 'Apothekerzeitung, Ausgabe 2/2026: Beitrag zu Protein und Kreatin bei GLP-1-Therapie. [Link und genaue Fundstelle ergänzen]',
-    note: 'Fundstelle aus dem Projektplan; vor Launch verifizieren und verlinken.',
+    note: 'Sechs Dosisstufen von 2,5 bis 15 mg; Halbwertszeit etwa fünf Tage.',
   },
 };
 

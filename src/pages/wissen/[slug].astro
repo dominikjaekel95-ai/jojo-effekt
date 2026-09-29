@@ -6,7 +6,6 @@ import Footnotes from '../../components/Footnotes.astro';
 import AuthorBox from '../../components/AuthorBox.astro';
 import ProductTeaser from '../../components/ProductTeaser.astro';
 import { getCollection, render } from 'astro:content';
-import { faqJsonLd } from '../../data/faq';
 import { site } from '../../data/site';
 
 export const getStaticPaths = (async () => {
@@ -23,8 +22,9 @@ const related = entry.data.related
 
 const path = `/wissen/${entry.id}/`;
 const url = `${site.url}${path}`;
-const words = entry.body?.split(/\s+/).length ?? 0;
-const readingMinutes = Math.max(1, Math.round(words / 200));
+const faqText = entry.data.faq.map((f) => `${f.q} ${f.a.replace(/<[^>]+>/g, ' ')}`).join(' ');
+const words = `${entry.body ?? ''} ${faqText}`.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
+const readingMinutes = Math.max(1, Math.round(words / 180));
 
 const jsonLd = [
   {
@@ -38,7 +38,7 @@ const jsonLd = [
     datePublished: entry.data.pubDate.toISOString(),
     dateModified: (entry.data.updatedDate ?? entry.data.pubDate).toISOString(),
     author: { '@type': 'Person', name: site.owner.name, url: `${site.url}/ueber/` },
-    reviewedBy: { '@type': 'Person', name: site.reviewer.name, jobTitle: site.reviewer.title },
+    ...(site.reviewer ? { reviewedBy: { '@type': 'Person', name: site.reviewer.name, jobTitle: site.reviewer.title } } : {}),
     publisher: { '@id': `${site.url}/#organization` },
     isPartOf: { '@id': `${site.url}/#website` },
     keywords: entry.data.keywords.join(', '),
@@ -53,7 +53,6 @@ const jsonLd = [
       { '@type': 'ListItem', position: 3, name: entry.data.title, item: url },
     ],
   },
-  ...(entry.data.faq.length ? [faqJsonLd(entry.data.faq)] : []),
 ];
 ---
 <Base

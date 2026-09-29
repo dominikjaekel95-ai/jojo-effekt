@@ -16,7 +16,7 @@ const embedSrc = id
   <h3 class="mt-2 text-2xl text-ink">Trag dich ein – ohne Zahlung</h3>
   <p class="mt-2 text-sm text-ink-2">
     Wir produzieren die erste Charge, sobald {site.preorderGoal} Vorbestellungen zusammen sind. Kein Geld jetzt,
-    keine Verpflichtung. Du bekommst als Erste Bescheid und entscheidest dann.
+    keine Verpflichtung. Du erfährst es als Erstes und entscheidest dann.
   </p>
 
   {id ? (
@@ -43,8 +43,7 @@ const embedSrc = id
         })();
       </script>
       <p class="mt-3 text-xs text-ink-3">
-        Das Formular wird von Tally (Belgien, EU) bereitgestellt. Falls es nicht lädt:
-        <a href={`https://tally.so/r/${id}`} class="underline" rel="noopener" target="_blank">Formular in neuem Tab öffnen</a>.
+        Das Formular wird von Tally (Belgien, EU) bereitgestellt. Falls es nicht lädt: <a href={`https://tally.so/r/${id}`} class="underline" rel="noopener" target="_blank">Formular in neuem Tab öffnen</a>.
       </p>
     </div>
   ) : (

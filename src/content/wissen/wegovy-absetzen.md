@@ -18,7 +18,7 @@ faq:
   - q: "Kann ich Wegovy bei Kinderwunsch einfach absetzen?"
     a: "<p>Laut Fachinformation soll Wegovy mindestens zwei Monate vor einer geplanten Schwangerschaft abgesetzt werden, weil der Wirkstoff so lange im Körper bleibt. Besprich den Zeitpunkt mit deiner Ärztin oder deinem Arzt.</p>"
   - q: "Kann ich nach dem Absetzen wieder mit Wegovy anfangen?"
-    a: "<p>Ja, das ist medizinisch möglich. Nach einer längeren Pause wird die Dosis in der Regel wieder bei 0,25 mg begonnen und über Wochen gesteigert, um Magen-Darm-Nebenwirkungen zu vermeiden. Das legt deine Ärztin fest.</p>"
+    a: "<p>Ja, das ist medizinisch möglich. Nach einer längeren Pause wird die Dosis in der Regel wieder aufgebaut, um Magen-Darm-Nebenwirkungen zu vermeiden. Ob, wann und wie, legt deine Ärztin oder dein Arzt fest.</p>"
 ---
 
 Wegovy ist die Abnehmspritze, die in Deutschland am häufigsten für die Gewichtsreduktion verordnet wird. Wer sie absetzt, hat drei Fragen: Wie lange wirkt sie nach, was passiert mit dem Gewicht, und was muss ich beachten? Hier sind die Antworten aus Fachinformation und Studien, präparatspezifisch. Was für alle Abnehmspritzen gilt, steht im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
@@ -27,9 +27,9 @@ Wegovy ist die Abnehmspritze, die in Deutschland am häufigsten für die Gewicht
 
 ## Wegovy in drei Sätzen
 
-Wegovy enthält Semaglutid, einen GLP-1-Rezeptoragonisten, und ist in der EU seit 2022 zur Gewichtsregulierung zugelassen: bei einem BMI ab 30, oder ab 27 mit gewichtsbedingten Begleiterkrankungen, jeweils ergänzend zu Ernährungsumstellung und Bewegung.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Die Dosis wird in fünf Stufen gesteigert: 0,25 mg, 0,5 mg, 1 mg, 1,7 mg und 2,4 mg, jede Stufe vier Wochen; die Erhaltungsdosis ist 2,4 mg einmal pro Woche. In der Zulassungsstudie STEP 1 verloren die Teilnehmenden in 68 Wochen im Mittel 14,9 % ihres Gewichts, unter Placebo 2,4 %.<sup><a href="#fn-wilding2021step1">2</a></sup>
+Wegovy enthält Semaglutid, einen GLP-1-Rezeptoragonisten, und ist in der EU seit 2022 zur Gewichtsregulierung zugelassen: bei einem BMI ab 30, oder ab 27 mit gewichtsbedingten Begleiterkrankungen, jeweils ergänzend zu Ernährungsumstellung und Bewegung.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Laut Fachinformation gibt es fünf Dosisstufen von 0,25 bis 2,4 mg pro Woche; welche Stufe wann passt, legt die Ärztin fest. In der Zulassungsstudie STEP 1 verloren die Teilnehmenden in 68 Wochen im Mittel 14,9 % ihres Gewichts, unter Placebo 2,4 %.<sup><a href="#fn-wilding2021step1">2</a></sup>
 
-Die gesetzlichen Krankenkassen zahlen Wegovy in der Regel nicht; die Kosten für Selbstzahler liegen je nach Dosis grob zwischen 170 und 300 € im Monat. Das ist einer der häufigsten Gründe fürs Absetzen.
+Die gesetzlichen Krankenkassen zahlen Wegovy in der Regel nicht; die Kosten für Selbstzahler liegen je nach Dosis etwa zwischen 170 und 280 € im Monat. Das ist einer der häufigsten Gründe fürs Absetzen.
 
 ## Wie lange Wegovy nachwirkt
 
@@ -54,7 +54,7 @@ Eine Meta-Analyse über verschiedene Adipositas-Medikamente zeigt, wann es losge
 
 ## Ausschleichen: möglich, aber unbelegt
 
-Wegovy gibt es in fünf Dosisstufen. Deshalb liegt es nahe, statt abrupt aufzuhören die Dosis über Wochen zu reduzieren, zum Beispiel von 2,4 mg auf 1,7 mg, dann 1 mg. Die Fachinformation sieht das nicht vor, und die Studien haben abrupt abgesetzt; ein Entzugssyndrom trat dabei nicht auf.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Ob langsames Reduzieren den Wiederanstieg abmildert, ist nicht durch randomisierte Studien belegt. Das mögliche Argument ist psychologisch: Man erlebt den zurückkehrenden Appetit in Etappen und kann Routinen anpassen. Die Entscheidung, ob und wie du absetzt, trifft deine Ärztin oder dein Arzt mit dir.
+Wegovy gibt es in fünf Dosisstufen. Deshalb liegt es nahe, statt abrupt aufzuhören die Dosis über Wochen zu reduzieren. Die Fachinformation sieht das nicht vor, und die Studien haben abrupt abgesetzt; ein Entzugssyndrom trat dabei nicht auf.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Ob langsames Reduzieren den Wiederanstieg abmildert, ist nicht durch randomisierte Studien belegt. Das mögliche Argument ist psychologisch: Man erlebt den zurückkehrenden Appetit in Etappen und kann Routinen anpassen. Die Entscheidung, ob und wie du absetzt, trifft deine Ärztin oder dein Arzt mit dir.
 
 ## Was in den letzten Wochen mit Wegovy zu tun ist
 
@@ -75,4 +75,4 @@ Der ausführliche Plan steht unter [Gewicht halten nach der Abnehmspritze: der 1
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Wegovy ist eine Marke von Novo Nordisk. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Wegovy ist eine Marke von Novo Nordisk. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament.*

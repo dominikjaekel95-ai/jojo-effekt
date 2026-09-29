@@ -16,7 +16,7 @@ faq:
   - q: "Muss ich die Abnehmspritze ausschleichen?"
     a: "<p>Ein medizinisch zwingender Grund zum Ausschleichen ist nicht belegt; die Zulassungsstudien haben abrupt abgesetzt. Ob ein schrittweises Reduzieren den Wiederanstieg des Gewichts abmildert, wird derzeit untersucht. Das Vorgehen legt deine Ärztin oder dein Arzt fest.</p>"
   - q: "Kann ich nach dem Absetzen wieder anfangen?"
-    a: "<p>Ja, das ist medizinisch möglich und in der Praxis häufig. In einer US-Auswertung hatte innerhalb eines Jahres nach dem Absetzen etwa jeder Zweite mit Typ-2-Diabetes und etwa jeder Dritte ohne Diabetes die Therapie wieder aufgenommen. Die Dosis wird dann in der Regel wieder langsam gesteigert. Sprich das mit deiner Ärztin ab.</p>"
+    a: "<p>Ja, das ist medizinisch möglich und in der Praxis häufig. In einer US-Auswertung hatte innerhalb eines Jahres nach dem Absetzen etwa jeder Zweite mit Typ-2-Diabetes und etwa jeder Dritte ohne Diabetes die Therapie wieder aufgenommen. Wie der Wiedereinstieg abläuft, legt deine Ärztin oder dein Arzt fest.</p>"
   - q: "Was passiert mit Blutzucker und Blutdruck nach dem Absetzen?"
     a: "<p>Die Verbesserungen, die mit dem Gewichtsverlust gekommen sind, gehen mit dem Gewicht zum Teil wieder zurück. In der STEP-1-Verlängerung näherten sich Blutzucker, Blutdruck und Blutfette ein Jahr nach dem Absetzen wieder den Ausgangswerten. Wer vorher auffällige Werte hatte, sollte sie nach dem Absetzen kontrollieren lassen.</p>"
 ---
@@ -29,7 +29,7 @@ Die meisten Menschen, die mit einer Abnehmspritze anfangen, hören innerhalb ein
 
 Die Gründe sind selten „Ich will nicht mehr abnehmen“. Häufiger sind es:
 
-- **Kosten.** Als Selbstzahler kostet die Therapie je nach Präparat und Dosis etwa 170 bis 280 € im Monat.
+- **Kosten.** Als Selbstzahler kostet die Therapie je nach Präparat und Dosis etwa 170 bis 480 € im Monat.
 - **Nebenwirkungen.** Übelkeit, Verstopfung, Reflux, Müdigkeit – für manche über Monate.
 - **Lieferengpässe** oder ein Wechsel der Praxis.
 - **Ein erreichtes Ziel.** Das Gewicht stimmt, die Frage ist: Wie weiter?

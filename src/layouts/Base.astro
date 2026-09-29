@@ -18,6 +18,8 @@ interface Props {
   jsonLd?: Record<string, unknown>[];
   publishedTime?: string;
   modifiedTime?: string;
+  /** Pfad zu einem seitenspezifischen OG-Bild, z. B. "/og-studien.png" */
+  ogImage?: string;
 }
 
 const {
@@ -29,10 +31,11 @@ const {
   jsonLd = [],
   publishedTime,
   modifiedTime,
+  ogImage: ogImagePath = '/og-default.png',
 } = Astro.props;
 
 const canonical = new URL(path ?? Astro.url.pathname, Astro.site ?? site.url).toString();
-const ogImage = new URL('/og-default.png', Astro.site ?? site.url).toString();
+const ogImage = new URL(ogImagePath, Astro.site ?? site.url).toString();
 const fullTitle = title.includes(site.name) ? title : `${title} · ${site.name}`;
 
 const graph = [
@@ -43,6 +46,7 @@ const graph = [
     url: site.url,
     logo: `${site.url}/favicon.svg`,
     founder: { '@type': 'Person', name: site.owner.name },
+    ...(site.sameAs.length ? { sameAs: site.sameAs } : {}),
     address: { '@type': 'PostalAddress', addressLocality: site.owner.city, addressCountry: 'DE' },
   },
   {
@@ -65,7 +69,7 @@ const graph = [
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {noindex ? <meta name="robots" content="noindex, nofollow" /> : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />}
+    {noindex ? <meta name="robots" content="noindex, follow" /> : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />

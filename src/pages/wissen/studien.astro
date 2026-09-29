@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Footnotes from '../../components/Footnotes.astro';
 import Cta from '../../components/Cta.astro';
-import { studien, studienUpdated } from '../../data/studien';
+import { studien, studienUpdated, studienLog } from '../../data/studien';
 import { sources } from '../../data/sources';
 import { site } from '../../data/site';
 
@@ -43,7 +43,7 @@ const jsonLd = [
   },
 ];
 ---
-<Base title={metaTitle} description={description} path="/wissen/studien/" jsonLd={jsonLd} ogType="article" modifiedTime={studienUpdated}>
+<Base title={metaTitle} description={description} path="/wissen/studien/" jsonLd={jsonLd} ogType="article" modifiedTime={studienUpdated} ogImage="/og-studien.png">
   <article class="container-wide py-12">
     <nav aria-label="Brotkrumen" class="text-sm text-ink-3">
       <a href="/" class="hover:text-moss">Start</a> › <a href="/wissen/" class="hover:text-moss">Wissen</a> › Studien-Tracker
@@ -55,6 +55,11 @@ const jsonLd = [
       erscheinen, und vermerken das Datum oben. Fehlt eine Studie? Schreib an <a href={`mailto:${site.owner.email}`} class="text-moss underline underline-offset-4">{site.owner.email}</a>.
     </p>
     <p class="mt-4 max-w-3xl rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+    <p class="mt-4 max-w-3xl text-sm text-ink-2">
+      <strong class="text-ink">Für Presse und Fachpublikum:</strong> Die Tabelle ist frei nutzbar mit Quellenangabe (CC BY 4.0).
+      <a href="/wissen/studien.csv" class="font-semibold text-moss underline underline-offset-4" download>Als CSV herunterladen</a>
+      · <a href="#neu" class="font-semibold text-moss underline underline-offset-4">Was neu ist</a>
+    </p>
 
     <div class="mt-8 flex flex-wrap gap-2 text-sm">
       {gruppen.map((g) => (
@@ -66,8 +71,8 @@ const jsonLd = [
       <section id={g.toLowerCase()} class="mt-12 scroll-mt-24" aria-labelledby={`h-${g}`}>
         <h2 id={`h-${g}`} class="h2">{g}</h2>
         <p class="mt-2 max-w-3xl text-ink-2">{beschreibung[g]}</p>
-        <div class="mt-5 overflow-x-auto rounded-xl2 border border-line bg-white">
-          <table class="w-full min-w-[720px] border-collapse text-sm">
+        <div class="studien-tabelle mt-5 rounded-xl2 border border-line bg-white sm:overflow-x-auto">
+          <table class="w-full border-collapse text-sm sm:min-w-[720px]">
             <thead>
               <tr class="bg-paper-2 text-left text-xs uppercase tracking-wider text-ink-2">
                 <th class="px-3 py-2 font-semibold">Studie</th>
@@ -80,16 +85,16 @@ const jsonLd = [
             <tbody>
               {studien.filter((s) => s.gruppe === g).map((s) => (
                 <tr class="border-t border-line align-top">
-                  <td class="px-3 py-3">
+                  <td class="px-3 py-3" data-label="Studie">
                     <span class="font-semibold text-ink">{s.name}</span>
                     <span class="block text-ink-3">{s.jahr} · <a href={`#fn-${s.sourceId}`} class="text-moss">[{fn(s.sourceId)}]</a>
                       {sources[s.sourceId]?.url && (<> · <a href={sources[s.sourceId].url} rel="noopener nofollow" target="_blank" class="text-moss underline underline-offset-2">Original</a></>)}
                     </span>
                   </td>
-                  <td class="px-3 py-3 text-ink-2">{s.wirkstoff}</td>
-                  <td class="px-3 py-3 text-ink-2">{s.design}<span class="block text-ink-3">n = {s.n}</span></td>
-                  <td class="px-3 py-3 font-medium text-ink">{s.kernzahl}</td>
-                  <td class="px-3 py-3 text-ink-2">{s.bedeutung}</td>
+                  <td class="px-3 py-3 text-ink-2" data-label="Wirkstoff">{s.wirkstoff}</td>
+                  <td class="px-3 py-3 text-ink-2" data-label="Design · n">{s.design}<span class="block text-ink-3">n = {s.n}</span></td>
+                  <td class="px-3 py-3 font-medium text-ink" data-label="Kernzahl">{s.kernzahl}</td>
+                  <td class="px-3 py-3 text-ink-2" data-label="Was das heißt">{s.bedeutung}</td>
                 </tr>
               ))}
             </tbody>
@@ -97,6 +102,18 @@ const jsonLd = [
         </div>
       </section>
     ))}
+
+    <section id="neu" class="mt-12 max-w-3xl scroll-mt-24" aria-labelledby="neu-h">
+      <h2 id="neu-h" class="h2">Was neu ist</h2>
+      <ul class="mt-4 divide-y divide-line rounded-xl2 border border-line bg-white">
+        {studienLog.map((e) => (
+          <li class="flex gap-4 px-5 py-3 text-[0.95rem] text-ink-2">
+            <time datetime={e.date} class="w-24 shrink-0 font-semibold text-ink">{new Date(e.date).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' })}</time>
+            <span>{e.text}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
 
     <section class="mt-12 max-w-3xl" aria-labelledby="offen-h">
       <h2 id="offen-h" class="h2">Was die Studien noch nicht beantworten</h2>
@@ -127,3 +144,23 @@ const jsonLd = [
     </div>
   </article>
 </Base>
+
+<style>
+  @media (max-width: 639px) {
+    .studien-tabelle thead { display: none; }
+    .studien-tabelle table, .studien-tabelle tbody, .studien-tabelle tr, .studien-tabelle td { display: block; width: 100%; }
+    .studien-tabelle tr { padding: 0.75rem 0.25rem; border-top: 1px solid var(--color-line); }
+    .studien-tabelle tr:first-child { border-top: 0; }
+    .studien-tabelle td { padding: 0.25rem 0.75rem; border: 0; }
+    .studien-tabelle td::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-ink-3);
+      margin-bottom: 0.1rem;
+    }
+    .studien-tabelle td[data-label="Studie"]::before { display: none; }
+  }
+</style>

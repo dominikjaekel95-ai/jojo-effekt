@@ -5,7 +5,7 @@ interface Props { pubDate: Date; updatedDate?: Date }
 const { pubDate, updatedDate } = Astro.props;
 const fmt = (d: Date) => d.toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
 ---
-<aside class="mt-10 rounded-xl2 border border-line bg-paper-2 p-5 text-sm text-ink-2" aria-label="Autor und fachliche Prüfung">
+<aside class="mt-10 rounded-xl2 border border-line bg-paper-2 p-5 text-sm text-ink-2" aria-label="Autor und Quellen">
   <div class="grid gap-4 sm:grid-cols-2">
     <div>
       <p class="eyebrow">Autor</p>
@@ -13,9 +13,19 @@ const fmt = (d: Date) => d.toLocaleDateString('de-DE', { day: '2-digit', month: 
       <p>Gründer von {site.name}, {site.owner.city}. Recherchiert und schreibt die Artikel auf Basis der verlinkten Studien.</p>
     </div>
     <div>
-      <p class="eyebrow">Fachliche Prüfung</p>
-      <p class="mt-1 font-semibold text-ink">{site.reviewer.name}</p>
-      <p>{site.reviewer.title}. Prüft alle Aussagen zu Ernährung, Training und gesundheitsbezogenen Angaben.</p>
+      {site.reviewer ? (
+        <>
+          <p class="eyebrow">Fachliche Prüfung</p>
+          <p class="mt-1 font-semibold text-ink">{site.reviewer.name}</p>
+          <p>{site.reviewer.title}. Prüft alle Aussagen zu Ernährung, Training und gesundheitsbezogenen Angaben.</p>
+        </>
+      ) : (
+        <>
+          <p class="eyebrow">Quellen</p>
+          <p class="mt-1 font-semibold text-ink">Jede Zahl mit Link zur Originalstudie</p>
+          <p>Die Quellen stehen unter dem Artikel. Eine fachliche Gegenprüfung durch eine Ernährungswissenschaftlerin oder einen Ernährungswissenschaftler ist noch nicht erfolgt; wir vermerken sie hier, sobald sie stattgefunden hat.</p>
+        </>
+      )}
     </div>
   </div>
   <p class="mt-4 text-xs text-ink-3">

@@ -2,11 +2,11 @@
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
 const title = 'Über uns: Wer hinter Nach der Spritze steht';
-const description = 'Wer die Seite macht, wie wir arbeiten, welche Quellen wir nutzen und was wir nicht behaupten. Ein Projekt aus Berlin, fachlich geprüft.';
+const description = 'Wer die Seite macht, wie wir arbeiten, welche Quellen wir nutzen und was wir nicht behaupten. Ein Projekt aus Berlin, jede Zahl mit Quelle.';
 const jsonLd = [
   { '@type': 'AboutPage', name: title, url: `${site.url}/ueber/`, isPartOf: { '@id': `${site.url}/#website` } },
   { '@type': 'Person', '@id': `${site.url}/ueber/#dominik`, name: site.owner.name, jobTitle: 'Gründer', worksFor: { '@id': `${site.url}/#organization` } },
-  { '@type': 'Person', '@id': `${site.url}/ueber/#reviewer`, name: site.reviewer.name, jobTitle: site.reviewer.title },
+  ...(site.reviewer ? [{ '@type': 'Person', '@id': `${site.url}/ueber/#reviewer`, name: site.reviewer.name, jobTitle: site.reviewer.title }] : []),
 ];
 ---
 <Base title={title} description={description} path="/ueber/" jsonLd={jsonLd}>
@@ -23,14 +23,18 @@ const jsonLd = [
       <h2>Wie wir arbeiten</h2>
       <ul>
         <li><strong>Jede Zahl hat eine Quelle.</strong> Wir zitieren Originalstudien (STEP, SURMOUNT, S-LiTE, Meta-Analysen), keine Pressemeldungen über Studien. Die Quellen stehen unter jedem Artikel mit Link.</li>
-        <li><strong>Fachliche Prüfung.</strong> Alle Aussagen zu Ernährung, Training und gesundheitsbezogenen Angaben prüft {site.reviewer.name} ({site.reviewer.title}). Was er nicht vertreten würde, steht nicht auf der Seite.</li>
+        {site.reviewer ? (
+          <li><strong>Fachliche Prüfung.</strong> Alle Aussagen zu Ernährung, Training und gesundheitsbezogenen Angaben prüft {site.reviewer.name} ({site.reviewer.title}).</li>
+        ) : (
+          <li><strong>Noch keine fachliche Gegenprüfung.</strong> Die Artikel sind bisher nicht von einer Ernährungswissenschaftlerin oder einem Ernährungswissenschaftler geprüft. Bis das erfolgt ist, gilt: Jede Zahl steht mit Link zur Originalstudie da, und wir schreiben nichts, was nicht in der Quelle steht.</li>
+        )}
         <li><strong>Nur zugelassene Angaben zum Set.</strong> Was wir über Protein, Kreatin und Ballaststoffe sagen, entspricht den in der EU zugelassenen gesundheitsbezogenen Angaben. Wir behaupten nicht, dass das Set die Spritze ersetzt oder den Jojo-Effekt verhindert.</li>
         <li><strong>Keine Medikamentenberatung.</strong> Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt. Wir geben keine Dosierungen und keine Absetz-Anleitungen.</li>
         <li><strong>Aktualisierung.</strong> Wenn neue Studien erscheinen, aktualisieren wir die Artikel und vermerken das Datum.</li>
       </ul>
       <h2>Wer schreibt</h2>
       <p><strong>{site.owner.name}</strong> – Gründer. Recherchiert und schreibt die Artikel, baut das Set und beantwortet E-Mails persönlich.</p>
-      <p><strong>{site.reviewer.name}</strong> – {site.reviewer.title}. Fachliche Prüfung aller Inhalte, Festlegung der Mengen (Protein pro kg, Kreatin, Ballaststoffe) und der Liste „Für wen nicht“.</p>
+      {site.reviewer && (<p><strong>{site.reviewer.name}</strong> – {site.reviewer.title}. Fachliche Prüfung aller Inhalte, Festlegung der Mengen (Protein pro kg, Kreatin, Ballaststoffe) und der Liste „Für wen nicht“.</p>)}
       <h2>Was wir mit Geld zu tun haben</h2>
       <p>
         Wir verdienen an dieser Seite derzeit nichts. Es gibt keine Werbung, keine Affiliate-Links, keine Kooperationen mit

@@ -14,11 +14,11 @@ faq:
   - q: "Wie viel nimmt man nach Mounjaro wieder zu?"
     a: "<p>In SURMOUNT-4 stieg das Gewicht nach dem Wechsel auf Placebo um etwa 14 % in 52 Wochen; wer weiter spritzte, verlor weitere 5,5 %. Weil der Verlust vorher mit 20,9 % sehr groß war, lag das Gewicht ein Jahr nach dem Absetzen im Mittel immer noch knapp 10 % unter dem Start.</p>"
   - q: "Muss ich Mounjaro ausschleichen?"
-    a: "<p>Die Fachinformation sieht kein Ausschleichen vor; SURMOUNT-4 hat abrupt auf Placebo gewechselt, ohne Entzugserscheinungen. Mit sechs Dosisstufen von 2,5 bis 15 mg ist ein schrittweises Reduzieren technisch einfach. Ob es sinnvoll ist, entscheidet deine Ärztin; ein Beleg für einen kleineren Jojo-Effekt fehlt.</p>"
+    a: "<p>Die Fachinformation sieht kein Ausschleichen vor; SURMOUNT-4 hat abrupt auf Placebo gewechselt, ohne Entzugserscheinungen. Mit sechs Dosisstufen ist ein schrittweises Reduzieren technisch möglich. Ob es sinnvoll ist, entscheidet deine Ärztin; ein Beleg für einen kleineren Jojo-Effekt fehlt.</p>"
   - q: "Ist der Jojo-Effekt nach Mounjaro stärker als nach Wegovy?"
     a: "<p>In Prozentpunkten ja, weil der Verlust vorher größer ist: In SURMOUNT-5 verloren Teilnehmende unter Tirzepatid 20,2 %, unter Semaglutid 13,7 %. Mehr Verlust heißt mehr, das zurückkommen kann. Der Anteil, der zurückkommt, ist in den Studien ähnlich: rund zwei Drittel innerhalb eines Jahres.</p>"
   - q: "Kann ich nach dem Absetzen wieder mit Mounjaro anfangen?"
-    a: "<p>Medizinisch ja. Nach einer längeren Pause wird in der Regel wieder mit 2,5 mg begonnen und in Schritten von 2,5 mg alle vier Wochen gesteigert, um Übelkeit und andere Magen-Darm-Nebenwirkungen zu begrenzen. Den Zeitpunkt legt deine Ärztin fest.</p>"
+    a: "<p>Medizinisch ja. Nach einer längeren Pause wird die Dosis in der Regel wieder aufgebaut, um Magen-Darm-Nebenwirkungen zu begrenzen. Ob, wann und wie, legt deine Ärztin oder dein Arzt fest.</p>"
 ---
 
 Mounjaro ist die Abnehmspritze mit dem größten Gewichtsverlust in den Zulassungsstudien. Genau das macht das Absetzen zum Thema: Je mehr verloren wurde, desto mehr kann zurückkommen. Hier steht, was für Tirzepatid spezifisch ist. Die Grundlagen für alle Abnehmspritzen stehen im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
@@ -27,9 +27,9 @@ Mounjaro ist die Abnehmspritze mit dem größten Gewichtsverlust in den Zulassun
 
 ## Mounjaro in drei Sätzen
 
-Mounjaro enthält Tirzepatid, einen Wirkstoff, der gleichzeitig an zwei Rezeptoren ansetzt, GIP und GLP-1. Es ist in der EU zur Behandlung des Typ-2-Diabetes und zur Gewichtsregulierung zugelassen, bei einem BMI ab 30 oder ab 27 mit Begleiterkrankungen, ergänzend zu Ernährung und Bewegung.<sup><a href="#fn-fachinfoMounjaro">1</a></sup> Die Dosis beginnt bei 2,5 mg pro Woche und wird alle vier Wochen um 2,5 mg gesteigert; Erhaltungsdosen sind 5, 10 oder 15 mg. In der Zulassungsstudie SURMOUNT-1 verloren die Teilnehmenden in 72 Wochen im Mittel 15,0 % (5 mg), 19,5 % (10 mg) und 20,9 % (15 mg), unter Placebo 3,1 %.<sup><a href="#fn-jastreboff2022">2</a></sup> Im direkten Vergleich SURMOUNT-5 lag der Verlust unter Tirzepatid bei 20,2 %, unter Semaglutid 2,4 mg bei 13,7 %.<sup><a href="#fn-aronne2025surmount5">4</a></sup>
+Mounjaro enthält Tirzepatid, einen Wirkstoff, der gleichzeitig an zwei Rezeptoren ansetzt, GIP und GLP-1. Es ist in der EU zur Behandlung des Typ-2-Diabetes und zur Gewichtsregulierung zugelassen, bei einem BMI ab 30 oder ab 27 mit Begleiterkrankungen, ergänzend zu Ernährung und Bewegung.<sup><a href="#fn-fachinfoMounjaro">1</a></sup> Laut Fachinformation gibt es sechs Dosisstufen von 2,5 bis 15 mg pro Woche; welche Stufe wann passt, legt die Ärztin fest. In der Zulassungsstudie SURMOUNT-1 verloren die Teilnehmenden in 72 Wochen im Mittel 15,0 % (5 mg), 19,5 % (10 mg) und 20,9 % (15 mg), unter Placebo 3,1 %.<sup><a href="#fn-jastreboff2022">2</a></sup> Im direkten Vergleich SURMOUNT-5 lag der Verlust unter Tirzepatid bei 20,2 %, unter Semaglutid 2,4 mg bei 13,7 %.<sup><a href="#fn-aronne2025surmount5">4</a></sup>
 
-Selbstzahler zahlen je nach Dosis grob 200 bis 400 € im Monat; die gesetzlichen Kassen übernehmen Mounjaro zur Gewichtsreduktion in der Regel nicht.
+Selbstzahler zahlen je nach Dosis etwa 210 bis 480 € im Monat; die gesetzlichen Kassen übernehmen Mounjaro zur Gewichtsreduktion in der Regel nicht.
 
 ## Wie lange Mounjaro nachwirkt: schneller weg als Semaglutid
 
@@ -54,7 +54,7 @@ Zwei Dinge daran sind wichtig. Erstens: Ein Jahr nach dem Absetzen lag das Gewic
 
 ## Ausschleichen: sechs Stufen, kein Beleg
 
-Mounjaro hat sechs Dosisstufen. Ein schrittweises Reduzieren, etwa von 15 mg über 10 und 5 auf 2,5 mg, ist deshalb technisch einfach. Die Fachinformation sieht es nicht vor, und SURMOUNT-4 hat abrupt gewechselt, ohne Entzugserscheinungen.<sup><a href="#fn-aronne2024">3</a></sup> Ob langsames Reduzieren den Wiederanstieg abmildert, ist nicht belegt. Manche Ärztinnen nutzen eine niedrige Erhaltungsdosis statt eines vollständigen Absetzens; auch das ist eine medizinische Entscheidung, die nur die Ärztin mit dir treffen kann.
+Mounjaro hat sechs Dosisstufen. Ein schrittweises Reduzieren ist deshalb technisch möglich. Die Fachinformation sieht es nicht vor, und SURMOUNT-4 hat abrupt gewechselt, ohne Entzugserscheinungen.<sup><a href="#fn-aronne2024">3</a></sup> Ob langsames Reduzieren den Wiederanstieg abmildert, ist nicht belegt. Manche Ärztinnen nutzen eine niedrige Erhaltungsdosis statt eines vollständigen Absetzens; auch das ist eine medizinische Entscheidung, die nur die Ärztin mit dir treffen kann.
 
 ## Was in den letzten Wochen mit Mounjaro zu tun ist
 
@@ -75,4 +75,4 @@ Der ausführliche Plan: [Gewicht halten nach der Abnehmspritze: der 12-Wochen-Pl
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Mounjaro ist eine Marke von Eli Lilly. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Programm für die Zeit danach, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Mounjaro ist eine Marke von Eli Lilly. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Programm für die Zeit danach, kein Medikament.*

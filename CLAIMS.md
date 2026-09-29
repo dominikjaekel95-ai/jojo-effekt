@@ -42,7 +42,7 @@ Status: ✅ zugelassen und Bedingung erfüllt · ⚠️ prüfen (Michi / ggf. An
 | C14 | Halbwertszeit Semaglutid ca. 1 Woche, Tirzepatid ca. 5 Tage; Dosisstufen; Schwangerschafts-Regel Wegovy | Artikel Absetzen, Markenseiten | fachinfoWegovy, fachinfoOzempic, fachinfoMounjaro (EMA-Produktinformationen) | ✅ |
 | C15 | Kreatin: Wassereinlagerung 0,5–2 kg in den ersten Wochen; Kreatinin-Laborwert steigt | Artikel Kreatin | kreider2017 (Positionspapier) | ✅ |
 | C16 | Abnehmspritze kostet Selbstzahler ca. 170–280 €/Monat | Startseite Preis, Artikel Absetzen | Apothekenpreise (AVP) je Dosis – **Stichtag und Quelle nachtragen** | ⚠️ |
-| C17 | „Apothekerzeitung 2/2026: Protein und Kreatin“ | Startseite Forschung (Fußnote) | apothekerzeitung2026 – **Link/Fundstelle fehlt** | ⚠️ vor Launch verlinken oder Fußnote entfernen |
+| C17 | „Apothekerzeitung 2/2026: Protein und Kreatin“ | – | Fußnote und Quelle entfernt (keine verifizierbare Fundstelle). Kann mit Link wieder aufgenommen werden. | ✅ entfernt |
 
 ## D. Grenzfälle, bewusst so formuliert – bitte prüfen
 
@@ -55,7 +55,7 @@ Status: ✅ zugelassen und Bedingung erfüllt · ⚠️ prüfen (Michi / ggf. An
 | D5 | „Das Set liefert Protein, Ballaststoffe und Kreatin und begleitet dich durch zwei Krafteinheiten pro Woche.“ | Problem-Sektion, Artikel-Fußzeilen | Beschreibt Inhalt, keine Wirkung. Frühere Formulierung „Genau dafür ist das Set“ wurde entfernt (implizierter Nutzen gegen Regain). | ✅ |
 | D6 | „Was wir nicht sagen: dass das Set die Spritze ersetzt oder den Jojo-Effekt verhindert.“ | Forschung, FAQ, Über uns, Artikel | Negativ-Abgrenzung, bewusst prominent. | ✅ |
 | D7 | „Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.“ | Jede Seite (Hero, Für-wen, Footer, Artikel-Kopf) | Pflichtsatz aus dem Plan; erfüllt. | ✅ |
-| D8 | Nennung von Wegovy/Ozempic/Mounjaro in Artikeln und Keywords | Wissensbereich, Meta-Keywords | Redaktionelle Nennung verschreibungspflichtiger Arzneimittel ist zulässig, solange keine Werbung für das Arzneimittel (§ 10 HWG) und keine Absetz-Anleitung. **Nicht** in Anzeigentexten, **nicht** auf der Startseite. | ✅ |
+| D8 | Nennung von Wegovy/Ozempic/Mounjaro in Artikeln und Keywords | Wissensbereich, Meta-Keywords | Redaktionelle Nennung verschreibungspflichtiger Arzneimittel ist zulässig, solange keine Werbung für das Arzneimittel (§ 10 HWG) und keine Absetz-Anleitung. **Nicht** in Anzeigentexten, **nicht** auf der Startseite. **Keine Dosierungsschemata** (Titration, Wiedereinstieg): nur „Dosisstufen laut Fachinformation von x bis y mg“, alles Weitere „legt die Ärztin fest“. | ✅ (30.09. Schemata entfernt) |
 | D9 | „Sättigung“ / „Verdauung“ für den Ballaststoff-Stick | – | Kein zugelassener allgemeiner Ballaststoff-Claim für Sättigung. Nicht verwendet. Möglich wären spezifische Claims (z. B. Glucomannan 3 g/Tag → Gewichtsverlust im Rahmen kalorienarmer Ernährung, mit Warnhinweis Erstickungsgefahr; Weizenkleie 10 g/Tag → Darmpassage) – hängt von der Rezeptur ab. | ❌ bis Rezeptur steht |
 | D11 | Markenseiten „Wegovy absetzen“, „Ozempic absetzen“, „Mounjaro absetzen“ | /wissen/ | Rein informativ: Fachinformation, Zulassungsstudien, Absetz-Studien, Pflichtsatz oben und unten, Markeninhaber genannt, keine Bewertung der Präparate, keine Bezugsquelle, keine Absetz-Anleitung. SURMOUNT-5-Vergleich als Studienzitat. Kein Produkt-Claim auf diesen Seiten außer der Standard-Produktbox. | ✅ (HWG § 10: keine Publikumswerbung für Rx-Arzneimittel, da keine Werbung) |
 | D12 | Erfahrungsberichte-Seite (Entwurf, draft: true) | /wissen/ (nicht gebaut) | Geht erst live mit ≥ 5 echten, eingewilligten, anonymisierten Berichten; kein Health Claim in Zitaten, keine Dosierungs- oder Absetz-Empfehlungen. Regeln stehen als Kommentar in der Datei. | ⚠️ bis Berichte vorliegen |
@@ -83,5 +83,6 @@ Status: ✅ zugelassen und Bedingung erfüllt · ⚠️ prüfen (Michi / ggf. An
 
 - 30.09.2026: Alle Seiten gegen A–E geprüft (Claude Code). A3 von der Startseite entfernt, D5 umformuliert. Offene ⚠️-Punkte: A3-Programmvariante, B1-Rezeptur, C16, C17, D1/D2, D10, D12.
 - 30.09.2026, später: Markenseiten (D11), Studien-Tracker und Erfahrungsberichte-Entwurf (D12) ergänzt; C14 mit EMA-Produktinformationen belegt.
-- [ ] Michi: Freigabe der Mengen (Protein g/kg, Kreatin 3 g, Ballaststoffe 5 g), Liste „Für wen nicht“, alle Aussagen in A–D.
+- [ ] Fachliche Prüfung: Ernährungswissenschaftler:in (freiberuflich, pro Artikel) finden – bewusst kein Arzt (§ 27 MBO-Ä, Produkt ist Lebensmittel). Bis dahin zeigt die Seite ehrlich „noch nicht fachlich gegengeprüft“; kein „fachlich geprüft“ irgendwo. Danach `reviewer` in `src/data/site.ts` setzen.
+- [ ] Freigabe der Mengen (Protein g/kg, Kreatin 3 g, Ballaststoffe 5 g und welcher Ballaststoff), Liste „Für wen nicht“, alle Aussagen in A–D.
 - [ ] Dominik: C16/C17 Quellen nachtragen, Entscheidung D1.

@@ -27,7 +27,7 @@ export const landingFaq: FaqItem[] = [
   },
   {
     q: 'Ist das ein Medikament?',
-    a: '<p>Nein. Das Set besteht aus Lebensmitteln (Protein, Ballaststoffe, Kreatin-Monohydrat) und einem Ernährungs- und Trainingsprogramm. Es ersetzt weder die Abnehmspritze noch ein Gespräch mit deiner Ärztin oder deinem Arzt. Ob und wie du dein Medikament absetzt, entscheidest du mit deiner Ärztin oder deinem Arzt.</p>',
+    a: '<p>Nein. Das Set besteht aus Lebensmitteln (Protein, Ballaststoffe, Kreatin-Monohydrat) und einem Ernährungs- und Trainingsprogramm. Es ersetzt weder die Abnehmspritze noch das Gespräch mit deiner Ärztin oder deinem Arzt.</p>',
   },
   {
     q: 'Kann ich das Set nehmen, während ich noch spritze?',

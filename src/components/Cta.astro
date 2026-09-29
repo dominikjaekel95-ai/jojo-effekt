@@ -4,7 +4,7 @@
  */
 import { site } from '../data/site';
 interface Props { position: string; label?: string; class?: string; secondary?: boolean }
-const { position, label = `Vorbestellen – ${site.price.set} € für 12 Wochen`, class: cls = '', secondary = false } = Astro.props;
+const { position, label = 'Vorbestellen – ohne Zahlung', class: cls = '', secondary = false } = Astro.props;
 ---
 <a
   href="/#vorbestellen"

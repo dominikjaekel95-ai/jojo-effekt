@@ -7,7 +7,7 @@ import Faq from '../components/Faq.astro';
 import PreorderForm from '../components/PreorderForm.astro';
 import SetIllustration from '../components/SetIllustration.astro';
 import { site } from '../data/site';
-import { landingFaq, faqJsonLd } from '../data/faq';
+import { landingFaq } from '../data/faq';
 import { getCollection } from 'astro:content';
 
 // Reihenfolge der Fußnoten auf dieser Seite (Nummer = Position + 1)
@@ -23,15 +23,14 @@ const fnIds = [
   'who2020',
   'kreider2017',
   'dgeBallaststoffe',
-  'apothekerzeitung2026',
 ] as const;
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
 const artikel = (await getCollection('wissen', (a) => !a.data.draft)).sort((a, b) => a.data.order - b.data.order).slice(0, 3);
 
-const title = 'Nach der Spritze: Muskeln behalten, Gewicht halten';
+const title = 'Nach der Abnehmspritze: Muskeln behalten, Gewicht halten';
 const description = site.description;
-const jsonLd = [faqJsonLd(landingFaq)];
+const jsonLd: Record<string, unknown>[] = [];
 ---
 
 <Base title={title} description={description} path="/" jsonLd={jsonLd}>
@@ -58,7 +57,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
           <a href="#set" class="btn-secondary">Was ist drin?</a>
         </div>
         <p class="mt-4 text-sm text-ink-3">
-          Kein Geld jetzt. Erste Charge ab {site.preorderGoal} Vorbestellungen. Du bekommst als Erste Bescheid.
+          {site.price.set} € für 12 Wochen. Kein Geld jetzt. Erste Charge ab {site.preorderGoal} Vorbestellungen. Du erfährst es als Erstes.
         </p>
         <p class="mt-6 inline-block rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">
           {site.doctorSentence}
@@ -114,7 +113,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
           <h3 class="mt-2 text-xl">Protein-Stick</h3>
           <p class="mt-2 text-sm text-ink-2">
             Mindestens 20 g Protein pro Stick. Protein trägt zur Erhaltung von Muskelmasse bei.<Fn n={fn('euClaims')} id="euClaims" /> Ziel im Programm: 1,2 g Protein pro kg Körpergewicht am Tag<Fn n={fn('leidy2015')} id="leidy2015" /> – mit kleinem Appetit
-            schafft das kaum jemand. Der Stick schließt die Lücke.
+            schafft das kaum jemand. Der Stick liefert 20 g davon: die, die bei kleinem Appetit am ehesten fehlen.
           </p>
           <p class="mt-3 text-xs text-ink-3">Molke oder pflanzlich – du wählst bei der Vorbestellung.</p>
         </article>
@@ -167,7 +166,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
           empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag, deutlich
           mehr als die 0,8 g, die die DGE für Erwachsene als Minimum ansetzt.<Fn n={fn('leidy2015')} id="leidy2015" /> Wer unter der
           Spritze wenig Appetit hat, kommt oft nicht einmal auf das Minimum. Protein trägt zur Erhaltung von
-          Muskelmasse bei.<Fn n={fn('euClaims')} id="euClaims" /><Fn n={fn('apothekerzeitung2026')} id="apothekerzeitung2026" />
+          Muskelmasse bei.<Fn n={fn('euClaims')} id="euClaims" />
         </p>
         <h3>Krafttraining: der stärkste Hebel gegen den Verlust von Muskelmasse – und gegen das Zurück</h3>
         <p>
@@ -175,6 +174,10 @@ const jsonLd = [faqJsonLd(landingFaq)];
           Masse weitgehend.<Fn n={fn('sardeli2018')} id="sardeli2018" /> Und in der dänischen S-LiTE-Studie hielten Teilnehmende, die
           während der Therapie trainiert hatten, ihr Gewicht und ihre Körperzusammensetzung ein ganzes Jahr nach dem
           Absetzen – wer nur das Medikament bekommen hatte, nahm im Schnitt 6 kg mehr wieder zu.<Fn n={fn('jensen2024')} id="jensen2024" /> Die WHO empfiehlt an mindestens zwei Tagen pro Woche muskelkräftigende Aktivitäten.<Fn n={fn('who2020')} id="who2020" /> Deshalb: zwei Einheiten, 30 Minuten, machbar.
+        </p>
+        <h3>Ballaststoffe: die Nebenrolle, ehrlich benannt</h3>
+        <p>
+          Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag; die meisten Erwachsenen in Deutschland liegen darunter.<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> Mit den kleinen Portionen unter der Spritze wird es noch weniger. Der Stick liefert 5 g als Ergänzung zu Gemüse, Hülsenfrüchten und Vollkorn – nicht als Ersatz. Für Gewicht oder Sättigung behaupten wir nichts: Welche gesundheitsbezogene Angabe zulässig ist, hängt vom konkreten Ballaststoff ab (für Glucomannan gibt es eine, für Inulin nicht), und wir nennen ihn, sobald die Rezeptur steht.
         </p>
         <h3>Kreatin: gut untersucht, günstig, wirkt mit dem Training</h3>
         <p>
@@ -219,7 +222,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
         </div>
       </div>
       <p class="mt-8 max-w-2xl rounded-xl2 border border-amber/50 bg-amber-light px-5 py-4 text-base font-medium text-ink">
-        {site.doctorSentence} Das Set ist kein Medikament und keine Absetz-Anleitung.
+        Das Set ist kein Medikament und keine Absetz-Anleitung. Es ergänzt das Gespräch mit deiner Ärztin, es ersetzt es nicht.
       </p>
     </div>
   </section>
@@ -229,9 +232,9 @@ const jsonLd = [faqJsonLd(landingFaq)];
     <div class="container-wide grid gap-10 md:grid-cols-2 md:items-start">
       <div>
         <p class="eyebrow">Preis</p>
-        <h2 id="preis-h" class="h2 mt-2">{site.price.set} € für 12 Wochen. Oder {site.price.perMonth} € im Monat.</h2>
+        <h2 id="preis-h" class="h2 mt-2">{site.price.set} € einmalig oder {site.price.perMonth} € im Monat.</h2>
         <p class="mt-4 text-ink-2">
-          Das 12-Wochen-Set kostet {site.price.set} € – das entspricht {site.price.setPerMonth} € pro Monat. Alternativ {site.price.perMonth} € monatlich, jederzeit kündbar. Versand innerhalb Deutschlands inklusive.
+          {site.price.set} € einmalig für 12 Wochen (entspricht {site.price.setPerMonth} € im Monat) oder {site.price.perMonth} € monatlich, jederzeit kündbar. Versand innerhalb Deutschlands inklusive.
         </p>
         <ul class="mt-6 space-y-2 text-ink-2">
           <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> 84 Protein-Sticks (≥ 20 g Protein)</li>
@@ -242,7 +245,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
         <div class="mt-8 rounded-xl2 border border-line bg-paper p-5">
           <p class="text-sm font-semibold text-ink">Zum Vergleich</p>
           <p class="mt-1 text-sm text-ink-2">
-            Die Abnehmspritze kostet Selbstzahler in Deutschland je nach Dosis etwa {site.price.injectionMin} bis {site.price.injectionMax} € im Monat. Das Set kostet {site.price.setPerMonth} €.
+            Die Abnehmspritze kostet Selbstzahler in Deutschland je nach Präparat und Dosis etwa {site.price.injectionMin} bis {site.price.injectionMax} € im Monat. Das Set kostet ab {site.price.setPerMonth} €.
           </p>
         </div>
         <p class="mt-6 text-sm text-ink-3">
@@ -261,7 +264,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
       <h2 id="wissen-h" class="h2 mt-2">Absetzen, Jojo-Effekt, Muskeln: die Fakten, mit Quellen</h2>
       <p class="mt-3 max-w-2xl text-ink-2">
         Was in Studien passiert, wenn die Spritze wegfällt, und was nachweislich hilft. Nüchtern, ohne Verkaufston,
-        fachlich geprüft.
+        jede Zahl mit Link zur Originalstudie.
       </p>
       <div class="mt-8 grid gap-6 md:grid-cols-3">
         {artikel.map((a) => (
@@ -273,7 +276,13 @@ const jsonLd = [faqJsonLd(landingFaq)];
           </a>
         ))}
       </div>
-      <a href="/wissen/" class="mt-6 inline-block text-sm font-semibold text-moss underline underline-offset-4">Alle Artikel im Wissensbereich</a>
+      <p class="mt-6 text-sm text-ink-2">
+        Absetzen nach Präparat: <a href="/wissen/wegovy-absetzen/" class="font-semibold text-moss underline underline-offset-4">Wegovy</a> ·
+        <a href="/wissen/mounjaro-absetzen/" class="font-semibold text-moss underline underline-offset-4">Mounjaro</a> ·
+        <a href="/wissen/ozempic-absetzen/" class="font-semibold text-moss underline underline-offset-4">Ozempic</a>
+        · <a href="/wissen/studien/" class="font-semibold text-moss underline underline-offset-4">Studien-Tracker</a>
+      </p>
+      <a href="/wissen/" class="mt-3 inline-block text-sm font-semibold text-moss underline underline-offset-4">Alle Artikel im Wissensbereich</a>
     </div>
   </section>
 

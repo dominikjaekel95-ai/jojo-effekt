@@ -30,7 +30,7 @@ Zeichenlängen geprüft: Headlines ≤ 30 Zeichen, Descriptions ≤ 90 Zeichen (
 | Headline 2 | Protein-Stick mit 20 g | 22 |
 | Headline 3 | Kreatin + Trainingsplan | 23 |
 | Headline 4 | Set für die Zeit danach | 23 |
-| Headline 5 | Fachlich geprüft, mit Quellen | 29 |
+| Headline 5 | Mit Quellen belegt | 18 |
 | Headline 6 | Vorbestellen ohne Zahlung | 25 |
 | Description 1 | Protein trägt zur Erhaltung von Muskelmasse bei. 84 Sticks, Kreatin, Trainingsplan. | 83 |
 | Description 2 | Das 12-Wochen-Set für die Zeit nach der Abnehmspritze. 129 €, unverbindlich vorbestellen. | 89 |

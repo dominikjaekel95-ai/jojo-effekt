@@ -21,12 +21,12 @@ export const site = {
     email: 'dominik.jaekel95@gmail.com',
   },
 
-  // Fachliche Prüfung (E-E-A-T). Name/Qualifikation liefert Michi.
-  reviewer: {
-    name: '[Vorname Nachname]',
-    title: '[Qualifikation, z. B. Ernährungswissenschaftler M.Sc.]',
-    short: 'Michi',
-  },
+  // Fachliche Prüfung (E-E-A-T). Solange null, zeigt die Seite ehrlich „noch nicht fachlich gegengeprüft“.
+  // Sobald eine Ernährungswissenschaftlerin / ein Ernährungswissenschaftler prüft: { name, title, url? } eintragen.
+  reviewer: null as null | { name: string; title: string; url?: string },
+
+  // Öffentliche Profile für das Organization-Schema (sameAs), z. B. LinkedIn. Leer lassen, bis vorhanden.
+  sameAs: [] as string[],
 
   // Angebot
   price: {
@@ -35,7 +35,7 @@ export const site = {
     setMonths: 3,
     setPerMonth: 43,
     injectionMin: 170,
-    injectionMax: 280,
+    injectionMax: 480,
   },
   preorderGoal: 100,
 

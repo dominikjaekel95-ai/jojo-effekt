@@ -4,6 +4,11 @@
  */
 export const studienUpdated = '2026-09-30';
 
+/** Datierte Einträge für „Was neu ist“ – neuester zuerst. Jede Ergänzung der Tabelle bekommt eine Zeile. */
+export const studienLog: { date: string; text: string }[] = [
+  { date: '2026-09-30', text: 'Start des Trackers mit 15 Studien: Absetz-Phasen (STEP 1 Extension, STEP 4, SURMOUNT-4, S-LiTE), Meta-Analysen 2025/2026, Mechanismen und Versorgungsdaten.' },
+];
+
 export type Studie = {
   sourceId: string;
   name: string;

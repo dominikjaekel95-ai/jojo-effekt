@@ -82,4 +82,4 @@ Die Zunahme wird in Studien ab jetzt messbar.<sup><a href="#fn-wu2025">1</a></su
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt. Das 12-Wochen-Set von Nach der Spritze folgt genau diesem Aufbau: Protein-, Ballaststoff- und Kreatin-Sticks für jeden Tag, Trainingspläne für zwei Einheiten pro Woche, ein wöchentlicher Check-in. Es ist ein Lebensmittel mit Programm, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze folgt genau diesem Aufbau: Protein-, Ballaststoff- und Kreatin-Sticks für jeden Tag, Trainingspläne für zwei Einheiten pro Woche, ein wöchentlicher Check-in. Es ist ein Lebensmittel mit Programm, kein Medikament.*

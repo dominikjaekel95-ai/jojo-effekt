@@ -54,7 +54,7 @@ Neuen Artikel anlegen: Markdown-Datei in `src/content/wissen/` mit dem Frontmatt
    Deploy auslösen. Jeder Push auf `main` deployt neu, jeder Pull Request bekommt eine Preview-URL.
    Alternative Cloudflare Pages: gleiche Einstellungen, Build-Output `dist`.
 3. **Domain:** Bei INWX, Cloudflare Registrar oder Namecheap kaufen (siehe `docs/DOMAIN-UND-WETTBEWERB.md`). In Vercel *Settings → Domains* die Domain eintragen; Vercel zeigt den CNAME (`cname.vercel-dns.com`) bzw. A-Record. Beim Registrar eintragen; `www` als Weiterleitung auf die Hauptdomain. DNS braucht 10 Minuten bis einige Stunden. HTTPS macht Vercel automatisch.
-4. **Tally:** tally.so → Formular anlegen mit den Feldern E-Mail, Auswahl „Ich nehme aktuell / habe abgesetzt / überlege“, Checkbox „Ich würde 129 € für 12 Wochen zahlen“, Freitext „Was bräuchtest du?“ (optional), Checkbox Datenschutz (Pflicht). *Settings → Redirect on completion* → `https://<domain>/danke/`. *Settings → Email notifications* an dich. Double-Opt-in: Tally kann Bestätigungs-Mails senden (Integration mit E-Mail-Tool) – alternativ die erste Info-Mail als Bestätigung formulieren. Formular-ID in Vercel eintragen, Redeploy.
+4. **Tally:** tally.so → Formular anlegen mit den Feldern E-Mail, Auswahl „Ich nehme aktuell / habe abgesetzt / überlege“, Auswahl „Welches Präparat?“ (Wegovy / Mounjaro / Ozempic / Saxenda / anderes / keins), Checkbox „Ich würde 129 € für 12 Wochen zahlen“, Freitext „Was bräuchtest du?“ (optional), Checkbox Datenschutz (Pflicht). *Settings → Redirect on completion* → `https://<domain>/danke/`. *Settings → Email notifications* an dich. Double-Opt-in: Tally kann Bestätigungs-Mails senden (Integration mit E-Mail-Tool) – alternativ die erste Info-Mail als Bestätigung formulieren. Formular-ID in Vercel eintragen, Redeploy.
 5. **Plausible:** plausible.io → Site anlegen (Domain ohne https). Unter *Goals* die Custom Events `Vorbestellen Klick` und Pageview-Ziel `/danke/` anlegen. Domain in Vercel eintragen, Redeploy. Prüfen: Seite aufrufen, in Plausible erscheint der Besuch in Echtzeit.
 6. **Google Search Console:** Property für die Domain anlegen (DNS-Verifizierung beim Registrar), Sitemap `https://<domain>/sitemap-index.xml` einreichen, alle 13 URLs über „URL-Prüfung → Indexierung beantragen“ anstoßen. Details in `docs/SEO-STRATEGIE.md`.
 7. **Google Ads:** Konto anlegen, Zahlungsdaten hinterlegen (sonst keine Freigabe), Kampagne aus `ADS.md` einreichen. Freigabe dauert 1–2 Tage.
@@ -62,8 +62,10 @@ Neuen Artikel anlegen: Markdown-Datei in `src/content/wissen/` mit dem Frontmatt
 ## Checkliste vor dem Launch
 
 - [ ] `src/data/site.ts`: Anschrift, PLZ, E-Mail eingetragen (Impressum § 5 DDG) – Platzhalter in eckigen Klammern sind weg
-- [ ] `src/data/site.ts`: Name und Qualifikation der fachlichen Prüfung (Michi) eingetragen
-- [ ] Michi hat `CLAIMS.md` freigegeben (Mengen, „Für wen nicht“, alle ⚠️-Punkte)
+- [ ] `src/data/site.ts`: `reviewer` gesetzt, sobald eine Ernährungswissenschaftlerin / ein Ernährungswissenschaftler die Artikel geprüft hat (vorher steht ehrlich „noch nicht gegengeprüft“ auf der Seite)
+- [ ] Host: Apex `nachderspritze.de` ist Haupt-Host; in Vercel unter Domains die Apex-Domain als primär setzen, damit www dorthin weiterleitet (Canonical, Sitemap und OG-URLs zeigen auf die Apex-Domain)
+- [ ] Kontakt-Adresse `hallo@nachderspritze.de` einrichten (Weiterleitung beim Registrar) und in `src/data/site.ts` eintragen
+- [ ] `CLAIMS.md` freigegeben (Mengen, welcher Ballaststoff, „Für wen nicht“, alle ⚠️-Punkte)
 - [ ] Entscheidung zur Überschrift (`CLAIMS.md` D1) getroffen
 - [ ] Quellen C14, C16, C17 in `src/data/sources.ts` nachgetragen oder Fußnote entfernt
 - [ ] Datenschutzerklärung gegengelesen: Tally, Plausible, Vercel korrekt, Stand-Datum aktuell

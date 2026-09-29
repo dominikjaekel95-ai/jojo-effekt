@@ -7,7 +7,7 @@ import { site } from '../../data/site';
 const artikel = (await getCollection('wissen', (a) => !a.data.draft)).sort((a, b) => a.data.order - b.data.order);
 const title = 'Wissen: Abnehmspritze absetzen, Jojo-Effekt, Muskeln erhalten';
 const description =
-  'Was nach der Abnehmspritze passiert und was nachweislich hilft: Jojo-Effekt, Absetzen, Muskelabbau, Protein, Kreatin und ein 12-Wochen-Plan. Mit Studien, fachlich geprüft.';
+  'Was nach der Abnehmspritze passiert und was nachweislich hilft: Jojo-Effekt, Absetzen, Muskelabbau, Protein, Kreatin und ein 12-Wochen-Plan. Jede Zahl mit Link zur Originalstudie.';
 const jsonLd = [
   {
     '@type': 'CollectionPage',
@@ -32,9 +32,9 @@ const jsonLd = [
     <p class="eyebrow mt-6">Wissen</p>
     <h1 class="h1 mt-3">Nach der Abnehmspritze: die Fakten, mit Quellen</h1>
     <p class="mt-4 max-w-2xl text-lg text-ink-2">
-      Was in Studien passiert, wenn die Spritze wegfällt, und was nachweislich hilft. Jede Zahl mit Quelle, jeder Artikel
-      fachlich geprüft, kein Verkaufston. Und immer: Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin
-      oder deinem Arzt.
+      Was in Studien passiert, wenn die Spritze wegfällt, und was nachweislich hilft. Jede Zahl mit Link zur
+      Originalstudie, Quellen unter jedem Artikel, kein Verkaufston. Und immer: Ob und wie du dein Medikament absetzt,
+      besprichst du mit deiner Ärztin oder deinem Arzt.
     </p>
     <a href="/wissen/studien/" class="card mt-10 block border-amber/50 bg-amber-light/40 no-underline hover:border-amber">
       <p class="eyebrow text-amber-dark">Studien-Tracker</p>

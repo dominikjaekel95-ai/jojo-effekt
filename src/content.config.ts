@@ -20,6 +20,8 @@ const wissen = defineCollection({
     sources: z.array(z.string()),
     faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
     related: z.array(z.string()).default([]),
+    /** true = wird nicht gebaut (Vorlage, noch ohne echten Inhalt) */
+    draft: z.boolean().default(false),
   }),
 });
 

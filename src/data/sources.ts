@@ -161,6 +161,59 @@ export const sources: Record<string, Source> = {
     url: 'https://register.awmf.org/de/leitlinien/detail/050-001',
     note: 'Empfiehlt Ernährungs-, Bewegungs- und Verhaltenstherapie als Basis; Medikamente als Ergänzung.',
   },
+  wilding2021step1: {
+    id: 'wilding2021step1',
+    short: 'Wilding et al., STEP 1, NEJM 2021',
+    full:
+      'Wilding JPH, Batterham RL, Calanna S, et al. Once-Weekly Semaglutide in Adults with Overweight or Obesity. N Engl J Med. 2021;384(11):989–1002.',
+    url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa2032183',
+    note: 'Zulassungsstudie Semaglutid 2,4 mg: −14,9 % Körpergewicht nach 68 Wochen gegenüber −2,4 % unter Placebo.',
+  },
+  davies2021step2: {
+    id: 'davies2021step2',
+    short: 'Davies et al., STEP 2, Lancet 2021',
+    full:
+      'Davies M, Færch L, Jeppesen OK, et al. Semaglutide 2·4 mg once a week in adults with overweight or obesity, and type 2 diabetes (STEP 2): a randomised, double-blind, double-dummy, placebo-controlled, phase 3 trial. Lancet. 2021;397(10278):971–984.',
+    url: 'https://doi.org/10.1016/S0140-6736(21)00213-0',
+    note: 'Bei Typ-2-Diabetes: −9,6 % unter 2,4 mg, −7,0 % unter 1,0 mg (Ozempic-Dosis), −3,4 % unter Placebo nach 68 Wochen.',
+  },
+  jastreboff2022: {
+    id: 'jastreboff2022',
+    short: 'Jastreboff et al., SURMOUNT-1, NEJM 2022',
+    full:
+      'Jastreboff AM, Aronne LJ, Ahmad NN, et al. Tirzepatide Once Weekly for the Treatment of Obesity. N Engl J Med. 2022;387(3):205–216.',
+    url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa2206038',
+    note: 'Zulassungsstudie Tirzepatid: −15,0 % (5 mg), −19,5 % (10 mg), −20,9 % (15 mg) gegenüber −3,1 % unter Placebo nach 72 Wochen.',
+  },
+  aronne2025surmount5: {
+    id: 'aronne2025surmount5',
+    short: 'Aronne et al., SURMOUNT-5, NEJM 2025',
+    full:
+      'Aronne LJ, Horn DB, le Roux CW, et al. Tirzepatide as Compared with Semaglutide for the Treatment of Obesity. N Engl J Med. 2025;393(1):26–36.',
+    url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa2416394',
+    note: 'Direkter Vergleich über 72 Wochen: −20,2 % unter Tirzepatid, −13,7 % unter Semaglutid 2,4 mg.',
+  },
+  fachinfoWegovy: {
+    id: 'fachinfoWegovy',
+    short: 'Fachinformation Wegovy (EMA-Produktinformation)',
+    full: 'Europäische Arzneimittel-Agentur. Wegovy (Semaglutid): Zusammenfassung der Merkmale des Arzneimittels. Amsterdam: EMA.',
+    url: 'https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy',
+    note: 'Dosisstufen 0,25 / 0,5 / 1 / 1,7 / 2,4 mg je vier Wochen; Halbwertszeit etwa eine Woche; bei geplanter Schwangerschaft mindestens zwei Monate vorher absetzen.',
+  },
+  fachinfoOzempic: {
+    id: 'fachinfoOzempic',
+    short: 'Fachinformation Ozempic (EMA-Produktinformation)',
+    full: 'Europäische Arzneimittel-Agentur. Ozempic (Semaglutid): Zusammenfassung der Merkmale des Arzneimittels. Amsterdam: EMA.',
+    url: 'https://www.ema.europa.eu/en/medicines/human/EPAR/ozempic',
+    note: 'Zugelassen zur Behandlung des Typ-2-Diabetes; Dosisstufen 0,25 / 0,5 / 1 / 2 mg; Halbwertszeit etwa eine Woche.',
+  },
+  fachinfoMounjaro: {
+    id: 'fachinfoMounjaro',
+    short: 'Fachinformation Mounjaro (EMA-Produktinformation)',
+    full: 'Europäische Arzneimittel-Agentur. Mounjaro (Tirzepatid): Zusammenfassung der Merkmale des Arzneimittels. Amsterdam: EMA.',
+    url: 'https://www.ema.europa.eu/en/medicines/human/EPAR/mounjaro',
+    note: 'Dosisstufen 2,5 bis 15 mg in Schritten von 2,5 mg je vier Wochen; Halbwertszeit etwa fünf Tage.',
+  },
   apothekerzeitung2026: {
     id: 'apothekerzeitung2026',
     short: 'Apothekerzeitung 2/2026: Protein und Kreatin',

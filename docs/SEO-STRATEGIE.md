@@ -34,12 +34,12 @@ Jede Anfrage-Gruppe hat genau eine Ziel-URL (keine Kannibalisierung). Suchvolume
 | Kreatin | kreatin abnehmspritze, kreatin wegovy/ozempic/mounjaro, kreatin glp-1 | /wissen/kreatin-abnehmspritze/ | live – **Lücke ohne Wettbewerb** |
 | Gewicht halten / Plan | nach abnehmspritze gewicht halten, abnehmspritze absetzen gewicht halten, abnehmspritze danach, absetzen plan | /wissen/gewicht-halten-nach-abnehmspritze/ | live |
 | Produkt/Marke | nach der spritze set, 12 wochen set abnehmspritze, protein kreatin set nach abnehmspritze | / | live |
-| Erfahrungen | abnehmspritze absetzen erfahrungen, wegovy absetzen erfahrungen | /wissen/abnehmspritze-absetzen-erfahrungen/ | **Monat 2** – echte Berichte aus Vorbestell-Liste/Community (mit Einwilligung), keine erfundenen |
-| Markenspezifisch | wegovy absetzen, ozempic absetzen, mounjaro absetzen (jeweils eigene Intention: Dosis, Halbwertszeit, Studien) | /wissen/wegovy-absetzen/, /wissen/ozempic-absetzen/, /wissen/mounjaro-absetzen/ | **Monat 2–3** – rein informativ, HWG-konform (keine Werbung, keine Absetz-Anleitung), Kernaussagen aus dem Absetzen-Artikel + präparatspezifische Studien (STEP vs. SURMOUNT) |
+| Erfahrungen | abnehmspritze absetzen erfahrungen, wegovy absetzen erfahrungen | /wissen/abnehmspritze-absetzen-erfahrungen/ | **Vorlage im Repo (draft: true)** – geht live, sobald ≥ 5 echte, eingewilligte Berichte aus der Vorbestell-Liste vorliegen; Regeln stehen in der Datei |
+| Markenspezifisch | wegovy absetzen, ozempic absetzen, mounjaro absetzen (jeweils eigene Intention: Dosis, Halbwertszeit, Studien) | /wissen/wegovy-absetzen/, /wissen/ozempic-absetzen/, /wissen/mounjaro-absetzen/ | **live** – rein informativ, HWG-konform; präparatspezifisch: Halbwertszeit und Dosisstufen aus der Fachinformation, STEP 1/2/4 bzw. SURMOUNT-1/4/5, Diabetes-Hinweis bei Ozempic |
 | Ernährung | abnehmspritze ernährung, was essen abnehmspritze, ballaststoffe abnehmspritze | /wissen/ernaehrung-abnehmspritze/ | Monat 3 |
 | Training | krafttraining anfänger nach abnehmspritze, training abnehmspritze zuhause | /wissen/krafttraining-nach-abnehmspritze/ (mit dem 30-Minuten-Plan aus dem Programm als Vorschau) | Monat 3 |
 | Dauer/Plateau | abnehmspritze wie lange nehmen, abnehmspritze plateau | /wissen/abnehmspritze-wie-lange/ | Monat 4 |
-| Studien-Tracker | abnehmspritze absetzen studie, neue studie abnehmspritze | /wissen/studien/ – monatlich aktualisierte Liste aller Absetz-Studien mit Kernzahl | Monat 2, danach laufend (Link-Magnet) |
+| Studien-Tracker | abnehmspritze absetzen studie, neue studie abnehmspritze | /wissen/studien/ – Tabelle aller Absetz-Studien mit Kernzahl, Dataset-Schema, CC BY | **live**, monatlich ergänzen (`src/data/studien.ts`) |
 
 Regel: maximal zwei neue Artikel pro Monat, jeder mit Fachprüfung, FAQ, Quellen, interner Verlinkung in beide Richtungen (Hub ↔ Artikel ↔ verwandte Artikel ↔ Produktbox).
 

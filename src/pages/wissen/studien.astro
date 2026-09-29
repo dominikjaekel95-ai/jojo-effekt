@@ -1,0 +1,129 @@
+---
+import Base from '../../layouts/Base.astro';
+import Footnotes from '../../components/Footnotes.astro';
+import Cta from '../../components/Cta.astro';
+import { studien, studienUpdated } from '../../data/studien';
+import { sources } from '../../data/sources';
+import { site } from '../../data/site';
+
+const gruppen = ['Absetzen', 'Mechanismus', 'Versorgung', 'Zulassung'] as const;
+const beschreibung: Record<(typeof gruppen)[number], string> = {
+  Absetzen: 'Was nach dem Ende der Therapie mit dem Gewicht passiert – die Studien mit Absetz-Phase.',
+  Mechanismus: 'Warum das Gewicht zurückkommt und was dagegen wirkt: Muskeln, Hormone, Stoffwechsel, Training.',
+  Versorgung: 'Wie viele Menschen tatsächlich absetzen.',
+  Zulassung: 'Wie viel Gewicht unter der Therapie verloren wird – der Ausgangspunkt für alles danach.',
+};
+const fnIds = studien.map((s) => s.sourceId);
+const fn = (id: string) => fnIds.indexOf(id) + 1;
+const updated = new Date(studienUpdated).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+
+const title = 'Studien zum Absetzen der Abnehmspritze: alle Ergebnisse in einer Tabelle';
+const metaTitle = 'Studien zum Absetzen der Abnehmspritze: Tracker mit Kernzahlen';
+const description =
+  'Alle Studien zu Gewicht nach dem Absetzen von Semaglutid, Tirzepatid und Liraglutid: STEP 1 Extension, STEP 4, SURMOUNT-4, S-LiTE, Meta-Analysen. Kernzahl, Bedeutung, Link. Monatlich aktualisiert.';
+const jsonLd = [
+  {
+    '@type': 'Dataset',
+    name: 'Studien-Tracker: Gewicht nach dem Absetzen von GLP-1-Rezeptoragonisten',
+    description,
+    url: `${site.url}/wissen/studien/`,
+    dateModified: studienUpdated,
+    inLanguage: 'de-DE',
+    creator: { '@id': `${site.url}/#organization` },
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+    citation: studien.map((s) => sources[s.sourceId]?.full),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Start', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Wissen', item: `${site.url}/wissen/` },
+      { '@type': 'ListItem', position: 3, name: 'Studien-Tracker', item: `${site.url}/wissen/studien/` },
+    ],
+  },
+];
+---
+<Base title={metaTitle} description={description} path="/wissen/studien/" jsonLd={jsonLd} ogType="article" modifiedTime={studienUpdated}>
+  <article class="container-wide py-12">
+    <nav aria-label="Brotkrumen" class="text-sm text-ink-3">
+      <a href="/" class="hover:text-moss">Start</a> › <a href="/wissen/" class="hover:text-moss">Wissen</a> › Studien-Tracker
+    </nav>
+    <p class="eyebrow mt-6">Studien-Tracker · Stand {updated}</p>
+    <h1 class="mt-3 max-w-3xl font-serif text-[2.2rem] font-semibold leading-[1.12] tracking-[-0.01em] text-ink sm:text-[2.8rem]">{title}</h1>
+    <p class="mt-4 max-w-3xl text-lg text-ink-2">
+      {studien.length} Studien, je eine Kernzahl, je ein Link zum Original. Wir ergänzen die Tabelle, sobald neue Absetz-Daten
+      erscheinen, und vermerken das Datum oben. Fehlt eine Studie? Schreib an <a href={`mailto:${site.owner.email}`} class="text-moss underline underline-offset-4">{site.owner.email}</a>.
+    </p>
+    <p class="mt-4 max-w-3xl rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+
+    <div class="mt-8 flex flex-wrap gap-2 text-sm">
+      {gruppen.map((g) => (
+        <a href={`#${g.toLowerCase()}`} class="rounded-full border border-line bg-white px-3 py-1 text-ink-2 hover:border-moss hover:text-moss">{g} ({studien.filter((s) => s.gruppe === g).length})</a>
+      ))}
+    </div>
+
+    {gruppen.map((g) => (
+      <section id={g.toLowerCase()} class="mt-12 scroll-mt-24" aria-labelledby={`h-${g}`}>
+        <h2 id={`h-${g}`} class="h2">{g}</h2>
+        <p class="mt-2 max-w-3xl text-ink-2">{beschreibung[g]}</p>
+        <div class="mt-5 overflow-x-auto rounded-xl2 border border-line bg-white">
+          <table class="w-full min-w-[720px] border-collapse text-sm">
+            <thead>
+              <tr class="bg-paper-2 text-left text-xs uppercase tracking-wider text-ink-2">
+                <th class="px-3 py-2 font-semibold">Studie</th>
+                <th class="px-3 py-2 font-semibold">Wirkstoff</th>
+                <th class="px-3 py-2 font-semibold">Design · n</th>
+                <th class="px-3 py-2 font-semibold">Kernzahl</th>
+                <th class="px-3 py-2 font-semibold">Was das heißt</th>
+              </tr>
+            </thead>
+            <tbody>
+              {studien.filter((s) => s.gruppe === g).map((s) => (
+                <tr class="border-t border-line align-top">
+                  <td class="px-3 py-3">
+                    <span class="font-semibold text-ink">{s.name}</span>
+                    <span class="block text-ink-3">{s.jahr} · <a href={`#fn-${s.sourceId}`} class="text-moss">[{fn(s.sourceId)}]</a>
+                      {sources[s.sourceId]?.url && (<> · <a href={sources[s.sourceId].url} rel="noopener nofollow" target="_blank" class="text-moss underline underline-offset-2">Original</a></>)}
+                    </span>
+                  </td>
+                  <td class="px-3 py-3 text-ink-2">{s.wirkstoff}</td>
+                  <td class="px-3 py-3 text-ink-2">{s.design}<span class="block text-ink-3">n = {s.n}</span></td>
+                  <td class="px-3 py-3 font-medium text-ink">{s.kernzahl}</td>
+                  <td class="px-3 py-3 text-ink-2">{s.bedeutung}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))}
+
+    <section class="mt-12 max-w-3xl" aria-labelledby="offen-h">
+      <h2 id="offen-h" class="h2">Was die Studien noch nicht beantworten</h2>
+      <ul class="prose-site mt-4 list-disc pl-6">
+        <li><strong>Ausschleichen.</strong> Ob ein schrittweises Reduzieren der Dosis den Wiederanstieg abmildert, ist nicht durch randomisierte Studien belegt. Die Zulassungsstudien haben abrupt abgesetzt.</li>
+        <li><strong>Protein und Kreatin speziell nach GLP-1.</strong> Die Evidenz für Protein und Krafttraining stammt aus Studien zu Kalorienreduktion allgemein, nicht aus GLP-1-Kohorten. Für Kreatin nach GLP-1-Therapie gibt es keine eigenen Daten.</li>
+        <li><strong>Langzeitverlauf über 1 Jahr hinaus.</strong> Die Nachbeobachtungen enden meist nach 52 Wochen.</li>
+        <li><strong>Wer hält, wer nicht.</strong> Prädiktoren für erfolgreichen Gewichtserhalt nach dem Absetzen sind kaum untersucht; die Streuung in den Studien ist groß.</li>
+      </ul>
+    </section>
+
+    <section class="mt-12 max-w-3xl rounded-xl2 border border-line bg-white p-6" aria-labelledby="nutzung-h">
+      <h2 id="nutzung-h" class="text-base font-semibold text-ink">Nutzung und Zitat</h2>
+      <p class="mt-2 text-sm text-ink-2">
+        Die Tabelle darf mit Quellenangabe frei verwendet werden (CC BY 4.0). Zitiervorschlag: Nach der Spritze, Studien-Tracker
+        „Gewicht nach dem Absetzen der Abnehmspritze“, Stand {updated}, {site.url}/wissen/studien/. Die Kernzahlen sind aus den
+        Originalarbeiten übernommen; bei Abweichungen gilt das Original.
+      </p>
+    </section>
+
+    <div class="mt-10 flex flex-wrap items-center gap-4">
+      <Cta position="studien" label="Zum 12-Wochen-Set" secondary />
+      <a href="/wissen/jojo-effekt-abnehmspritze/" class="text-sm font-semibold text-moss underline underline-offset-4">Was die Zahlen für dich bedeuten: Jojo-Effekt nach der Abnehmspritze</a>
+    </div>
+
+    <div class="max-w-3xl">
+      <Footnotes ids={fnIds} />
+    </div>
+  </article>
+</Base>

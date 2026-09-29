@@ -41,6 +41,8 @@ Die Datenlage ist inzwischen gut, weil die Zulassungsstudien Absetz-Phasen einge
 | Meta-Analyse 2025<sup><a href="#fn-wu2025">4</a></sup> | Verschiedene Adipositas-Medikamente | Gewichtszunahme ab etwa Woche 8 nach dem Absetzen messbar, sie setzt sich bis etwa Woche 20 fort. |
 | Systematischer Review 2026<sup><a href="#fn-eclinmed2026">5</a></sup> | GLP-1-Rezeptoragonisten | Bestätigt die Verlaufskurve: schneller Anstieg in den ersten Monaten, dann Abflachung. |
 
+Alle Studien mit Kernzahl und Link stehen im [Studien-Tracker](/wissen/studien/).
+
 Wichtig für die Einordnung: Auch nach dem Regain lagen die Teilnehmenden im Mittel noch unter ihrem Startgewicht. Und hinter jedem Mittelwert stecken Menschen, die fast alles wieder zugenommen haben, und Menschen, die fast nichts zugenommen haben.
 
 ## Warum der Körper nach dem Absetzen gegen dich arbeitet

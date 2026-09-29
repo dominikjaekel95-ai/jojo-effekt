@@ -14,7 +14,7 @@ const { items, id = 'faq', title = 'Häufige Fragen' } = Astro.props;
       <details class="group px-5 py-4">
         <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-ink [&::-webkit-details-marker]:hidden">
           {item.q}
-          <span class="shrink-0 text-moss transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+          <svg class="h-5 w-5 shrink-0 text-moss transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </summary>
         <div class="prose-site mt-3 text-[1rem]" set:html={item.a} />
       </details>

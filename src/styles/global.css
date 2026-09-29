@@ -1,9 +1,12 @@
 @import "tailwindcss";
-@import "@fontsource-variable/inter";
+@import "@fontsource-variable/source-sans-3";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/fraunces/wght-italic.css";
 
-/* Design-Tokens: ruhig, warm, kein Pharma-Blau. */
+/* Design-Tokens: warmes Papier, Moosgrün, Bernstein, Ton. Serife Überschriften (Fraunces), humanistische Grotesk (Source Sans 3). */
 @theme {
-  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Source Sans 3 Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Fraunces Variable", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
 
   --color-paper: #faf7f2;
   --color-paper-2: #f2ede4;
@@ -21,11 +24,23 @@
   --color-clay: #b8563e;
   --color-clay-light: #f7e3dc;
 
-  --radius-xl2: 1.25rem;
+  --radius-xl2: 0.9rem;
 }
 
 @utility btn {
-  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold transition-colors duration-150 no-underline;
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-[1.05rem] font-semibold transition-colors duration-150 no-underline;
+}
+
+@utility stat {
+  font-family: var(--font-serif);
+  font-variation-settings: "opsz" 144, "SOFT" 40;
+  @apply text-6xl font-semibold leading-none tracking-[-0.02em] sm:text-7xl;
+}
+
+@utility band-dark {
+  @apply bg-ink text-paper;
+  & .fn { color: var(--color-moss-light); }
+  & .eyebrow::before { background: currentColor; }
 }
 
 @layer base {
@@ -35,7 +50,12 @@
   }
   body {
     @apply bg-paper text-ink font-sans antialiased;
-    font-feature-settings: "cv11", "ss01";
+    font-size: 1.0625rem;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-variation-settings: "opsz" 48, "SOFT" 20;
+    text-wrap: balance;
   }
   :target {
     scroll-margin-top: 5rem;
@@ -57,31 +77,39 @@
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
   }
   .btn-primary {
-    @apply btn bg-moss text-white hover:bg-moss-dark;
+    @apply btn bg-moss text-white shadow-[inset_0_-2px_0_rgba(0,0,0,0.18)] hover:bg-moss-dark;
   }
   .btn-secondary {
-    @apply btn border border-line bg-white text-ink hover:border-moss hover:text-moss;
+    @apply btn border border-ink/25 bg-transparent text-ink hover:border-moss hover:text-moss;
   }
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.14em] text-moss;
+    @apply inline-flex items-center gap-3 font-serif text-[1.05rem] italic text-moss;
+  }
+  .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 1.75rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.7;
   }
   .h2 {
-    @apply text-2xl font-bold leading-tight tracking-tight text-ink sm:text-3xl;
+    @apply font-serif text-3xl font-semibold leading-[1.12] tracking-[-0.01em] text-ink sm:text-[2.4rem];
   }
   .card {
-    @apply rounded-xl2 border border-line bg-white p-6 shadow-[0_1px_0_rgba(28,36,48,0.04)];
+    @apply rounded-xl2 border border-line bg-white p-6;
   }
   .fn {
     @apply align-super text-[0.65em] font-semibold text-moss no-underline;
   }
   .prose-site {
-    @apply text-[1.05rem] leading-relaxed text-ink-2;
+    @apply text-[1.1rem] leading-[1.65] text-ink-2;
   }
   .prose-site h2 {
-    @apply mt-12 mb-4 text-2xl font-bold leading-tight tracking-tight text-ink scroll-mt-24;
+    @apply mt-12 mb-4 font-serif text-[1.85rem] font-semibold leading-[1.15] tracking-[-0.01em] text-ink scroll-mt-24;
   }
   .prose-site h3 {
-    @apply mt-8 mb-3 text-xl font-semibold text-ink;
+    @apply mt-8 mb-3 font-serif text-[1.35rem] font-semibold text-ink;
   }
   .prose-site p {
     @apply my-4;
@@ -99,16 +127,20 @@
     @apply font-semibold text-ink;
   }
   .prose-site blockquote {
-    @apply my-6 border-l-4 border-amber bg-amber-light/60 px-5 py-4 text-ink rounded-r-xl;
+    @apply my-7 border-l-[3px] border-amber bg-amber-light/50 px-5 py-4 font-serif text-[1.15rem] leading-snug text-ink rounded-r-lg;
+    font-variation-settings: "opsz" 24, "SOFT" 40;
   }
   .prose-site blockquote p {
     @apply my-0;
   }
+  .prose-site blockquote strong {
+    @apply font-semibold italic;
+  }
   .prose-site table {
-    @apply my-6 w-full border-collapse text-sm sm:text-base;
+    @apply my-6 w-full border-collapse text-[0.95rem] sm:text-base;
   }
   .prose-site th {
-    @apply border-b-2 border-line px-3 py-2 text-left font-semibold text-ink;
+    @apply border-b-2 border-ink/60 px-3 py-2 text-left font-semibold text-ink;
   }
   .prose-site td {
     @apply border-b border-line px-3 py-2 align-top;
@@ -118,5 +150,9 @@
   }
   .prose-site sup a {
     @apply no-underline font-semibold;
+  }
+  .prose-site em {
+    @apply font-serif italic text-ink-2;
+    font-variation-settings: "opsz" 24;
   }
 }

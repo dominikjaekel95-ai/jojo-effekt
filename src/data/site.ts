@@ -16,8 +16,8 @@ export const site = {
     name: 'Dominik Jäkel',
     city: 'Berlin',
     // Platzhalter – vor dem Launch ausfüllen (§ 5 DDG: ladungsfähige Anschrift + E-Mail sind Pflicht)
-    street: '[Straße Hausnummer]',
-    zip: '[PLZ]',
+    street: 'Stresemannstr. 76',
+    zip: '10963',
     email: 'dominik.jaekel95@gmail.com',
   },
 

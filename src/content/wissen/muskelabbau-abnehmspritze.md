@@ -23,7 +23,7 @@ faq:
 
 Die Abnehmspritze nimmt nicht nur Fett. Sie nimmt auch das, was du eigentlich behalten willst: Muskeln. Wie viel, warum, und was nachweislich hilft – ohne Panik, mit Zahlen.
 
-> **Kurz gesagt:** Rund 40 % des Gewichtsverlusts unter Semaglutid waren in einer Substudie fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Krafttraining während einer Kalorienreduktion verhindert den Verlust weitgehend.<sup><a href="#fn-sardeli2018">2</a></sup> Dazu 1,2 bis 1,6 g Protein pro kg Körpergewicht.<sup><a href="#fn-leidy2015">3</a></sup>
+> **Kurz gesagt:** Rund 40 % des Gewichtsverlusts unter Semaglutid waren in einer Substudie fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Krafttraining während einer Kalorienreduktion verhindert den Verlust weitgehend.<sup><a href="#fn-sardeli2018">2</a></sup> Dazu 1,2 bis 1,6 g Protein pro kg Körpergewicht<sup><a href="#fn-leidy2015">3</a></sup> und, wer trainiert, [Kreatin](/wissen/kreatin-abnehmspritze/).
 
 ## Wie viel Muskelmasse geht verloren?
 
@@ -38,6 +38,17 @@ Drei Gründe:
 1. **Zu wenig Protein.** Die Spritze dämpft den Appetit so stark, dass viele auf 40 bis 60 g Protein am Tag kommen – weniger als die 0,8 g pro kg, die die DGE als Minimum nennt,<sup><a href="#fn-dgeProtein">8</a></sup> und weit unter dem, was beim Abnehmen empfohlen wird. Ohne Baustoff baut der Körper Muskelprotein ab, um Energie und Aminosäuren zu gewinnen.
 2. **Zu schneller Verlust.** Je schneller das Gewicht sinkt, desto größer der Anteil fettfreier Masse. Unter GLP-1-Medikamenten verlieren viele in den ersten Monaten 1 bis 2 kg pro Woche.
 3. **Kein Reiz zum Erhalt.** Muskeln bleiben, wenn sie gebraucht werden. Wer sich unter der Spritze müde fühlt und weniger bewegt, gibt dem Körper das Signal, dass die Muskeln verzichtbar sind.
+
+## Woran du Muskelabbau erkennst
+
+Die Waage zeigt ihn nicht, sie zeigt nur, dass Gewicht weg ist. Vier Zeichen, die auf verlorene Muskelmasse hindeuten:
+
+- **Alltagskraft lässt nach.** Treppen, Einkaufstaschen, das Aufstehen vom Sofa ohne Abstützen fallen schwerer als vor der Therapie, obwohl weniger Gewicht zu tragen ist.
+- **Griffkraft sinkt.** Gläser öffnen, schwere Töpfe halten. Griffkraft ist in der Medizin ein Standardmaß für Muskelstatus, und sie lässt sich beim Arzt in Sekunden messen.
+- **Arme und Beine wirken weicher**, obwohl der Umfang abnimmt. Fett und Muskel gehen gleichzeitig, aber die Kontur verschwindet.
+- **Schnelle Erschöpfung** bei Belastungen, die früher normal waren.
+
+Messbar wird es mit einer Körperzusammensetzungsanalyse: DXA beim Arzt oder in Radiologien, BIA-Waagen in Studios und Praxen als grobe Näherung. Wer vor der Therapie keinen Ausgangswert hat, misst jetzt und vergleicht in zwölf Wochen. Was dagegen hilft, steht unten; die Rolle von Kreatin dabei im Artikel [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
 
 ## Warum es wichtig ist
 

@@ -5,7 +5,7 @@ description: "Was Kreatin unter und nach der Abnehmspritze bringt, welche Dosis 
 category: "Muskeln"
 order: 5
 pubDate: 2026-09-30
-keywords: ["kreatin abnehmspritze", "kreatin wegovy", "kreatin ozempic", "kreatin mounjaro", "kreatin glp-1", "kreatin abnehmen muskelerhalt", "kreatin nach abnehmspritze"]
+keywords: ["kreatin abnehmspritze", "kreatin wegovy", "kreatin mounjaro", "kreatin ozempic", "kreatin glp-1", "kreatin und abnehmspritze wechselwirkung", "kreatin nach abnehmspritze"]
 sources: ["kreider2017", "euClaims", "sardeli2018", "who2020", "wilding2021dxa"]
 related: ["muskelabbau-abnehmspritze", "protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
 faq:
@@ -19,6 +19,12 @@ faq:
     a: "<p>Bei gesunden Nieren zeigen Studien über Jahre keine Schäden in üblichen Dosen. Kreatin erhöht allerdings den Laborwert Kreatinin, den Ärztinnen zur Beurteilung der Nierenfunktion nutzen – ohne dass die Nieren schlechter arbeiten. Bei bestehender Nierenerkrankung Kreatin nur nach ärztlicher Rücksprache.</p>"
   - q: "Wirkt Kreatin auch ohne Krafttraining?"
     a: "<p>Kaum. Die zugelassenen Angaben beziehen sich auf Schnellkrafttraining und auf die Verstärkung der Wirkung von Krafttraining. Wer nicht trainiert, spart sich das Geld besser.</p>"
+  - q: "Kann ich Kreatin zusammen mit Wegovy nehmen?"
+    a: "<p>Eine Wechselwirkung zwischen Kreatin-Monohydrat und Semaglutid ist nicht bekannt. Sinnvoll ist es nur mit Krafttraining, und die Wassereinlagerung von 0,5 bis 2 kg zeigt sich auf der Waage. Sag deiner Ärztin Bescheid, vor allem vor Blutabnahmen, weil Kreatin den Kreatinin-Wert erhöht.</p>"
+  - q: "Kann ich Kreatin zusammen mit Mounjaro nehmen?"
+    a: "<p>Auch für Tirzepatid ist keine Wechselwirkung mit Kreatin bekannt. Bei Typ-2-Diabetes werden die Nierenwerte ohnehin kontrolliert; die Ärztin sollte wissen, dass du Kreatin nimmst. Bei eingeschränkter Nierenfunktion nur nach Rücksprache.</p>"
+  - q: "Kann ich Kreatin zusammen mit Ozempic nehmen?"
+    a: "<p>Ja, eine Wechselwirkung ist nicht bekannt, auch nicht mit Metformin. Weil Ozempic meist bei Typ-2-Diabetes verordnet wird und dort eine eingeschränkte Nierenfunktion häufiger ist, gehört Kreatin hier immer ins Arztgespräch.</p>"
 affiliate: ["creatineEsn", "creatineNe"]
 affiliateTitle: "Beispiele für Kreatin-Monohydrat"
 affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke. Es zählt der Rohstoff: reines Kreatin-Monohydrat, 3 g pro Tag, keine Mischungen mit Zusätzen."
@@ -67,6 +73,18 @@ Kreatin zieht Wasser in die Muskelzellen. In den ersten ein bis zwei Wochen stei
 - **Wechselwirkung mit GLP-1-Medikamenten:** nicht bekannt. Kreatin ist eine körpereigene Substanz, kein Arzneimittel. Trotzdem gilt: Deine Ärztin sollte wissen, was du nimmst.
 - **Magen-Darm:** Bei manchen leichte Beschwerden, meist bei höheren Dosen. Mit 3 g und genug Wasser selten.
 - **Nicht für:** Schwangere und Stillende (keine Daten), unter 18 (keine Daten), bei Nierenerkrankung ohne Rücksprache.
+
+## Kreatin und Wegovy
+
+Wegovy enthält Semaglutid, das einmal pro Woche gespritzt wird und eine Halbwertszeit von etwa einer Woche hat. Eine Wechselwirkung mit Kreatin-Monohydrat ist nicht bekannt; Kreatin ist eine körpereigene Substanz und wird über die Nieren ausgeschieden, Semaglutid wird im Körper abgebaut. Drei Dinge sind trotzdem wichtig. Erstens: Unter Wegovy essen viele wenig, und Kreatin wirkt nur mit Krafttraining; wer keine Energie für zwei Einheiten pro Woche hat, spart es sich besser. Zweitens: Der Laborwert Kreatinin steigt unter Kreatin, ohne dass die Nieren schlechter arbeiten; das gehört vor jede Blutabnahme ins Gespräch. Drittens: Die Wassereinlagerung von 0,5 bis 2 kg zeigt sich auf der Waage, auch während das Gewicht unter Wegovy sinkt. Wer das nicht weiß, erschrickt.
+
+## Kreatin und Mounjaro
+
+Mounjaro enthält Tirzepatid mit einer Halbwertszeit von etwa fünf Tagen. Auch hier ist keine Wechselwirkung mit Kreatin bekannt. Der Unterschied zu Semaglutid liegt beim Absetzen: Tirzepatid ist nach etwa vier Wochen abgebaut, der Appetit kommt früher zurück, und der Gewichtsverlust war in den Studien größer, also war auch mehr fettfreie Masse im Spiel. Wer unter Mounjaro trainiert, hat mit Kreatin einen Grund mehr, das Training bis über das Absetzen hinaus durchzuhalten. Für Menschen mit Typ-2-Diabetes gilt zusätzlich: Kreatin verändert den Blutzucker nicht, aber die Nierenwerte werden bei Diabetes ohnehin regelmäßig kontrolliert; die Ärztin sollte wissen, dass Kreatin im Spiel ist.
+
+## Kreatin und Ozempic
+
+Ozempic ist derselbe Wirkstoff wie Wegovy in niedrigerer Dosis und zur Behandlung des Typ-2-Diabetes zugelassen. Keine bekannte Wechselwirkung mit Kreatin. Zwei Besonderheiten: Viele Ozempic-Patienten nehmen zusätzlich Metformin, und auch dafür ist keine Wechselwirkung mit Kreatin beschrieben. Und bei Diabetes ist eine eingeschränkte Nierenfunktion häufiger; sie ist die eine Situation, in der Kreatin nur nach ärztlicher Rücksprache genommen werden sollte. Wer Ozempic off-label zum Abnehmen nimmt, für den gilt dasselbe wie unter Wegovy.
 
 ## Kreatin ist kein Ersatz für Training
 

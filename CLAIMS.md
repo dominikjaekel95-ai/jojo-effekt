@@ -42,6 +42,11 @@ Status: ✅ zugelassen und Bedingung erfüllt · ⚠️ prüfen (Michi / ggf. An
 | C14 | Halbwertszeit Semaglutid ca. 1 Woche, Tirzepatid ca. 5 Tage; Dosisstufen; Schwangerschafts-Regel Wegovy | Artikel Absetzen, Markenseiten | fachinfoWegovy, fachinfoOzempic, fachinfoMounjaro (EMA-Produktinformationen) | ✅ |
 | C15 | Kreatin: Wassereinlagerung 0,5–2 kg in den ersten Wochen; Kreatinin-Laborwert steigt | Artikel Kreatin | kreider2017 (Positionspapier) | ✅ |
 | C16 | Abnehmspritze kostet Selbstzahler ca. 170–280 €/Monat | Startseite Preis, Artikel Absetzen | Apothekenpreise (AVP) je Dosis – **Stichtag und Quelle nachtragen** | ⚠️ |
+| C18 | Krafttraining-Artikel: 8–12 Wiederholungen, 2–3 Sätze, 2 Einheiten/Woche; zwei Einheiten pro Muskelgruppe besser als eine | /wissen/krafttraining-nach-abnehmspritze/ | acsm2009, schoenfeld2016, who2020, sardeli2018, jensen2024 | ✅ |
+| C19 | Heißhunger-Artikel: Schlafmangel senkt Leptin und erhöht Ghrelin; Protein sättigt stärker; 2–3 l Flüssigkeit | /wissen/heisshunger-nach-abnehmspritze/ | spiegel2004, leidy2015, almandoz2024, sumithran2011 | ✅ |
+| C20 | Saxenda-Artikel: Halbwertszeit ca. 13 h, Dosisstufen 0,6–3,0 mg (ohne Schema), ab 12 Jahren; SCALE −8,0 % vs −2,6 %; S-LiTE-Verlauf | /wissen/saxenda-absetzen/ | fachinfoSaxenda, pisunyer2015, jensen2024, lundgren2021 | ✅ |
+| C21 | Kreatin-Abschnitte Wegovy/Mounjaro/Ozempic: „keine bekannte Wechselwirkung“, Kreatinin-Laborwert, Nierenfunktion bei Diabetes | /wissen/kreatin-abnehmspritze/ | kreider2017 (Sicherheit), fachinfos (Halbwertszeiten); „keine bekannte Wechselwirkung“ ist eine Nicht-Aussage, kein Claim | ✅ |
+| C22 | Wiedereinstieg: rund ein Drittel ohne T2D, fast die Hälfte mit T2D innerhalb eines Jahres | /wissen/abnehmspritze-absetzen/ | rodriguez2025 (Reinitiation) | ✅ |
 | C17 | „Apothekerzeitung 2/2026: Protein und Kreatin“ | – | Fußnote und Quelle entfernt (keine verifizierbare Fundstelle). Kann mit Link wieder aufgenommen werden. | ✅ entfernt |
 
 ## D. Grenzfälle, bewusst so formuliert – bitte prüfen

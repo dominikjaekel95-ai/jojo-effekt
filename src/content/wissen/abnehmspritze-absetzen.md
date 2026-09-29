@@ -73,6 +73,22 @@ Der beste Zeitpunkt, die Zeit nach der Spritze vorzubereiten, ist die Zeit mit d
 
 **4. Den nächsten Arzttermin schon ausmachen.** Etwa 8 bis 12 Wochen nach der letzten Dosis, also genau dann, wenn die Zunahme in Studien beginnt. Blutwerte kontrollieren, Gewicht besprechen, Optionen offenhalten. Leitlinien sehen Medikamente als Teil einer langfristigen Behandlung – ein Wiedereinstieg ist eine Option, keine Niederlage.<sup><a href="#fn-dagLeitlinie">9</a></sup>
 
+## Was beim Absetzen körperlich passiert – und was nicht
+
+Vieles, was Menschen nach dem Absetzen bemerken, ist nicht das Verschwinden einer Wirkung, sondern das Verschwinden einer Nebenwirkung:
+
+- **Übelkeit, Völlegefühl, Aufstoßen und Verstopfung** lassen nach, sobald der Magen wieder normal arbeitet. Viele berichten in Woche 2 bis 4 mehr Energie und besseren Appetit auf feste Mahlzeiten.
+- **Der Appetit kommt zurück**, oft in Schüben, oft abends. Das ist die Wirkung, die wegfällt; wie du damit umgehst, steht im Artikel [Heißhunger nach dem Absetzen](/wissen/heisshunger-nach-abnehmspritze/).
+- **Blutzucker, Blutdruck und Blutfette** bewegen sich mit dem Gewicht zurück Richtung Ausgangswert.<sup><a href="#fn-wilding2022ext">3</a></sup> Bei Diabetes muss die übrige Therapie angepasst werden.
+- **Puls und Schlaf:** Manche berichten unter der Therapie einen leicht erhöhten Ruhepuls, der nach dem Absetzen zurückgeht. Systematisch untersucht ist das für die Zeit danach nicht.
+- **Kein Entzugssyndrom.** Zittern, Schwitzen, Unruhe als Absetzreaktion sind für GLP-1-Rezeptoragonisten nicht beschrieben. Treten sie auf, vor allem bei Diabetes, ist eine Unterzuckerung durch andere Medikamente die wahrscheinlichere Ursache; das gehört sofort in die Praxis.
+
+Präparatspezifische Verläufe: [Wegovy](/wissen/wegovy-absetzen/), [Mounjaro](/wissen/mounjaro-absetzen/), [Ozempic](/wissen/ozempic-absetzen/), [Saxenda](/wissen/saxenda-absetzen/).
+
+## Wiedereinstieg: was die Daten sagen
+
+Absetzen ist selten endgültig. In der US-Auswertung von Versorgungsdaten begann rund ein Drittel der Menschen ohne Typ-2-Diabetes, die abgesetzt hatten, innerhalb eines Jahres erneut mit der Therapie; bei Typ-2-Diabetes war es fast die Hälfte.<sup><a href="#fn-rodriguez2025">1</a></sup> Häufigster Anlass ist die Gewichtszunahme nach dem Absetzen. Ein Wiedereinstieg ist medizinisch möglich; wie er abläuft, legt deine Ärztin oder dein Arzt fest. Was die Daten außerdem zeigen: Wer zwischen zwei Therapiephasen Muskeln, Training und Ernährungsstruktur behalten hat, startet die zweite Phase von einem besseren Punkt aus als beim ersten Mal.
+
 ## Woran du merkst, dass du früher zur Ärztin solltest
 
 - Das Gewicht steigt in den ersten vier Wochen um mehr als 2 bis 3 kg.

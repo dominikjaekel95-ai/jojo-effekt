@@ -9,6 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
+    "check:text": "node scripts/check-text.mjs",
+    "check:all": "npm run build && npm run check && npm run check:text",
     "astro": "astro"
   },
   "dependencies": {

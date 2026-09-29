@@ -1,0 +1,47 @@
+name: IndexNow (Bing) nach Deploy
+
+# Meldet geänderte Artikel-URLs per IndexNow an Bing (und alle IndexNow-Partner). Google unterstützt IndexNow nicht;
+# dort bleibt die manuelle Anmeldung in der Search Console (docs/REDAKTION.md, Abschnitt 5).
+on:
+  push:
+    branches: [claude/jojo-effekt-website-launch-5n0nls]
+    paths:
+      - 'src/content/wissen/**'
+      - 'src/pages/**'
+      - 'src/data/studien.ts'
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Geänderte URLs bestimmen
+        id: urls
+        run: |
+          SITE="https://nachderspritze.de"
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- src/content/wissen src/pages src/data/studien.ts || true)
+          URLS=""
+          for f in $CHANGED; do
+            case "$f" in
+              src/content/wissen/*.md)
+                slug=$(basename "$f" .md)
+                grep -q '^draft: true' "$f" 2>/dev/null && continue
+                URLS="$URLS $SITE/wissen/$slug/";;
+              src/pages/wissen/studien.astro|src/data/studien.ts) URLS="$URLS $SITE/wissen/studien/";;
+              src/pages/index.astro) URLS="$URLS $SITE/";;
+              src/pages/wissen/index.astro) URLS="$URLS $SITE/wissen/";;
+            esac
+          done
+          URLS="$URLS $SITE/wissen/"
+          echo "list=$(echo $URLS | tr ' ' '\n' | sort -u | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+      - name: IndexNow senden
+        env:
+          KEY: ddb29c5ec9846fa877dc10defa6dd65d
+        run: |
+          sleep 120  # Vercel-Deploy abwarten, damit die URLs beim Abruf schon live sind
+          LIST='${{ steps.urls.outputs.list }}'
+          JSON=$(printf '%s' "$LIST" | tr ' ' '\n' | grep . | jq -R . | jq -s --arg host nachderspritze.de --arg key "$KEY" '{host:$host,key:$key,keyLocation:("https://"+$host+"/"+$key+".txt"),urlList:.}')
+          echo "$JSON"
+          curl -sS -o /dev/null -w "IndexNow HTTP %{http_code}\n" -X POST "https://api.indexnow.org/IndexNow" -H "Content-Type: application/json; charset=utf-8" -d "$JSON"

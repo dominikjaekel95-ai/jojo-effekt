@@ -222,6 +222,45 @@ export const sources: Record<string, Source> = {
     url: 'https://diabetesjournals.org/care/issue/47/Supplement_1',
     note: 'Empfiehlt bei Metformin-Therapie regelmäßige Kontrolle des Vitamin-B12-Spiegels.',
   },
+  acsm2009: {
+    id: 'acsm2009',
+    short: 'ACSM Position Stand Krafttraining, 2009',
+    full:
+      'American College of Sports Medicine. Progression Models in Resistance Training for Healthy Adults (Position Stand). Med Sci Sports Exerc. 2009;41(3):687–708.',
+    url: 'https://doi.org/10.1249/MSS.0b013e3181915670',
+    note: 'Einsteiger: 8–12 Wiederholungen, 1–3 Sätze, 2–3 Einheiten pro Woche, Belastung schrittweise steigern.',
+  },
+  schoenfeld2016: {
+    id: 'schoenfeld2016',
+    short: 'Schoenfeld et al., Meta-Analyse Trainingsfrequenz, Sports Med 2016',
+    full:
+      'Schoenfeld BJ, Ogborn D, Krieger JW. Effects of Resistance Training Frequency on Measures of Muscle Hypertrophy: A Systematic Review and Meta-Analysis. Sports Med. 2016;46(11):1689–1697.',
+    url: 'https://doi.org/10.1007/s40279-016-0543-8',
+    note: 'Zwei Einheiten pro Muskelgruppe und Woche bringen mehr Muskelzuwachs als eine.',
+  },
+  spiegel2004: {
+    id: 'spiegel2004',
+    short: 'Spiegel et al., Ann Intern Med 2004',
+    full:
+      'Spiegel K, Tasali E, Penev P, Van Cauter E. Brief Communication: Sleep Curtailment in Healthy Young Men Is Associated with Decreased Leptin Levels, Elevated Ghrelin Levels, and Increased Hunger and Appetite. Ann Intern Med. 2004;141(11):846–850.',
+    url: 'https://doi.org/10.7326/0003-4819-141-11-200412070-00008',
+    note: 'Zwei Nächte mit vier Stunden Schlaf: Leptin sank, Ghrelin stieg, Hunger und Appetit nahmen zu.',
+  },
+  fachinfoSaxenda: {
+    id: 'fachinfoSaxenda',
+    short: 'Fachinformation Saxenda (EMA-Produktinformation)',
+    full: 'Europäische Arzneimittel-Agentur. Saxenda (Liraglutid): Zusammenfassung der Merkmale des Arzneimittels. Amsterdam: EMA.',
+    url: 'https://www.ema.europa.eu/en/medicines/human/EPAR/saxenda',
+    note: 'Tägliche Injektion, Dosisstufen 0,6 bis 3,0 mg; Halbwertszeit etwa 13 Stunden; zugelassen ab 12 Jahren.',
+  },
+  pisunyer2015: {
+    id: 'pisunyer2015',
+    short: 'Pi-Sunyer et al., SCALE, NEJM 2015',
+    full:
+      'Pi-Sunyer X, Astrup A, Fujioka K, et al. A Randomized, Controlled Trial of 3.0 mg of Liraglutide in Weight Management. N Engl J Med. 2015;373(1):11–22.',
+    url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa1411892',
+    note: 'Zulassungsstudie Liraglutid 3 mg: −8,0 % Körpergewicht nach 56 Wochen gegenüber −2,6 % unter Placebo.',
+  },
   fachinfoWegovy: {
     id: 'fachinfoWegovy',
     short: 'Fachinformation Wegovy (EMA-Produktinformation)',

@@ -178,7 +178,7 @@ html[data-theme="c"] {
 }
 
 /* ---------- Variante D „Ruhe“: minimal, hell, leichte Hanken Grotesk ---------- */
-html[data-theme="d"] {
+html[data-theme="d"], html[data-theme="d1"], html[data-theme="d2"], html[data-theme="d3"] {
   --font-sans: "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
   --font-head: "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
   --font-stat: var(--font-head);
@@ -410,4 +410,99 @@ html[data-theme="d"] {
   .prose-site sup a {
     @apply no-underline font-semibold;
   }
+}
+
+/* ---------- D-Paletten (Struktur wie D, andere Farben) ---------- */
+/* D1 „Pflaume & Aprikose“: tiefes Pflaume als Markenfarbe, Aprikose als Wärme, kühles Kreideweiß */
+html[data-theme="d1"] {
+  --color-paper: #f5f4f1;
+  --color-paper-2: #ebe9e4;
+  --color-ink: #221a25;
+  --color-ink-2: #4c4350;
+  --color-ink-3: #6f6672;
+  --color-line: #dcd7d9;
+  --color-moss: #5c2d5e;
+  --color-moss-dark: #46204a;
+  --color-moss-light: #ece0ec;
+  --color-amber: #d9824f;
+  --color-amber-dark: #9a4f22;
+  --color-amber-light: #f9e5d8;
+  --color-clay: #4d5f73;
+  --color-clay-light: #e2e7ec;
+  --btn-bg: #5c2d5e;
+  --btn-fg: #ffffff;
+  --btn-hover: #46204a;
+  --btn2-border: #b9b3bb;
+  --kicker-color: #6f6672;
+  --band-kicker: #6f6672;
+  --card-top: 1px solid #dcd7d9;
+  --band-bg: #f5f4f1;
+  --band-fg: #221a25;
+  --band-muted: #4c4350;
+  --band-line: #dcd7d9;
+  --stat-1: #5c2d5e;
+  --stat-2: #9a4f22;
+  --stat-3: #221a25;
+}
+/* D2 „Tinte & Safran“: Tintenblau-Schwarz statt Hellblau, Safran als einziger warmer Akzent */
+html[data-theme="d2"] {
+  --color-paper: #f5f4f0;
+  --color-paper-2: #ebeae5;
+  --color-ink: #14213d;
+  --color-ink-2: #3a4560;
+  --color-ink-3: #5f6a82;
+  --color-line: #d9dbe0;
+  --color-moss: #2a3d7c;
+  --color-moss-dark: #1d2c5e;
+  --color-moss-light: #e1e5f2;
+  --color-amber: #e3a51a;
+  --color-amber-dark: #7a5300;
+  --color-amber-light: #fbeecb;
+  --color-clay: #b5482e;
+  --color-clay-light: #f4ddd6;
+  --btn-bg: #14213d;
+  --btn-fg: #ffffff;
+  --btn-hover: #2a3d7c;
+  --btn2-border: #b3b8c6;
+  --kicker-color: #5f6a82;
+  --band-kicker: #5f6a82;
+  --card-top: 1px solid #d9dbe0;
+  --band-bg: #f5f4f0;
+  --band-fg: #14213d;
+  --band-muted: #3a4560;
+  --band-line: #d9dbe0;
+  --stat-1: #14213d;
+  --stat-2: #2a3d7c;
+  --stat-3: #7a5300;
+}
+/* D3 „Bordeaux & Stein“: Weinrot als Markenfarbe, Ocker und Schiefer als Begleiter */
+html[data-theme="d3"] {
+  --color-paper: #f4f2ee;
+  --color-paper-2: #eae7e2;
+  --color-ink: #231b1e;
+  --color-ink-2: #4b4346;
+  --color-ink-3: #6d6467;
+  --color-line: #ddd8d6;
+  --color-moss: #6e2334;
+  --color-moss-dark: #55192a;
+  --color-moss-light: #f0dfe3;
+  --color-amber: #b0882a;
+  --color-amber-dark: #7a5c12;
+  --color-amber-light: #f5ecd6;
+  --color-clay: #4f5b66;
+  --color-clay-light: #e2e6ea;
+  --btn-bg: #6e2334;
+  --btn-fg: #ffffff;
+  --btn-hover: #55192a;
+  --btn2-border: #b9b2b0;
+  --kicker-color: #6d6467;
+  --band-kicker: #6d6467;
+  --card-top: 1px solid #ddd8d6;
+  --band-bg: #f4f2ee;
+  --band-fg: #231b1e;
+  --band-muted: #4b4346;
+  --band-line: #ddd8d6;
+  --stat-1: #6e2334;
+  --stat-2: #7a5c12;
+  --stat-3: #4f5b66;
 }

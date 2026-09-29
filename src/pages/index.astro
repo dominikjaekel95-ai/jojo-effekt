@@ -46,7 +46,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
           B:          Absetzen ohne Absturz.
           C:          Das 12-Wochen-Set für die Zeit nach der Abnehmspritze.
         */}
-        <h1 class="mt-4 font-serif text-[2.25rem] font-semibold leading-[1.06] tracking-[-0.015em] text-ink sm:text-[3.5rem]">
+        <h1 class="h1 mt-4">
           Nach der Spritze: <span class="text-moss">Muskeln behalten,</span> Gewicht halten.
         </h1>
         <p class="mt-5 max-w-xl text-lg text-ink-2">
@@ -71,31 +71,31 @@ const jsonLd = [faqJsonLd(landingFaq)];
   </section>
 
   <!-- ============ 2. PROBLEM IN DREI ZAHLEN ============ -->
-  <section id="problem" class="band-dark py-16 scroll-mt-20 sm:py-20" aria-labelledby="problem-h">
+  <section id="problem" class="band py-16 scroll-mt-20 sm:py-20" aria-labelledby="problem-h">
     <div class="container-wide">
-      <p class="eyebrow text-amber">Das Problem</p>
-      <h2 id="problem-h" class="h2 mt-3 max-w-2xl text-paper">Die meisten setzen ab. Und dann kommt das Gewicht zurück – oft ohne die Muskeln.</h2>
-      <div class="mt-12 grid gap-10 md:grid-cols-3 md:gap-0 md:divide-x md:divide-white/15">
+      <p class="eyebrow">Das Problem</p>
+      <h2 id="problem-h" class="h2 mt-3 max-w-2xl">Die meisten setzen ab. Und dann kommt das Gewicht zurück – oft ohne die Muskeln.</h2>
+      <div class="mt-12 grid gap-10 md:grid-cols-3 md:gap-0">
         <div class="md:pr-8">
-          <p class="stat text-amber">65 %</p>
-          <p class="mt-4 text-paper/80">
+          <p class="stat stat-1">65 %</p>
+          <p class="mt-4 band-muted">
             der Menschen ohne Typ-2-Diabetes setzen die Abnehmspritze innerhalb eines Jahres wieder ab.<Fn n={fn('rodriguez2025')} id="rodriguez2025" />
           </p>
         </div>
-        <div class="md:px-8">
-          <p class="stat text-moss-light">~40 %</p>
-          <p class="mt-4 text-paper/80">
+        <div class="band-line md:border-l md:px-8">
+          <p class="stat stat-2">~40 %</p>
+          <p class="mt-4 band-muted">
             des verlorenen Gewichts waren in einer Substudie von STEP 1 fettfreie Masse – darunter Muskeln, nicht Fett.<Fn n={fn('wilding2021dxa')} id="wilding2021dxa" />
           </p>
         </div>
-        <div class="md:pl-8">
-          <p class="stat text-clay-light">⅔</p>
-          <p class="mt-4 text-paper/80">
+        <div class="band-line md:border-l md:pl-8">
+          <p class="stat stat-3">⅔</p>
+          <p class="mt-4 band-muted">
             des verlorenen Gewichts waren ein Jahr nach dem Absetzen von Semaglutid im Mittel wieder da.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Die Zunahme beginnt in Studien etwa acht Wochen nach der letzten Dosis.<Fn n={fn('wu2025')} id="wu2025" />
           </p>
         </div>
       </div>
-      <p class="mt-10 max-w-2xl border-t border-white/15 pt-6 text-sm text-paper/70">
+      <p class="band-muted band-line mt-10 max-w-2xl border-t pt-6 text-sm">
         Regain nach dem Absetzen ist in den Studien die Regel, nicht die Ausnahme. Was in Studien den Unterschied macht:
         genug Protein, Krafttraining, Dranbleiben. Das Set liefert Protein, Ballaststoffe und Kreatin und begleitet dich
         durch zwei Krafteinheiten pro Woche.
@@ -111,7 +111,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <article class="card border-t-4 border-t-moss">
           <p class="text-sm font-medium text-ink-3">Täglich · 1 Stick</p>
-          <h3 class="mt-2 font-serif text-xl font-semibold">Protein-Stick</h3>
+          <h3 class="mt-2 text-xl">Protein-Stick</h3>
           <p class="mt-2 text-sm text-ink-2">
             Mindestens 20 g Protein pro Stick. Protein trägt zur Erhaltung von Muskelmasse bei.<Fn n={fn('euClaims')} id="euClaims" /> Ziel im Programm: 1,2 g Protein pro kg Körpergewicht am Tag<Fn n={fn('leidy2015')} id="leidy2015" /> – mit kleinem Appetit
             schafft das kaum jemand. Der Stick schließt die Lücke.
@@ -120,7 +120,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
         </article>
         <article class="card border-t-4 border-t-amber">
           <p class="text-sm font-medium text-ink-3">Täglich · 1 Stick</p>
-          <h3 class="mt-2 font-serif text-xl font-semibold">Ballaststoff-Stick</h3>
+          <h3 class="mt-2 text-xl">Ballaststoff-Stick</h3>
           <p class="mt-2 text-sm text-ink-2">
             5 g Ballaststoffe pro Stick, geschmacksneutral, zum Einrühren in Wasser, Joghurt oder Suppe. Die DGE
             empfiehlt mindestens 30 g am Tag<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> – mit kleineren Portionen wird das schwer.
@@ -129,7 +129,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
         </article>
         <article class="card border-t-4 border-t-clay">
           <p class="text-sm font-medium text-ink-3">Täglich · 3 g</p>
-          <h3 class="mt-2 font-serif text-xl font-semibold">Kreatin</h3>
+          <h3 class="mt-2 text-xl">Kreatin</h3>
           <p class="mt-2 text-sm text-ink-2">
             3 g Kreatin-Monohydrat am Tag. Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen
             kurzzeitiger intensiver körperlicher Betätigung.<Fn n={fn('euClaims')} id="euClaims" /> Eines der am besten untersuchten
@@ -139,7 +139,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
         </article>
         <article class="card border-t-4 border-t-ink">
           <p class="text-sm font-medium text-ink-3">12 Wochen</p>
-          <h3 class="mt-2 font-serif text-xl font-semibold">Das Programm</h3>
+          <h3 class="mt-2 text-xl">Das Programm</h3>
           <p class="mt-2 text-sm text-ink-2">
             Zwei Krafteinheiten pro Woche à 30 Minuten, zuhause mit Bändern oder im Studio. Wöchentlicher Check-in per
             E-Mail. Rezepte für kleine Portionen mit viel Protein. Wiegeprotokoll statt Kalorienzählen.
@@ -267,7 +267,7 @@ const jsonLd = [faqJsonLd(landingFaq)];
         {artikel.map((a) => (
           <a href={`/wissen/${a.id}/`} class="card group block no-underline hover:border-moss">
             <p class="text-sm font-medium text-ink-3">{a.data.category}</p>
-            <h3 class="mt-2 font-serif text-xl font-semibold leading-snug text-ink group-hover:text-moss">{a.data.title}</h3>
+            <h3 class="mt-2 text-xl leading-snug text-ink group-hover:text-moss">{a.data.title}</h3>
             <p class="mt-2 text-sm text-ink-2">{a.data.description}</p>
             <p class="mt-4 text-sm font-semibold text-moss">Lesen →</p>
           </a>

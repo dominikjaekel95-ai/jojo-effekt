@@ -39,6 +39,9 @@ export const site = {
   },
   preorderGoal: 100,
 
+  // Design-Variante (a Praxis, b Magazin, c Kraft, d Ruhe) – siehe src/styles/global.css
+  theme: import.meta.env.PUBLIC_THEME ?? 'b',
+
   // Externe Dienste (aus .env; leer = Platzhalter/aus)
   tallyFormId: import.meta.env.PUBLIC_TALLY_FORM_ID ?? '',
   plausibleDomain: import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN ?? '',

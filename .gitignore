@@ -18,3 +18,6 @@ npm-debug.log*
 .idea/
 # Vercel
 .vercel/
+
+# Vorschau-Builds der Design-Varianten
+dist-*/

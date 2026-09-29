@@ -1,19 +1,23 @@
 @import "tailwindcss";
+/* Schriften aller Design-Varianten. Der Browser lädt nur die Dateien, die das aktive Theme wirklich benutzt. */
 @import "@fontsource-variable/source-sans-3";
-@import "@fontsource-variable/fraunces";
-@import "@fontsource-variable/fraunces/wght-italic.css";
+@import "@fontsource-variable/ibm-plex-sans";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource-variable/schibsted-grotesk";
+@import "@fontsource-variable/hanken-grotesk";
 
-/* Design-Tokens: warmes Papier, Moosgrün, Bernstein, Ton. Serife Überschriften (Fraunces), humanistische Grotesk (Source Sans 3). */
+/* Farb- und Formtokens. Die Werte hier sind die Defaults (Variante B „Magazin“);
+   html[data-theme="…"] weiter unten überschreibt sie je Variante. PUBLIC_THEME steuert das. */
 @theme {
-  --font-sans: "Source Sans 3 Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-serif: "Fraunces Variable", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-sans: "Source Sans 3 Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
-  --color-paper: #faf7f2;
-  --color-paper-2: #f2ede4;
-  --color-ink: #1c2430;
-  --color-ink-2: #3d4756;
-  --color-ink-3: #596374;
-  --color-line: #e3ddd2;
+  --color-paper: #f7f2ea;
+  --color-paper-2: #efe8dc;
+  --color-ink: #22201c;
+  --color-ink-2: #4a463f;
+  --color-ink-3: #6b665d;
+  --color-line: #e2dace;
 
   --color-moss: #2f6b5a;
   --color-moss-dark: #24554a;
@@ -24,23 +28,222 @@
   --color-clay: #b8563e;
   --color-clay-light: #f7e3dc;
 
-  --radius-xl2: 0.9rem;
+  --radius-xl2: 1.25rem;
+}
+
+:root {
+  --font-head: "Bricolage Grotesque Variable", var(--font-sans);
+  --font-stat: var(--font-head);
+  --font-kicker: var(--font-head);
+  --head-fvs: "opsz" 96;
+  --h-weight: 700;
+  --h-tracking: -0.012em;
+  --h-leading: 1.08;
+  --h-transform: none;
+  --kicker-size: 0.85rem;
+  --kicker-weight: 700;
+  --kicker-style: normal;
+  --kicker-transform: uppercase;
+  --kicker-tracking: 0.12em;
+  --kicker-color: var(--color-moss);
+  --kicker-rule: inline-block;
+  --kicker-rule-w: 1.25rem;
+  --kicker-rule-h: 3px;
+  --radius-btn: 999px;
+  --btn-bg: var(--color-moss);
+  --btn-fg: #ffffff;
+  --btn-hover: var(--color-moss-dark);
+  --btn-shadow: none;
+  --btn-weight: 700;
+  --btn2-border: rgba(34, 32, 28, 0.25);
+  --btn2-fg: var(--color-ink);
+  --card-bg: #ffffff;
+  --card-border: var(--color-line);
+  --card-border-w: 1px;
+  --card-shadow: 0 10px 28px -18px rgba(34, 32, 28, 0.35);
+  --band-bg: #2a2622;
+  --band-fg: #f7f2ea;
+  --band-muted: rgba(247, 242, 234, 0.75);
+  --band-line: rgba(255, 255, 255, 0.14);
+  --band-kicker: var(--color-amber);
+  --stat-1: var(--color-amber);
+  --stat-2: var(--color-moss-light);
+  --stat-3: var(--color-clay-light);
+  --stat-weight: 700;
+  --stat-tracking: -0.02em;
+  --brand-weight: 700;
+  --body-size: 1.0625rem;
+}
+
+/* ---------- Variante A „Praxis“: klinisch, klar, Plex + Mono ---------- */
+html[data-theme="a"] {
+  --font-sans: "IBM Plex Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-head: "IBM Plex Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-stat: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-kicker: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --head-fvs: normal;
+  --color-paper: #ffffff;
+  --color-paper-2: #f3f6f6;
+  --color-ink: #10201f;
+  --color-ink-2: #3b4948;
+  --color-ink-3: #5e6c6b;
+  --color-line: #d9e1e0;
+  --color-moss: #0e6b63;
+  --color-moss-dark: #0a524c;
+  --color-moss-light: #d8ebe8;
+  --color-amber: #b9861f;
+  --color-amber-dark: #7d5a12;
+  --color-amber-light: #f7efdc;
+  --color-clay: #b0483a;
+  --color-clay-light: #f5e1dd;
+  --radius-xl2: 6px;
+  --h-weight: 600;
+  --h-tracking: -0.02em;
+  --h-leading: 1.1;
+  --kicker-size: 0.78rem;
+  --kicker-weight: 500;
+  --kicker-transform: uppercase;
+  --kicker-tracking: 0.16em;
+  --kicker-rule-w: 1.5rem;
+  --kicker-rule-h: 1px;
+  --radius-btn: 4px;
+  --btn-weight: 600;
+  --btn2-border: #b8c4c3;
+  --card-shadow: none;
+  --band-bg: #f3f6f6;
+  --band-fg: #10201f;
+  --band-muted: #3b4948;
+  --band-line: #c9d4d3;
+  --band-kicker: #0e6b63;
+  --stat-1: #0e6b63;
+  --stat-2: #7d5a12;
+  --stat-3: #b0483a;
+  --stat-weight: 500;
+  --stat-tracking: -0.03em;
+  --brand-weight: 600;
+}
+
+/* ---------- Variante C „Kraft“: kontrastreich, kantig, Schibsted ---------- */
+html[data-theme="c"] {
+  --font-sans: "Schibsted Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-head: "Schibsted Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-stat: var(--font-head);
+  --font-kicker: var(--font-head);
+  --head-fvs: normal;
+  --color-paper: #ffffff;
+  --color-paper-2: #f2f2f0;
+  --color-ink: #111111;
+  --color-ink-2: #333333;
+  --color-ink-3: #5a5a5a;
+  --color-line: #111111;
+  --color-moss: #c73b17;
+  --color-moss-dark: #a12f10;
+  --color-moss-light: #fbe3dc;
+  --color-amber: #f2a900;
+  --color-amber-dark: #6e4c00;
+  --color-amber-light: #fff1cc;
+  --color-clay: #0b6e4f;
+  --color-clay-light: #dcefe6;
+  --radius-xl2: 0px;
+  --h-weight: 800;
+  --h-tracking: -0.03em;
+  --h-leading: 1.0;
+  --kicker-size: 0.85rem;
+  --kicker-weight: 700;
+  --kicker-transform: uppercase;
+  --kicker-tracking: 0.08em;
+  --kicker-color: #111111;
+  --kicker-rule-w: 2rem;
+  --kicker-rule-h: 3px;
+  --radius-btn: 0px;
+  --btn-bg: #111111;
+  --btn-fg: #ffffff;
+  --btn-hover: #c73b17;
+  --btn-weight: 700;
+  --btn2-border: #111111;
+  --card-border: #111111;
+  --card-border-w: 2px;
+  --card-shadow: 6px 6px 0 #111111;
+  --band-bg: #111111;
+  --band-fg: #ffffff;
+  --band-muted: rgba(255, 255, 255, 0.72);
+  --band-line: rgba(255, 255, 255, 0.25);
+  --band-kicker: #f2a900;
+  --stat-1: #ff6a45;
+  --stat-2: #f2a900;
+  --stat-3: #7fd1ae;
+  --stat-weight: 800;
+  --stat-tracking: -0.04em;
+  --brand-weight: 800;
+}
+
+/* ---------- Variante D „Ruhe“: minimal, hell, leichte Hanken Grotesk ---------- */
+html[data-theme="d"] {
+  --font-sans: "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-head: "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-stat: var(--font-head);
+  --font-kicker: var(--font-head);
+  --head-fvs: normal;
+  --color-paper: #f6f5f2;
+  --color-paper-2: #edebe6;
+  --color-ink: #1a1a1a;
+  --color-ink-2: #4b4b4b;
+  --color-ink-3: #6f6f6f;
+  --color-line: #dedbd4;
+  --color-moss: #4f6b57;
+  --color-moss-dark: #3d5444;
+  --color-moss-light: #e3eae4;
+  --color-amber: #c27a4a;
+  --color-amber-dark: #8a4f2a;
+  --color-amber-light: #f6e9e0;
+  --color-clay: #a35f4d;
+  --color-clay-light: #f3e4df;
+  --radius-xl2: 0px;
+  --h-weight: 400;
+  --h-tracking: -0.025em;
+  --h-leading: 1.04;
+  --kicker-size: 0.78rem;
+  --kicker-weight: 500;
+  --kicker-transform: uppercase;
+  --kicker-tracking: 0.22em;
+  --kicker-color: #6f6f6f;
+  --kicker-rule: none;
+  --radius-btn: 999px;
+  --btn-bg: #1a1a1a;
+  --btn-fg: #f6f5f2;
+  --btn-hover: #3a3a3a;
+  --btn-weight: 500;
+  --btn2-border: #b9b6ae;
+  --card-bg: transparent;
+  --card-border: transparent;
+  --card-border-w: 1px;
+  --card-shadow: none;
+  --card-top: 1px solid #dedbd4;
+  --band-bg: #f6f5f2;
+  --band-fg: #1a1a1a;
+  --band-muted: #4b4b4b;
+  --band-line: #dedbd4;
+  --band-kicker: #6f6f6f;
+  --stat-1: #1a1a1a;
+  --stat-2: #4f6b57;
+  --stat-3: #c27a4a;
+  --stat-weight: 300;
+  --stat-tracking: -0.04em;
+  --brand-weight: 500;
+  --body-size: 1.1rem;
 }
 
 @utility btn {
-  @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-[1.05rem] font-semibold transition-colors duration-150 no-underline;
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-[1.05rem] no-underline transition-colors duration-150;
+  border-radius: var(--radius-btn);
+  font-weight: var(--btn-weight);
 }
 
 @utility stat {
-  font-family: var(--font-serif);
-  font-variation-settings: "opsz" 144, "SOFT" 40;
-  @apply text-6xl font-semibold leading-none tracking-[-0.02em] sm:text-7xl;
-}
-
-@utility band-dark {
-  @apply bg-ink text-paper;
-  & .fn { color: var(--color-moss-light); }
-  & .eyebrow::before { background: currentColor; }
+  font-family: var(--font-stat);
+  font-weight: var(--stat-weight);
+  letter-spacing: var(--stat-tracking);
+  @apply text-6xl leading-none sm:text-7xl;
 }
 
 @layer base {
@@ -50,11 +253,14 @@
   }
   body {
     @apply bg-paper text-ink font-sans antialiased;
-    font-size: 1.0625rem;
+    font-size: var(--body-size);
   }
   h1, h2, h3, h4 {
-    font-family: var(--font-serif);
-    font-variation-settings: "opsz" 48, "SOFT" 20;
+    font-family: var(--font-head);
+    font-variation-settings: var(--head-fvs);
+    font-weight: var(--h-weight);
+    letter-spacing: var(--h-tracking);
+    text-transform: var(--h-transform);
     text-wrap: balance;
   }
   :target {
@@ -76,29 +282,85 @@
   .container-wide {
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
   }
+  .brand {
+    font-family: var(--font-head);
+    font-weight: var(--brand-weight);
+    font-variation-settings: var(--head-fvs);
+    letter-spacing: -0.01em;
+    @apply text-[1.15rem] text-ink;
+  }
   .btn-primary {
-    @apply btn bg-moss text-white shadow-[inset_0_-2px_0_rgba(0,0,0,0.18)] hover:bg-moss-dark;
+    @apply btn;
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    box-shadow: var(--btn-shadow);
+  }
+  .btn-primary:hover {
+    background: var(--btn-hover);
   }
   .btn-secondary {
-    @apply btn border border-ink/25 bg-transparent text-ink hover:border-moss hover:text-moss;
+    @apply btn bg-transparent;
+    border: 1px solid var(--btn2-border);
+    color: var(--btn2-fg);
+  }
+  .btn-secondary:hover {
+    border-color: var(--color-moss);
+    color: var(--color-moss);
   }
   .eyebrow {
-    @apply inline-flex items-center gap-3 font-serif text-[1.05rem] italic text-moss;
+    @apply inline-flex items-center gap-3;
+    font-family: var(--font-kicker);
+    font-size: var(--kicker-size);
+    font-weight: var(--kicker-weight);
+    font-style: var(--kicker-style);
+    text-transform: var(--kicker-transform);
+    letter-spacing: var(--kicker-tracking);
+    color: var(--kicker-color);
   }
   .eyebrow::before {
     content: "";
-    display: inline-block;
-    width: 1.75rem;
-    height: 1px;
+    display: var(--kicker-rule);
+    width: var(--kicker-rule-w);
+    height: var(--kicker-rule-h);
     background: currentColor;
-    opacity: 0.7;
+  }
+  .h1 {
+    font-family: var(--font-head);
+    font-variation-settings: var(--head-fvs);
+    font-weight: var(--h-weight);
+    letter-spacing: var(--h-tracking);
+    line-height: var(--h-leading);
+    text-transform: var(--h-transform);
+    @apply text-[2.25rem] text-ink sm:text-[3.5rem];
   }
   .h2 {
-    @apply font-serif text-3xl font-semibold leading-[1.12] tracking-[-0.01em] text-ink sm:text-[2.4rem];
+    font-family: var(--font-head);
+    font-variation-settings: var(--head-fvs);
+    font-weight: var(--h-weight);
+    letter-spacing: var(--h-tracking);
+    line-height: var(--h-leading);
+    @apply text-3xl text-ink sm:text-[2.4rem];
   }
   .card {
-    @apply rounded-xl2 border border-line bg-white p-6;
+    background: var(--card-bg);
+    border: var(--card-border-w) solid var(--card-border);
+    border-top: var(--card-top, var(--card-border-w) solid var(--card-border));
+    border-radius: var(--radius-xl2);
+    box-shadow: var(--card-shadow);
+    @apply p-6;
   }
+  .band {
+    background: var(--band-bg);
+    color: var(--band-fg);
+  }
+  .band .h2 { color: var(--band-fg); }
+  .band .eyebrow { color: var(--band-kicker); }
+  .band .band-muted { color: var(--band-muted); }
+  .band .band-line { border-color: var(--band-line); }
+  .band .fn { color: var(--stat-2); }
+  .stat-1 { color: var(--stat-1); }
+  .stat-2 { color: var(--stat-2); }
+  .stat-3 { color: var(--stat-3); }
   .fn {
     @apply align-super text-[0.65em] font-semibold text-moss no-underline;
   }
@@ -106,10 +368,10 @@
     @apply text-[1.1rem] leading-[1.65] text-ink-2;
   }
   .prose-site h2 {
-    @apply mt-12 mb-4 font-serif text-[1.85rem] font-semibold leading-[1.15] tracking-[-0.01em] text-ink scroll-mt-24;
+    @apply mt-12 mb-4 text-[1.85rem] leading-[1.15] text-ink scroll-mt-24;
   }
   .prose-site h3 {
-    @apply mt-8 mb-3 font-serif text-[1.35rem] font-semibold text-ink;
+    @apply mt-8 mb-3 text-[1.35rem] text-ink;
   }
   .prose-site p {
     @apply my-4;
@@ -127,14 +389,11 @@
     @apply font-semibold text-ink;
   }
   .prose-site blockquote {
-    @apply my-7 border-l-[3px] border-amber bg-amber-light/50 px-5 py-4 font-serif text-[1.15rem] leading-snug text-ink rounded-r-lg;
-    font-variation-settings: "opsz" 24, "SOFT" 40;
+    @apply my-7 border-l-[3px] border-amber bg-amber-light/50 px-5 py-4 text-[1.1rem] leading-snug text-ink;
+    border-radius: 0 var(--radius-xl2) var(--radius-xl2) 0;
   }
   .prose-site blockquote p {
     @apply my-0;
-  }
-  .prose-site blockquote strong {
-    @apply font-semibold italic;
   }
   .prose-site table {
     @apply my-6 w-full border-collapse text-[0.95rem] sm:text-base;
@@ -150,9 +409,5 @@
   }
   .prose-site sup a {
     @apply no-underline font-semibold;
-  }
-  .prose-site em {
-    @apply font-serif italic text-ink-2;
-    font-variation-settings: "opsz" 24;
   }
 }

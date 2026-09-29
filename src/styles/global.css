@@ -398,6 +398,21 @@ html[data-theme="d"], html[data-theme="d1"], html[data-theme="d2"], html[data-th
   .prose-site table {
     @apply my-6 w-full border-collapse text-[0.95rem] sm:text-base;
   }
+  /* Breite Tabellen auf schmalen Bildschirmen horizontal scrollen statt die Seite zu sprengen */
+  @media (max-width: 639px) {
+    .prose-site table {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .prose-site table th, .prose-site table td {
+      min-width: 9rem;
+    }
+    .prose-site table th:first-child, .prose-site table td:first-child {
+      min-width: 7rem;
+    }
+  }
   .prose-site th {
     @apply border-b-2 border-ink/60 px-3 py-2 text-left font-semibold text-ink;
   }

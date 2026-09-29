@@ -22,6 +22,10 @@ const wissen = defineCollection({
     related: z.array(z.string()).default([]),
     /** true = wird nicht gebaut (Vorlage, noch ohne echten Inhalt) */
     draft: z.boolean().default(false),
+    /** Amazon-Partnerlinks am Artikelende: Schlüssel aus src/data/affiliate.ts (leer = keine Liste) */
+    affiliate: z.array(z.string()).default([]),
+    affiliateTitle: z.string().optional(),
+    affiliateIntro: z.string().optional(),
   }),
 });
 

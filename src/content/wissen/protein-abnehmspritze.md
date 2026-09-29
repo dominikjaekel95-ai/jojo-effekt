@@ -19,6 +19,9 @@ faq:
     a: "<p>Molkenprotein (Whey) wird schnell aufgenommen und enthält viel Leucin, die Aminosäure, die den Muskelaufbau anstößt. Pflanzliche Mischungen (z. B. Erbse plus Reis) kommen nahe heran, wenn die Portion etwas größer ist. Für den Alltag zählt vor allem, dass du es regelmäßig trinkst.</p>"
   - q: "Wann sollte ich das Protein essen?"
     a: "<p>Verteilt über den Tag, 25 bis 35 g pro Mahlzeit, drei- bis viermal. Der Körper nutzt Protein besser in mehreren Portionen als in einer großen. Nach dem Krafttraining ist eine proteinreiche Mahlzeit sinnvoll, der genaue Zeitpunkt ist aber weniger wichtig als die Tagesmenge.</p>"
+affiliate: ["wheyNeutral", "wheyEsn", "wheyIsolate"]
+affiliateTitle: "Beispiele für Proteinpulver mit mindestens 20 g Protein pro Portion"
+affiliateIntro: "Drei Beispiele, keine Empfehlung einer Marke. Worauf du achtest, steht oben: mindestens 20 g Protein pro Portion, wenig Zucker, bei empfindlichem Magen neutral oder Isolat."
 ---
 
 Unter der Abnehmspritze essen viele so wenig, dass sie nicht einmal das Minimum an Protein erreichen. Das kostet Muskeln. Hier steht, wie viel Protein du brauchst, wo es drinsteckt, und wie du die Menge schaffst, wenn du kaum Hunger hast.

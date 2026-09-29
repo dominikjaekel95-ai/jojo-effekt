@@ -86,3 +86,18 @@ Status: ✅ zugelassen und Bedingung erfüllt · ⚠️ prüfen (Michi / ggf. An
 - [ ] Fachliche Prüfung: Ernährungswissenschaftler:in (freiberuflich, pro Artikel) finden – bewusst kein Arzt (§ 27 MBO-Ä, Produkt ist Lebensmittel). Bis dahin zeigt die Seite ehrlich „noch nicht fachlich gegengeprüft“; kein „fachlich geprüft“ irgendwo. Danach `reviewer` in `src/data/site.ts` setzen.
 - [ ] Freigabe der Mengen (Protein g/kg, Kreatin 3 g, Ballaststoffe 5 g und welcher Ballaststoff), Liste „Für wen nicht“, alle Aussagen in A–D.
 - [ ] Dominik: C16/C17 Quellen nachtragen, Entscheidung D1.
+
+## E. Amazon-Partnerlinks (Affiliate), seit 30.09.2026
+
+Register: `src/data/affiliate.ts`, Komponente `src/components/AffiliateLinks.astro`. Eingebaut auf `/danke/` und am Ende der Artikel Protein, Kreatin, Gewicht halten. **Nicht** auf der Startseite/Produktseite.
+
+| # | Aussage | Wo | Grundlage | Status |
+|---|---|---|---|---|
+| E1 | Kennzeichnung „Werbung“ an jedem Link, Kicker „Werbung“ über jeder Liste | alle Listen | § 5a UWG / § 6 TMG-Nachfolger (DDG) – kommerzielle Kommunikation erkennbar; Amazon-Programmrichtlinien | ✅ |
+| E2 | „Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.“ | unter jeder Liste | Amazon-Teilnahmevereinbarung (Pflichthinweis) | ✅ |
+| E3 | Keine Preise, keine Sternebewertungen im Text | alle Listen | Amazon-Programmrichtlinien (Preisangaben nur per API, max. 24 h alt) | ✅ |
+| E4 | Produkt-Hinweise nur faktisch: Proteinmenge pro Portion, „Isolat, dadurch sehr laktosearm“, „3 g pro Portion“ | Listen Protein/Kreatin | Nährwertbezogene Mengenangaben; keine Wirkaussage | ✅ |
+| E5 | „Glucomannan trägt im Rahmen einer kalorienarmen Ernährung zu Gewichtsverlust bei.“ + Verbraucherhinweis 3 × 1 g/Tag mit 1–2 Gläsern Wasser vor den Mahlzeiten + Erstickungswarnung | Liste Ballaststoffe (Artikel Gewicht halten) | VO (EU) 432/2012, Anhang (Glucomannan); Bedingung: 1 g pro Portion, Verbraucherinformation zu 3 g/Tag in 3 Portionen, Warnung bei Schluckbeschwerden | ✅ Wortlaut exakt; Warnung enthalten |
+| E6 | Keine Marken-, Arzt- oder Medikamentennennung neben den Produkten; „Beispiele, keine Empfehlung einer Marke“ | alle Listen | HCVO Art. 12 lit. c (keine Empfehlung durch Ärzte); HWG § 11 | ✅ |
+| E7 | Links nur auf der Website – nicht in E-Mails, Tally-Benachrichtigungen, PDFs oder Social-Posts | Prozessregel | Amazon-Teilnahmevereinbarung (keine Offline-/E-Mail-Nutzung) | ✅ Regel |
+

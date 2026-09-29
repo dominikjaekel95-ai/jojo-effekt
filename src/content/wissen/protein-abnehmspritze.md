@@ -7,7 +7,7 @@ order: 4
 pubDate: 2026-09-30
 keywords: ["abnehmspritze protein", "abnehmspritze protein wie viel", "eiweiß abnehmspritze", "wegovy protein", "ozempic eiweiß wie viel", "proteinshake abnehmspritze", "abnehmspritze ernährung eiweiß"]
 sources: ["dgeProtein", "leidy2015", "wilding2021dxa", "euClaims", "sardeli2018", "dgeBallaststoffe"]
-related: ["muskelabbau-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
+related: ["ernaehrung-nach-abnehmspritze", "supplements-nach-abnehmspritze", "muskelabbau-abnehmspritze"]
 faq:
   - q: "Wie viel Protein pro Tag brauche ich unter der Abnehmspritze?"
     a: "<p>Übersichtsarbeiten empfehlen beim Abnehmen und Gewichthalten 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag. Bei 80 kg sind das 96 bis 128 g. Bei starkem Übergewicht rechnen viele Fachleute mit dem Zielgewicht statt dem aktuellen Gewicht, sonst werden die Mengen unrealistisch.</p>"

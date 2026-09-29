@@ -193,6 +193,35 @@ export const sources: Record<string, Source> = {
     url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa2416394',
     note: 'Direkter Vergleich über 72 Wochen: −20,2 % unter Tirzepatid, −13,7 % unter Semaglutid 2,4 mg.',
   },
+  almandoz2024: {
+    id: 'almandoz2024',
+    short: 'Almandoz et al., Obesity 2024',
+    full:
+      'Almandoz JP, Wadden TA, Tewksbury C, et al. Nutritional considerations with antiobesity medications. Obesity (Silver Spring). 2024;32(9):1613–1631.',
+    url: 'https://doi.org/10.1002/oby.24067',
+    note: 'Expertenempfehlungen zu Ernährung unter Adipositas-Medikamenten: Protein, Ballaststoffe, Flüssigkeit, Mikronährstoffe bei sehr geringer Energiezufuhr.',
+  },
+  dgeEmpfehlungen: {
+    id: 'dgeEmpfehlungen',
+    short: 'DGE-Empfehlungen „Gut essen und trinken“',
+    full: 'Deutsche Gesellschaft für Ernährung e. V. Gut essen und trinken – die DGE-Empfehlungen. Bonn, 2024.',
+    url: 'https://www.dge.de/gesunde-ernaehrung/gut-essen-und-trinken/dge-empfehlungen/',
+    note: 'Obst und Gemüse, Vollkorn, Hülsenfrüchte, wenig Zucker und Alkohol, Wasser als Getränk.',
+  },
+  klartextNem: {
+    id: 'klartextNem',
+    short: 'Verbraucherzentrale, Klartext Nahrungsergänzung',
+    full: 'Verbraucherzentralen. Klartext Nahrungsergänzung: unabhängige Informationen zu Nahrungsergänzungsmitteln.',
+    url: 'https://www.klartext-nahrungsergaenzung.de/',
+    note: 'Nahrungsergänzungsmittel sind Lebensmittel, werden nicht auf Wirksamkeit geprüft und sind bei ausgewogener Ernährung meist unnötig.',
+  },
+  adaSoc2024: {
+    id: 'adaSoc2024',
+    short: 'ADA Standards of Care 2024',
+    full: 'American Diabetes Association Professional Practice Committee. Standards of Care in Diabetes—2024. Diabetes Care. 2024;47(Suppl 1).',
+    url: 'https://diabetesjournals.org/care/issue/47/Supplement_1',
+    note: 'Empfiehlt bei Metformin-Therapie regelmäßige Kontrolle des Vitamin-B12-Spiegels.',
+  },
   fachinfoWegovy: {
     id: 'fachinfoWegovy',
     short: 'Fachinformation Wegovy (EMA-Produktinformation)',

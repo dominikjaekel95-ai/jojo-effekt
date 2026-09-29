@@ -36,7 +36,9 @@ Jede Anfrage-Gruppe hat genau eine Ziel-URL (keine Kannibalisierung). Suchvolume
 | Produkt/Marke | nach der spritze set, 12 wochen set abnehmspritze, protein kreatin set nach abnehmspritze | / | live |
 | Erfahrungen | abnehmspritze absetzen erfahrungen, wegovy absetzen erfahrungen | /wissen/abnehmspritze-absetzen-erfahrungen/ | **Vorlage im Repo (draft: true)** – geht live, sobald ≥ 5 echte, eingewilligte Berichte aus der Vorbestell-Liste vorliegen; Regeln stehen in der Datei |
 | Markenspezifisch | wegovy absetzen, ozempic absetzen, mounjaro absetzen (jeweils eigene Intention: Dosis, Halbwertszeit, Studien) | /wissen/wegovy-absetzen/, /wissen/ozempic-absetzen/, /wissen/mounjaro-absetzen/ | **live** – rein informativ, HWG-konform; präparatspezifisch: Halbwertszeit und Dosisstufen aus der Fachinformation, STEP 1/2/4 bzw. SURMOUNT-1/4/5, Diabetes-Hinweis bei Ozempic |
-| Ernährung | abnehmspritze ernährung, was essen abnehmspritze, ballaststoffe abnehmspritze | /wissen/ernaehrung-abnehmspritze/ | Monat 3 |
+| Ernährung danach | nach der abnehmspritze ernährung, was essen nach abnehmspritze, ernährungsplan nach abnehmspritze | /wissen/ernaehrung-nach-abnehmspritze/ | **live** |
+| Supplements | nach der abnehmspritze supplements, abnehmspritze nahrungsergänzung, abnehmspritze vitamine | /wissen/supplements-nach-abnehmspritze/ | **live** |
+| Ernährung während | abnehmspritze ernährung, was essen abnehmspritze (Einnahmephase) | /wissen/ernaehrung-abnehmspritze/ | Monat 3 |
 | Training | krafttraining anfänger nach abnehmspritze, training abnehmspritze zuhause | /wissen/krafttraining-nach-abnehmspritze/ (mit dem 30-Minuten-Plan aus dem Programm als Vorschau) | Monat 3 |
 | Dauer/Plateau | abnehmspritze wie lange nehmen, abnehmspritze plateau | /wissen/abnehmspritze-wie-lange/ | Monat 4 |
 | Studien-Tracker | abnehmspritze absetzen studie, neue studie abnehmspritze | /wissen/studien/ – Tabelle aller Absetz-Studien mit Kernzahl, Dataset-Schema, CC BY | **live**, monatlich ergänzen (`src/data/studien.ts`) |

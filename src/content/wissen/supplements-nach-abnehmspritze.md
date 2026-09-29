@@ -1,0 +1,70 @@
+---
+title: "Supplements nach der Abnehmspritze: Was sinnvoll ist, was nicht"
+metaTitle: "Supplements nach der Abnehmspritze: was belegt ist, was nicht"
+description: "Protein, Kreatin, Ballaststoffe: dafür gibt es Belege. Vitamine nur bei Mangel, Fatburner und „GLP-1-Booster“ gar nicht. Eine Tabelle mit Evidenz, Dosis und Urteil."
+category: "Ernährung"
+order: 12
+pubDate: 2026-09-30
+keywords: ["nach der abnehmspritze supplements", "abnehmspritze supplements", "abnehmspritze nahrungsergänzung", "nahrungsergänzungsmittel nach abnehmspritze", "abnehmspritze vitamine", "abnehmspritze welche supplements", "supplements nach wegovy"]
+sources: ["almandoz2024", "leidy2015", "euClaims", "kreider2017", "dgeBallaststoffe", "klartextNem", "adaSoc2024", "wilding2021dxa", "sardeli2018"]
+related: ["kreatin-abnehmspritze", "protein-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
+faq:
+  - q: "Brauche ich nach der Abnehmspritze ein Multivitamin?"
+    a: "<p>Bei normaler Ernährung nicht. Expertenempfehlungen nennen ein Multivitamin als Option, solange die Energiezufuhr sehr niedrig ist, also eher unter der Therapie als danach. Nach dem Absetzen isst du wieder mehr; wenn Gemüse, Hülsenfrüchte und Vollkorn dabei sind, deckt das die meisten Vitamine. Bei Verdacht auf einen Mangel entscheidet der Blutwert, nicht das Gefühl.</p>"
+  - q: "Welche Supplements bringen wirklich etwas nach dem Absetzen?"
+    a: "<p>Drei, und alle nur im Zusammenspiel mit Ernährung und Training: Proteinpulver, wenn die Menge über Lebensmittel nicht erreicht wird; Kreatin-Monohydrat, wenn du Krafttraining machst; Ballaststoffe, wenn du unter 30 g am Tag bleibst. Für alles andere gibt es speziell für die Zeit nach der Spritze keine Belege.</p>"
+  - q: "Gibt es natürliche Alternativen zur Abnehmspritze als Supplement?"
+    a: "<p>Nein. Produkte, die als „natürlicher GLP-1-Booster“ beworben werden (Berberin, bestimmte Probiotika, Pflanzenextrakte), haben keine Zulassung für eine gewichtsbezogene Angabe und keine Studien, die einen Effekt in der Größenordnung der Medikamente zeigen. Berberin kann außerdem mit Medikamenten wechselwirken.</p>"
+  - q: "Sollte ich Vitamin B12 nehmen?"
+    a: "<p>Nur bei Bedarf. Zwei Gruppen sollten den Wert prüfen lassen: Menschen, die Metformin nehmen, weil es den B12-Spiegel senken kann, und Menschen, die sich vegan ernähren. Alle anderen decken B12 über Fleisch, Fisch, Eier und Milchprodukte.</p>"
+  - q: "Kann ich Supplements nehmen, während ich noch spritze?"
+    a: "<p>Protein, Ballaststoffe und Kreatin sind Lebensmittelbestandteile ohne bekannte Wechselwirkung mit GLP-1-Medikamenten. Trotzdem gehört alles, was du regelmäßig nimmst, ins Gespräch mit deiner Ärztin, besonders bei Nierenerkrankungen und vor Blutabnahmen, weil Kreatin den Kreatinin-Wert verändert.</p>"
+---
+
+Nach dem Absetzen der Abnehmspritze bekommt man viel angeboten: Multivitamine, Fatburner, „natürliche GLP-1-Booster“, Probiotika gegen den Jojo-Effekt. Das meiste davon ist Marketing. Hier steht, was belegt ist, was nur bei einem Mangel Sinn ergibt, und was du dir sparen kannst.
+
+> **Kurz gesagt:** Belegt sind drei Dinge, alle als Ergänzung zu Ernährung und Training: Protein, Kreatin mit Krafttraining, Ballaststoffe bei Lücke. Vitamine und Mineralstoffe nur bei nachgewiesenem Mangel. Fatburner und „GLP-1-Booster“: nein.
+
+## Warum das Thema nach der Spritze überhaupt aufkommt
+
+Unter der Therapie essen viele so wenig, dass Protein, Ballaststoffe und Mikronährstoffe knapp werden. Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten nennen deshalb Protein, Ballaststoffe, Flüssigkeit und, bei sehr geringer Energiezufuhr, ein Multivitamin als Überlegung.<sup><a href="#fn-almandoz2024">1</a></sup> Nach dem Absetzen isst man wieder mehr, aber zwei Dinge bleiben: Ein Teil der Muskeln ist weg (in einer STEP-1-Substudie rund 40 % des Gewichtsverlusts als fettfreie Masse<sup><a href="#fn-wilding2021dxa">8</a></sup>), und die Ernährungsstruktur muss ohne Appetitbremse funktionieren. Supplements können dabei genau zwei Rollen spielen: eine Lücke schließen, die über Lebensmittel nicht zu schließen ist, oder Training wirksamer machen. Mehr nicht.
+
+Grundregel der Verbraucherzentralen: Nahrungsergänzungsmittel sind Lebensmittel, werden nicht auf Wirksamkeit geprüft und sind bei ausgewogener Ernährung meist unnötig.<sup><a href="#fn-klartextNem">6</a></sup>
+
+## Die Tabelle: Evidenz, Dosis, Urteil
+
+| Supplement | Was belegt ist | Für wen | Dosis, Bedingung | Urteil |
+|---|---|---|---|---|
+| **Proteinpulver** (Molke, Casein, pflanzlich) | Protein trägt zur Erhaltung von Muskelmasse bei.<sup><a href="#fn-euClaims">3</a></sup> Bei Abnahme und Erhalt werden 1,2 bis 1,6 g/kg empfohlen.<sup><a href="#fn-leidy2015">2</a></sup> | alle, die die Menge über Lebensmittel nicht schaffen | 20 bis 30 g pro Portion, als Ergänzung zu Mahlzeiten | sinnvoll, wenn die Lücke real ist |
+| **Kreatin-Monohydrat** | Erhöht die körperliche Leistung bei Schnellkrafttraining; bei über 55-Jährigen kann es die Wirkung von Krafttraining auf die Muskelkraft verstärken (bei mindestens dreimal Training pro Woche).<sup><a href="#fn-euClaims">3</a></sup> Sicher und gut untersucht.<sup><a href="#fn-kreider2017">4</a></sup> | alle, die Krafttraining machen | 3 g täglich, auch an trainingsfreien Tagen | sinnvoll, nur mit Training |
+| **Ballaststoffe** (Flohsamen, Akazienfaser, Glucomannan, Haferkleie) | DGE: mindestens 30 g am Tag.<sup><a href="#fn-dgeBallaststoffe">5</a></sup> Zulässige Angaben hängen vom Ballaststoff ab (Glucomannan hat eine, andere nicht). | wer trotz Gemüse und Vollkorn unter 30 g bleibt | 5 bis 10 g, langsam steigern, immer mit viel Wasser | sinnvoll bei Lücke, Lebensmittel zuerst |
+| **Vitamin D** | Versorgung in Deutschland im Winter oft niedrig; Effekt auf Gewicht: keiner belegt | bei nachgewiesenem Mangel | nach Blutwert, ärztlich | nur bei Mangel |
+| **Vitamin B12** | Metformin kann den B12-Spiegel senken; Fachgesellschaften empfehlen die Kontrolle.<sup><a href="#fn-adaSoc2024">7</a></sup> | Metformin-Patienten, vegane Ernährung | nach Blutwert | nur bei Bedarf |
+| **Eisen** | Mangel häufig bei Frauen vor der Menopause; Überdosierung schadet | bei nachgewiesenem Mangel | nur ärztlich | nur bei Mangel |
+| **Elektrolyte** | Sinnvoll bei Erbrechen oder Durchfall unter der Therapie | unter der Spritze bei Nebenwirkungen | kurzfristig | nach dem Absetzen unnötig |
+| **Omega-3** | Keine Belege für Gewichtserhalt oder Muskelerhalt nach GLP-1 | – | – | nicht nötig |
+| **Probiotika „gegen Jojo“** | Keine Belege für Gewichtserhalt | – | – | nein |
+| **„Natürliche GLP-1-Booster“** (Berberin, Extrakte) | Keine zugelassene Angabe, keine Studien in der Größenordnung der Medikamente, mögliche Wechselwirkungen | – | – | nein |
+| **Fatburner, Stoffwechsel-Booster, Detox** | Keine Belege, teils riskante Inhaltsstoffe | – | – | nein |
+
+## Die drei, die etwas bringen, richtig eingesetzt
+
+**Protein** ist kein Supplement im eigentlichen Sinn, sondern ein Lebensmittel in praktischer Form. Die Frage ist nur, ob du 1,2 bis 1,6 g pro kg über Mahlzeiten schaffst. Wer bei 80 kg auf 100 g kommt, braucht kein Pulver. Wer bei 60 g hängt, weil der Appetit noch klein ist oder die Zeit fehlt, für den ist ein Shake oder Stick der einfachste Weg. Details im [Protein-Artikel](/wissen/protein-abnehmspritze/).
+
+**Kreatin** ist das am besten untersuchte Supplement für Kraft und Muskelmasse in Verbindung mit Training.<sup><a href="#fn-kreider2017">4</a></sup> Ohne Training bringt es fast nichts; mit zwei Krafteinheiten pro Woche macht es jede Einheit ein Stück wirksamer. Krafttraining selbst ist der Faktor mit der besten Evidenz gegen den Verlust an fettfreier Masse.<sup><a href="#fn-sardeli2018">9</a></sup> In den ersten zwei Wochen steigt das Gewicht durch Wasser um 0,5 bis 2 kg; das ist kein Fett. Alles Weitere unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
+
+**Ballaststoffe** sind die Nebenrolle mit ehrlichem Status: Sie gehören zu jeder Mahlzeit, und die meisten Menschen erreichen die 30 g nicht. Ein Supplement ist nur die zweite Wahl nach Hülsenfrüchten, Vollkorn und Gemüse. Wichtig: langsam steigern und viel trinken.
+
+## Was du nicht brauchst
+
+Alles, was mit „Stoffwechsel ankurbeln“, „Fett verbrennen“, „entgiften“ oder „natürliche Alternative zur Spritze“ wirbt. Für keines dieser Versprechen gibt es eine zugelassene gesundheitsbezogene Angabe in der EU, und für keines gibt es Studien, die einen Effekt auf das Gewicht nach dem Absetzen zeigen. Berberin, das als „Ozempic aus der Natur“ vermarktet wird, kann außerdem mit Medikamenten wechselwirken und gehört nicht in die Selbstmedikation.
+
+## Sicherheit: drei Regeln
+
+1. **Blutwert vor Vitamin.** Vitamin D, B12, Eisen: erst messen, dann ergänzen, sonst ist es Raten mit Nebenwirkungsrisiko.
+2. **Nieren beachten.** Bei Nierenerkrankungen sind Protein und Kreatin Sache der Ärztin. Kreatin verändert außerdem den Laborwert Kreatinin, ohne die Nierenfunktion zu verschlechtern; sag es vor jeder Blutabnahme.
+3. **Alles ins Arztgespräch.** Auch Lebensmittelbestandteile ohne bekannte Wechselwirkung mit GLP-1-Medikamenten gehören auf die Liste, die deine Ärztin kennt.
+
+---
+
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze enthält genau die drei Bausteine mit Belegen, Protein, Ballaststoffe und Kreatin, zusammen mit einem Trainingsprogramm. Es ist ein Lebensmittel mit Programm, kein Medikament, und es ersetzt keine Vitamine bei einem Mangel.*

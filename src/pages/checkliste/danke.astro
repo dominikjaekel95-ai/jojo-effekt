@@ -18,11 +18,7 @@ import { site } from '../../data/site';
         <li><a href="/glossar/absetzkurve/" class="text-moss underline underline-offset-4">Die Absetzkurve im Glossar</a></li>
         <li><a href="/marktradar/" class="text-moss underline underline-offset-4">Was sich im Markt gerade ändert</a></li>
       </ul>
-      {site.newsletter.provider ? (
-        <p class="mt-4">Wenn du den Newsletter angekreuzt hast, kommt er {site.newsletter.cadence}: neue Artikel, Studien, Entwicklungen. Abmelden geht in jeder Mail.</p>
-      ) : (
-        <p class="mt-4">Deine E-Mail-Adresse nutzen wir nur für den Versand der Checkliste. Kein Newsletter, keine Weitergabe.</p>
-      )}
+      <p class="mt-4">Deine E-Mail-Adresse nutzen wir für die Checkliste. {site.newsletter.provider ? `Wenn du den Newsletter angekreuzt hast, kommt er ${site.newsletter.cadence}; vorher bestätigst du die Anmeldung per Link in einer Mail.` : 'Wenn du den Newsletter angekreuzt hast, startet er, sobald der Versand eingerichtet ist; vorher kommt eine Bestätigungs-Mail mit Link.'} Abmelden geht in jeder Mail. Keine Weitergabe.</p>
     </div>
     <p class="mt-6 text-sm font-medium text-ink">{site.doctorSentence}</p>
   </section>

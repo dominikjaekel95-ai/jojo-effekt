@@ -17,11 +17,7 @@ import ShareButtons from '../components/ShareButtons.astro';
       <p class="font-semibold text-ink">Was jetzt passiert</p>
       <ol class="mt-2 list-decimal space-y-1 pl-5">
         <li>Wir melden uns per E-Mail, sobald die erste Charge steht – frühestens, wenn {site.preorderGoal} Vorbestellungen zusammen sind.</li>
-        {site.newsletter.provider ? (
-          <li>Neuigkeiten zum Set. Den Newsletter ({site.newsletter.cadence}) bekommst du nur, wenn du ihn im Formular angekreuzt hast; abmelden geht in jeder Mail. Keine Weitergabe.</li>
-        ) : (
-          <li>Nur Neuigkeiten zum Set. Kein Newsletter, keine Weitergabe.</li>
-        )}
+        <li>Den Newsletter ({site.newsletter.cadence}) bekommst du nur, wenn du ihn im Formular angekreuzt hast. {site.newsletter.provider ? 'Vor der ersten Ausgabe bestätigst du die Anmeldung per Link in einer Mail.' : 'Er startet, sobald der Versand eingerichtet ist; vorher kommt eine Bestätigungs-Mail mit Link.'} Abmelden geht in jeder Mail. Keine Weitergabe.</li>
         <li>Du kannst dich jederzeit per E-Mail austragen lassen.</li>
       </ol>
     </div>

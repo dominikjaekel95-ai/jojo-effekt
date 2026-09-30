@@ -50,6 +50,15 @@ export const site = {
   // Erfahrungsformular „Deine Erfahrung nach der Abnehmspritze“ (Tally). `live` erst auf true setzen, wenn das
   // Formular in Tally veröffentlicht ist; vorher zeigt /erfahrungen/ nur die Regeln und die E-Mail-Adresse.
   experienceForm: { id: 'ODOJWR', live: true },
+  // Checkliste „Die ersten 8 Wochen nach der letzten Dosis“: Tally-Formular (Spezifikation in docs/NEWSLETTER.md).
+  // `live` erst auf true setzen, wenn das Formular in Tally veröffentlicht ist; vorher bietet /checkliste/ den Weg per E-Mail.
+  checklistForm: { id: '', live: false },
+  // Newsletter: Versanddienst erst eintragen, wenn gewählt und eingerichtet; dann erscheint der Datenschutz-Absatz und
+  // die Danke-Seite nennt den Newsletter (docs/NEWSLETTER.md).
+  newsletter: {
+    provider: null as null | { name: string; address: string; url: string },
+    cadence: 'etwa alle zwei Wochen',
+  },
   // Plausible-Site-Skript-ID (Plausible → Site → Settings → Site installation, Teil hinter /js/ ohne .js). Leerstring = kein Tracking.
   plausibleScriptId: import.meta.env.PUBLIC_PLAUSIBLE_SCRIPT_ID ?? 'pa-kXdw31zjWlqdlJXD8QACc',
 

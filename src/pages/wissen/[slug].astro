@@ -7,6 +7,7 @@ import AuthorBox from '../../components/AuthorBox.astro';
 import ProductTeaser from '../../components/ProductTeaser.astro';
 import AffiliateLinks from '../../components/AffiliateLinks.astro';
 import GlossarBox from '../../components/GlossarBox.astro';
+import ChecklistBox from '../../components/ChecklistBox.astro';
 import type { AffiliateKey } from '../../data/affiliate';
 import { getCollection, render } from 'astro:content';
 import { site } from '../../data/site';
@@ -76,6 +77,8 @@ const jsonLd = [
     </div>
 
     <GlossarBox text={`${entry.body ?? ''} ${faqText}`} class="mt-8" />
+
+    <ChecklistBox position={`artikel-${entry.id}`} class="mt-6" />
 
     <ProductTeaser position={`artikel-${entry.id}`} />
 

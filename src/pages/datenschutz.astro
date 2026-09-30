@@ -61,6 +61,31 @@ import { site } from '../data/site';
         ein Auftragsverarbeitungsvertrag; Tally hostet in der EU.
       </p>
 
+      {site.checklistForm.live && (
+        <>
+          <h2>4b. Checkliste als PDF (Tally)</h2>
+          <p>
+            Auf der Seite <a href="/checkliste/">Checkliste</a> kannst du die Checkliste als PDF anfordern. Das Formular wird von Tally
+            bereitgestellt und eingebettet; gespeichert wird deine E-Mail-Adresse. <strong>Zweck:</strong> Bereitstellung der Checkliste. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Erfüllung deiner Anfrage). <strong>Speicherdauer:</strong> bis zu
+            zwölf Monate, dann Löschung, sofern du nicht zusätzlich den Newsletter bestellt hast. Mit Tally besteht ein
+            Auftragsverarbeitungsvertrag; Tally hostet in der EU.
+          </p>
+        </>
+      )}
+      {site.newsletter.provider && (
+        <>
+          <h2>4c. Newsletter</h2>
+          <p>
+            Wenn du im Vorbestell- oder Checklisten-Formular den Newsletter ankreuzt, schicken wir dir {site.newsletter.cadence} eine
+            E-Mail mit neuen Artikeln, Studien und Entwicklungen zur Zeit nach der Abnehmspritze, gelegentlich auch mit Neuigkeiten zum
+            Set. <strong>Rechtsgrundlage:</strong> deine Einwilligung, Art. 6 Abs. 1 lit. a DSGVO und § 7 Abs. 2 Nr. 2 UWG. Wir
+            protokollieren Zeitpunkt und Wortlaut der Einwilligung. <strong>Versand:</strong> über {site.newsletter.provider.name}, {site.newsletter.provider.address}, mit Auftragsverarbeitungsvertrag; Details unter <a href={site.newsletter.provider.url} rel="noopener" target="_blank">{site.newsletter.provider.url}</a>.
+            Gemessen wird, ob eine Mail geöffnet und welcher Link geklickt wurde, um den Newsletter zu verbessern. <strong>Widerruf:</strong> jederzeit über den Abmeldelink in jeder Mail oder per E-Mail an {site.email}; danach wird deine
+            Adresse aus dem Verteiler gelöscht. <strong>Speicherdauer:</strong> bis zum Widerruf.
+          </p>
+        </>
+      )}
+
       <h2>5. Reichweitenmessung (Plausible Analytics)</h2>
       <p>
         Wir nutzen Plausible Analytics (Plausible Insights OÜ, Västriku tn 2, 50403 Tartu, Estland), gehostet in der EU.

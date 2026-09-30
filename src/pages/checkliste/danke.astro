@@ -1,0 +1,29 @@
+---
+/** Ziel der Tally-Weiterleitung nach dem Anfordern der Checkliste. noindex, nicht in der Sitemap. */
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+---
+<Base title="Deine Checkliste" description="Die Checkliste für die ersten 8 Wochen nach der letzten Dosis als PDF." path="/checkliste/danke/" noindex>
+  <section class="container-narrow py-20 text-center">
+    <p class="eyebrow">Danke</p>
+    <h1 class="h1 mt-3">Hier ist deine Checkliste.</h1>
+    <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">Die ersten 8 Wochen nach der letzten Dosis, zum Ausdrucken und Abhaken.</p>
+    <p class="mt-8"><a href="/downloads/checkliste-8-wochen.pdf" download class="btn-primary plausible-event-name=Checkliste+Download">PDF herunterladen</a></p>
+    <p class="mt-4 text-sm text-ink-3">Falls der Download nicht startet: <a href="/checkliste/" class="underline">die Checkliste als Seite</a> lässt sich auch drucken.</p>
+    <div class="mx-auto mt-10 max-w-xl rounded-xl2 border border-line bg-white p-6 text-left text-sm text-ink-2">
+      <p class="font-semibold text-ink">Was dich außerdem weiterbringt</p>
+      <ul class="mt-2 space-y-1">
+        <li><a href="/wissen/krafttraining-nach-abnehmspritze/" class="text-moss underline underline-offset-4">Der 30-Minuten-Plan fürs Krafttraining</a></li>
+        <li><a href="/wissen/protein-abnehmspritze/" class="text-moss underline underline-offset-4">Wie viel Protein und wann</a></li>
+        <li><a href="/glossar/absetzkurve/" class="text-moss underline underline-offset-4">Die Absetzkurve im Glossar</a></li>
+        <li><a href="/marktradar/" class="text-moss underline underline-offset-4">Was sich im Markt gerade ändert</a></li>
+      </ul>
+      {site.newsletter.provider ? (
+        <p class="mt-4">Wenn du den Newsletter angekreuzt hast, kommt er {site.newsletter.cadence}: neue Artikel, Studien, Entwicklungen. Abmelden geht in jeder Mail.</p>
+      ) : (
+        <p class="mt-4">Deine E-Mail-Adresse nutzen wir nur für den Versand der Checkliste. Kein Newsletter, keine Weitergabe.</p>
+      )}
+    </div>
+    <p class="mt-6 text-sm font-medium text-ink">{site.doctorSentence}</p>
+  </section>
+</Base>

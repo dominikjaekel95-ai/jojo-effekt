@@ -44,7 +44,7 @@ npm run preview        # dist/ lokal ansehen
 
 - Für das Set nur die in `CLAIMS.md` freigegebenen, EU-zugelassenen Angaben. Nie: „verhindert den Jojo-Effekt“, „ersetzt die Spritze“, „von Ärzten empfohlen“, Stoffwechsel-Versprechen. `check:text` fängt einige davon ab, nicht alle.
 - Keine Dosierungen, Titrationen, Ausschleich- oder Wiedereinstiegsschemata für Medikamente. Keine Absetz-Anleitung, keine Bewertung von Medikamenten, keine Bezugsquellen, keine Rezept-, Nebenwirkungs- oder Kauf-Themen.
-- Medikamentennamen (Wegovy, Ozempic, Mounjaro, Saxenda) nie auf der Startseite und in Anzeigentexten. Im Wissensbereich erlaubt.
+- Medikamentennamen (Wegovy, Ozempic, Mounjaro, Saxenda) nie auf der Startseite und in Anzeigentexten; `check:text` prüft die gebaute Startseite darauf. Im Wissensbereich erlaubt; die Startseite verlinkt Präparate-Artikel über `/wissen/#praeparate`.
 - Jede Zahl hat eine Quelle in `src/data/sources.ts` (Originalstudie, keine Pressemeldung). Fußnoten als `<sup><a href="#fn-ID">n</a></sup>`, n = Position in `sources` im Frontmatter.
 - Kein „fachlich geprüft“, solange `reviewer` in `src/data/site.ts` `null` ist. Keine erfundenen Erfahrungsberichte, keine Testimonials.
 - Die Abschnitte „Was wir nicht sagen“ und die Arztsätze bleiben unangetastet.
@@ -73,7 +73,7 @@ Diese Dateien ändern beide Agenten und die Routine. Nur anhängen, nie umsortie
 
 ## Technische Eigenheiten
 
-- Astro-Whitespace: In `.astro`-Dateien nie eine Zeile mit Text enden lassen und die nächste mit `{ausdruck}` oder `<a` beginnen. Astro schluckt das Leerzeichen („Alternativ49 €“). Alles auf eine Zeile schreiben. `check:text` findet die meisten Fälle im Build-Output.
+- Astro-Whitespace: In `.astro`-Dateien nie eine Zeile mit Text enden lassen und die nächste mit `{ausdruck}` oder `<a` beginnen. Astro schluckt das Leerzeichen („Alternativ49 €“). Alles auf eine Zeile schreiben. `check:text` prüft dieses Muster jetzt direkt im Quelltext und zusätzlich den Build-Output.
 - Tailwind 4: Theme-Tokens in `src/styles/global.css` (`@theme` plus CSS-Variablen je `html[data-theme]`). `@apply` mit eigenen Klassen funktioniert nicht, eigene Utilities als `@utility`. Aktives Design ist `d1` (`PUBLIC_THEME`), die übrigen Varianten bleiben wählbar.
 - Schriften selbst gehostet (`@fontsource-variable/*`). Keine externen Requests außer Tally und Plausible. Keine Cookies. Kommt ein Dienst mit Cookies dazu, braucht es ein Consent-Tool.
 - Artikel-Template: `src/pages/wissen/[slug].astro`. Vorlage für neue Artikel: `src/content/wissen/kreatin-abnehmspritze.md`.

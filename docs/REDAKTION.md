@@ -42,8 +42,8 @@ Vorlage: jeder bestehende Artikel, z. B. `src/content/wissen/kreatin-abnehmsprit
 - **Jede Zahl mit Quelle.** Ist die Quelle nicht verifizierbar, fällt die Zahl weg, nicht die Quelle wird geschätzt.
 - Medikamentennamen nur in Präparate-Artikeln und in Keywords, nie auf der Startseite, nie in Anzeigentexten.
 - Ein Suchintent = eine URL. Vor dem Schreiben prüfen, ob ein bestehender Artikel das Thema schon abdeckt; dann dort erweitern statt neu anlegen.
-- **Erfahrungsberichte** (Tally-Formular `ODOJWR`, noch Entwurf): werden gekürzt, nie inhaltlich verändert, nur mit Vorname oder Pseudonym und Altersgruppe veröffentlicht, ohne Dosisangaben, die als Anleitung lesbar wären, ohne Arzt- oder Klinikname, nie neben dem Produkt-Teaser (sonst Testimonial für das Set, HWG/UWG). Berichte sind Erfahrungen, keine Belege für Wirkungen. Details: `docs/RECHERCHE-2026-09-30.md`, Abschnitt 2.
-- **Reviewer** (sobald vorhanden): nur auf Ratgeber-Artikeln, nie auf Startseite, Produktseite, Danke-Seite oder neben Affiliate-Listen (HCVO Art. 12 c). Der Reviewer prüft die Fakten des Artikels, nicht das Produkt. Details: `docs/RECHERCHE-2026-09-30.md`, Abschnitt 1.
+- **Erfahrungsberichte** (Tally-Formular `ODOJWR`, noch Entwurf): werden gekürzt, nie inhaltlich verändert, nur mit Vorname oder Pseudonym und Altersgruppe veröffentlicht, ohne Dosisangaben, die als Anleitung lesbar wären, ohne Arzt- oder Klinikname, nie neben dem Produkt-Teaser (sonst Testimonial für das Set, HWG/UWG). Berichte sind Erfahrungen, keine Belege für Wirkungen. Details: `docs/RECHERCHE-2026-09-30-marktradar.md`, Abschnitt 2.
+- **Reviewer** (sobald vorhanden): nur auf Ratgeber-Artikeln, nie auf Startseite, Produktseite, Danke-Seite oder neben Affiliate-Listen (HCVO Art. 12 c). Der Reviewer prüft die Fakten des Artikels, nicht das Produkt. Details: `docs/RECHERCHE-2026-09-30-marktradar.md`, Abschnitt 1.
 
 ## 4. Themenliste (Reihenfolge = Priorität)
 

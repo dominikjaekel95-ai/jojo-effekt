@@ -6,6 +6,7 @@ Statische Website (Astro 7, Tailwind 4), live unter https://nachderspritze.de. L
 
 - Produktions-Branch: `claude/jojo-effekt-website-launch-5n0nls`. Vercel baut und veröffentlicht jeden Push darauf innerhalb von etwa zwei Minuten. Es gibt keinen `main`.
 - Jeder andere Branch bekommt von Vercel automatisch eine Preview-URL. Previews tragen den Header `X-Robots-Tag: noindex` und sind die Testumgebung. Claude Code (Web) legt pro Session einen eigenen Branch `claude/…` an; das ist dein Arbeits-Branch, nie der Produktions-Branch. Zwei Ausnahmen pushen direkt auf den Produktions-Branch: die Dienstags-Routine und Dominiks laufende Launch-Session (ihr Session-Branch ist der Produktions-Branch), beide nur für Artikel und Doku und nur nach grünem `check:all`.
+- Täglich 09:10 Uhr (Berlin) pusht die Indexierungs-Routine (Search-Console-Anmeldung, siehe `docs/INDEXIERUNG.md`) ausschließlich Änderungen an `docs/INDEXIERUNG.md` direkt auf den Produktions-Branch; sie ändert sonst nichts.
 - Dienstags 08:47 Uhr (Berlin) pusht eine automatische Redaktions-Routine von Dominik drei neue Artikel direkt auf den Produktions-Branch. Sie ändert `src/content/wissen/`, `docs/REDAKTION.md`, `CLAIMS.md` Abschnitt C und bei Bedarf `src/data/sources.ts` und `src/data/studien.ts`. Vor jeder Arbeit `git fetch origin`.
 
 ## Arbeitsweise für jede Änderung

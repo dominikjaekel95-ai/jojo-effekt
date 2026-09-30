@@ -22,7 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      # MARKTRADAR_TOKEN: Fine-grained Personal Access Token von Dominik (Repository-Admin, Berechtigung Contents: write).
+      # Damit gilt der Admin-Bypass des Rulesets für den Push, und der Push löst CI, IndexNow und Vercel aus.
+      # Ohne das Secret wird der GITHUB_TOKEN benutzt; dessen Push blockiert das Ruleset des Produktions-Branches.
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.MARKTRADAR_TOKEN || github.token }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22

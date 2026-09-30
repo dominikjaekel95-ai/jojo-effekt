@@ -1,17 +1,40 @@
 {
-  "stand": null,
-  "status": "noch kein automatischer Abruf",
-  "quelle": { "name": "BfArM / PharmNet.Bund, Lieferengpassmeldungen", "url": "https://anwendungen.pharmnet-bund.de/lieferengpassmeldungen/faces/public/meldungen.xhtml" },
+  "stand": "2026-09-30",
+  "status": "ok",
+  "quelle": {
+    "name": "BfArM / PharmNet.Bund, Lieferengpassmeldungen",
+    "url": "https://anwendungen.pharmnet-bund.de/lieferengpassmeldungen/faces/public/meldungen.xhtml"
+  },
   "hinweis": "Die BfArM-Datenbank bietet keine Schnittstelle; der automatische Abruf (montags, scripts/marktradar-fetch.mjs) liest die Suchseite und kann scheitern. Dann bleibt der manuell geprüfte Stand. Gezählt werden aktuelle Meldungen, in denen der Wirkstoff vorkommt. Keine Meldung heißt nicht garantierte Verfügbarkeit in jeder Apotheke.",
   "manuell": {
     "stand": "2026-09-30",
     "text": "Semaglutid (Ozempic): Das BfArM hat Ende März 2026 seine Versorgungsempfehlungen aus dem Frühjahr 2023 für Ozempic und Trulicity aufgehoben, weil die Verfügbarkeit stabil ist. Wegovy, Mounjaro und Saxenda: keine Meldung bekannt; Prüfung in der BfArM-Datenbank bei der nächsten Erhebung.",
-    "quelle": { "name": "APOTHEKE ADHOC, 31.03.2026", "url": "https://www.apotheke-adhoc.de/nachrichten/detail/pharmazie/ozempic-trulicity-bfarm-empfehlungen-aufgehoben/" }
+    "quelle": {
+      "name": "APOTHEKE ADHOC, 31.03.2026",
+      "url": "https://www.apotheke-adhoc.de/nachrichten/detail/pharmazie/ozempic-trulicity-bfarm-empfehlungen-aufgehoben/"
+    }
   },
   "wirkstoffe": [
-    { "wirkstoff": "Semaglutid", "treffer": null, "zeilen": [] },
-    { "wirkstoff": "Tirzepatid", "treffer": null, "zeilen": [] },
-    { "wirkstoff": "Liraglutid", "treffer": null, "zeilen": [] }
+    {
+      "wirkstoff": "Semaglutid",
+      "treffer": 0,
+      "zeilen": []
+    },
+    {
+      "wirkstoff": "Tirzepatid",
+      "treffer": 0,
+      "zeilen": []
+    },
+    {
+      "wirkstoff": "Liraglutid",
+      "treffer": 0,
+      "zeilen": []
+    }
   ],
-  "log": []
+  "log": [
+    {
+      "date": "2026-09-30",
+      "text": "Abruf ok. Fundstellen: Semaglutid 0, Tirzepatid 0, Liraglutid 0."
+    }
+  ]
 }

@@ -24,8 +24,12 @@ Tally hat keine native MailerLite-Integration (nur Mailchimp, Make, Zapier, Webh
 - Umgebungsvariablen in Vercel (nicht ins Repo): `MAILERLITE_API_KEY` (Dominik erzeugt ihn unter MailerLite → Integrations → API), `MAILERLITE_GROUP_NEWSLETTER=200039673188321227`, `MAILERLITE_GROUP_CHECKLISTE=200039701111899565`, `TALLY_SIGNING_SECRET`.
 - Datenschutzerklärung: Absatz „Newsletter“ mit MailerLite (MailerLite Limited, Irland, EU) als Auftragsverarbeiter, Double-Opt-in, Protokollierung von Zeitpunkt und IP der Einwilligung, Abmeldung per Link, Speicherdauer bis Widerruf; Absatz „Checkliste“ (Zweck Bereitstellung und Aktualisierungen).
 
+## Webhooks (Stand 30.09.2026, 16:20)
+
+In allen drei Tally-Formularen (`b5bO9o`, `ODOJWR`, `WOxpjv`) ist der Webhook `https://nachderspritze.de/api/newsletter/` angelegt und aktiv, **noch ohne Signing Secret**. Solange `TALLY_SIGNING_SECRET` in Vercel fehlt, nimmt die Funktion jeden POST an (nur Einträge mit Newsletter-Häkchen werden verarbeitet, Double-Opt-in schützt die Empfänger). Nachziehen: Dominik erzeugt eine zufällige Zeichenkette (z. B. 32 Zeichen), trägt sie in Vercel als `TALLY_SIGNING_SECRET` ein und in Tally bei jedem der drei Webhooks über das Stift-Symbol unter „Add a signing secret“.
+
 ## Offen (Dominik)
 
-1. API-Key erzeugen und in Vercel eintragen (5 Minuten), dann Coding-Instanz Bescheid geben.
+1. ~~API-Key erzeugen und in Vercel eintragen~~ erledigt 30.09. (`MAILERLITE_API_KEY`, `MAILERLITE_GROUP_NEWSLETTER`, `MAILERLITE_GROUP_CHECKLISTE`, Production). Offen: `TALLY_SIGNING_SECRET` in Vercel und in den drei Tally-Webhooks.
 2. Entscheidung Bestätigungsmail: englisch lassen oder Upgrade, sobald der Verteiler wächst.
 3. Erste Ausgabe erst, wenn mindestens ein Dutzend bestätigte Adressen da sind; vorher Test an sich selbst.

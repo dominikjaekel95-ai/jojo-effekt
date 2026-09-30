@@ -1,0 +1,34 @@
+---
+/**
+ * Teilen-Buttons ohne Skripte von Drittanbietern: WhatsApp, E-Mail, LinkedIn als einfache Links, „Link kopieren“ per
+ * Zwischenablage. Der geteilte Link trägt UTM-Parameter, damit Plausible Empfehlungen als Quelle zeigt.
+ * Text ohne Markennamen von Arzneimitteln.
+ */
+import { site } from '../data/site';
+interface Props { position: string; class?: string }
+const { position, class: cls = '' } = Astro.props;
+const url = `${site.url}/?utm_source=empfehlung&utm_medium=teilen&utm_campaign=${position}`;
+const text = `Ich habe mich für ein 12-Wochen-Set für die Zeit nach der Abnehmspritze vorgemerkt: Protein, Ballaststoffe, Kreatin und ein Trainingsplan, mit Studien statt Versprechen. Falls du auch gerade absetzt: ${url}`;
+const wa = `https://wa.me/?text=${encodeURIComponent(text)}`;
+const mail = `mailto:?subject=${encodeURIComponent('Für die Zeit nach der Abnehmspritze')}&body=${encodeURIComponent(text)}`;
+const li = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+const btn = 'inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-2 text-sm font-semibold text-ink no-underline hover:border-moss hover:text-moss';
+---
+<div class={`flex flex-wrap items-center gap-3 ${cls}`}>
+  <a href={wa} target="_blank" rel="noopener" class={`${btn} plausible-event-name=Teilen+Klick plausible-event-kanal=whatsapp`}>WhatsApp</a>
+  <a href={mail} class={`${btn} plausible-event-name=Teilen+Klick plausible-event-kanal=email`}>E-Mail</a>
+  <a href={li} target="_blank" rel="noopener" class={`${btn} plausible-event-name=Teilen+Klick plausible-event-kanal=linkedin`}>LinkedIn</a>
+  <button type="button" data-copy={url} class={`${btn} plausible-event-name=Teilen+Klick plausible-event-kanal=link`}>Link kopieren</button>
+</div>
+<script is:inline>
+  document.querySelectorAll('button[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var u = b.getAttribute('data-copy');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(u).then(function () { b.textContent = 'Link kopiert'; });
+      } else {
+        window.prompt('Link kopieren:', u);
+      }
+    });
+  });
+</script>

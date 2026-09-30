@@ -521,3 +521,14 @@ html[data-theme="d3"] {
   --stat-2: #7a5c12;
   --stat-3: #4f5b66;
 }
+
+/* Druck und PDF (Checkliste): Navigation, Footer und Formulare ausblenden, Kästchen sichtbar lassen */
+@media print {
+  header, footer, .no-print { display: none !important; }
+  body { background: #fff !important; }
+  a { color: inherit; text-decoration: none; }
+  .container-narrow { max-width: none; padding: 0; }
+  section, aside { break-inside: avoid; }
+  /* Interne Links im Fließtext bekommen ihre Adresse, damit sie im Druck und PDF nachvollziehbar bleiben */
+  .prose-site a[href^="/"]::after { content: " (nachderspritze.de" attr(href) ")"; font-size: 0.85em; color: #6b6b6b; }
+}

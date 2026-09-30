@@ -54,6 +54,7 @@ function buildLastmod() {
   map.set('/', latest);
   map.set('/wissen/', latest);
   map.set('/ueber/', latest);
+  map.set('/checkliste/', latest);
   return map;
 }
 const lastmod = buildLastmod();
@@ -67,7 +68,7 @@ export default defineConfig({
   build: { format: 'directory' },
   integrations: [
     sitemap({
-      filter: (page) => !/\/(danke|impressum|datenschutz)\/$/.test(page) && (experienceLive || !/\/erfahrungen\/$/.test(page)) && !/\.(xml|txt|csv)$/.test(page),
+      filter: (page) => !/\/(danke|impressum|datenschutz)\/$/.test(page) && !/\/checkliste\/danke\/$/.test(page) && (experienceLive || !/\/erfahrungen\/$/.test(page)) && !/\.(xml|txt|csv)$/.test(page),
       changefreq: 'weekly',
       priority: 0.7,
       serialize(item) {

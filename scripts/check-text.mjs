@@ -37,6 +37,34 @@ for (const sub of ['src/content/wissen', 'src/content/glossar']) {
   }
 }
 
+// ---- 5. Astro-Whitespace im Quelltext: eine Zeile endet mit Text, die nächste beginnt mit {…} oder einem Inline-Element.
+// Astro entfernt den Zeilenumbruch samt Leerzeichen; im Output kleben die Wörter zusammen („E-Mail andominik@…“).
+{
+  const walkSrc = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => e.isDirectory() ? walkSrc(path.join(d, e.name)) : e.name.endsWith('.astro') ? [path.join(d, e.name)] : []);
+  for (const file of walkSrc(path.join(root, 'src'))) {
+    const lines = fs.readFileSync(file, 'utf8').split('\n');
+    let i = 0;
+    if (lines[0]?.trim() === '---') { i = 1; while (i < lines.length && lines[i].trim() !== '---') i++; i++; }
+    for (; i < lines.length - 1; i++) {
+      const cur = lines[i].trimEnd();
+      const next = lines[i + 1].trimStart();
+      if (!/[A-Za-zÄÖÜäöüß0-9,.:;»“]$/.test(cur)) continue;
+      if (!/^(\{|<(a|span|strong|em|b|i|code|time|abbr)\b)/.test(next)) continue;
+      report(`${path.relative(root, file)}:${i + 2}`, 'Astro-Whitespace: Zeilenumbruch vor Ausdruck oder Inline-Element', `${cur.slice(-30)} ⏎ ${next.slice(0, 25)}`);
+    }
+  }
+}
+
+// ---- 6. Startseite ohne Markennamen von Arzneimitteln (Regel aus CLAUDE.md)
+{
+  const idx = path.join(root, 'dist/index.html');
+  if (fs.existsSync(idx)) {
+    const txt = fs.readFileSync(idx, 'utf8').replace(/<script[\s\S]*?<\/script>/g, '');
+    const m = txt.match(/wegovy|ozempic|mounjaro|saxenda|rybelsus|foundayo|zepbound|victoza|trulicity/i);
+    if (m) report('index.html', 'Markenname auf der Startseite', m[0]);
+  }
+}
+
 // ---- 1.–3. gebaute Seiten
 const dist = path.join(root, 'dist');
 if (!fs.existsSync(dist)) { console.error('dist/ fehlt – erst npm run build'); process.exit(2); }

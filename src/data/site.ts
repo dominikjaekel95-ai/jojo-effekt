@@ -44,7 +44,8 @@ export const site = {
 
   // Externe Dienste (aus .env; leer = Platzhalter/aus)
   tallyFormId: import.meta.env.PUBLIC_TALLY_FORM_ID || 'b5bO9o',
-  plausibleDomain: import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN ?? '',
+  // Plausible-Site-Skript-ID (Plausible → Site → Settings → Site installation, Teil hinter /js/ ohne .js). Leerstring = kein Tracking.
+  plausibleScriptId: import.meta.env.PUBLIC_PLAUSIBLE_SCRIPT_ID ?? 'pa-kXdw31zjWlqdlJXD8QACc',
 
   // Pflichtsatz, der auf jeder Seite mit Produktbezug prominent steht
   doctorSentence:

@@ -1,0 +1,77 @@
+# Nach der Spritze: Regeln für jede Claude-Session in diesem Repo
+
+Statische Website (Astro 7, Tailwind 4), live unter https://nachderspritze.de. Landingpage für den Vorbestell-Test des 12-Wochen-Sets und ein Wissensbereich, der bei Google für „Abnehmspritze absetzen / Jojo-Effekt / Muskelabbau“ rankt. Die Seite rankt bereits. Ein verlorenes Ranking kostet mehr als jede Verzögerung, deshalb gelten die Regeln unten ohne Ausnahme.
+
+## Deploy: jeder Push auf den Produktions-Branch geht live
+
+- Produktions-Branch: `claude/jojo-effekt-website-launch-5n0nls`. Vercel baut und veröffentlicht jeden Push darauf innerhalb von etwa zwei Minuten. Es gibt keinen `main`.
+- Jeder andere Branch bekommt von Vercel automatisch eine Preview-URL. Previews tragen den Header `X-Robots-Tag: noindex` und sind die Testumgebung. Claude Code (Web) legt pro Session einen eigenen Branch `claude/…` an; das ist dein Arbeits-Branch, nie der Produktions-Branch.
+- Dienstags 08:47 Uhr (Berlin) pusht eine automatische Redaktions-Routine von Dominik drei neue Artikel direkt auf den Produktions-Branch. Sie ändert `src/content/wissen/`, `docs/REDAKTION.md`, `CLAIMS.md` Abschnitt C und bei Bedarf `src/data/sources.ts` und `src/data/studien.ts`. Vor jeder Arbeit `git fetch origin`.
+
+## Arbeitsweise für jede Änderung
+
+1. Branch vom aktuellen Produktionsstand: `git fetch origin && git checkout -b <name>/<thema> origin/claude/jojo-effekt-website-launch-5n0nls` (Name `michi` oder `dominik`, Thema kurz, z. B. `michi/abnehmpille-absetzen`). In einer Claude-Code-Web-Session: den zugewiesenen Session-Branch benutzen und vorher den Produktions-Branch hineinmergen.
+2. Ändern, dann `npm run check:all`. Das baut die Seite, prüft Typen und Texte. Erst weiter bei 0 Fehlern und „Textprüfung: keine Treffer“.
+3. `git push -u origin <branch>`. Vercel postet die Preview-URL in den Pull Request; sonst steht sie im Vercel-Dashboard unter Deployments.
+4. Pull Request gegen `claude/jojo-effekt-website-launch-5n0nls` eröffnen. Die Vorlage wird automatisch eingefügt, Checkliste abhaken. CI (`.github/workflows/ci.yml`) führt `check:all` erneut aus.
+5. Preview auf dem Handy und am Desktop ansehen: die geänderten Seiten, die Startseite, ein beliebiger Artikel.
+6. Mergen mit „Merge“ (kein Rebase, kein Squash) nur, wenn CI grün ist und die Preview stimmt. PRs, die Dateien aus der Liste „Nur Dominik“ ändern, mergt Dominik.
+7. Niemals: direkt auf den Produktions-Branch pushen, `--force`, Rebase oder `commit --amend` auf gepushten Branches, pushen bei rotem `check:all`, Branches anderer Personen umschreiben.
+
+Kleine PRs, ein Thema pro PR, am selben Tag mergen. Zwei Agenten, die eine Woche lang auf getrennten Branches dieselben Dateien ändern, erzeugen Konflikte, die niemand mehr sauber auflösen kann.
+
+## Befehle
+
+```bash
+npm ci                 # Abhängigkeiten (Node 22 oder neuer)
+npm run dev            # http://localhost:4321
+npm run check:all      # build + astro check + Textprüfung; Pflicht vor jedem Push
+npm run preview        # dist/ lokal ansehen
+```
+
+## SEO-Invarianten (nie ohne Dominik ändern)
+
+- URLs: Dateiname in `src/content/wissen/` = URL. Nie umbenennen, nie löschen. Muss eine URL weg, kommt eine 301-Weiterleitung nach `vercel.json` (`redirects`), und Dominik entscheidet.
+- `trailingSlash: 'always'` in `astro.config.mjs` und `vercel.json`, Canonical-Logik in `src/layouts/Base.astro`, `site.url` in `src/data/site.ts`, `public/robots.txt`.
+- `noindex` gibt es nur für `/danke/`, `/impressum/`, `/datenschutz/`. Nie auf andere Seiten, nie global.
+- `title`, `metaTitle`, `description` und H1 rankender Seiten nicht „verbessern“, ohne den Grund im PR zu nennen. `pubDate` nie ändern; Aktualisierungen bekommen `updatedDate`.
+- `draft: true` nimmt einen Artikel aus Build und Sitemap. Nie für einen bereits veröffentlichten Artikel setzen.
+- JSON-LD bleibt valide (`Base.astro`, `wissen/[slug].astro`, `wissen/studien.astro`). Nach Änderungen daran den Build-Output in `dist/` prüfen.
+- Sitemap und `lastmod` entstehen in `astro.config.mjs` aus dem Frontmatter. Nichts manuell.
+
+## Inhaltsregeln (Kurzfassung; verbindlich sind `docs/REDAKTION.md` Abschnitt 3 und `CLAIMS.md`)
+
+- Für das Set nur die in `CLAIMS.md` freigegebenen, EU-zugelassenen Angaben. Nie: „verhindert den Jojo-Effekt“, „ersetzt die Spritze“, „von Ärzten empfohlen“, Stoffwechsel-Versprechen. `check:text` fängt einige davon ab, nicht alle.
+- Keine Dosierungen, Titrationen, Ausschleich- oder Wiedereinstiegsschemata für Medikamente. Keine Absetz-Anleitung, keine Bewertung von Medikamenten, keine Bezugsquellen, keine Rezept-, Nebenwirkungs- oder Kauf-Themen.
+- Medikamentennamen (Wegovy, Ozempic, Mounjaro, Saxenda) nie auf der Startseite und in Anzeigentexten. Im Wissensbereich erlaubt.
+- Jede Zahl hat eine Quelle in `src/data/sources.ts` (Originalstudie, keine Pressemeldung). Fußnoten als `<sup><a href="#fn-ID">n</a></sup>`, n = Position in `sources` im Frontmatter.
+- Kein „fachlich geprüft“, solange `reviewer` in `src/data/site.ts` `null` ist. Keine erfundenen Erfahrungsberichte, keine Testimonials.
+- Die Abschnitte „Was wir nicht sagen“ und die Arztsätze bleiben unangetastet.
+- Frontmatter-Limits: `metaTitle` bis 65, `description` bis 165 Zeichen. Der Build bricht sonst ab.
+- Ton: nüchtern, „du“, keine Superlative, keine Emojis.
+
+## Themen beanspruchen, Doppelungen vermeiden
+
+`docs/REDAKTION.md` Abschnitt 4 ist die einzige Themenliste. Die Dienstags-Routine nimmt die obersten drei Themen mit Status „offen“. Wer ein Thema schreibt, setzt es vorher auf `in Arbeit · <Name> · <Datum>` und mergt diese eine Zeile sofort als Mini-PR oder bittet Dominik darum. Neue Themen kommen unten in die Liste. Nie einen zweiten Artikel zur selben Suchanfrage schreiben: Zwei Seiten auf ein Keyword nehmen sich gegenseitig das Ranking.
+
+## Dateien mit Konfliktrisiko
+
+Diese Dateien ändern beide Agenten und die Routine. Nur anhängen, nie umsortieren, nie umformatieren, PRs damit schnell mergen:
+
+`src/data/sources.ts` · `src/data/studien.ts` · `CLAIMS.md` (Abschnitt C) · `docs/REDAKTION.md` (Themenliste) · `src/styles/global.css` · `src/pages/wissen/index.astro`
+
+## Nur Dominik (PR ja, selbst mergen nein)
+
+`src/pages/index.astro` (Startseite) · `src/data/site.ts` · `src/pages/ueber.astro`, `impressum.astro`, `datenschutz.astro` · `CLAIMS.md` Abschnitte A, B, E · `src/data/affiliate.ts`, `src/components/AffiliateLinks.astro` · `astro.config.mjs` · `vercel.json` · `.github/` · `src/content/wissen/abnehmspritze-absetzen-erfahrungen.md` (bleibt Entwurf, bis echte Berichte vorliegen)
+
+## Technische Eigenheiten
+
+- Astro-Whitespace: In `.astro`-Dateien nie eine Zeile mit Text enden lassen und die nächste mit `{ausdruck}` oder `<a` beginnen. Astro schluckt das Leerzeichen („Alternativ49 €“). Alles auf eine Zeile schreiben. `check:text` findet die meisten Fälle im Build-Output.
+- Tailwind 4: Theme-Tokens in `src/styles/global.css` (`@theme` plus CSS-Variablen je `html[data-theme]`). `@apply` mit eigenen Klassen funktioniert nicht, eigene Utilities als `@utility`. Aktives Design ist `d1` (`PUBLIC_THEME`), die übrigen Varianten bleiben wählbar.
+- Schriften selbst gehostet (`@fontsource-variable/*`). Keine externen Requests außer Tally und Plausible. Keine Cookies. Kommt ein Dienst mit Cookies dazu, braucht es ein Consent-Tool.
+- Artikel-Template: `src/pages/wissen/[slug].astro`. Vorlage für neue Artikel: `src/content/wissen/kreatin-abnehmspritze.md`.
+- Nach dem Merge eines neuen Artikels meldet der IndexNow-Workflow die URL an Bing. Google nur manuell in der Search Console (Dominik).
+
+## Bei Unsicherheit
+
+Lieber fragen als raten. Alles, was Startseite, Preise, Claims, Rechtstexte oder URLs betrifft, geht als PR mit Frage an Dominik, nicht als Merge.

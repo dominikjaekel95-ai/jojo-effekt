@@ -1,0 +1,26 @@
+name: Prüfung (Build, Typen, Text)
+
+# Führt npm run check:all aus: Build, astro check und die Textprüfung (Leerzeichen, Platzhalter,
+# verbotene Claims, Frontmatter-Längen). Ein roter Lauf heißt: nicht mergen.
+# Auf dem Produktions-Branch ist der Lauf nur ein Nachweis; Vercel deployt unabhängig davon.
+on:
+  pull_request:
+  push:
+    branches: [claude/jojo-effekt-website-launch-5n0nls]
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check:all

@@ -2,6 +2,8 @@
 
 Gilt für jede Person und jede automatische Routine, die Artikel in `src/content/wissen/` anlegt. Ziel: bis etwa **25 veröffentlichte Artikel** (ohne Entwürfe), drei pro Woche, dann Stopp und Pflege statt Wachstum.
 
+Nur die Dienstags-Routine pusht direkt auf den Produktions-Branch. Alle anderen (Personen und Agenten) arbeiten über Branch, Vercel-Preview und Pull Request, siehe [`CLAUDE.md`](../CLAUDE.md).
+
 ## 1. Ablauf einer Ausgabe (drei Artikel)
 
 1. `git pull` auf dem Produktions-Branch. Zählen: `ls src/content/wissen/*.md`, minus Dateien mit `draft: true`. Sind es **25 oder mehr**, keine neuen Artikel; stattdessen Abschnitt 6 (Pflege) und die Routine deaktivieren.
@@ -42,6 +44,8 @@ Vorlage: jeder bestehende Artikel, z. B. `src/content/wissen/kreatin-abnehmsprit
 - Ein Suchintent = eine URL. Vor dem Schreiben prüfen, ob ein bestehender Artikel das Thema schon abdeckt; dann dort erweitern statt neu anlegen.
 
 ## 4. Themenliste (Reihenfolge = Priorität)
+
+Status-Werte: `offen` (frei; die Routine nimmt die obersten drei davon), `in Arbeit · <Name> · <Datum>` (beansprucht, die Routine überspringt es), `live YYYY-MM-DD · <slug>`. Wer ein Thema manuell schreibt, setzt es vorher auf `in Arbeit` und mergt diese Zeile sofort.
 
 | # | Thema / Arbeitstitel | Hauptkeyword | Warum | Status |
 |---|---|---|---|---|

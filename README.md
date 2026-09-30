@@ -16,10 +16,17 @@ cp .env.example .env      # Tally-ID und Plausible-Domain eintragen (optional)
 npm run dev               # http://localhost:4321
 npm run build             # statischer Build nach dist/
 npm run check             # Typprüfung
+npm run check:all         # Build + Typprüfung + Textprüfung – Pflicht vor jedem Push
 npm run preview           # dist/ lokal ansehen
 ```
 
-Node ≥ 22. Keine weiteren Abhängigkeiten außer Astro, Tailwind, Sitemap und der selbst gehosteten Schrift (Inter, kein Google-Fonts-Request).
+Node ≥ 22. Keine weiteren Abhängigkeiten außer Astro, Tailwind, Sitemap und den selbst gehosteten Schriften (Hanken Grotesk, kein Google-Fonts-Request).
+
+## Zusammenarbeit (mehrere Personen oder Agenten)
+
+- Regeln für jede Claude-Session: [`CLAUDE.md`](CLAUDE.md) (wird von Claude Code automatisch geladen)
+- Einstieg für einen weiteren Agenten: [`docs/ONBOARDING.md`](docs/ONBOARDING.md)
+- Produktions-Branch ist `claude/jojo-effekt-website-launch-5n0nls`; jeder Push darauf geht live. Alles andere läuft über Branch → Vercel-Preview (noindex) → Pull Request → CI grün → Merge.
 
 ## Struktur
 
@@ -46,12 +53,12 @@ Neuen Artikel anlegen: Markdown-Datei in `src/content/wissen/` mit dem Frontmatt
 
 ## So geht es live (ca. 30 Minuten)
 
-1. **GitHub:** Dieses Repo liegt unter `dominikjaekel95-ai/jojo-effekt`. Branch mit der Seite in `main` mergen.
+1. **GitHub:** Dieses Repo liegt unter `dominikjaekel95-ai/jojo-effekt`. Produktions-Branch ist `claude/jojo-effekt-website-launch-5n0nls` (es gibt keinen `main`).
 2. **Vercel:** vercel.com → „Add New Project“ → GitHub-Repo importieren. Framework wird als Astro erkannt (Build `npm run build`, Output `dist`). Unter *Settings → Functions/Region*: **Frankfurt (fra1)** wählen. Unter *Settings → Environment Variables* setzen:
    - `SITE_URL` = `https://<deine-domain>` (ohne Slash am Ende)
    - `PUBLIC_TALLY_FORM_ID` = die ID aus Tally (Teil nach `tally.so/r/`)
    - `PUBLIC_PLAUSIBLE_DOMAIN` = `<deine-domain>` (ohne https)
-   Deploy auslösen. Jeder Push auf `main` deployt neu, jeder Pull Request bekommt eine Preview-URL.
+   Deploy auslösen. Jeder Push auf den Produktions-Branch deployt neu; jeder andere Branch bekommt eine Preview-URL mit `noindex`.
    Alternative Cloudflare Pages: gleiche Einstellungen, Build-Output `dist`.
 3. **Domain:** Bei INWX, Cloudflare Registrar oder Namecheap kaufen (siehe `docs/DOMAIN-UND-WETTBEWERB.md`). In Vercel *Settings → Domains* die Domain eintragen; Vercel zeigt den CNAME (`cname.vercel-dns.com`) bzw. A-Record. Beim Registrar eintragen; `www` als Weiterleitung auf die Hauptdomain. DNS braucht 10 Minuten bis einige Stunden. HTTPS macht Vercel automatisch.
 4. **Tally:** tally.so → Formular anlegen mit den Feldern E-Mail, Auswahl „Ich nehme aktuell / habe abgesetzt / überlege“, Auswahl „Welches Präparat?“ (Wegovy / Mounjaro / Ozempic / Saxenda / anderes / keins), Checkbox „Ich würde 129 € für 12 Wochen zahlen“, Freitext „Was bräuchtest du?“ (optional), Checkbox Datenschutz (Pflicht). *Settings → Redirect on completion* → `https://<domain>/danke/`. *Settings → Email notifications* an dich. Double-Opt-in: Tally kann Bestätigungs-Mails senden (Integration mit E-Mail-Tool) – alternativ die erste Info-Mail als Bestätigung formulieren. Formular-ID in Vercel eintragen, Redeploy.

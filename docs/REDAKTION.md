@@ -14,7 +14,7 @@ Nur die Dienstags-Routine pusht direkt auf den Produktions-Branch. Alle anderen 
 6. `CLAIMS.md`: pro Artikel eine Zeile in Abschnitt C oder D (welche Aussagen, welche Quelle, Status).
 7. Neue Studie im Register? Dann Zeile in `src/data/studien.ts` (Tabelle + `studienLog`) und `studienUpdated` hochsetzen.
 8. `npm run check:all` muss ohne Fehler und ohne Treffer durchlaufen (Build, Typen, Textprüfung).
-9. Themenliste aktualisieren: Status „offen“ → „live YYYY-MM-DD“ mit Slug.
+9. Themenliste aktualisieren: Status „offen“ → „live YYYY-MM-DD“ mit Slug. Die neuen URLs als Zeilen mit Status „offen“ in `docs/INDEXIERUNG.md` anhängen.
 10. Commit mit Titel „Wochenartikel: <drei Slugs>“, Push auf den Produktions-Branch. Vercel deployt automatisch.
 11. Kurzer Bericht: drei URLs, Quellen, was in bestehenden Artikeln geändert wurde, offene Fragen. Hinweis an Dominik: die drei URLs in der Search Console zur Indexierung anmelden.
 
@@ -55,20 +55,22 @@ Status-Werte: `offen` (frei; die Routine nimmt die obersten drei davon), `in Arb
 | 4 | Ballaststoffe bei der Abnehmspritze: 30 g schaffen, Verstopfung vermeiden · /wissen/ballaststoffe-abnehmspritze/ | ballaststoffe abnehmspritze | SERP-Check: STARK, direkter Bezug zum Stick; nur DGE-Zahlen und zugelassener Glucomannan-Claim, Verstopfung als Fachinfo-Zitat, nicht bewertet; mit Ernährungsartikel gegenseitig verlinken | offen |
 | 5 | Proteinshake bei der Abnehmspritze: welcher, wie viel, wann · /wissen/proteinshake-abnehmspritze/ | proteinshake abnehmspritze | SERP-Check: STARK, Kaufintention; Abgrenzung zum Protein-Artikel über Intention „Produktwahl“ statt „Bedarf“ | offen |
 | 6 | Abnehmspritze pausieren: Urlaub, Lieferengpass, Krankheit · /wissen/abnehmspritze-pausieren/ | abnehmspritze pausieren | SERP-Check: STARK; rein informativ, Fachinfo-Angaben zu versäumten Dosen wörtlich zitieren, keine eigene Dosierempfehlung, Pflichtsatz oben | offen |
-| 7 | Muskeln wieder aufbauen nach der Abnehmspritze | muskeln aufbauen nach abnehmspritze | Umkehrfrage zu Muskelabbau | offen |
-| 8 | Abnehmspritze ausschleichen: Was die Studien zeigen | abnehmspritze ausschleichen | SERP-Check: MITTEL, widersprüchlich; streng ohne Schema, nur Studienlage | offen |
-| 9 | Gewicht halten ohne Abnehmspritze | gewicht halten ohne abnehmspritze | Oviva besetzt „abnehmen ohne“, „halten ohne“ ist frei | offen |
-| 10 | Abnehmspritze absetzen: Checkliste für das Arztgespräch | abnehmspritze absetzen arzt fragen | Nutzwert, stärkt den Pflichtsatz | offen |
-| 11 | Wegovy oder Mounjaro: Unterschiede beim Absetzen | wegovy mounjaro absetzen unterschied | Vergleich rein faktisch (Halbwertszeit, Studien), keine Bewertung | offen |
-| 12 | Blutzucker nach dem Absetzen der Abnehmspritze bei Typ-2-Diabetes | abnehmspritze absetzen blutzucker | Diabetes-Gruppe, hohe Relevanz | offen |
-| 13 | Schlaf und Gewicht nach der Abnehmspritze | schlaf abnehmspritze gewicht | Spiegel 2004 u. a., kaum bedient | offen |
-| 14 | Sarkopenie: Abnehmspritze ab 60 und Muskelerhalt | abnehmspritze ab 60 muskeln | Ältere Zielgruppe, Kreatin-55+-Angabe | offen |
-| 15 | Abnehmspritze absetzen wegen Kosten: Optionen ehrlich sortiert | abnehmspritze zu teuer absetzen | Häufigster Absetzgrund; Preise nur als Größenordnung | offen |
-| 16 | Erfahrungen (Vorlage liegt als Entwurf) | abnehmspritze absetzen erfahrungen | Erst mit ≥ 5 echten Berichten | wartet auf Berichte |
+| 7 | Wie lange sollte man die Abnehmspritze nehmen? Was Studien und Fachinformation sagen · /wissen/abnehmspritze-wie-lange-nehmen/ | wie lange abnehmspritze nehmen | Dominik 30.09.: hohe Nachfrage. Nur Studienlage (STEP-1-Extension, SELECT, S-LiTE, SURMOUNT-4) und wörtliche Fachinfo-Kriterien zur Weiterbehandlung; keine eigene Dauer-Empfehlung, keine Dosierung, Pflichtsatz oben. Abgrenzung: #10 (Ausschleichen) ist das „Wie“, dieser Artikel das „Wie lange“ | offen |
+| 8 | Abnehmspritze und Alkohol: was sich unter und nach der Therapie ändert · /wissen/abnehmspritze-alkohol/ | abnehmspritze alkohol | Dominik 30.09.: hohe Nachfrage. Kein Nebenwirkungsartikel. Studien zu verringertem Alkoholkonsum unter Semaglutid (z. B. Hendershot 2025, JAMA Psychiatry) nur als Forschungsstand, kein Off-Label-Hinweis, keine Empfehlung zum Trinken unter Therapie; Fachinfo-Angaben (Unterzuckerung mit Insulin/Sulfonylharnstoffen) wörtlich. Schwerpunkt: Alkohol als Kalorienquelle und Verlangen nach dem Absetzen | offen |
+| 9 | Muskeln wieder aufbauen nach der Abnehmspritze | muskeln aufbauen nach abnehmspritze | Umkehrfrage zu Muskelabbau | offen |
+| 10 | Abnehmspritze ausschleichen: Was die Studien zeigen | abnehmspritze ausschleichen | SERP-Check: MITTEL, widersprüchlich; streng ohne Schema, nur Studienlage | offen |
+| 11 | Gewicht halten ohne Abnehmspritze | gewicht halten ohne abnehmspritze | Oviva besetzt „abnehmen ohne“, „halten ohne“ ist frei | offen |
+| 12 | Abnehmspritze absetzen: Checkliste für das Arztgespräch | abnehmspritze absetzen arzt fragen | Nutzwert, stärkt den Pflichtsatz | offen |
+| 13 | Wegovy oder Mounjaro: Unterschiede beim Absetzen | wegovy mounjaro absetzen unterschied | Vergleich rein faktisch (Halbwertszeit, Studien), keine Bewertung | offen |
+| 14 | Blutzucker nach dem Absetzen der Abnehmspritze bei Typ-2-Diabetes | abnehmspritze absetzen blutzucker | Diabetes-Gruppe, hohe Relevanz | offen |
+| 15 | Schlaf und Gewicht nach der Abnehmspritze | schlaf abnehmspritze gewicht | Spiegel 2004 u. a., kaum bedient | offen |
+| 16 | Sarkopenie: Abnehmspritze ab 60 und Muskelerhalt | abnehmspritze ab 60 muskeln | Ältere Zielgruppe, Kreatin-55+-Angabe | offen |
+| 17 | Abnehmspritze absetzen wegen Kosten: Optionen ehrlich sortiert | abnehmspritze zu teuer absetzen | Häufigster Absetzgrund; Preise nur als Größenordnung | offen |
+| 18 | Erfahrungen (Vorlage liegt als Entwurf) | abnehmspritze absetzen erfahrungen | Erst mit ≥ 5 echten Berichten | wartet auf Berichte |
 
 **Nicht anfassen** (SERP-Check 30.09.): Erhaltungsdosis (Dosierung, HWG), Schwangerschaft (medizinisch heikel), Plateau (Thema „während“, ZAVA hat es), Head-Terms (nur über Autorität). Details und die Bewertung aller 33 Anfragen: `docs/SERP-LUECKEN-2026-09-30.md`.
 
-Nach Nummer 15 sind es 26 Artikel. Danach: Pflege.
+Nach Nummer 17 sind es 28 Artikel. Die Routine stoppt bei 25 veröffentlichten Artikeln; was dann noch „offen“ ist, schreiben Dominik oder Michi manuell über einen Pull Request. Neue Themen von Dominik werden nach Nachfrage einsortiert, nicht automatisch ans Ende gehängt.
 
 ## 4a. Schnelle Gewinne in bestehenden Artikeln (Stand 01.10.2026)
 
@@ -76,7 +78,7 @@ Erledigt: Kreatin-Artikel mit Abschnitten Wegovy/Mounjaro/Ozempic und drei FAQ; 
 
 ## 5. Nach dem Push (Dominik, 5 Minuten)
 
-- Search Console → URL-Prüfung → „Indexierung beantragen“ für jede neue URL.
+- Search Console → URL-Prüfung → „Indexierung beantragen“ für jede URL mit Status „offen“ in `docs/INDEXIERUNG.md`; danach dort „angemeldet YYYY-MM-DD“ eintragen.
 - Ein Community-Post pro Woche mit einem der neuen Artikel, sachlich (siehe `ADS.md` Abschnitt 5).
 
 ## 6. Pflege statt Wachstum (ab 25 Artikeln)

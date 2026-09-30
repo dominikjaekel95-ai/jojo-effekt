@@ -5,7 +5,7 @@ Statische Website (Astro 7, Tailwind 4), live unter https://nachderspritze.de. L
 ## Deploy: jeder Push auf den Produktions-Branch geht live
 
 - Produktions-Branch: `claude/jojo-effekt-website-launch-5n0nls`. Vercel baut und veröffentlicht jeden Push darauf innerhalb von etwa zwei Minuten. Es gibt keinen `main`.
-- Jeder andere Branch bekommt von Vercel automatisch eine Preview-URL. Previews tragen den Header `X-Robots-Tag: noindex` und sind die Testumgebung. Claude Code (Web) legt pro Session einen eigenen Branch `claude/…` an; das ist dein Arbeits-Branch, nie der Produktions-Branch.
+- Jeder andere Branch bekommt von Vercel automatisch eine Preview-URL. Previews tragen den Header `X-Robots-Tag: noindex` und sind die Testumgebung. Claude Code (Web) legt pro Session einen eigenen Branch `claude/…` an; das ist dein Arbeits-Branch, nie der Produktions-Branch. Zwei Ausnahmen pushen direkt auf den Produktions-Branch: die Dienstags-Routine und Dominiks laufende Launch-Session (ihr Session-Branch ist der Produktions-Branch), beide nur für Artikel und Doku und nur nach grünem `check:all`.
 - Dienstags 08:47 Uhr (Berlin) pusht eine automatische Redaktions-Routine von Dominik drei neue Artikel direkt auf den Produktions-Branch. Sie ändert `src/content/wissen/`, `docs/REDAKTION.md`, `CLAIMS.md` Abschnitt C und bei Bedarf `src/data/sources.ts` und `src/data/studien.ts`. Vor jeder Arbeit `git fetch origin`.
 
 ## Arbeitsweise für jede Änderung
@@ -70,7 +70,7 @@ Diese Dateien ändern beide Agenten und die Routine. Nur anhängen, nie umsortie
 - Tailwind 4: Theme-Tokens in `src/styles/global.css` (`@theme` plus CSS-Variablen je `html[data-theme]`). `@apply` mit eigenen Klassen funktioniert nicht, eigene Utilities als `@utility`. Aktives Design ist `d1` (`PUBLIC_THEME`), die übrigen Varianten bleiben wählbar.
 - Schriften selbst gehostet (`@fontsource-variable/*`). Keine externen Requests außer Tally und Plausible. Keine Cookies. Kommt ein Dienst mit Cookies dazu, braucht es ein Consent-Tool.
 - Artikel-Template: `src/pages/wissen/[slug].astro`. Vorlage für neue Artikel: `src/content/wissen/kreatin-abnehmspritze.md`.
-- Nach dem Merge eines neuen Artikels meldet der IndexNow-Workflow die URL an Bing. Google nur manuell in der Search Console (Dominik).
+- Nach dem Merge eines neuen Artikels meldet der IndexNow-Workflow die URL an Bing. Google nur manuell in der Search Console (Dominik). Neue oder wesentlich geänderte URLs kommen als Zeile mit Status `offen` in `docs/INDEXIERUNG.md`.
 
 ## Bei Unsicherheit
 

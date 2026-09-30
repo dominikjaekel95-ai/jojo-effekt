@@ -57,6 +57,9 @@ function buildLastmod() {
   return map;
 }
 const lastmod = buildLastmod();
+// /erfahrungen/ kommt in die Sitemap, sobald das Erfahrungsformular live ist (site.experienceForm.live in src/data/site.ts)
+const experienceLive = /experienceForm:\s*\{[^}]*live:\s*true/.test(fs.readFileSync(path.resolve('src/data/site.ts'), 'utf8'));
+if (experienceLive) lastmod.set('/erfahrungen/', lastmod.get('/') ?? '2026-09-30');
 
 export default defineConfig({
   site,
@@ -64,8 +67,7 @@ export default defineConfig({
   build: { format: 'directory' },
   integrations: [
     sitemap({
-      // /erfahrungen/ bleibt draußen, bis das Formular live ist und Berichte veröffentlicht sind (site.experienceForm.live)
-      filter: (page) => !/\/(danke|impressum|datenschutz|erfahrungen)\/$/.test(page) && !/\.(xml|txt|csv)$/.test(page),
+      filter: (page) => !/\/(danke|impressum|datenschutz)\/$/.test(page) && (experienceLive || !/\/erfahrungen\/$/.test(page)) && !/\.(xml|txt|csv)$/.test(page),
       changefreq: 'weekly',
       priority: 0.7,
       serialize(item) {

@@ -28,5 +28,6 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/glossar/haltephase/ | eigener Begriff, Priorität | 2026-09-30 | offen |
 | https://nachderspritze.de/glossar/absetzkurve/ | eigener Begriff, Priorität | 2026-09-30 | offen |
 | https://nachderspritze.de/marktradar/ | neue Sektion: Marktradar (nach Merge des Preview-Branches) | 2026-09-30 | offen |
+| https://nachderspritze.de/erfahrungen/ | Erfahrungsformular live, Seite jetzt indexierbar | 2026-09-30 | offen |
 
 Die übrigen 18 Glossar-Einträge stehen in der Sitemap und brauchen keine einzelne Anmeldung; wer Tageskontingent übrig hat, nimmt zuerst `set-point-theorie`, `adaptive-thermogenese`, `sarkopene-adipositas`, `auswaschphase` und `halbwertszeit`.

@@ -34,7 +34,7 @@ npm run preview        # dist/ lokal ansehen
 
 - URLs: Dateiname in `src/content/wissen/` = URL. Nie umbenennen, nie löschen. Muss eine URL weg, kommt eine 301-Weiterleitung nach `vercel.json` (`redirects`), und Dominik entscheidet.
 - `trailingSlash: 'always'` in `astro.config.mjs` und `vercel.json`, Canonical-Logik in `src/layouts/Base.astro`, `site.url` in `src/data/site.ts`, `public/robots.txt`.
-- `noindex` gibt es nur für `/danke/`, `/impressum/`, `/datenschutz/` und `/erfahrungen/` (bis `site.experienceForm.live` true ist und Berichte veröffentlicht sind; dann auch den Sitemap-Filter in `astro.config.mjs` anpassen). Nie auf andere Seiten, nie global.
+- `noindex` gibt es nur für `/danke/`, `/impressum/`, `/datenschutz/` und, solange `site.experienceForm.live` false ist, `/erfahrungen/` (Sitemap folgt dem Schalter automatisch). Nie auf andere Seiten, nie global.
 - `title`, `metaTitle`, `description` und H1 rankender Seiten nicht „verbessern“, ohne den Grund im PR zu nennen. `pubDate` nie ändern; Aktualisierungen bekommen `updatedDate`.
 - `draft: true` nimmt einen Artikel aus Build und Sitemap. Nie für einen bereits veröffentlichten Artikel setzen.
 - JSON-LD bleibt valide (`Base.astro`, `wissen/[slug].astro`, `wissen/studien.astro`). Nach Änderungen daran den Build-Output in `dist/` prüfen.

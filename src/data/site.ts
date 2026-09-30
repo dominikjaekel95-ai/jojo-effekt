@@ -50,6 +50,16 @@ export const site = {
   // Erfahrungsformular „Deine Erfahrung nach der Abnehmspritze“ (Tally). `live` erst auf true setzen, wenn das
   // Formular in Tally veröffentlicht ist; vorher zeigt /erfahrungen/ nur die Regeln und die E-Mail-Adresse.
   experienceForm: { id: 'ODOJWR', live: true },
+  // Checkliste „Die ersten 8 Wochen nach der letzten Dosis“: Tally-Formular WOxpjv (Spezifikation in docs/NEWSLETTER.md).
+  // `live` erst auf true setzen, wenn das Formular in Tally veröffentlicht ist; vorher bietet /checkliste/ den Weg per E-Mail.
+  checklistForm: { id: 'WOxpjv', live: false },
+  // Newsletter: Das optionale Kästchen „Newsletter“ steht seit 30.09.2026 in den Tally-Formularen (Vorbestellung, Erfahrungen,
+  // Checkliste) und sammelt Einwilligungen. `provider` erst eintragen, wenn der Versanddienst mit Double-Opt-in eingerichtet ist;
+  // vorher wird nichts verschickt, und Datenschutz sowie Danke-Seiten sagen das (docs/NEWSLETTER.md).
+  newsletter: {
+    provider: null as null | { name: string; address: string; url: string },
+    cadence: 'etwa alle zwei Wochen',
+  },
   // Plausible-Site-Skript-ID (Plausible → Site → Settings → Site installation, Teil hinter /js/ ohne .js). Leerstring = kein Tracking.
   plausibleScriptId: import.meta.env.PUBLIC_PLAUSIBLE_SCRIPT_ID ?? 'pa-kXdw31zjWlqdlJXD8QACc',
 

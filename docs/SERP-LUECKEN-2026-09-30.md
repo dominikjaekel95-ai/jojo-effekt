@@ -68,3 +68,21 @@ Nicht anfassen: Schwangerschaft (#19, medizinisch heikel), Erhaltungsdosis (#20,
 - Ein Artikel pro Suchintention, keine Kannibalisierung (A2 vs. Protein-Artikel: „welches Produkt" vs. „wie viel").
 - Jeder Artikel: FAQ mit Schema, Quellen-IDs aus sources.ts, Autorbox, Pflichtsatz zur Ärztin oben, CLAIMS.md ergänzen, in beide Richtungen intern verlinken, nach dem Push Indexierung in Search Console und Bing beantragen.
 - Nächster Check: in 14 Tagen dieselben 33 Anfragen (Search Console „Leistung" liefert bis dahin echte Positionen).
+
+## 5. Nachcheck 30.09.2026, 13:30 (gleiche Methode, 21 Anfragen)
+
+Search Console „Leistung“ liefert noch keine Daten („werden verarbeitet“, ab 01.10. prüfen). Indexiert laut `site:` (9 URLs): /, /ueber/, muskelabbau, abnehmspritze-absetzen, kreatin, protein, krafttraining-nach-abnehmspritze (heute 09:00 beantragt, mittags indexiert), gewicht-halten, jojo-effekt. Noch nicht: wegovy-absetzen, mounjaro-absetzen, /wissen/, /wissen/studien/, heisshunger, saxenda, ernaehrung, supplements.
+
+| Anfrage | 02:00 | 13:30 | Seite |
+|---|---|---|---|
+| kreatin abnehmspritze | 4 (Muskelabbau) | **1** | Kreatin-Artikel hat übernommen |
+| kreatin nach abnehmspritze | 2 | **1** + 7 | Kreatin; Gewicht-halten als zweiter Treffer |
+| kreatin wegovy | – | **8** | Kreatin-Artikel, neu |
+| krafttraining nach abnehmspritze | – | **8** | Muskelabbau-Artikel; Krafttraining-Artikel ist indexiert, noch ohne Ranking |
+| muskelabbau abnehmspritze vermeiden | 9 | 9 | Muskelabbau |
+| kreatin mounjaro, kreatin ozempic | – | – | Abschnitte im Kreatin-Artikel fehlen noch (Abschnitt 3, Punkt 1) |
+| krafttraining abnehmspritze, abnehmspritze absetzen sport | – | – | Krafttraining-Artikel frisch indexiert, in Tagen prüfen |
+| heißhunger nach abnehmspritze, absetzen hunger, saxenda absetzen, ernährung nach abnehmspritze, supplements abnehmspritze | – | – | Artikel noch nicht indexiert (Anmeldung 30.09. 23:20 und Routine) |
+| abnehmspritze absetzen, wegovy absetzen, mounjaro absetzen, jojo effekt abnehmspritze, protein abnehmspritze, gewicht halten nach abnehmspritze, muskelabbau abnehmspritze | – | – | Head-Terms, wie erwartet nicht auf Seite 1 |
+
+Muster: Artikel mit exakter Suchintention übernehmen innerhalb von 12 Stunden nach Indexierung das Ranking vom thematisch nahen Artikel (Kreatin: 4 → 1). Google zeigt weiterhin die www-URLs; die Weiterleitung auf den Apex-Host konsolidiert das mit der Zeit, nichts ändern.

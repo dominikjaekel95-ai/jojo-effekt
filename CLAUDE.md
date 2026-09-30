@@ -33,7 +33,7 @@ npm run preview        # dist/ lokal ansehen
 
 - URLs: Dateiname in `src/content/wissen/` = URL. Nie umbenennen, nie löschen. Muss eine URL weg, kommt eine 301-Weiterleitung nach `vercel.json` (`redirects`), und Dominik entscheidet.
 - `trailingSlash: 'always'` in `astro.config.mjs` und `vercel.json`, Canonical-Logik in `src/layouts/Base.astro`, `site.url` in `src/data/site.ts`, `public/robots.txt`.
-- `noindex` gibt es nur für `/danke/`, `/impressum/`, `/datenschutz/`. Nie auf andere Seiten, nie global.
+- `noindex` gibt es nur für `/danke/`, `/impressum/`, `/datenschutz/` und `/erfahrungen/` (bis `site.experienceForm.live` true ist und Berichte veröffentlicht sind; dann auch den Sitemap-Filter in `astro.config.mjs` anpassen). Nie auf andere Seiten, nie global.
 - `title`, `metaTitle`, `description` und H1 rankender Seiten nicht „verbessern“, ohne den Grund im PR zu nennen. `pubDate` nie ändern; Aktualisierungen bekommen `updatedDate`.
 - `draft: true` nimmt einen Artikel aus Build und Sitemap. Nie für einen bereits veröffentlichten Artikel setzen.
 - JSON-LD bleibt valide (`Base.astro`, `wissen/[slug].astro`, `wissen/studien.astro`). Nach Änderungen daran den Build-Output in `dist/` prüfen.
@@ -53,6 +53,7 @@ npm run preview        # dist/ lokal ansehen
 ## Glossar und Marktradar
 
 - **Glossar** (`src/content/glossar/`, URL `/glossar/<slug>/`): ein Begriff pro Datei, Vorlage `set-point-theorie.md`. Limits: `metaTitle` bis 65, `description` bis 165, `short` bis 260 Zeichen. Die Box „Begriffe in diesem Artikel“ erkennt `term` und `synonyms` automatisch im Artikeltext und verlinkt sie; Glossar-Seiten listen umgekehrt alle Artikel, in denen der Begriff vorkommt. Deshalb: Jeder neue Artikel verwendet mindestens zwei Glossar-Begriffe wörtlich (Haltephase, Absetzkurve, fettfreie Masse, Halbwertszeit, Auswaschphase usw.). Eigene Begriffe (`own: true`) sind nur Haltephase und Absetzkurve; keine weiteren ohne Dominik.
+- **Erfahrungen** (`/erfahrungen/`): Tally-Formular `ODOJWR`, eingebettet nur bei `site.experienceForm.live: true` (Dominik schaltet nach dem Veröffentlichen in Tally). Veröffentlichte Berichte folgen den Regeln in `docs/REDAKTION.md` Abschnitt 3 und stehen nie neben dem Produkt-Teaser. Link aus der AuthorBox der Artikel, nicht von der Startseite.
 - **Marktradar** (`/marktradar/`): Daten in `src/data/markt/*.json`. `radar.json` enthält die Einträge; `teaser` ist die Startseiten-Fassung und darf keine Markennamen von Arzneimitteln enthalten (`check:text` prüft das), `title` und `summary` dürfen. `lieferbarkeit.json` schreibt nur die Aktion `.github/workflows/marktradar.yml` (montags und per Hand über „Run workflow“). `preise.json`, `kassen.json`, `zulassungen.json` pflegt Dominik mit `stand`-Datum. Automatisch gesammelte Studien und Behördenmeldungen liegen in `docs/RADAR-KANDIDATEN.json` (Status `neu`, `geprueft`, `verworfen`); daraus wird nur nach Prüfung der Originalquelle ein Eintrag. Feed: `/marktradar/feed.xml`. `/llms.txt` entsteht beim Build aus den Sammlungen.
 
 ## Themen beanspruchen, Doppelungen vermeiden

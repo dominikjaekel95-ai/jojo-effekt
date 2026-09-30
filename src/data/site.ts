@@ -47,6 +47,9 @@ export const site = {
 
   // Externe Dienste (aus .env; leer = Platzhalter/aus)
   tallyFormId: import.meta.env.PUBLIC_TALLY_FORM_ID || 'b5bO9o',
+  // Erfahrungsformular „Deine Erfahrung nach der Abnehmspritze“ (Tally). `live` erst auf true setzen, wenn das
+  // Formular in Tally veröffentlicht ist; vorher zeigt /erfahrungen/ nur die Regeln und die E-Mail-Adresse.
+  experienceForm: { id: 'ODOJWR', live: false },
   // Plausible-Site-Skript-ID (Plausible → Site → Settings → Site installation, Teil hinter /js/ ohne .js). Leerstring = kein Tracking.
   plausibleScriptId: import.meta.env.PUBLIC_PLAUSIBLE_SCRIPT_ID ?? 'pa-kXdw31zjWlqdlJXD8QACc',
 

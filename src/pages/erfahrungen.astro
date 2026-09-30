@@ -1,0 +1,84 @@
+---
+/**
+ * Erfahrungsberichte einreichen. Das Tally-Formular wird nur eingebettet, wenn site.experienceForm.live true ist;
+ * solange es in Tally ein Entwurf ist, nimmt es keine Einträge an. Die Seite ist bis dahin noindex und nicht in der
+ * Sitemap (astro.config.mjs). Verlinkt aus Artikeln (AuthorBox), nicht von der Startseite.
+ */
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+
+const form = site.experienceForm;
+const embedSrc = `https://tally.so/embed/${form.id}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`;
+const title = 'Deine Erfahrung nach der Abnehmspritze';
+const description =
+  'Was ist bei dir nach dem Absetzen passiert? Berichte anonym: Gewicht, Hunger, Muskeln, Alltag. Wir veröffentlichen gekürzt und ohne Namen, nach deiner Einwilligung.';
+const jsonLd = [
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Start', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Erfahrungen', item: `${site.url}/erfahrungen/` },
+    ],
+  },
+];
+---
+<Base title={title} description={description} path="/erfahrungen/" jsonLd={jsonLd} noindex={!form.live}>
+  <section class="container-narrow py-14">
+    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › Erfahrungen</nav>
+    <p class="eyebrow mt-6">Erfahrungen</p>
+    <h1 class="h1 mt-3">Deine Erfahrung nach der Abnehmspritze</h1>
+    <p class="mt-4 text-lg text-ink-2">
+      Die Studien sagen, was im Mittel passiert. Was einzelne Menschen erleben, steht nirgends. Wenn du abgesetzt hast
+      oder gerade absetzt, hilft dein Bericht anderen, die vor derselben Zeit stehen.
+    </p>
+    <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+
+    <div class="prose-site mt-8">
+      <h2>Was wir mit deinem Bericht machen</h2>
+      <ul>
+        <li><strong>Gekürzt, nie verändert.</strong> Wir kürzen, wo nötig, und ändern den Inhalt nicht.</li>
+        <li><strong>Ohne Namen.</strong> Veröffentlicht wird nur mit Vorname oder Pseudonym und Altersgruppe. Deine E-Mail-Adresse nutzen wir nur für Rückfragen und löschen sie danach.</li>
+        <li><strong>Ohne Anleitung.</strong> Angaben, die als Dosierungs- oder Absetz-Anleitung lesbar wären, nehmen wir heraus. Namen von Ärztinnen, Ärzten oder Kliniken ebenfalls.</li>
+        <li><strong>Getrennt vom Set.</strong> Berichte stehen nie neben dem Produkt. Sie sind Erfahrungen, keine Belege für eine Wirkung.</li>
+        <li><strong>Widerruf jederzeit.</strong> Eine E-Mail an <a href={`mailto:${site.owner.email}`}>{site.owner.email}</a> genügt; wir nehmen den Bericht dann von der Seite.</li>
+      </ul>
+      <p>
+        Weil Angaben zu Gewicht, Medikament und Gesundheit besonders geschützt sind, fragt das Formular ausdrücklich nach
+        deiner Einwilligung. Die Einzelheiten stehen in der <a href="/datenschutz/">Datenschutzerklärung</a>.
+      </p>
+    </div>
+
+    <div id="formular" class="card mt-10 scroll-mt-24 border-moss/30 bg-white">
+      <p class="eyebrow">Bericht einreichen</p>
+      {form.live ? (
+        <div class="mt-4">
+          <iframe data-tally-src={embedSrc} loading="lazy" width="100%" height="900" style="border:0;margin:0" title="Erfahrungsbericht einreichen"></iframe>
+          <script is:inline>
+            (function () {
+              var d = document, w = "https://tally.so/widgets/embed.js";
+              var v = function () {
+                if (typeof Tally !== "undefined") { Tally.loadEmbeds(); return; }
+                d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function (e) { e.src = e.dataset.tallySrc; });
+              };
+              if (typeof Tally !== "undefined") { v(); return; }
+              if (d.querySelector('script[src="' + w + '"]') === null) {
+                var s = d.createElement("script"); s.src = w; s.onload = v; s.onerror = v; d.body.appendChild(s);
+              }
+            })();
+          </script>
+          <p class="mt-3 text-xs text-ink-3">
+            Das Formular wird von Tally (Belgien, EU) bereitgestellt. Falls es nicht lädt: <a href={`https://tally.so/r/${form.id}`} class="underline" rel="noopener" target="_blank">Formular in neuem Tab öffnen</a>.
+          </p>
+        </div>
+      ) : (
+        <div class="mt-4">
+          <p class="text-ink-2">Das Formular geht in Kürze online. Bis dahin nimmt es keine Einträge an. Wenn du jetzt schon berichten willst: eine E-Mail an <a href={`mailto:${site.owner.email}`} class="font-semibold text-moss underline underline-offset-4">{site.owner.email}</a> mit dem Betreff „Erfahrung“ genügt. Es gelten dieselben Regeln wie oben.</p>
+        </div>
+      )}
+    </div>
+
+    <p class="mt-8 text-sm text-ink-3">
+      Was die Studien zur Zeit nach dem Absetzen zeigen, steht unter <a href="/wissen/abnehmspritze-absetzen/" class="underline underline-offset-4">Abnehmspritze absetzen</a> und im <a href="/wissen/studien/" class="underline underline-offset-4">Studien-Tracker</a>.
+    </p>
+  </section>
+</Base>

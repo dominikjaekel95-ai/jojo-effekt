@@ -15,7 +15,7 @@ export function faqJsonLd(items: FaqItem[]) {
 export const landingFaq: FaqItem[] = [
   {
     q: 'Schmeckt das?',
-    a: '<p>Geplant sind zwei Sorten Protein-Stick (Vanille und neutral); der Ballaststoff-Stick ist geschmacksneutral und löst sich in Wasser, Joghurt oder Suppe. Kreatin-Monohydrat ist geschmacklos. Bei der Vorbestellung fragen wir dich, ob du Molke oder eine pflanzliche Variante möchtest. Die erste Charge geht als Probierpaket an die ersten Vorbestellerinnen und Vorbesteller, bevor wir größer produzieren.</p>',
+    a: '<p>Geplant sind zwei Sorten Protein-Stick (Vanille und neutral); der Ballaststoff-Stick ist geschmacksneutral und löst sich in Wasser, Joghurt oder Suppe. Kreatin-Monohydrat ist geschmacklos. Bei der Bestellung fragen wir dich, ob du Molke oder eine pflanzliche Variante möchtest. Die erste Charge geht als Probierpaket an die ersten Vorbestellerinnen und Vorbesteller, bevor wir größer produzieren.</p>',
   },
   {
     q: 'Wann kommt das Set?',
@@ -23,7 +23,7 @@ export const landingFaq: FaqItem[] = [
   },
   {
     q: 'Was passiert mit meiner E-Mail-Adresse?',
-    a: '<p>Sie landet in einer Warteliste bei Tally (Belgien, EU). Wir nutzen sie ausschließlich, um dich über das Set zu informieren: Produktionsstart, Preis, Bestellmöglichkeit. Kein Newsletter, kein Weitergeben. Löschung jederzeit per E-Mail an uns. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>',
+    a: '<p>Sie landet in einer Warteliste bei Tally (Belgien, EU). Wir nutzen sie, um dich über das Set zu informieren: Produktionsstart, Preis, Bestellmöglichkeit. Den Newsletter bekommst du nur, wenn du ihn im Formular ankreuzt. Kein Weitergeben. Löschung jederzeit per E-Mail an uns. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>',
   },
   {
     q: 'Ist das ein Medikament?',

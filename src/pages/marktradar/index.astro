@@ -134,7 +134,7 @@ const typeClass: Record<string, string> = {
         {lieferbarkeit.wirkstoffe.map((w) => (
           <div class="card">
             <p class="text-lg font-bold text-ink">{w.wirkstoff}</p>
-            <p class="mt-1 text-sm text-ink-2">{w.treffer === null ? 'Noch nicht geprüft.' : w.treffer === 0 ? 'Keine aktuelle Meldung in der Datenbank gefunden.' : `${w.treffer} Fundstelle${w.treffer === 1 ? '' : 'n'} in aktuellen Meldungen.`}</p>
+            <p class="mt-1 text-sm text-ink-2">{w.treffer === null ? 'Noch nicht automatisch geprüft.' : w.treffer === 0 ? 'Keine Meldung auf der Übersichtsseite der Datenbank gefunden.' : `${w.treffer} Fundstelle${w.treffer === 1 ? '' : 'n'} auf der Übersichtsseite der Datenbank.`}</p>
             {w.zeilen.length > 0 && (<ul class="mt-3 space-y-1 text-xs text-ink-3">{w.zeilen.slice(0, 3).map((z) => (<li>{z}</li>))}</ul>)}
           </div>
         ))}

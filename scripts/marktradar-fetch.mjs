@@ -62,9 +62,20 @@ kand.items = Array.isArray(kand.items) ? kand.items : [];
 kand.emaState = kand.emaState && typeof kand.emaState === 'object' ? kand.emaState : {};
 const known = new Map(kand.items.map((i) => [i.id, i]));
 let added = 0;
+
+/** Vorsortierung, damit die Redaktions-Routine zuerst die passenden Kandidaten öffnet. Ersetzt keine Prüfung. */
+const HOCH = /discontinu|withdraw|cessation|off[- ]treatment|regain|maintenance|lean mass|muscle|body composition|sarcopeni|approv|authori[sz]|EMA|European Commission/i;
+const NIEDRIG = /case report|letter|editorial|comment|erratum|protocol|rat[s ]|mice|mouse|zebrafish|in vitro/i;
+function relevanz(c) {
+  const hay = `${c.title} ${c.pubtypes || ''}`;
+  if (NIEDRIG.test(hay)) return 'niedrig';
+  if (/NOT_YET_RECRUITING|RECRUITING|ENROLLING/.test(c.title)) return 'niedrig';
+  return HOCH.test(hay) ? 'hoch' : 'mittel';
+}
+
 function addCandidate(c) {
   if (known.has(c.id)) return false;
-  known.set(c.id, { ...c, status: 'neu', found: today });
+  known.set(c.id, { ...c, relevanz: relevanz(c), status: 'neu', found: today });
   added++;
   return true;
 }
@@ -215,8 +226,16 @@ for (const [name, fn] of [['PubMed', pubmed], ['ClinicalTrials.gov', ctgov], ['E
   }
 }
 kand.generated = today;
+const rang = { hoch: 0, mittel: 1, niedrig: 2 };
+for (const i of known.values()) if (!i.relevanz) i.relevanz = relevanz(i);
 kand.items = [...known.values()]
-  .sort((a, b) => String(b.found || '').localeCompare(String(a.found || '')) || String(b.date || '').localeCompare(String(a.date || '')))
+  .sort(
+    (a, b) =>
+      String(b.found || '').localeCompare(String(a.found || '')) ||
+      (rang[a.relevanz] ?? 1) - (rang[b.relevanz] ?? 1) ||
+      String(b.date || '').localeCompare(String(a.date || '')),
+  )
   .slice(0, 200);
 fs.writeFileSync(KAND, JSON.stringify(kand, null, 2) + '\n');
-say(`Kandidaten: ${added} neu, ${kand.items.length} insgesamt (${kand.items.filter((i) => i.status === 'neu').length} ungeprüft)`);
+const neu = kand.items.filter((i) => i.status === 'neu');
+say(`Kandidaten: ${added} neu, ${kand.items.length} insgesamt; ungeprüft: ${neu.length} (hoch ${neu.filter((i) => i.relevanz === 'hoch').length}, mittel ${neu.filter((i) => i.relevanz === 'mittel').length}, niedrig ${neu.filter((i) => i.relevanz === 'niedrig').length})`);

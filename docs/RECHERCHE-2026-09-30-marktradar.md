@@ -53,7 +53,7 @@ Gebaut am 30.09.2026 in Dominiks Tally-Konto, Workspace „My workspace“.
 
 - **Form-ID:** `ODOJWR` (Editor: `https://tally.so/forms/ODOJWR/edit`, nach Veröffentlichung: `https://tally.so/r/ODOJWR`, Einbettung `https://tally.so/embed/ODOJWR?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`, gleiche Mechanik wie das Vorbestell-Formular `b5bO9o` in `src/data/site.ts`).
 - **Status: Entwurf.** Veröffentlichen ist ein Klick auf „Publish“ im Editor; Dominik entscheidet. Ohne Veröffentlichung nimmt das Formular keine Einträge an.
-- Titel: „Deine Erfahrung nach der Abnehmspritze“. Sprache: Deutsch (Systemtexte, Fehlermeldungen). E-Mail-Benachrichtigung an dominik.jaekel95@gmail.com bei jedem Eintrag: an. Eigene Dankeseite mit Hinweis auf Kürzung, Anonymisierung und Widerruf.
+- Titel: „Deine Erfahrung nach der Abnehmspritze“. Sprache: Deutsch (Systemtexte, Fehlermeldungen). E-Mail-Benachrichtigung an die Tally-Kontoadresse bei jedem Eintrag: an. Eigene Dankeseite mit Hinweis auf Kürzung, Anonymisierung und Widerruf.
 - Felder in Reihenfolge: Präparat (Wegovy Spritze / Wegovy-Tablette / Ozempic / Mounjaro / Saxenda / anderes, Pflicht) · Einnahmedauer (4 Stufen, Pflicht) · Zeit seit der letzten Dosis (6 Stufen inkl. „schleiche gerade aus“, Pflicht) · Gewicht seit dem Absetzen (5 Stufen, Pflicht) · Bericht (Freitext, Pflicht) · Rat an andere (Freitext) · Vorname oder Pseudonym · Altersgruppe (5 Stufen) · E-Mail für Rückfragen · drei Pflicht-Checkboxen: eigene Erfahrung; **ausdrückliche Einwilligung** in Speicherung und anonymisierte Veröffentlichung inklusive Gesundheitsangaben (Art. 9 Abs. 2 a DSGVO), mit Widerruf per E-Mail; Datenschutzerklärung gelesen.
 - Einleitung nennt: keine medizinische Beratung, keine Namen von Ärzten oder Kliniken, keine Dosierungsempfehlungen an andere.
 
@@ -63,6 +63,7 @@ Vor dem Einbau noch nötig (Coding-Instanz):
 2. Redaktionsregel in `docs/REDAKTION.md`: Berichte werden gekürzt, nie inhaltlich verändert, nur mit Vorname/Pseudonym und Altersgruppe veröffentlicht, ohne Präparat-Dosis-Angaben, die als Anleitung lesbar wären; keine Berichte mit Arzt- oder Klinikname; kein Bericht neben dem Produkt-Teaser (sonst wirkt er als Testimonial für das Set, HWG/UWG); Berichte sind keine Belege für Wirkungen, nur Erfahrungen.
 3. Seite `/erfahrungen/` mit Einbettung und Hinweis „Bericht einreichen“, verlinkt aus den Ratgeber-Artikeln, nicht von der Startseite (Vorbestell-Test nicht verwässern).
 4. Zwei Testeinträge von Dominik nach dem Publish, dann Löschen in Tally.
+5. Kontaktadresse ist seit 30.09.2026 **dominik@nachderspritze.de**. Im Formular (Einwilligung, Dankeseite) steht sie schon; `src/data/site.ts` (Impressum, Datenschutz, Footer) trägt noch die alte Gmail-Adresse und muss umgestellt werden. Die Tally-Benachrichtigungen gehen an die Adresse des Tally-Kontos; wenn das Konto noch auf Gmail läuft, in Tally → Settings die Kontoadresse wechseln oder eine Weiterleitung einrichten.
 
 ## 3. Preis- und Kassenregel-Erhebung
 

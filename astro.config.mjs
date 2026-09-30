@@ -14,6 +14,8 @@ function buildLastmod() {
   const map = new Map();
   const dir = path.resolve('src/content/wissen');
   let latest = '2026-09-30';
+  /** @type {{ id: string; category: string; date: string }[]} */
+  const artikel = [];
   for (const f of fs.readdirSync(dir)) {
     if (!f.endsWith('.md')) continue;
     const txt = fs.readFileSync(path.join(dir, f), 'utf8');
@@ -22,8 +24,17 @@ function buildLastmod() {
     const upd = (txt.match(/^updatedDate:\s*(\S+)/m) || [])[1];
     const d = upd || pub;
     if (!d) continue;
-    map.set(`/wissen/${f.replace(/\.md$/, '')}/`, d);
+    const id = f.replace(/\.md$/, '');
+    map.set(`/wissen/${id}/`, d);
+    artikel.push({ id, category: ((txt.match(/^category:\s*"?([^"\n]+?)"?\s*$/m) || [])[1] || '').trim(), date: d });
     if (d > latest) latest = d;
+  }
+  // Themenseiten (Hubs): jüngstes Datum der zugehörigen Artikel
+  /** @type {{ themen: { slug: string; category: string; include: string[]; pubDate: string }[] }} */
+  const themenJson = JSON.parse(fs.readFileSync(path.resolve('src/data/themen.json'), 'utf8'));
+  for (const t of themenJson.themen) {
+    const dates = artikel.filter((a) => a.category === t.category || t.include.includes(a.id)).map((a) => a.date);
+    map.set(`/wissen/${t.slug}/`, dates.sort().at(-1) || t.pubDate);
   }
   const studien = fs.readFileSync(path.resolve('src/data/studien.ts'), 'utf8');
   const su = (studien.match(/studienUpdated\s*=\s*'([^']+)'/) || [])[1];

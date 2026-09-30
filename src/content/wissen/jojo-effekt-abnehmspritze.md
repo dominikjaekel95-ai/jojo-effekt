@@ -2,7 +2,7 @@
 title: "Jojo-Effekt nach der Abnehmspritze: Warum das Gewicht zurückkommt – und was hilft"
 metaTitle: "Jojo-Effekt nach der Abnehmspritze: Ursachen, Zahlen, was hilft"
 description: "Nach dem Absetzen kommt in Studien ein Großteil des Gewichts zurück. Warum das passiert, wie schnell, und was nachweislich dagegen hilft – mit Quellen."
-category: "Jojo-Effekt"
+category: "Gewicht halten"
 order: 1
 pubDate: 2026-09-30
 keywords: ["jojo effekt abnehmspritze", "abnehmspritze jojo effekt", "wegovy jojo effekt", "ozempic jojo effekt", "mounjaro jojo effekt", "abnehmspritze zunehmen danach", "jojo effekt abnehmspritze vermeiden"]

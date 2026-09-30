@@ -2,7 +2,7 @@
 title: "Gewicht halten nach der Abnehmspritze: Der 12-Wochen-Plan"
 metaTitle: "Gewicht halten nach der Abnehmspritze: 12-Wochen-Plan mit Regeln"
 description: "Die ersten 12 Wochen nach dem Absetzen entscheiden. Ein Plan in drei Phasen: Routinen aufbauen, Appetit auffangen, stabilisieren – mit Wiege-Regel."
-category: "Plan"
+category: "Gewicht halten"
 order: 6
 pubDate: 2026-09-30
 keywords: ["nach abnehmspritze gewicht halten", "abnehmspritze absetzen gewicht halten", "abnehmspritze danach", "gewicht halten nach wegovy", "nach ozempic gewicht halten", "abnehmspritze absetzen plan"]

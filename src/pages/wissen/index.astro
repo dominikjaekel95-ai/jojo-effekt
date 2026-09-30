@@ -3,11 +3,17 @@ import Base from '../../layouts/Base.astro';
 import Cta from '../../components/Cta.astro';
 import { getCollection } from 'astro:content';
 import { site } from '../../data/site';
+import { themen, gehoertZu } from '../../data/themen';
 
 const artikel = (await getCollection('wissen', (a) => !a.data.draft)).sort((a, b) => a.data.order - b.data.order);
 const glossarCount = (await getCollection('glossar', (g) => !g.data.draft)).length;
+// Gliederung nach Themen (Hubs): jeder Artikel erscheint unter seiner Kategorie; die Themenseite listet zusätzlich `include`
+const gruppen = themen.map((t) => ({ thema: t, artikel: artikel.filter((a) => a.data.category === t.category) }));
+const ohneThema = artikel.filter((a) => !themen.some((t) => t.category === a.data.category));
+if (ohneThema.length > 0) throw new Error(`Artikel ohne Thema in src/data/themen.json: ${ohneThema.map((a) => a.id).join(', ')}`);
 // Präparate-Artikel als Linkzeile mit Anker; die Startseite verlinkt hierher, weil dort keine Markennamen stehen
-const praeparate = artikel.filter((a) => a.data.category === 'Präparate');
+const praeparateThema = themen.find((t) => t.slug === 'praeparate');
+const praeparate = praeparateThema ? artikel.filter((a) => gehoertZu(praeparateThema, a.id, a.data.category)) : [];
 const title = 'Wissen: Abnehmspritze absetzen, Jojo-Effekt, Muskeln erhalten';
 const description =
   'Was nach der Abnehmspritze passiert und was nachweislich hilft: Jojo-Effekt, Absetzen, Muskelabbau, Protein, Kreatin und ein 12-Wochen-Plan. Jede Zahl mit Link zur Originalstudie.';
@@ -18,7 +24,10 @@ const jsonLd = [
     description,
     url: `${site.url}/wissen/`,
     isPartOf: { '@id': `${site.url}/#website` },
-    hasPart: artikel.map((a) => ({ '@type': 'Article', headline: a.data.title, url: `${site.url}/wissen/${a.id}/` })),
+    hasPart: [
+      ...themen.map((t) => ({ '@type': 'CollectionPage', name: t.title, url: `${site.url}/wissen/${t.slug}/` })),
+      ...artikel.map((a) => ({ '@type': 'Article', headline: a.data.title, url: `${site.url}/wissen/${a.id}/` })),
+    ],
   },
   {
     '@type': 'BreadcrumbList',
@@ -28,6 +37,7 @@ const jsonLd = [
     ],
   },
 ];
+const chip = 'inline-block rounded-lg border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink no-underline hover:border-moss hover:text-moss';
 ---
 <Base title={title} description={description} path="/wissen/" jsonLd={jsonLd}>
   <section class="container-wide py-14">
@@ -39,6 +49,9 @@ const jsonLd = [
       Originalstudie, Quellen unter jedem Artikel, kein Verkaufston. Und immer: Ob und wie du dein Medikament absetzt,
       besprichst du mit deiner Ärztin oder deinem Arzt.
     </p>
+    <ul class="mt-6 flex flex-wrap gap-2" aria-label="Themen">
+      {themen.map((t) => (<li><a href={`/wissen/${t.slug}/`} class={chip}>{t.name}</a></li>))}
+    </ul>
     <a href="/wissen/studien/" class="card mt-10 block border-amber/50 bg-amber-light/40 no-underline hover:border-amber">
       <p class="eyebrow text-amber-dark">Studien-Tracker</p>
       <h2 class="mt-2 text-2xl leading-snug text-ink">Alle Studien zum Absetzen der Abnehmspritze in einer Tabelle</h2>
@@ -59,24 +72,34 @@ const jsonLd = [
         <p class="mt-4 text-sm font-semibold text-moss">Zum Marktradar →</p>
       </a>
     </div>
-    {praeparate.length > 0 && (
-      <section id="praeparate" class="mt-10 scroll-mt-24" aria-labelledby="praeparate-h">
-        <h2 id="praeparate-h" class="eyebrow">Absetzen nach Präparat</h2>
-        <ul class="mt-3 flex flex-wrap gap-2">
-          {praeparate.map((a) => (<li><a href={`/wissen/${a.id}/`} class="inline-block rounded-lg border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink no-underline hover:border-moss hover:text-moss">{a.data.title.split(':')[0]}</a></li>))}
-        </ul>
+
+    {gruppen.map(({ thema, artikel: liste }) => (
+      <section id={thema.slug === 'praeparate' ? 'praeparate' : `thema-${thema.slug}`} class="mt-12 scroll-mt-24" aria-labelledby={`h-${thema.slug}`}>
+        <div class="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p class="eyebrow">{thema.name}</p>
+            <h2 id={`h-${thema.slug}`} class="mt-1 text-2xl leading-snug text-ink"><a href={`/wissen/${thema.slug}/`} class="no-underline hover:text-moss">{thema.title}</a></h2>
+          </div>
+          <a href={`/wissen/${thema.slug}/`} class="text-sm font-semibold text-moss underline underline-offset-4">Themenseite mit Einordnung →</a>
+        </div>
+        {thema.slug === 'praeparate' && praeparate.length > 0 && (
+          <ul class="mt-3 flex flex-wrap gap-2" aria-label="Absetzen nach Präparat">
+            {praeparate.map((a) => (<li><a href={`/wissen/${a.id}/`} class={chip}>{a.data.title.split(':')[0]}</a></li>))}
+          </ul>
+        )}
+        <div class="mt-4 grid gap-6 md:grid-cols-2">
+          {liste.map((a) => (
+            <a href={`/wissen/${a.id}/`} class="card group block no-underline hover:border-moss">
+              <p class="text-sm font-medium text-ink-3">{a.data.category}</p>
+              <h3 class="mt-2 text-2xl leading-snug text-ink group-hover:text-moss">{a.data.title}</h3>
+              <p class="mt-2 text-ink-2">{a.data.description}</p>
+              <p class="mt-4 text-sm font-semibold text-moss">Lesen →</p>
+            </a>
+          ))}
+        </div>
       </section>
-    )}
-    <div class="mt-6 grid gap-6 md:grid-cols-2">
-      {artikel.map((a) => (
-        <a href={`/wissen/${a.id}/`} class="card group block no-underline hover:border-moss">
-          <p class="text-sm font-medium text-ink-3">{a.data.category}</p>
-          <h2 class="mt-2 text-2xl leading-snug text-ink group-hover:text-moss">{a.data.title}</h2>
-          <p class="mt-2 text-ink-2">{a.data.description}</p>
-          <p class="mt-4 text-sm font-semibold text-moss">Lesen →</p>
-        </a>
-      ))}
-    </div>
+    ))}
+
     <div class="mt-14 rounded-xl2 border border-line bg-white p-6">
       <p class="eyebrow">Warum es diese Seite gibt</p>
       <p class="mt-2 max-w-2xl text-ink-2">

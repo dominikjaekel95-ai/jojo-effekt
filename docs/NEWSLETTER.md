@@ -96,7 +96,7 @@ Messung: Öffnungen und Klicks im Versanddienst; Klicks auf die Seite kommen mit
 checklistForm: { id: 'WOxpjv', live: true },          // sobald WOxpjv in Tally veröffentlicht ist
 newsletter: {
   // Anschrift beim Einrichten mit dem Auftragsverarbeitungsvertrag im MailerLite-Konto abgleichen
-  provider: { name: 'MailerLite', address: 'MailerLite Limited, Ground Floor, 71 Lower Baggot Street, Dublin 2, D02 P593, Irland', url: 'https://www.mailerlite.com/legal/privacy-policy' },
+  provider: { name: 'MailerLite', address: 'MailerLite Limited, 88 Harcourt Street, Dublin 2, D02 DK18, Irland', url: 'https://www.mailerlite.com/legal/privacy-policy' },
   cadence: 'etwa alle zwei Wochen',
 },
 ```

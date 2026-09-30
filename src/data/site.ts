@@ -59,7 +59,7 @@ export const site = {
   newsletter: {
     provider: {
       name: 'MailerLite',
-      address: 'MailerLite Limited, Ground Floor, 71 Lower Baggot Street, Dublin 2, D02 P593, Irland',
+      address: 'MailerLite Limited, 88 Harcourt Street, Dublin 2, D02 DK18, Irland',
       url: 'https://www.mailerlite.com/legal/privacy-policy',
     } as null | { name: string; address: string; url: string },
     cadence: 'etwa alle zwei Wochen',

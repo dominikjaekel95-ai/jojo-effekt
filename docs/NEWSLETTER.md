@@ -2,7 +2,7 @@
 
 Stand: 30. September 2026. Zuständig: Dominik.
 
-**Status:** Das optionale Kästchen „Newsletter“ steht in den Tally-Formularen `b5bO9o` (Vorbestellung), `ODOJWR` (Erfahrungen) und `WOxpjv` (Checkliste, noch Entwurf). Die Häkchen sammeln Einwilligungen. Verschickt wird erst, wenn ein Versanddienst mit Double-Opt-in eingerichtet und in `src/data/site.ts` eingetragen ist (Abschnitt 6). Die Datenschutzerklärung beschreibt den Newsletter bereits (Abschnitt 4c) und sagt, dass noch nichts verschickt wird.
+**Status:** Das optionale Kästchen „Newsletter“ steht in den Tally-Formularen `b5bO9o` (Vorbestellung), `ODOJWR` (Erfahrungen) und `WOxpjv` (Checkliste, noch Entwurf). Die Häkchen sammeln Einwilligungen. Versanddienst ist MailerLite mit aktivem Double-Opt-in; die Übergabe von Tally an MailerLite macht die Vercel-Funktion `api/newsletter.js` (Abschnitt 3). Verschickt wird, sobald Webhooks und Umgebungsvariablen stehen und `src/data/site.ts` den Dienst nennt (Abschnitt 6). Die Datenschutzerklärung beschreibt den Newsletter bereits (Abschnitt 4c) und sagt bis dahin, dass noch nichts verschickt wird.
 
 ## 1. Regeln
 
@@ -35,29 +35,47 @@ Einstellungen: „Redirect on completion“ auf **`https://nachderspritze.de/che
 
 Nach dem Veröffentlichen in `src/data/site.ts` den Schalter setzen: `checklistForm: { id: 'WOxpjv', live: true }`. Bis dahin zeigt `/checkliste/` den Weg per E-Mail an Dominik, und der Datenschutz-Abschnitt 4b bleibt ausgeblendet.
 
-## 3. Versanddienst mit Double-Opt-in
+## 3. Versanddienst: MailerLite mit Double-Opt-in, Übergabe per Webhook
 
-Empfehlung: **Brevo** (früher Sendinblue; Server in der EU, Auftragsverarbeitungsvertrag im Konto abrufbar, kostenloser Tarif bis 300 Mails pro Tag, Double-Opt-in-Vorlagen, Abmeldelink automatisch). Alternativen mit Sitz in Deutschland: rapidmail, CleverReach. Kein Mailchimp (US-Anbieter, Verarbeitung außerhalb der EU nur mit Zusatzaufwand).
+Tally hat keine native MailerLite-Anbindung. Der Weg: Tally-Webhook → Vercel-Funktion `api/newsletter.js` → MailerLite-API `POST /api/subscribers` mit `status: unconfirmed` und der Gruppen-ID. Double-Opt-in ist im MailerLite-Konto aktiv, die Bestätigungs-Mail geht automatisch raus. Die Funktion überträgt nur Einträge mit gesetztem Newsletter-Häkchen, prüft die Tally-Signatur, legt bereits aktive Adressen nur in die Gruppe und reaktiviert keine abgemeldeten. Sie loggt keine E-Mail-Adressen.
 
-Einrichtung, einmalig:
+### 3a. MailerLite (Dominik)
 
-1. Konto anlegen, Absenderadresse `hallo@nachderspritze.de` verifizieren, bei INWX die vom Dienst genannten DNS-Einträge (DKIM, ggf. DMARC) setzen, damit die Mails nicht im Spam landen. SPF bei INWX um den Dienst ergänzen.
+1. Absenderadresse `hallo@nachderspritze.de` verifizieren; bei INWX die von MailerLite genannten DNS-Einträge (DKIM, ggf. DMARC) setzen und SPF ergänzen, damit die Mails nicht im Spam landen.
 2. Auftragsverarbeitungsvertrag im Konto akzeptieren und ablegen.
-3. Liste „Newsletter“ anlegen. Attribute: `Quelle` (vorbestellung | erfahrungen | checkliste), `Einwilligung am`.
-4. Double-Opt-in-Vorlage einrichten: Betreff „Bitte bestätige deine Anmeldung“, ein Satz, ein Link, Impressum. Erst wer klickt, ist im Verteiler; der Dienst protokolliert Zeitpunkt und IP der Bestätigung.
-5. Impressum-Block für die Fußzeile jeder Mail: Name, Anschrift, E-Mail aus `src/data/site.ts` (`owner`, `email`), plus Abmeldelink. Pflicht nach § 5 DDG und § 7 UWG.
-6. Adresse und Datenschutz-URL des Dienstes in `site.ts` eintragen (Abschnitt 6). Beispiel für Brevo, beim Einrichten mit dem Auftragsverarbeitungsvertrag abgleichen: Sendinblue GmbH, Köpenicker Straße 126, 10179 Berlin, `https://www.brevo.com/de/legal/privacypolicy/`.
+3. Gruppe „Newsletter“ anlegen. Die Gruppen-ID steht in der URL der Gruppe.
+4. Feld `quelle` (Text) anlegen; die Funktion schreibt `vorbestellung`, `erfahrungen` oder `checkliste` hinein. Fehlt das Feld, legt sie die Adresse trotzdem an, nur ohne Quelle.
+5. Double-Opt-in-Mail prüfen: Betreff „Bitte bestätige deine Anmeldung“, ein Satz, ein Link, Impressum. Erst wer klickt, ist im Verteiler; MailerLite protokolliert Zeitpunkt und IP der Bestätigung.
+6. Impressum-Block für die Fußzeile jeder Mail: Name, Anschrift, E-Mail aus `src/data/site.ts` (`owner`, `email`), plus Abmeldelink. Pflicht nach § 5 DDG und § 7 UWG.
+7. API-Schlüssel unter Integrations → API erzeugen und nur in Vercel ablegen (3b), nie ins Repo.
 
-## 4. Adressen übernehmen (bis eine Automatik läuft)
+### 3b. Vercel (Dominik)
 
-Tally speichert je Antwort den Zeitpunkt und den Wortlaut der Felder; das ist der Nachweis der ersten Einwilligung. Die Bestätigung (Double-Opt-in) protokolliert der Versanddienst. Ablauf alle zwei Wochen vor dem Versand:
+Project → Settings → Environment Variables, für Production (und Preview, falls dort getestet wird):
 
-1. Tally → Formular → Responses → Export CSV, für alle drei Formulare.
-2. Nur Zeilen mit `Newsletter = Yes` behalten, die noch nicht importiert sind. Spalten: E-Mail, Datum, Quelle.
-3. In den Versanddienst importieren, mit Double-Opt-in-Mail (im Import „Bestätigung anfordern“ wählen). Ohne Klick auf den Bestätigungslink bekommt die Adresse keinen Newsletter.
-4. Abmeldungen laufen über den Link in der Mail; zusätzlich Abmeldewünsche per E-Mail an `hallo@` von Hand austragen und in Tally die Antwort löschen.
+| Variable | Wert |
+|---|---|
+| `MAILERLITE_API_KEY` | API-Schlüssel aus MailerLite |
+| `MAILERLITE_GROUP_ID` | ID der Gruppe „Newsletter“ |
+| `TALLY_SIGNING_SECRET` | frei gewählte lange Zeichenkette; derselbe Wert in allen drei Tally-Webhooks |
 
-Später möglich: Tally → Integrations → Brevo (nativ) oder ein Zap, das nur bei `Newsletter = Yes` überträgt und die Bestätigungs-Mail auslöst. Erst einrichten, wenn der Handablauf zweimal gelaufen ist.
+Nach dem Eintragen einmal neu deployen (Deployments → Redeploy), damit die Funktion die Werte bekommt.
+
+### 3c. Tally (andere Instanz)
+
+In jedem der drei Formulare unter Integrations → Webhooks:
+
+- URL: `https://nachderspritze.de/api/newsletter/` (mit Schrägstrich am Ende; die Seite leitet sonst um)
+- Signing secret: der Wert aus `TALLY_SIGNING_SECRET`
+- Ereignis: Formular-Antwort (Standard)
+
+Test: Formular mit eigener Adresse und gesetztem Häkchen absenden. Erwartung: Bestätigungs-Mail von MailerLite innerhalb einer Minute; in Vercel → Logs eine Zeile `newsletter: <Formular-ID> (<quelle>) → angelegt (201)`. Ohne Häkchen: `… ohne Häkchen, übersprungen`. Bei `401` stimmt das Signing Secret nicht überein, bei `500` fehlt eine Umgebungsvariable.
+
+## 4. Nachweis und Abmeldung
+
+Tally speichert je Antwort den Zeitpunkt und den Wortlaut der Felder; das ist der Nachweis der ersten Einwilligung. Die Bestätigung (Double-Opt-in) protokolliert MailerLite. Abmeldungen laufen über den Link in jeder Mail; Abmeldewünsche per E-Mail an `hallo@` von Hand in MailerLite austragen und in Tally die Antwort löschen.
+
+Fallback, falls der Webhook einmal ausfällt: Tally → Formular → Responses → Export CSV, Zeilen mit `Newsletter = Yes` behalten, in MailerLite mit „Bestätigung anfordern“ importieren. Nie ohne Double-Opt-in importieren.
 
 ## 5. Inhalt und Rhythmus
 
@@ -78,7 +96,8 @@ Messung: Öffnungen und Klicks im Versanddienst; Klicks auf die Seite kommen mit
 ```ts
 checklistForm: { id: 'WOxpjv', live: true },          // sobald WOxpjv in Tally veröffentlicht ist
 newsletter: {
-  provider: { name: 'Brevo', address: 'Sendinblue GmbH, Köpenicker Straße 126, 10179 Berlin', url: 'https://www.brevo.com/de/legal/privacypolicy/' },
+  // Anschrift beim Einrichten mit dem Auftragsverarbeitungsvertrag im MailerLite-Konto abgleichen
+  provider: { name: 'MailerLite', address: 'MailerLite Limited, Ground Floor, 71 Lower Baggot Street, Dublin 2, D02 P593, Irland', url: 'https://www.mailerlite.com/legal/privacy-policy' },
   cadence: 'etwa alle zwei Wochen',
 },
 ```

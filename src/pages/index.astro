@@ -8,6 +8,7 @@ import PreorderForm from '../components/PreorderForm.astro';
 import SetIllustration from '../components/SetIllustration.astro';
 import MarktradarTeaser from '../components/MarktradarTeaser.astro';
 import { site } from '../data/site';
+import { themen } from '../data/themen';
 import { landingFaq } from '../data/faq';
 import { getCollection } from 'astro:content';
 
@@ -289,6 +290,9 @@ const jsonLd: Record<string, unknown>[] = [];
         Was in Studien passiert, wenn die Spritze wegfällt, und was nachweislich hilft. Nüchtern, ohne Verkaufston,
         jede Zahl mit Link zur Originalstudie.
       </p>
+      <ul class="mt-6 flex flex-wrap gap-2" aria-label="Themen">
+        {themen.map((t) => (<li><a href={`/wissen/${t.slug}/`} class="inline-block rounded-lg border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink no-underline hover:border-moss hover:text-moss">{t.name}</a></li>))}
+      </ul>
       <div class="mt-8 grid gap-6 md:grid-cols-3">
         {artikel.map((a) => (
           <a href={`/wissen/${a.id}/`} class="card group block no-underline hover:border-moss">

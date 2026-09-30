@@ -7,6 +7,7 @@ import { getCollection } from 'astro:content';
 import { site } from '../data/site';
 import { radar, radarLastmod } from '../data/markt';
 import { byTerm } from '../lib/glossar';
+import { themen } from '../data/themen';
 
 export const GET: APIRoute = async () => {
   const artikel = (await getCollection('wissen', (a) => !a.data.draft)).sort((a, b) => a.data.order - b.data.order);
@@ -26,6 +27,9 @@ export const GET: APIRoute = async () => {
     `- [Glossar](${u('/glossar/')}): ${glossar.length} Begriffe zur Zeit nach der Abnehmspritze, je ein Satz Definition mit Quelle`,
     `- [Marktradar](${u('/marktradar/')}): Zulassungen, Marktstarts, Preise als Größenordnung, Kassenregeln, Lieferbarkeit; Stand ${radarLastmod()}; Feed ${u('/marktradar/feed.xml')}`,
     `- [Über diese Seite](${u('/ueber/')}): Arbeitsweise, Quellenregeln, Kontakt`,
+    '',
+    '## Themen',
+    ...themen.map((t) => `- [${t.title}](${u(`/wissen/${t.slug}/`)}): ${t.description}`),
     '',
     '## Artikel',
     ...artikel.map((a) => `- [${a.data.title}](${u(`/wissen/${a.id}/`)}): ${a.data.description}`),

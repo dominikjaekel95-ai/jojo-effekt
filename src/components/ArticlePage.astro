@@ -1,0 +1,135 @@
+---
+/**
+ * Artikelseite unter /wissen/<slug>/. Gerendert aus src/pages/wissen/[slug].astro. Verlinkung nach oben (Brotkrumen
+ * zum Thema), zur Seite (related, „Mehr zum Thema“) und nach unten (Glossar-Box) ist hier fest eingebaut.
+ */
+import type { CollectionEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Faq from './Faq.astro';
+import Footnotes from './Footnotes.astro';
+import AuthorBox from './AuthorBox.astro';
+import ProductTeaser from './ProductTeaser.astro';
+import AffiliateLinks from './AffiliateLinks.astro';
+import GlossarBox from './GlossarBox.astro';
+import ChecklistBox from './ChecklistBox.astro';
+import type { AffiliateKey } from '../data/affiliate';
+import { getCollection, render } from 'astro:content';
+import { site } from '../data/site';
+import { themaByCategory, gehoertZu } from '../data/themen';
+
+interface Props { entry: CollectionEntry<'wissen'> }
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const all = await getCollection('wissen', (a) => !a.data.draft);
+const related = entry.data.related
+  .map((id) => all.find((a) => a.id === id))
+  .filter((a): a is NonNullable<typeof a> => Boolean(a));
+const thema = themaByCategory(entry.data.category);
+if (!thema) throw new Error(`Artikel ${entry.id}: category "${entry.data.category}" gehört zu keinem Thema in src/data/themen.json`);
+const mehr = all
+  .filter((a) => a.id !== entry.id && gehoertZu(thema, a.id, a.data.category) && !related.some((r) => r.id === a.id))
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 6);
+
+const path = `/wissen/${entry.id}/`;
+const url = `${site.url}${path}`;
+const faqText = entry.data.faq.map((f) => `${f.q} ${f.a.replace(/<[^>]+>/g, ' ')}`).join(' ');
+const words = `${entry.body ?? ''} ${faqText}`.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
+const readingMinutes = Math.max(1, Math.round(words / 180));
+
+const jsonLd = [
+  {
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    headline: entry.data.title,
+    description: entry.data.description,
+    inLanguage: 'de-DE',
+    url,
+    mainEntityOfPage: url,
+    datePublished: entry.data.pubDate.toISOString(),
+    dateModified: (entry.data.updatedDate ?? entry.data.pubDate).toISOString(),
+    author: { '@type': 'Person', name: site.owner.name, url: `${site.url}/ueber/` },
+    ...(site.reviewer ? { reviewedBy: { '@type': 'Person', name: site.reviewer.name, jobTitle: site.reviewer.title } } : {}),
+    publisher: { '@id': `${site.url}/#organization` },
+    isPartOf: { '@id': `${site.url}/wissen/${thema.slug}/#collection` },
+    keywords: entry.data.keywords.join(', '),
+    wordCount: words,
+    about: { '@type': 'Thing', name: 'GLP-1-Rezeptoragonisten absetzen' },
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Start', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Wissen', item: `${site.url}/wissen/` },
+      { '@type': 'ListItem', position: 3, name: thema.name, item: `${site.url}/wissen/${thema.slug}/` },
+      { '@type': 'ListItem', position: 4, name: entry.data.title, item: url },
+    ],
+  },
+];
+---
+<Base
+  title={entry.data.metaTitle ?? entry.data.title} description={entry.data.description} path={path} ogType="article"
+  jsonLd={jsonLd} publishedTime={entry.data.pubDate.toISOString()} modifiedTime={(entry.data.updatedDate ?? entry.data.pubDate).toISOString()}
+>
+  <article class="container-narrow py-12">
+    <nav aria-label="Brotkrumen" class="text-sm text-ink-3">
+      <a href="/" class="hover:text-moss">Start</a> › <a href="/wissen/" class="hover:text-moss">Wissen</a> › <a href={`/wissen/${thema.slug}/`} class="hover:text-moss">{thema.name}</a>
+    </nav>
+    <p class="eyebrow mt-6">{entry.data.category} · {readingMinutes} Min. Lesezeit</p>
+    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">{entry.data.title}</h1>
+    <p class="mt-4 text-lg text-ink-2">{entry.data.description}</p>
+    <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+
+    <div class="prose-site mt-8">
+      <Content />
+    </div>
+
+    <GlossarBox text={`${entry.body ?? ''} ${faqText}`} class="mt-8" />
+
+    <ChecklistBox position={`artikel-${entry.id}`} class="mt-6" />
+
+    <ProductTeaser position={`artikel-${entry.id}`} />
+
+    {entry.data.affiliate.length > 0 && (
+      <AffiliateLinks
+        class="my-10"
+        products={entry.data.affiliate as AffiliateKey[]}
+        title={entry.data.affiliateTitle ?? 'Beispiele für Produkte'}
+        intro={entry.data.affiliateIntro ?? 'Beispiele, keine Empfehlung einer Marke. Das Set gibt es noch nicht – die Bausteine gibt es einzeln.'}
+        position={`artikel-${entry.id}`}
+      />
+    )}
+
+    {entry.data.faq.length > 0 && <Faq items={entry.data.faq} id="artikel-faq" title="Häufige Fragen" />}
+
+    <AuthorBox pubDate={entry.data.pubDate} updatedDate={entry.data.updatedDate} />
+
+    <Footnotes ids={entry.data.sources} />
+
+    {related.length > 0 && (
+      <section class="mt-12" aria-labelledby="related-h">
+        <h2 id="related-h" class="text-base font-semibold text-ink">Weiterlesen</h2>
+        <ul class="mt-3 grid gap-3 sm:grid-cols-3">
+          {related.map((r) => (
+            <li>
+              <a href={`/wissen/${r.id}/`} class="card block h-full no-underline hover:border-moss">
+                <p class="text-sm text-ink-3">{r.data.category}</p>
+                <p class="mt-1 font-semibold text-ink">{r.data.title}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section class="mt-10 rounded-xl2 border border-line bg-paper p-5" aria-labelledby="thema-h">
+      <h2 id="thema-h" class="text-base font-semibold text-ink">Mehr zum Thema {thema.name}</h2>
+      {mehr.length > 0 && (
+        <ul class="mt-3 space-y-2 text-sm">
+          {mehr.map((m) => (<li><a href={`/wissen/${m.id}/`} class="text-moss underline underline-offset-4">{m.data.title}</a></li>))}
+        </ul>
+      )}
+      <p class="mt-3 text-sm"><a href={`/wissen/${thema.slug}/`} class="font-semibold text-moss underline underline-offset-4">Themenseite: {thema.title}</a></p>
+    </section>
+  </article>
+</Base>

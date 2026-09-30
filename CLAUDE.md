@@ -37,7 +37,7 @@ npm run preview        # dist/ lokal ansehen
 - `noindex` gibt es nur für `/danke/`, `/checkliste/danke/`, `/impressum/`, `/datenschutz/`, die PDFs unter `/downloads/` (Header in `vercel.json`) und, solange `site.experienceForm.live` false ist, `/erfahrungen/` (Sitemap folgt dem Schalter automatisch). Nie auf andere Seiten, nie global.
 - `title`, `metaTitle`, `description` und H1 rankender Seiten nicht „verbessern“, ohne den Grund im PR zu nennen. `pubDate` nie ändern; Aktualisierungen bekommen `updatedDate`.
 - `draft: true` nimmt einen Artikel aus Build und Sitemap. Nie für einen bereits veröffentlichten Artikel setzen.
-- JSON-LD bleibt valide (`Base.astro`, `wissen/[slug].astro`, `wissen/studien.astro`). Nach Änderungen daran den Build-Output in `dist/` prüfen.
+- JSON-LD bleibt valide (`Base.astro`, `components/ArticlePage.astro`, `components/HubPage.astro`, `wissen/studien.astro`). Nach Änderungen daran den Build-Output in `dist/` prüfen.
 - Sitemap und `lastmod` entstehen in `astro.config.mjs` aus dem Frontmatter. Nichts manuell.
 
 ## Inhaltsregeln (Kurzfassung; verbindlich sind `docs/REDAKTION.md` Abschnitt 3 und `CLAIMS.md`)
@@ -51,7 +51,24 @@ npm run preview        # dist/ lokal ansehen
 - Frontmatter-Limits: `metaTitle` bis 65, `description` bis 165 Zeichen. Der Build bricht sonst ab.
 - Ton: nüchtern, „du“, keine Superlative, keine Emojis.
 
-## Glossar, Marktradar, Checkliste, Newsletter
+## Qualität vor Menge (Google „scaled content abuse“, seit März 2024)
+
+- Jede Seite bedient eine eigene Suchintention mit eigenem Inhalt. Vor dem Schreiben prüfen, ob eine bestehende Seite die Anfrage schon bedient; dann dort erweitern statt neu anlegen.
+- Keine Seiten, die sich nur im Präparatenamen unterscheiden (Doorway-Muster). Eine Markenseite braucht eigene Daten zum Präparat: Halbwertszeit, eigene Studien, Fachinformation. Sonst wird es ein Abschnitt in einem bestehenden Artikel.
+- Keine Seite, die weniger weiß als der beste Treffer zu ihrer Anfrage. Im Zweifel zwei gute Artikel statt drei.
+- Drei bis fünf Artikel pro Woche sind für eine junge Domain unauffällig; mehr löst das Muster aus, selbst wenn jeder einzelne in Ordnung wäre. Google bewertet die Qualität seitenweit: Ein Drittel dünne Seiten senkt den ganzen Host.
+- Frühwarnindikator: Search Console → Seiten → „Gecrawlt, zurzeit nicht indexiert“. Steigt diese Zahl, keine neuen Artikel, sondern die betroffenen Seiten verbessern oder zusammenlegen.
+
+## Verlinkung: jede neue Seite in drei Richtungen
+
+- **Nach oben:** `category` im Frontmatter ist genau einer der Werte aus `src/data/themen.json` (Absetzen · Präparate · Abnehmpille · Muskeln · Ernährung · Gewicht halten). Damit erscheint der Artikel automatisch auf seiner Themenseite, im Wissens-Hub und in der Brotkrumen-Navigation. Der Build bricht bei unbekannter Kategorie ab.
+- **Zur Seite:** `related` mit drei Slugs, und in mindestens zwei bestehenden Artikeln je einen passenden Satz mit Link auf die neue Seite. Beantwortet der Artikel eine eigene Frage des Themas, beim passenden Thema in `themen.json` einen Eintrag in `fragen` anhängen.
+- **Nach unten:** mindestens zwei Glossar-Begriffe wörtlich verwenden; die Glossar-Box verlinkt sie automatisch, und die Glossar-Seiten verlinken zurück.
+- Neue Themenseiten nur mit Dominik: Ein Hub braucht mindestens drei Artikel und einen Überbegriff, den kein Artikel selbst besetzt.
+
+## Themenseiten, Glossar, Marktradar, Checkliste, Newsletter
+
+- **Themenseiten (Hubs)** (`src/data/themen.json`, URL `/wissen/<slug>/`, gerendert von `src/components/HubPage.astro` über `src/pages/wissen/[slug].astro`): sechs Überbegriffe mit Einordnung (Zahlen mit Fußnoten aus `sources.ts`), „Welche Frage, welcher Artikel“, allen Artikeln der Kategorie plus `include`, Glossar-Begriffen und Werkzeugen. Limits wie bei Artikeln (`metaTitle` 65, `description` 165). Slugs dürfen nie mit Artikel-Slugs kollidieren; `lastmod` in der Sitemap entsteht aus den Artikeln des Themas. Der Wissens-Hub `/wissen/` ist nach Themen gegliedert, der Anker `#praeparate` bleibt.
 
 - **Glossar** (`src/content/glossar/`, URL `/glossar/<slug>/`): ein Begriff pro Datei, Vorlage `set-point-theorie.md`. Limits: `metaTitle` bis 65, `description` bis 165, `short` bis 260 Zeichen. Die Box „Begriffe in diesem Artikel“ erkennt `term` und `synonyms` automatisch im Artikeltext und verlinkt sie; Glossar-Seiten listen umgekehrt alle Artikel, in denen der Begriff vorkommt. Deshalb: Jeder neue Artikel verwendet mindestens zwei Glossar-Begriffe wörtlich (Haltephase, Absetzkurve, fettfreie Masse, Halbwertszeit, Auswaschphase usw.). Eigene Begriffe (`own: true`) sind nur Haltephase und Absetzkurve; keine weiteren ohne Dominik.
 - **Erfahrungen** (`/erfahrungen/`): Tally-Formular `ODOJWR`, eingebettet nur bei `site.experienceForm.live: true` (Dominik schaltet nach dem Veröffentlichen in Tally). Veröffentlichte Berichte folgen den Regeln in `docs/REDAKTION.md` Abschnitt 3 und stehen nie neben dem Produkt-Teaser. Link aus der AuthorBox der Artikel, nicht von der Startseite.
@@ -68,7 +85,7 @@ npm run preview        # dist/ lokal ansehen
 
 Diese Dateien ändern beide Agenten und die Routine. Nur anhängen, nie umsortieren, nie umformatieren, PRs damit schnell mergen:
 
-`src/data/sources.ts` · `src/data/studien.ts` · `CLAIMS.md` (Abschnitt C) · `docs/REDAKTION.md` (Themenliste) · `docs/INDEXIERUNG.md` · `src/data/markt/radar.json` · `docs/RADAR-KANDIDATEN.json` · `src/styles/global.css` · `src/pages/wissen/index.astro`
+`src/data/sources.ts` · `src/data/studien.ts` · `src/data/themen.json` (nur `fragen` anhängen) · `CLAIMS.md` (Abschnitt C) · `docs/REDAKTION.md` (Themenliste) · `docs/INDEXIERUNG.md` · `src/data/markt/radar.json` · `docs/RADAR-KANDIDATEN.json` · `src/styles/global.css` · `src/pages/wissen/index.astro`
 
 ## Nur Dominik (PR ja, selbst mergen nein)
 
@@ -79,7 +96,7 @@ Diese Dateien ändern beide Agenten und die Routine. Nur anhängen, nie umsortie
 - Astro-Whitespace: In `.astro`-Dateien nie eine Zeile mit Text enden lassen und die nächste mit `{ausdruck}` oder `<a` beginnen. Astro schluckt das Leerzeichen („Alternativ49 €“). Alles auf eine Zeile schreiben. `check:text` prüft dieses Muster jetzt direkt im Quelltext und zusätzlich den Build-Output.
 - Tailwind 4: Theme-Tokens in `src/styles/global.css` (`@theme` plus CSS-Variablen je `html[data-theme]`). `@apply` mit eigenen Klassen funktioniert nicht, eigene Utilities als `@utility`. Aktives Design ist `d1` (`PUBLIC_THEME`), die übrigen Varianten bleiben wählbar.
 - Schriften selbst gehostet (`@fontsource-variable/*`). Keine externen Requests außer Tally und Plausible. Keine Cookies. Kommt ein Dienst mit Cookies dazu, braucht es ein Consent-Tool.
-- Artikel-Template: `src/pages/wissen/[slug].astro`. Vorlage für neue Artikel: `src/content/wissen/kreatin-abnehmspritze.md`.
+- Artikel-Template: `src/components/ArticlePage.astro`, Themenseiten: `src/components/HubPage.astro`; beide laufen über die Route `src/pages/wissen/[slug].astro`. Vorlage für neue Artikel: `src/content/wissen/kreatin-abnehmspritze.md`.
 - Nach dem Merge eines neuen Artikels meldet der IndexNow-Workflow die URL an Bing. Google nur manuell in der Search Console (Dominik). Neue oder wesentlich geänderte URLs kommen als Zeile mit Status `offen` in `docs/INDEXIERUNG.md`.
 
 ## Bei Unsicherheit

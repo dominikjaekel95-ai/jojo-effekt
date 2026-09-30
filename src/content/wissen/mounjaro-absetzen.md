@@ -29,7 +29,7 @@ Mounjaro ist die Abnehmspritze mit dem größten Gewichtsverlust in den Zulassun
 
 Mounjaro enthält Tirzepatid, einen Wirkstoff, der gleichzeitig an zwei Rezeptoren ansetzt, GIP und GLP-1. Es ist in der EU zur Behandlung des Typ-2-Diabetes und zur Gewichtsregulierung zugelassen, bei einem BMI ab 30 oder ab 27 mit Begleiterkrankungen, ergänzend zu Ernährung und Bewegung.<sup><a href="#fn-fachinfoMounjaro">1</a></sup> Laut Fachinformation gibt es sechs Dosisstufen von 2,5 bis 15 mg pro Woche; welche Stufe wann passt, legt die Ärztin fest. In der Zulassungsstudie SURMOUNT-1 verloren die Teilnehmenden in 72 Wochen im Mittel 15,0 % (5 mg), 19,5 % (10 mg) und 20,9 % (15 mg), unter Placebo 3,1 %.<sup><a href="#fn-jastreboff2022">2</a></sup> Im direkten Vergleich SURMOUNT-5 lag der Verlust unter Tirzepatid bei 20,2 %, unter Semaglutid 2,4 mg bei 13,7 %.<sup><a href="#fn-aronne2025surmount5">4</a></sup>
 
-Selbstzahler zahlen je nach Dosis etwa 210 bis 480 € im Monat; die gesetzlichen Kassen übernehmen Mounjaro zur Gewichtsreduktion in der Regel nicht.
+Selbstzahler zahlen je nach Dosis etwa 210 bis 480 € im Monat; die gesetzlichen Kassen übernehmen Mounjaro zur Gewichtsreduktion in der Regel nicht. Eine Tablettenform von Tirzepatid gibt es nicht; Lillys Tablette Orforglipron ist in der EU nicht zugelassen. Was für Abnehmpillen beim Absetzen gilt, steht unter [Abnehmpille absetzen](/wissen/abnehmpille-absetzen/).
 
 ## Wie lange Mounjaro nachwirkt: schneller weg als Semaglutid
 

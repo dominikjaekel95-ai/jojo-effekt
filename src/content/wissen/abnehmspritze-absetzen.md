@@ -83,7 +83,7 @@ Vieles, was Menschen nach dem Absetzen bemerken, ist nicht das Verschwinden eine
 - **Puls und Schlaf:** Manche berichten unter der Therapie einen leicht erhöhten Ruhepuls, der nach dem Absetzen zurückgeht. Systematisch untersucht ist das für die Zeit danach nicht.
 - **Kein Entzugssyndrom.** Zittern, Schwitzen, Unruhe als Absetzreaktion sind für GLP-1-Rezeptoragonisten nicht beschrieben. Treten sie auf, vor allem bei Diabetes, ist eine Unterzuckerung durch andere Medikamente die wahrscheinlichere Ursache; das gehört sofort in die Praxis.
 
-Präparatspezifische Verläufe: [Wegovy](/wissen/wegovy-absetzen/), [Mounjaro](/wissen/mounjaro-absetzen/), [Ozempic](/wissen/ozempic-absetzen/), [Saxenda](/wissen/saxenda-absetzen/).
+Präparatspezifische Verläufe: [Wegovy](/wissen/wegovy-absetzen/), [Mounjaro](/wissen/mounjaro-absetzen/), [Ozempic](/wissen/ozempic-absetzen/), [Saxenda](/wissen/saxenda-absetzen/). Die Zahlen in diesem Artikel stammen aus Studien mit Spritzen; für die Wegovy-Tablette sind sie noch nicht untersucht, siehe [Abnehmpille absetzen](/wissen/abnehmpille-absetzen/).
 
 ## Wiedereinstieg: was die Daten sagen
 

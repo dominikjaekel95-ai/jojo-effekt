@@ -401,6 +401,62 @@ export const sources: Record<string, Source> = {
     url: 'https://doi.org/10.1242/dmm.008698',
     note: 'Übersicht der Modelle zur Gewichtsregulation: Set Point, Settling Point und Mischmodelle.',
   },
+  wharton2025oasis4: {
+    id: 'wharton2025oasis4',
+    short: 'Wharton et al., OASIS 4, N Engl J Med 2025',
+    full: 'Wharton S, et al. Oral Semaglutide at a Dose of 25 mg in Adults with Overweight or Obesity. N Engl J Med. 2025;393(11):1077–1087.',
+    url: 'https://doi.org/10.1056/NEJMoa2500969',
+    note: 'Zulassungsstudie der Semaglutid-Tablette 25 mg: 307 Teilnehmende ohne Diabetes; nach 64 Wochen −13,6 % gegenüber −2,2 % unter Placebo, bei durchgehender Einnahme −16,6 %. Gewichtsdaten nach dem Ende der Einnahme berichtet die Studie nicht.',
+  },
+  knop2023oasis1: {
+    id: 'knop2023oasis1',
+    short: 'Knop et al., OASIS 1, Lancet 2023',
+    full: 'Knop FK, Aroda VR, do Vale RD, et al. Oral semaglutide 50 mg taken once per day in adults with overweight or obesity (OASIS 1): a randomised, double-blind, placebo-controlled, phase 3 trial. Lancet. 2023;402(10403):705–719.',
+    url: 'https://doi.org/10.1016/S0140-6736(23)01185-6',
+    note: 'Semaglutid-Tablette 50 mg: nach 68 Wochen −15,1 % gegenüber −2,4 % unter Placebo. Die 50-mg-Tablette kam nicht auf den Markt; zugelassen wurde die 25-mg-Tablette (OASIS 4).',
+  },
+  wharton2025attain1: {
+    id: 'wharton2025attain1',
+    short: 'Wharton et al., ATTAIN-1, N Engl J Med 2025',
+    full: 'Wharton S, et al. Orforglipron, an Oral Small-Molecule GLP-1 Receptor Agonist for Obesity Treatment. N Engl J Med. 2025;393(18):1796–1806.',
+    url: 'https://doi.org/10.1056/NEJMoa2511774',
+    note: 'Orforglipron (Eli Lilly), 3.127 Teilnehmende ohne Diabetes: nach 72 Wochen −12,4 % unter 36 mg (Wirksamkeitsschätzer) gegenüber Placebo. In der EU nicht zugelassen (Stand September 2026).',
+  },
+  fachinfoRybelsus: {
+    id: 'fachinfoRybelsus',
+    short: 'Fachinformation Rybelsus (EMA-Produktinformation)',
+    full: 'Europäische Arzneimittel-Agentur. Rybelsus (Semaglutid, Tabletten): Zusammenfassung der Merkmale des Arzneimittels. Amsterdam: EMA.',
+    url: 'https://www.ema.europa.eu/en/medicines/human/EPAR/rybelsus',
+    note: 'Semaglutid-Tablette für Typ-2-Diabetes, EU-Zulassung 2020. Einnahme einmal täglich nüchtern; nur ein kleiner Teil des Wirkstoffs wird aufgenommen; Eliminationshalbwertszeit etwa eine Woche, wie bei der Injektion.',
+  },
+  ecWegovyTablette2026: {
+    id: 'ecWegovyTablette2026',
+    short: 'Novo Nordisk: EU-Zulassung der Wegovy-Tablette, Juli 2026',
+    full: 'Novo Nordisk. Novo Nordisk receives European Commission approval of Wegovy pill as first oral GLP-1 for weight management in the EU. Pressemitteilung, 15. Juli 2026.',
+    url: 'https://www.biospace.com/press-releases/novo-nordisk-receives-european-commission-approval-of-wegovy-pill-as-first-oral-glp-1-for-weight-management-in-the-eu-single-ready-to-use-pen-for-higher-dose-7-2-mg-also-approved',
+    note: 'Herstellermitteilung zur Zulassung der Semaglutid-Tablette 25 mg (einmal täglich) nach positiver CHMP-Empfehlung im Mai 2026. Für Studienzahlen gilt die Originalpublikation (OASIS 4).',
+  },
+  tabletteApotheken2026: {
+    id: 'tabletteApotheken2026',
+    short: 'Euronews: Wegovy-Tablette in deutschen Apotheken, September 2026',
+    full: 'Euronews Health. Weight-loss pill Wegovy available in German pharmacies from 1 September. 2. September 2026.',
+    url: 'https://www.euronews.com/health/2026/09/02/weight-loss-pill-wegovy-available-in-german-pharmacies-from-1-september',
+    note: 'Marktstart in Deutschland am 1. September 2026, verschreibungspflichtig, für Selbstzahler. Preise zum Marktstart nur als Größenordnung; aktueller Stand im Marktradar.',
+  },
+  fdaOrforglipron2026: {
+    id: 'fdaOrforglipron2026',
+    short: 'Eli Lilly: FDA-Zulassung von Orforglipron (Foundayo), April 2026',
+    full: 'Eli Lilly and Company. FDA approves Lilly’s Foundayo (orforglipron). Pressemitteilung, April 2026.',
+    url: 'https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill',
+    note: 'US-Zulassung für Erwachsene mit Adipositas oder Übergewicht mit Begleiterkrankung; tägliche Tablette ohne Nüchternregel. Keine EU-Zulassung (Stand September 2026).',
+  },
+  medipreis2026: {
+    id: 'medipreis2026',
+    short: 'Preisvergleich medipreis.de, September 2026',
+    full: 'medipreis.de. Preisvergleich für Wegovy, Mounjaro und Ozempic (niedrigster Versandpreis, gerundet). Abgerufen am 30. September 2026.',
+    url: 'https://www.medipreis.de/',
+    note: 'Größenordnung für Selbstzahler; Tagespreise schwanken. Laufend aktualisierter Stand mit Datum im Marktradar (/marktradar/#preise).',
+  },
 };
 
 export function getSources(ids: readonly string[]): Source[] {

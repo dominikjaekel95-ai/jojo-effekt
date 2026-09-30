@@ -6,8 +6,8 @@ category: "Präparate"
 order: 7
 pubDate: 2026-09-30
 keywords: ["wegovy absetzen", "wegovy absetzen gewicht", "wegovy absetzen jojo", "wegovy absetzen was passiert", "wegovy ausschleichen", "wegovy halbwertszeit", "wegovy absetzen erfahrungen"]
-sources: ["fachinfoWegovy", "wilding2021step1", "wilding2022ext", "rubino2021", "wu2025", "jensen2024", "leidy2015", "who2020"]
-related: ["abnehmspritze-absetzen", "gewicht-halten-nach-abnehmspritze", "mounjaro-absetzen"]
+sources: ["fachinfoWegovy", "wilding2021step1", "wilding2022ext", "rubino2021", "wu2025", "jensen2024", "leidy2015", "who2020", "tabletteApotheken2026", "wharton2025oasis4"]
+related: ["abnehmspritze-absetzen", "abnehmpille-absetzen", "gewicht-halten-nach-abnehmspritze"]
 faq:
   - q: "Wie lange bleibt Wegovy nach der letzten Spritze im Körper?"
     a: "<p>Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche. Nach rund fünf Wochen ist der größte Teil abgebaut, nach etwa sieben Wochen fast alles. Die Wirkung auf den Appetit lässt schon in der zweiten und dritten Woche spürbar nach.</p>"
@@ -30,6 +30,10 @@ Wegovy ist die Abnehmspritze, die in Deutschland am häufigsten für die Gewicht
 Wegovy enthält Semaglutid, einen GLP-1-Rezeptoragonisten, und ist in der EU seit 2022 zur Gewichtsregulierung zugelassen: bei einem BMI ab 30, oder ab 27 mit gewichtsbedingten Begleiterkrankungen, jeweils ergänzend zu Ernährungsumstellung und Bewegung.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Laut Fachinformation gibt es fünf Dosisstufen von 0,25 bis 2,4 mg pro Woche; welche Stufe wann passt, legt die Ärztin fest. In der Zulassungsstudie STEP 1 verloren die Teilnehmenden in 68 Wochen im Mittel 14,9 % ihres Gewichts, unter Placebo 2,4 %.<sup><a href="#fn-wilding2021step1">2</a></sup>
 
 Die gesetzlichen Krankenkassen zahlen Wegovy in der Regel nicht; die Kosten für Selbstzahler liegen je nach Dosis etwa zwischen 170 und 280 € im Monat. Das ist einer der häufigsten Gründe fürs Absetzen.
+
+## Gilt das auch für die Wegovy-Tablette?
+
+Seit dem 1. September 2026 gibt es Semaglutid auch als Wegovy-Tablette mit 25 mg, einmal täglich.<sup><a href="#fn-tabletteApotheken2026">9</a></sup> Für die Zeit danach gilt: gleicher Wirkstoff, gleiche Halbwertszeit von etwa einer Woche, also dieselbe Auswaschphase von fünf bis sieben Wochen.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Absetz-Daten gibt es aber nur für die Spritze; die Zulassungsstudie der Tablette, OASIS 4, berichtet keine Gewichtsdaten nach dem Ende der Einnahme.<sup><a href="#fn-wharton2025oasis4">10</a></sup> Alles, was in diesem Artikel über STEP 1 und STEP 4 steht, ist für die Tablette deshalb ein Übertrag, keine Messung. Was sich übertragen lässt und was nicht, steht unter [Abnehmpille absetzen](/wissen/abnehmpille-absetzen/); der Vergleich beider Formen unter [Abnehmpille oder Spritze](/wissen/abnehmpille-oder-spritze/).
 
 ## Wie lange Wegovy nachwirkt
 

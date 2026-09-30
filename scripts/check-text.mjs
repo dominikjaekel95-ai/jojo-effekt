@@ -32,8 +32,9 @@ const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => e.
 const decode = (s) => s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ');
 const forbidden = [
   [/fachlich gepr[üu]ft/i, '„fachlich geprüft“ ohne Prüfer'],
-  [/verhindert den jojo/i, 'verbotener Claim „verhindert den Jojo-Effekt“'],
-  [/ersetzt die (abnehm)?spritze/i, 'verbotener Claim „ersetzt die Spritze“'],
+  // Verneinungen („verhindert den Jojo-Effekt nicht“) sind erlaubt und ausgenommen
+  [/verhindert den jojo-effekt(?! nicht)/i, 'verbotener Claim „verhindert den Jojo-Effekt“'],
+  [/(?<!weder )ersetzt die (abnehm)?spritze(?! nicht)/i, 'verbotener Claim „ersetzt die Spritze“'],
   [/von [äa]rzt(en|innen) empfohlen/i, 'verbotener Claim „von Ärzten empfohlen“'],
   [/kurbelt den stoffwechsel/i, 'verbotener Claim „Stoffwechsel ankurbeln“'],
   [/\[(vorname|qualifikation|plz|straße|link)/i, 'Platzhalter'],

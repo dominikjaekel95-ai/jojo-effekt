@@ -1,6 +1,6 @@
 ---
 title: "Heißhunger nach dem Absetzen der Abnehmspritze: Warum er kommt und was hilft"
-metaTitle: "Heißhunger nach dem Absetzen der Abnehmspritze: Ursachen, 7 Hilfen"
+metaTitle: "Heißhunger nach dem Absetzen der Abnehmspritze: was hilft"
 description: "Nach der letzten Dosis kommt der Hunger zurück, oft als Heißhunger. Was im Körper passiert, wann es am schlimmsten ist und sieben Dinge, die nachweislich helfen."
 category: "Absetzen"
 order: 14

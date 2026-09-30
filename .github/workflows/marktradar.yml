@@ -1,10 +1,12 @@
 name: Marktradar (automatischer Abruf)
 
-# Montags früh: PubMed, BfArM-Lieferengpässe und EMA-Meldungen abrufen (scripts/marktradar-fetch.mjs),
-# Ergebnis committen. Lieferbarkeit erscheint direkt auf /marktradar/ (Zählung mit Datum); Studien und
-# Behördenmeldungen landen nur als Kandidaten in docs/RADAR-KANDIDATEN.json und werden von der
-# Redaktions-Routine geprüft, bevor daraus ein Eintrag wird. Vor dem Commit wird gebaut, damit kein
-# ungültiges JSON auf den Produktions-Branch gelangt.
+# Montags früh: PubMed, ClinicalTrials.gov, EMA und BfArM abrufen (scripts/marktradar-fetch.mjs). Das Ergebnis
+# (Lieferbarkeits-Zählung, Kandidatenliste) geht als Pull Request an den Produktions-Branch; Dominik mergt mit
+# einem Klick. Kein Token mit Schreibrecht auf Produktion nötig: der normale GITHUB_TOKEN pusht nur einen Branch
+# und öffnet den PR. Voraussetzung: Repo → Settings → Actions → General → „Allow GitHub Actions to create and
+# approve pull requests“ ist an. Sonst bleibt der Branch stehen und das Protokoll nennt ihn.
+# Nichts aus dem Abruf wird ungeprüft veröffentlicht: Studien und Behördenmeldungen sind nur Kandidaten, die die
+# Dienstags-Routine prüft. Vor dem Commit wird gebaut, damit kein ungültiges JSON in den PR gelangt.
 on:
   schedule:
     - cron: '30 5 * * 1'
@@ -12,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: marktradar
@@ -22,25 +25,42 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      # MARKTRADAR_TOKEN: Fine-grained Personal Access Token von Dominik (Repository-Admin, Berechtigung Contents: write).
-      # Damit gilt der Admin-Bypass des Rulesets für den Push, und der Push löst CI, IndexNow und Vercel aus.
-      # Ohne das Secret wird der GITHUB_TOKEN benutzt; dessen Push blockiert das Ruleset des Produktions-Branches.
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.MARKTRADAR_TOKEN || github.token }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - name: Abrufen
-        run: node scripts/marktradar-fetch.mjs
+        run: node scripts/marktradar-fetch.mjs | tee radar-run.log
       - name: Build prüfen
         run: npm ci && npm run build
-      - name: Änderungen committen
+      - name: Pull Request öffnen
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "marktradar-bot"
           git config user.email "marktradar-bot@users.noreply.github.com"
           git add src/data/markt/lieferbarkeit.json docs/RADAR-KANDIDATEN.json
           if git diff --cached --quiet; then echo "Keine Änderungen."; exit 0; fi
-          git commit -m "Marktradar: automatischer Abruf $(date -u +%F)"
-          git push
+          STAMP="$(date -u +%F)"
+          BRANCH="marktradar/abruf-${STAMP}-$(date -u +%H%M)"
+          git checkout -b "$BRANCH"
+          git commit -m "Marktradar: automatischer Abruf ${STAMP}"
+          git push -u origin "$BRANCH"
+          {
+            echo "## Was ändert sich"
+            echo
+            echo "Automatischer Abruf vom ${STAMP}: Lieferbarkeits-Zählung (\`src/data/markt/lieferbarkeit.json\`) und neue Kandidaten (\`docs/RADAR-KANDIDATEN.json\`). Es wird nichts als Text veröffentlicht; die Kandidaten prüft die Dienstags-Routine."
+            echo
+            echo '```'
+            tail -n 20 radar-run.log
+            echo '```'
+            echo
+            echo "## Checkliste"
+            echo
+            echo "- [x] Build im Workflow grün (JSON gültig)"
+            echo "- [x] Keine URL, kein Titel, kein Artikeltext geändert"
+            echo "- [ ] Merge durch Dominik (Ruleset: Pull Request erforderlich)"
+          } > pr-body.md
+          gh pr create --base "${{ github.ref_name }}" --head "$BRANCH" --title "Marktradar: automatischer Abruf ${STAMP}" --body-file pr-body.md \
+            || echo "::warning::Pull Request konnte nicht erstellt werden. Branch ${BRANCH} ist gepusht; in Repo → Settings → Actions → General die Option „Allow GitHub Actions to create and approve pull requests“ einschalten oder den PR von Hand öffnen."

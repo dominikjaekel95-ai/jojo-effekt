@@ -1,8 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
-const title = 'Über uns: Wer hinter Nach der Spritze steht';
-const description = 'Wer die Seite macht, wie wir arbeiten, welche Quellen wir nutzen und was wir nicht behaupten. Ein Projekt aus Berlin, jede Zahl mit Quelle.';
+const title = 'Über diese Seite';
+const description = 'Nach der Spritze ist ein Prototyp im Umfeld eines Longevity-Projekts im Medtech-Bereich. Wie die Seite arbeitet, welche Quellen sie nutzt und was sie nicht behauptet.';
 const jsonLd = [
   { '@type': 'AboutPage', name: title, url: `${site.url}/ueber/`, isPartOf: { '@id': `${site.url}/#website` } },
   { '@type': 'Person', '@id': `${site.url}/ueber/#dominik`, name: site.owner.name, jobTitle: 'Gründer', worksFor: { '@id': `${site.url}/#organization` } },
@@ -11,39 +11,35 @@ const jsonLd = [
 ---
 <Base title={title} description={description} path="/ueber/" jsonLd={jsonLd}>
   <section class="container-narrow py-14">
-    <p class="eyebrow">Über uns</p>
-    <h1 class="h1 mt-3">Wer hinter Nach der Spritze steht</h1>
+    <p class="eyebrow">Über diese Seite</p>
+    <h1 class="h1 mt-3">Ein Prototyp, öffentlich getestet</h1>
     <div class="prose-site mt-6">
       <p>
-        Nach der Spritze ist ein Projekt von {site.owner.name} aus {site.owner.city}. Die Idee kam aus Gesprächen mit Menschen,
-        die die Abnehmspritze absetzen wollten oder mussten und keine Antwort auf die Frage fanden: Und jetzt? Die Antwort, die
-        wir bauen, ist ein 12-Wochen-Set aus Protein, Ballaststoffen, Kreatin und einem Trainingsprogramm. Ob es das Set geben
-        wird, hängt davon ab, ob genug Menschen es vorbestellen. Deshalb diese Seite.
+        Nach der Spritze ist ein Prototyp: ein Wissensbereich zur Zeit nach der Abnehmspritze und ein Vorbestell-Test für ein
+        12-Wochen-Set. Er entsteht im Umfeld eines größeren Longevity-Projekts im Medtech-Bereich, das ich gemeinsam mit
+        ehemaligen Kommilitonen vom Hasso-Plattner-Institut vorbereite. Alles Weitere ist noch Skizze. Diese Seite ist der Teil,
+        der bereits öffentlich ist, weil sich Ideen am besten an echten Fragen prüfen lassen.
       </p>
-      <h2>Wie wir arbeiten</h2>
+      <p>
+        Falls du meinen Namen gesucht hast und hier gelandet bist: Das Marketing funktioniert offenbar besser als geplant.
+        Willkommen trotzdem.
+      </p>
+      <h2>Wie diese Website arbeitet</h2>
       <ul>
-        <li><strong>Jede Zahl hat eine Quelle.</strong> Wir zitieren Originalstudien (STEP, SURMOUNT, S-LiTE, Meta-Analysen), keine Pressemeldungen über Studien. Die Quellen stehen unter jedem Artikel mit Link.</li>
+        <li><strong>Jede Zahl hat eine Quelle.</strong> Zitiert werden Originalstudien (STEP, SURMOUNT, S-LiTE, Meta-Analysen), keine Pressemeldungen über Studien. Die Quellen stehen mit Link unter jedem Artikel.</li>
         {site.reviewer ? (
           <li><strong>Fachliche Prüfung.</strong> Alle Aussagen zu Ernährung, Training und gesundheitsbezogenen Angaben prüft {site.reviewer.name} ({site.reviewer.title}).</li>
         ) : (
-          <li><strong>Noch keine fachliche Gegenprüfung.</strong> Die Artikel sind bisher nicht von einer Ernährungswissenschaftlerin oder einem Ernährungswissenschaftler geprüft. Bis das erfolgt ist, gilt: Jede Zahl steht mit Link zur Originalstudie da, und wir schreiben nichts, was nicht in der Quelle steht.</li>
+          <li><strong>Noch keine fachliche Gegenprüfung.</strong> Die Artikel sind bisher nicht von einer Ernährungswissenschaftlerin oder einem Ernährungswissenschaftler geprüft. Bis dahin steht nichts auf der Seite, was nicht in der zitierten Quelle steht.</li>
         )}
-        <li><strong>Nur zugelassene Angaben zum Set.</strong> Was wir über Protein, Kreatin und Ballaststoffe sagen, entspricht den in der EU zugelassenen gesundheitsbezogenen Angaben. Wir behaupten nicht, dass das Set die Spritze ersetzt oder den Jojo-Effekt verhindert.</li>
-        <li><strong>Keine Medikamentenberatung.</strong> Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt. Wir geben keine Dosierungen und keine Absetz-Anleitungen.</li>
-        <li><strong>Aktualisierung.</strong> Wenn neue Studien erscheinen, aktualisieren wir die Artikel und vermerken das Datum.</li>
+        <li><strong>Nur zugelassene Angaben zum Set.</strong> Was über Protein, Kreatin und Ballaststoffe gesagt wird, entspricht den in der EU zugelassenen gesundheitsbezogenen Angaben. Das Set ersetzt weder die Spritze noch verhindert es den Jojo-Effekt, und beides wird hier auch nicht behauptet.</li>
+        <li><strong>Keine Medikamentenberatung.</strong> Ob und wie jemand ein Medikament absetzt, ist Sache der behandelnden Ärztin oder des Arztes. Diese Seite gibt keine Dosierungen und keine Absetz-Anleitungen.</li>
+        <li><strong>Unabhängig.</strong> Kein Hersteller von Medikamenten oder Nahrungsergänzungen finanziert diese Seite. Wenn das Set produziert wird, wird es hier direkt verkauft.</li>
+        <li><strong>Aktuell.</strong> Erscheinen neue Studien, werden die Artikel aktualisiert und das Datum vermerkt.</li>
       </ul>
       <h2>Wer schreibt</h2>
-      <p><strong>{site.owner.name}</strong> – Gründer. Recherchiert und schreibt die Artikel, baut das Set und beantwortet E-Mails persönlich.</p>
-      {site.reviewer && (<p><strong>{site.reviewer.name}</strong> – {site.reviewer.title}. Fachliche Prüfung aller Inhalte, Festlegung der Mengen (Protein pro kg, Kreatin, Ballaststoffe) und der Liste „Für wen nicht“.</p>)}
-      <h2>Was wir mit Geld zu tun haben</h2>
-      <p>
-        Zwei Dinge, ehrlich benannt. Erstens: Wenn das Set produziert wird, verkaufen wir es selbst. Das ist unser
-        Interessenkonflikt, und wir nennen ihn lieber, als ihn zu verstecken. Zweitens: Am Ende einiger Artikel und auf der
-        Danke-Seite stehen als „Werbung“ gekennzeichnete Amazon-Partnerlinks zu Protein, Kreatin und Ballaststoffen; kaufst du
-        darüber, bekommen wir eine kleine Provision, dein Preis ändert sich nicht. Die Beispiele sind keine Empfehlung einer
-        Marke und tauchen nie auf der Startseite oder in den Studienabschnitten auf. Sonst gibt es keine Werbung und keine
-        Kooperationen mit Herstellern von Medikamenten oder Nahrungsergänzungen.
-      </p>
+      <p><strong>{site.owner.name}</strong>, Gründer. Studium am Hasso-Plattner-Institut. Recherchiert und schreibt die Artikel, entwickelt das Set und beantwortet E-Mails persönlich.</p>
+      {site.reviewer && (<p><strong>{site.reviewer.name}</strong>, {site.reviewer.title}. Fachliche Prüfung aller Inhalte und Festlegung der Mengen.</p>)}
       <h2>Kontakt</h2>
       <p>Fragen, Kritik, Korrekturen: <a href={`mailto:${site.owner.email}`}>{site.owner.email}</a>. Anschrift im <a href="/impressum/">Impressum</a>.</p>
     </div>

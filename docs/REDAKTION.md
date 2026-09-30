@@ -49,6 +49,8 @@ Vorlage: jeder bestehende Artikel, z. B. `src/content/wissen/kreatin-abnehmsprit
 
 Status-Werte: `offen` (frei; die Routine nimmt die obersten drei davon), `in Arbeit · <Name> · <Datum>` (beansprucht, die Routine überspringt es), `live YYYY-MM-DD · <slug>`. Wer ein Thema manuell schreibt, setzt es vorher auf `in Arbeit` und mergt diese Zeile sofort.
 
+Grundsatz für die Reihenfolge (Dominik, 30.09.2026): **Lücken zuerst, Head-Terms später.** Anfragen, die in `docs/SERP-LUECKEN-2026-09-30.md` als STARK oder MITTEL stehen, kommen vor den dichten Head-Terms, die nur mit Autorität zu gewinnen sind. Der Abnehmpillen-Cluster (Themen 4 bis 8) hat Vorrang: Die Wegovy-Tablette ist seit September 2026 auf dem Markt, das Suchvolumen entsteht gerade, und noch hat niemand Absetz-Inhalte dazu; wer im Oktober dort steht, hält die Plätze. Neue Themen kommen unten an die Liste, außer es ist eine STARK-Lücke mit Produktbezug; die kommt direkt hinter den Pillen-Cluster. Nie ein Thema aus der Mitte vorziehen, nur weil es leichter ist.
+
 | # | Thema / Arbeitstitel | Hauptkeyword | Warum | Status |
 |---|---|---|---|---|
 | 1 | Krafttraining nach der Abnehmspritze: 30-Minuten-Plan | krafttraining nach abnehmspritze | Lücke, führt ins Programm | live 2026-10-01 · krafttraining-nach-abnehmspritze |

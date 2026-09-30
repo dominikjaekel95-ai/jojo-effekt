@@ -5,15 +5,17 @@
  * Checkliste WOxpjv) den Datensatz an POST https://nachderspritze.de/api/newsletter/. Die Funktion
  *  1. prüft die Signatur (Header `tally-signature`, HMAC-SHA256 über den Rohtext, Base64) gegen TALLY_SIGNING_SECRET,
  *  2. nimmt nur Einträge, bei denen das Kästchen „Newsletter“ gesetzt ist; alles andere wird mit 200 quittiert und ignoriert,
- *  3. legt die Adresse bei MailerLite mit Status `unconfirmed` in der Gruppe MAILERLITE_GROUP_ID an. Double-Opt-in ist im
- *     MailerLite-Konto aktiv; die Bestätigungs-Mail verschickt MailerLite selbst. Bereits aktive Adressen werden nur der
- *     Gruppe hinzugefügt, abgemeldete bleiben abgemeldet (nichts wird automatisch reaktiviert).
+ *  3. legt die Adresse bei MailerLite mit Status `unconfirmed` in der Gruppe „Newsletter“ an, aus dem Checklisten-Formular
+ *     zusätzlich in der Gruppe „Checkliste“. Double-Opt-in ist im MailerLite-Konto aktiv; die Bestätigungs-Mail verschickt
+ *     MailerLite selbst. Bereits aktive Adressen werden nur den Gruppen hinzugefügt, abgemeldete bleiben abgemeldet (nichts
+ *     wird automatisch reaktiviert).
  *
- * Umgebungsvariablen (Vercel → Project → Settings → Environment Variables, nie ins Repo):
- *   MAILERLITE_API_KEY     Pflicht. MailerLite → Integrations → API.
- *   MAILERLITE_GROUP_ID    Pflicht. Gruppe „Newsletter“; ID steht in der URL der Gruppe.
- *   TALLY_SIGNING_SECRET   Dringend empfohlen. Derselbe Wert in allen drei Tally-Webhooks („Signing secret“). Ohne ihn
- *                          nimmt die Funktion jeden POST an.
+ * Umgebungsvariablen (Vercel → Project → Settings → Environment Variables, nie ins Repo; Werte in docs/NEWSLETTER-SETUP.md):
+ *   MAILERLITE_API_KEY            Pflicht. MailerLite → Integrations → API.
+ *   MAILERLITE_GROUP_NEWSLETTER   Pflicht. ID der Gruppe „Newsletter“ (ersatzweise MAILERLITE_GROUP_ID).
+ *   MAILERLITE_GROUP_CHECKLISTE   Optional. ID der Gruppe „Checkliste“; nur Einträge aus WOxpjv kommen zusätzlich hinein.
+ *   TALLY_SIGNING_SECRET          Dringend empfohlen. Derselbe Wert in allen drei Tally-Webhooks („Signing secret“). Ohne ihn
+ *                                 nimmt die Funktion jeden POST an.
  *
  * Es werden keine E-Mail-Adressen geloggt, nur Formular-ID und Ergebnis. Spezifikation: docs/NEWSLETTER.md.
  */
@@ -71,21 +73,35 @@ async function mailerlite(path, init = {}) {
   });
 }
 
-/** Adresse anlegen oder der Gruppe hinzufügen. Gibt ein Ergebnisobjekt für das Log zurück. */
-export async function subscribe({ email, source }, groupId) {
+/** Gruppen je Formular: „Newsletter“ für alle, „Checkliste“ zusätzlich für Einträge aus WOxpjv. */
+export function groupsFor(formId) {
+  const newsletter = process.env.MAILERLITE_GROUP_NEWSLETTER || process.env.MAILERLITE_GROUP_ID || '';
+  const checkliste = process.env.MAILERLITE_GROUP_CHECKLISTE || '';
+  const groups = newsletter ? [newsletter] : [];
+  if (formId === 'WOxpjv' && checkliste) groups.push(checkliste);
+  return groups;
+}
+
+/** Adresse anlegen oder den Gruppen hinzufügen. Gibt ein Ergebnisobjekt für das Log zurück. */
+export async function subscribe({ email, source }, groups) {
   const lookup = await mailerlite(`/subscribers/${encodeURIComponent(email)}`);
   if (lookup.status === 200) {
     const { data } = await lookup.json();
     if (data.status === 'active' || data.status === 'unconfirmed') {
-      const add = await mailerlite(`/subscribers/${data.id}/groups/${groupId}`, { method: 'POST' });
-      return { outcome: add.ok ? 'gruppe' : 'fehler', status: add.status };
+      let status = 200;
+      for (const groupId of groups) {
+        const add = await mailerlite(`/subscribers/${data.id}/groups/${groupId}`, { method: 'POST' });
+        if (!add.ok) return { outcome: 'fehler', status: add.status };
+        status = add.status;
+      }
+      return { outcome: 'gruppe', status };
     }
     // unsubscribed, bounced, junk: nicht automatisch reaktivieren
     return { outcome: 'uebersprungen', status: data.status };
   }
   if (lookup.status !== 404) return { outcome: 'fehler', status: lookup.status };
 
-  const body = { email, status: 'unconfirmed', groups: [groupId], fields: { quelle: source } };
+  const body = { email, status: 'unconfirmed', groups, fields: { quelle: source } };
   let create = await mailerlite('/subscribers', { method: 'POST', body: JSON.stringify(body) });
   if (create.status === 422) {
     // Feld `quelle` existiert im Konto nicht: ohne Feld anlegen, damit die Anmeldung nicht verloren geht
@@ -116,13 +132,13 @@ export async function POST(request) {
     console.log(`newsletter: ${t.formId || '?'} Häkchen gesetzt, aber keine gültige E-Mail-Adresse`);
     return Response.json({ ok: true, skipped: 'email' });
   }
-  const groupId = process.env.MAILERLITE_GROUP_ID;
-  if (!process.env.MAILERLITE_API_KEY || !groupId) {
-    console.error('newsletter: MAILERLITE_API_KEY oder MAILERLITE_GROUP_ID fehlt');
+  const groups = groupsFor(t.formId);
+  if (!process.env.MAILERLITE_API_KEY || groups.length === 0) {
+    console.error('newsletter: MAILERLITE_API_KEY oder MAILERLITE_GROUP_NEWSLETTER fehlt');
     return Response.json({ ok: false, error: 'config' }, { status: 500 });
   }
   try {
-    const r = await subscribe(t, groupId);
+    const r = await subscribe(t, groups);
     console.log(`newsletter: ${t.formId} (${t.source}) → ${r.outcome} (${r.status})`);
     return Response.json({ ok: r.outcome !== 'fehler', ...r }, { status: r.outcome === 'fehler' ? 502 : 200 });
   } catch (err) {

@@ -52,12 +52,16 @@ export const site = {
   experienceForm: { id: 'ODOJWR', live: true },
   // Checkliste „Die ersten 8 Wochen nach der letzten Dosis“: Tally-Formular WOxpjv (Spezifikation in docs/NEWSLETTER.md).
   // `live` erst auf true setzen, wenn das Formular in Tally veröffentlicht ist; vorher bietet /checkliste/ den Weg per E-Mail.
-  checklistForm: { id: 'WOxpjv', live: false },
+  checklistForm: { id: 'WOxpjv', live: true },
   // Newsletter: Das optionale Kästchen „Newsletter“ steht seit 30.09.2026 in den Tally-Formularen (Vorbestellung, Erfahrungen,
-  // Checkliste) und sammelt Einwilligungen. `provider` erst eintragen, wenn der Versanddienst mit Double-Opt-in eingerichtet ist;
-  // vorher wird nichts verschickt, und Datenschutz sowie Danke-Seiten sagen das (docs/NEWSLETTER.md).
+  // Checkliste). Versand über MailerLite mit Double-Opt-in, Übergabe per api/newsletter.js (docs/NEWSLETTER.md,
+  // docs/NEWSLETTER-SETUP.md). `provider` auf null setzen, falls der Versand pausiert; Datenschutz und Danke-Seiten folgen.
   newsletter: {
-    provider: null as null | { name: string; address: string; url: string },
+    provider: {
+      name: 'MailerLite',
+      address: 'MailerLite Limited, Ground Floor, 71 Lower Baggot Street, Dublin 2, D02 P593, Irland',
+      url: 'https://www.mailerlite.com/legal/privacy-policy',
+    } as null | { name: string; address: string; url: string },
     cadence: 'etwa alle zwei Wochen',
   },
   // Plausible-Site-Skript-ID (Plausible → Site → Settings → Site installation, Teil hinter /js/ ohne .js). Leerstring = kein Tracking.

@@ -15,9 +15,10 @@ const jsonLd = [
     <h1 class="h1 mt-3">Ein Prototyp, öffentlich getestet</h1>
     <div class="prose-site mt-6">
       <p>
-        Nach der Spritze ist ein Prototyp: ein Wissensbereich zur Zeit nach der Abnehmspritze und ein Vorbestell-Test für ein
-        12-Wochen-Set. Er entsteht im Umfeld eines größeren Longevity-Projekts im Medtech-Bereich, das ich gemeinsam mit
-        ehemaligen Kommilitonen vom Hasso-Plattner-Institut vorbereite. Alles Weitere ist noch Skizze. Diese Seite ist der Teil,
+        Nach der Spritze ist ein Prototyp: ein Wissensbereich zur Zeit nach der Abnehmspritze und zu allgemeinen
+        Gesundheitsdaten. Er entsteht im Umfeld eines größeren Longevity-Projekts im Medtech-Bereich, das ich gemeinsam mit
+        ehemaligen Kommilitonen vom Hasso-Plattner-Institut vorbereite. Alles Weitere ist noch Skizze; die Interaktionen der
+        Nutzer mit dieser Website sollen uns helfen, bessere Produkte in diesem Bereich zu planen. Diese Seite ist der Teil,
         der bereits öffentlich ist, weil sich Ideen am besten an echten Fragen prüfen lassen.
       </p>
       <p>
@@ -38,7 +39,7 @@ const jsonLd = [
         <li><strong>Aktuell.</strong> Erscheinen neue Studien, werden die Artikel aktualisiert und das Datum vermerkt.</li>
       </ul>
       <h2>Wer schreibt</h2>
-      <p><strong>{site.owner.name}</strong>, Gründer. Studium am Hasso-Plattner-Institut. Recherchiert und schreibt die Artikel, entwickelt das Set und beantwortet E-Mails persönlich.</p>
+      <p><strong>{site.owner.name}</strong>, Gründer. Studium am Hasso-Plattner-Institut, erfahrener Marketingprofi. Beantwortet E-Mails persönlich.</p>
       {site.reviewer && (<p><strong>{site.reviewer.name}</strong>, {site.reviewer.title}. Fachliche Prüfung aller Inhalte und Festlegung der Mengen.</p>)}
       <h2>Kontakt</h2>
       <p>Fragen, Kritik, Korrekturen: <a href={`mailto:${site.owner.email}`}>{site.owner.email}</a>. Anschrift im <a href="/impressum/">Impressum</a>.</p>

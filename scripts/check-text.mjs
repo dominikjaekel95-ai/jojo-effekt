@@ -87,7 +87,7 @@ const spacing = [
   [/  /, 'Doppeltes Leerzeichen'],
   [/[a-zäöüß][€%]/, 'Einheit ohne Leerzeichen'],
 ];
-const ignore = (c) => /@|http|M\.Sc|eClinicalMedicine|g\/kg|Stresemannstr|Vita2You|nachderspritz-21|PharmNet|BioSpace|ClinicalTrials|PubMed|KwikPen|FlexTouch|WhatsApp|LinkedIn/.test(c);
+const ignore = (c) => /@|http|M\.Sc|eClinicalMedicine|g\/kg|Stresemannstr|Vita2You|nachderspritz-21|PharmNet|BioSpace|ClinicalTrials|PubMed|KwikPen|FlexTouch|WhatsApp|LinkedIn|MailerLite/.test(c);
 const seen = new Set();
 for (const file of walk(dist)) {
   let raw = fs.readFileSync(file, 'utf8');

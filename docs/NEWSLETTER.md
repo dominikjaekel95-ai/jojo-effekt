@@ -37,17 +37,15 @@ Nach dem Veröffentlichen in `src/data/site.ts` den Schalter setzen: `checklistF
 
 ## 3. Versanddienst: MailerLite mit Double-Opt-in, Übergabe per Webhook
 
-Tally hat keine native MailerLite-Anbindung. Der Weg: Tally-Webhook → Vercel-Funktion `api/newsletter.js` → MailerLite-API `POST /api/subscribers` mit `status: unconfirmed` und der Gruppen-ID. Double-Opt-in ist im MailerLite-Konto aktiv, die Bestätigungs-Mail geht automatisch raus. Die Funktion überträgt nur Einträge mit gesetztem Newsletter-Häkchen, prüft die Tally-Signatur, legt bereits aktive Adressen nur in die Gruppe und reaktiviert keine abgemeldeten. Sie loggt keine E-Mail-Adressen.
+Tally hat keine native MailerLite-Anbindung. Der Weg: Tally-Webhook → Vercel-Funktion `api/newsletter.js` → MailerLite-API `POST /api/subscribers` mit `status: unconfirmed` und den Gruppen-IDs. Double-Opt-in ist im MailerLite-Konto für API und Integrationen aktiv, die Bestätigungs-Mail geht automatisch raus. Die Funktion überträgt nur Einträge mit gesetztem Newsletter-Häkchen, prüft die Tally-Signatur, legt bereits aktive Adressen nur in die Gruppen und reaktiviert keine abgemeldeten. Sie loggt keine E-Mail-Adressen.
 
-### 3a. MailerLite (Dominik)
+Gruppen: alle Einträge kommen in „Newsletter“, Einträge aus dem Checklisten-Formular `WOxpjv` zusätzlich in „Checkliste“. Zusätzlich schreibt die Funktion das Feld `quelle` (vorbestellung, erfahrungen, checkliste), falls es im Konto existiert.
 
-1. Absenderadresse `hallo@nachderspritze.de` verifizieren; bei INWX die von MailerLite genannten DNS-Einträge (DKIM, ggf. DMARC) setzen und SPF ergänzen, damit die Mails nicht im Spam landen.
-2. Auftragsverarbeitungsvertrag im Konto akzeptieren und ablegen.
-3. Gruppe „Newsletter“ anlegen. Die Gruppen-ID steht in der URL der Gruppe.
-4. Feld `quelle` (Text) anlegen; die Funktion schreibt `vorbestellung`, `erfahrungen` oder `checkliste` hinein. Fehlt das Feld, legt sie die Adresse trotzdem an, nur ohne Quelle.
-5. Double-Opt-in-Mail prüfen: Betreff „Bitte bestätige deine Anmeldung“, ein Satz, ein Link, Impressum. Erst wer klickt, ist im Verteiler; MailerLite protokolliert Zeitpunkt und IP der Bestätigung.
-6. Impressum-Block für die Fußzeile jeder Mail: Name, Anschrift, E-Mail aus `src/data/site.ts` (`owner`, `email`), plus Abmeldelink. Pflicht nach § 5 DDG und § 7 UWG.
-7. API-Schlüssel unter Integrations → API erzeugen und nur in Vercel ablegen (3b), nie ins Repo.
+### 3a. MailerLite (Stand und Gruppen-IDs in `docs/NEWSLETTER-SETUP.md`)
+
+Erledigt von der Browser-Instanz am 30.09.2026: Domain authentifiziert (DKIM, SPF bei INWX), Absender `dominik@nachderspritze.de`, Gruppen „Newsletter“ und „Checkliste“, Double-Opt-in für API an, Impressum-Footer aus dem Firmenprofil. Die Bestätigungs-Mail ist im Free-Plan die englische Standardvorlage; deutsch wird sie erst mit dem bezahlten Plan.
+
+Noch offen bei Dominik: Auftragsverarbeitungsvertrag im Konto ablegen; optional Feld `quelle` (Text) anlegen; API-Schlüssel unter Integrations → API erzeugen und nur in Vercel ablegen (3b), nie ins Repo.
 
 ### 3b. Vercel (Dominik)
 
@@ -56,7 +54,8 @@ Project → Settings → Environment Variables, für Production (und Preview, fa
 | Variable | Wert |
 |---|---|
 | `MAILERLITE_API_KEY` | API-Schlüssel aus MailerLite |
-| `MAILERLITE_GROUP_ID` | ID der Gruppe „Newsletter“ |
+| `MAILERLITE_GROUP_NEWSLETTER` | ID der Gruppe „Newsletter“ (siehe `docs/NEWSLETTER-SETUP.md`) |
+| `MAILERLITE_GROUP_CHECKLISTE` | ID der Gruppe „Checkliste“ |
 | `TALLY_SIGNING_SECRET` | frei gewählte lange Zeichenkette; derselbe Wert in allen drei Tally-Webhooks |
 
 Nach dem Eintragen einmal neu deployen (Deployments → Redeploy), damit die Funktion die Werte bekommt.

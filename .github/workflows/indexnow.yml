@@ -7,8 +7,10 @@ on:
     branches: [claude/jojo-effekt-website-launch-5n0nls]
     paths:
       - 'src/content/wissen/**'
+      - 'src/content/glossar/**'
       - 'src/pages/**'
       - 'src/data/studien.ts'
+      - 'src/data/markt/**'
 
 jobs:
   indexnow:
@@ -21,7 +23,7 @@ jobs:
         id: urls
         run: |
           SITE="https://nachderspritze.de"
-          CHANGED=$(git diff --name-only HEAD~1 HEAD -- src/content/wissen src/pages src/data/studien.ts || true)
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- src/content/wissen src/content/glossar src/pages src/data/studien.ts src/data/markt || true)
           URLS=""
           for f in $CHANGED; do
             case "$f" in
@@ -29,6 +31,12 @@ jobs:
                 slug=$(basename "$f" .md)
                 grep -q '^draft: true' "$f" 2>/dev/null && continue
                 URLS="$URLS $SITE/wissen/$slug/";;
+              src/content/glossar/*.md)
+                slug=$(basename "$f" .md)
+                grep -q '^draft: true' "$f" 2>/dev/null && continue
+                URLS="$URLS $SITE/glossar/$slug/ $SITE/glossar/";;
+              src/data/markt/*|src/pages/marktradar/*) URLS="$URLS $SITE/marktradar/";;
+              src/pages/glossar/*) URLS="$URLS $SITE/glossar/";;
               src/pages/wissen/studien.astro|src/data/studien.ts) URLS="$URLS $SITE/wissen/studien/";;
               src/pages/index.astro) URLS="$URLS $SITE/";;
               src/pages/wissen/index.astro) URLS="$URLS $SITE/wissen/";;

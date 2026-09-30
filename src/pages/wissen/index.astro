@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 import { site } from '../../data/site';
 
 const artikel = (await getCollection('wissen', (a) => !a.data.draft)).sort((a, b) => a.data.order - b.data.order);
+const glossarCount = (await getCollection('glossar', (g) => !g.data.draft)).length;
 const title = 'Wissen: Abnehmspritze absetzen, Jojo-Effekt, Muskeln erhalten';
 const description =
   'Was nach der Abnehmspritze passiert und was nachweislich hilft: Jojo-Effekt, Absetzen, Muskelabbau, Protein, Kreatin und ein 12-Wochen-Plan. Jede Zahl mit Link zur Originalstudie.';
@@ -42,6 +43,20 @@ const jsonLd = [
       <p class="mt-2 text-ink-2">Zulassungsstudien, Absetz-Phasen, Meta-Analysen und Mechanismen mit je einer Kernzahl und Link zum Original. Monatlich aktualisiert.</p>
       <p class="mt-4 text-sm font-semibold text-amber-dark">Zur Tabelle →</p>
     </a>
+    <div class="mt-6 grid gap-6 md:grid-cols-2">
+      <a href="/glossar/" class="card group block no-underline hover:border-moss">
+        <p class="eyebrow">Glossar</p>
+        <h2 class="mt-2 text-xl leading-snug text-ink group-hover:text-moss">Begriffe zur Zeit nach der Abnehmspritze</h2>
+        <p class="mt-2 text-sm text-ink-2">Haltephase, Absetzkurve, fettfreie Masse, Halbwertszeit: {glossarCount} Definitionen in je einem Satz, mit Quelle und Link zum passenden Artikel.</p>
+        <p class="mt-4 text-sm font-semibold text-moss">Zum Glossar →</p>
+      </a>
+      <a href="/marktradar/" class="card group block no-underline hover:border-moss">
+        <p class="eyebrow">Marktradar</p>
+        <h2 class="mt-2 text-xl leading-snug text-ink group-hover:text-moss">Was sich bei Spritze und Tablette gerade ändert</h2>
+        <p class="mt-2 text-sm text-ink-2">Zulassungen, Marktstarts, Preise als Größenordnung, Kassenregeln und Lieferbarkeit, mit Datum und Quelle. Lieferbarkeit wird automatisch abgerufen.</p>
+        <p class="mt-4 text-sm font-semibold text-moss">Zum Marktradar →</p>
+      </a>
+    </div>
     <div class="mt-6 grid gap-6 md:grid-cols-2">
       {artikel.map((a) => (
         <a href={`/wissen/${a.id}/`} class="card group block no-underline hover:border-moss">

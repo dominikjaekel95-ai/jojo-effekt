@@ -14,15 +14,27 @@ const root = process.cwd();
 let problems = 0;
 const report = (file, label, ctx) => { problems++; console.log(`${file} | ${label} | …${ctx}…`); };
 
-// ---- 4. Frontmatter-Längen
-const contentDir = path.join(root, 'src/content/wissen');
-for (const f of fs.readdirSync(contentDir)) {
-  if (!f.endsWith('.md')) continue;
-  const t = fs.readFileSync(path.join(contentDir, f), 'utf8');
-  const g = (k) => (t.match(new RegExp(`^${k}: "(.*)"$`, 'm')) || [])[1] ?? '';
-  if ([...g('metaTitle')].length > 65) report(f, 'metaTitle > 65', g('metaTitle'));
-  if ([...g('description')].length > 165) report(f, 'description > 165', g('description'));
-  if (!/^sources: \[/m.test(t)) report(f, 'keine sources im Frontmatter', '');
+// ---- 4. Frontmatter-Längen (Artikel und Glossar)
+for (const sub of ['src/content/wissen', 'src/content/glossar']) {
+  const contentDir = path.join(root, sub);
+  if (!fs.existsSync(contentDir)) continue;
+  for (const f of fs.readdirSync(contentDir)) {
+    if (!f.endsWith('.md')) continue;
+    const t = fs.readFileSync(path.join(contentDir, f), 'utf8');
+    const g = (k) => (t.match(new RegExp(`^${k}: "(.*)"$`, 'm')) || [])[1] ?? '';
+    if ([...g('metaTitle')].length > 65) report(f, 'metaTitle > 65', g('metaTitle'));
+    if ([...g('description')].length > 165) report(f, 'description > 165', g('description'));
+    if ([...g('short')].length > 260) report(f, 'short > 260', g('short'));
+    if (!/^sources: \[/m.test(t)) report(f, 'keine sources im Frontmatter', '');
+  }
+}
+// Startseiten-Teaser des Marktradars dürfen keine Markennamen von Arzneimitteln enthalten
+{
+  const radar = JSON.parse(fs.readFileSync(path.join(root, 'src/data/markt/radar.json'), 'utf8'));
+  for (const e of radar.eintraege) {
+    const m = String(e.teaser).match(/wegovy|ozempic|mounjaro|saxenda|rybelsus|foundayo|zepbound/i);
+    if (m) report('radar.json', `Markenname im teaser (${e.id})`, m[0]);
+  }
 }
 
 // ---- 1.–3. gebaute Seiten
@@ -47,13 +59,13 @@ const spacing = [
   [/  /, 'Doppeltes Leerzeichen'],
   [/[a-zäöüß][€%]/, 'Einheit ohne Leerzeichen'],
 ];
-const ignore = (c) => /@|http|M\.Sc|eClinicalMedicine|g\/kg|Stresemannstr|Vita2You|nachderspritz-21/.test(c);
+const ignore = (c) => /@|http|M\.Sc|eClinicalMedicine|g\/kg|Stresemannstr|Vita2You|nachderspritz-21|PharmNet|BioSpace|ClinicalTrials|PubMed|KwikPen|FlexTouch/.test(c);
 const seen = new Set();
 for (const file of walk(dist)) {
   let raw = fs.readFileSync(file, 'utf8');
   const rel = path.relative(dist, file);
   raw = raw.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<svg[\s\S]*?<\/svg>|<sup>[\s\S]*?<\/sup>|<title>[\s\S]*?<\/title>|<ol class="mt-3 space-y-2[\s\S]*?<\/ol>/g, '');
-  const text = decode(raw.replace(/<\/(p|li|h[1-6]|td|th|tr|div|section|article|summary|details|blockquote|label|span|a|button|nav|time|strong)>/g, '\n').replace(/<[^>]+>/g, ''));
+  const text = decode(raw.replace(/<\/(p|li|h[1-6]|td|th|tr|dt|dd|dl|div|section|article|aside|summary|details|blockquote|label|span|a|button|nav|time|strong|small|em|figcaption|caption)>/g, '\n').replace(/<[^>]+>/g, ''));
   for (const [rx, label] of forbidden) {
     const m = text.match(rx);
     if (m) { const k = rel + label; if (!seen.has(k)) { seen.add(k); report(rel, label, m[0]); } }

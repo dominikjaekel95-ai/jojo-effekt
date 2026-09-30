@@ -1,0 +1,19 @@
+{
+  "stand": "2026-09-30",
+  "hinweis": "Größenordnungen der Apothekenverkaufspreise für Selbstzahler (Privatrezept), gerundet auf 5 €, niedrigster Versandpreis im Preisvergleich. Ein Pen reicht bei den Spritzen vier Wochen, 30 Tabletten einen Monat. Preise unterscheiden sich zwischen Apotheken und ändern sich; keine Preisberatung, keine Bezugsquellen. Über ein Jahr sind das mehrere tausend Euro.",
+  "quelle": "Preisvergleich medipreis.de, niedrigster Versandpreis (25. bis 30.09.2026); Tabletten laut Presseberichten zum Marktstart am 01.09.2026. Mit „Anbieterangabe“ markierte Zeilen stammen von Anbieterseiten und werden bei der nächsten Erhebung gegen den Preisvergleich geprüft.",
+  "zeilen": [
+    { "praeparat": "Wegovy Spritze, Anfangsstufen 0,25 bis 1,0 mg", "monat": "ca. 170 €", "hinweis": "Anbieterangabe, Prüfung folgt" },
+    { "praeparat": "Wegovy Spritze, 1,7 mg", "monat": "ca. 235 €", "hinweis": "Anbieterangabe, Prüfung folgt" },
+    { "praeparat": "Wegovy Spritze, 2,4 mg", "monat": "ca. 280 €", "hinweis": "Preisvergleich, 29.09.2026" },
+    { "praeparat": "Wegovy Tablette, 1,5 mg und 4 mg (30 Stück)", "monat": "ca. 175 €", "hinweis": "Presse zum Marktstart, 01.09.2026" },
+    { "praeparat": "Wegovy Tablette, 9 mg (30 Stück)", "monat": "ca. 235 €", "hinweis": "Presse zum Marktstart, 01.09.2026" },
+    { "praeparat": "Wegovy Tablette, 25 mg (30 Stück)", "monat": "ca. 280 €", "hinweis": "Presse zum Marktstart; noch nicht einheitlich gelistet" },
+    { "praeparat": "Ozempic, 0,5 mg und 1 mg", "monat": "ca. 100 €", "hinweis": "Preisvergleich, 25. und 30.09.2026; bei Typ-2-Diabetes Kassenleistung" },
+    { "praeparat": "Mounjaro, 2,5 mg", "monat": "ca. 205 €", "hinweis": "Preisvergleich, 30.09.2026" },
+    { "praeparat": "Mounjaro, 5 mg", "monat": "ca. 280 €", "hinweis": "Preisvergleich, 30.09.2026" },
+    { "praeparat": "Mounjaro, 7,5 mg und 10 mg", "monat": "ca. 385 €", "hinweis": "Preisvergleich, 30.09.2026" },
+    { "praeparat": "Mounjaro, 12,5 mg und 15 mg", "monat": "ca. 490 €", "hinweis": "Preisvergleich, 30.09.2026" },
+    { "praeparat": "Saxenda (5 Pens, etwa 30 Tage bei der höchsten Stufe)", "monat": "ca. 290 €", "hinweis": "Anbieterangabe, Prüfung folgt" }
+  ]
+}

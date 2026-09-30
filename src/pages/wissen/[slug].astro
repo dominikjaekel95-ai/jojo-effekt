@@ -6,6 +6,7 @@ import Footnotes from '../../components/Footnotes.astro';
 import AuthorBox from '../../components/AuthorBox.astro';
 import ProductTeaser from '../../components/ProductTeaser.astro';
 import AffiliateLinks from '../../components/AffiliateLinks.astro';
+import GlossarBox from '../../components/GlossarBox.astro';
 import type { AffiliateKey } from '../../data/affiliate';
 import { getCollection, render } from 'astro:content';
 import { site } from '../../data/site';
@@ -73,6 +74,8 @@ const jsonLd = [
     <div class="prose-site mt-8">
       <Content />
     </div>
+
+    <GlossarBox text={`${entry.body ?? ''} ${faqText}`} class="mt-8" />
 
     <ProductTeaser position={`artikel-${entry.id}`} />
 

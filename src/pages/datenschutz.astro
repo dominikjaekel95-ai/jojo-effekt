@@ -9,13 +9,13 @@ import { site } from '../data/site';
     <div class="prose-site mt-6">
       <h2>1. Verantwortlicher</h2>
       <p>
-        {site.owner.name}, {site.owner.street}, {site.owner.zip} {site.owner.city}, E-Mail: <a href={`mailto:${site.owner.email}`}>{site.owner.email}</a> (siehe <a href="/impressum/">Impressum</a>).
+        {site.owner.name}, {site.owner.street}, {site.owner.zip} {site.owner.city}, E-Mail: <a href={`mailto:${site.email}`}>{site.email}</a> (siehe <a href="/impressum/">Impressum</a>).
       </p>
 
       <h2>2. Das Wichtigste in Kürze</h2>
       <ul>
         <li>Diese Seite setzt <strong>keine Cookies</strong> und nutzt keine Tracking-Dienste mit Profilbildung. Deshalb gibt es kein Cookie-Banner.</li>
-        <li>Wir verarbeiten deine E-Mail-Adresse nur, wenn du dich selbst in die Vorbestell-Liste einträgst.</li>
+        <li>Wir verarbeiten deine E-Mail-Adresse nur, wenn du dich selbst in die Vorbestell-Liste einträgst oder uns einen Erfahrungsbericht schickst.</li>
         <li>Alle eingesetzten Dienstleister verarbeiten Daten in der EU oder unter EU-Standardvertragsklauseln.</li>
       </ul>
 
@@ -39,9 +39,26 @@ import { site } from '../data/site';
       <p>
         <strong>Zweck:</strong> Erfassung des Interesses an dem geplanten Set und Information über Produktionsstart, Preis und
         Bestellmöglichkeit. <strong>Rechtsgrundlage:</strong> deine Einwilligung, Art. 6 Abs. 1 lit. a DSGVO. Wir schreiben
-        dir nur, wenn es Neuigkeiten zum Set gibt. <strong>Widerruf:</strong> jederzeit per E-Mail an {site.owner.email}; wir löschen deine Daten dann umgehend. <strong>Speicherdauer:</strong> bis zum Widerruf,
+        dir nur, wenn es Neuigkeiten zum Set gibt. <strong>Widerruf:</strong> jederzeit per E-Mail an {site.email}; wir löschen deine Daten dann umgehend. <strong>Speicherdauer:</strong> bis zum Widerruf,
         spätestens 12 Monate nach Abschluss des Projekts. Mit Tally besteht ein Auftragsverarbeitungsvertrag; Tally hostet
         in der EU.
+      </p>
+
+      <h2>4a. Erfahrungsberichte (Tally)</h2>
+      <p>
+        Auf der Seite <a href="/erfahrungen/">Erfahrungen</a> kannst du uns freiwillig berichten, wie es dir nach dem Absetzen
+        eines Medikaments ergangen ist. Das Formular wird ebenfalls von Tally bereitgestellt und eingebettet. Gespeichert
+        werden die Angaben, die du machst: Präparat, Einnahmedauer, Zeit seit der letzten Dosis, Gewichtsverlauf, dein
+        Bericht, optional ein Vorname oder Pseudonym, deine Altersgruppe und eine E-Mail-Adresse für Rückfragen. Diese
+        Angaben sind Gesundheitsdaten im Sinne von Art. 9 DSGVO.
+      </p>
+      <p>
+        <strong>Zweck:</strong> Veröffentlichung gekürzter, anonymisierter Erfahrungsberichte auf dieser Website und Rückfragen
+        dazu. <strong>Rechtsgrundlage:</strong> deine ausdrückliche Einwilligung, Art. 6 Abs. 1 lit. a und Art. 9 Abs. 2 lit. a
+        DSGVO, die du im Formular erteilst. <strong>Veröffentlichung:</strong> nur mit Vorname oder Pseudonym und Altersgruppe,
+        ohne E-Mail-Adresse, ohne Namen von Ärztinnen, Ärzten oder Kliniken. <strong>Speicherdauer:</strong> bis zum Widerruf;
+        die E-Mail-Adresse löschen wir, sobald keine Rückfrage mehr offen ist. <strong>Widerruf:</strong> jederzeit per E-Mail an {site.owner.email}; wir entfernen den Bericht dann von der Seite und löschen die Daten bei Tally. Mit Tally besteht
+        ein Auftragsverarbeitungsvertrag; Tally hostet in der EU.
       </p>
 
       <h2>5. Reichweitenmessung (Plausible Analytics)</h2>

@@ -282,6 +282,125 @@ export const sources: Record<string, Source> = {
     url: 'https://www.ema.europa.eu/en/medicines/human/EPAR/mounjaro',
     note: 'Sechs Dosisstufen von 2,5 bis 15 mg; Halbwertszeit etwa fünf Tage.',
   },
+  // --- Glossar (Körperzusammensetzung, Regulation, Messung)
+  donini2022: {
+    id: 'donini2022',
+    short: 'Donini et al., ESPEN/EASO-Konsens sarkopene Adipositas, Obes Facts 2022',
+    full:
+      'Donini LM, Busetto L, Bischoff SC, et al. Definition and Diagnostic Criteria for Sarcopenic Obesity: ESPEN and EASO Consensus Statement. Obes Facts. 2022;15(3):321–335.',
+    url: 'https://doi.org/10.1159/000521241',
+    note: 'Europäische Definition: Screening über BMI oder Taillenumfang plus Verdacht, Diagnose über Muskelfunktion (z. B. Griffkraft) und Körperzusammensetzung.',
+  },
+  moore2015: {
+    id: 'moore2015',
+    short: 'Moore et al., J Gerontol A 2015',
+    full:
+      'Moore DR, Churchward-Venne TA, Witard O, et al. Protein Ingestion to Stimulate Myofibrillar Protein Synthesis Requires Greater Relative Protein Intakes in Healthy Older Versus Younger Men. J Gerontol A Biol Sci Med Sci. 2015;70(1):57–62.',
+    url: 'https://doi.org/10.1093/gerona/glu103',
+    note: 'Pro Mahlzeit etwa 0,24 g Protein pro kg Körpergewicht bei jüngeren und 0,40 g/kg bei älteren Männern, um die Muskelproteinsynthese maximal anzuregen.',
+  },
+  mamerow2014: {
+    id: 'mamerow2014',
+    short: 'Mamerow et al., J Nutr 2014',
+    full:
+      'Mamerow MM, Mettler JA, English KL, et al. Dietary Protein Distribution Positively Influences 24-h Muscle Protein Synthesis in Healthy Adults. J Nutr. 2014;144(6):876–880.',
+    url: 'https://doi.org/10.3945/jn.113.185280',
+    note: 'Gleichmäßige Verteilung (etwa 30 g pro Mahlzeit) erhöhte die 24-Stunden-Muskelproteinsynthese um rund 25 % gegenüber einer abendlastigen Verteilung.',
+  },
+  lowe2007: {
+    id: 'lowe2007',
+    short: 'Lowe & Butryn, Physiol Behav 2007',
+    full: 'Lowe MR, Butryn ML. Hedonic hunger: a new dimension of appetite? Physiol Behav. 2007;91(4):432–439.',
+    url: 'https://doi.org/10.1016/j.physbeh.2007.04.006',
+    note: 'Führt den Begriff des hedonischen Hungers ein: Essverlangen aus Belohnung, unabhängig vom Energiebedarf.',
+  },
+  levine2002: {
+    id: 'levine2002',
+    short: 'Levine, Best Pract Res Clin Endocrinol Metab 2002',
+    full: 'Levine JA. Non-exercise activity thermogenesis (NEAT). Best Pract Res Clin Endocrinol Metab. 2002;16(4):679–702.',
+    url: 'https://doi.org/10.1053/beem.2002.0227',
+    note: 'Der Energieverbrauch durch Alltagsbewegung kann zwischen Menschen um bis zu 2.000 kcal pro Tag schwanken.',
+  },
+  kyle2004: {
+    id: 'kyle2004',
+    short: 'Kyle et al., ESPEN-Leitlinie Bioimpedanz, Clin Nutr 2004',
+    full:
+      'Kyle UG, Bosaeus I, De Lorenzo AD, et al. Bioelectrical impedance analysis—part I: review of principles and methods. Clin Nutr. 2004;23(5):1226–1243.',
+    url: 'https://doi.org/10.1016/j.clnu.2004.06.004',
+    note: 'Grundlagen der Bioimpedanzanalyse; Genauigkeit hängt von Hydratation und standardisierten Messbedingungen ab.',
+  },
+  leong2015: {
+    id: 'leong2015',
+    short: 'Leong et al., PURE, Lancet 2015',
+    full:
+      'Leong DP, Teo KK, Rangarajan S, et al. Prognostic value of grip strength: findings from the Prospective Urban Rural Epidemiology (PURE) study. Lancet. 2015;386(9990):266–273.',
+    url: 'https://doi.org/10.1016/S0140-6736(14)62000-6',
+    note: 'Je 5 kg weniger Griffkraft war die Gesamtsterblichkeit um 16 % höher (rund 140.000 Teilnehmende in 17 Ländern).',
+  },
+  rosenbaum2010: {
+    id: 'rosenbaum2010',
+    short: 'Rosenbaum & Leibel, Int J Obes 2010',
+    full: 'Rosenbaum M, Leibel RL. Adaptive thermogenesis in humans. Int J Obes (Lond). 2010;34(Suppl 1):S47–S55.',
+    url: 'https://doi.org/10.1038/ijo.2010.184',
+    note: 'Nach einem Gewichtsverlust von 10 % liegt der Energieverbrauch um etwa 300 bis 400 kcal pro Tag unter dem für das neue Gewicht erwarteten Wert.',
+  },
+  malkud2015: {
+    id: 'malkud2015',
+    short: 'Malkud, J Clin Diagn Res 2015',
+    full: 'Malkud S. Telogen Effluvium: A Review. J Clin Diagn Res. 2015;9(9):WE01–WE03.',
+    url: 'https://doi.org/10.7860/JCDR/2015/15219.6492',
+    note: 'Übersicht: diffuser Haarausfall etwa zwei bis drei Monate nach einem Auslöser (u. a. schneller Gewichtsverlust), meist selbstlimitierend.',
+  },
+  burd2013: {
+    id: 'burd2013',
+    short: 'Burd et al., Exerc Sport Sci Rev 2013',
+    full: 'Burd NA, Gorissen SH, van Loon LJ. Anabolic resistance of muscle protein synthesis with aging. Exerc Sport Sci Rev. 2013;41(3):169–173.',
+    url: 'https://doi.org/10.1097/JES.0b013e318292f3d5',
+    note: 'Ältere Muskeln reagieren schwächer auf Protein; Inaktivität verstärkt den Effekt, Training macht den Muskel wieder empfänglicher.',
+  },
+  cruzjentoft2019: {
+    id: 'cruzjentoft2019',
+    short: 'Cruz-Jentoft et al., EWGSOP2, Age Ageing 2019',
+    full: 'Cruz-Jentoft AJ, Bahat G, Bauer J, et al. Sarcopenia: revised European consensus on definition and diagnosis. Age Ageing. 2019;48(1):16–31.',
+    url: 'https://doi.org/10.1093/ageing/afy169',
+    note: 'Europäische Definition der Sarkopenie: geringe Muskelkraft als Leitkriterium (Griffkraft unter 27 kg bei Männern, unter 16 kg bei Frauen), Bestätigung über Muskelmasse, Schweregrad über Gehgeschwindigkeit.',
+  },
+  mifflin1990: {
+    id: 'mifflin1990',
+    short: 'Mifflin et al., Am J Clin Nutr 1990',
+    full: 'Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr. 1990;51(2):241–247.',
+    url: 'https://doi.org/10.1093/ajcn/51.2.241',
+    note: 'Schätzformel für den Ruheenergieverbrauch aus Gewicht, Größe, Alter und Geschlecht (Mifflin-St-Jeor-Formel).',
+  },
+  holst2007: {
+    id: 'holst2007',
+    short: 'Holst, Physiol Rev 2007',
+    full: 'Holst JJ. The physiology of glucagon-like peptide 1. Physiol Rev. 2007;87(4):1409–1439.',
+    url: 'https://doi.org/10.1152/physrev.00034.2006',
+    note: 'Physiologie des Darmhormons GLP-1: Ausschüttung nach Mahlzeiten, Wirkung auf Insulin, Magenentleerung und Appetit, Halbwertszeit im Bereich von Minuten.',
+  },
+  fernandezelias2015: {
+    id: 'fernandezelias2015',
+    short: 'Fernández-Elías et al., Eur J Appl Physiol 2015',
+    full: 'Fernández-Elías VE, Ortega JF, Nelson RK, Mora-Rodriguez R. Relationship between muscle water and glycogen recovery after prolonged exercise in the heat in humans. Eur J Appl Physiol. 2015;115(9):1919–1926.',
+    url: 'https://doi.org/10.1007/s00421-015-3175-z',
+    note: 'Pro Gramm gespeichertem Glykogen bindet der Muskel etwa drei Gramm Wasser.',
+  },
+  who2008waist: {
+    id: 'who2008waist',
+    short: 'WHO, Taillenumfang, Expertenkonsultation 2008',
+    full: 'World Health Organization. Waist circumference and waist–hip ratio: report of a WHO expert consultation, Geneva, 8–11 December 2008. Genf: WHO; 2011.',
+    url: 'https://www.who.int/publications/i/item/9789241501491',
+    note: 'Grenzwerte für erhöhtes Risiko: Taillenumfang ab 94 cm (Männer) bzw. 80 cm (Frauen), deutlich erhöht ab 102 bzw. 88 cm; Messung in der Mitte zwischen unterem Rippenbogen und Beckenkamm.',
+  },
+  speakman2011: {
+    id: 'speakman2011',
+    short: 'Speakman et al., Dis Model Mech 2011',
+    full:
+      'Speakman JR, Levitsky DA, Allison DB, et al. Set points, settling points and some alternative models: theoretical options to understand how genes and environments combine to regulate body adiposity. Dis Model Mech. 2011;4(6):733–745.',
+    url: 'https://doi.org/10.1242/dmm.008698',
+    note: 'Übersicht der Modelle zur Gewichtsregulation: Set Point, Settling Point und Mischmodelle.',
+  },
 };
 
 export function getSources(ids: readonly string[]): Source[] {

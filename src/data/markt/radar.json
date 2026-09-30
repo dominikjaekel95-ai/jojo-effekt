@@ -1,0 +1,107 @@
+{
+  "stand": "2026-09-30",
+  "hinweis": "Einträge werden von Hand oder von der Redaktions-Routine nach Prüfung der Originalquelle angelegt. `teaser` ist die Fassung für die Startseite und enthält keine Markennamen von Arzneimitteln. Typen: zulassung, markt, preis, kasse, lieferbarkeit, studie. `prominent: true` hebt einen Eintrag auf der Startseite hervor.",
+  "eintraege": [
+    {
+      "id": "2026-09-30-preise-erhoben",
+      "date": "2026-09-30",
+      "type": "preis",
+      "title": "Preise erhoben: Spritzen etwa 100 bis 490 € im Monat, Tablette etwa 175 bis 280 €",
+      "teaser": "Erste Preiserhebung: Abnehmspritzen kosten Selbstzahler etwa 170 bis 490 € im Monat, die neue Tablette etwa 175 bis 280 €.",
+      "summary": "Niedrigste Versandpreise im Preisvergleich, gerundet: Wegovy 2,4 mg etwa 280 €, Mounjaro von etwa 205 € (2,5 mg) bis etwa 490 € (12,5 und 15 mg), Ozempic etwa 100 € (Kassenleistung bei Typ-2-Diabetes). Wegovy-Tabletten laut Presse zum Marktstart etwa 175 € (1,5 und 4 mg) bis etwa 280 € (25 mg). Vollständige Tabelle mit Stand im Abschnitt Preise.",
+      "substances": ["Semaglutid", "Tirzepatid", "Liraglutid"],
+      "source": { "name": "Preisvergleich medipreis.de, 25. bis 30.09.2026", "url": "https://www.medipreis.de/" },
+      "links": [{ "label": "Zur Preistabelle", "href": "/marktradar/#preise" }]
+    },
+    {
+      "id": "2026-09-30-studien-tracker",
+      "date": "2026-09-30",
+      "type": "studie",
+      "title": "Studien-Tracker gestartet: 15 Studien zum Absetzen in einer Tabelle",
+      "teaser": "Alle Studien zum Absetzen der Abnehmspritze in einer Tabelle, mit Kernzahl und Link zum Original.",
+      "summary": "Zulassungsstudien, Absetz-Phasen (STEP 1 Extension, STEP 4, SURMOUNT-4, S-LiTE), Meta-Analysen 2025 und 2026, Mechanismen und Versorgungsdaten. Jede Zeile mit einer Kernzahl und dem Link zur Originalarbeit, als CSV exportierbar.",
+      "substances": ["Semaglutid", "Tirzepatid", "Liraglutid"],
+      "source": { "name": "Nach der Spritze, Studien-Tracker", "url": "https://nachderspritze.de/wissen/studien/" },
+      "links": [{ "label": "Zum Studien-Tracker", "href": "/wissen/studien/" }]
+    },
+    {
+      "id": "2026-09-01-abnehm-tablette-apotheken",
+      "date": "2026-09-01",
+      "type": "markt",
+      "prominent": true,
+      "title": "Wegovy-Tablette (Semaglutid 25 mg) in deutschen Apotheken erhältlich",
+      "teaser": "Die erste Abnehm-Tablette ist seit dem 1. September in deutschen Apotheken erhältlich. Deutschland ist das erste EU-Land.",
+      "summary": "Novo Nordisk bringt die Tablettenform von Semaglutid zuerst in Deutschland auf den Markt, verschreibungspflichtig und für Selbstzahler. Apothekenpreise laut Presse zum Marktstart etwa 175 bis 280 € je 30 Tabletten. Die Tablette wird täglich nüchtern eingenommen (Einzelheiten in der Fachinformation). Für die Zeit nach dem Absetzen gibt es für die Tablette noch keine Studiendaten; alle Absetz-Studien stammen von der Spritze.",
+      "substances": ["Semaglutid"],
+      "source": { "name": "Euronews, 02.09.2026", "url": "https://www.euronews.com/health/2026/09/02/weight-loss-pill-wegovy-available-in-german-pharmacies-from-1-september" },
+      "links": [{ "label": "Was nach dem Absetzen passiert (Studien zur Spritze)", "href": "/wissen/abnehmspritze-absetzen/" }, { "label": "Halbwertszeit im Glossar", "href": "/glossar/halbwertszeit/" }]
+    },
+    {
+      "id": "2026-07-15-eu-zulassung-tablette-und-7-2-mg",
+      "date": "2026-07-15",
+      "type": "zulassung",
+      "prominent": true,
+      "title": "EU-Kommission lässt Wegovy-Tablette und Wegovy 7,2 mg zu",
+      "teaser": "EU-Zulassung für die erste Abnehm-Tablette und für eine höhere Dosisstufe der Spritze.",
+      "summary": "Die Europäische Kommission hat die orale Form von Semaglutid (25 mg, einmal täglich) als erstes GLP-1-Präparat in Tablettenform zur Gewichtsregulierung zugelassen, nach positiver CHMP-Empfehlung im Mai 2026. Zugleich wurde ein Fertigpen mit 7,2 mg Semaglutid pro Woche zugelassen. Grundlage der Tablette ist die OASIS-4-Studie mit rund 14 % Gewichtsverlust in 64 Wochen gegenüber rund 2 % unter Placebo.",
+      "substances": ["Semaglutid"],
+      "source": { "name": "Novo Nordisk, Pressemitteilung (BioSpace)", "url": "https://www.biospace.com/press-releases/novo-nordisk-receives-european-commission-approval-of-wegovy-pill-as-first-oral-glp-1-for-weight-management-in-the-eu-single-ready-to-use-pen-for-higher-dose-7-2-mg-also-approved" },
+      "links": [{ "label": "Wegovy absetzen: Studienlage", "href": "/wissen/wegovy-absetzen/" }]
+    },
+    {
+      "id": "2026-04-01-fda-orforglipron",
+      "date": "2026-04-01",
+      "type": "zulassung",
+      "title": "USA: FDA lässt Orforglipron (Foundayo) zu, in der EU noch nicht",
+      "teaser": "Zweite Abnehm-Tablette in den USA zugelassen; in der EU liegt noch keine Zulassung vor.",
+      "summary": "Die US-Arzneimittelbehörde hat Lillys Orforglipron, ein täglich einzunehmendes GLP-1-Präparat ohne Nüchternregel, für Erwachsene mit Adipositas oder Übergewicht mit Begleiterkrankung zugelassen. In der Zulassungsstudie ATTAIN-1 lag der Gewichtsverlust nach 72 Wochen bei bis zu rund 12 % unter Teilnehmenden, die die Behandlung fortführten. Eine EU-Zulassung ist zum Stand dieses Eintrags nicht erteilt.",
+      "substances": ["Orforglipron"],
+      "source": { "name": "Eli Lilly, Pressemitteilung", "url": "https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill" },
+      "links": [{ "label": "Studien-Tracker", "href": "/wissen/studien/" }]
+    },
+    {
+      "id": "2026-03-31-bfarm-empfehlungen-aufgehoben",
+      "date": "2026-03-31",
+      "type": "lieferbarkeit",
+      "title": "BfArM hebt Versorgungsempfehlungen für Ozempic und Trulicity auf",
+      "teaser": "Die Arzneimittelbehörde hebt ihre Engpass-Empfehlungen für zwei Diabetes-Präparate auf: Verfügbarkeit stabil.",
+      "summary": "Der Beirat des BfArM hat die Empfehlungen aus dem Frühjahr 2023 zur Sicherung der Versorgung von Menschen mit Typ-2-Diabetes einstimmig aufgehoben, weil die Daten eine stabile, bedarfsgerechte und kontinuierliche Verfügbarkeit von Ozempic (Semaglutid) und Trulicity (Dulaglutid) zeigen. Für Wegovy, Mounjaro und Saxenda liegt zum Stand dieses Eintrags keine Meldung vor.",
+      "substances": ["Semaglutid"],
+      "source": { "name": "APOTHEKE ADHOC, 31.03.2026", "url": "https://www.apotheke-adhoc.de/nachrichten/detail/pharmazie/ozempic-trulicity-bfarm-empfehlungen-aufgehoben/" },
+      "links": [{ "label": "Pausieren wegen Lieferengpass: was dann gilt", "href": "/wissen/abnehmspritze-absetzen/" }]
+    },
+    {
+      "id": "2025-11-12-petitionsausschuss-kassenleistung",
+      "date": "2025-11-12",
+      "type": "kasse",
+      "title": "Petitionsausschuss: Kassenleistung bei medizinischer Notwendigkeit „überlegenswert“, Gesetz unverändert",
+      "teaser": "Der Bundestags-Petitionsausschuss hält eine Kassenleistung bei medizinischer Notwendigkeit für überlegenswert; das Gesetz bleibt vorerst unverändert.",
+      "summary": "Der Ausschuss überwies eine Petition zur Kostenübernahme der Abnehmspritze dem Bundesgesundheitsministerium als Material. Nach dem Sozialgesetzbuch sind Arzneimittel, bei denen die Erhöhung der Lebensqualität im Vordergrund steht, von der Kassenleistung ausgeschlossen; ob GLP-1-Präparate bei Adipositas darunter fallen, will der Ausschuss im Blick behalten. Das Ministerium wartet auf Langzeitdaten zu Herz-Kreislauf-Endpunkten und Sicherheit.",
+      "substances": ["Semaglutid", "Tirzepatid", "Liraglutid"],
+      "source": { "name": "Deutscher Bundestag, hib-Meldung", "url": "https://www.bundestag.de/presse/hib/kurzmeldungen-1126440" },
+      "links": [{ "label": "Kassenregeln im Überblick", "href": "/marktradar/#kassen" }]
+    },
+    {
+      "id": "2025-10-20-lg-hanau-pkv-erstattung",
+      "date": "2025-10-20",
+      "type": "kasse",
+      "title": "LG Hanau: Private Krankenversicherung muss Wegovy erstatten (Einzelfall)",
+      "teaser": "Ein Landgericht verpflichtet eine private Krankenversicherung zur Erstattung der Abnehmspritze; ein Einzelfall bei uneinheitlicher Rechtsprechung.",
+      "summary": "Das Landgericht Hanau (9 O 231/25) entschied, dass der Tarifausschluss für „Entfettungsmittel“ keine Arzneimittel meint, sondern neben Kosmetika, Mineralwässern und Badezusätzen steht. Der Versicherer musste die Kosten übernehmen; Voraussetzung war eine ärztlich bestätigte Notwendigkeit bei Adipositas mit Herz-Kreislauf-Risiko. Ein anderes Landgericht (Nürnberg-Fürth, 21.05.2026, 8 O 4860/25) wies eine ähnliche Klage ab, weil Basismaßnahmen und Begleiterkrankungen nicht dokumentiert waren.",
+      "substances": ["Semaglutid"],
+      "source": { "name": "Mitteilung der Klägerkanzlei (versicherungsrecht-hanau.de)", "url": "https://versicherungsrecht-hanau.de/news/debeka-muss-kosten-fuer-abnehmspritze-uebernehmen/" },
+      "links": [{ "label": "Kassenregeln im Überblick", "href": "/marktradar/#kassen" }]
+    },
+    {
+      "id": "2025-09-24-oasis-4-veroeffentlicht",
+      "date": "2025-09-24",
+      "type": "studie",
+      "title": "OASIS 4: Zulassungsstudie der Semaglutid-Tablette veröffentlicht",
+      "teaser": "Zulassungsstudie der Abnehm-Tablette: rund 14 % Gewichtsverlust in 64 Wochen, keine Daten zur Zeit nach dem Absetzen.",
+      "summary": "Orales Semaglutid 25 mg senkte das Körpergewicht in 64 Wochen um rund 14 % gegenüber rund 2 % unter Placebo; bei durchgehender Einnahme um 16,6 %. Übelkeit trat bei 46,6 % gegenüber 18,6 % auf, Abbrüche wegen Nebenwirkungen bei 6,9 % gegenüber 5,9 %. Die Studie enthält keine Nachbeobachtung nach dem Absetzen.",
+      "substances": ["Semaglutid"],
+      "source": { "name": "American College of Cardiology, Journal Scan zu OASIS 4", "url": "https://www.acc.org/latest-in-cardiology/journal-scans/2025/09/24/16/40/oasis-4" },
+      "links": [{ "label": "Studien-Tracker", "href": "/wissen/studien/" }]
+    }
+  ]
+}

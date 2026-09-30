@@ -6,6 +6,7 @@ import Footnotes from '../components/Footnotes.astro';
 import Faq from '../components/Faq.astro';
 import PreorderForm from '../components/PreorderForm.astro';
 import SetIllustration from '../components/SetIllustration.astro';
+import MarktradarTeaser from '../components/MarktradarTeaser.astro';
 import { site } from '../data/site';
 import { landingFaq } from '../data/faq';
 import { getCollection } from 'astro:content';
@@ -68,6 +69,9 @@ const jsonLd: Record<string, unknown>[] = [];
       </div>
     </div>
   </section>
+
+  <!-- ============ 1b. MARKTRADAR (Teaser ohne Markennamen, keine Affiliate-Links) ============ -->
+  <MarktradarTeaser />
 
   <!-- ============ 2. PROBLEM IN DREI ZAHLEN ============ -->
   <section id="problem" class="band py-16 scroll-mt-20 sm:py-20" aria-labelledby="problem-h">
@@ -282,7 +286,9 @@ const jsonLd: Record<string, unknown>[] = [];
         <a href="/wissen/ozempic-absetzen/" class="font-semibold text-moss underline underline-offset-4">Ozempic</a>
         · <a href="/wissen/studien/" class="font-semibold text-moss underline underline-offset-4">Studien-Tracker</a>
       </p>
-      <a href="/wissen/" class="mt-3 inline-block text-sm font-semibold text-moss underline underline-offset-4">Alle Artikel im Wissensbereich</a>
+      <p class="mt-3 text-sm text-ink-2">
+        <a href="/wissen/" class="font-semibold text-moss underline underline-offset-4">Alle Artikel im Wissensbereich</a> · <a href="/glossar/" class="font-semibold text-moss underline underline-offset-4">Glossar: Begriffe erklärt</a> · <a href="/marktradar/" class="font-semibold text-moss underline underline-offset-4">Marktradar: Zulassungen, Preise, Kassen</a>
+      </p>
     </div>
   </section>
 

@@ -1,0 +1,206 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+import { radar, radarTypeLabel, radarLastmod, zulassungen, preise, kassen, lieferbarkeit, fmtDate } from '../../data/markt';
+import { studien, studienLog, studienUpdated } from '../../data/studien';
+import { sources } from '../../data/sources';
+
+const title = 'Marktradar: Zulassungen, Preise, Kassen, Lieferbarkeit';
+const description =
+  'Was sich bei Abnehmspritze und Abnehmtablette ändert: EU-Zulassungen, Marktstarts, Preise als Größenordnung, Kassenregeln, Lieferbarkeit und neue Studien. Mit Datum und Quelle.';
+const stand = radarLastmod();
+const neueStudien = studien.slice(0, 4);
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${site.url}/marktradar/#page`,
+    name: title,
+    description,
+    url: `${site.url}/marktradar/`,
+    inLanguage: 'de-DE',
+    dateModified: new Date(stand).toISOString(),
+    isPartOf: { '@id': `${site.url}/#website` },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListOrder: 'https://schema.org/ItemListOrderDescending',
+      numberOfItems: radar.eintraege.length,
+      itemListElement: radar.eintraege.map((e, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        item: { '@type': 'Thing', name: e.title, description: e.summary, url: `${site.url}/marktradar/#${e.id}` },
+      })),
+    },
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Start', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Marktradar', item: `${site.url}/marktradar/` },
+    ],
+  },
+];
+const typeClass: Record<string, string> = {
+  zulassung: 'bg-moss/10 text-moss',
+  markt: 'bg-amber-light text-amber-dark',
+  preis: 'bg-clay/10 text-clay',
+  kasse: 'bg-ink/10 text-ink',
+  lieferbarkeit: 'bg-amber-light text-amber-dark',
+  studie: 'bg-moss/10 text-moss',
+};
+---
+<Base title={title} description={description} path="/marktradar/" jsonLd={jsonLd} modifiedTime={new Date(stand).toISOString()}>
+  <section class="container-wide py-14">
+    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › Marktradar</nav>
+    <p class="eyebrow mt-6">Marktradar · Stand {fmtDate(stand)}</p>
+    <h1 class="h1 mt-3">Was sich bei Abnehmspritze und Abnehmtablette gerade ändert</h1>
+    <p class="mt-4 max-w-2xl text-lg text-ink-2">
+      Zulassungen, Marktstarts, Preise als Größenordnung, Kassenregeln, Lieferbarkeit und neue Studien. Jeder Eintrag
+      hat ein Datum und eine Quelle. Was wir nicht liefern: Bezugsquellen, Preisvergleiche, Empfehlungen für oder gegen
+      ein Präparat.
+    </p>
+    <p class="mt-4 max-w-2xl rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+
+    <nav aria-label="Abschnitte" class="mt-8 flex flex-wrap gap-2 text-sm font-semibold">
+      <a href="#eintraege" class="rounded-lg border border-line bg-white px-3 py-1 text-ink hover:border-moss hover:text-moss">Zuletzt</a>
+      <a href="#zulassungen" class="rounded-lg border border-line bg-white px-3 py-1 text-ink hover:border-moss hover:text-moss">Zulassungen</a>
+      <a href="#lieferbarkeit" class="rounded-lg border border-line bg-white px-3 py-1 text-ink hover:border-moss hover:text-moss">Lieferbarkeit</a>
+      <a href="#preise" class="rounded-lg border border-line bg-white px-3 py-1 text-ink hover:border-moss hover:text-moss">Preise</a>
+      <a href="#kassen" class="rounded-lg border border-line bg-white px-3 py-1 text-ink hover:border-moss hover:text-moss">Kassenregeln</a>
+      <a href="#studien" class="rounded-lg border border-line bg-white px-3 py-1 text-ink hover:border-moss hover:text-moss">Studien</a>
+    </nav>
+
+    <!-- Zuletzt -->
+    <section id="eintraege" class="mt-12 scroll-mt-24" aria-labelledby="eintraege-h">
+      <h2 id="eintraege-h" class="h2">Zuletzt</h2>
+      <ol class="mt-6 space-y-4">
+        {radar.eintraege.map((e) => (
+          <li id={e.id} class="card scroll-mt-24">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-semibold uppercase tracking-wide text-ink-3">
+              <span class={`rounded-md px-2 py-0.5 ${typeClass[e.type] ?? ''}`}>{radarTypeLabel[e.type]}</span>
+              <time datetime={e.date}>{fmtDate(e.date)}</time>
+              {e.substances && e.substances.length > 0 && (<span class="normal-case tracking-normal">{e.substances.join(' · ')}</span>)}
+            </div>
+            <h3 class="mt-2 text-xl font-bold leading-snug text-ink">{e.title}</h3>
+            <p class="mt-2 text-ink-2">{e.summary}</p>
+            <p class="mt-3 text-sm text-ink-3">
+              Quelle: <a href={e.source.url} rel="noopener nofollow" target="_blank" class="underline underline-offset-4 hover:text-moss">{e.source.name}</a>
+              {e.links && e.links.length > 0 && (<span> · {e.links.map((l, i) => (<><a href={l.href} class="font-semibold text-moss underline underline-offset-4">{l.label}</a>{i < e.links!.length - 1 ? ' · ' : ''}</>))}</span>)}
+            </p>
+          </li>
+        ))}
+      </ol>
+      <p class="mt-4 text-sm text-ink-3">Als Feed: <a href="/marktradar/feed.xml" class="underline underline-offset-4">/marktradar/feed.xml</a></p>
+    </section>
+
+    <!-- Zulassungen -->
+    <section id="zulassungen" class="mt-14 scroll-mt-24" aria-labelledby="zulassungen-h">
+      <h2 id="zulassungen-h" class="h2">Zulassungen in der EU</h2>
+      <p class="mt-2 max-w-2xl text-ink-2">Stand {fmtDate(zulassungen.stand)}. Quelle: {zulassungen.quelle}. Indikationen verkürzt; verbindlich ist die Fachinformation.</p>
+      <div class="mt-6 overflow-x-auto rounded-xl2 border border-line bg-white">
+        <table class="w-full min-w-[720px] text-left text-sm">
+          <thead class="bg-paper-2 text-xs font-semibold uppercase tracking-wide text-ink-3">
+            <tr><th class="px-4 py-3">Präparat</th><th class="px-4 py-3">Wirkstoff</th><th class="px-4 py-3">Form</th><th class="px-4 py-3">Indikation</th><th class="px-4 py-3">EU-Zulassung</th><th class="px-4 py-3">Deutschland</th></tr>
+          </thead>
+          <tbody class="divide-y divide-line">
+            {zulassungen.praeparate.map((p) => (
+              <tr class="align-top">
+                <td class="px-4 py-3 font-semibold text-ink">{p.name} <span class="block text-xs font-normal text-ink-3">{p.hersteller}</span></td>
+                <td class="px-4 py-3 text-ink-2">{p.wirkstoff}</td>
+                <td class="px-4 py-3 text-ink-2">{p.form}</td>
+                <td class="px-4 py-3 text-ink-2">{p.indikation}</td>
+                <td class="px-4 py-3 text-ink-2">{p.eu}</td>
+                <td class="px-4 py-3 text-ink-2">{p.de}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Lieferbarkeit -->
+    <section id="lieferbarkeit" class="mt-14 scroll-mt-24" aria-labelledby="lieferbarkeit-h">
+      <h2 id="lieferbarkeit-h" class="h2">Lieferbarkeit</h2>
+      {lieferbarkeit.manuell && (
+        <div class="mt-4 max-w-2xl rounded-xl2 border border-line bg-white p-5">
+          <p class="text-xs font-semibold uppercase tracking-wide text-ink-3">Geprüfter Stand {fmtDate(lieferbarkeit.manuell.stand)}</p>
+          <p class="mt-2 text-ink-2">{lieferbarkeit.manuell.text}</p>
+          {lieferbarkeit.manuell.quelle && (<p class="mt-2 text-sm text-ink-3">Quelle: <a href={lieferbarkeit.manuell.quelle.url} rel="noopener nofollow" target="_blank" class="underline underline-offset-4 hover:text-moss">{lieferbarkeit.manuell.quelle.name}</a></p>)}
+        </div>
+      )}
+      <p class="mt-4 max-w-2xl text-sm text-ink-2">
+        Automatischer Abruf: {lieferbarkeit.stand ? `zuletzt am ${fmtDate(lieferbarkeit.stand)}` : 'noch keiner'} · Quelle: <a href={lieferbarkeit.quelle.url} rel="noopener nofollow" target="_blank" class="underline underline-offset-4 hover:text-moss">{lieferbarkeit.quelle.name}</a> · Status: {lieferbarkeit.status}
+      </p>
+      <div class="mt-6 grid gap-4 md:grid-cols-3">
+        {lieferbarkeit.wirkstoffe.map((w) => (
+          <div class="card">
+            <p class="text-lg font-bold text-ink">{w.wirkstoff}</p>
+            <p class="mt-1 text-sm text-ink-2">{w.treffer === null ? 'Noch nicht automatisch geprüft.' : w.treffer === 0 ? 'Keine Meldung auf der Übersichtsseite der Datenbank gefunden.' : `${w.treffer} Fundstelle${w.treffer === 1 ? '' : 'n'} auf der Übersichtsseite der Datenbank.`}</p>
+            {w.zeilen.length > 0 && (<ul class="mt-3 space-y-1 text-xs text-ink-3">{w.zeilen.slice(0, 3).map((z) => (<li>{z}</li>))}</ul>)}
+          </div>
+        ))}
+      </div>
+      <p class="mt-4 max-w-2xl text-sm text-ink-3">{lieferbarkeit.hinweis} Was bei einem Engpass für die Zeit ohne Medikament gilt, steht unter <a href="/wissen/abnehmspritze-absetzen/" class="underline underline-offset-4">Abnehmspritze absetzen</a>.</p>
+    </section>
+
+    <!-- Preise -->
+    <section id="preise" class="mt-14 scroll-mt-24" aria-labelledby="preise-h">
+      <h2 id="preise-h" class="h2">Preise als Größenordnung</h2>
+      <p class="mt-2 max-w-2xl text-ink-2">Stand {fmtDate(preise.stand)}. {preise.hinweis}</p>
+      <div class="mt-6 overflow-x-auto rounded-xl2 border border-line bg-white">
+        <table class="w-full min-w-[520px] text-left text-sm">
+          <thead class="bg-paper-2 text-xs font-semibold uppercase tracking-wide text-ink-3">
+            <tr><th class="px-4 py-3">Präparat</th><th class="px-4 py-3">Selbstzahler pro Monat</th><th class="px-4 py-3">Hinweis</th></tr>
+          </thead>
+          <tbody class="divide-y divide-line">
+            {preise.zeilen.map((z) => (
+              <tr class="align-top"><td class="px-4 py-3 font-semibold text-ink">{z.praeparat}</td><td class="px-4 py-3 text-ink-2">{z.monat}</td><td class="px-4 py-3 text-ink-2">{z.hinweis}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-3 text-sm text-ink-3">Quelle: {preise.quelle}. Zum Vergleich: Das 12-Wochen-Set kostet {site.price.set} €, also {site.price.setPerMonth} € im Monat; es ist ein Lebensmittel mit Programm, kein Medikament, und ersetzt die Spritze nicht.</p>
+    </section>
+
+    <!-- Kassen -->
+    <section id="kassen" class="mt-14 scroll-mt-24" aria-labelledby="kassen-h">
+      <h2 id="kassen-h" class="h2">Kassenregeln</h2>
+      <p class="mt-2 max-w-2xl text-ink-2">Stand {fmtDate(kassen.stand)}. Keine Rechtsberatung; im Einzelfall entscheiden Kasse, Versicherer und gegebenenfalls Gerichte.</p>
+      <dl class="mt-6 grid gap-4 md:grid-cols-2">
+        {kassen.regeln.map((r) => (
+          <div class="card"><dt class="font-semibold text-ink">{r.gruppe}</dt><dd class="mt-2 text-sm text-ink-2">{r.regel}</dd></div>
+        ))}
+      </dl>
+      <p class="mt-4 max-w-2xl text-sm text-ink-3">
+        Quellen: {kassen.quellen.map((q, i) => (<>{q.url ? (<a href={q.url} rel="noopener nofollow" target="_blank" class="underline underline-offset-4 hover:text-moss">{q.name}</a>) : q.name}{i < kassen.quellen.length - 1 ? ' · ' : ''}</>))}
+      </p>
+    </section>
+
+    <!-- Studien -->
+    <section id="studien" class="mt-14 scroll-mt-24" aria-labelledby="studien-h">
+      <h2 id="studien-h" class="h2">Neue Studien</h2>
+      <p class="mt-2 max-w-2xl text-ink-2">Der <a href="/wissen/studien/" class="font-semibold text-moss underline underline-offset-4">Studien-Tracker</a> führt alle Studien zum Absetzen mit Kernzahl und Link. Stand {fmtDate(studienUpdated)}.</p>
+      <ul class="mt-6 grid gap-4 md:grid-cols-2">
+        {neueStudien.map((s) => (
+          <li class="card">
+            <p class="text-xs font-semibold uppercase tracking-wide text-ink-3">{s.gruppe} · {s.jahr} · {s.wirkstoff}</p>
+            <p class="mt-1 font-semibold text-ink">{s.name}</p>
+            <p class="mt-1 text-sm text-ink-2">{s.kernzahl}</p>
+            {sources[s.sourceId]?.url && (<p class="mt-2 text-xs"><a href={sources[s.sourceId].url} rel="noopener nofollow" target="_blank" class="underline underline-offset-4 text-ink-3 hover:text-moss">{sources[s.sourceId].short}</a></p>)}
+          </li>
+        ))}
+      </ul>
+      <ul class="mt-4 space-y-1 text-sm text-ink-3">
+        {studienLog.slice(0, 3).map((l) => (<li><time datetime={l.date}>{fmtDate(l.date)}</time>: {l.text}</li>))}
+      </ul>
+    </section>
+
+    <div class="mt-14 rounded-xl2 border border-line bg-white p-6">
+      <p class="eyebrow">Wie der Marktradar gepflegt wird</p>
+      <p class="mt-2 max-w-2xl text-ink-2">
+        Lieferbarkeit wird montags automatisch aus der BfArM-Datenbank abgerufen; neue Studien und Behördenmeldungen werden
+        automatisch gesammelt und erst nach Prüfung der Originalquelle als Eintrag veröffentlicht. Preise und Kassenregeln
+        werden von Hand geprüft und tragen das Datum der letzten Prüfung. Fehler oder Ergänzungen: <a href={`mailto:${site.owner.email}`} class="underline">{site.owner.email}</a>. Begriffe erklärt das <a href="/glossar/" class="font-semibold text-moss underline underline-offset-4">Glossar</a>.
+      </p>
+    </div>
+  </section>
+</Base>

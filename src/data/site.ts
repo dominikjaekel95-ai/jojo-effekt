@@ -11,14 +11,17 @@ export const site = {
   description:
     'Das 12-Wochen-Set für die Zeit nach der Abnehmspritze: Protein, Ballaststoffe, Kreatin und ein Programm mit zwei Krafteinheiten pro Woche. Jetzt vorbestellen – ohne Zahlung.',
 
-  // Betreiber (Impressum, Footer, Schema.org)
+  // Allgemeine Kontaktadresse (Impressum, Datenschutz, Organization-Schema). Weiterleitung über ImprovMX.
+  email: 'hallo@nachderspritze.de',
+
+  // Betreiber (Impressum, Footer, Schema.org). owner.email ist die persönliche Adresse (Über uns, Tracker, Glossar, Person-Schema).
   owner: {
     name: 'Dominik Jäkel',
     city: 'Berlin',
     // Platzhalter – vor dem Launch ausfüllen (§ 5 DDG: ladungsfähige Anschrift + E-Mail sind Pflicht)
     street: 'Stresemannstr. 76',
     zip: '10963',
-    email: 'dominik.jaekel95@gmail.com',
+    email: 'dominik@nachderspritze.de',
   },
 
   // Fachliche Prüfung (E-E-A-T). Solange null, zeigt die Seite ehrlich „noch nicht fachlich gegengeprüft“.
@@ -35,7 +38,7 @@ export const site = {
     setMonths: 3,
     setPerMonth: 43,
     injectionMin: 170,
-    injectionMax: 480,
+    injectionMax: 490,
   },
   preorderGoal: 100,
 
@@ -44,6 +47,9 @@ export const site = {
 
   // Externe Dienste (aus .env; leer = Platzhalter/aus)
   tallyFormId: import.meta.env.PUBLIC_TALLY_FORM_ID || 'b5bO9o',
+  // Erfahrungsformular „Deine Erfahrung nach der Abnehmspritze“ (Tally). `live` erst auf true setzen, wenn das
+  // Formular in Tally veröffentlicht ist; vorher zeigt /erfahrungen/ nur die Regeln und die E-Mail-Adresse.
+  experienceForm: { id: 'ODOJWR', live: true },
   // Plausible-Site-Skript-ID (Plausible → Site → Settings → Site installation, Teil hinter /js/ ohne .js). Leerstring = kein Tracking.
   plausibleScriptId: import.meta.env.PUBLIC_PLAUSIBLE_SCRIPT_ID ?? 'pa-kXdw31zjWlqdlJXD8QACc',
 
@@ -56,5 +62,6 @@ export const nav = [
   { href: '/#set', label: 'Das Set' },
   { href: '/#preis', label: 'Preis' },
   { href: '/wissen/', label: 'Wissen' },
+  { href: '/marktradar/', label: 'Marktradar' },
   { href: '/#faq', label: 'FAQ' },
 ] as const;

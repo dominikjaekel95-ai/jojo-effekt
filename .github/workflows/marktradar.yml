@@ -1,0 +1,46 @@
+name: Marktradar (automatischer Abruf)
+
+# Montags früh: PubMed, BfArM-Lieferengpässe und EMA-Meldungen abrufen (scripts/marktradar-fetch.mjs),
+# Ergebnis committen. Lieferbarkeit erscheint direkt auf /marktradar/ (Zählung mit Datum); Studien und
+# Behördenmeldungen landen nur als Kandidaten in docs/RADAR-KANDIDATEN.json und werden von der
+# Redaktions-Routine geprüft, bevor daraus ein Eintrag wird. Vor dem Commit wird gebaut, damit kein
+# ungültiges JSON auf den Produktions-Branch gelangt.
+on:
+  schedule:
+    - cron: '30 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: marktradar
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # MARKTRADAR_TOKEN: Fine-grained Personal Access Token von Dominik (Repository-Admin, Berechtigung Contents: write).
+      # Damit gilt der Admin-Bypass des Rulesets für den Push, und der Push löst CI, IndexNow und Vercel aus.
+      # Ohne das Secret wird der GITHUB_TOKEN benutzt; dessen Push blockiert das Ruleset des Produktions-Branches.
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.MARKTRADAR_TOKEN || github.token }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Abrufen
+        run: node scripts/marktradar-fetch.mjs
+      - name: Build prüfen
+        run: npm ci && npm run build
+      - name: Änderungen committen
+        run: |
+          git config user.name "marktradar-bot"
+          git config user.email "marktradar-bot@users.noreply.github.com"
+          git add src/data/markt/lieferbarkeit.json docs/RADAR-KANDIDATEN.json
+          if git diff --cached --quiet; then echo "Keine Änderungen."; exit 0; fi
+          git commit -m "Marktradar: automatischer Abruf $(date -u +%F)"
+          git push

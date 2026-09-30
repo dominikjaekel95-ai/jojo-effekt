@@ -34,7 +34,7 @@ npm run preview        # dist/ lokal ansehen
 
 - URLs: Dateiname in `src/content/wissen/` = URL. Nie umbenennen, nie löschen. Muss eine URL weg, kommt eine 301-Weiterleitung nach `vercel.json` (`redirects`), und Dominik entscheidet.
 - `trailingSlash: 'always'` in `astro.config.mjs` und `vercel.json`, Canonical-Logik in `src/layouts/Base.astro`, `site.url` in `src/data/site.ts`, `public/robots.txt`.
-- `noindex` gibt es nur für `/danke/`, `/impressum/`, `/datenschutz/`. Nie auf andere Seiten, nie global.
+- `noindex` gibt es nur für `/danke/`, `/impressum/`, `/datenschutz/` und, solange `site.experienceForm.live` false ist, `/erfahrungen/` (Sitemap folgt dem Schalter automatisch). Nie auf andere Seiten, nie global.
 - `title`, `metaTitle`, `description` und H1 rankender Seiten nicht „verbessern“, ohne den Grund im PR zu nennen. `pubDate` nie ändern; Aktualisierungen bekommen `updatedDate`.
 - `draft: true` nimmt einen Artikel aus Build und Sitemap. Nie für einen bereits veröffentlichten Artikel setzen.
 - JSON-LD bleibt valide (`Base.astro`, `wissen/[slug].astro`, `wissen/studien.astro`). Nach Änderungen daran den Build-Output in `dist/` prüfen.
@@ -51,6 +51,12 @@ npm run preview        # dist/ lokal ansehen
 - Frontmatter-Limits: `metaTitle` bis 65, `description` bis 165 Zeichen. Der Build bricht sonst ab.
 - Ton: nüchtern, „du“, keine Superlative, keine Emojis.
 
+## Glossar und Marktradar
+
+- **Glossar** (`src/content/glossar/`, URL `/glossar/<slug>/`): ein Begriff pro Datei, Vorlage `set-point-theorie.md`. Limits: `metaTitle` bis 65, `description` bis 165, `short` bis 260 Zeichen. Die Box „Begriffe in diesem Artikel“ erkennt `term` und `synonyms` automatisch im Artikeltext und verlinkt sie; Glossar-Seiten listen umgekehrt alle Artikel, in denen der Begriff vorkommt. Deshalb: Jeder neue Artikel verwendet mindestens zwei Glossar-Begriffe wörtlich (Haltephase, Absetzkurve, fettfreie Masse, Halbwertszeit, Auswaschphase usw.). Eigene Begriffe (`own: true`) sind nur Haltephase und Absetzkurve; keine weiteren ohne Dominik.
+- **Erfahrungen** (`/erfahrungen/`): Tally-Formular `ODOJWR`, eingebettet nur bei `site.experienceForm.live: true` (Dominik schaltet nach dem Veröffentlichen in Tally). Veröffentlichte Berichte folgen den Regeln in `docs/REDAKTION.md` Abschnitt 3 und stehen nie neben dem Produkt-Teaser. Link aus der AuthorBox der Artikel, nicht von der Startseite.
+- **Marktradar** (`/marktradar/`): Daten in `src/data/markt/*.json`. `radar.json` enthält die Einträge; `teaser` ist die Startseiten-Fassung und darf keine Markennamen von Arzneimitteln enthalten (`check:text` prüft das), `title` und `summary` dürfen. `lieferbarkeit.json` schreibt nur die Aktion `.github/workflows/marktradar.yml` (montags und per Hand über „Run workflow“). `preise.json`, `kassen.json`, `zulassungen.json` pflegt Dominik mit `stand`-Datum. Automatisch gesammelte Studien und Behördenmeldungen liegen in `docs/RADAR-KANDIDATEN.json` (Status `neu`, `geprueft`, `verworfen`); daraus wird nur nach Prüfung der Originalquelle ein Eintrag. Feed: `/marktradar/feed.xml`. `/llms.txt` entsteht beim Build aus den Sammlungen.
+
 ## Themen beanspruchen, Doppelungen vermeiden
 
 `docs/REDAKTION.md` Abschnitt 4 ist die einzige Themenliste. Die Dienstags-Routine nimmt die obersten drei Themen mit Status „offen“. Wer ein Thema schreibt, setzt es vorher auf `in Arbeit · <Name> · <Datum>` und mergt diese eine Zeile sofort als Mini-PR oder bittet Dominik darum. Neue Themen kommen unten in die Liste. Nie einen zweiten Artikel zur selben Suchanfrage schreiben: Zwei Seiten auf ein Keyword nehmen sich gegenseitig das Ranking.
@@ -59,11 +65,11 @@ npm run preview        # dist/ lokal ansehen
 
 Diese Dateien ändern beide Agenten und die Routine. Nur anhängen, nie umsortieren, nie umformatieren, PRs damit schnell mergen:
 
-`src/data/sources.ts` · `src/data/studien.ts` · `CLAIMS.md` (Abschnitt C) · `docs/REDAKTION.md` (Themenliste) · `src/styles/global.css` · `src/pages/wissen/index.astro`
+`src/data/sources.ts` · `src/data/studien.ts` · `CLAIMS.md` (Abschnitt C) · `docs/REDAKTION.md` (Themenliste) · `docs/INDEXIERUNG.md` · `src/data/markt/radar.json` · `docs/RADAR-KANDIDATEN.json` · `src/styles/global.css` · `src/pages/wissen/index.astro`
 
 ## Nur Dominik (PR ja, selbst mergen nein)
 
-`src/pages/index.astro` (Startseite) · `src/data/site.ts` · `src/pages/ueber.astro`, `impressum.astro`, `datenschutz.astro` · `CLAIMS.md` Abschnitte A, B, E · `src/data/affiliate.ts`, `src/components/AffiliateLinks.astro` · `astro.config.mjs` · `vercel.json` · `.github/` · `src/content/wissen/abnehmspritze-absetzen-erfahrungen.md` (bleibt Entwurf, bis echte Berichte vorliegen)
+`src/pages/index.astro` (Startseite) · `src/data/site.ts` · `src/pages/ueber.astro`, `impressum.astro`, `datenschutz.astro` · `CLAIMS.md` Abschnitte A, B, E · `src/data/affiliate.ts`, `src/components/AffiliateLinks.astro` · `src/data/markt/preise.json`, `kassen.json`, `zulassungen.json` · `scripts/` · `astro.config.mjs` · `vercel.json` · `.github/` · `src/content/wissen/abnehmspritze-absetzen-erfahrungen.md` (bleibt Entwurf, bis echte Berichte vorliegen)
 
 ## Technische Eigenheiten
 

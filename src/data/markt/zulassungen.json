@@ -1,0 +1,13 @@
+{
+  "stand": "2026-09-30",
+  "quelle": "EMA-Produktinformationen (EPAR), Herstellermitteilungen",
+  "praeparate": [
+    { "name": "Wegovy (Injektion)", "wirkstoff": "Semaglutid", "form": "wöchentliche Injektion, Dosisstufen bis 2,4 mg; seit Juli 2026 zusätzlich 7,2 mg", "indikation": "Adipositas, Übergewicht mit Begleiterkrankung", "eu": "Januar 2022", "de": "Marktstart Juli 2023", "hersteller": "Novo Nordisk" },
+    { "name": "Wegovy (Tablette)", "wirkstoff": "Semaglutid", "form": "tägliche Tablette, 25 mg", "indikation": "Adipositas, Übergewicht mit Begleiterkrankung", "eu": "15. Juli 2026", "de": "in Apotheken seit 1. September 2026", "hersteller": "Novo Nordisk" },
+    { "name": "Ozempic", "wirkstoff": "Semaglutid", "form": "wöchentliche Injektion, bis 2 mg", "indikation": "Typ-2-Diabetes", "eu": "Februar 2018", "de": "verfügbar", "hersteller": "Novo Nordisk" },
+    { "name": "Rybelsus", "wirkstoff": "Semaglutid", "form": "tägliche Tablette", "indikation": "Typ-2-Diabetes", "eu": "April 2020", "de": "verfügbar", "hersteller": "Novo Nordisk" },
+    { "name": "Mounjaro", "wirkstoff": "Tirzepatid", "form": "wöchentliche Injektion, bis 15 mg", "indikation": "Typ-2-Diabetes (2022); Adipositas, Übergewicht mit Begleiterkrankung (2023)", "eu": "September 2022", "de": "verfügbar", "hersteller": "Eli Lilly" },
+    { "name": "Saxenda", "wirkstoff": "Liraglutid", "form": "tägliche Injektion, bis 3 mg", "indikation": "Adipositas, Übergewicht mit Begleiterkrankung; ab 12 Jahren", "eu": "März 2015", "de": "verfügbar", "hersteller": "Novo Nordisk" },
+    { "name": "Foundayo (Orforglipron)", "wirkstoff": "Orforglipron", "form": "tägliche Tablette ohne Nüchternregel", "indikation": "Adipositas, Übergewicht mit Begleiterkrankung", "eu": "keine EU-Zulassung", "de": "nicht verfügbar; USA seit April 2026", "hersteller": "Eli Lilly" }
+  ]
+}

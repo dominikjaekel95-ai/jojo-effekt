@@ -1,0 +1,26 @@
+---
+/**
+ * „Begriffe in diesem Artikel“: erkennt Glossar-Begriffe automatisch im Artikeltext und verlinkt sie.
+ * Interne Verlinkung ohne Handarbeit; neue Glossar-Einträge erscheinen sofort in allen passenden Artikeln.
+ */
+import { getCollection } from 'astro:content';
+import { findTerms, byTerm } from '../lib/glossar';
+interface Props { text: string; exclude?: string; limit?: number; class?: string }
+const { text, exclude, limit = 6, class: cls = '' } = Astro.props;
+const all = await getCollection('glossar', (g) => !g.data.draft);
+const hits = findTerms(text, all, exclude).sort(byTerm).slice(0, limit);
+---
+{hits.length > 0 && (
+  <aside class={`rounded-xl2 border border-line bg-paper-2 p-5 ${cls}`} aria-labelledby="glossar-box-h">
+    <p id="glossar-box-h" class="eyebrow">Begriffe in diesem Artikel</p>
+    <dl class="mt-3 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+      {hits.map((g) => (
+        <div>
+          <dt class="font-semibold text-ink"><a href={`/glossar/${g.id}/`} class="hover:text-moss">{g.data.term}</a></dt>
+          <dd class="mt-0.5 text-sm text-ink-2">{g.data.short}</dd>
+        </div>
+      ))}
+    </dl>
+    <p class="mt-4 text-sm"><a href="/glossar/" class="font-semibold text-moss underline underline-offset-4">Alle Begriffe im Glossar</a></p>
+  </aside>
+)}

@@ -1,12 +1,12 @@
 # Redaktions-Playbook: wöchentliche Artikel
 
-Gilt für jede Person und jede automatische Routine, die Artikel in `src/content/wissen/` anlegt. Ziel: bis etwa **25 veröffentlichte Artikel** (ohne Entwürfe), drei pro Woche, dann Stopp und Pflege statt Wachstum.
+Gilt für jede Person und jede automatische Routine, die Artikel in `src/content/wissen/` anlegt. Ziel: bis etwa **35 veröffentlichte Artikel** (ohne Entwürfe), drei pro Woche, dann Stopp und Pflege statt Wachstum.
 
 Nur die Dienstags-Routine pusht direkt auf den Produktions-Branch. Alle anderen (Personen und Agenten) arbeiten über Branch, Vercel-Preview und Pull Request, siehe [`CLAUDE.md`](../CLAUDE.md).
 
 ## 1. Ablauf einer Ausgabe (drei Artikel)
 
-1. `git pull` auf dem Produktions-Branch. Zählen: `ls src/content/wissen/*.md`, minus Dateien mit `draft: true`. Sind es **25 oder mehr**, keine neuen Artikel; stattdessen Abschnitt 6 (Pflege) und die Routine deaktivieren.
+1. `git pull` auf dem Produktions-Branch. Zählen: `ls src/content/wissen/*.md`, minus Dateien mit `draft: true`. Sind es **35 oder mehr** oder ist kein Thema mehr „offen“, keine neuen Artikel; stattdessen Abschnitt 6 (Pflege) und Abschnitt 7 (Glossar, Marktradar); bei 35 oder mehr die Routine deaktivieren.
 2. Aus der Themenliste (Abschnitt 4) die **obersten drei mit Status „offen“** nehmen. Reihenfolge einhalten, sie ist nach Lücke und Nutzen sortiert.
 3. Pro Thema recherchieren: Welche Studien belegen die Kernaussagen? Nur zitieren, was in `src/data/sources.ts` steht oder mit vollständigem Zitat und URL neu angelegt wird (Originalarbeit, nicht Pressemeldung). Zahlen ohne Quelle gibt es nicht.
 4. Artikel schreiben nach Abschnitt 2, Regeln aus Abschnitt 3 einhalten.
@@ -42,6 +42,8 @@ Vorlage: jeder bestehende Artikel, z. B. `src/content/wissen/kreatin-abnehmsprit
 - **Jede Zahl mit Quelle.** Ist die Quelle nicht verifizierbar, fällt die Zahl weg, nicht die Quelle wird geschätzt.
 - Medikamentennamen nur in Präparate-Artikeln und in Keywords, nie auf der Startseite, nie in Anzeigentexten.
 - Ein Suchintent = eine URL. Vor dem Schreiben prüfen, ob ein bestehender Artikel das Thema schon abdeckt; dann dort erweitern statt neu anlegen.
+- **Erfahrungsberichte** (Tally-Formular `ODOJWR`, noch Entwurf): werden gekürzt, nie inhaltlich verändert, nur mit Vorname oder Pseudonym und Altersgruppe veröffentlicht, ohne Dosisangaben, die als Anleitung lesbar wären, ohne Arzt- oder Klinikname, nie neben dem Produkt-Teaser (sonst Testimonial für das Set, HWG/UWG). Berichte sind Erfahrungen, keine Belege für Wirkungen. Details: `docs/RECHERCHE-2026-09-30-marktradar.md`, Abschnitt 2.
+- **Reviewer** (sobald vorhanden): nur auf Ratgeber-Artikeln, nie auf Startseite, Produktseite, Danke-Seite oder neben Affiliate-Listen (HCVO Art. 12 c). Der Reviewer prüft die Fakten des Artikels, nicht das Produkt. Details: `docs/RECHERCHE-2026-09-30-marktradar.md`, Abschnitt 1.
 
 ## 4. Themenliste (Reihenfolge = Priorität)
 
@@ -75,7 +77,7 @@ Status-Werte: `offen` (frei; die Routine nimmt die obersten drei davon), `in Arb
 
 **Nicht anfassen** (SERP-Check 30.09.): Erhaltungsdosis (Dosierung, HWG), Schwangerschaft (medizinisch heikel), Plateau (Thema „während“, ZAVA hat es), Head-Terms (nur über Autorität). Details und die Bewertung aller 33 Anfragen: `docs/SERP-LUECKEN-2026-09-30.md`.
 
-Stand 30.09.: 14 Artikel live, 19 Themen offen. Die Routine schreibt drei pro Dienstag (6.10.: #4–#6, 13.10.: #7–#9, 20.10.: #10–#12, 27.10.: #13–#15) und stoppt, sobald 25 veröffentlichte Artikel erreicht sind, also voraussichtlich nach dem 27.10. Was dann noch „offen“ ist, schreiben Dominik oder Michi manuell über einen Pull Request, oder Dominik hebt die Grenze in der Routine an. Neue Themen von Dominik werden nach Nachfrage einsortiert, nicht automatisch ans Ende gehängt.
+Stand 30.09.: 14 Artikel live, 19 Themen offen. Die Routine schreibt drei pro Dienstag (6.10.: #4–#6, 13.10.: #7–#9, 20.10.: #10–#12, 27.10.: #13–#15, danach weiter) und stoppt bei 35 veröffentlichten Artikeln oder wenn kein Thema mehr „offen“ ist; dann Pflege. Neue Themen von Dominik werden nach Nachfrage einsortiert, nicht automatisch ans Ende gehängt.
 
 Regeln für den Abnehmpille-Cluster (#4–#8), zusätzlich zu Abschnitt 3: Die Tablette ist ein verschreibungspflichtiges Arzneimittel wie die Spritze. Einnahmeregeln höchstens als ein Satz „laut Fachinformation“, keine Anleitung. Nebenwirkungen nur als Studienzahl (OASIS 4), nicht als Ratgeber. Absetz-Daten für die Tablette gibt es noch nicht; das ist die Kernaussage jedes Artikels, nicht ein Nebensatz. Keine Aussage, dass die Tablette „leichter abzusetzen“ sei.
 
@@ -94,7 +96,14 @@ Offen (Vorschlag als erste Aufgabe für Michis Agenten, per Pull Request):
 - Search Console → URL-Prüfung → „Indexierung beantragen“ für jede URL mit Status „offen“ in `docs/INDEXIERUNG.md`; danach dort „angemeldet YYYY-MM-DD“ eintragen.
 - Ein Community-Post pro Woche mit einem der neuen Artikel, sachlich (siehe `ADS.md` Abschnitt 5).
 
-## 6. Pflege statt Wachstum (ab 25 Artikeln)
+## 7. Glossar und Marktradar (jede Ausgabe)
+
+- **Glossar-Begriffe verwenden.** Jeder neue Artikel nutzt mindestens zwei Begriffe aus `src/content/glossar/` wörtlich (Haltephase, Absetzkurve, fettfreie Masse, Halbwertszeit, Auswaschphase, Set-Point, Muskelproteinsynthese usw.). Die Box „Begriffe in diesem Artikel“ verlinkt sie automatisch, und die Glossar-Seite listet den Artikel unter „Vertiefende Artikel“. Das ist die interne Verlinkung, die ohne Handarbeit wächst.
+- **Fehlender Begriff:** Eintrag nach der Vorlage `src/content/glossar/set-point-theorie.md` anlegen (150–300 Wörter, eine Zahl mit Quelle, Link auf den vertiefenden Artikel; `metaTitle` ≤ 65, `description` ≤ 165, `short` ≤ 260; `own: false`). URL in `docs/INDEXIERUNG.md` eintragen. Keine neuen eigenen Begriffe ohne Dominik.
+- **Marktradar-Kandidaten prüfen.** `docs/RADAR-KANDIDATEN.json` enthält montags automatisch gesammelte Studien und Behördenmeldungen (Status „neu“). Pro Kandidat die Originalquelle öffnen. Relevant sind: Absetzen und Zeit danach, Körperzusammensetzung, Zulassungen, Marktstarts, Kassenregeln, Lieferbarkeit. Relevante Kandidaten (höchstens drei pro Woche) als Eintrag in `src/data/markt/radar.json` anlegen: Felder wie die bestehenden, `teaser` ohne Markennamen von Arzneimitteln, `summary` mit Zahlen aus der Originalquelle, `source` mit URL, `type` aus zulassung/markt/preis/kasse/lieferbarkeit/studie; `stand` auf das heutige Datum. Status in der Kandidatendatei auf „geprueft“ oder „verworfen“ setzen. Neue Absetz-Studien zusätzlich in `src/data/studien.ts` und `src/data/sources.ts`. Nichts ungeprüft übernehmen.
+- **Nicht anfassen:** `src/data/markt/preise.json`, `kassen.json`, `zulassungen.json` (Dominik, mit Stand-Datum) und `lieferbarkeit.json` (schreibt die Aktion).
+
+## 6. Pflege statt Wachstum (ab 35 Artikeln)
 
 - Monatlich: Search Console lesen; Artikel mit vielen Impressionen und wenigen Klicks bekommen einen besseren Title/Description.
 - Alle zwei Wochen: einen bestehenden Artikel aktualisieren (neuer Absatz, neue Studie), `updatedDate` setzen.

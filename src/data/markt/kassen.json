@@ -1,0 +1,16 @@
+{
+  "stand": "2026-09-30",
+  "regeln": [
+    { "gruppe": "Gesetzliche Krankenversicherung, Adipositas ohne Diabetes", "regel": "Keine Erstattung. § 34 Abs. 1 SGB V schließt Arzneimittel zur Abmagerung, zur Zügelung des Appetits und zur Regulierung des Körpergewichts von der Verordnung zulasten der Kasse aus (Lifestyle-Ausschluss). Das gilt für Wegovy (Spritze und Tablette), Saxenda und Mounjaro in der Adipositas-Indikation: Selbstzahler auf Privatrezept." },
+    { "gruppe": "Gesetzliche Krankenversicherung, Typ-2-Diabetes", "regel": "Kassenleistung in der zugelassenen Diabetes-Indikation (Ozempic, Rybelsus, Mounjaro bei Typ-2-Diabetes). Gesetzliche Zuzahlung 10 % des Preises, mindestens 5 € und höchstens 10 € je Packung. Außerhalb der zugelassenen Indikation zahlt die Kasse nicht." },
+    { "gruppe": "Ausblick gesetzliche Kassen", "regel": "Der Petitionsausschuss des Bundestags hielt am 12.11.2025 eine Kostenübernahme bei medizinischer Notwendigkeit für überlegenswert und überwies eine Petition dem Bundesgesundheitsministerium als Material. Das Ministerium plant nach eigener Auskunft keine Änderung und wartet auf Langzeitdaten zu Herz-Kreislauf-Endpunkten und Sicherheit. Stand heute gilt der Ausschluss unverändert. Monatlich geprüft: Beschlüsse des G-BA und Gesetzgebung." },
+    { "gruppe": "Private Krankenversicherung", "regel": "Einzelfall nach Tarif, Rechtsprechung uneinheitlich. Das Landgericht Hanau verurteilte am 20.10.2025 (9 O 231/25) einen Versicherer zur Erstattung von Wegovy; der Tarifausschluss für „Entfettungsmittel“ meine keine Arzneimittel. Das Landgericht Nürnberg-Fürth wies am 21.05.2026 (8 O 4860/25) eine Klage auf Erstattung von Mounjaro ab, weil Basismaßnahmen und Begleiterkrankungen nicht dokumentiert waren. Was sich daraus ableiten lässt: vor Therapiebeginn eine schriftliche Kostenzusage einholen; die Chancen steigen mit dokumentierter Adipositas im Sinne der Zulassung, dokumentierten Begleiterkrankungen und dokumentiert gescheiterten konservativen Maßnahmen." }
+  ],
+  "quellen": [
+    { "name": "§ 34 SGB V (gesetze-im-internet.de)", "url": "https://www.gesetze-im-internet.de/sgb_5/__34.html" },
+    { "name": "Deutscher Bundestag, hib-Meldung zur Petition (12.11.2025)", "url": "https://www.bundestag.de/presse/hib/kurzmeldungen-1126440" },
+    { "name": "Deutsches Ärzteblatt zur Sitzung des Petitionsausschusses", "url": "https://www.aerzteblatt.de/news/abnehmspritze-petitionsausschuss-halt-kostenubernahme-fur-uberlegenswert-39ceca2c-76bd-4bed-9647-abf831af7a7c" },
+    { "name": "LG Hanau, 9 O 231/25 (Mitteilung der Klägerkanzlei)", "url": "https://versicherungsrecht-hanau.de/news/debeka-muss-kosten-fuer-abnehmspritze-uebernehmen/" },
+    { "name": "LG Nürnberg-Fürth, 8 O 4860/25 (Urteilsbesprechung, 18.06.2026)", "url": "" }
+  ]
+}

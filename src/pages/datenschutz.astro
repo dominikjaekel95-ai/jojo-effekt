@@ -9,7 +9,7 @@ import { site } from '../data/site';
     <div class="prose-site mt-6">
       <h2>1. Verantwortlicher</h2>
       <p>
-        {site.owner.name}, {site.owner.street}, {site.owner.zip} {site.owner.city}, E-Mail: <a href={`mailto:${site.owner.email}`}>{site.owner.email}</a> (siehe <a href="/impressum/">Impressum</a>).
+        {site.owner.name}, {site.owner.street}, {site.owner.zip} {site.owner.city}, E-Mail: <a href={`mailto:${site.email}`}>{site.email}</a> (siehe <a href="/impressum/">Impressum</a>).
       </p>
 
       <h2>2. Das Wichtigste in Kürze</h2>
@@ -39,7 +39,7 @@ import { site } from '../data/site';
       <p>
         <strong>Zweck:</strong> Erfassung des Interesses an dem geplanten Set und Information über Produktionsstart, Preis und
         Bestellmöglichkeit. <strong>Rechtsgrundlage:</strong> deine Einwilligung, Art. 6 Abs. 1 lit. a DSGVO. Wir schreiben
-        dir nur, wenn es Neuigkeiten zum Set gibt. <strong>Widerruf:</strong> jederzeit per E-Mail an {site.owner.email}; wir löschen deine Daten dann umgehend. <strong>Speicherdauer:</strong> bis zum Widerruf,
+        dir nur, wenn es Neuigkeiten zum Set gibt. <strong>Widerruf:</strong> jederzeit per E-Mail an {site.email}; wir löschen deine Daten dann umgehend. <strong>Speicherdauer:</strong> bis zum Widerruf,
         spätestens 12 Monate nach Abschluss des Projekts. Mit Tally besteht ein Auftragsverarbeitungsvertrag; Tally hostet
         in der EU.
       </p>

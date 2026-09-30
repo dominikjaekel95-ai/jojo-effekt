@@ -1,0 +1,5 @@
+{
+  "hinweis": "Automatisch gesammelte Kandidaten für den Marktradar (scripts/marktradar-fetch.mjs, montags). Status: neu | geprueft | verworfen. Die Redaktions-Routine prüft die Originalquelle und schreibt geprüfte Kandidaten als Eintrag nach src/data/markt/radar.json; danach Status hier setzen. Nichts aus dieser Datei wird ungeprüft veröffentlicht.",
+  "generated": null,
+  "items": []
+}

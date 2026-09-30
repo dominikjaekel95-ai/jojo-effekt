@@ -282,6 +282,76 @@ export const sources: Record<string, Source> = {
     url: 'https://www.ema.europa.eu/en/medicines/human/EPAR/mounjaro',
     note: 'Sechs Dosisstufen von 2,5 bis 15 mg; Halbwertszeit etwa fünf Tage.',
   },
+  // --- Glossar (Körperzusammensetzung, Regulation, Messung)
+  donini2022: {
+    id: 'donini2022',
+    short: 'Donini et al., ESPEN/EASO-Konsens sarkopene Adipositas, Obes Facts 2022',
+    full:
+      'Donini LM, Busetto L, Bischoff SC, et al. Definition and Diagnostic Criteria for Sarcopenic Obesity: ESPEN and EASO Consensus Statement. Obes Facts. 2022;15(3):321–335.',
+    url: 'https://doi.org/10.1159/000521241',
+    note: 'Europäische Definition: Screening über BMI oder Taillenumfang plus Verdacht, Diagnose über Muskelfunktion (z. B. Griffkraft) und Körperzusammensetzung.',
+  },
+  moore2015: {
+    id: 'moore2015',
+    short: 'Moore et al., J Gerontol A 2015',
+    full:
+      'Moore DR, Churchward-Venne TA, Witard O, et al. Protein Ingestion to Stimulate Myofibrillar Protein Synthesis Requires Greater Relative Protein Intakes in Healthy Older Versus Younger Men. J Gerontol A Biol Sci Med Sci. 2015;70(1):57–62.',
+    url: 'https://doi.org/10.1093/gerona/glu103',
+    note: 'Pro Mahlzeit etwa 0,24 g Protein pro kg Körpergewicht bei jüngeren und 0,40 g/kg bei älteren Männern, um die Muskelproteinsynthese maximal anzuregen.',
+  },
+  mamerow2014: {
+    id: 'mamerow2014',
+    short: 'Mamerow et al., J Nutr 2014',
+    full:
+      'Mamerow MM, Mettler JA, English KL, et al. Dietary Protein Distribution Positively Influences 24-h Muscle Protein Synthesis in Healthy Adults. J Nutr. 2014;144(6):876–880.',
+    url: 'https://doi.org/10.3945/jn.113.185280',
+    note: 'Gleichmäßige Verteilung (etwa 30 g pro Mahlzeit) erhöhte die 24-Stunden-Muskelproteinsynthese um rund 25 % gegenüber einer abendlastigen Verteilung.',
+  },
+  lowe2007: {
+    id: 'lowe2007',
+    short: 'Lowe & Butryn, Physiol Behav 2007',
+    full: 'Lowe MR, Butryn ML. Hedonic hunger: a new dimension of appetite? Physiol Behav. 2007;91(4):432–439.',
+    url: 'https://doi.org/10.1016/j.physbeh.2007.04.006',
+    note: 'Führt den Begriff des hedonischen Hungers ein: Essverlangen aus Belohnung, unabhängig vom Energiebedarf.',
+  },
+  levine2002: {
+    id: 'levine2002',
+    short: 'Levine, Best Pract Res Clin Endocrinol Metab 2002',
+    full: 'Levine JA. Non-exercise activity thermogenesis (NEAT). Best Pract Res Clin Endocrinol Metab. 2002;16(4):679–702.',
+    url: 'https://doi.org/10.1053/beem.2002.0227',
+    note: 'Der Energieverbrauch durch Alltagsbewegung kann zwischen Menschen um bis zu 2.000 kcal pro Tag schwanken.',
+  },
+  kyle2004: {
+    id: 'kyle2004',
+    short: 'Kyle et al., ESPEN-Leitlinie Bioimpedanz, Clin Nutr 2004',
+    full:
+      'Kyle UG, Bosaeus I, De Lorenzo AD, et al. Bioelectrical impedance analysis—part I: review of principles and methods. Clin Nutr. 2004;23(5):1226–1243.',
+    url: 'https://doi.org/10.1016/j.clnu.2004.06.004',
+    note: 'Grundlagen der Bioimpedanzanalyse; Genauigkeit hängt von Hydratation und standardisierten Messbedingungen ab.',
+  },
+  leong2015: {
+    id: 'leong2015',
+    short: 'Leong et al., PURE, Lancet 2015',
+    full:
+      'Leong DP, Teo KK, Rangarajan S, et al. Prognostic value of grip strength: findings from the Prospective Urban Rural Epidemiology (PURE) study. Lancet. 2015;386(9990):266–273.',
+    url: 'https://doi.org/10.1016/S0140-6736(14)62000-6',
+    note: 'Je 5 kg weniger Griffkraft war die Gesamtsterblichkeit um 16 % höher (rund 140.000 Teilnehmende in 17 Ländern).',
+  },
+  rosenbaum2010: {
+    id: 'rosenbaum2010',
+    short: 'Rosenbaum & Leibel, Int J Obes 2010',
+    full: 'Rosenbaum M, Leibel RL. Adaptive thermogenesis in humans. Int J Obes (Lond). 2010;34(Suppl 1):S47–S55.',
+    url: 'https://doi.org/10.1038/ijo.2010.184',
+    note: 'Nach einem Gewichtsverlust von 10 % liegt der Energieverbrauch um etwa 300 bis 400 kcal pro Tag unter dem für das neue Gewicht erwarteten Wert.',
+  },
+  speakman2011: {
+    id: 'speakman2011',
+    short: 'Speakman et al., Dis Model Mech 2011',
+    full:
+      'Speakman JR, Levitsky DA, Allison DB, et al. Set points, settling points and some alternative models: theoretical options to understand how genes and environments combine to regulate body adiposity. Dis Model Mech. 2011;4(6):733–745.',
+    url: 'https://doi.org/10.1242/dmm.008698',
+    note: 'Übersicht der Modelle zur Gewichtsregulation: Set Point, Settling Point und Mischmodelle.',
+  },
 };
 
 export function getSources(ids: readonly string[]): Source[] {

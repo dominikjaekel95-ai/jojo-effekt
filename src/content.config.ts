@@ -29,4 +29,30 @@ const wissen = defineCollection({
   }),
 });
 
-export const collections = { wissen };
+/**
+ * Glossar: ein Begriff pro Datei, URL /glossar/<dateiname>/. Kurze, belegte Definitionen zur Zeit nach der
+ * Abnehmspritze. `synonyms` steuern die automatische Verlinkung aus Artikeln (GlossarBox).
+ */
+const glossar = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/glossar' }),
+  schema: z.object({
+    term: z.string().max(80),
+    metaTitle: z.string().max(65).optional(),
+    description: z.string().max(165),
+    /** Ein-Satz-Definition für Listen, Boxen und das DefinedTerm-Schema */
+    short: z.string().max(260),
+    synonyms: z.array(z.string()).default([]),
+    sources: z.array(z.string()),
+    /** verwandte Glossar-Slugs */
+    related: z.array(z.string()).default([]),
+    /** vertiefende Artikel-Slugs aus src/content/wissen */
+    articles: z.array(z.string()).default([]),
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    /** true = eigener Begriff von Nach der Spritze (wird gekennzeichnet) */
+    own: z.boolean().default(false),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { wissen, glossar };

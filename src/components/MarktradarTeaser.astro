@@ -1,0 +1,28 @@
+---
+/**
+ * Startseiten-Band „Marktradar“: die drei wichtigsten Einträge, nur der `teaser`-Text (ohne Markennamen).
+ * Keine Affiliate-Links, keine Produktnennung: reine Orientierung, Link auf die Radar-Seite.
+ */
+import { radarTeaser, radarTypeLabel, radarLastmod } from '../data/markt';
+const items = radarTeaser(3);
+const stand = new Date(radarLastmod()).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+const fmt = (d: string) => new Date(d).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+---
+<section class="border-y border-line bg-white" aria-labelledby="radar-teaser-h">
+  <div class="container-wide py-8">
+    <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+      <h2 id="radar-teaser-h" class="eyebrow">Marktradar · Stand {stand}</h2>
+      <a href="/marktradar/" class="text-sm font-semibold text-moss underline underline-offset-4">Alle Entwicklungen, Zulassungen, Preise und Kassenregeln</a>
+    </div>
+    <ul class="mt-4 grid gap-4 md:grid-cols-3">
+      {items.map((e) => (
+        <li class="flex gap-3 border-l-2 border-amber pl-4">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wide text-ink-3">{radarTypeLabel[e.type]} · {fmt(e.date)}</p>
+            <p class="mt-1 text-sm leading-snug text-ink"><a href={`/marktradar/#${e.id}`} class="hover:text-moss">{e.teaser}</a></p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

@@ -35,14 +35,24 @@ src/
   pages/index.astro                 Startseite (Sektionen 1–8 aus dem Plan)
   pages/wissen/index.astro          Wissens-Hub
   pages/wissen/[slug].astro         Artikel-Template (Article/FAQ/Breadcrumb-Schema, Autorbox, Quellen)
+  pages/glossar/index.astro         Glossar A–Z (DefinedTermSet-Schema)
+  pages/glossar/[slug].astro        Glossar-Eintrag (DefinedTerm, automatisch verwandte Begriffe und Artikel)
+  pages/marktradar/index.astro      Marktradar: Zulassungen, Lieferbarkeit, Preise, Kassen, Studien
+  pages/marktradar/feed.xml.ts      RSS-Feed der Radar-Einträge
+  pages/llms.txt.ts                 /llms.txt für KI-Suchsysteme, beim Build aus den Sammlungen erzeugt
   pages/danke.astro                 Danke-Seite (noindex)
   pages/impressum.astro, datenschutz.astro, ueber.astro, 404.astro
   content/wissen/*.md               Artikel (Frontmatter: Titel, Description, Keywords, FAQ, Quellen-IDs)
-  content.config.ts                 Schema der Artikel (Längenlimits für Title/Description)
+  content/glossar/*.md              Glossar-Einträge (term, short, synonyms → automatische Verlinkung aus Artikeln)
+  content.config.ts                 Schemata (Längenlimits für Title/Description/short)
   data/site.ts                      Name, Betreiber, Preise, Platzhalter, Pflichtsatz
   data/sources.ts                   Quellenregister (jede Zahl auf der Seite verweist hierher)
+  data/markt/*.json                 Marktradar-Daten: radar (Einträge), zulassungen, preise, kassen, lieferbarkeit (automatisch)
   data/faq.ts                       FAQ der Startseite + FAQPage-Schema-Helfer
-  components/                       Header, Footer, Cta, PreorderForm (Tally), Faq, Footnotes, AuthorBox, ProductTeaser, SetIllustration
+  lib/glossar.ts                    Begriffserkennung für die Glossar-Box
+  components/                       Header, Footer, Cta, PreorderForm (Tally), Faq, Footnotes, AuthorBox, ProductTeaser, GlossarBox, MarktradarTeaser
+scripts/marktradar-fetch.mjs        Automatischer Abruf (PubMed, BfArM, EMA) → lieferbarkeit.json, docs/RADAR-KANDIDATEN.json
+.github/workflows/                  ci.yml (check:all), indexnow.yml (Bing), marktradar.yml (montags)
   layouts/Base.astro                <head> mit SEO-Metadaten, JSON-LD, Plausible
   styles/global.css                 Tailwind-Theme (Farben, Schrift) und Prose-Styles
 public/                             favicon.svg, og-default.png, apple-touch-icon.png, robots.txt
@@ -71,7 +81,7 @@ Neuen Artikel anlegen: Markdown-Datei in `src/content/wissen/` mit dem Frontmatt
 - [ ] `src/data/site.ts`: Anschrift, PLZ, E-Mail eingetragen (Impressum § 5 DDG) – Platzhalter in eckigen Klammern sind weg
 - [ ] `src/data/site.ts`: `reviewer` gesetzt, sobald eine Ernährungswissenschaftlerin / ein Ernährungswissenschaftler die Artikel geprüft hat (vorher steht ehrlich „noch nicht gegengeprüft“ auf der Seite)
 - [ ] Host: Apex `nachderspritze.de` ist Haupt-Host; in Vercel unter Domains die Apex-Domain als primär setzen, damit www dorthin weiterleitet (Canonical, Sitemap und OG-URLs zeigen auf die Apex-Domain)
-- [ ] Kontakt-Adresse `hallo@nachderspritze.de` einrichten (Weiterleitung beim Registrar) und in `src/data/site.ts` eintragen
+- [x] Kontakt-Adressen eingerichtet (Weiterleitung über ImprovMX, MX/SPF bei INWX): `hallo@nachderspritze.de` für Impressum, Datenschutz und Organization-Schema (`site.email`), `dominik@nachderspritze.de` für Über uns, Tracker, Glossar und Person-Schema (`site.owner.email`)
 - [ ] `CLAIMS.md` freigegeben (Mengen, welcher Ballaststoff, „Für wen nicht“, alle ⚠️-Punkte)
 - [ ] Entscheidung zur Überschrift (`CLAIMS.md` D1) getroffen
 - [ ] Quellen C14, C16, C17 in `src/data/sources.ts` nachgetragen oder Fußnote entfernt

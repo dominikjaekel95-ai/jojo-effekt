@@ -11,14 +11,17 @@ export const site = {
   description:
     'Das 12-Wochen-Set für die Zeit nach der Abnehmspritze: Protein, Ballaststoffe, Kreatin und ein Programm mit zwei Krafteinheiten pro Woche. Jetzt vorbestellen – ohne Zahlung.',
 
-  // Betreiber (Impressum, Footer, Schema.org)
+  // Allgemeine Kontaktadresse (Impressum, Datenschutz, Organization-Schema). Weiterleitung über ImprovMX.
+  email: 'hallo@nachderspritze.de',
+
+  // Betreiber (Impressum, Footer, Schema.org). owner.email ist die persönliche Adresse (Über uns, Tracker, Glossar, Person-Schema).
   owner: {
     name: 'Dominik Jäkel',
     city: 'Berlin',
     // Platzhalter – vor dem Launch ausfüllen (§ 5 DDG: ladungsfähige Anschrift + E-Mail sind Pflicht)
     street: 'Stresemannstr. 76',
     zip: '10963',
-    email: 'dominik.jaekel95@gmail.com',
+    email: 'dominik@nachderspritze.de',
   },
 
   // Fachliche Prüfung (E-E-A-T). Solange null, zeigt die Seite ehrlich „noch nicht fachlich gegengeprüft“.
@@ -35,7 +38,7 @@ export const site = {
     setMonths: 3,
     setPerMonth: 43,
     injectionMin: 170,
-    injectionMax: 480,
+    injectionMax: 490,
   },
   preorderGoal: 100,
 
@@ -56,5 +59,6 @@ export const nav = [
   { href: '/#set', label: 'Das Set' },
   { href: '/#preis', label: 'Preis' },
   { href: '/wissen/', label: 'Wissen' },
+  { href: '/marktradar/', label: 'Marktradar' },
   { href: '/#faq', label: 'FAQ' },
 ] as const;

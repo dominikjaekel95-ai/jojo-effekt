@@ -10,13 +10,19 @@ Sitemap: `https://nachderspritze.de/sitemap-index.xml` (einmalig unter „Sitema
 
 | URL | Grund | seit | Status |
 |---|---|---|---|
-| https://nachderspritze.de/wissen/krafttraining-nach-abnehmspritze/ | neuer Artikel | 2026-09-30 | offen |
+| https://nachderspritze.de/wissen/krafttraining-nach-abnehmspritze/ | neuer Artikel | 2026-09-30 | angemeldet 2026-09-30 |
 | https://nachderspritze.de/wissen/heisshunger-nach-abnehmspritze/ | neuer Artikel | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/saxenda-absetzen/ | neuer Artikel | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/ernaehrung-nach-abnehmspritze/ | neuer Artikel | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/supplements-nach-abnehmspritze/ | neuer Artikel | 2026-09-30 | offen |
-| https://nachderspritze.de/ueber/ | Text komplett neu; Google zeigt noch den alten Snippet | 2026-09-30 | offen |
+| https://nachderspritze.de/ueber/ | Text komplett neu; Google zeigt noch den alten Snippet | 2026-09-30 | angemeldet 2026-09-30 |
 | https://nachderspritze.de/wissen/kreatin-abnehmspritze/ | neue Abschnitte Wegovy/Mounjaro/Ozempic und FAQ; rankt bereits | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/muskelabbau-abnehmspritze/ | neuer Abschnitt „Woran du Muskelabbau erkennst“ | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/abnehmspritze-absetzen/ | neue Abschnitte „Was beim Absetzen körperlich passiert“ und „Wiedereinstieg“ | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/ | Hub listet fünf neue Artikel | 2026-09-30 | offen |
+| https://nachderspritze.de/glossar/ | neue Sektion: Glossar mit 20 Begriffen (nach Merge des Preview-Branches) | 2026-09-30 | offen |
+| https://nachderspritze.de/glossar/haltephase/ | eigener Begriff, Priorität | 2026-09-30 | offen |
+| https://nachderspritze.de/glossar/absetzkurve/ | eigener Begriff, Priorität | 2026-09-30 | offen |
+| https://nachderspritze.de/marktradar/ | neue Sektion: Marktradar (nach Merge des Preview-Branches) | 2026-09-30 | offen |
+
+Die übrigen 18 Glossar-Einträge stehen in der Sitemap und brauchen keine einzelne Anmeldung; wer Tageskontingent übrig hat, nimmt zuerst `set-point-theorie`, `adaptive-thermogenese`, `sarkopene-adipositas`, `auswaschphase` und `halbwertszeit`.

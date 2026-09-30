@@ -28,6 +28,29 @@ function buildLastmod() {
   const studien = fs.readFileSync(path.resolve('src/data/studien.ts'), 'utf8');
   const su = (studien.match(/studienUpdated\s*=\s*'([^']+)'/) || [])[1];
   if (su) { map.set('/wissen/studien/', su); if (su > latest) latest = su; }
+  // Glossar: ein Eintrag pro Datei
+  const gdir = path.resolve('src/content/glossar');
+  let glatest = '';
+  if (fs.existsSync(gdir)) {
+    for (const f of fs.readdirSync(gdir)) {
+      if (!f.endsWith('.md')) continue;
+      const txt = fs.readFileSync(path.join(gdir, f), 'utf8');
+      if (/^draft:\s*true/m.test(txt)) continue;
+      const d = (txt.match(/^updatedDate:\s*(\S+)/m) || [])[1] || (txt.match(/^pubDate:\s*(\S+)/m) || [])[1];
+      if (!d) continue;
+      map.set(`/glossar/${f.replace(/\.md$/, '')}/`, d);
+      if (d > glatest) glatest = d;
+    }
+  }
+  if (glatest) { map.set('/glossar/', glatest); if (glatest > latest) latest = glatest; }
+  // Marktradar: jüngstes Datum aus den Einträgen
+  const radarFile = path.resolve('src/data/markt/radar.json');
+  if (fs.existsSync(radarFile)) {
+    /** @type {{ stand?: string; eintraege?: { date: string }[] }} */
+    const radar = JSON.parse(fs.readFileSync(radarFile, 'utf8'));
+    const rl = [radar.stand, ...(radar.eintraege || []).map((e) => e.date)].filter(Boolean).sort().at(-1);
+    if (rl) { map.set('/marktradar/', rl); if (rl > latest) latest = rl; }
+  }
   map.set('/', latest);
   map.set('/wissen/', latest);
   map.set('/ueber/', latest);
@@ -41,7 +64,7 @@ export default defineConfig({
   build: { format: 'directory' },
   integrations: [
     sitemap({
-      filter: (page) => !/\/(danke|impressum|datenschutz)\/$/.test(page),
+      filter: (page) => !/\/(danke|impressum|datenschutz)\/$/.test(page) && !/\.(xml|txt|csv)$/.test(page),
       changefreq: 'weekly',
       priority: 0.7,
       serialize(item) {
@@ -49,7 +72,8 @@ export default defineConfig({
         const d = lastmod.get(p);
         if (d) item.lastmod = new Date(d).toISOString();
         if (p === '/') item.priority = 1.0;
-        if (p.startsWith('/wissen/')) item.priority = 0.8;
+        if (p.startsWith('/wissen/') || p === '/marktradar/') item.priority = 0.8;
+        if (p.startsWith('/glossar/')) item.priority = 0.6;
         return item;
       },
     }),

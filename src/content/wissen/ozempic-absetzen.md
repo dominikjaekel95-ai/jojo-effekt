@@ -27,7 +27,7 @@ Ozempic ist zur Behandlung des Typ-2-Diabetes zugelassen, wird aber in Deutschla
 
 ## Ozempic in drei Sätzen
 
-Ozempic enthält Semaglutid, denselben Wirkstoff wie Wegovy, in vier Dosisstufen von 0,25 bis 2 mg pro Woche. Zugelassen ist es in der EU seit 2018 zur Behandlung des Typ-2-Diabetes, ergänzend zu Ernährung und Bewegung; zur Gewichtsreduktion ohne Diabetes ist es nicht zugelassen.<sup><a href="#fn-fachinfoOzempic">1</a></sup> Bei Diabetes zahlt die Krankenkasse. Eine Verordnung außerhalb der Zulassung (off-label) zum Abnehmen ist eine ärztliche Einzelfallentscheidung; die Kosten trägt dann die Patientin oder der Patient.
+Ozempic enthält Semaglutid, denselben Wirkstoff wie Wegovy, in vier Dosisstufen von 0,25 bis 2 mg pro Woche. Zugelassen ist es in der EU seit 2018 zur Behandlung des Typ-2-Diabetes, ergänzend zu Ernährung und Bewegung; zur Gewichtsreduktion ohne Diabetes ist es nicht zugelassen.<sup><a href="#fn-fachinfoOzempic">1</a></sup> Bei Diabetes zahlt die Krankenkasse. Semaglutid gibt es auch als Tablette: Rybelsus für Typ-2-Diabetes und seit September 2026 die Wegovy-Tablette zur Gewichtsregulierung; was beim Absetzen der Tablette gilt, steht unter [Abnehmpille absetzen](/wissen/abnehmpille-absetzen/). Eine Verordnung außerhalb der Zulassung (off-label) zum Abnehmen ist eine ärztliche Einzelfallentscheidung; die Kosten trägt dann die Patientin oder der Patient.
 
 ## Absetzen bei Typ-2-Diabetes: der wichtigste Unterschied
 

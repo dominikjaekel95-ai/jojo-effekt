@@ -30,5 +30,8 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/marktradar/ | neue Sektion: Marktradar (nach Merge des Preview-Branches) | 2026-09-30 | offen |
 | https://nachderspritze.de/erfahrungen/ | Erfahrungsformular live, Seite jetzt indexierbar | 2026-09-30 | offen |
 | https://nachderspritze.de/checkliste/ | neue Seite: Checkliste „Die ersten 8 Wochen nach der letzten Dosis“ (nach Merge des PR) | 2026-09-30 | offen |
+| https://nachderspritze.de/wissen/abnehmpille-absetzen/ | neuer Artikel, Pillen-Cluster, Priorität | 2026-09-30 | offen |
+| https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | neuer Artikel, Pillen-Cluster | 2026-09-30 | offen |
+| https://nachderspritze.de/wissen/wegovy-absetzen/ | neuer Abschnitt „Gilt das auch für die Wegovy-Tablette?“ | 2026-09-30 | offen |
 
 Die übrigen 18 Glossar-Einträge stehen in der Sitemap und brauchen keine einzelne Anmeldung; wer Tageskontingent übrig hat, nimmt zuerst `set-point-theorie`, `adaptive-thermogenese`, `sarkopene-adipositas`, `auswaschphase` und `halbwertszeit`.

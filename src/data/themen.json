@@ -129,7 +129,15 @@
         { "q": "Wie viel Protein, und wann?", "slug": "protein-abnehmspritze" },
         { "q": "Was esse ich, wenn der Appetit zurück ist?", "slug": "ernaehrung-nach-abnehmspritze" },
         { "q": "Welche Supplements haben einen Beleg?", "slug": "supplements-nach-abnehmspritze" },
-        { "q": "Warum kommt der Heißhunger, und was hilft?", "slug": "heisshunger-nach-abnehmspritze" }
+        { "q": "Warum kommt der Heißhunger, und was hilft?", "slug": "heisshunger-nach-abnehmspritze" },
+        { "q": "Brauche ich unter der Spritze Magnesium?", "slug": "magnesium-abnehmspritze" },
+        { "q": "Vitamin D: wann ist ein Präparat sinnvoll?", "slug": "vitamin-d-abnehmspritze" },
+        { "q": "Vitamin B12 bei Metformin und wenig Fleisch?", "slug": "vitamin-b12-abnehmspritze" },
+        { "q": "Müde unter der Spritze: Eisen prüfen lassen?", "slug": "eisen-abnehmspritze" },
+        { "q": "Omega-3: Fisch oder Kapsel?", "slug": "omega-3-abnehmspritze" },
+        { "q": "Was darf Glucomannan versprechen?", "slug": "glucomannan-abnehmspritze" },
+        { "q": "Eingefallenes Gesicht: was lässt sich beeinflussen?", "slug": "abnehmspritze-gesicht" },
+        { "q": "Haarausfall nach der Spritze: wie lange?", "slug": "haarausfall-abnehmspritze" }
       ],
       "include": [],
       "glossar": ["leucin-schwelle", "proteinverteilung", "glucomannan", "hedonischer-hunger", "neat"],

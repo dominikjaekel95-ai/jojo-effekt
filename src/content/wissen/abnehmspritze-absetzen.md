@@ -80,6 +80,7 @@ Vieles, was Menschen nach dem Absetzen bemerken, ist nicht das Verschwinden eine
 - **Übelkeit, Völlegefühl, Aufstoßen und Verstopfung** lassen nach, sobald der Magen wieder normal arbeitet. Viele berichten in Woche 2 bis 4 mehr Energie und besseren Appetit auf feste Mahlzeiten.
 - **Der Appetit kommt zurück**, oft in Schüben, oft abends. Das ist die Wirkung, die wegfällt; wie du damit umgehst, steht im Artikel [Heißhunger nach dem Absetzen](/wissen/heisshunger-nach-abnehmspritze/).
 - **Blutzucker, Blutdruck und Blutfette** bewegen sich mit dem Gewicht zurück Richtung Ausgangswert.<sup><a href="#fn-wilding2022ext">3</a></sup> Bei Diabetes muss die übrige Therapie angepasst werden.
+- **Haare und Haut** reagieren mit Verzögerung auf den schnellen Gewichtsverlust, nicht auf das Absetzen: diffuser Haarausfall einige Monate nach dem Auslöser, eingefallene Wangen durch den Fettverlust. Beides steht unter [Haarausfall bei der Abnehmspritze](/wissen/haarausfall-abnehmspritze/) und [Eingefallenes Gesicht](/wissen/abnehmspritze-gesicht/).
 - **Puls und Schlaf:** Manche berichten unter der Therapie einen leicht erhöhten Ruhepuls, der nach dem Absetzen zurückgeht. Systematisch untersucht ist das für die Zeit danach nicht.
 - **Kein Entzugssyndrom.** Zittern, Schwitzen, Unruhe als Absetzreaktion sind für GLP-1-Rezeptoragonisten nicht beschrieben. Treten sie auf, vor allem bei Diabetes, ist eine Unterzuckerung durch andere Medikamente die wahrscheinlichere Ursache; das gehört sofort in die Praxis.
 

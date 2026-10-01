@@ -88,7 +88,7 @@ Ozempic ist derselbe Wirkstoff wie Wegovy in niedrigerer Dosis und zur Behandlun
 
 ## Kreatin ist kein Ersatz für Training
 
-Der wichtigste Satz zum Schluss: Kreatin macht Training wirksamer. Ohne Training macht es fast nichts. Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">4</a></sup> Wer damit anfängt, profitiert von Kreatin. Wer nicht trainiert, sollte das Geld lieber in gutes Protein stecken.
+Der wichtigste Satz zum Schluss: Kreatin macht Training wirksamer. Ohne Training macht es fast nichts. Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">4</a></sup> Wer damit anfängt, profitiert von Kreatin. Wer nicht trainiert, sollte das Geld lieber in gutes Protein stecken. Das Supplement, nach dem nach Kreatin am häufigsten gefragt wird, ist Magnesium; was davon belegt ist und was nicht, steht unter [Magnesium bei der Abnehmspritze](/wissen/magnesium-abnehmspritze/).
 
 ---
 

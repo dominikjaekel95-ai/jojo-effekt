@@ -47,7 +47,7 @@ Sättigung hängt stark davon ab, wie viel Masse im Magen liegt, nicht nur von K
 
 ### 3. Ballaststoffe auf Zielmenge
 
-Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<sup><a href="#fn-dgeBallaststoffe">5</a></sup> Ballaststoffe verlangsamen die Magenentleerung ein Stück weit und geben den Mahlzeiten Masse. Quellen: Hülsenfrüchte, Haferflocken, Vollkorn, Gemüse, Beeren, Leinsamen. Wer unter der Spritze wenig gegessen hat, liegt oft bei 10 bis 15 g; die Steigerung sollte über zwei Wochen erfolgen, immer mit viel Wasser, sonst reagiert der Darm.
+Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<sup><a href="#fn-dgeBallaststoffe">5</a></sup> Ballaststoffe verlangsamen die Magenentleerung ein Stück weit und geben den Mahlzeiten Masse. Quellen: Hülsenfrüchte, Haferflocken, Vollkorn, Gemüse, Beeren, Leinsamen. Wer unter der Spritze wenig gegessen hat, liegt oft bei 10 bis 15 g; die Steigerung sollte über zwei Wochen erfolgen, immer mit viel Wasser, sonst reagiert der Darm. Was der einzige Ballaststoff mit zugelassener Angabe zum Gewichtsverlust kann und was nicht, steht unter [Glucomannan bei der Abnehmspritze](/wissen/glucomannan-abnehmspritze/).
 
 ### 4. Feste Mahlzeiten, keine Flüssigkalorien
 
@@ -68,6 +68,8 @@ Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du
 
 Zusammen rund 100 g Protein und 30 g Ballaststoffe, ohne Kalorienzählen. Die Mengen sind ein Beispiel für 80 kg; die Formel steht oben.
 
+Haferflocken, Linsen, Fisch und Eier decken an so einem Tag nebenbei auch das, was unter der Spritze bei kleineren Portionen knapp werden kann. Was dann im Einzelnen gilt und wann ein Blutwert dran ist, steht unter [Magnesium](/wissen/magnesium-abnehmspritze/), [Vitamin D](/wissen/vitamin-d-abnehmspritze/), [Vitamin B12](/wissen/vitamin-b12-abnehmspritze/) und [Eisen](/wissen/eisen-abnehmspritze/). Der Fisch zweimal pro Woche liefert außerdem EPA und DHA; warum das für das Gewicht nichts bringt und trotzdem sinnvoll ist, steht unter [Omega-3 bei der Abnehmspritze](/wissen/omega-3-abnehmspritze/).
+
 ## Was unter der Spritze funktioniert hat und jetzt nicht mehr
 
 - **Mahlzeiten auslassen.** Unter der Spritze fiel das nicht auf. Jetzt führt es zu Heißhunger am Abend.
@@ -77,7 +79,7 @@ Zusammen rund 100 g Protein und 30 g Ballaststoffe, ohne Kalorienzählen. Die Me
 
 ## Die vier Fehler, die das Gewicht zurückbringen
 
-1. **Crash-Diät nach dem Absetzen.** Sie senkt den Grundumsatz weiter und kostet Muskeln. Der Verlauf nach dem Absetzen ist in Studien ohnehin ungünstig: Zwei Drittel des Verlusts waren nach einem Jahr zurück.<sup><a href="#fn-wilding2022ext">7</a></sup> Eine Crash-Diät beschleunigt das.
+1. **Crash-Diät nach dem Absetzen.** Sie senkt den Grundumsatz weiter und kostet Muskeln. Der Verlauf nach dem Absetzen ist in Studien ohnehin ungünstig: Zwei Drittel des Verlusts waren nach einem Jahr zurück.<sup><a href="#fn-wilding2022ext">7</a></sup> Eine Crash-Diät beschleunigt das, und sie ist ein neuer Auslöser für [Haarausfall](/wissen/haarausfall-abnehmspritze/).
 2. **Nur Salat.** Volumen ohne Protein sättigt kurz und lässt Muskeln ohne Baustoff.
 3. **Alkohol als Ausnahme, die zur Regel wird.** Zwei Gläser Wein am Abend sind 300 kcal ohne Sättigung.
 4. **Training weglassen.** Ernährung allein hält das Gewicht schlechter als Ernährung plus Krafttraining. In der S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach Therapieende.<sup><a href="#fn-jensen2024">8</a></sup>

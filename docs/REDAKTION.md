@@ -123,3 +123,9 @@ Erledigt am 30.09.2026 (Dominik, zusammen mit dem Pillen-Cluster); für Michis A
 - Alle zwei Wochen: einen bestehenden Artikel aktualisieren (neuer Absatz, neue Studie), `updatedDate` setzen.
 - Bei jeder neuen Absetz-Studie: Tracker ergänzen.
 - Erfahrungsberichte veröffentlichen, sobald fünf echte vorliegen.
+
+## 8. Grafiken (Stand 01.10.2026)
+
+Zwölf Studien-Grafiken plus drei Varianten liegen unter `public/grafiken/` (SVG und PNG) und auf `/grafiken/` mit Download, Einbettungscode und ImageObject-Schema. Erzeugt werden sie mit `npm run grafiken` aus `scripts/grafiken.mjs`; das Register für die Seite ist `src/data/grafiken.ts`. Regeln: nur Zahlen aus `src/data/sources.ts` bzw. `preise.json`, Quelle und Domain im Bild, Alt-Text nennt jede Zahl, Lizenz CC BY 4.0 mit Nennung „nachderspritze.de“. Einbindung: Hauptartikel (Zeitachse, Absetzkurve), Jojo-Effekt (Säulen, Weiter/Placebo, Mechanismen), Muskelabbau (Körperzusammensetzung), Krafttraining und Gewicht halten (S-LiTE; Gewicht halten zusätzlich vier Phasen), Abnehmpille oder Spritze (Wirksamkeit, Halbwertszeiten), Abnehmpille absetzen (belegt und offen), Protein und Ernährung (Proteinbedarf), Haarausfall (Zeitverlauf), Wegovy (Weiter/Placebo), Mounjaro (Halbwertszeiten), Marktradar (Preise), Startseite (Absetzkurve, S-LiTE), Wissens-Hub (Zeitachse). Die Preisgrafik wird mit jeder Erhebung neu erzeugt.
+
+Pflege des Hauptartikels `/wissen/abnehmspritze-absetzen/`: einmal im Monat prüfen (neue Absetz-Studien im Studien-Tracker, Zahlen in den Grafiken, Fachinformationen), Änderungen mit `updatedDate` kennzeichnen, `pubDate` nie anfassen. Ziel ist, dass diese eine Seite die beste zu „Abnehmspritze absetzen“ bleibt; alle Nischenartikel verlinken mit diesem Ankertext darauf.

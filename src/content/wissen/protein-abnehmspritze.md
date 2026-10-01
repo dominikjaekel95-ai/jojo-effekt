@@ -3,8 +3,10 @@ title: "Protein bei der Abnehmspritze: Wie viel, welches, und wie mit wenig Appe
 metaTitle: "Protein bei der Abnehmspritze: Wie viel pro Tag? Tabelle & Tipps"
 description: "1,2 bis 1,6 g pro kg Körpergewicht: So viel Protein empfehlen Fachleute beim Abnehmen. Tabelle für dein Gewicht, Proteinquellen und Tricks bei kleinem Appetit."
 category: "Ernährung"
+image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 4
 pubDate: 2026-09-30
+updatedDate: 2026-10-01
 keywords: ["abnehmspritze protein", "abnehmspritze protein wie viel", "eiweiß abnehmspritze", "wegovy protein", "ozempic eiweiß wie viel", "proteinshake abnehmspritze", "abnehmspritze ernährung eiweiß"]
 sources: ["dgeProtein", "leidy2015", "wilding2021dxa", "euClaims", "sardeli2018", "dgeBallaststoffe"]
 related: ["ernaehrung-nach-abnehmspritze", "supplements-nach-abnehmspritze", "muskelabbau-abnehmspritze"]
@@ -18,7 +20,7 @@ faq:
   - q: "Molke oder pflanzliches Protein – was ist besser?"
     a: "<p>Molkenprotein (Whey) wird schnell aufgenommen und enthält viel Leucin, die Aminosäure, die den Muskelaufbau anstößt. Pflanzliche Mischungen (z. B. Erbse plus Reis) kommen nahe heran, wenn die Portion etwas größer ist. Für den Alltag zählt vor allem, dass du es regelmäßig trinkst.</p>"
   - q: "Wann sollte ich das Protein essen?"
-    a: "<p>Verteilt über den Tag, 25 bis 35 g pro Mahlzeit, drei- bis viermal. Der Körper nutzt Protein besser in mehreren Portionen als in einer großen. Nach dem Krafttraining ist eine proteinreiche Mahlzeit sinnvoll, der genaue Zeitpunkt ist aber weniger wichtig als die Tagesmenge.</p>"
+    a: "<p>Verteilt über den Tag, mindestens etwa 25 bis 30 g pro Mahlzeit, drei- bis viermal. Der Körper nutzt Protein besser in mehreren Portionen als in einer großen. Nach dem Krafttraining ist eine proteinreiche Mahlzeit sinnvoll, der genaue Zeitpunkt ist aber weniger wichtig als die Tagesmenge.</p>"
 affiliate: ["wheyNeutral", "wheyEsn", "wheyIsolate"]
 affiliateTitle: "Beispiele für Proteinpulver mit mindestens 20 g Protein pro Portion"
 affiliateIntro: "Drei Beispiele, keine Empfehlung einer Marke. Worauf du achtest, steht oben: mindestens 20 g Protein pro Portion, wenig Zucker, bei empfindlichem Magen neutral oder Isolat."
@@ -26,7 +28,7 @@ affiliateIntro: "Drei Beispiele, keine Empfehlung einer Marke. Worauf du achtest
 
 Unter der Abnehmspritze essen viele so wenig, dass sie nicht einmal das Minimum an Protein erreichen. Das kostet Muskeln. Hier steht, wie viel Protein du brauchst, wo es drinsteckt, und wie du die Menge schaffst, wenn du kaum Hunger hast. Was nach der letzten Dosis mit Appetit und Gewicht passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
-> **Kurz gesagt:** 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">2</a></sup> Verteilt auf drei bis vier Mahlzeiten, jeweils 25 bis 35 g, Protein immer zuerst.
+> **Kurz gesagt:** 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">2</a></sup> Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 g, Protein immer zuerst.
 
 ## Wie viel Protein beim Abnehmen?
 
@@ -48,6 +50,11 @@ Unter der Abnehmspritze ist das besonders relevant: In einer Substudie der STEP-
 Bei starkem Übergewicht (BMI über 35) rechnen viele Fachleute mit dem Zielgewicht statt dem aktuellen Gewicht, weil die Mengen sonst unrealistisch werden. Wer 120 kg wiegt und 90 kg anstrebt, zielt also auf 108 bis 144 g.
 
 **Ausnahme Nierenerkrankung:** Dann legt die Ärztin oder der Arzt die Proteinmenge fest. Bei gesunden Nieren gibt es für diese Mengen keine Hinweise auf Schäden.
+
+<figure class="my-8">
+  <img src="/grafiken/proteinbedarf-nach-abnehmspritze.png" alt="Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 Gramm pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Tagesmenge nach Körpergewicht im Zielkorridor von 1,2 bis 1,6 g pro kg.<sup><a href="#fn-leidy2015">2</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 Dein eigenes Tagesziel und die Menge pro Mahlzeit rechnet der [Proteinrechner](/werkzeuge/proteinrechner/) aus.
 

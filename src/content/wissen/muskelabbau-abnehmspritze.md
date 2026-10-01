@@ -8,7 +8,7 @@ order: 3
 pubDate: 2026-09-30
 updatedDate: 2026-10-01
 keywords: ["abnehmspritze muskelabbau", "abnehmspritze muskelverlust", "muskelabbau abnehmspritze vermeiden", "wegovy muskelabbau", "ozempic muskelabbau", "mounjaro muskelverlust", "abnehmspritze krafttraining"]
-sources: ["wilding2021dxa", "sardeli2018", "leidy2015", "who2020", "jensen2024", "euClaims", "kreider2017", "dgeProtein", "fothergill2016"]
+sources: ["wilding2021dxa", "sardeli2018", "leidy2015", "who2020", "jensen2024", "euClaims", "kreider2017", "dgeProtein", "fothergill2016", "look2025surmount1dxa"]
 related: ["protein-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
 affiliate: ["gripDynamometer"]
 affiliateTitle: "Beispiel für ein Griffkraft-Messgerät"
@@ -16,17 +16,19 @@ affiliateIntro: "Ein Beispiel, keine Empfehlung einer Marke. Griffkraft ist der 
 faq:
   - q: "Wie viel Muskelmasse verliert man unter der Abnehmspritze?"
     a: "<p>In einer Substudie der STEP-1-Studie entfielen rund 40 % des verlorenen Gewichts unter Semaglutid auf fettfreie Masse; die Analyse war exploratorisch und umfasste 140 Teilnehmende. Fettfreie Masse ist nicht nur Muskel, sondern auch Wasser, Organgewebe und Bindegewebe, die bei jedem Gewichtsverlust mit abnehmen. Der reine Muskelverlust ist also geringer, aber nicht null.</p>"
-  - q: "Ist der Muskelabbau bei der Abnehmspritze schlimmer als bei einer Diät?"
-    a: "<p>Der Anteil fettfreier Masse am Gewichtsverlust liegt bei GLP-1-Medikamenten in derselben Größenordnung wie bei Diäten oder Adipositas-Operationen. Der Unterschied: Der Gewichtsverlust ist größer und schneller, und viele essen unter der Spritze so wenig Protein, dass die Schutzmechanismen nicht greifen. Deshalb ist Gegensteuern hier besonders wichtig.</p>"
+  - q: "Was tun gegen Muskelabbau beim Abnehmen?"
+    a: "<p>Zwei Dinge, beide gut belegt: Krafttraining an mindestens zwei Tagen pro Woche, weil es den Verlust an fettfreier Masse während einer Kalorienreduktion weitgehend verhindert, und 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag, verteilt auf die Mahlzeiten. Ausdauersport allein schützt die Muskeln nicht. Welcher Sport bei der Abnehmspritze also: der mit Gewichten oder dem eigenen Körpergewicht, zwei Einheiten à 30 Minuten reichen für den Einstieg.</p>"
   - q: "Kann ich verlorene Muskeln nach dem Absetzen wieder aufbauen?"
     a: "<p>Ja. Muskeln reagieren in jedem Alter auf Krafttraining und ausreichend Protein. Der Aufbau dauert länger als der Abbau, ist aber gut belegt. Zwei Krafteinheiten pro Woche mit steigender Belastung sind ein realistischer Einstieg.</p>"
   - q: "Hilft Kreatin gegen Muskelabbau bei der Abnehmspritze?"
     a: "<p>Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining und kann bei Erwachsenen über 55 Jahren die Wirkung von Krafttraining auf die Muskelkraft verstärken (zugelassene EU-Angaben, jeweils bei 3 g pro Tag; die zweite setzt Krafttraining an mindestens drei Tagen pro Woche voraus). Ohne Training bringt es wenig. Speziell für Menschen unter oder nach GLP-1-Therapie gibt es noch keine eigenen Studien.</p>"
-  - q: "Woran merke ich, dass ich Muskeln verloren habe?"
-    a: "<p>Typische Zeichen: Treppen, Einkäufe oder Aufstehen vom Stuhl fallen schwerer als vor der Therapie; die Griffkraft lässt nach; Arme und Beine wirken schlaffer, obwohl das Gewicht sinkt. Eine Körperzusammensetzungsmessung (DXA oder BIA) beim Arzt oder im Studio macht es messbar.</p>"
+  - q: "Baut Mounjaro Muskeln ab?"
+    a: "<p>Wie jede schnelle Gewichtsabnahme kostet auch die mit Tirzepatid fettfreie Masse. In der DXA-Substudie von SURMOUNT-1 mit 160 Teilnehmenden sank die fettfreie Masse unter Tirzepatid in 72 Wochen um 10,9 %, die Fettmasse um 33,9 %; rund ein Viertel des verlorenen Gewichts war fettfreie Masse, in der Placebogruppe derselbe Anteil. Das ist eine Eigenschaft des Abnehmens, keine Bewertung des Medikaments. Was dagegen hilft, ist dasselbe wie bei Semaglutid: Krafttraining und Protein.</p>"
+  - q: "Was macht Ozempic mit Muskeln?"
+    a: "<p>Ozempic enthält denselben Wirkstoff wie Wegovy, Semaglutid, in niedrigerer Dosis. Eigene Daten zur Körperzusammensetzung unter Ozempic gibt es nicht; die STEP-1-Substudie mit der Wegovy-Dosis zeigte, dass rund 40 % des verlorenen Gewichts auf fettfreie Masse entfielen, also Muskeln, Wasser, Organ- und Bindegewebe. Je weniger Gewicht verloren wird, desto kleiner die absolute Zahl; der Schutz ist derselbe: Krafttraining und genug Protein.</p>"
 ---
 
-Die Abnehmspritze nimmt nicht nur Fett. Sie nimmt auch das, was du eigentlich behalten willst: Muskeln. Wie viel, warum, und was nachweislich hilft – ohne Panik, mit Zahlen. Den Gesamtverlauf nach dem Absetzen beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Die Abnehmspritze nimmt nicht nur Fett. Sie nimmt auch das, was du eigentlich behalten willst: Muskeln. Wie viel, warum, und was nachweislich hilft – ohne Panik, mit Zahlen. Den Gesamtverlauf nach dem Absetzen beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/); den konkreten Trainingsplan mit sechs Übungen gibt es unter [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/).
 
 > **Kurz gesagt:** Rund 40 % des Gewichtsverlusts unter Semaglutid waren in einer Substudie fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Krafttraining während einer Kalorienreduktion verhindert den Verlust weitgehend.<sup><a href="#fn-sardeli2018">2</a></sup> Dazu 1,2 bis 1,6 g Protein pro kg Körpergewicht<sup><a href="#fn-leidy2015">3</a></sup> und, wer trainiert, [Kreatin](/wissen/kreatin-abnehmspritze/).
 

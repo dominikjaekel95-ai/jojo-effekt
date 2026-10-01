@@ -1,0 +1,243 @@
+---
+/**
+ * 7-Tage-Ernährungsplan für die Zeit nach der Abnehmspritze. Lesbar als Seite, druckbar (print-CSS) und als PDF unter
+ * /downloads/ernaehrungsplan-7-tage.pdf (erzeugt mit `npm run pdf:ernaehrungsplan`, Skript scripts/seite-pdf.mjs).
+ * Beispiel für 80 kg: rund 100 g Protein und 30 g Ballaststoffe am Tag, Proteinwerte gerundet nach dem
+ * Bundeslebensmittelschlüssel. Keine Präparatenamen, keine Kalorienvorgaben, kein Produkt im Plan selbst.
+ */
+import Base from '../../layouts/Base.astro';
+import Fn from '../../components/Fn.astro';
+import Footnotes from '../../components/Footnotes.astro';
+import Faq from '../../components/Faq.astro';
+import ProductTeaser from '../../components/ProductTeaser.astro';
+import { faqJsonLd } from '../../data/faq';
+import { site } from '../../data/site';
+
+const fnIds = ['leidy2015', 'dgeBallaststoffe', 'bls', 'wu2025', 'almandoz2024'] as const;
+const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
+
+interface Mahlzeit { zeit: string; was: string; protein: number }
+interface Tag { name: string; mahlzeiten: Mahlzeit[]; vegetarisch: string }
+
+/* Proteinwerte: gerundete Mittelwerte nach dem Bundeslebensmittelschlüssel (bls), wie in der Tabelle des Protein-Artikels */
+const tage: Tag[] = [
+  {
+    name: 'Tag 1',
+    mahlzeiten: [
+      { zeit: 'Morgens', was: '200 g Skyr mit Beeren und 2 EL Haferflocken', protein: 25 },
+      { zeit: 'Mittags', was: 'Großer Salat mit 120 g Hähnchenbrust, 1 Scheibe Vollkornbrot', protein: 32 },
+      { zeit: 'Nachmittags', was: '150 g Hüttenkäse mit Gurke und Pfeffer', protein: 17 },
+      { zeit: 'Abends', was: 'Linseneintopf (250 g gekochte Linsen) mit viel Gemüse und 1 Ei', protein: 30 },
+    ],
+    vegetarisch: 'Mittags Hähnchen gegen 150 g Tofu tauschen.',
+  },
+  {
+    name: 'Tag 2',
+    mahlzeiten: [
+      { zeit: 'Morgens', was: 'Rührei aus 2 Eiern mit Spinat, 1 Scheibe Vollkornbrot', protein: 18 },
+      { zeit: 'Mittags', was: '100 g Thunfisch (Dose, im eigenen Saft) mit Bohnensalat und Tomaten', protein: 32 },
+      { zeit: 'Nachmittags', was: 'Shake aus 30 g Proteinpulver in 250 ml Milch', protein: 32 },
+      { zeit: 'Abends', was: '150 g Lachs mit Ofengemüse', protein: 30 },
+    ],
+    vegetarisch: 'Thunfisch gegen 200 g Kichererbsen, Lachs gegen 150 g Tofu und 1 Ei tauschen.',
+  },
+  {
+    name: 'Tag 3',
+    mahlzeiten: [
+      { zeit: 'Morgens', was: 'Porridge aus 50 g Haferflocken, 250 ml Milch und 100 g Magerquark, Apfel', protein: 26 },
+      { zeit: 'Mittags', was: 'Kichererbsen-Curry (200 g Kichererbsen) mit 100 g Tofu und Gemüse', protein: 28 },
+      { zeit: 'Nachmittags', was: '150 g griechischer Joghurt mit einer Handvoll Nüsse', protein: 16 },
+      { zeit: 'Abends', was: '120 g Putenbrust mit 150 g Quinoa und Brokkoli', protein: 34 },
+    ],
+    vegetarisch: 'Abends Pute gegen 150 g Tempeh oder 3 Eier tauschen.',
+  },
+  {
+    name: 'Tag 4',
+    mahlzeiten: [
+      { zeit: 'Morgens', was: '200 g Magerquark mit Apfel, Zimt und 1 EL Leinsamen', protein: 24 },
+      { zeit: 'Mittags', was: 'Vollkornwrap mit 100 g Hähnchen, Salat, Paprika und Joghurtsoße', protein: 27 },
+      { zeit: 'Nachmittags', was: '2 hartgekochte Eier mit Radieschen', protein: 14 },
+      { zeit: 'Abends', was: 'Gemüsepfanne mit 200 g Tofu und 100 g Edamame', protein: 39 },
+    ],
+    vegetarisch: 'Mittags Hähnchen gegen 100 g Tempeh tauschen; der Rest ist vegetarisch.',
+  },
+  {
+    name: 'Tag 5',
+    mahlzeiten: [
+      { zeit: 'Morgens', was: '2 Scheiben Vollkornbrot mit 150 g Hüttenkäse und Tomate', protein: 25 },
+      { zeit: 'Mittags', was: 'Linsensuppe (250 g gekochte Linsen) mit Möhren, 1 Scheibe Brot', protein: 26 },
+      { zeit: 'Nachmittags', was: 'Shake aus 30 g Proteinpulver in Wasser oder Milch', protein: 24 },
+      { zeit: 'Abends', was: '150 g Kabeljau mit Kartoffeln, Spinat und Zitrone', protein: 28 },
+    ],
+    vegetarisch: 'Kabeljau gegen 150 g Tofu und 1 Ei tauschen.',
+  },
+  {
+    name: 'Tag 6',
+    mahlzeiten: [
+      { zeit: 'Morgens', was: '200 g Skyr mit Banane und 2 EL Haferflocken', protein: 25 },
+      { zeit: 'Mittags', was: 'Bolognese aus 120 g magerem Rinderhack mit Vollkornnudeln (60 g roh) und Gemüse', protein: 32 },
+      { zeit: 'Nachmittags', was: '100 g Hüttenkäse und 30 g Nüsse', protein: 17 },
+      { zeit: 'Abends', was: 'Omelett aus 3 Eiern mit 30 g Käse, Pilzen und Salat', protein: 28 },
+    ],
+    vegetarisch: 'Hack gegen 150 g Linsen (Linsen-Bolognese) tauschen.',
+  },
+  {
+    name: 'Tag 7',
+    mahlzeiten: [
+      { zeit: 'Morgens', was: 'Pfannkuchen aus 2 Eiern, 100 g Magerquark und 40 g Haferflocken, dazu Beeren', protein: 31 },
+      { zeit: 'Mittags', was: '150 g Garnelen mit Reis, Zuckerschoten und Paprika', protein: 28 },
+      { zeit: 'Nachmittags', was: 'Shake aus 30 g Proteinpulver oder 200 g Skyr', protein: 24 },
+      { zeit: 'Abends', was: 'Ofenkartoffel mit 150 g Hüttenkäse, Schnittlauch und großem Salat', protein: 24 },
+    ],
+    vegetarisch: 'Garnelen gegen 200 g Kichererbsen und 50 g Feta tauschen.',
+  },
+];
+const summe = (t: Tag) => t.mahlzeiten.reduce((s, m) => s + m.protein, 0);
+
+const einkauf = [
+  { gruppe: 'Milchprodukte und Eier', liste: 'Skyr oder Magerquark (1,2 kg), Hüttenkäse (700 g), griechischer Joghurt (150 g), Milch (1 l), Käse (30 g), Eier (15 Stück)' },
+  { gruppe: 'Fisch und Fleisch', liste: 'Hähnchenbrust (220 g), Putenbrust (120 g), mageres Rinderhack (120 g), Lachs (150 g), Kabeljau (150 g), Garnelen (150 g), Thunfisch in eigenem Saft (1 Dose)' },
+  { gruppe: 'Hülsenfrüchte und Soja', liste: 'Linsen (getrocknet 250 g oder gekocht 500 g), Kichererbsen (1 große Dose), Tofu (300 g), Edamame (100 g)' },
+  { gruppe: 'Getreide', liste: 'Haferflocken (200 g), Vollkornbrot (1 Laib), Vollkornnudeln (60 g), Quinoa (60 g roh), Reis (60 g roh), Vollkornwraps (2), Kartoffeln (500 g)' },
+  { gruppe: 'Gemüse und Obst', liste: 'Salat (2 Köpfe), Spinat, Brokkoli, Paprika (3), Tomaten, Gurke, Möhren, Pilze, Zuckerschoten, Zwiebeln, Beeren (400 g, auch tiefgekühlt), Äpfel (2), Banane, Zitrone' },
+  { gruppe: 'Sonstiges', liste: 'Nüsse (90 g), Leinsamen, Proteinpulver (120 g, Molke oder pflanzlich), Olivenöl, Gewürze, Currypaste' },
+];
+
+const title = 'Ernährungsplan nach der Abnehmspritze: 7 Tage als PDF';
+const description =
+  'Sieben Tage, vier Mahlzeiten, rund 100 g Protein und 30 g Ballaststoffe am Tag: ein Ernährungsplan für die Zeit nach der Abnehmspritze, mit Einkaufsliste und vegetarischem Tausch, als Seite und PDF.';
+const path = '/ernaehrungsplan/';
+const url = `${site.url}${path}`;
+const pdf = '/downloads/ernaehrungsplan-7-tage.pdf';
+
+const faq = [
+  {
+    q: 'Für wen ist der Plan gedacht?',
+    a: '<p>Für die Wochen, in denen der Appetit zurückkommt und die Portionen nicht mehr von allein klein bleiben, also ab der letzten Dosis, und ebenso für die Zeit unter der Therapie, in der viele zu wenig Protein essen. Die Mengen sind ein Beispiel für 80 kg Körpergewicht; bei 60 kg nimmst du etwa drei Viertel, bei 100 kg etwa ein Viertel mehr. Dein genaues Ziel rechnet der Proteinrechner.</p>',
+  },
+  {
+    q: 'Muss ich mich an die Reihenfolge halten?',
+    a: '<p>Nein. Die Tage lassen sich beliebig tauschen und wiederholen; wer am Wochenende kocht, kann Linsen, Hähnchen und Quinoa für drei Tage vorbereiten. Wichtig ist nur das Muster: vier Mahlzeiten, bei jeder zuerst Protein, bei jeder Gemüse oder Obst, nichts Kalorienhaltiges trinken.</p>',
+  },
+  {
+    q: 'Was, wenn ich kein Fleisch oder keinen Fisch esse?',
+    a: '<p>Unter jedem Tag steht der vegetarische Tausch: Tofu, Tempeh, Linsen, Kichererbsen, Eier und Milchprodukte liefern dieselben Mengen. Vegan ersetzt du Skyr und Quark durch Sojajoghurt oder pflanzliches Proteinpulver und rechnet mit etwas größeren Portionen, weil pflanzliches Protein pro 100 g meist weniger liefert.</p>',
+  },
+  {
+    q: 'Muss ich Kalorien zählen?',
+    a: '<p>Nicht mit diesem Plan. Er arbeitet mit Protein und Volumen statt mit Kalorienzahlen: Protein sättigt pro Kalorie stärker als Kohlenhydrate oder Fett, und Gemüse füllt den Magen. Ob die Menge passt, zeigt die Waage einmal pro Woche; der Gewichtskorridor sagt, ab welcher Zahl du nachjustierst.</p>',
+  },
+  {
+    q: 'Gilt der Plan auch, wenn ich die Spritze noch nehme?',
+    a: '<p>Ja, dann sind die Portionen oft zu groß für deinen Appetit. Dann zählt die Reihenfolge: Protein zuerst, Gemüse danach, der Rest, wenn noch Platz ist. Alles, was das Medikament betrifft, besprichst du mit deiner Ärztin oder deinem Arzt.</p>',
+  },
+];
+
+const jsonLd = [
+  {
+    '@type': 'WebPage',
+    '@id': `${url}#page`,
+    name: title,
+    description,
+    url,
+    inLanguage: 'de-DE',
+    isPartOf: { '@id': `${site.url}/#website` },
+    about: { '@type': 'Thing', name: 'Ernährung nach dem Absetzen von GLP-1-Rezeptoragonisten' },
+    mainEntity: {
+      '@type': 'ItemList',
+      name: '7-Tage-Ernährungsplan',
+      itemListElement: tage.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.name, description: t.mahlzeiten.map((m) => `${m.zeit}: ${m.was} (ca. ${m.protein} g Protein)`).join('; ') })),
+    },
+  },
+  faqJsonLd(faq),
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Start', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Ernährungsplan', item: url },
+    ],
+  },
+];
+const box = 'rounded-xl2 border border-line bg-white p-5';
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+  <article class="container-narrow py-12">
+    <nav aria-label="Brotkrumen" class="text-sm text-ink-3 no-print"><a href="/" class="hover:text-moss">Start</a> › <a href="/wissen/ernaehrung-nach-abnehmspritze/" class="hover:text-moss">Ernährung</a> › 7-Tage-Plan</nav>
+    <p class="eyebrow mt-6">Ernährungsplan · 7 Tage · für 80 kg</p>
+    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">Ernährungsplan nach der Abnehmspritze: 7 Tage, rund 100 g Protein am Tag</h1>
+    <p class="mt-4 text-lg text-ink-2">
+      Wenn der Appetit zurückkommt, entscheidet nicht der Wille, sondern die Struktur. Dieser Plan hält die Struktur fest: vier Mahlzeiten am Tag, bei jeder zuerst Protein, bei jeder Gemüse. Zusammen sind das 1,2 bis 1,6 g Protein pro kg Körpergewicht, wie Übersichtsarbeiten für Gewichtsabnahme und Gewichtserhalt empfehlen,<Fn n={fn('leidy2015')} id="leidy2015" /> und rund 30 g Ballaststoffe.<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> Kalorien zählt er nicht.
+    </p>
+    <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence} Bei Nierenerkrankungen gehört die Proteinmenge vorher in die ärztliche Sprechstunde.</p>
+
+    <div id="pdf" class="no-print mt-8 scroll-mt-24 rounded-xl2 border border-amber/50 bg-amber-light/40 p-5">
+      <p class="eyebrow text-amber-dark">Als PDF für Kühlschrank und Einkauf</p>
+      <p class="mt-3 text-sm text-ink-2">Alle sieben Tage mit Einkaufsliste und Quellen, ohne Anmeldung. <a href={pdf} download class="font-semibold text-moss underline underline-offset-4 plausible-event-name=Ernaehrungsplan+PDF">PDF herunterladen</a> oder diese Seite drucken.</p>
+    </div>
+
+    <div class="prose-site mt-10">
+      <h2 id="so-funktioniert">So funktioniert der Plan</h2>
+      <ul>
+        <li><strong>Vier Mahlzeiten, jede mit Protein zuerst.</strong> Die Übersichtsarbeit, auf der das Ziel beruht, nennt mindestens etwa 25 bis 30 g Protein pro Mahlzeit;<Fn n={fn('leidy2015')} id="leidy2015" /> der Nachmittagssnack darf kleiner sein.</li>
+        <li><strong>Gemüse oder Obst bei jeder Mahlzeit.</strong> Das bringt Volumen und die 30 g Ballaststoffe, die die Fachgesellschaft als Richtwert nennt.<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /></li>
+        <li><strong>Nichts Kalorienhaltiges trinken.</strong> Wasser, Tee, Kaffee ohne Zucker. Säfte, Softdrinks und Alkohol sind die Kalorien, die niemand bemerkt.</li>
+        <li><strong>Mengen für 80 kg.</strong> Bei 60 kg etwa drei Viertel, bei 100 kg etwa ein Viertel mehr; genau rechnet der <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>. Proteinwerte sind gerundete Mittelwerte aus dem Bundeslebensmittelschlüssel.<Fn n={fn('bls')} id="bls" /></li>
+        <li><strong>Warum jetzt.</strong> Nach der letzten Dosis ist die Zunahme in Studien ab etwa Woche 8 messbar;<Fn n={fn('wu2025')} id="wu2025" /> unter der Therapie fehlen bei kleinen Portionen oft Protein und Mikronährstoffe.<Fn n={fn('almandoz2024')} id="almandoz2024" /> Der Plan deckt beides ab.</li>
+      </ul>
+    </div>
+
+    <div class="tage">
+    {tage.map((t) => (
+      <section class={`mt-6 ${box}`} aria-labelledby={`${t.name.replace(' ', '-').toLowerCase()}-h`}>
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 id={`${t.name.replace(' ', '-').toLowerCase()}-h`} class="text-xl font-bold text-ink">{t.name}</h2>
+          <p class="text-sm font-semibold text-moss">ca. {summe(t)} g Protein</p>
+        </div>
+        <table class="mt-3 w-full text-left text-sm">
+          <thead class="text-xs font-semibold uppercase tracking-wide text-ink-3"><tr><th class="py-1 pr-3">Wann</th><th class="py-1 pr-3">Was</th><th class="py-1 text-right">Protein</th></tr></thead>
+          <tbody class="divide-y divide-line">
+            {t.mahlzeiten.map((m) => (<tr class="align-top"><td class="py-2 pr-3 font-semibold text-ink whitespace-nowrap">{m.zeit}</td><td class="py-2 pr-3 text-ink-2">{m.was}</td><td class="py-2 text-right text-ink-2 whitespace-nowrap">ca. {m.protein} g</td></tr>))}
+          </tbody>
+        </table>
+        <p class="mt-3 text-sm text-ink-3"><span class="font-semibold text-ink-2">Vegetarisch:</span> {t.vegetarisch}</p>
+      </section>
+    ))}
+    </div>
+
+    <section class={`einkauf mt-8 ${box}`} aria-labelledby="einkauf-h">
+      <h2 id="einkauf-h" class="text-xl font-bold text-ink">Einkaufsliste für die Woche</h2>
+      <p class="mt-1 text-sm text-ink-3">Für eine Person, alle sieben Tage, ohne vegetarischen Tausch. Mengen gerundet.</p>
+      <dl class="mt-3 space-y-3 text-sm">
+        {einkauf.map((e) => (<div><dt class="font-semibold text-ink">{e.gruppe}</dt><dd class="text-ink-2">{e.liste}</dd></div>))}
+      </dl>
+    </section>
+
+    <div class="prose-site mt-10">
+      <h2 id="danach">Und nach den sieben Tagen</h2>
+      <p>Den Plan wiederholen, Tage tauschen, eigene Gerichte nach demselben Muster bauen: Protein zuerst, Gemüse dazu, nichts trinken, was Kalorien hat. Die Regeln dahinter und die häufigsten Fehler stehen unter <a href="/wissen/ernaehrung-nach-abnehmspritze/">Ernährung nach der Abnehmspritze</a>, die Lebensmitteltabelle unter <a href="/wissen/protein-abnehmspritze/">Protein bei der Abnehmspritze</a>. Was in den Wochen nach der letzten Dosis sonst passiert, Woche für Woche, steht unter <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a>; die passende Checkliste unter <a href="/checkliste/">Die ersten 8 Wochen</a>.</p>
+    </div>
+
+    <div class="no-print">
+      <Faq items={faq} id="plan-faq" title="Häufige Fragen zum Ernährungsplan" />
+      <ProductTeaser position="ernaehrungsplan" />
+    </div>
+
+    <Footnotes ids={fnIds} />
+  </article>
+</Base>
+
+<style>
+  /* Druck und PDF: Tage zweispaltig und kompakt, damit der Plan auf wenige Seiten passt. */
+  @media print {
+    article { padding-top: 0 !important; padding-bottom: 0 !important; }
+    .tage { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+    .tage section { break-inside: avoid; margin-top: 0 !important; padding: 10px 12px !important; }
+    .tage h2 { font-size: 13px; }
+    .tage table, .tage p { font-size: 9.5px; line-height: 1.3; }
+    .tage td, .tage th { padding-top: 3px !important; padding-bottom: 3px !important; }
+    .einkauf { break-inside: avoid; padding: 12px 14px !important; }
+    .einkauf dl { font-size: 10px; line-height: 1.35; }
+    .prose-site, .prose-site li, .prose-site p { font-size: 11px; line-height: 1.4; }
+    h1 { font-size: 1.6rem !important; }
+  }
+</style>

@@ -66,6 +66,7 @@ function buildLastmod() {
   map.set('/wissen/', latest);
   map.set('/ueber/', latest);
   map.set('/checkliste/', latest);
+  map.set('/ernaehrungsplan/', latest);
   return map;
 }
 const lastmod = buildLastmod();

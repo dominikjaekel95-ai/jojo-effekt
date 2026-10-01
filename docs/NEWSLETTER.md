@@ -122,3 +122,5 @@ Was dann automatisch passiert: `/datenschutz/` zeigt Abschnitt 4b (Checkliste) u
 ## 8. Checkliste als PDF
 
 `/checkliste/` ist als Seite lesbar und druckbar. Das PDF unter `/downloads/checkliste-8-wochen.pdf` entsteht aus der gebauten Seite mit `npm run pdf:checkliste` (Playwright, Chromium) und wird mit committet. Nach jeder Änderung an `src/pages/checkliste/index.astro` neu erzeugen. `/downloads/` trägt `X-Robots-Tag: noindex` (`vercel.json`), damit das PDF nicht neben der Seite rankt.
+
+Der 7-Tage-Ernährungsplan unter `/ernaehrungsplan/` folgt demselben Weg: Das PDF `/downloads/ernaehrungsplan-7-tage.pdf` entsteht aus der gebauten Seite mit `npm run pdf:ernaehrungsplan` (`scripts/seite-pdf.mjs`, nimmt Seitenpfad und Ausgabedatei als Argumente) und ist derzeit ein Direktdownload ohne Formular. Soll er wie die Checkliste E-Mail-Adressen sammeln, braucht er ein eigenes Tally-Formular nach dem Muster von `WOxpjv` (eigene Danke-Seite, eigene Gruppe im Versanddienst) und einen Schalter in `site.ts`; das entscheidet Dominik.

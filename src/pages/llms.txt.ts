@@ -26,6 +26,7 @@ export const GET: APIRoute = async () => {
     `- [Wissen](${u('/wissen/')}): alle Artikel mit Quellen`,
     `- [Studien-Tracker](${u('/wissen/studien/')}): Studien zum Absetzen in einer Tabelle, CSV unter ${u('/wissen/studien.csv')}`,
     `- [Glossar](${u('/glossar/')}): ${glossar.length} Begriffe zur Zeit nach der Abnehmspritze, je ein Satz Definition mit Quelle`,
+    `- [Ernährungsplan](${u('/ernaehrungsplan/')}): 7 Tage mit je vier Mahlzeiten, rund 100 g Protein und 30 g Ballaststoffe am Tag für 80 kg, vegetarischer Tausch, Einkaufsliste; PDF unter ${u('/downloads/ernaehrungsplan-7-tage.pdf')}`,
     `- [Marktradar](${u('/marktradar/')}): Zulassungen, Marktstarts, Preise als Größenordnung, Kassenregeln, Lieferbarkeit; Stand ${radarLastmod()}; Feed ${u('/marktradar/feed.xml')}`,
     `- [Grafiken](${u('/grafiken/')}): ${hauptgrafiken.length} Studien-Grafiken (Absetzkurve, Zeitachse nach der letzten Dosis, Halbwertszeiten, Proteinbedarf, Preise) als SVG und PNG unter CC BY 4.0, Quelle im Bild, Alt-Text nennt jede Zahl`,
     `- [Werkzeuge](${u('/werkzeuge/')}): Zeitplan nach der letzten Dosis (Datum und Wirkstoff ergeben Meilensteine und Kalenderdatei) und Proteinrechner (Tagesziel 1,2 bis 1,6 g pro kg, Menge pro Mahlzeit); rechnen nur im Browser`,

@@ -4,6 +4,11 @@
  * src/data/sources.ts; `sources` nennt die IDs. Alternativen (gleiche Daten, andere Form) hängen über `variantOf`
  * am Haupteintrag und werden auf der Seite als Varianten angeboten.
  */
+import { preise, fmtDate } from './markt';
+
+/** Präparate, die laut preise.json bei Typ-2-Diabetes Kassenleistung sind (für den Alt-Text der Preisgrafik) */
+const kassenPraeparate = preise.zeilen.filter((z) => /Kassenleistung/.test(z.hinweis)).map((z) => z.praeparat.split(',')[0]);
+
 export interface Grafik {
   /** Dateiname ohne Endung; SVG und PNG liegen unter /grafiken/<id>.svg bzw. .png */
   id: string;
@@ -72,15 +77,15 @@ export const grafiken: Grafik[] = [
     id: 'koerperzusammensetzung-step-1',
     title: 'Was beim Abnehmen mit Semaglutid verloren geht',
     subtitle: 'Anteil von Fettmasse und fettfreier Masse am Gewichtsverlust, STEP-1-Substudie mit DXA-Messung',
-    alt: 'Balken, der den Gewichtsverlust unter Semaglutid aufteilt: rund 60 Prozent Fettmasse und rund 40 Prozent fettfreie Masse, also Muskeln, Organe, Knochen und Wasser. Krafttraining und 1,2 bis 1,6 Gramm Protein pro Kilogramm halten den Anteil klein.',
-    sources: ['wilding2021dxa', 'who2020', 'leidy2015'],
+    alt: 'Balken, der den Gewichtsverlust unter Semaglutid aufteilt: rund 60 Prozent Fettmasse und rund 40 Prozent fettfreie Masse, also Muskeln, Organe, Knochen und Wasser; wie viel davon Muskel war, wurde nicht getrennt gemessen. Krafttraining an mindestens zwei Tagen pro Woche und 1,2 bis 1,6 Gramm Protein pro Kilogramm am Tag halten den Anteil in Studien klein.',
+    sources: ['wilding2021dxa', 'sardeli2018', 'leidy2015', 'who2020'],
     used: [{ href: '/wissen/muskelabbau-abnehmspritze/', label: 'Muskelabbau bei der Abnehmspritze' }],
   },
   {
     id: 'training-s-lite',
-    title: 'Training entscheidet, was nach dem Absetzen bleibt',
-    subtitle: 'S-LiTE-Nachbeobachtung: Zunahme ein Jahr nach Therapieende, Unterschied zur Trainingsgruppe',
-    alt: 'Balkendiagramm aus der S-LiTE-Nachbeobachtung: Teilnehmende mit Trainingsprogramm hielten ein Jahr nach Therapieende Gewicht und Körperzusammensetzung. Nach Liraglutid allein lag die Zunahme 6,0 Kilogramm höher als nach Training.',
+    title: 'Training vor dem Absetzen: 6 kg Unterschied ein Jahr später',
+    subtitle: 'S-LiTE-Nachbeobachtung: Gewichtszunahme im Jahr nach Therapieende, Liraglutid allein gegenüber den Trainingsgruppen, mit 95-%-Konfidenzintervall',
+    alt: 'Balkendiagramm aus der S-LiTE-Nachbeobachtung: Im Jahr nach Therapieende nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach dem Trainingsprogramm (95-Prozent-Konfidenzintervall 2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau erhalten.',
     sources: ['jensen2024'],
     used: [
       { href: '/wissen/krafttraining-nach-abnehmspritze/', label: 'Krafttraining nach der Abnehmspritze' },
@@ -111,7 +116,7 @@ export const grafiken: Grafik[] = [
     id: 'halbwertszeiten-praeparate',
     title: 'Wie lange die Abnehmspritze nach der letzten Dosis nachwirkt',
     subtitle: 'Halbwertszeit laut Fachinformation und die Zeit bis zum weitgehenden Abbau, drei Wirkstoffe',
-    alt: 'Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten.',
+    alt: 'Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen und laut Fachinformation bis etwa sieben Wochen nachweisbar; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten.',
     sources: ['fachinfoWegovy', 'fachinfoOzempic', 'fachinfoRybelsus', 'fachinfoMounjaro', 'fachinfoSaxenda'],
     used: [
       { href: '/wissen/abnehmpille-oder-spritze/', label: 'Abnehmpille oder Spritze' },
@@ -122,15 +127,15 @@ export const grafiken: Grafik[] = [
     id: 'warum-das-gewicht-zurueckkommt',
     title: 'Warum das Gewicht nach dem Absetzen zurückkommt',
     subtitle: 'Vier belegte Mechanismen hinter dem Jojo-Effekt nach der Abnehmspritze',
-    alt: 'Vier Karten mit den Mechanismen des Jojo-Effekts nach der Abnehmspritze: Die Appetitbremse fällt nach fünf bis sieben Wochen weg; die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse.',
-    sources: ['fachinfoWegovy', 'sumithran2011', 'fothergill2016', 'wilding2021dxa'],
+    alt: 'Vier Karten mit den Mechanismen des Jojo-Effekts nach der Abnehmspritze: Die Appetitbremse fällt weg, sobald der Wirkstoff abgebaut ist (Semaglutid nach etwa fünf bis sieben Wochen, Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. Dagegen belegt: Krafttraining und Protein.',
+    sources: ['fachinfoWegovy', 'fachinfoMounjaro', 'sumithran2011', 'fothergill2016', 'wilding2021dxa', 'jensen2024', 'sardeli2018', 'leidy2015'],
     used: [{ href: '/wissen/jojo-effekt-abnehmspritze/', label: 'Jojo-Effekt nach der Abnehmspritze' }],
   },
   {
     id: 'proteinbedarf-nach-abnehmspritze',
     title: 'Wie viel Protein nach der Abnehmspritze',
     subtitle: 'Tagesmenge nach Körpergewicht im Zielkorridor von 1,2 bis 1,6 g pro kg',
-    alt: 'Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten sind das 25 bis 35 Gramm pro Mahlzeit.',
+    alt: 'Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 Gramm pro Mahlzeit.',
     sources: ['leidy2015'],
     used: [
       { href: '/wissen/protein-abnehmspritze/', label: 'Protein bei der Abnehmspritze' },
@@ -141,7 +146,7 @@ export const grafiken: Grafik[] = [
     id: 'haarausfall-zeitverlauf',
     title: 'Haarausfall nach schnellem Gewichtsverlust: der typische Verlauf',
     subtitle: 'Telogenes Effluvium in Monaten nach dem Auslöser, mit dem, was sich beeinflussen lässt',
-    alt: 'Zeitachse des telogenen Effluviums: Nach schnellem Gewichtsverlust wechseln viele Haare in die Ruhephase, zwei bis drei Monate später beginnt diffuser Haarausfall, der in der Regel innerhalb von etwa sechs Monaten abklingt; danach wachsen die Haare nach. Beeinflussbar sind Protein, Eisenwert, Zink und Biotin bei Lücke; länger als sechs Monate, fleckig oder mit Müdigkeit ärztlich abklären.',
+    alt: 'Zeitachse des telogenen Effluviums über zwölf Monate: Nach schnellem Gewichtsverlust wechseln viele Haare in die Ruhephase, zwei bis drei Monate später beginnt diffuser Haarausfall, der meist innerhalb von etwa sechs Monaten nach Beginn abklingt, wenn der Auslöser weggefallen ist; danach wachsen die Haare nach. Beeinflussbar sind Protein, Eisenwert, Zink und Biotin bei Lücke; länger als sechs Monate, fleckig oder mit Müdigkeit und Frieren ärztlich abklären.',
     sources: ['malkud2015', 'leidy2015', 'almandoz2024'],
     used: [{ href: '/wissen/haarausfall-abnehmspritze/', label: 'Haarausfall bei der Abnehmspritze' }],
   },
@@ -149,15 +154,15 @@ export const grafiken: Grafik[] = [
     id: 'abnehmpille-belegt-und-offen',
     title: 'Abnehmpille absetzen: was belegt ist und was fehlt',
     subtitle: 'Die Zulassungsstudie OASIS 4 der Semaglutid-Tablette gegenüber der Datenlage für die Zeit nach dem Absetzen',
-    alt: 'Zwei Felder: Links die Zulassungsstudie OASIS 4 der Semaglutid-Tablette mit minus 13,6 Prozent Gewicht gegenüber minus 2,2 Prozent unter Placebo nach 64 Wochen, bei durchgehender Einnahme minus 16,6 Prozent. Rechts der offene Punkt: Es gibt keine Studie zur Wiederzunahme nach dem Absetzen der Tablette; übertragbar mit Vorbehalt sind die Halbwertszeit von etwa einer Woche und die Spritzen-Daten, nach denen zwei Drittel des Verlusts nach einem Jahr zurück sind.',
+    alt: 'Zwei Felder: Links die Zulassungsstudie OASIS 4 der Semaglutid-Tablette mit minus 13,6 Prozent Gewicht gegenüber minus 2,2 Prozent unter Placebo nach 64 Wochen, bei durchgehender Einnahme minus 16,6 Prozent. Rechts der offene Punkt: Es gibt noch keine Studie zur Wiederzunahme nach dem Absetzen der Tablette (Stand Oktober 2026); übertragbar mit Vorbehalt sind die Halbwertszeit von etwa einer Woche und die Spritzen-Daten, nach denen zwei Drittel des Verlusts nach einem Jahr zurück sind.',
     sources: ['wharton2025oasis4', 'fachinfoRybelsus', 'wilding2022ext', 'wu2025'],
     used: [{ href: '/wissen/abnehmpille-absetzen/', label: 'Abnehmpille absetzen' }],
   },
   {
     id: 'preise-im-monat',
     title: 'Was Abnehmspritzen und die Tablette im Monat kosten',
-    subtitle: 'Apothekenverkaufspreise für Selbstzahler als Größenordnung, Stand aus der monatlichen Erhebung im Marktradar',
-    alt: 'Balkendiagramm der monatlichen Selbstzahlerpreise für Abnehmspritzen und die Abnehmtablette als Größenordnung, gerundet auf 5 Euro, mit Stand der Erhebung; Zeilen laut Marktradar.',
+    subtitle: `Apothekenverkaufspreise für Selbstzahler als Größenordnung, Stand ${fmtDate(preise.stand)}, aus der monatlichen Erhebung im Marktradar`,
+    alt: `Balkendiagramm der monatlichen Selbstzahlerpreise für Abnehmspritzen und die Abnehmtablette als Größenordnung, gerundet auf 5 Euro, Stand ${fmtDate(preise.stand)}: ${preise.zeilen.map((z) => `${z.praeparat} ${z.monat}`).join('; ')}.${kassenPraeparate.length ? ` ${kassenPraeparate.join(', ')} bei Typ-2-Diabetes Kassenleistung.` : ''}`,
     sources: ['medipreis2026', 'tabletteApotheken2026'],
     used: [{ href: '/marktradar/#preise', label: 'Marktradar: Preise' }],
     monatlich: true,

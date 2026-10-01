@@ -38,6 +38,34 @@ const faqText = entry.data.faq.map((f) => `${f.q} ${f.a.replace(/<[^>]+>/g, ' ')
 const words = `${entry.body ?? ''} ${faqText}`.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
 const readingMinutes = Math.max(1, Math.round(words / 180));
 
+/* Vorschaubild als ImageObject mit Lizenz und Bildunterschrift: So erkennt Google die Grafik als lizenzierbares Bild
+ * (Bildersuche, AI Overviews); Titel, Alt-Text und Untertitel kommen aus dem Register src/data/grafiken.ts. */
+import { grafiken } from '../data/grafiken';
+const grafik = entry.data.image ? grafiken.find((g) => `/grafiken/${g.id}.png` === entry.data.image) : undefined;
+const imageObject = entry.data.image
+  ? {
+      '@type': 'ImageObject',
+      '@id': `${site.url}${entry.data.image}#image`,
+      url: `${site.url}${entry.data.image}`,
+      contentUrl: `${site.url}${entry.data.image}`,
+      ...(grafik
+        ? {
+            name: grafik.title,
+            caption: grafik.alt,
+            description: grafik.subtitle,
+            width: 1800,
+            height: 1013,
+            encodingFormat: 'image/png',
+            license: 'https://creativecommons.org/licenses/by/4.0/deed.de',
+            acquireLicensePage: `${site.url}/grafiken/#nutzung`,
+            creditText: 'nachderspritze.de',
+            copyrightNotice: `${site.name}, CC BY 4.0`,
+            creator: { '@id': `${site.url}/#organization` },
+          }
+        : {}),
+    }
+  : undefined;
+
 const jsonLd = [
   {
     '@type': 'Article',
@@ -54,7 +82,7 @@ const jsonLd = [
     publisher: { '@id': `${site.url}/#organization` },
     isPartOf: { '@id': `${site.url}/wissen/${thema.slug}/#collection` },
     keywords: entry.data.keywords.join(', '),
-    ...(entry.data.image ? { image: [`${site.url}${entry.data.image}`] } : {}),
+    ...(imageObject ? { image: imageObject } : {}),
     wordCount: words,
     about: { '@type': 'Thing', name: 'GLP-1-Rezeptoragonisten absetzen' },
   },

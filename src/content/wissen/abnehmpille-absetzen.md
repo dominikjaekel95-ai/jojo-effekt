@@ -6,6 +6,7 @@ category: "Abnehmpille"
 image: /grafiken/abnehmpille-belegt-und-offen.png
 order: 16
 pubDate: 2026-09-30
+updatedDate: 2026-10-01
 keywords: ["abnehmpille absetzen", "wegovy tablette absetzen", "wegovy pille absetzen", "abnehmtablette absetzen", "semaglutid tablette absetzen", "abnehmpille jojo effekt", "abnehmpille muskelabbau", "wegovy tabletten absetzen"]
 sources: ["tabletteApotheken2026", "fachinfoRybelsus", "wilding2022ext", "wu2025", "ecWegovyTablette2026", "fdaOrforglipron2026", "fachinfoWegovy", "wharton2025oasis4", "wilding2021step1", "rubino2021", "knop2023oasis1", "wharton2025attain1", "rodriguez2025", "sumithran2011", "wilding2021dxa", "leidy2015", "who2020", "jensen2024"]
 related: ["abnehmpille-oder-spritze", "wegovy-absetzen", "abnehmspritze-absetzen"]
@@ -64,7 +65,7 @@ OASIS 4 hat untersucht, was die Tablette während der Einnahme bewirkt. Was nach
 **Was sich nicht übertragen lässt:** Wie viele Menschen die Tablette absetzen und wann, ist nicht untersucht. Für die Spritzen zeigen US-Versorgungsdaten, dass fast zwei Drittel der Menschen ohne Diabetes innerhalb eines Jahres aufhören.<sup><a href="#fn-rodriguez2025">13</a></sup> Ob eine tägliche Tablette häufiger vergessen, häufiger pausiert oder länger genommen wird, weiß niemand. Auch ob die Zunahme nach der Tablette im Mittel genauso groß ausfällt, ist eine Annahme, keine Messung.
 
 <figure class="my-8">
-  <img src="/grafiken/abnehmpille-belegt-und-offen.svg" alt="Zwei Felder: Links die Zulassungsstudie OASIS 4 der Semaglutid-Tablette mit minus 13,6 Prozent Gewicht gegenüber minus 2,2 Prozent unter Placebo nach 64 Wochen, bei durchgehender Einnahme minus 16,6 Prozent. Rechts der offene Punkt: Es gibt keine Studie zur Wiederzunahme nach dem Absetzen der Tablette; übertragbar mit Vorbehalt sind die Halbwertszeit von etwa einer Woche und die Spritzen-Daten, nach denen zwei Drittel des Verlusts nach einem Jahr zurück sind." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/abnehmpille-belegt-und-offen.png" alt="Zwei Felder: Links die Zulassungsstudie OASIS 4 der Semaglutid-Tablette mit minus 13,6 Prozent Gewicht gegenüber minus 2,2 Prozent unter Placebo nach 64 Wochen, bei durchgehender Einnahme minus 16,6 Prozent. Rechts der offene Punkt: Es gibt noch keine Studie zur Wiederzunahme nach dem Absetzen der Tablette (Stand Oktober 2026); übertragbar mit Vorbehalt sind die Halbwertszeit von etwa einer Woche und die Spritzen-Daten, nach denen zwei Drittel des Verlusts nach einem Jahr zurück sind." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Was für die Tablette belegt ist und was fehlt, Stand Oktober 2026. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 

@@ -6,6 +6,7 @@ category: "Muskeln"
 image: /grafiken/koerperzusammensetzung-step-1.png
 order: 3
 pubDate: 2026-09-30
+updatedDate: 2026-10-01
 keywords: ["abnehmspritze muskelabbau", "abnehmspritze muskelverlust", "muskelabbau abnehmspritze vermeiden", "wegovy muskelabbau", "ozempic muskelabbau", "mounjaro muskelverlust", "abnehmspritze krafttraining"]
 sources: ["wilding2021dxa", "sardeli2018", "leidy2015", "who2020", "jensen2024", "euClaims", "kreider2017", "dgeProtein", "fothergill2016"]
 related: ["protein-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -33,7 +34,7 @@ Bei jedem Gewichtsverlust verliert der Körper neben Fett auch fettfreie Masse: 
 Zwei Dinge relativieren das. Erstens: Wer 15 % seines Gewichts verliert, hat danach meist immer noch mehr absolute Muskelmasse als eine normalgewichtige Person, weil ein schwererer Körper mehr Muskeln braucht und aufbaut. Zweitens: Ein Teil der „fettfreien Masse“ ist Wasser und Gewebe, das mit dem Fett abgebaut wird. Trotzdem gilt: Muskeln, die weg sind, kommen nicht von allein zurück, und nach dem Absetzen kommt das Gewicht meist als Fett zurück.
 
 <figure class="my-8">
-  <img src="/grafiken/koerperzusammensetzung-step-1.svg" alt="Balken, der den Gewichtsverlust unter Semaglutid aufteilt: rund 60 Prozent Fettmasse und rund 40 Prozent fettfreie Masse, also Muskeln, Organe, Knochen und Wasser. Krafttraining und 1,2 bis 1,6 Gramm Protein pro Kilogramm halten den Anteil klein." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/koerperzusammensetzung-step-1.png" alt="Balken, der den Gewichtsverlust unter Semaglutid aufteilt: rund 60 Prozent Fettmasse und rund 40 Prozent fettfreie Masse, also Muskeln, Organe, Knochen und Wasser; wie viel davon Muskel war, wurde nicht getrennt gemessen. Krafttraining an mindestens zwei Tagen pro Woche und 1,2 bis 1,6 Gramm Protein pro Kilogramm am Tag halten den Anteil in Studien klein." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Anteil am Gewichtsverlust nach 68 Wochen Semaglutid, DXA-Substudie mit 140 Teilnehmenden.<sup><a href="#fn-wilding2021dxa">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
@@ -74,7 +75,7 @@ Was das praktisch heißt:
 
 ### 2. Protein – 1,2 bis 1,6 g pro kg, verteilt
 
-Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Protein trägt zur Erhaltung von Muskelmasse bei.<sup><a href="#fn-euClaims">6</a></sup> Wichtig ist die Verteilung: 25 bis 35 g pro Mahlzeit, drei- bis viermal am Tag, und bei jeder Mahlzeit das Protein zuerst – gerade, wenn der Appetit klein ist. Wie viel das für dein Gewicht ist und wie du es mit wenig Hunger schaffst, steht im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/).
+Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Protein trägt zur Erhaltung von Muskelmasse bei.<sup><a href="#fn-euClaims">6</a></sup> Wichtig ist die Verteilung: mindestens etwa 25 bis 30 g pro Mahlzeit, drei- bis viermal am Tag, und bei jeder Mahlzeit das Protein zuerst – gerade, wenn der Appetit klein ist. Wie viel das für dein Gewicht ist und wie du es mit wenig Hunger schaffst, steht im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/).
 
 ### 3. Kreatin – als Ergänzung zum Training
 

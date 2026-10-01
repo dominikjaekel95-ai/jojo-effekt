@@ -34,7 +34,7 @@ Der Plan verhindert den Jojo-Effekt nicht. Das kann kein Plan und kein Produkt. 
 Am besten startet der Plan **vor** der letzten Dosis, während der Appetit noch gedämpft ist. Wer schon abgesetzt hat, startet heute.
 
 <figure class="my-8">
-  <img src="/grafiken/training-s-lite.svg" alt="Balkendiagramm aus der S-LiTE-Nachbeobachtung: Teilnehmende mit Trainingsprogramm hielten ein Jahr nach Therapieende Gewicht und Körperzusammensetzung. Nach Liraglutid allein lag die Zunahme 6,0 Kilogramm höher als nach Training." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/training-s-lite.png" alt="Balkendiagramm aus der S-LiTE-Nachbeobachtung: Teilnehmende mit Trainingsprogramm hielten ein Jahr nach Therapieende Gewicht und Körperzusammensetzung. Nach Liraglutid allein lag die Zunahme 6,0 Kilogramm höher als nach Training." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Der Grund für Regel eins: In der S-LiTE-Nachbeobachtung hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach Therapieende. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ Am besten startet der Plan **vor** der letzten Dosis, während der Appetit noch 
 3. **Einmal pro Woche wiegen, mit Regel.** Gleicher Wochentag, morgens. Und vorher festgelegt: Bei welcher Zahl tust du was?
 
 <figure class="my-8">
-  <img src="/grafiken/zeitachse-phasen.svg" alt="Vier Phasen nach der letzten Dosis einer Abnehmspritze: Woche 1 bis 2 noch wenig Veränderung, Woche 2 bis 5 kehrt der Appetit zurück, Woche 5 bis 8 ist der Wirkstoff praktisch abgebaut, ab Woche 8 ist die Gewichtszunahme messbar und steigt bis etwa Woche 20." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/zeitachse-phasen.png" alt="Vier Phasen nach der letzten Dosis einer Abnehmspritze: Woche 1 bis 2 noch wenig Veränderung, Woche 2 bis 5 kehrt der Appetit zurück, Woche 5 bis 8 ist der Wirkstoff praktisch abgebaut, ab Woche 8 ist die Gewichtszunahme messbar und steigt bis etwa Woche 20." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Die vier Phasen nach der letzten Dosis, an denen sich die drei Abschnitte des Plans orientieren.<sup><a href="#fn-wu2025">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 

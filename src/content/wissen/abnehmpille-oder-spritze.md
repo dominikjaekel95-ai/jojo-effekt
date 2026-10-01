@@ -62,7 +62,7 @@ Direkte Vergleichsstudien zwischen Tablette und Spritze gibt es nicht. Was es gi
 Lesart: Bei gleichem Wirkstoff liegen Tablette und Spritze nahe beieinander. Die größeren Unterschiede laufen nicht zwischen Tablette und Spritze, sondern zwischen den Wirkstoffen. Alle Studien mit Kernzahl und Link stehen im [Studien-Tracker](/wissen/studien/).
 
 <figure class="my-8">
-  <img src="/grafiken/wirksamkeit-zulassungsstudien.svg" alt="Balkendiagramm der Zulassungsstudien: STEP 1 minus 14,9 Prozent gegenüber minus 2,4 Prozent unter Placebo; OASIS 4 minus 13,6 gegenüber minus 2,2; OASIS 1 minus 15,1 gegenüber minus 2,4; SURMOUNT-1 minus 20,9 gegenüber minus 3,1; SCALE minus 8,0 gegenüber minus 2,6 Prozent. Kein direkter Vergleich zwischen den Studien." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/wirksamkeit-zulassungsstudien.png" alt="Balkendiagramm der Zulassungsstudien: STEP 1 minus 14,9 Prozent gegenüber minus 2,4 Prozent unter Placebo; OASIS 4 minus 13,6 gegenüber minus 2,2; OASIS 1 minus 15,1 gegenüber minus 2,4; SURMOUNT-1 minus 20,9 gegenüber minus 3,1; SCALE minus 8,0 gegenüber minus 2,6 Prozent. Kein direkter Vergleich zwischen den Studien." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Mittlere Gewichtsänderung in den Zulassungsstudien, Wirkstoff gegenüber Placebo; verschiedene Studien, kein direkter Vergleich. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
@@ -77,7 +77,7 @@ Lesart: Bei gleichem Wirkstoff liegen Tablette und Spritze nahe beieinander. Die
 Für die Zeit danach ist das der wichtigste Punkt: Tablette und Spritze mit Semaglutid haben dieselbe Auswaschphase. Dass die Tablette täglich genommen wird, verkürzt sie nicht. Wer die Tablette absetzt, hat also denselben Zeitplan wie nach der Spritze: zwei ruhige Wochen, dann kehrt der Appetit zurück, und ab etwa Woche 8 wird die Zunahme in Studien messbar.<sup><a href="#fn-wu2025">15</a></sup>
 
 <figure class="my-8">
-  <img src="/grafiken/halbwertszeiten-praeparate.svg" alt="Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/halbwertszeiten-praeparate.png" alt="Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Halbwertszeiten laut Fachinformation und die Faustregel „fünf Halbwertszeiten“. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 

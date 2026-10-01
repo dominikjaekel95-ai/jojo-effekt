@@ -33,7 +33,7 @@ Bei jedem Gewichtsverlust verliert der Körper neben Fett auch fettfreie Masse: 
 Zwei Dinge relativieren das. Erstens: Wer 15 % seines Gewichts verliert, hat danach meist immer noch mehr absolute Muskelmasse als eine normalgewichtige Person, weil ein schwererer Körper mehr Muskeln braucht und aufbaut. Zweitens: Ein Teil der „fettfreien Masse“ ist Wasser und Gewebe, das mit dem Fett abgebaut wird. Trotzdem gilt: Muskeln, die weg sind, kommen nicht von allein zurück, und nach dem Absetzen kommt das Gewicht meist als Fett zurück.
 
 <figure class="my-8">
-  <img src="/grafiken/koerperzusammensetzung-step-1.svg" alt="Balken, der den Gewichtsverlust unter Semaglutid aufteilt: rund 60 Prozent Fettmasse und rund 40 Prozent fettfreie Masse, also Muskeln, Organe, Knochen und Wasser. Krafttraining und 1,2 bis 1,6 Gramm Protein pro Kilogramm halten den Anteil klein." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/koerperzusammensetzung-step-1.png" alt="Balken, der den Gewichtsverlust unter Semaglutid aufteilt: rund 60 Prozent Fettmasse und rund 40 Prozent fettfreie Masse, also Muskeln, Organe, Knochen und Wasser. Krafttraining und 1,2 bis 1,6 Gramm Protein pro Kilogramm halten den Anteil klein." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Anteil am Gewichtsverlust nach 68 Wochen Semaglutid, DXA-Substudie mit 140 Teilnehmenden.<sup><a href="#fn-wilding2021dxa">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 

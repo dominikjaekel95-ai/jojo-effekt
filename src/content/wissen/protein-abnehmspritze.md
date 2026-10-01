@@ -51,7 +51,7 @@ Bei starkem Übergewicht (BMI über 35) rechnen viele Fachleute mit dem Zielgewi
 **Ausnahme Nierenerkrankung:** Dann legt die Ärztin oder der Arzt die Proteinmenge fest. Bei gesunden Nieren gibt es für diese Mengen keine Hinweise auf Schäden.
 
 <figure class="my-8">
-  <img src="/grafiken/proteinbedarf-nach-abnehmspritze.svg" alt="Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten sind das 25 bis 35 Gramm pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/proteinbedarf-nach-abnehmspritze.png" alt="Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten sind das 25 bis 35 Gramm pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Tagesmenge nach Körpergewicht im Zielkorridor von 1,2 bis 1,6 g pro kg.<sup><a href="#fn-leidy2015">2</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 

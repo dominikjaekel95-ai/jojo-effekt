@@ -15,19 +15,23 @@ const OUT = resolve('public/grafiken');
 mkdirSync(OUT, { recursive: true });
 const preise = JSON.parse(readFileSync(resolve('src/data/markt/preise.json'), 'utf8'));
 
+/* Farben = Theme d1 aus src/styles/global.css (html[data-theme="d1"]): Grafiken sehen aus wie Karten der Website. */
 const C = {
-  paper: '#ffffff',
-  ink: '#22201c',
-  ink2: '#4a463f',
-  ink3: '#6b665d',
-  line: '#e2dace',
-  moss: '#2f6b5a',
-  mossLight: '#dcebe4',
-  clay: '#b8563e',
-  clayLight: '#f7e3dc',
-  sand: '#f7f2ea',
+  paper: '#ffffff', // Kartenweiß
+  ink: '#1a1a1a',
+  ink2: '#4b4b4b',
+  ink3: '#6f6f6f',
+  line: '#dedbd4',
+  moss: '#4f6b57',
+  mossLight: '#e3eae4',
+  clay: '#a35f4d',
+  clayLight: '#f3e4df',
+  amber: '#c27a4a',
+  sand: '#edebe6', // paper-2: Flächen in Karten
 };
-const FONT = "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+/* Schrift wie im Theme d1 (Hanken Grotesk). Die PNG-Fassungen werden mit der eingebetteten Schrift gerendert; die SVG-Dateien
+ * fallen beim Betrachter ohne diese Schrift auf system-ui zurück. */
+const FONT = "'Hanken Grotesk Variable', 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
 const W = 1200;
 const H = 675;
 
@@ -41,6 +45,8 @@ const fmtDate = (iso) => {
 };
 
 function frame({ title, subtitle, source, alt, body }) {
+  // Quellenzeile links, Domain rechts: bei langen Quellen kleiner, damit sich beides nie überlagert
+  const srcSize = source.length > 100 ? 12.5 : source.length > 85 ? 13.5 : 15;
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="t d" font-family="${FONT}">
 <title id="t">${esc(title)}</title>
@@ -50,7 +56,7 @@ ${text(56, 62, title, { size: 32, weight: 700 })}
 ${text(56, 98, subtitle, { size: 19, fill: C.ink2 })}
 ${body}
 <line x1="56" y1="${H - 52}" x2="${W - 56}" y2="${H - 52}" stroke="${C.line}" stroke-width="1"/>
-${text(56, H - 24, `Quelle: ${source}`, { size: 15, fill: C.ink3 })}
+${text(56, H - 24, `Quelle: ${source}`, { size: srcSize, fill: C.ink3 })}
 ${text(W - 56, H - 24, 'nachderspritze.de', { size: 15, weight: 600, fill: C.moss, anchor: 'end' })}
 </svg>
 `;
@@ -207,22 +213,22 @@ const figures = [];
 /* 2b. Alternative: vier Phasen als Karten */
 {
   const phases = [
-    { t: 'Woche 1 bis 2', h: 'Noch wenig Veränderung', d: ['Genug Wirkstoff im Körper;', 'viele merken keinen Unterschied.'], c: C.moss },
-    { t: 'Woche 2 bis 5', h: 'Der Appetit kommt zurück', d: ['Wirkstoffspiegel sinkt, Magen arbeitet', 'schneller, Sättigung kommt später.'], c: C.clay },
-    { t: 'Woche 5 bis 8', h: 'Wirkstoff praktisch weg', d: ['Nach etwa fünf Halbwertszeiten', 'weitgehend abgebaut.'], c: C.ink3 },
-    { t: 'Ab Woche 8', h: 'Zunahme messbar', d: ['In Studien ab Woche 8 signifikant,', 'Anstieg bis etwa Woche 20.'], c: C.clay },
+    { t: 'Woche 1 bis 2', h: ['Noch wenig', 'Veränderung'], d: ['Genug Wirkstoff im Körper;', 'viele merken keinen', 'Unterschied.'], c: C.moss },
+    { t: 'Woche 2 bis 5', h: ['Der Appetit', 'kommt zurück'], d: ['Wirkstoffspiegel sinkt, der', 'Magen arbeitet schneller,', 'Sättigung kommt später.'], c: C.clay },
+    { t: 'Woche 5 bis 8', h: ['Wirkstoff', 'praktisch weg'], d: ['Nach etwa fünf', 'Halbwertszeiten weitgehend', 'abgebaut.'], c: C.ink3 },
+    { t: 'Ab Woche 8', h: ['Zunahme', 'messbar'], d: ['In Studien ab Woche 8', 'signifikant, Anstieg bis', 'etwa Woche 20.'], c: C.clay },
   ];
   let body = '';
   phases.forEach((p, i) => {
     const x = 56 + i * 274;
-    body += `<rect x="${x}" y="160" width="250" height="330" rx="14" fill="${C.sand}"/>`;
+    body += `<rect x="${x}" y="160" width="250" height="300" rx="14" fill="${C.sand}"/>`;
     body += `<rect x="${x}" y="160" width="250" height="10" rx="5" fill="${p.c}"/>`;
-    body += text(x + 20, 210, p.t, { size: 16, weight: 600, fill: p.c });
-    body += text(x + 20, 250, p.h, { size: 21, weight: 700 });
-    p.d.forEach((line, j) => (body += text(x + 20, 300 + j * 26, line, { size: 15, fill: C.ink2 })));
-    if (i < 3) body += `<polygon points="${x + 256},320 ${x + 270},330 ${x + 256},340" fill="${C.ink3}"/>`;
+    body += text(x + 20, 205, p.t, { size: 16, weight: 600, fill: p.c });
+    p.h.forEach((line, j) => (body += text(x + 20, 245 + j * 27, line, { size: 20, weight: 700 })));
+    p.d.forEach((line, j) => (body += text(x + 20, 318 + j * 23, line, { size: 14, fill: C.ink2 })));
+    if (i < 3) body += `<polygon points="${x + 256},300 ${x + 270},310 ${x + 256},320" fill="${C.ink3}"/>`;
   });
-  body += text(56, 540, 'Halbwertszeiten laut Fachinformation (Semaglutid etwa eine Woche, Tirzepatid etwa fünf Tage); Zunahme laut Meta-Analyse randomisierter Studien.', { size: 15, fill: C.ink3 });
+  body += text(56, 510, 'Halbwertszeiten laut Fachinformation (Semaglutid etwa eine Woche, Tirzepatid etwa fünf Tage); Zunahme laut Meta-Analyse randomisierter Studien.', { size: 15, fill: C.ink3 });
   figures.push({
     file: 'zeitachse-phasen.svg',
     svg: frame({
@@ -376,9 +382,9 @@ const figures = [];
 /* 7. Halbwertszeiten (fachinfoWegovy, fachinfoOzempic, fachinfoRybelsus, fachinfoMounjaro, fachinfoSaxenda) */
 {
   const rows = [
-    { name: 'Semaglutid', sub: 'Wegovy (Spritze und Tablette), Ozempic, Rybelsus', hl: 7, hlLabel: 'etwa 1 Woche', gone: 'etwa 5 Wochen' },
-    { name: 'Tirzepatid', sub: 'Mounjaro', hl: 5, hlLabel: 'etwa 5 Tage', gone: 'etwa 25 Tage' },
-    { name: 'Liraglutid', sub: 'Saxenda', hl: 13 / 24, hlLabel: 'etwa 13 Stunden', gone: 'etwa 3 Tage' },
+    { name: 'Semaglutid', sub: ['Wegovy (Spritze und Tablette),', 'Ozempic, Rybelsus'], hl: 7, hlLabel: 'etwa 1 Woche', gone: 'etwa 5 Wochen' },
+    { name: 'Tirzepatid', sub: ['Mounjaro'], hl: 5, hlLabel: 'etwa 5 Tage', gone: 'etwa 25 Tage' },
+    { name: 'Liraglutid', sub: ['Saxenda'], hl: 13 / 24, hlLabel: 'etwa 13 Stunden', gone: 'etwa 3 Tage' },
   ];
   const x0 = 380;
   const px = (d) => x0 + (d / 40) * 740;
@@ -390,11 +396,14 @@ const figures = [];
   rows.forEach((r, i) => {
     const y = 180 + i * 110;
     body += text(56, y + 20, r.name, { size: 22, weight: 700 });
-    body += text(56, y + 44, r.sub, { size: 14, fill: C.ink3 });
+    r.sub.forEach((line, j) => (body += text(56, y + 44 + j * 18, line, { size: 14, fill: C.ink3 })));
     body += `<rect x="${x0}" y="${y}" width="${Math.max(px(r.hl) - x0, 6)}" height="24" rx="5" fill="${C.moss}"/>`;
     body += text(px(r.hl) + 8, y + 18, `Halbwertszeit ${r.hlLabel}`, { size: 15, weight: 600, fill: C.moss });
-    body += `<rect x="${x0}" y="${y + 32}" width="${Math.max(px(r.hl * 5) - x0, 6)}" height="24" rx="5" fill="${C.clayLight}" stroke="${C.clay}" stroke-width="1.5"/>`;
-    body += text(px(r.hl * 5) + 8, y + 50, `weitgehend abgebaut nach ${r.gone}`, { size: 15, weight: 600, fill: C.clay });
+    const breit = Math.max(px(r.hl * 5) - x0, 6);
+    body += `<rect x="${x0}" y="${y + 32}" width="${breit}" height="24" rx="5" fill="${C.clayLight}" stroke="${C.clay}" stroke-width="1.5"/>`;
+    // Beschriftung im Balken, wenn er breit genug ist; sonst rechts daneben (kurze Balken)
+    if (breit > 380) body += text(x0 + breit - 10, y + 50, `weitgehend abgebaut nach ${r.gone}`, { size: 15, weight: 600, fill: C.clay, anchor: 'end' });
+    else body += text(x0 + breit + 8, y + 50, `weitgehend abgebaut nach ${r.gone}`, { size: 15, weight: 600, fill: C.clay });
   });
   body += text(56, 560, 'Faustregel: Nach etwa fünf Halbwertszeiten ist ein Wirkstoff weitgehend abgebaut. Die Wirkung auf den Appetit lässt schon vorher spürbar nach.', { size: 15, fill: C.ink3 });
   figures.push({
@@ -412,29 +421,28 @@ const figures = [];
 /* 8. Warum der Körper gegenarbeitet (fachinfos, sumithran2011, fothergill2016, wilding2021dxa) */
 {
   const cards = [
-    { big: '5–7 Wochen', h: 'Die Appetitbremse fällt weg', d: ['Nach etwa fünf Halbwertszeiten ist der', 'Wirkstoff weitgehend abgebaut.'], src: 'Fachinformationen (EMA)' },
-    { big: 'Ghrelin ↑ Leptin ↓', h: 'Hungerhormone bleiben verschoben', d: ['Noch ein Jahr nach einer Diät messbar:', 'mehr Hunger, weniger Sättigung.'], src: 'Sumithran et al., NEJM 2011' },
-    { big: '6 Jahre', h: 'Weniger Energie in Ruhe', d: ['Der Ruheenergieverbrauch blieb nach', 'starkem Gewichtsverlust abgesenkt.'], src: 'Fothergill et al., Obesity 2016' },
-    { big: 'rund 40 %', h: 'Ein Teil des Verlusts war Muskel', d: ['des Gewichtsverlusts unter Semaglutid', 'entfielen auf fettfreie Masse.'], src: 'STEP-1-DXA-Substudie 2021' },
+    { big: '5–7 Wochen', h: ['Die Appetitbremse', 'fällt weg'], d: ['Nach etwa fünf Halbwerts-', 'zeiten ist der Wirkstoff', 'weitgehend abgebaut.'], src: 'Fachinformationen (EMA)' },
+    { big: 'Ghrelin ↑  Leptin ↓', h: ['Hungerhormone', 'bleiben verschoben'], d: ['Noch ein Jahr nach einer', 'Diät messbar: mehr Hunger,', 'weniger Sättigung.'], src: 'Sumithran et al., NEJM 2011' },
+    { big: '6 Jahre', h: ['Weniger Energie', 'in Ruhe'], d: ['Der Ruheenergieverbrauch', 'blieb nach starkem Gewichts-', 'verlust abgesenkt.'], src: 'Fothergill et al., Obesity 2016' },
+    { big: 'rund 40 %', h: ['Ein Teil des Verlusts', 'war Muskel'], d: ['des Gewichtsverlusts unter', 'Semaglutid entfielen auf', 'fettfreie Masse.'], src: 'STEP-1-DXA-Substudie 2021' },
   ];
   let body = '';
   cards.forEach((c, i) => {
     const x = 56 + i * 274;
-    body += `<rect x="${x}" y="150" width="250" height="400" rx="14" fill="${C.sand}"/>`;
-    body += text(x + 125, 215, c.big, { size: 26, weight: 700, fill: i === 3 ? C.clay : C.moss, anchor: 'middle' });
-    body += `<line x1="${x + 24}" y1="240" x2="${x + 226}" y2="240" stroke="${C.line}" stroke-width="1.5"/>`;
-    body += text(x + 24, 280, c.h.split(' ').slice(0, 3).join(' '), { size: 18, weight: 700 });
-    body += text(x + 24, 304, c.h.split(' ').slice(3).join(' '), { size: 18, weight: 700 });
-    c.d.forEach((line, j) => (body += text(x + 24, 345 + j * 24, line, { size: 14, fill: C.ink2 })));
-    body += text(x + 24, 520, c.src, { size: 12, fill: C.ink3 });
+    body += `<rect x="${x}" y="150" width="250" height="330" rx="14" fill="${C.sand}"/>`;
+    body += text(x + 125, 212, c.big, { size: c.big.length > 12 ? 22 : 26, weight: 700, fill: i === 3 ? C.clay : C.moss, anchor: 'middle' });
+    body += `<line x1="${x + 24}" y1="236" x2="${x + 226}" y2="236" stroke="${C.line}" stroke-width="1.5"/>`;
+    c.h.forEach((line, j) => (body += text(x + 24, 272 + j * 24, line, { size: 18, weight: 700 })));
+    c.d.forEach((line, j) => (body += text(x + 24, 340 + j * 22, line, { size: 13.5, fill: C.ink2 })));
+    body += text(x + 24, 455, c.src, { size: 12, fill: C.ink3 });
   });
-  body += text(56, 590, 'Vier Mechanismen, die zusammen den Jojo-Effekt erklären. Was dagegen belegt ist: Krafttraining, Protein, feste Mahlzeiten.', { size: 15, fill: C.ink3 });
+  body += text(56, 530, 'Vier Mechanismen, die zusammen den Jojo-Effekt erklären. Was dagegen belegt ist: Krafttraining, Protein, feste Mahlzeiten.', { size: 15, fill: C.ink3 });
   figures.push({
     file: 'warum-das-gewicht-zurueckkommt.svg',
     svg: frame({
       title: 'Warum das Gewicht nach dem Absetzen zurückkommt',
       subtitle: 'Vier belegte Mechanismen hinter dem Jojo-Effekt nach der Abnehmspritze',
-      source: 'Fachinformationen (EMA); Sumithran et al., NEJM 2011; Fothergill et al., Obesity 2016; Wilding et al., J Endocr Soc 2021',
+      source: 'Fachinformationen (EMA); Sumithran et al. 2011; Fothergill et al. 2016; Wilding et al. 2021',
       alt: 'Vier Karten mit den Mechanismen des Jojo-Effekts nach der Abnehmspritze: Die Appetitbremse fällt nach fünf bis sieben Wochen weg; die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse.',
       body,
     }),
@@ -445,9 +453,9 @@ const figures = [];
 {
   const kgs = [60, 70, 80, 90, 100];
   const x0 = 300;
-  const px = (g) => x0 + (g / 170) * 800;
+  const px = (g) => x0 + (g / 200) * 800;
   let body = '';
-  for (const g of [0, 40, 80, 120, 160]) {
+  for (const g of [0, 50, 100, 150, 200]) {
     body += `<line x1="${px(g)}" y1="150" x2="${px(g)}" y2="470" stroke="${C.line}" stroke-width="1"/>`;
     body += text(px(g), 142, `${g} g`, { size: 14, fill: C.ink3, anchor: 'middle' });
   }
@@ -492,7 +500,16 @@ const figures = [];
   }
   rows.forEach((r, i) => {
     const y = 150 + i * 36;
-    body += text(56, y + 18, r.name, { size: 14, weight: 600 });
+    // Lange Präparatenamen auf zwei Zeilen umbrechen (am letzten Komma oder vor der Klammer), damit nichts in die Balken läuft
+    if (r.name.length > 40) {
+      const cut = Math.max(r.name.lastIndexOf(', ', 40), r.name.lastIndexOf(' (', 40));
+      const l1 = cut > 0 ? r.name.slice(0, cut + (r.name[cut] === ',' ? 1 : 0)) : r.name.slice(0, 40);
+      const l2 = cut > 0 ? r.name.slice(cut + (r.name[cut] === ',' ? 2 : 1)) : r.name.slice(40);
+      body += text(56, y + 12, l1, { size: 12.5, weight: 600 });
+      body += text(56, y + 26, l2, { size: 12.5, weight: 600 });
+    } else {
+      body += text(56, y + 18, r.name, { size: 14, weight: 600 });
+    }
     body += `<rect x="${x0}" y="${y + 2}" width="${px(r.eur) - x0}" height="24" rx="5" fill="${r.kasse ? C.mossLight : C.moss}" ${r.kasse ? `stroke="${C.moss}" stroke-width="1.5"` : ''}/>`;
     body += text(px(r.eur) + 8, y + 19, `ca. ${r.eur} €${r.flag}`, { size: 15, weight: 700, fill: C.moss });
   });
@@ -623,8 +640,17 @@ try {
   }
   const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1.5 });
   const page = await ctx.newPage();
+  // Website-Schrift (Hanken Grotesk, Theme d1) für die PNG-Fassungen einbetten
+  const fontDir = resolve('node_modules/@fontsource-variable/hanken-grotesk/files');
+  const fontCss = ['hanken-grotesk-latin-wght-normal.woff2', 'hanken-grotesk-latin-ext-wght-normal.woff2']
+    .map((f) => resolve(fontDir, f))
+    .filter((p) => existsSync(p))
+    .map((p) => `@font-face{font-family:'Hanken Grotesk Variable';font-style:normal;font-weight:100 900;src:url(data:font/woff2;base64,${readFileSync(p).toString('base64')}) format('woff2')}`)
+    .join('');
+  if (!fontCss) console.warn('Hanken Grotesk nicht gefunden (node_modules/@fontsource-variable/hanken-grotesk); PNGs nutzen die Systemschrift.');
   for (const f of figures) {
-    await page.setContent(`<!doctype html><html><body style="margin:0">${f.svg.replace(/^<\?xml[^>]*>\s*/, '')}</body></html>`);
+    await page.setContent(`<!doctype html><html><head><style>${fontCss}body{margin:0}</style></head><body>${f.svg.replace(/^<\?xml[^>]*>\s*/, '')}</body></html>`);
+    await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: resolve(OUT, f.file.replace('.svg', '.png')), clip: { x: 0, y: 0, width: W, height: H } });
   }
   await browser.close();

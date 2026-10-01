@@ -3,8 +3,10 @@ title: "Jojo-Effekt nach der Abnehmspritze: Warum das Gewicht zurückkommt – u
 metaTitle: "Jojo-Effekt nach der Abnehmspritze: Ursachen, Zahlen, was hilft"
 description: "Nach dem Absetzen kommt in Studien ein Großteil des Gewichts zurück. Warum das passiert, wie schnell, und was nachweislich dagegen hilft – mit Quellen."
 category: "Gewicht halten"
+image: /grafiken/warum-das-gewicht-zurueckkommt.png
 order: 1
 pubDate: 2026-09-30
+updatedDate: 2026-10-01
 keywords: ["jojo effekt abnehmspritze", "abnehmspritze jojo effekt", "wegovy jojo effekt", "ozempic jojo effekt", "mounjaro jojo effekt", "abnehmspritze zunehmen danach", "jojo effekt abnehmspritze vermeiden"]
 sources: ["wilding2022ext", "rubino2021", "aronne2024", "wu2025", "eclinmed2026", "sumithran2011", "fothergill2016", "wilding2021dxa", "rodriguez2025", "jensen2024", "leidy2015", "sardeli2018", "who2020", "dagLeitlinie"]
 related: ["abnehmspritze-absetzen", "muskelabbau-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -45,9 +47,24 @@ Alle Studien mit Kernzahl und Link stehen im [Studien-Tracker](/wissen/studien/)
 
 Wichtig für die Einordnung: Auch nach dem Regain lagen die Teilnehmenden im Mittel noch unter ihrem Startgewicht. Und hinter jedem Mittelwert stecken Menschen, die fast alles wieder zugenommen haben, und Menschen, die fast nichts zugenommen haben.
 
+<figure class="my-8">
+  <img src="/grafiken/absetzkurve-step-1-saeulen.png" alt="Zwei Säulen: Nach 68 Wochen Semaglutid sind im Mittel 17,3 Prozent des Gewichts verloren. Ein Jahr nach dem Absetzen sind 11,6 Prozentpunkte wieder zurück, 5,6 Prozent bleiben; das entspricht zwei Dritteln des Verlusts, die zurückkommen." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Was nach dem Absetzen bleibt: ein Drittel. Semaglutid-Gruppe der STEP-1-Verlängerung, Mittelwerte.<sup><a href="#fn-wilding2022ext">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
+
+<figure class="my-8">
+  <img src="/grafiken/weiter-oder-placebo.png" alt="Balkendiagramm: In STEP 4 nahmen Teilnehmende unter fortgeführtem Semaglutid in 48 Wochen weitere 7,9 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 6,9 Prozent zu. In SURMOUNT-4 nahmen Teilnehmende unter fortgeführtem Tirzepatid in 52 Wochen weitere 5,5 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 14 Prozent zu." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Weiter behandeln oder absetzen: Gewicht nach dem Wechsel auf Placebo in STEP 4 und SURMOUNT-4. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
+
 ## Warum der Körper nach dem Absetzen gegen dich arbeitet
 
-Drei Mechanismen greifen ineinander:
+<figure class="my-8">
+  <img src="/grafiken/warum-das-gewicht-zurueckkommt.png" alt="Vier Karten mit den Mechanismen des Jojo-Effekts nach der Abnehmspritze: Die Appetitbremse fällt weg, sobald der Wirkstoff abgebaut ist (Semaglutid nach etwa fünf bis sieben Wochen, Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. Dagegen belegt: Krafttraining und Protein." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Vier belegte Mechanismen hinter dem Jojo-Effekt; die Quellen stehen in den Abschnitten darunter. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
+
+Vier Mechanismen greifen ineinander. Der erste ist offensichtlich: Die Appetitbremse fällt weg, sobald der Wirkstoff abgebaut ist; wie lange das je nach Präparat dauert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/). Die drei anderen sind weniger bekannt:
 
 **1. Der Appetit kommt zurück – und zwar stärker als vorher.** Nach starkem Gewichtsverlust verschiebt der Körper seine Hormone: Das Hungerhormon Ghrelin steigt, Sättigungshormone wie Leptin sinken. Diese Veränderungen waren in einer Studie ein Jahr nach der Diät noch messbar.<sup><a href="#fn-sumithran2011">6</a></sup> Unter der Spritze fällt das nicht auf. Danach schon.
 
@@ -67,7 +84,7 @@ Die klarste Evidenz kommt aus Dänemark. In der S-LiTE-Studie nahmen Erwachsene 
 
 ### Protein: genug, verteilt, zuerst
 
-Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">11</a></sup> Für eine Person mit 80 kg sind das 96 bis 128 g – etwa das Doppelte dessen, was viele unter der Spritze essen. Praktisch heißt das: 25 bis 35 g Protein pro Mahlzeit, und bei jeder Mahlzeit das Protein zuerst. Wie das geht, steht im Artikel [Protein bei der Abnehmspritze: Wie viel?](/wissen/protein-abnehmspritze/).
+Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">11</a></sup> Für eine Person mit 80 kg sind das 96 bis 128 g – etwa das Doppelte dessen, was viele unter der Spritze essen. Praktisch heißt das: mindestens etwa 25 bis 30 g Protein pro Mahlzeit, und bei jeder Mahlzeit das Protein zuerst. Wie das geht, steht im Artikel [Protein bei der Abnehmspritze: Wie viel?](/wissen/protein-abnehmspritze/).
 
 ### Struktur statt Willenskraft
 

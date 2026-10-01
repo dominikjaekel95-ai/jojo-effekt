@@ -8,6 +8,7 @@ import { site } from '../data/site';
 import { radar, radarLastmod } from '../data/markt';
 import { byTerm } from '../lib/glossar';
 import { themen } from '../data/themen';
+import { grafiken, hauptgrafiken } from '../data/grafiken';
 
 export const GET: APIRoute = async () => {
   const artikel = (await getCollection('wissen', (a) => !a.data.draft)).sort((a, b) => a.data.order - b.data.order);
@@ -26,6 +27,7 @@ export const GET: APIRoute = async () => {
     `- [Studien-Tracker](${u('/wissen/studien/')}): Studien zum Absetzen in einer Tabelle, CSV unter ${u('/wissen/studien.csv')}`,
     `- [Glossar](${u('/glossar/')}): ${glossar.length} Begriffe zur Zeit nach der Abnehmspritze, je ein Satz Definition mit Quelle`,
     `- [Marktradar](${u('/marktradar/')}): Zulassungen, Marktstarts, Preise als Größenordnung, Kassenregeln, Lieferbarkeit; Stand ${radarLastmod()}; Feed ${u('/marktradar/feed.xml')}`,
+    `- [Grafiken](${u('/grafiken/')}): ${hauptgrafiken.length} Studien-Grafiken (Absetzkurve, Zeitachse nach der letzten Dosis, Halbwertszeiten, Proteinbedarf, Preise) als SVG und PNG unter CC BY 4.0, Quelle im Bild, Alt-Text nennt jede Zahl`,
     `- [Über diese Seite](${u('/ueber/')}): Arbeitsweise, Quellenregeln, Kontakt`,
     '',
     '## Themen',
@@ -36,6 +38,9 @@ export const GET: APIRoute = async () => {
     '',
     '## Glossar',
     ...glossar.map((g) => `- [${g.data.term}](${u(`/glossar/${g.id}/`)}): ${g.data.short}`),
+    '',
+    '## Grafiken (CC BY 4.0, Quelle im Bild, frei verwendbar mit Quellenangabe)',
+    ...grafiken.map((g) => `- [${g.title}](${u(`/grafiken/#${g.id}`)}): ${g.alt} Datei: ${u(`/grafiken/${g.id}.png`)}`),
     '',
     '## Marktradar, neueste Einträge',
     ...radar.eintraege.slice(0, 6).map((e) => `- ${e.date}: [${e.title}](${u(`/marktradar/#${e.id}`)}) (Quelle: ${e.source.name})`),

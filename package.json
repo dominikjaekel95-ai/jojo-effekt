@@ -12,6 +12,7 @@
     "check:text": "node scripts/check-text.mjs",
     "check:all": "npm run build && npm run check && npm run check:text",
     "pdf:checkliste": "npm run build && node scripts/checkliste-pdf.mjs",
+    "grafiken": "node scripts/grafiken.mjs",
     "astro": "astro"
   },
   "dependencies": {

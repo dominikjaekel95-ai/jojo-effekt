@@ -534,6 +534,13 @@ export const sources: Record<string, Source> = {
     url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa061883',
     note: 'Randomisierte Studie, 314 Erwachsene nach mindestens 10 % Gewichtsverlust, 18 Monate: tägliches Wiegen mit Zonen (grün bis +1,4 kg, gelb bis +2,3 kg, rot ab +2,3 kg) und festgelegter Reaktion. 45,7 % der persönlich betreuten Gruppe nahmen 2,3 kg oder mehr wieder zu, 72,4 % der Kontrollgruppe.',
   },
+  look2025surmount1dxa: {
+    id: 'look2025surmount1dxa',
+    short: 'Look et al., SURMOUNT-1 Körperzusammensetzung, Diabetes Obes Metab 2025',
+    full: 'Look M, Dunn JP, Kushner RF, et al. Body composition changes during weight reduction with tirzepatide in the SURMOUNT-1 study of adults with obesity or overweight. Diabetes Obes Metab. 2025;27(5):2720–2729.',
+    url: 'https://dom-pubs.onlinelibrary.wiley.com/doi/10.1111/dom.16275',
+    note: 'DXA-Substudie mit 160 Teilnehmenden (124 Tirzepatid, 36 Placebo) über 72 Wochen: Körpergewicht −21,3 %, Fettmasse −33,9 %, fettfreie Masse −10,9 % unter Tirzepatid (Placebo −5,3 %, −8,2 %, −2,6 %); rund 75 % des verlorenen Gewichts waren Fett, rund 25 % fettfreie Masse, in beiden Gruppen.',
+  },
 };
 
 export function getSources(ids: readonly string[]): Source[] {

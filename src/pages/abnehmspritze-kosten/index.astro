@@ -6,6 +6,7 @@
  */
 import Base from '../../layouts/Base.astro';
 import Faq from '../../components/Faq.astro';
+import GrafikEinbinden from '../../components/GrafikEinbinden.astro';
 import { site } from '../../data/site';
 import { preise, kassen, fmtDate } from '../../data/markt';
 
@@ -44,9 +45,29 @@ const faq = [
     q: 'Wie sind die Jahreskosten gerechnet?',
     a: '<p>Ein Pen reicht bei den Spritzen vier Wochen, deshalb Monatspreis mal 13. Tabletten kommen in Packungen zu 30 Stück, Saxenda-Pens reichen etwa 30 Tage; dort Monatspreis mal 12. Dosissteigerungen am Anfang und Pausen sind nicht eingerechnet; die Spanne zeigt die Größenordnung.</p>',
   },
+  {
+    q: 'Was rechnet der Jahreskosten-Rechner?',
+    a: '<p>Aus dem Monatspreis der gewählten Zeile (oder einem eigenen Betrag) und der Dauer in Monaten die Gesamtkosten, die Kosten pro Jahr mit dem passenden Faktor und die Kosten pro Tag. Er rechnet nur im Browser, speichert nichts und ist eine Größenordnung für Selbstzahler; Kassenleistungen, Zuzahlungen und Dosiswechsel bildet er nicht ab.</p>',
+  },
 ];
 
+const rechnerZeilen = rows.map((r) => ({ name: r.praeparat, monat: r.monatEur, faktor: r.faktor }));
+
 const jsonLd = [
+  {
+    '@type': 'WebApplication',
+    '@id': `${url}#rechner`,
+    name: 'Jahreskosten-Rechner Abnehmspritze',
+    url: `${url}#rechner`,
+    description: 'Präparat und Dauer wählen: Kosten pro Jahr, pro Tag und für die gewählte Dauer aus der monatlichen Preiserhebung; Größenordnung für Selbstzahler.',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Web',
+    browserRequirements: 'JavaScript',
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+    inLanguage: 'de-DE',
+    provider: { '@id': `${site.url}/#organization` },
+  },
   {
     '@type': 'Article',
     '@id': `${url}#article`,
@@ -110,6 +131,37 @@ const jsonLd = [
       <figcaption class="mt-2 text-sm text-ink-3">Dieselben Zahlen als Grafik; frei verwendbar mit Quellenangabe (CC BY 4.0), Download unter <a href="/grafiken/#preise-im-monat" class="font-semibold text-moss underline underline-offset-4">Grafiken</a>.</figcaption>
     </figure>
 
+    <section id="rechner" class="mt-10 scroll-mt-24" aria-labelledby="rechner-h">
+      <h2 id="rechner-h" class="h2">Jahreskosten-Rechner</h2>
+      <p class="mt-2 text-ink-2">Präparat und Dauer wählen oder einen eigenen Monatspreis eintragen. Rechnet nur im Browser, Größenordnung für Selbstzahler, keine Preisberatung.</p>
+      <form id="kosten-form" class="mt-4 grid gap-4 rounded-xl2 border border-line bg-white p-5 sm:grid-cols-3" novalidate>
+        <div class="sm:col-span-3">
+          <label for="praeparat" class="block text-sm font-semibold text-ink">Präparat und Stufe, Stand {fmtDate(preise.stand)}</label>
+          <select id="praeparat" name="praeparat" class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink">
+            {rechnerZeilen.map((z, i) => (<option value={i}>{z.name} (ca. {eur(z.monat)} € im Monat)</option>))}
+            <option value="eigen">Eigener Monatspreis</option>
+          </select>
+        </div>
+        <div>
+          <label for="monatspreis" class="block text-sm font-semibold text-ink">Monatspreis in €</label>
+          <input id="monatspreis" name="monatspreis" type="number" inputmode="numeric" min="10" max="3000" step="5" value={rechnerZeilen[0]?.monat} required class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink" />
+        </div>
+        <div>
+          <label for="monate" class="block text-sm font-semibold text-ink">Dauer in Monaten</label>
+          <input id="monate" name="monate" type="number" inputmode="numeric" min="1" max="60" step="1" value="12" required class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink" />
+        </div>
+        <div class="flex items-end">
+          <button type="submit" class="btn-primary w-full">Berechnen</button>
+        </div>
+      </form>
+      <div id="kosten-ergebnis" class="mt-4 hidden grid gap-4 sm:grid-cols-3" aria-live="polite">
+        <div class="rounded-xl2 border border-line bg-white p-4"><p class="text-sm text-ink-3" data-dauer-label>Für 12 Monate</p><p class="mt-1 text-2xl font-bold text-moss" data-gesamt></p></div>
+        <div class="rounded-xl2 border border-line bg-white p-4"><p class="text-sm text-ink-3">Pro Jahr, rechnerisch</p><p class="mt-1 text-2xl font-bold text-ink" data-jahr></p><p class="mt-1 text-xs text-ink-3" data-faktor></p></div>
+        <div class="rounded-xl2 border border-line bg-white p-4"><p class="text-sm text-ink-3">Pro Tag</p><p class="mt-1 text-2xl font-bold text-ink" data-tag></p></div>
+      </div>
+      <p class="mt-3 text-sm text-ink-3">Dosissteigerung am Anfang, Pausen, Zuzahlungen und Kassenleistungen sind nicht eingerechnet. Nichts wird gespeichert oder übertragen.</p>
+    </section>
+
     <div class="prose-site mt-10">
       <h2 id="kassen">Was die Krankenkassen zahlen, Stand {fmtDate(kassen.stand)}</h2>
       <dl>
@@ -127,5 +179,34 @@ const jsonLd = [
     </div>
 
     <Faq items={faq} id="kosten-faq" title="Häufige Fragen zu den Kosten" />
+    <GrafikEinbinden />
   </article>
+
+  <script is:inline define:vars={{ zeilen: rechnerZeilen }}>
+    const form = document.getElementById('kosten-form');
+    const ergebnis = document.getElementById('kosten-ergebnis');
+    const euro = (n) => `${Math.round(n).toLocaleString('de-DE')} €`;
+    const auswahl = () => (form.praeparat.value === 'eigen' ? null : zeilen[Number(form.praeparat.value)]);
+    form.praeparat.addEventListener('change', () => {
+      const z = auswahl();
+      if (z) form.monatspreis.value = z.monat;
+    });
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const monat = Number(form.monatspreis.value);
+      const monate = Number(form.monate.value);
+      if (!(monat >= 10 && monat <= 3000)) { form.monatspreis.focus(); return; }
+      if (!(monate >= 1 && monate <= 60)) { form.monate.focus(); return; }
+      const z = auswahl();
+      const faktor = z ? z.faktor : 13;
+      const jahr = monat * faktor;
+      const gesamt = (jahr / 12) * monate;
+      document.querySelector('[data-dauer-label]').textContent = `Für ${monate} ${monate === 1 ? 'Monat' : 'Monate'}`;
+      document.querySelector('[data-gesamt]').textContent = `ca. ${euro(gesamt)}`;
+      document.querySelector('[data-jahr]').textContent = `ca. ${euro(jahr)}`;
+      document.querySelector('[data-faktor]').textContent = `Monatspreis × ${faktor}${z ? '' : ' (Pen, der vier Wochen reicht)'}`;
+      document.querySelector('[data-tag]').textContent = `ca. ${(jahr / 365).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;
+      ergebnis.classList.remove('hidden');
+    });
+  </script>
 </Base>

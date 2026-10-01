@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import GrafikEinbinden from '../../components/GrafikEinbinden.astro';
 import Cta from '../../components/Cta.astro';
 import { getCollection } from 'astro:content';
 import { site } from '../../data/site';
@@ -115,4 +116,5 @@ const chip = 'inline-block rounded-lg border border-line bg-white px-3 py-1.5 te
       <div class="mt-4"><Cta position="wissen-hub" label="Zum 12-Wochen-Set" secondary /></div>
     </div>
   </section>
+  <GrafikEinbinden />
 </Base>

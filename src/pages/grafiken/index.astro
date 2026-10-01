@@ -114,6 +114,7 @@ const einbetten = (g: (typeof grafiken)[number]) =>
               <details class="rounded-xl2 border border-line bg-white p-4 text-sm">
                 <summary class="cursor-pointer font-semibold text-ink">Einbetten (HTML mit Quellenlink)</summary>
                 <pre class="mt-3 overflow-x-auto whitespace-pre-wrap break-all rounded-lg bg-paper p-3 text-xs text-ink-2"><code>{einbetten(g)}</code></pre>
+                <button type="button" class="btn-secondary mt-3 text-sm plausible-event-name=Grafik+einbinden" data-code-kopieren>HTML kopieren</button>
               </details>
             </div>
           </article>
@@ -128,4 +129,17 @@ const einbetten = (g: (typeof grafiken)[number]) =>
       </p>
     </div>
   </section>
+
+  <script is:inline>
+    document.querySelectorAll('[data-code-kopieren]').forEach((knopf) => {
+      knopf.addEventListener('click', () => {
+        const code = knopf.parentElement.querySelector('code');
+        if (!code || !navigator.clipboard) return;
+        navigator.clipboard.writeText(code.textContent).then(
+          () => { knopf.textContent = 'Kopiert, Quellenlink bitte stehen lassen'; },
+          () => { knopf.textContent = 'Kopieren nicht möglich, bitte markieren'; }
+        );
+      });
+    });
+  </script>
 </Base>

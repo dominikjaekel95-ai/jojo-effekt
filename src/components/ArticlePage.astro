@@ -10,6 +10,7 @@ import Footnotes from './Footnotes.astro';
 import AuthorBox from './AuthorBox.astro';
 import ProductTeaser from './ProductTeaser.astro';
 import AffiliateLinks from './AffiliateLinks.astro';
+import GrafikEinbinden from './GrafikEinbinden.astro';
 import GlossarBox from './GlossarBox.astro';
 import ChecklistBox from './ChecklistBox.astro';
 import type { AffiliateKey } from '../data/affiliate';
@@ -122,6 +123,7 @@ const jsonLd = [
 
     <div class="prose-site mt-8">
       <Content />
+      <GrafikEinbinden />
     </div>
 
     <GlossarBox text={`${entry.body ?? ''} ${faqText}`} class="mt-8" />

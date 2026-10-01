@@ -1,7 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": true,
-  "rewrites": [{ "source": "/api/newsletter/", "destination": "/api/newsletter" }],
+  "rewrites": [
+    { "source": "/api/newsletter/", "destination": "/api/newsletter" },
+    { "source": "/api/anmeldung/", "destination": "/api/anmeldung" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

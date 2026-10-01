@@ -6,6 +6,7 @@ category: "Gewicht halten"
 image: /grafiken/warum-das-gewicht-zurueckkommt.png
 order: 1
 pubDate: 2026-09-30
+updatedDate: 2026-10-01
 keywords: ["jojo effekt abnehmspritze", "abnehmspritze jojo effekt", "wegovy jojo effekt", "ozempic jojo effekt", "mounjaro jojo effekt", "abnehmspritze zunehmen danach", "jojo effekt abnehmspritze vermeiden"]
 sources: ["wilding2022ext", "rubino2021", "aronne2024", "wu2025", "eclinmed2026", "sumithran2011", "fothergill2016", "wilding2021dxa", "rodriguez2025", "jensen2024", "leidy2015", "sardeli2018", "who2020", "dagLeitlinie"]
 related: ["abnehmspritze-absetzen", "muskelabbau-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -59,11 +60,11 @@ Wichtig für die Einordnung: Auch nach dem Regain lagen die Teilnehmenden im Mit
 ## Warum der Körper nach dem Absetzen gegen dich arbeitet
 
 <figure class="my-8">
-  <img src="/grafiken/warum-das-gewicht-zurueckkommt.png" alt="Vier Karten mit den Mechanismen des Jojo-Effekts nach der Abnehmspritze: Die Appetitbremse fällt nach fünf bis sieben Wochen weg; die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/warum-das-gewicht-zurueckkommt.png" alt="Vier Karten mit den Mechanismen des Jojo-Effekts nach der Abnehmspritze: Die Appetitbremse fällt weg, sobald der Wirkstoff abgebaut ist (Semaglutid nach etwa fünf bis sieben Wochen, Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. Dagegen belegt: Krafttraining und Protein." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Vier belegte Mechanismen hinter dem Jojo-Effekt; die Quellen stehen in den Abschnitten darunter. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
-Drei Mechanismen greifen ineinander:
+Vier Mechanismen greifen ineinander. Der erste ist offensichtlich: Die Appetitbremse fällt weg, sobald der Wirkstoff abgebaut ist; wie lange das je nach Präparat dauert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/). Die drei anderen sind weniger bekannt:
 
 **1. Der Appetit kommt zurück – und zwar stärker als vorher.** Nach starkem Gewichtsverlust verschiebt der Körper seine Hormone: Das Hungerhormon Ghrelin steigt, Sättigungshormone wie Leptin sinken. Diese Veränderungen waren in einer Studie ein Jahr nach der Diät noch messbar.<sup><a href="#fn-sumithran2011">6</a></sup> Unter der Spritze fällt das nicht auf. Danach schon.
 
@@ -83,7 +84,7 @@ Die klarste Evidenz kommt aus Dänemark. In der S-LiTE-Studie nahmen Erwachsene 
 
 ### Protein: genug, verteilt, zuerst
 
-Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">11</a></sup> Für eine Person mit 80 kg sind das 96 bis 128 g – etwa das Doppelte dessen, was viele unter der Spritze essen. Praktisch heißt das: 25 bis 35 g Protein pro Mahlzeit, und bei jeder Mahlzeit das Protein zuerst. Wie das geht, steht im Artikel [Protein bei der Abnehmspritze: Wie viel?](/wissen/protein-abnehmspritze/).
+Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">11</a></sup> Für eine Person mit 80 kg sind das 96 bis 128 g – etwa das Doppelte dessen, was viele unter der Spritze essen. Praktisch heißt das: mindestens etwa 25 bis 30 g Protein pro Mahlzeit, und bei jeder Mahlzeit das Protein zuerst. Wie das geht, steht im Artikel [Protein bei der Abnehmspritze: Wie viel?](/wissen/protein-abnehmspritze/).
 
 ### Struktur statt Willenskraft
 

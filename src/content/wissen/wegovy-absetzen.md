@@ -6,6 +6,7 @@ category: "Präparate"
 image: /grafiken/weiter-oder-placebo.png
 order: 7
 pubDate: 2026-09-30
+updatedDate: 2026-10-01
 keywords: ["wegovy absetzen", "wegovy absetzen gewicht", "wegovy absetzen jojo", "wegovy absetzen was passiert", "wegovy ausschleichen", "wegovy halbwertszeit", "wegovy absetzen erfahrungen"]
 sources: ["fachinfoWegovy", "wilding2021step1", "wilding2022ext", "rubino2021", "wu2025", "jensen2024", "leidy2015", "who2020", "tabletteApotheken2026", "wharton2025oasis4"]
 related: ["abnehmspritze-absetzen", "abnehmpille-absetzen", "gewicht-halten-nach-abnehmspritze"]

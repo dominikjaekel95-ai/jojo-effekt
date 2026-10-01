@@ -6,6 +6,7 @@ category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 11
 pubDate: 2026-09-30
+updatedDate: 2026-10-01
 keywords: ["nach der abnehmspritze ernährung", "ernährung nach abnehmspritze", "abnehmspritze ernährung danach", "was essen nach abnehmspritze", "ernährungsplan nach abnehmspritze", "ernährung nach wegovy", "abnehmspritze ernährung umstellen"]
 sources: ["wu2025", "sumithran2011", "leidy2015", "almandoz2024", "dgeBallaststoffe", "dgeEmpfehlungen", "wilding2022ext", "jensen2024"]
 related: ["protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze", "supplements-nach-abnehmspritze"]
@@ -40,10 +41,10 @@ Das Problem ist also nicht Wissen, sondern Struktur: Die Ernährung muss ohne di
 
 ### 1. Protein zuerst, bei jeder Mahlzeit
 
-Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Verteilt auf drei bis vier Mahlzeiten sind das 25 bis 35 g pro Mahlzeit. Die Reihenfolge auf dem Teller entscheidet: erst die Proteinquelle, dann Gemüse, dann der Rest. Wenn die Sättigung kommt, ist das Wichtigste drin. Rechenhilfe und Lebensmitteltabelle im [Protein-Artikel](/wissen/protein-abnehmspritze/).
+Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 g pro Mahlzeit. Die Reihenfolge auf dem Teller entscheidet: erst die Proteinquelle, dann Gemüse, dann der Rest. Wenn die Sättigung kommt, ist das Wichtigste drin. Rechenhilfe und Lebensmitteltabelle im [Protein-Artikel](/wissen/protein-abnehmspritze/).
 
 <figure class="my-8">
-  <img src="/grafiken/proteinbedarf-nach-abnehmspritze.png" alt="Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten sind das 25 bis 35 Gramm pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/proteinbedarf-nach-abnehmspritze.png" alt="Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 Gramm pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Tagesmenge nach Körpergewicht, Zielkorridor aus Übersichtsarbeiten.<sup><a href="#fn-leidy2015">3</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 

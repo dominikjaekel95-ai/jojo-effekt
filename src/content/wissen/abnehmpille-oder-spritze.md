@@ -6,6 +6,7 @@ category: "Abnehmpille"
 image: /grafiken/wirksamkeit-zulassungsstudien.png
 order: 17
 pubDate: 2026-09-30
+updatedDate: 2026-10-01
 keywords: ["abnehmpille oder spritze", "abnehmtablette oder spritze", "wegovy tablette oder spritze", "tablette statt abnehmspritze", "semaglutid tablette oder injektion", "abnehmpille wirksamkeit", "abnehmpille vergleich"]
 sources: ["tabletteApotheken2026", "wharton2025oasis4", "wilding2021step1", "fachinfoWegovy", "ecWegovyTablette2026", "fachinfoRybelsus", "fachinfoOzempic", "fachinfoMounjaro", "fachinfoSaxenda", "fdaOrforglipron2026", "knop2023oasis1", "jastreboff2022", "wharton2025attain1", "pisunyer2015", "wu2025", "rodriguez2025", "wilding2022ext", "aronne2024", "medipreis2026"]
 related: ["abnehmpille-absetzen", "wegovy-absetzen", "mounjaro-absetzen"]
@@ -77,7 +78,7 @@ Lesart: Bei gleichem Wirkstoff liegen Tablette und Spritze nahe beieinander. Die
 Für die Zeit danach ist das der wichtigste Punkt: Tablette und Spritze mit Semaglutid haben dieselbe Auswaschphase. Dass die Tablette täglich genommen wird, verkürzt sie nicht. Wer die Tablette absetzt, hat also denselben Zeitplan wie nach der Spritze: zwei ruhige Wochen, dann kehrt der Appetit zurück, und ab etwa Woche 8 wird die Zunahme in Studien messbar.<sup><a href="#fn-wu2025">15</a></sup>
 
 <figure class="my-8">
-  <img src="/grafiken/halbwertszeiten-praeparate.png" alt="Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/halbwertszeiten-praeparate.png" alt="Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen und laut Fachinformation bis etwa sieben Wochen nachweisbar; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Halbwertszeiten laut Fachinformation und die Faustregel „fünf Halbwertszeiten“. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 

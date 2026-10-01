@@ -182,7 +182,7 @@ const figures = [];
     { y: 190, label: 'Wirkstoff im Körper', from: 0, to: 7, color: C.moss, note: 'nach etwa fünf Halbwertszeiten weitgehend abgebaut (Semaglutid ≈ 1 Woche, Tirzepatid ≈ 5 Tage)', fade: true },
     { y: 290, label: 'Appetit kommt zurück', from: 2, to: 5, color: C.clay, note: 'Woche 2 bis 5, mit sinkendem Wirkstoffspiegel; bleibt danach', tail: 20 },
     { y: 390, label: 'Zunahme messbar', from: 8, to: 20, color: C.clay, note: 'ab Woche 8 signifikant, Anstieg bis etwa Woche 20 (Meta-Analyse randomisierter Studien)', arrow: true },
-    { y: 490, label: 'Kontrolltermin', from: 8, to: 12, color: C.ink3, note: 'Empfehlung im Artikel: 8 bis 12 Wochen nach der letzten Dosis, wenn die Zunahme beginnt', thin: true },
+    { y: 490, label: 'Kontrolltermin', from: 8, to: 12, color: C.ink3, note: 'Ärztlicher Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis: dann zeigt sich, ob die Zunahme beginnt', thin: true },
   ];
   let body = '';
   for (const w of [0, 4, 8, 12, 16, 20]) {
@@ -254,8 +254,8 @@ const figures = [];
   body += text(x0 + fat / 2, y + 82, 'Fettmasse', { size: 20, fill: C.paper, anchor: 'middle' });
   body += text(x0 + fat + (w - fat) / 2, y + 48, 'rund 40 %', { size: 30, weight: 700, fill: C.paper, anchor: 'middle' });
   body += text(x0 + fat + (w - fat) / 2, y + 82, 'fettfreie Masse', { size: 20, fill: C.paper, anchor: 'middle' });
-  body += text(x0, 400, 'Fettfreie Masse heißt: Muskeln, Organe, Knochen, Wasser. Ein Teil davon ist Muskel, und der fehlt nach dem Absetzen.', { size: 18 });
-  body += text(x0, 434, 'Was den Anteil klein hält, ist belegt: Krafttraining an mindestens zwei Tagen pro Woche', { size: 18 });
+  body += text(x0, 400, 'Fettfreie Masse heißt: Muskeln, Organe, Knochen, Wasser. Wie viel davon Muskel war, wurde nicht getrennt gemessen.', { size: 18 });
+  body += text(x0, 434, 'Was den Anteil klein hält, ist in Studien belegt: Krafttraining an mindestens zwei Tagen pro Woche', { size: 18 });
   body += text(x0, 464, 'und 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag.', { size: 18 });
   body += text(x0, 512, 'DXA-Substudie mit 140 Teilnehmenden, exploratorische Analyse; Anteile gerundet.', { size: 15, fill: C.ink3 });
   figures.push({
@@ -263,38 +263,59 @@ const figures = [];
     svg: frame({
       title: 'Was beim Abnehmen mit Semaglutid verloren geht',
       subtitle: 'Anteil am Gewichtsverlust nach 68 Wochen, STEP-1-Substudie mit DXA-Messung',
-      source: 'Wilding et al., STEP 1 body composition, J Endocr Soc 2021;5(Suppl 1):A16–A17; WHO 2020; Leidy et al. 2015',
-      alt: 'Balken, der den Gewichtsverlust unter Semaglutid aufteilt: rund 60 Prozent Fettmasse und rund 40 Prozent fettfreie Masse, also Muskeln, Organe, Knochen und Wasser. Krafttraining und 1,2 bis 1,6 Gramm Protein pro Kilogramm halten den Anteil klein.',
+      source: 'Wilding et al., STEP 1 body composition, J Endocr Soc 2021; Sardeli et al. 2018; Leidy et al. 2015; WHO 2020',
+      alt: 'Balken, der den Gewichtsverlust unter Semaglutid aufteilt: rund 60 Prozent Fettmasse und rund 40 Prozent fettfreie Masse, also Muskeln, Organe, Knochen und Wasser; wie viel davon Muskel war, wurde nicht getrennt gemessen. Krafttraining an mindestens zwei Tagen pro Woche und 1,2 bis 1,6 Gramm Protein pro Kilogramm am Tag halten den Anteil in Studien klein.',
       body,
     }),
   });
 }
 
-/* 4. S-LiTE (jensen2024) */
+/* 4. S-LiTE (jensen2024): Mehr-Zunahme nach Liraglutid allein als Differenz mit 95-%-Konfidenzintervall, kein Nullbalken */
 {
   let body = '';
-  const base = 470, scale = 40;
-  const bar = (x, kg, color, label, sub) => {
-    const hgt = kg * scale;
-    let s = kg > 0
-      ? `<rect x="${x}" y="${base - hgt}" width="220" height="${hgt}" rx="8" fill="${color}"/>`
-      : `<rect x="${x}" y="${base - 6}" width="220" height="6" rx="3" fill="${color}"/>`;
-    s += text(x + 110, base - hgt - 16, kg > 0 ? `+${de(kg)} kg mehr` : 'Gewicht gehalten', { size: 24, weight: 700, fill: color, anchor: 'middle' });
-    s += text(x + 110, base + 34, label, { size: 19, weight: 700, anchor: 'middle' });
-    s += text(x + 110, base + 60, sub, { size: 15, fill: C.ink2, anchor: 'middle' });
-    return s;
-  };
-  body += `<line x1="140" y1="${base}" x2="1060" y2="${base}" stroke="${C.ink3}" stroke-width="1.5"/>`;
-  body += bar(260, 0, C.moss, 'Mit Trainingsprogramm', 'Gewicht und Körperzusammensetzung gehalten');
-  body += bar(720, 6.0, C.clay, 'Liraglutid allein', 'Zunahme 6,0 kg höher als nach Training');
-  body += text(56, 150, 'Ein Jahr nach dem Ende der Behandlung, nach vorherigem Gewichtsverlust durch eine kalorienarme Diät und 52 Wochen Therapie', { size: 15, fill: C.ink3 });
+  // Studienaufbau als drei Schritte
+  const steps = [
+    ['8 Wochen', 'kalorienarme Diät'],
+    ['52 Wochen Behandlung', 'Placebo, Training, Liraglutid oder beides'],
+    ['52 Wochen', 'ohne jede Behandlung'],
+  ];
+  steps.forEach(([a, b], i) => {
+    const x = 56 + i * 372;
+    body += `<rect x="${x}" y="130" width="344" height="58" rx="10" fill="${C.sand}"/>`;
+    body += text(x + 16, 154, a, { size: 15, weight: 700 });
+    body += text(x + 16, 176, b, { size: 13.5, fill: C.ink2 });
+    if (i < 2) body += `<polygon points="${x + 348},152 ${x + 366},159 ${x + 348},166" fill="${C.ink3}"/>`;
+  });
+  body += text(56, 232, 'Mehr-Zunahme nach Liraglutid allein im Jahr ohne Behandlung, verglichen mit …', { size: 18, weight: 700 });
+  const x0 = 380;
+  const px = (kg) => x0 + ((kg + 2) / 14) * 740;
+  for (const kg of [-2, 0, 2, 4, 6, 8, 10, 12]) {
+    body += `<line x1="${px(kg)}" y1="250" x2="${px(kg)}" y2="470" stroke="${kg === 0 ? C.ink3 : C.line}" stroke-width="${kg === 0 ? 1.5 : 1}"/>`;
+    body += text(px(kg), 492, `${kg > 0 ? '+' : ''}${de(kg, 0)} kg`, { size: 13, fill: C.ink3, anchor: 'middle' });
+  }
+  const rows = [
+    { label: '… Training allein', diff: 6.0, lo: 2.1, hi: 10.0, note: '+6,0 kg (95-%-KI 2,1 bis 10,0)', fill: C.clay },
+    { label: '… Training plus Liraglutid', diff: 2.5, lo: -1.5, hi: 6.5, note: '+2,5 kg (95-%-KI −1,5 bis 6,5; nicht signifikant)', fill: C.clayLight, stroke: C.clay },
+  ];
+  rows.forEach((r, i) => {
+    const y = 285 + i * 95;
+    body += text(56, y + 22, r.label, { size: 19, weight: 700 });
+    body += `<rect x="${px(0)}" y="${y}" width="${px(r.diff) - px(0)}" height="34" rx="6" fill="${r.fill}" ${r.stroke ? `stroke="${r.stroke}" stroke-width="1.5"` : ''}/>`;
+    // Konfidenzintervall als Linie mit Endstrichen
+    body += `<line x1="${px(r.lo)}" y1="${y + 17}" x2="${px(r.hi)}" y2="${y + 17}" stroke="${C.ink}" stroke-width="2"/>`;
+    body += `<line x1="${px(r.lo)}" y1="${y + 7}" x2="${px(r.lo)}" y2="${y + 27}" stroke="${C.ink}" stroke-width="2"/>`;
+    body += `<line x1="${px(r.hi)}" y1="${y + 7}" x2="${px(r.hi)}" y2="${y + 27}" stroke="${C.ink}" stroke-width="2"/>`;
+    body += text(px(0) + 8, y + 60, r.note, { size: 15, weight: 600, fill: C.clay });
+  });
+  body += text(56, 540, 'Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau ein Jahr nach Therapieende erhalten; nach Liraglutid allein kam das Gewicht zurück.', { size: 15, fill: C.ink3 });
+  body += text(56, 566, 'Erwachsene mit Adipositas, betreutes Trainingsprogramm; schwarze Linie = 95-%-Konfidenzintervall.', { size: 15, fill: C.ink3 });
   figures.push({
     file: 'training-s-lite.svg',
     svg: frame({
-      title: 'Training entscheidet, was nach dem Absetzen bleibt',
-      subtitle: 'S-LiTE-Nachbeobachtung: Zunahme ein Jahr nach Therapieende, Unterschied zur Trainingsgruppe',
-      source: 'Jensen et al., S-LiTE follow-up, eClinicalMedicine 2024',
-      alt: 'Balkendiagramm aus der S-LiTE-Nachbeobachtung: Teilnehmende mit Trainingsprogramm hielten ein Jahr nach Therapieende Gewicht und Körperzusammensetzung. Nach Liraglutid allein lag die Zunahme 6,0 Kilogramm höher als nach Training.',
+      title: 'Training vor dem Absetzen: 6 kg Unterschied ein Jahr später',
+      subtitle: 'S-LiTE-Nachbeobachtung: Gewichtszunahme im Jahr nach Therapieende, Liraglutid allein gegenüber den Trainingsgruppen',
+      source: 'Jensen et al., S-LiTE follow-up, eClinicalMedicine 2024;69:102475',
+      alt: 'Balkendiagramm aus der S-LiTE-Nachbeobachtung: Im Jahr nach Therapieende nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach dem Trainingsprogramm (95-Prozent-Konfidenzintervall 2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau erhalten.',
       body,
     }),
   });
@@ -382,14 +403,14 @@ const figures = [];
 /* 7. Halbwertszeiten (fachinfoWegovy, fachinfoOzempic, fachinfoRybelsus, fachinfoMounjaro, fachinfoSaxenda) */
 {
   const rows = [
-    { name: 'Semaglutid', sub: ['Wegovy (Spritze und Tablette),', 'Ozempic, Rybelsus'], hl: 7, hlLabel: 'etwa 1 Woche', gone: 'etwa 5 Wochen' },
-    { name: 'Tirzepatid', sub: ['Mounjaro'], hl: 5, hlLabel: 'etwa 5 Tage', gone: 'etwa 25 Tage' },
-    { name: 'Liraglutid', sub: ['Saxenda'], hl: 13 / 24, hlLabel: 'etwa 13 Stunden', gone: 'etwa 3 Tage' },
+    { name: 'Semaglutid', sub: ['Wegovy (Spritze und Tablette),', 'Ozempic, Rybelsus'], hl: 7, hlLabel: 'etwa 1 Woche', gone: 'etwa 5 Wochen', nachweisbar: 49 },
+    { name: 'Tirzepatid', sub: ['Mounjaro'], hl: 5, hlLabel: 'etwa 5 Tage', gone: 'etwa 25 Tagen' },
+    { name: 'Liraglutid', sub: ['Saxenda'], hl: 13 / 24, hlLabel: 'etwa 13 Stunden', gone: 'etwa 3 Tagen' },
   ];
   const x0 = 380;
-  const px = (d) => x0 + (d / 40) * 740;
+  const px = (d) => x0 + (d / 50) * 740;
   let body = '';
-  for (const d of [0, 7, 14, 21, 28, 35]) {
+  for (const d of [0, 7, 14, 21, 28, 35, 42, 49]) {
     body += `<line x1="${px(d)}" y1="150" x2="${px(d)}" y2="520" stroke="${C.line}" stroke-width="1"/>`;
     body += text(px(d), 142, d === 0 ? 'letzte Dosis' : `Tag ${d}`, { size: 14, fill: C.ink3, anchor: 'middle' });
   }
@@ -402,17 +423,24 @@ const figures = [];
     const breit = Math.max(px(r.hl * 5) - x0, 6);
     body += `<rect x="${x0}" y="${y + 32}" width="${breit}" height="24" rx="5" fill="${C.clayLight}" stroke="${C.clay}" stroke-width="1.5"/>`;
     // Beschriftung im Balken, wenn er breit genug ist; sonst rechts daneben (kurze Balken)
-    if (breit > 380) body += text(x0 + breit - 10, y + 50, `weitgehend abgebaut nach ${r.gone}`, { size: 15, weight: 600, fill: C.clay, anchor: 'end' });
+    if (breit > 340) body += text(x0 + breit - 10, y + 50, `weitgehend abgebaut nach ${r.gone}`, { size: 15, weight: 600, fill: C.clay, anchor: 'end' });
     else body += text(x0 + breit + 8, y + 50, `weitgehend abgebaut nach ${r.gone}`, { size: 15, weight: 600, fill: C.clay });
+    // Laut Fachinformation noch länger im Blut nachweisbar (Semaglutid: etwa sieben Wochen nach der letzten Dosis)
+    if (r.nachweisbar) {
+      const ext = px(r.nachweisbar) - x0 - breit;
+      body += `<rect x="${x0 + breit}" y="${y + 32}" width="${ext}" height="24" rx="5" fill="none" stroke="${C.clay}" stroke-width="1.5" stroke-dasharray="6 5"/>`;
+      body += text(x0 + breit + ext / 2, y + 49, 'nachweisbar bis etwa 7 Wochen', { size: 12.5, fill: C.clay, anchor: 'middle' });
+    }
   });
   body += text(56, 560, 'Faustregel: Nach etwa fünf Halbwertszeiten ist ein Wirkstoff weitgehend abgebaut. Die Wirkung auf den Appetit lässt schon vorher spürbar nach.', { size: 15, fill: C.ink3 });
+  body += text(56, 586, 'Laut Fachinformation ist Semaglutid nach der letzten Dosis noch etwa sieben Wochen im Blut nachweisbar; daher die Angabe „fünf bis sieben Wochen“.', { size: 15, fill: C.ink3 });
   figures.push({
     file: 'halbwertszeiten-praeparate.svg',
     svg: frame({
       title: 'Wie lange die Abnehmspritze nach der letzten Dosis nachwirkt',
       subtitle: 'Halbwertszeit laut Fachinformation und daraus abgeleitete Zeit bis zum weitgehenden Abbau',
       source: 'Fachinformationen Wegovy, Ozempic, Rybelsus, Mounjaro, Saxenda (EMA-Produktinformationen)',
-      alt: 'Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten.',
+      alt: 'Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen und laut Fachinformation bis etwa sieben Wochen nachweisbar; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten.',
       body,
     }),
   });
@@ -421,7 +449,7 @@ const figures = [];
 /* 8. Warum der Körper gegenarbeitet (fachinfos, sumithran2011, fothergill2016, wilding2021dxa) */
 {
   const cards = [
-    { big: '5–7 Wochen', h: ['Die Appetitbremse', 'fällt weg'], d: ['Nach etwa fünf Halbwerts-', 'zeiten ist der Wirkstoff', 'weitgehend abgebaut.'], src: 'Fachinformationen (EMA)' },
+    { big: '5–7 Wochen', h: ['Die Appetitbremse', 'fällt weg'], d: ['Semaglutid ist nach etwa', 'fünf bis sieben Wochen', 'abgebaut, Tirzepatid nach', 'etwa 25 Tagen.'], src: 'Fachinformationen (EMA)' },
     { big: 'Ghrelin ↑  Leptin ↓', h: ['Hungerhormone', 'bleiben verschoben'], d: ['Noch ein Jahr nach einer', 'Diät messbar: mehr Hunger,', 'weniger Sättigung.'], src: 'Sumithran et al., NEJM 2011' },
     { big: '6 Jahre', h: ['Weniger Energie', 'in Ruhe'], d: ['Der Ruheenergieverbrauch', 'blieb nach starkem Gewichts-', 'verlust abgesenkt.'], src: 'Fothergill et al., Obesity 2016' },
     { big: 'rund 40 %', h: ['Ein Teil des Verlusts', 'war Muskel'], d: ['des Gewichtsverlusts unter', 'Semaglutid entfielen auf', 'fettfreie Masse.'], src: 'STEP-1-DXA-Substudie 2021' },
@@ -436,14 +464,14 @@ const figures = [];
     c.d.forEach((line, j) => (body += text(x + 24, 340 + j * 22, line, { size: 13.5, fill: C.ink2 })));
     body += text(x + 24, 455, c.src, { size: 12, fill: C.ink3 });
   });
-  body += text(56, 530, 'Vier Mechanismen, die zusammen den Jojo-Effekt erklären. Was dagegen belegt ist: Krafttraining, Protein, feste Mahlzeiten.', { size: 15, fill: C.ink3 });
+  body += text(56, 530, 'Vier Mechanismen hinter dem Jojo-Effekt. Dagegen belegt: Krafttraining (Jensen 2024, Sardeli 2018) und Protein (Leidy 2015).', { size: 15, fill: C.ink3 });
   figures.push({
     file: 'warum-das-gewicht-zurueckkommt.svg',
     svg: frame({
       title: 'Warum das Gewicht nach dem Absetzen zurückkommt',
       subtitle: 'Vier belegte Mechanismen hinter dem Jojo-Effekt nach der Abnehmspritze',
-      source: 'Fachinformationen (EMA); Sumithran et al. 2011; Fothergill et al. 2016; Wilding et al. 2021',
-      alt: 'Vier Karten mit den Mechanismen des Jojo-Effekts nach der Abnehmspritze: Die Appetitbremse fällt nach fünf bis sieben Wochen weg; die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse.',
+      source: 'Fachinformationen (EMA); Sumithran et al. 2011; Fothergill et al. 2016; Wilding et al. 2021; Jensen 2024; Sardeli 2018; Leidy 2015',
+      alt: 'Vier Karten mit den Mechanismen des Jojo-Effekts nach der Abnehmspritze: Die Appetitbremse fällt weg, sobald der Wirkstoff abgebaut ist (Semaglutid nach etwa fünf bis sieben Wochen, Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. Dagegen belegt: Krafttraining und Protein.',
       body,
     }),
   });
@@ -469,14 +497,14 @@ const figures = [];
     body += text(px(hi) + 10, y + 24, `${Math.round(lo)} bis ${Math.round(hi)} g am Tag`, { size: 16, weight: 700, fill: C.moss });
   });
   body += text(56, 520, 'Empfehlung für Gewichtsabnahme und -erhalt: 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.', { size: 17 });
-  body += text(56, 550, 'Verteilt auf drei bis vier Mahlzeiten sind das 25 bis 35 g pro Mahlzeit; bei Nierenerkrankungen vorher ärztlich klären.', { size: 15, fill: C.ink3 });
+  body += text(56, 550, 'Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 g pro Mahlzeit; bei Nierenerkrankungen vorher ärztlich klären.', { size: 15, fill: C.ink3 });
   figures.push({
     file: 'proteinbedarf-nach-abnehmspritze.svg',
     svg: frame({
       title: 'Wie viel Protein nach der Abnehmspritze',
       subtitle: 'Tagesmenge nach Körpergewicht, Zielkorridor aus Übersichtsarbeiten',
       source: 'Leidy et al., Am J Clin Nutr 2015;101(6):1320S–1329S',
-      alt: 'Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten sind das 25 bis 35 Gramm pro Mahlzeit.',
+      alt: 'Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 Gramm pro Mahlzeit.',
       body,
     }),
   });
@@ -528,23 +556,24 @@ const figures = [];
 
 /* 11. Haarausfall nach schnellem Gewichtsverlust (malkud2015, leidy2015, almandoz2024) */
 {
-  const px = (m) => 300 + (m / 9) * 820;
+  // Zwölf Monate ab dem Auslöser: Ausfall beginnt nach zwei bis drei Monaten und klingt meist innerhalb von etwa sechs Monaten nach Beginn ab (malkud2015)
+  const px = (m) => 300 + (m / 12) * 820;
   let body = '';
-  for (const m of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
+  for (let m = 0; m <= 12; m++) {
     body += `<line x1="${px(m)}" y1="150" x2="${px(m)}" y2="440" stroke="${C.line}" stroke-width="1"/>`;
-    body += text(px(m), 142, m === 0 ? 'Auslöser' : `Monat ${m}`, { size: 13, fill: C.ink3, anchor: 'middle' });
+    body += text(px(m), 142, m === 0 ? 'Auslöser' : m === 1 ? 'Monat 1' : String(m), { size: 13, fill: C.ink3, anchor: 'middle' });
   }
-  body += `<defs><linearGradient id="hair" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="${C.clay}"/><stop offset="1" stop-color="${C.clay}" stop-opacity="0.15"/></linearGradient></defs>`;
+  body += `<defs><linearGradient id="hair" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="${C.clay}"/><stop offset="0.3" stop-color="${C.clay}"/><stop offset="1" stop-color="${C.clay}" stop-opacity="0.12"/></linearGradient></defs>`;
   const row = (y, label) => text(56, y + 8, label, { size: 19, weight: 700 });
   body += row(190, 'Schnelle Abnahme');
   body += `<rect x="${px(0)}" y="176" width="${px(2) - px(0)}" height="28" rx="6" fill="${C.moss}"/>`;
   body += text(px(0), 232, 'Der Auslöser: Viele Haare wechseln gleichzeitig in die Ruhephase; sichtbar ist noch nichts', { size: 14, fill: C.ink2 });
   body += row(290, 'Haare fallen aus');
-  body += `<rect x="${px(2)}" y="276" width="${px(6) - px(2)}" height="28" rx="6" fill="url(#hair)"/>`;
-  body += text(px(0), 332, 'Beginn zwei bis drei Monate nach dem Auslöser, diffus über den ganzen Kopf, dann abklingend', { size: 14, fill: C.ink2 });
+  body += `<rect x="${px(2)}" y="276" width="${px(9) - px(2)}" height="28" rx="6" fill="url(#hair)"/>`;
+  body += text(px(0), 332, 'Beginnt zwei bis drei Monate nach dem Auslöser; klingt meist innerhalb von etwa sechs Monaten nach Beginn ab', { size: 14, fill: C.ink2 });
   body += row(390, 'Haare wachsen nach');
-  body += `<rect x="${px(5)}" y="376" width="${px(9) - px(5)}" height="28" rx="6" fill="${C.mossLight}" stroke="${C.moss}" stroke-width="1.5"/>`;
-  body += text(px(0), 432, 'Meist innerhalb von etwa sechs Monaten abgeklungen, wenn der Auslöser weggefallen ist; bis zur alten Länge dauert es länger', { size: 14, fill: C.ink2 });
+  body += `<rect x="${px(6)}" y="376" width="${px(12) - px(6)}" height="28" rx="6" fill="${C.mossLight}" stroke="${C.moss}" stroke-width="1.5"/>`;
+  body += text(px(0), 432, 'Nachwachsende Haare werden sichtbar, sobald der Auslöser weggefallen ist; bis zur alten Länge dauert es länger', { size: 14, fill: C.ink2 });
   body += `<rect x="56" y="470" width="1088" height="110" rx="12" fill="${C.sand}"/>`;
   body += text(76, 502, 'Was sich beeinflussen lässt', { size: 16, weight: 700 });
   body += text(76, 530, 'Protein 1,2 bis 1,6 g pro kg Körpergewicht am Tag · Eisenwert (Ferritin) prüfen lassen · Zink und Biotin nur bei nachgewiesener Lücke', { size: 15, fill: C.ink2 });
@@ -555,7 +584,7 @@ const figures = [];
       title: 'Haarausfall nach schnellem Gewichtsverlust: der Verlauf',
       subtitle: 'Telogenes Effluvium: verzögert, diffus, vorübergehend; Zeitangaben in Monaten nach dem Auslöser',
       source: 'Malkud, J Clin Diagn Res 2015; Leidy et al., Am J Clin Nutr 2015; Almandoz et al., Obesity 2024',
-      alt: 'Zeitachse des telogenen Effluviums: Nach schnellem Gewichtsverlust wechseln viele Haare in die Ruhephase, zwei bis drei Monate später beginnt diffuser Haarausfall, der in der Regel innerhalb von etwa sechs Monaten abklingt; danach wachsen die Haare nach. Beeinflussbar sind Protein, Eisenwert, Zink und Biotin bei Lücke; länger als sechs Monate, fleckig oder mit Müdigkeit ärztlich abklären.',
+      alt: 'Zeitachse des telogenen Effluviums über zwölf Monate: Nach schnellem Gewichtsverlust wechseln viele Haare in die Ruhephase, zwei bis drei Monate später beginnt diffuser Haarausfall, der meist innerhalb von etwa sechs Monaten nach Beginn abklingt, wenn der Auslöser weggefallen ist; danach wachsen die Haare nach. Beeinflussbar sind Protein, Eisenwert, Zink und Biotin bei Lücke; länger als sechs Monate, fleckig oder mit Müdigkeit und Frieren ärztlich abklären.',
       body,
     }),
   });
@@ -577,21 +606,21 @@ const figures = [];
     return s;
   };
   body += `<line x1="80" y1="${base}" x2="560" y2="${base}" stroke="${C.ink3}" stroke-width="1.5"/>`;
-  body += bar(130, 13.6, C.moss, 'Semaglutid-Tablette');
-  body += bar(360, 2.2, C.clay, 'Placebo');
+  body += bar(130, -13.6, C.moss, 'Semaglutid-Tablette');
+  body += bar(360, -2.2, C.clay, 'Placebo');
   body += text(80, 548, 'Bei durchgehender Einnahme: −16,6 %. Mittelwerte gegenüber dem Start.', { size: 13, fill: C.ink3 });
   // rechtes Panel
   body += `<rect x="614" y="140" width="530" height="440" rx="14" fill="${C.paper}" stroke="${C.clay}" stroke-width="2" stroke-dasharray="8 6"/>`;
   body += text(638, 178, 'Offen: Verlauf nach dem Absetzen der Tablette', { size: 19, weight: 700, fill: C.clay });
   body += text(638, 204, 'Stand Oktober 2026', { size: 13, fill: C.ink3 });
-  body += text(879, 290, 'Keine Studie', { size: 40, weight: 700, fill: C.clay, anchor: 'middle' });
-  body += text(879, 324, 'zur Wiederzunahme nach der Tablette', { size: 17, fill: C.ink2, anchor: 'middle' });
+  body += text(879, 290, 'Noch keine Studie', { size: 40, weight: 700, fill: C.clay, anchor: 'middle' });
+  body += text(879, 324, 'zur Wiederzunahme nach dem Absetzen der Tablette', { size: 17, fill: C.ink2, anchor: 'middle' });
   body += `<line x1="660" y1="356" x2="1098" y2="356" stroke="${C.line}" stroke-width="1.5"/>`;
   body += text(638, 392, 'Was sich übertragen lässt, mit Vorbehalt:', { size: 15, weight: 700 });
   body += text(638, 420, '• gleicher Wirkstoff, Halbwertszeit etwa eine Woche wie bei der Spritze', { size: 14, fill: C.ink2 });
   body += text(638, 446, '• Spritze: zwei Drittel des Verlusts ein Jahr nach dem Absetzen zurück', { size: 14, fill: C.ink2 });
   body += text(638, 472, '  (STEP-1-Verlängerung, −17,3 % → −5,6 %)', { size: 14, fill: C.ink2 });
-  body += text(638, 498, '• Zunahme in Spritzen-Studien ab Woche 8 messbar', { size: 14, fill: C.ink2 });
+  body += text(638, 498, '• Zunahme in Studien zu Adipositas-Medikamenten ab Woche 8 messbar', { size: 14, fill: C.ink2 });
   body += text(638, 548, 'Jede Aussage zur Tablette nach dem Absetzen ist ein Übertrag, keine Messung.', { size: 13, fill: C.ink3 });
   figures.push({
     file: 'abnehmpille-belegt-und-offen.svg',
@@ -599,7 +628,7 @@ const figures = [];
       title: 'Abnehmpille absetzen: was belegt ist und was fehlt',
       subtitle: 'Die Zulassungsstudie der Semaglutid-Tablette gegenüber der Datenlage für die Zeit danach',
       source: 'OASIS 4 (NEJM 2025); Fachinformation Rybelsus (EMA); STEP-1-Verlängerung (2022); Wu et al. (2025)',
-      alt: 'Zwei Felder: Links die Zulassungsstudie OASIS 4 der Semaglutid-Tablette mit minus 13,6 Prozent Gewicht gegenüber minus 2,2 Prozent unter Placebo nach 64 Wochen, bei durchgehender Einnahme minus 16,6 Prozent. Rechts der offene Punkt: Es gibt keine Studie zur Wiederzunahme nach dem Absetzen der Tablette; übertragbar mit Vorbehalt sind die Halbwertszeit von etwa einer Woche und die Spritzen-Daten, nach denen zwei Drittel des Verlusts nach einem Jahr zurück sind.',
+      alt: 'Zwei Felder: Links die Zulassungsstudie OASIS 4 der Semaglutid-Tablette mit minus 13,6 Prozent Gewicht gegenüber minus 2,2 Prozent unter Placebo nach 64 Wochen, bei durchgehender Einnahme minus 16,6 Prozent. Rechts der offene Punkt: Es gibt noch keine Studie zur Wiederzunahme nach dem Absetzen der Tablette (Stand Oktober 2026); übertragbar mit Vorbehalt sind die Halbwertszeit von etwa einer Woche und die Spritzen-Daten, nach denen zwei Drittel des Verlusts nach einem Jahr zurück sind.',
       body,
     }),
   });

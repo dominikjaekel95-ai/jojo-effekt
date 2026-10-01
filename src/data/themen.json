@@ -18,7 +18,8 @@
         { "q": "Warum kommt der Hunger zurück, und was hilft dagegen?", "slug": "heisshunger-nach-abnehmspritze" },
         { "q": "Was gilt für mein Präparat?", "href": "/wissen/praeparate/", "label": "Absetzen nach Präparat: Wegovy, Ozempic, Mounjaro, Saxenda, Tablette" },
         { "q": "Wie halte ich das Gewicht danach?", "slug": "gewicht-halten-nach-abnehmspritze" },
-        { "q": "Was tue ich in den ersten acht Wochen?", "href": "/checkliste/", "label": "Checkliste: Die ersten 8 Wochen nach der letzten Dosis" }
+        { "q": "Was tue ich in den ersten acht Wochen?", "href": "/checkliste/", "label": "Checkliste: Die ersten 8 Wochen nach der letzten Dosis" },
+        { "q": "Wann ist der Wirkstoff weg, wann kommt der Appetit zurück?", "href": "/werkzeuge/zeitplan-nach-letzter-dosis/", "label": "Zeitplan nach der letzten Dosis: Rechner mit Kalender-Export" }
       ],
       "include": [],
       "glossar": ["halbwertszeit", "auswaschphase", "absetzkurve", "hedonischer-hunger", "ghrelin"],
@@ -106,7 +107,8 @@
         { "q": "Wie sieht ein Trainingsplan aus, den ich durchhalte?", "slug": "krafttraining-nach-abnehmspritze" },
         { "q": "Bringt Kreatin etwas, und ist es sicher?", "slug": "kreatin-abnehmspritze" },
         { "q": "Wie viel Protein brauche ich, und wann?", "slug": "protein-abnehmspritze" },
-        { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" }
+        { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" },
+        { "q": "Wie viel Protein bei meinem Gewicht?", "href": "/werkzeuge/proteinrechner/", "label": "Proteinrechner: Tagesziel und Menge pro Mahlzeit" }
       ],
       "include": [],
       "glossar": ["fettfreie-masse", "sarkopene-adipositas", "muskelproteinsynthese", "griffkraft", "dxa", "kreatin-monohydrat", "progressive-belastungssteigerung"],
@@ -141,7 +143,8 @@
         { "q": "Was darf Glucomannan versprechen?", "slug": "glucomannan-abnehmspritze" },
         { "q": "Eingefallenes Gesicht: was lässt sich beeinflussen?", "slug": "abnehmspritze-gesicht" },
         { "q": "Haarausfall nach der Spritze: wie lange?", "slug": "haarausfall-abnehmspritze" },
-        { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" }
+        { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" },
+        { "q": "Wie viel Protein brauche ich bei meinem Gewicht?", "href": "/werkzeuge/proteinrechner/", "label": "Proteinrechner: Tagesziel und Menge pro Mahlzeit" }
       ],
       "include": [],
       "glossar": ["leucin-schwelle", "proteinverteilung", "glucomannan", "hedonischer-hunger", "neat"],

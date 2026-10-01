@@ -19,9 +19,9 @@ faq:
     a: "<p>Für die meisten ist eine Struktur wirksamer als Zählen: Protein zuerst, Gemüse bei jeder Mahlzeit, feste Essenszeiten, keine Flüssigkalorien. Wer gern zählt, kann das zwei Wochen lang tun, um ein Gefühl für Portionen ohne Spritze zu bekommen – dauerhaft hält es kaum jemand durch.</p>"
   - q: "Was, wenn das Gewicht trotz allem steigt?"
     a: "<p>Dann ist das kein Versagen, sondern Biologie. Sprich mit deiner Ärztin oder deinem Arzt über die Optionen – dazu kann auch ein Wiedereinstieg in die Therapie gehören. Adipositas gilt als chronische Erkrankung, und die Behandlung ist langfristig gedacht.</p>"
-affiliate: ["psyllium", "glucomannan"]
-affiliateTitle: "Beispiele für Ballaststoffe zum Ergänzen"
-affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke. Ballaststoffe immer mit reichlich Wasser; die DGE-Empfehlung von 30 g am Tag erreichst du in erster Linie über Gemüse, Hülsenfrüchte und Vollkorn."
+affiliate: ["psyllium", "glucomannan", "gripDynamometer"]
+affiliateTitle: "Beispiele: Ballaststoffe zum Ergänzen und ein Griffkraft-Messgerät"
+affiliateIntro: "Drei Beispiele, keine Empfehlung einer Marke. Ballaststoffe immer mit reichlich Wasser; die DGE-Empfehlung von 30 g am Tag erreichst du in erster Linie über Gemüse, Hülsenfrüchte und Vollkorn. Das Messgerät misst die Griffkraft, den einen Muskelwert, der sich zu Hause verlässlich prüfen lässt; einmal pro Woche messen und notieren."
 ---
 
 Nach der letzten Dosis läuft eine Uhr. In Studien wird die Gewichtszunahme etwa ab Woche 8 messbar und setzt sich bis Woche 20 fort.<sup><a href="#fn-wu2025">1</a></sup> Die ersten 12 Wochen sind also das Fenster, in dem Routinen entstehen müssen, die auch mit normalem Appetit tragen. Dieser Plan gliedert sie in drei Phasen. Den Verlauf nach der letzten Dosis, Woche für Woche, beschreibt der Hauptartikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).

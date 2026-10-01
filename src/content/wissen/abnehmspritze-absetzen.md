@@ -42,7 +42,7 @@ Was auch immer der Grund ist: Ob und wie du dein Medikament absetzt, besprichst 
 
 ## Was nach der letzten Dosis passiert – Woche für Woche
 
-Die folgende Übersicht fasst zusammen, was aus Pharmakologie und Studien ableitbar ist. Individuell weicht der Verlauf ab.
+Die folgende Übersicht fasst zusammen, was aus Pharmakologie und Studien ableitbar ist. Individuell weicht der Verlauf ab. Wer die Punkte als Kalenderdaten für die eigene letzte Dosis sehen will, nutzt den [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/).
 
 <figure class="my-8">
   <img src="/grafiken/zeitachse-nach-letzter-dosis.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Der Wirkstoff ist nach etwa fünf bis sieben Wochen weitgehend abgebaut, der Appetit kehrt ab Woche 2 bis 5 zurück, die Gewichtszunahme ist ab Woche 8 messbar und steigt bis etwa Woche 20. Ein Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis ist markiert." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />

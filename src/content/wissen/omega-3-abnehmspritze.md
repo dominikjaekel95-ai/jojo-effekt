@@ -8,6 +8,9 @@ pubDate: 2026-10-01
 keywords: ["omega 3 abnehmspritze", "omega 3 wegovy", "omega 3 ozempic", "fischöl abnehmspritze", "omega 3 nach abnehmspritze", "omega 3 kapseln abnehmen", "epa dha abnehmspritze"]
 sources: ["efsa2010fats", "euClaims", "dgeEmpfehlungen", "bls", "wilding2022ext", "almandoz2024", "wilding2021dxa", "who2020", "leidy2015"]
 related: ["supplements-nach-abnehmspritze", "vitamin-d-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
+affiliate: ["omega3Fish", "omega3Algae"]
+affiliateTitle: "Beispiele für Omega-3 aus Fischöl und Algenöl"
+affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke, und nur für den Fall, dass kein Fisch auf den Teller kommt. Es zählt der Gehalt an EPA und DHA pro Tagesdosis, nicht die Menge Öl."
 faq:
   - q: "Hilft Omega-3 nach der Abnehmspritze, das Gewicht zu halten?"
     a: "<p>Nein, dafür gibt es keine Belege, und in der EU ist für Omega-3-Fettsäuren keine Angabe zu Gewicht oder Körperfett zugelassen. Was das Gewicht nach dem Absetzen hält, ist in Studien die Kombination aus Protein, Krafttraining und einer festen Mahlzeitenstruktur. Omega-3 gehört aus einem anderen Grund in die Ernährung: wegen der Herzfunktion.</p>"

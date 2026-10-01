@@ -56,6 +56,8 @@ Bei starkem Übergewicht (BMI über 35) rechnen viele Fachleute mit dem Zielgewi
   <figcaption class="mt-2 text-sm text-ink-3">Tagesmenge nach Körpergewicht im Zielkorridor von 1,2 bis 1,6 g pro kg.<sup><a href="#fn-leidy2015">2</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
+Dein eigenes Tagesziel und die Menge pro Mahlzeit rechnet der [Proteinrechner](/werkzeuge/proteinrechner/) aus.
+
 ## Wo Protein drinsteckt
 
 Ungefähre Werte pro Portion:

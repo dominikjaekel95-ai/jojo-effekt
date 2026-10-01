@@ -10,6 +10,9 @@ updatedDate: 2026-10-01
 keywords: ["abnehmspritze muskelabbau", "abnehmspritze muskelverlust", "muskelabbau abnehmspritze vermeiden", "wegovy muskelabbau", "ozempic muskelabbau", "mounjaro muskelverlust", "abnehmspritze krafttraining"]
 sources: ["wilding2021dxa", "sardeli2018", "leidy2015", "who2020", "jensen2024", "euClaims", "kreider2017", "dgeProtein", "fothergill2016"]
 related: ["protein-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
+affiliate: ["gripDynamometer"]
+affiliateTitle: "Beispiel für ein Griffkraft-Messgerät"
+affiliateIntro: "Ein Beispiel, keine Empfehlung einer Marke. Griffkraft ist der einzige Muskelwert, den du zu Hause verlässlich misst; einmal pro Woche messen und notieren zeigt, ob die Kraft hält."
 faq:
   - q: "Wie viel Muskelmasse verliert man unter der Abnehmspritze?"
     a: "<p>In einer Substudie der STEP-1-Studie entfielen rund 40 % des verlorenen Gewichts unter Semaglutid auf fettfreie Masse; die Analyse war exploratorisch und umfasste 140 Teilnehmende. Fettfreie Masse ist nicht nur Muskel, sondern auch Wasser, Organgewebe und Bindegewebe, die bei jedem Gewichtsverlust mit abnehmen. Der reine Muskelverlust ist also geringer, aber nicht null.</p>"

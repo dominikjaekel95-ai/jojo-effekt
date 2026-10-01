@@ -26,8 +26,8 @@ const jsonLd = [
     step: [
       { '@type': 'HowToStep', name: 'Woche 0: die letzte Dosis', text: 'Datum notieren, Ausgangswerte messen, Kontrolltermin vereinbaren.' },
       { '@type': 'HowToStep', name: 'Woche 1 bis 2: Auswaschphase', text: 'Drei Proteinmahlzeiten, zwei Krafteinheiten, Wiegetag festlegen.' },
-      { '@type': 'HowToStep', name: 'Woche 3 bis 4: der Appetit kommt zurück', text: 'Mahlzeitenstruktur, Umgebung, dritter Satz im Training.' },
-      { '@type': 'HowToStep', name: 'Woche 5 bis 6: steigern', text: 'Belastung erhöhen, Alltagsbewegung, zweite Messung.' },
+      { '@type': 'HowToStep', name: 'Woche 3 bis 4: der Appetit kommt zurück', text: 'Mahlzeitenstruktur, Umgebung, Wiederholungen im Training steigern.' },
+      { '@type': 'HowToStep', name: 'Woche 5 bis 6: steigern', text: 'Dritter Satz, Belastung erhöhen, Alltagsbewegung, zweite Messung.' },
       { '@type': 'HowToStep', name: 'Woche 7 bis 8: die Absetzkurve beginnt', text: 'Wochentrend statt Tageswert, Kontrolltermin, Bilanz.' },
     ],
   },
@@ -112,7 +112,7 @@ const cb = 'mt-0.5 inline-block h-4 w-4 shrink-0 rounded border border-ink-3';
       <ul class="mt-3 space-y-2 text-ink-2">
         <li class={li}><span class={cb} aria-hidden="true"></span><span>Mahlzeitenstruktur beibehalten, auch wenn der Hunger zwischendurch kommt: Nach Gewichtsverlust bleiben Hungerhormone über Monate erhöht, das ist Biologie, kein Willensproblem.<Fn n={fn('sumithran2011')} id="sumithran2011" /></span></li>
         <li class={li}><span class={cb} aria-hidden="true"></span><span>Umgebung aufräumen: Was nicht in Sichtweite steht, zieht weniger. Vorräte für die Proteinmahlzeiten anlegen.</span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Training: dritter Satz dazu, wenn zwei Sätze mit 12 sauberen Wiederholungen gelingen.<Fn n={fn('acsm2009')} id="acsm2009" /></span></li>
+        <li class={li}><span class={cb} aria-hidden="true"></span><span>Training: bei zwei Sätzen bleiben und die Wiederholungen Richtung 12 steigern. Der dritte Satz kommt erst ab Woche 5, wie im <a href="/wissen/krafttraining-nach-abnehmspritze/" class="underline">12-Wochen-Plan</a>.<Fn n={fn('acsm2009')} id="acsm2009" /></span></li>
         <li class={li}><span class={cb} aria-hidden="true"></span><span>Optional Kreatin-Monohydrat, 3 g täglich, nur zusammen mit dem Training: Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver körperlicher Betätigung.<Fn n={fn('euClaims')} id="euClaims" /> Bei Nierenerkrankungen vorher fragen.<Fn n={fn('kreider2017')} id="kreider2017" /></span></li>
         <li class={li}><span class={cb} aria-hidden="true"></span><span>Taillenumfang messen, neben dem Gewicht notieren.</span></li>
       </ul>
@@ -121,7 +121,7 @@ const cb = 'mt-0.5 inline-block h-4 w-4 shrink-0 rounded border border-ink-3';
     <section class={`mt-6 ${box}`} aria-labelledby="w56-h">
       <h2 id="w56-h" class="text-xl font-bold text-ink">Woche 5 bis 6: steigern</h2>
       <ul class="mt-3 space-y-2 text-ink-2">
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Belastung erhöhen: stärkeres Band, mehr Gewicht oder die schwerere Variante der Übung. Das ACSM empfiehlt Schritte von etwa 2 bis 10 %.<Fn n={fn('acsm2009')} id="acsm2009" /></span></li>
+        <li class={li}><span class={cb} aria-hidden="true"></span><span>Dritter Satz dazu, sobald zwei Sätze mit 12 sauberen Wiederholungen gelingen; dann zurück auf 8 Wiederholungen. Belastung erhöhen: stärkeres Band, mehr Gewicht oder die schwerere Variante der Übung. Das ACSM empfiehlt Schritte von etwa 2 bis 10 %.<Fn n={fn('acsm2009')} id="acsm2009" /></span></li>
         <li class={li}><span class={cb} aria-hidden="true"></span><span>Alltagsbewegung zählen: Schritte, Treppen, Wege zu Fuß. Die WHO empfiehlt zusätzlich 150 bis 300 Minuten moderate Bewegung pro Woche.<Fn n={fn('who2020')} id="who2020" /></span></li>
         <li class={li}><span class={cb} aria-hidden="true"></span><span>Zweite Messung: Griffkraft oder Aufsteh-Test. Steigt der Wert, wirkt das Training, egal was die Waage sagt.</span></li>
         <li class={li}><span class={cb} aria-hidden="true"></span><span>Protein prüfen: Kommen an Trainingstagen wirklich drei Portionen zusammen?</span></li>
@@ -147,7 +147,8 @@ const cb = 'mt-0.5 inline-block h-4 w-4 shrink-0 rounded border border-ink-3';
       <h2>Wann du zur Ärztin oder zum Arzt gehst</h2>
       <ul>
         <li>Bei Typ-2-Diabetes: sobald Blutzuckerwerte steigen, nicht erst zum Kontrolltermin.</li>
-        <li>Bei anhaltender Übelkeit, Bauchschmerzen, Herzrasen, Atemnot oder gedrückter Stimmung über mehr als zwei Wochen.</li>
+        <li>Sofort bei Atemnot, Herzrasen, starken Bauchschmerzen oder Anzeichen einer Unterzuckerung (Zittern, Schwitzen, Verwirrtheit).</li>
+        <li>Bei Übelkeit oder gedrückter Stimmung, die länger als zwei Wochen anhält.</li>
         <li>Bei der Frage, ob und wie das Medikament abgesetzt oder wieder begonnen wird. Das entscheidet niemand allein.</li>
       </ul>
       <p class="text-sm text-ink-3">

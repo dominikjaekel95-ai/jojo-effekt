@@ -5,16 +5,17 @@ description: "Protein, Kreatin, Ballaststoffe: dafür gibt es Belege. Vitamine n
 category: "Ernährung"
 order: 12
 pubDate: 2026-09-30
+updatedDate: 2026-10-01
 keywords: ["nach der abnehmspritze supplements", "abnehmspritze supplements", "abnehmspritze nahrungsergänzung", "nahrungsergänzungsmittel nach abnehmspritze", "abnehmspritze vitamine", "abnehmspritze welche supplements", "supplements nach wegovy"]
 sources: ["almandoz2024", "leidy2015", "euClaims", "kreider2017", "dgeBallaststoffe", "klartextNem", "adaSoc2024", "wilding2021dxa", "sardeli2018"]
 related: ["kreatin-abnehmspritze", "protein-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
 faq:
   - q: "Brauche ich nach der Abnehmspritze ein Multivitamin?"
     a: "<p>Bei normaler Ernährung nicht. Expertenempfehlungen nennen ein Multivitamin als Option, solange die Energiezufuhr sehr niedrig ist, also eher unter der Therapie als danach. Nach dem Absetzen isst du wieder mehr; wenn Gemüse, Hülsenfrüchte und Vollkorn dabei sind, deckt das die meisten Vitamine. Bei Verdacht auf einen Mangel entscheidet der Blutwert, nicht das Gefühl.</p>"
-  - q: "Welche Supplements bringen wirklich etwas nach dem Absetzen?"
+  - q: "Welche Nahrungsergänzungsmittel sind bei der Abnehmspritze sinnvoll?"
     a: "<p>Drei, und alle nur im Zusammenspiel mit Ernährung und Training: Proteinpulver, wenn die Menge über Lebensmittel nicht erreicht wird; Kreatin-Monohydrat, wenn du Krafttraining machst; Ballaststoffe, wenn du unter 30 g am Tag bleibst. Für alles andere gibt es speziell für die Zeit nach der Spritze keine Belege.</p>"
-  - q: "Gibt es natürliche Alternativen zur Abnehmspritze als Supplement?"
-    a: "<p>Nein. Produkte, die als „natürlicher GLP-1-Booster“ beworben werden (Berberin, bestimmte Probiotika, Pflanzenextrakte), haben keine Zulassung für eine gewichtsbezogene Angabe und keine Studien, die einen Effekt in der Größenordnung der Medikamente zeigen. Berberin kann außerdem mit Medikamenten wechselwirken.</p>"
+  - q: "Welches Nahrungsergänzungsmittel hilft beim Abnehmen?"
+    a: "<p>Ehrlich: nur eines hat eine zugelassene Angabe, Glucomannan, und auch das nur im Rahmen einer kalorienarmen Ernährung mit 3 g am Tag, mit kleinen Unterschieden zu Placebo. Alles andere, was als „natürlicher GLP-1-Booster“ beworben wird (Berberin, Probiotika, Pflanzenextrakte), hat keine Zulassung für eine gewichtsbezogene Angabe und keine Studien in der Größenordnung der Medikamente; Berberin kann außerdem mit Medikamenten wechselwirken.</p>"
   - q: "Sollte ich Vitamin B12 nehmen?"
     a: "<p>Nur bei Bedarf. Zwei Gruppen sollten den Wert prüfen lassen: Menschen, die Metformin nehmen, weil es den B12-Spiegel senken kann, und Menschen, die sich vegan ernähren. Alle anderen decken B12 über Fleisch, Fisch, Eier und Milchprodukte.</p>"
   - q: "Kann ich Supplements nehmen, während ich noch spritze?"
@@ -24,6 +25,10 @@ faq:
 Nach dem Absetzen der Abnehmspritze bekommt man viel angeboten: Multivitamine, Fatburner, „natürliche GLP-1-Booster“, Probiotika gegen den Jojo-Effekt. Das meiste davon ist Marketing. Hier steht, was belegt ist, was nur bei einem Mangel Sinn ergibt, und was du dir sparen kannst. Der Verlauf nach der letzten Dosis, Woche für Woche, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** Belegt sind drei Dinge, alle als Ergänzung zu Ernährung und Training: Protein, Kreatin mit Krafttraining, Ballaststoffe bei Lücke. Vitamine und Mineralstoffe nur bei nachgewiesenem Mangel. Fatburner und „GLP-1-Booster“: nein.
+
+## Welche Nahrungsergänzungsmittel sind bei der Abnehmspritze sinnvoll?
+
+Drei, und alle als Ergänzung zu Ernährung und Training: Proteinpulver, wenn die 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag über Lebensmittel nicht zusammenkommen,<sup><a href="#fn-leidy2015">2</a></sup> Kreatin-Monohydrat, wenn du Krafttraining machst,<sup><a href="#fn-kreider2017">4</a></sup> und Ballaststoffe, wenn du unter 30 g am Tag bleibst.<sup><a href="#fn-dgeBallaststoffe">5</a></sup> Vitamine und Mineralstoffe wie B12, Eisen, Vitamin D oder Magnesium nur bei nachgewiesener Lücke; die Expertengruppe um Almandoz zählt Versorgungslücken bei kleinen Portionen zu den Punkten, auf die unter Adipositas-Medikamenten geachtet werden sollte.<sup><a href="#fn-almandoz2024">1</a></sup> Das gilt unter Wegovy, Mounjaro und Ozempic gleichermaßen, weil es um die Portionen geht, nicht um das Präparat. Fatburner und „GLP-1-Booster“: nein.
 
 ## Warum das Thema nach der Spritze überhaupt aufkommt
 

@@ -20,8 +20,10 @@ faq:
     a: "<p>Das BfR schlägt für Nahrungsergänzungsmittel höchstens 20 µg (800 I.E.) pro Tag vor. Deutlich höhere Dosen über Monate können den Kalziumspiegel im Blut gefährlich erhöhen. Hochdosierte Präparate gehören deshalb nur nach Blutwert und in ärztliche Hand.</p>"
   - q: "Reicht Sonne im Sommer?"
     a: "<p>Von April bis September bildet die Haut bei regelmäßigem Aufenthalt im Freien meist genug Vitamin D, ein Teil wird für den Winter gespeichert. Wer tagsüber drinnen arbeitet, Sonnenschutz nutzt oder sich bedeckt kleidet, bildet weniger. Dann ist der Blutwert im Spätwinter der ehrliche Test.</p>"
-  - q: "Ändert sich der Bedarf nach dem Absetzen?"
-    a: "<p>Nein. Der Referenzwert bleibt gleich, und der Winter kommt jedes Jahr. Was sich ändert, ist die Lebensmittelauswahl: Mit zurückgekehrtem Appetit kommen fetter Fisch und Eier leichter auf den Tisch, die kleinen Vitamin-D-Quellen der Ernährung.</p>"
+  - q: "Kann Vitamin D Bauchfett reduzieren?"
+    a: "<p>Nein. Für Vitamin D ist keine Angabe zu Gewicht oder Körperfett zugelassen; die Angaben betreffen Knochen, Muskelfunktion, Immunsystem und Zähne. Vitamin D nachzufüllen schließt eine Versorgungslücke, die unter der Spritze bei kleinen Portionen und wenig Sonne entstehen kann; Fett schmelzen lässt es nicht.</p>"
+  - q: "Kann zu viel Vitamin D zu Gewichtszunahme führen?"
+    a: "<p>Nein, Gewichtszunahme ist keine bekannte Folge. Zu viel Vitamin D über lange Zeit, deutlich über den 20 µg am Tag, die das BfR für Nahrungsergänzung als Höchstmenge nennt, kann den Kalziumspiegel erhöhen, mit Übelkeit, Durst und Nierenproblemen. Hochdosierte Präparate gehören deshalb zu einem gemessenen Mangel und in ärztliche Begleitung.</p>"
 ---
 
 Vitamin D ist das Supplement, das in Deutschland fast jeder irgendwann nimmt, oft ohne zu wissen, warum. Unter der Abnehmspritze kommt eine Frage dazu: Wenn ich kaum esse und viel abnehme, brauche ich dann mehr? Die kurze Antwort: Der Bedarf ändert sich nicht, aber die Chance auf einen Mangel war schon vor der Spritze hoch, und die zugelassene Angabe zur Muskelfunktion macht Vitamin D für die Zeit danach interessant. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
@@ -66,6 +68,8 @@ Der Bedarf bleibt gleich, die Lebensmittelauswahl wird leichter: Mit zurückgeke
 - Bei Nierensteinen, Sarkoidose, erhöhtem Kalzium oder bestimmten Herzmedikamenten: Dann kann Vitamin D schaden statt nützen.
 - Bei Knochenschmerzen, Muskelschwäche oder Müdigkeit, die über Wochen anhält; das kann ein Mangel sein, aber auch vieles andere.
 - Bei Typ-2-Diabetes gehört die Frage in die ohnehin laufende Betreuung, nicht in die Drogerie.
+
+Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht unter [Welche Nahrungsergänzungsmittel sind bei der Abnehmspritze sinnvoll?](/wissen/supplements-nach-abnehmspritze/).
 
 ---
 

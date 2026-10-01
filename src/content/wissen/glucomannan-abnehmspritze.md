@@ -8,6 +8,9 @@ pubDate: 2026-10-01
 keywords: ["glucomannan abnehmspritze", "konjak abnehmspritze", "glucomannan statt abnehmspritze", "glucomannan nach abnehmspritze", "glucomannan wegovy", "konjak kapseln abnehmen", "glucomannan erfahrung abnehmen"]
 sources: ["euClaims", "efsa2010glucomannan", "dgeBallaststoffe", "almandoz2024", "wilding2021step1", "wilding2022ext", "bls", "leidy2015"]
 related: ["supplements-nach-abnehmspritze", "heisshunger-nach-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
+affiliate: ["glucomannan", "psyllium"]
+affiliateTitle: "Beispiele für Glucomannan und andere Ballaststoffe"
+affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke. Für Glucomannan gelten die Bedingungen der Angabe: 1 g pro Portion, 3 g am Tag, mit ein bis zwei Gläsern Wasser, nicht bei Schluckbeschwerden."
 faq:
   - q: "Ersetzt Glucomannan die Abnehmspritze?"
     a: "<p>Nein. Die zugelassene Angabe spricht von einem Beitrag zum Gewichtsverlust im Rahmen einer kalorienarmen Ernährung, mehr nicht. Die Studien dahinter zeigen kleine Unterschiede zu Placebo über wenige Wochen; die Zulassungsstudie der Spritze zeigt 14,9 % Gewichtsverlust in 68 Wochen. Es gibt keine Studie, die beides vergleicht, und keine, die Glucomannan als Ersatz untersucht.</p>"

@@ -14,14 +14,16 @@ affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke. Für Glucomannan 
 faq:
   - q: "Ersetzt Glucomannan die Abnehmspritze?"
     a: "<p>Nein. Die zugelassene Angabe spricht von einem Beitrag zum Gewichtsverlust im Rahmen einer kalorienarmen Ernährung, mehr nicht. Die Studien dahinter zeigen kleine Unterschiede zu Placebo über wenige Wochen; die Zulassungsstudie der Spritze zeigt 14,9 % Gewichtsverlust in 68 Wochen. Es gibt keine Studie, die beides vergleicht, und keine, die Glucomannan als Ersatz untersucht.</p>"
-  - q: "Wie nimmt man Glucomannan richtig?"
-    a: "<p>So, wie es die Bedingungen der Angabe vorgeben: 3 g am Tag in drei Portionen zu je 1 g, jeweils mit ein bis zwei Gläsern Wasser vor den Mahlzeiten, im Rahmen einer kalorienarmen Ernährung. Ohne genug Wasser kann Glucomannan in der Speiseröhre quellen; bei Schluckbeschwerden darf es gar nicht genommen werden.</p>"
+  - q: "Welche Nebenwirkungen hat Glucomannan?"
+    a: "<p>Vor allem Blähungen, Völlegefühl und weicher Stuhl in den ersten Tagen, bis sich der Darm an den Ballaststoff gewöhnt hat. Wichtig ist der Pflichthinweis: immer mit reichlich Wasser einnehmen, weil das Pulver sonst in der Speiseröhre aufquellen kann, und bei Schluckbeschwerden nicht verwenden. Wer regelmäßig Medikamente nimmt, fragt in der Apotheke nach dem Abstand, weil das Gel deren Aufnahme verzögern kann.</p>"
   - q: "Hilft Glucomannan gegen Heißhunger nach dem Absetzen?"
     a: "<p>Die Angabe sagt nichts über Sättigung oder Appetit, und für die Zeit nach GLP-1-Medikamenten gibt es keine Studie. Ballaststoffe insgesamt geben Mahlzeiten Volumen, das ist belegt; gegen hedonischen Hunger, also Essen aus Lust statt aus Hunger, hilft kein Ballaststoff. Dafür braucht es Struktur, Schlaf und Protein.</p>"
-  - q: "Sind Konjak-Nudeln dasselbe?"
-    a: "<p>Konjak-Nudeln (Shirataki) bestehen aus Glucomannan und Wasser und haben fast keine Kalorien. Sie füllen den Teller, liefern aber kein Protein und keine anderen Nährstoffe. Die zugelassene Angabe gilt für Produkte mit 1 g Glucomannan pro Portion, eingenommen vor der Mahlzeit; Nudeln als Mahlzeit sind ein anderer Fall.</p>"
+  - q: "Wie wirkt Glucomannan beim Abnehmen?"
+    a: "<p>Es quillt im Magen mit Wasser zu einem Gel auf, verzögert die Magenentleerung und sättigt. Die zugelassene Angabe lautet: Glucomannan trägt im Rahmen einer kalorienarmen Ernährung zur Gewichtsabnahme bei, bei 3 g am Tag in drei Portionen von 1 g mit ein bis zwei Gläsern Wasser vor den Mahlzeiten. Die EFSA bewertete die Unterschiede zu Placebo in den Studien als klein. Es ersetzt weder die Spritze noch die Ernährungsumstellung.</p>"
   - q: "Ist Glucomannan im 12-Wochen-Set?"
     a: "<p>Welcher Ballaststoff im Stick steckt, sagen wir, sobald die Rezeptur steht. Bis dahin steht hier nur, was die Zulassung erlaubt, und der Warnhinweis gilt für jedes Glucomannan-Produkt: viel Wasser, und bei Schluckbeschwerden gar nicht.</p>"
+  - q: "Wie lange dauert es, bis Glucomannan wirkt?"
+    a: "<p>Die Sättigung kommt innerhalb von Minuten, sobald das Pulver im Magen aufquillt. Ein Effekt auf das Gewicht wurde in den Studien, die der Angabe zugrunde liegen, über Wochen bis wenige Monate gemessen, und er ist klein; die EFSA spricht von kleinen Unterschieden zu Placebo. Wer nach vier Wochen keinen Unterschied bei Hunger und Portionsgröße merkt, braucht es nicht.</p>"
 ---
 
 Glucomannan taucht in zwei Suchanfragen zusammen mit der Abnehmspritze auf: „statt“ und „nach“. Die eine hofft auf eine natürliche Alternative, die andere will nach dem Absetzen etwas in der Hand haben. Beide verdienen eine klare Antwort, und die beginnt mit dem Wortlaut der einzigen Angabe, die die EU für einen Ballaststoff zum Gewichtsverlust zugelassen hat. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
@@ -80,6 +82,8 @@ Welcher Ballaststoff im Stick steckt, sagen wir, sobald die Rezeptur steht. Bis 
 - Bei Diabetes-Medikamenten oder anderen Medikamenten mit engem Zeitfenster: Abstand klären.
 - Bei chronisch-entzündlichen Darmerkrankungen oder Verstopfung, die länger als zwei Wochen anhält.
 - Wenn du überlegst, die Spritze abzusetzen oder zu ersetzen: Das ist ein ärztliches Gespräch, kein Supplement-Thema.
+
+Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht unter [Welche Nahrungsergänzungsmittel sind bei der Abnehmspritze sinnvoll?](/wissen/supplements-nach-abnehmspritze/).
 
 ---
 

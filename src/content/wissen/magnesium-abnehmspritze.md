@@ -20,8 +20,10 @@ faq:
     a: "<p>Aus Lebensmitteln praktisch nie. Bei Nahrungsergänzungsmitteln schlägt das BfR höchstens 250 mg pro Tag vor; mehr führt bei vielen zu weichem Stuhl oder Durchfall. Bei eingeschränkter Nierenfunktion gehört jedes Magnesiumpräparat vorher in die ärztliche Sprechstunde.</p>"
   - q: "Welche Form ist die beste: Citrat, Oxid, Glycinat?"
     a: "<p>Für die Versorgung ist die Form zweitrangig; entscheidend sind die Menge in Milligramm und die Regelmäßigkeit. Citrat gilt als gut löslich, Oxid enthält pro Tablette mehr Magnesium. Wer Durchfall bekommt, nimmt eine kleinere Menge, verteilt auf zwei Portionen.</p>"
-  - q: "Gilt das auch nach dem Absetzen?"
-    a: "<p>Nach dem Absetzen kommt der Appetit zurück, und mit ihm meist auch die Magnesiumzufuhr. Dann ist ein Präparat selten nötig. Wichtiger ist, in der Haltephase bei Vollkorn, Hülsenfrüchten und Nüssen zu bleiben statt bei Weißmehl und Süßem.</p>"
+  - q: "Kann man mit Magnesium abnehmen?"
+    a: "<p>Nein. Für Magnesium ist in der EU keine Angabe zu Gewicht, Fettabbau oder Stoffwechselanregung zugelassen, und Studien, die einen Gewichtseffekt zeigen, gibt es nicht. Zugelassen sind Angaben zu normaler Muskelfunktion, zum Energiestoffwechsel und zur Verringerung von Müdigkeit; die beziehen sich auf die Versorgung, nicht auf das Abnehmen. Wer unter der Spritze wenig isst, kann eine Lücke haben; die schließt man, schlank macht sie nicht.</p>"
+  - q: "Kann man mit Magnesium Bauchfett verlieren?"
+    a: "<p>Nein. Kein Mineralstoff und kein Vitamin reduziert gezielt Bauchfett, Magnesium auch nicht; Bauchfett geht mit dem Gesamtgewicht zurück, über Energiebilanz, Protein und Training. Produkte, die Magnesium als Mittel gegen Bauchfett bewerben, nutzen eine Angabe, die es in der EU nicht gibt.</p>"
 ---
 
 Magnesium ist nach Kreatin das Supplement, nach dem Menschen unter der Abnehmspritze am häufigsten fragen: wegen Krämpfen, wegen Müdigkeit, wegen des Gefühls, bei kleinen Portionen „irgendetwas“ zu verpassen. Die ehrliche Antwort hat drei Teile: Ja, die Zufuhr kann unter der Spritze knapp werden. Nein, gegen Krämpfe ist Magnesium schlechter belegt, als die Werbung sagt. Und ein Präparat ist eine Ergänzung für einen klaren Fall, kein Automatismus. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
@@ -81,6 +83,8 @@ Das BfR schlägt für Nahrungsergänzungsmittel eine Höchstmenge von 250 mg Mag
 - Bei Krämpfen, die einseitig sind, mit Schwellung oder Rötung einhergehen oder nachts regelmäßig den Schlaf unterbrechen.
 - Bei Herzstolpern, Muskelschwäche oder anhaltender Müdigkeit, die sich mit Essen und Schlaf nicht bessert; dann gehört ein Blutbild dazu, nicht ein Präparat aus der Drogerie.
 - Wenn du Medikamente nimmst, die mit Magnesium wechselwirken, etwa bestimmte Antibiotika oder Osteoporose-Mittel; der Abstand zur Einnahme ist dann wichtig.
+
+Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht unter [Welche Nahrungsergänzungsmittel sind bei der Abnehmspritze sinnvoll?](/wissen/supplements-nach-abnehmspritze/).
 
 ---
 

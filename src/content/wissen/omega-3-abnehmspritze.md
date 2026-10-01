@@ -12,7 +12,7 @@ affiliate: ["omega3Fish", "omega3Algae"]
 affiliateTitle: "Beispiele für Omega-3 aus Fischöl und Algenöl"
 affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke, und nur für den Fall, dass kein Fisch auf den Teller kommt. Es zählt der Gehalt an EPA und DHA pro Tagesdosis, nicht die Menge Öl."
 faq:
-  - q: "Hilft Omega-3 nach der Abnehmspritze, das Gewicht zu halten?"
+  - q: "Welche Wirkung hat Omega-3 auf die Gewichtsabnahme?"
     a: "<p>Nein, dafür gibt es keine Belege, und in der EU ist für Omega-3-Fettsäuren keine Angabe zu Gewicht oder Körperfett zugelassen. Was das Gewicht nach dem Absetzen hält, ist in Studien die Kombination aus Protein, Krafttraining und einer festen Mahlzeitenstruktur. Omega-3 gehört aus einem anderen Grund in die Ernährung: wegen der Herzfunktion.</p>"
   - q: "Brauche ich unter der Spritze Omega-3-Kapseln?"
     a: "<p>Nur, wenn kein Fisch auf den Teller kommt. Eine Portion fetter Fisch pro Woche deckt den Referenzwert von 250 mg EPA und DHA am Tag im Wochenschnitt. Wer keinen Fisch isst oder ihn unter der Spritze nicht mag, kann eine Kapsel mit 250 bis 500 mg EPA und DHA nehmen; bei veganer Ernährung Algenöl.</p>"
@@ -22,6 +22,8 @@ faq:
     a: "<p>Sie liefern Alpha-Linolensäure (ALA), aus der der Körper nur einen kleinen Teil in EPA und DHA umwandelt. Für die Angabe zum Cholesterinspiegel reichen 2 g ALA am Tag, also etwa ein Esslöffel Leinöl. Für die Angabe zur Herzfunktion zählen EPA und DHA direkt, also Fisch oder Algenöl.</p>"
   - q: "Warum werden Blutfette nach dem Absetzen wieder schlechter?"
     a: "<p>Weil das Gewicht zurückkommt. In der STEP-1-Verlängerung gingen mit der Wiederzunahme auch die Verbesserungen bei Blutfetten und Blutdruck weitgehend zurück. Omega-3 ändert daran nichts; die Haltephase entscheidet. Erhöhte Werte gehören in ärztliche Kontrolle, nicht in die Kapsel.</p>"
+  - q: "Ist Omega-3 gut gegen Bauchfett?"
+    a: "<p>Nein, nicht belegt. Es gibt keine zugelassene Angabe und keine überzeugenden Studien, dass Omega-3-Fettsäuren Bauchfett verringern. Was sie belegt tun: EPA und DHA tragen ab 250 mg täglich zu einer normalen Herzfunktion bei. Das ist der Grund, zwei Portionen Fisch pro Woche zu essen, nicht der Bauch.</p>"
 ---
 
 Omega-3 steht auf fast jeder Liste „Supplements nach der Abnehmspritze“, meist ohne Begründung. Die ehrliche Einordnung ist kurz: Für das Gewicht und für die Muskeln nach dem Absetzen gibt es keine Belege, und in unserer [Supplement-Übersicht](/wissen/supplements-nach-abnehmspritze/) steht Omega-3 deshalb bei „nicht nötig“. Trotzdem lohnt sich dieser Artikel, aus zwei anderen Gründen: Fetter Fisch ist eines der ersten Lebensmittel, das bei kleinen Portionen vom Teller verschwindet, und die Verbesserungen bei Blutfetten und Blutdruck, die mit dem Gewicht kamen, gehen nach dem Absetzen mit dem Gewicht wieder. Hier steht, was EPA und DHA laut den zugelassenen Angaben leisten, wie viel Fisch dafür reicht und wann eine Kapsel sinnvoll ist.
@@ -80,6 +82,8 @@ Kapseln sind für die zugelassenen Angaben nicht besser als Fisch, nur praktisch
 - Vor Präparaten mit mehr als 1 g EPA und DHA am Tag, immer bei Gerinnungshemmern.
 - Bei Fischallergie: Rücksprache, welche Quelle passt.
 - Bei Typ-2-Diabetes gehört die Frage in die ohnehin laufende Betreuung.
+
+Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht unter [Welche Nahrungsergänzungsmittel sind bei der Abnehmspritze sinnvoll?](/wissen/supplements-nach-abnehmspritze/).
 
 ---
 

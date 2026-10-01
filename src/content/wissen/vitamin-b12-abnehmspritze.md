@@ -12,16 +12,16 @@ affiliate: ["vitaminB12Drops"]
 affiliateTitle: "Beispiel für Vitamin B12 in Tropfenform"
 affiliateIntro: "Ein Beispiel, keine Empfehlung einer Marke. Das Produkt ist hoch dosiert; hohe Dosen gehören zur Behandlung eines nachgewiesenen Mangels, nicht zur Vorsorge. Erst Blutwert, dann Präparat."
 faq:
-  - q: "Senkt die Abnehmspritze selbst den Vitamin-B12-Spiegel?"
-    a: "<p>Dafür gibt es keinen Beleg. Belegt ist der Effekt von Metformin, das viele Menschen mit Typ-2-Diabetes zusätzlich nehmen: In der DPP-Studie hatten nach fünf Jahren 4,3 % unter Metformin einen B12-Mangel gegenüber 2,3 % unter Placebo. Dazu kommt unter der Spritze, dass Fleisch, Fisch und Milchprodukte bei kleinen Portionen oft wegfallen.</p>"
+  - q: "Kann Ozempic einen Vitamin-B12-Mangel verursachen?"
+    a: "<p>Dafür gibt es keinen Beleg, weder für Ozempic noch für die anderen GLP-1-Medikamente. Belegt ist der Effekt von Metformin, das viele Menschen mit Typ-2-Diabetes zusätzlich nehmen: In der DPP-Studie hatten nach fünf Jahren 4,3 % unter Metformin einen B12-Mangel gegenüber 2,3 % unter Placebo. Dazu kommt unter der Spritze, dass Fleisch, Fisch und Milchprodukte bei kleinen Portionen oft wegfallen.</p>"
   - q: "Wie merke ich einen B12-Mangel?"
     a: "<p>Müdigkeit, Konzentrationsprobleme, Kribbeln oder Taubheit in Händen und Füßen, eine brennende Zunge, Blässe. Die Symptome kommen langsam, weil die Leber B12 über Jahre speichert. Sicher erkennen lässt sich ein Mangel nur im Blut; die Ärztin wählt den passenden Test.</p>"
   - q: "Welche Dosis ist sinnvoll?"
     a: "<p>Die DGE setzt 4 µg am Tag an. Das BfR schlägt für Nahrungsergänzungsmittel höchstens 25 µg vor. Bei nachgewiesenem Mangel werden ärztlich deutlich höhere Dosen oder Spritzen eingesetzt; das ist Behandlung, keine Ergänzung.</p>"
   - q: "Ich esse vegetarisch oder vegan. Was gilt?"
     a: "<p>Bei veganer Ernährung ist ein B12-Präparat unabhängig von der Spritze Pflicht, weil pflanzliche Lebensmittel praktisch kein verwertbares B12 enthalten. Bei vegetarischer Ernährung liefern Milchprodukte und Eier einen Teil; unter der Spritze, wenn die Portionen klein werden, reicht das oft nicht mehr.</p>"
-  - q: "Ändert sich etwas nach dem Absetzen?"
-    a: "<p>Wer weiter Metformin nimmt, behält das erhöhte Risiko und sollte den Wert regelmäßig prüfen lassen. Für alle anderen steigt mit dem Appetit meist auch die B12-Zufuhr wieder. Ein einmal aufgefüllter Speicher reicht lange.</p>"
+  - q: "Kann man mit Vitamin B12 abnehmen?"
+    a: "<p>Nein. Vitamin B12 hat keine zugelassene Angabe zu Gewicht oder Fettabbau; die Angaben betreffen Energiestoffwechsel, Müdigkeit, Nerven und Blutbildung. Wer einen Mangel ausgleicht, fühlt sich weniger müde, nimmt davon aber nicht ab. „B12-Spritzen zum Abnehmen“ sind Marketing.</p>"
 ---
 
 Vitamin B12 ist das Vitamin, bei dem zwei Dinge zusammentreffen, die unter der Abnehmspritze häufig sind: kleine Portionen mit wenig Fleisch, Fisch und Milch, und bei Typ-2-Diabetes die gleichzeitige Einnahme von Metformin. Beides senkt die Versorgung, und ein Mangel entwickelt sich so langsam, dass er lange niemandem auffällt. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
@@ -80,6 +80,8 @@ Mit dem Appetit kommen Fleisch, Fisch, Eier und Milchprodukte zurück, und damit
 - Bei Taubheit, Gangunsicherheit oder Gedächtnisproblemen: Das können Nervenschäden durch B12-Mangel sein, und die sind nur früh umkehrbar.
 - Bei Blutarmut im Blutbild oder nach Magenoperationen, Magensäureblockern über Jahre oder chronischen Darmerkrankungen.
 - Vor hochdosierten Präparaten oder Spritzen: Sie gehören zur Behandlung eines Mangels, nicht zur Vorsorge.
+
+Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht unter [Welche Nahrungsergänzungsmittel sind bei der Abnehmspritze sinnvoll?](/wissen/supplements-nach-abnehmspritze/).
 
 ---
 

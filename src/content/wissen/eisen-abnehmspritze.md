@@ -9,7 +9,7 @@ keywords: ["eisen abnehmspritze", "eisenmangel abnehmspritze", "eisen wegovy", "
 sources: ["nvs2", "dgeReferenzwerte", "euClaims", "bls", "almandoz2024", "bfrHoechstmengen2021"]
 related: ["supplements-nach-abnehmspritze", "vitamin-b12-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
 faq:
-  - q: "Macht die Abnehmspritze einen Eisenmangel?"
+  - q: "Kann die Abnehmspritze einen Eisenmangel verursachen?"
     a: "<p>Nicht direkt. Sie verändert, was und wie viel du isst. Rotes Fleisch, Hülsenfrüchte und Vollkorn fallen bei kleinen Portionen oft weg, und genau die liefern Eisen. Frauen vor den Wechseljahren lagen schon vor der Spritze zu 58 % unter der empfohlenen Zufuhr; unter der Spritze wird die Lücke größer.</p>"
   - q: "Soll ich vorsorglich Eisen nehmen?"
     a: "<p>Nein. Eisen ist das Mineral, bei dem Überschuss schadet: Der Körper kann es kaum ausscheiden, und bei der erblichen Eisenspeicherkrankheit kann ein Präparat gefährlich werden. Ein Eisenpräparat gehört erst nach einem Blutwert (Ferritin, Hämoglobin) und auf ärztliche Empfehlung in den Alltag.</p>"
@@ -17,8 +17,8 @@ faq:
     a: "<p>Müdigkeit, Blässe, Kurzatmigkeit bei Belastung, Konzentrationsprobleme, brüchige Nägel, Haarausfall, kalte Hände. Unter der Spritze werden die ersten drei oft dem wenigen Essen zugeschrieben. Sicher ist nur das Blutbild mit Ferritin.</p>"
   - q: "Wie nehme ich Eisen aus Lebensmitteln besser auf?"
     a: "<p>Vitamin C erhöht die Eisenaufnahme, das ist eine zugelassene EU-Angabe: Paprika, Zitrusfrüchte oder Beeren zur Mahlzeit. Kaffee, schwarzer Tee und große Mengen Calcium zur gleichen Mahlzeit hemmen die Aufnahme; eine Stunde Abstand hilft.</p>"
-  - q: "Gilt das auch nach dem Absetzen?"
-    a: "<p>Mit zurückgekehrtem Appetit lässt sich der Bedarf meist wieder über Lebensmittel decken, vor allem mit Fleisch, Hülsenfrüchten, Haferflocken und Kernen. Wer unter der Spritze einen Mangel hatte, lässt den Wert nach einigen Monaten erneut prüfen.</p>"
+  - q: "Kann Eisenmangel Bauchfett verursachen?"
+    a: "<p>Nein. Eisenmangel macht müde, blass und kurzatmig; die Fettverteilung verändert er nicht. Wer wegen Müdigkeit weniger trainiert und mehr isst, nimmt zu, das ist aber eine Folge des Verhaltens, nicht des Eisens. Eisen gehört nur bei nachgewiesenem Mangel ins Spiel, nie auf Verdacht.</p>"
 ---
 
 Müdigkeit ist eine der häufigsten Beschwerden unter der Abnehmspritze, und meistens ist die Erklärung einfach: zu wenig Essen. Manchmal steckt aber ein Eisenmangel dahinter, besonders bei Frauen vor den Wechseljahren, und der lässt sich nicht mit mehr Schlaf beheben. Dieser Artikel erklärt, warum Eisen unter der Spritze knapp werden kann, was die zugelassenen Angaben sagen und warum Eisen das eine Supplement ist, das du nicht auf Verdacht nehmen solltest. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
@@ -68,6 +68,8 @@ Mit dem Appetit kommen die Eisenlieferanten zurück: Fleisch zwei- bis dreimal p
 - Bei Müdigkeit, Blässe oder Kurzatmigkeit über mehr als zwei Wochen, die sich mit Essen und Schlaf nicht bessert.
 - Bei starker oder verlängerter Menstruation, nach Magen- oder Darmoperationen, bei chronischen Darmerkrankungen.
 - Bei Eisenspeicherkrankheit in der Familie: Dann ist jedes Eisenpräparat ohne Blutwert ein Risiko.
+
+Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht unter [Welche Nahrungsergänzungsmittel sind bei der Abnehmspritze sinnvoll?](/wissen/supplements-nach-abnehmspritze/).
 
 ---
 

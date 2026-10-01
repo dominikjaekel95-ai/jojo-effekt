@@ -15,12 +15,12 @@ faq:
     a: "<p>Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche. Nach rund fünf Wochen ist der größte Teil abgebaut, nach etwa sieben Wochen fast alles. Die Wirkung auf den Appetit lässt schon in der zweiten und dritten Woche spürbar nach.</p>"
   - q: "Muss ich Wegovy ausschleichen?"
     a: "<p>Die Fachinformation sieht kein Ausschleichen vor, und die Studien haben abrupt abgesetzt, ohne Entzugserscheinungen. Weil Wegovy in fünf Dosisstufen existiert, ist ein schrittweises Reduzieren technisch einfach möglich. Ob es sinnvoll ist, entscheidet deine Ärztin oder dein Arzt; einen Beleg, dass es den Jojo-Effekt abmildert, gibt es bisher nicht.</p>"
-  - q: "Wie viel nimmt man nach Wegovy wieder zu?"
-    a: "<p>In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen im Mittel zwei Drittel des verlorenen Gewichts zurück: von −17,3 % auf −5,6 % gegenüber dem Start. In STEP 4 stieg das Gewicht nach dem Wechsel auf Placebo um 6,9 % in 48 Wochen. Die Streuung zwischen einzelnen Menschen ist groß.</p>"
+  - q: "Nimmt man nach dem Absetzen von Wegovy wieder zu?"
+    a: "<p>In den Studien ja, im Mittel: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen zwei Drittel des verlorenen Gewichts zurück, von −17,3 % auf −5,6 % gegenüber dem Start. In STEP 4 stieg das Gewicht nach dem Wechsel auf Placebo um 6,9 % in 48 Wochen. Die Streuung zwischen einzelnen Menschen ist groß; wer in der Therapiezeit Krafttraining und Protein eingebaut hat, hält in Studien deutlich besser.</p>"
   - q: "Kann ich Wegovy bei Kinderwunsch einfach absetzen?"
     a: "<p>Laut Fachinformation soll Wegovy mindestens zwei Monate vor einer geplanten Schwangerschaft abgesetzt werden, weil der Wirkstoff so lange im Körper bleibt. Besprich den Zeitpunkt mit deiner Ärztin oder deinem Arzt.</p>"
-  - q: "Kann ich nach dem Absetzen wieder mit Wegovy anfangen?"
-    a: "<p>Ja, das ist medizinisch möglich. Nach einer längeren Pause wird die Dosis in der Regel wieder aufgebaut, um Magen-Darm-Nebenwirkungen zu vermeiden. Ob, wann und wie, legt deine Ärztin oder dein Arzt fest.</p>"
+  - q: "Kann man die Abnehmspritze auch wieder absetzen?"
+    a: "<p>Ja. Es gibt kein Entzugssyndrom; Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation bis etwa sieben Wochen nachweisbar. Was zurückkommt, sind der Appetit und, ohne Gegenmaßnahmen, das Gewicht; was sich lohnt, ist die Vorbereitung in den letzten Wochen der Therapie mit Krafttraining, Protein und festem Wiegetag. Ob und wann du absetzt, entscheidest du mit deiner Ärztin oder deinem Arzt, bei Diabetes oder auffälligen Blutwerten besonders.</p>"
 ---
 
 Wegovy ist die Abnehmspritze, die in Deutschland am häufigsten für die Gewichtsreduktion verordnet wird. Wer sie absetzt, hat drei Fragen: Wie lange wirkt sie nach, was passiert mit dem Gewicht, und was muss ich beachten? Hier sind die Antworten aus Fachinformation und Studien, präparatspezifisch. Was für alle Abnehmspritzen gilt, steht im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).

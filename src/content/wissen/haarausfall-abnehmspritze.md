@@ -12,12 +12,12 @@ related: ["protein-abnehmspritze", "eisen-abnehmspritze", "abnehmspritze-gesicht
 faq:
   - q: "Ist Haarausfall eine Nebenwirkung der Abnehmspritze?"
     a: "<p>In Einzelfällen wird Haarausfall unter der Abnehmspritze berichtet. Ob dann das Medikament oder der schnelle Gewichtsverlust der Auslöser ist, lässt sich von außen nicht unterscheiden. Das Muster, verzögert, diffus, vorübergehend, entspricht dem telogenen Effluvium, das nach jedem schnellen Gewichtsverlust auftreten kann. Fragen zum Medikament gehören zu deiner Ärztin.</p>"
-  - q: "Wie lange dauert der Haarausfall?"
+  - q: "Wann hört der Haarausfall wieder auf?"
     a: "<p>Beim telogenen Effluvium beginnt der Ausfall zwei bis drei Monate nach dem Auslöser und klingt in der Regel innerhalb von etwa sechs Monaten ab, sobald der Auslöser wegfällt. Weil die Haare mit Verzögerung ausfallen, beginnt es oft erst, wenn die Abnahme schon langsamer geworden ist.</p>"
   - q: "Hilft Biotin gegen den Haarausfall?"
     a: "<p>Biotin trägt zur Erhaltung normaler Haare bei, das ist die zugelassene Angabe. Sie gilt bei ausreichender Versorgung; bei normaler Ernährung ist ein Biotinmangel selten. Hochdosierte Präparate lassen die Haare nicht schneller wachsen und können Laborwerte verfälschen, etwa für Schilddrüse und Herz. Vor Blutabnahmen angeben.</p>"
-  - q: "Muss ich die Spritze absetzen, damit die Haare nachwachsen?"
-    a: "<p>Das entscheidest du mit deiner Ärztin, nicht wegen der Haare allein. Beim telogenen Effluvium ist der Auslöser in der Regel der schnelle Gewichtsverlust; ist das Gewicht stabil, wachsen die Haare meist nach. Ob das im Einzelfall auch unter laufender Therapie gilt, gehört ins ärztliche Gespräch.</p>"
+  - q: "Was tun bei Haarausfall nach Gewichtsabnahme?"
+    a: "<p>Vier Dinge: Protein auf 1,2 bis 1,6 g pro kg Körpergewicht am Tag bringen, weil Haare aus Keratin bestehen; Ferritin und Blutbild prüfen lassen, bevor irgendein Präparat ins Spiel kommt; Zink, Biotin und Selen nur bei nachgewiesener Lücke; und große Gewichtsschwankungen vermeiden, weil jede Crash-Diät ein neuer Auslöser ist. Hält der Ausfall länger als sechs Monate an, ist er fleckig oder kommen Müdigkeit und Frieren dazu, gehört er ärztlich abgeklärt.</p>"
   - q: "Wächst alles wieder nach?"
     a: "<p>Beim telogenen Effluvium ja, weil die Haarwurzeln erhalten bleiben; es dauert nur, bis die nachwachsenden Haare die alte Länge erreichen. Hält der Ausfall länger als sechs Monate an, ist er fleckig oder kommen Müdigkeit und Frieren dazu, gehört er abgeklärt: Eisen, Schilddrüse, erblicher Haarausfall.</p>"
 ---

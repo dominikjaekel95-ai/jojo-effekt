@@ -5,6 +5,7 @@ description: "Warum das bei Typ-2-Diabetes nie ohne Ärztin geht, wie lange Sema
 category: "Präparate"
 order: 8
 pubDate: 2026-09-30
+updatedDate: 2026-10-01
 keywords: ["ozempic absetzen", "ozempic absetzen gewicht", "ozempic absetzen jojo", "ozempic absetzen diabetes", "ozempic absetzen was passiert", "ozempic halbwertszeit", "ozempic ausschleichen"]
 sources: ["fachinfoOzempic", "davies2021step2", "wilding2022ext", "wu2025", "sumithran2011", "jensen2024", "leidy2015"]
 related: ["abnehmspritze-absetzen", "wegovy-absetzen", "jojo-effekt-abnehmspritze"]
@@ -17,8 +18,8 @@ faq:
     a: "<p>Sehr wahrscheinlich, wenn sich sonst nichts ändert. Direkte Absetz-Daten gibt es für Semaglutid vor allem aus den Wegovy-Studien: Dort waren ein Jahr nach dem Absetzen zwei Drittel des verlorenen Gewichts zurück. Der Mechanismus ist bei Ozempic derselbe Wirkstoff in niedrigerer Dosis.</p>"
   - q: "Ist der Jojo-Effekt nach Ozempic kleiner, weil die Dosis niedriger ist?"
     a: "<p>Der absolute Verlust ist unter Ozempic-Dosen meist kleiner als unter Wegovy: In STEP 2 verloren Menschen mit Typ-2-Diabetes unter 1 mg im Mittel 7,0 %, unter 2,4 mg 9,6 %. Weniger Verlust heißt weniger, das zurückkommen kann. Der Anteil, der zurückkommt, dürfte ähnlich sein; eigene Absetz-Studien mit Ozempic-Dosen zum Gewicht gibt es nicht.</p>"
-  - q: "Was ist mit den Lieferengpässen?"
-    a: "<p>Ozempic war 2023 und 2024 zeitweise knapp, auch weil es off-label zum Abnehmen verordnet wurde. Das Bundesinstitut für Arzneimittel hat mehrfach darauf hingewiesen, dass Menschen mit Typ-2-Diabetes Vorrang haben. Wer wegen eines Engpasses unfreiwillig absetzen muss, sollte sofort mit der Praxis sprechen, statt zu warten.</p>"
+  - q: "Was passiert, wenn man Ozempic wieder absetzt?"
+    a: "<p>Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut; der Appetit kommt meist in Woche 2 bis 5 zurück, die Gewichtszunahme ist in Studien ab etwa Woche 8 messbar, und bei Typ-2-Diabetes steigt der Blutzucker oft schon in den ersten zwei Wochen wieder, weil die blutzuckersenkende Wirkung mit dem Wirkstoff endet. Deshalb nie ohne Plan für die Blutzuckerkontrolle absetzen; andere Wirkstoffe müssen eventuell angepasst werden, das entscheidet die Ärztin. Ein Jahr nach dem Absetzen von Semaglutid waren in der STEP-1-Verlängerung zwei Drittel des Gewichtsverlusts zurück.</p>"
 ---
 
 Ozempic ist zur Behandlung des Typ-2-Diabetes zugelassen, wird aber in Deutschland auch off-label zum Abnehmen genutzt. Das Absetzen ist deshalb für zwei Gruppen ein Thema, und für beide gilt etwas anderes. Die Grundlagen für alle Abnehmspritzen stehen im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/); hier geht es nur um das, was für Ozempic spezifisch ist.

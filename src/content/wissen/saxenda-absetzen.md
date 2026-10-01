@@ -6,7 +6,7 @@ category: "Präparate"
 order: 15
 pubDate: 2026-10-01
 keywords: ["saxenda absetzen", "saxenda absetzen gewicht", "saxenda absetzen was passiert", "liraglutid absetzen", "saxenda jojo effekt", "saxenda halbwertszeit", "saxenda ausschleichen"]
-sources: ["fachinfoSaxenda", "pisunyer2015", "jensen2024", "lundgren2021", "wu2025", "sumithran2011", "leidy2015", "who2020"]
+sources: ["fachinfoSaxenda", "pisunyer2015", "jensen2024", "lundgren2021", "wu2025", "sumithran2011", "leidy2015", "who2020", "wilding2022ext"]
 related: ["abnehmspritze-absetzen", "wegovy-absetzen", "gewicht-halten-nach-abnehmspritze"]
 faq:
   - q: "Wie lange bleibt Saxenda nach der letzten Spritze im Körper?"
@@ -17,8 +17,8 @@ faq:
     a: "<p>Die Fachinformation sieht kein Ausschleichen vor, und in den Studien wurde abrupt abgesetzt, ohne Entzugserscheinungen. Saxenda hat fünf Dosisstufen, ein schrittweises Reduzieren ist also technisch möglich. Ob es sinnvoll ist, entscheidet deine Ärztin oder dein Arzt; einen Beleg für einen kleineren Jojo-Effekt gibt es nicht.</p>"
   - q: "Ist der Jojo-Effekt nach Saxenda kleiner als nach Wegovy?"
     a: "<p>In Kilogramm meist ja, weil der Verlust unter Liraglutid kleiner ist: In der Zulassungsstudie SCALE 8,0 % nach 56 Wochen, unter Semaglutid 2,4 mg rund 15 %. Weniger Verlust heißt weniger, das zurückkommen kann. Der Mechanismus ist derselbe, und der Appetit kommt bei Saxenda sogar schneller zurück.</p>"
-  - q: "Kann ich nach dem Absetzen wieder mit Saxenda anfangen?"
-    a: "<p>Medizinisch ja. Nach einer Pause wird die Dosis in der Regel wieder aufgebaut, um Übelkeit zu begrenzen. Ob, wann und wie, legt deine Ärztin oder dein Arzt fest.</p>"
+  - q: "Nimmt man nach dem Absetzen der Abnehmspritze wieder zu?"
+    a: "<p>In den Studien ja, im Mittel: Ein Jahr nach dem Absetzen von Semaglutid waren in der STEP-1-Verlängerung zwei Drittel des Verlusts zurück. Für Liraglutid, den Wirkstoff von Saxenda, zeigt die dänische S-LiTE-Studie, worauf es ankommt: Nach Liraglutid allein lag die Zunahme im Jahr nach Therapieende 6,0 kg höher als nach einem betreuten Trainingsprogramm. Wer Training und Protein schon während der Therapie einbaut, nimmt deutlich weniger wieder zu.</p>"
 ---
 
 Saxenda ist die Abnehmspritze, die täglich gespritzt wird, und das ändert beim Absetzen mehr, als viele erwarten. Hier steht, was für Liraglutid spezifisch ist. Die Grundlagen für alle Abnehmspritzen stehen im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).

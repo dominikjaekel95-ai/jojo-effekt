@@ -11,14 +11,14 @@ related: ["muskelabbau-abnehmspritze", "protein-abnehmspritze", "haarausfall-abn
 faq:
   - q: "Ist das eingefallene Gesicht eine Nebenwirkung der Spritze?"
     a: "<p>Nach allem, was bekannt ist, ist es eine Folge des Fettverlusts, nicht eine Wirkung des Medikaments auf die Haut. Das gleiche Bild entsteht nach Magenoperationen oder Crash-Diäten. Mit der Spritze ist es häufiger geworden, weil mehr Menschen in kurzer Zeit viel abnehmen. Fragen zum Medikament selbst gehören zu deiner Ärztin.</p>"
-  - q: "Geht das wieder weg?"
+  - q: "Geht das „Ozempic-Gesicht“ wieder weg?"
     a: "<p>Teilweise. Die Haut zieht sich nach dem Gewichtsverlust über Monate ein Stück zurück; wie weit, hängt von Alter und Ausmaß der Abnahme ab. Das Fett im Gesicht kommt nur mit dem Gewicht zurück, und das ist nicht das Ziel. Ästhetische Verfahren gibt es; wir bewerten sie nicht.</p>"
   - q: "Hilft Kollagen?"
     a: "<p>Es gibt eine kleine, herstellerfinanzierte Studie mit 69 Frauen, in der Kollagenpeptide die Hautelastizität nach acht Wochen gegenüber Placebo verbesserten. Das ist ein Hinweis, kein Beleg, und in der EU ist für Kollagen keine gesundheitsbezogene Angabe zugelassen. Wer es ausprobiert, tut das als Versuch.</p>"
   - q: "Soll ich langsamer abnehmen?"
     a: "<p>Das Tempo legt die Behandlung fest, und das besprichst du mit deiner Ärztin, nicht mit einem Artikel. Was du selbst steuerst: genug Protein, Krafttraining an zwei Tagen pro Woche und eine Ernährung, die die Haut versorgt. Das verhindert, dass zum fehlenden Fett auch noch schwindende Muskeln kommen.</p>"
-  - q: "Helfen Gesichtsyoga oder Massagen?"
-    a: "<p>Dafür gibt es keine Studien, die wir zitieren könnten. Schaden tut beides nicht. Belegt ist nur, was für den ganzen Körper gilt: Muskeln erhalten, Haut versorgen, Gewicht halten, Zeit geben.</p>"
+  - q: "Was verändert sich im Gesicht, wenn man abnimmt?"
+    a: "<p>Die Fettpolster in Wangen, Schläfen und um die Augen werden kleiner; dadurch treten Wangenknochen, Nasolabialfalten und Augenringe stärker hervor, und die Haut hat weniger Volumen unter sich. Bei schnellem Verlust kommt die Haut mit dem Zurückziehen nicht nach, das wirkt eingefallen. Das ist eine Folge des Gewichtsverlusts, keine Wirkung des Medikaments auf die Haut, und tritt bei jeder schnellen Abnahme auf, auch nach Operationen oder Diäten.</p>"
 ---
 
 „Ozempic Face“ ist ein Begriff aus den US-Medien, kein medizinisches Krankheitsbild. Gemeint sind eingefallene Wangen, tiefere Falten und lockerere Haut im Gesicht nach schnellem Gewichtsverlust unter GLP-1-Medikamenten. Das Phänomen ist real, die Erklärung ist unspektakulär: Wer viel Fett verliert, verliert es auch im Gesicht, und die Haut kommt beim Tempo nicht mit. Dieser Artikel erklärt, was dabei passiert, welche drei Faktoren es sichtbar machen und was sich davon beeinflussen lässt. Er sagt nur, was belegt ist; für die Frage, wie schnell du abnimmst, ist deine Ärztin zuständig.

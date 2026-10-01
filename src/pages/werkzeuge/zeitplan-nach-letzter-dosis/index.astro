@@ -1,0 +1,185 @@
+---
+/**
+ * Werkzeug: Zeitplan nach der letzten Dosis. Rechnet aus Datum und Wirkstoff die Orientierungspunkte aus Fachinformation
+ * (Halbwertszeit, Faustregel fünf Halbwertszeiten) und Studien (Zunahme ab Woche 8, Wu 2025; Ein-Jahres-Daten) in Daten um.
+ * Kein Absetz-Plan, keine Dosierung: Das Werkzeug beginnt nach der letzten Dosis. Rechnet nur im Browser, speichert nichts.
+ */
+import Base from '../../../layouts/Base.astro';
+import Fn from '../../../components/Fn.astro';
+import Footnotes from '../../../components/Footnotes.astro';
+import ProductTeaser from '../../../components/ProductTeaser.astro';
+import { site } from '../../../data/site';
+
+const fnIds = ['fachinfoWegovy', 'fachinfoOzempic', 'fachinfoRybelsus', 'fachinfoMounjaro', 'fachinfoSaxenda', 'wu2025', 'wilding2022ext', 'aronne2024', 'jensen2024'] as const;
+const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
+
+const title = 'Zeitplan nach der letzten Dosis: Was wann passiert (Rechner)';
+const description =
+  'Letzte Dosis und Wirkstoff eingeben: wann der Wirkstoff abgebaut ist, wann der Appetit zurückkommt, ab wann die Zunahme messbar ist und wann der Kontrolltermin passt.';
+const path = '/werkzeuge/zeitplan-nach-letzter-dosis/';
+const url = `${site.url}${path}`;
+
+const jsonLd = [
+  {
+    '@type': 'WebPage',
+    '@id': `${url}#page`,
+    name: title,
+    description,
+    url,
+    inLanguage: 'de-DE',
+    isPartOf: { '@id': `${site.url}/#website` },
+    about: { '@type': 'Thing', name: 'Zeitlicher Verlauf nach dem Absetzen von GLP-1-Rezeptoragonisten' },
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Start', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Werkzeuge', item: `${site.url}/werkzeuge/` },
+      { '@type': 'ListItem', position: 3, name: 'Zeitplan nach der letzten Dosis', item: url },
+    ],
+  },
+];
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+  <article class="container-narrow py-12">
+    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › <a href="/werkzeuge/" class="hover:text-moss">Werkzeuge</a> › Zeitplan</nav>
+    <p class="eyebrow mt-6">Werkzeug · rechnet nur in deinem Browser</p>
+    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">Zeitplan nach der letzten Dosis</h1>
+    <p class="mt-4 text-lg text-ink-2">
+      Datum der letzten Dosis und Wirkstoff eingeben. Das Werkzeug rechnet die Orientierungspunkte aus Fachinformation und Studien in Kalenderdaten um: wann der Wirkstoff weitgehend abgebaut ist, wann der Appetit meist zurückkommt, ab wann die Zunahme in Studien messbar wird und wann ein Kontrolltermin passt.
+    </p>
+    <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence} Dieses Werkzeug ist kein Absetz-Plan und keine Dosierhilfe; es beginnt nach der letzten Dosis.</p>
+
+    <form id="zeitplan-form" class="mt-8 grid gap-4 rounded-xl2 border border-line bg-white p-5 sm:grid-cols-2" novalidate>
+      <div>
+        <label for="datum" class="block text-sm font-semibold text-ink">Datum der letzten Dosis</label>
+        <input id="datum" name="datum" type="date" required class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink" />
+      </div>
+      <div>
+        <label for="wirkstoff" class="block text-sm font-semibold text-ink">Wirkstoff</label>
+        <select id="wirkstoff" name="wirkstoff" class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink">
+          <option value="sema-spritze">Semaglutid, wöchentliche Spritze (Wegovy, Ozempic)</option>
+          <option value="sema-tablette">Semaglutid, Tablette (Wegovy-Tablette, Rybelsus)</option>
+          <option value="tirzepatid">Tirzepatid (Mounjaro)</option>
+          <option value="liraglutid">Liraglutid (Saxenda)</option>
+        </select>
+      </div>
+      <div class="sm:col-span-2 flex flex-wrap items-center gap-3">
+        <button type="submit" class="btn-primary">Zeitplan berechnen</button>
+        <span class="text-xs text-ink-3">Nichts wird gespeichert oder übertragen.</span>
+      </div>
+    </form>
+
+    <section id="zeitplan-ergebnis" class="mt-8 hidden" aria-live="polite">
+      <h2 class="h2">Dein Zeitplan</h2>
+      <p class="mt-2 text-sm text-ink-3" data-zeitplan-kopf></p>
+      <ol class="mt-4 space-y-3" data-zeitplan-liste></ol>
+      <div class="mt-5 flex flex-wrap items-center gap-3">
+        <button type="button" class="btn-secondary" data-zeitplan-ics>In den Kalender (ICS-Datei)</button>
+        <button type="button" class="btn-secondary" data-zeitplan-drucken>Drucken</button>
+      </div>
+      <p class="mt-4 text-sm text-ink-3">Alle Angaben sind Mittelwerte aus Fachinformation und Studien; dein Verlauf weicht ab. Was in jeder Phase zu tun ist, steht unter <a href="/wissen/abnehmspritze-absetzen/" class="font-semibold text-moss underline underline-offset-4">Abnehmspritze absetzen</a> und in der <a href="/checkliste/" class="font-semibold text-moss underline underline-offset-4">Checkliste für die ersten 8 Wochen</a>.</p>
+    </section>
+
+    <div class="prose-site mt-10">
+      <h2 id="so-gerechnet">So wird gerechnet</h2>
+      <ul>
+        <li><strong>Wirkstoff weitgehend abgebaut:</strong> nach etwa fünf Halbwertszeiten. Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche, als Spritze<Fn n={fn('fachinfoWegovy')} id="fachinfoWegovy" /><Fn n={fn('fachinfoOzempic')} id="fachinfoOzempic" /> wie als Tablette<Fn n={fn('fachinfoRybelsus')} id="fachinfoRybelsus" />, Tirzepatid etwa fünf Tage<Fn n={fn('fachinfoMounjaro')} id="fachinfoMounjaro" />, Liraglutid etwa 13 Stunden.<Fn n={fn('fachinfoSaxenda')} id="fachinfoSaxenda" /> Die Wirkung auf den Appetit lässt schon vorher spürbar nach.</li>
+        <li><strong>Appetit kommt zurück:</strong> Orientierung aus dem Wirkstoffabbau, etwa zwischen der zweiten und der fünften Halbwertszeit. Bei Semaglutid sind das Woche 2 bis 5, bei Tirzepatid Tag 10 bis 25, bei Liraglutid die ersten Tage.</li>
+        <li><strong>Zunahme messbar:</strong> In einer Meta-Analyse randomisierter Studien war der Gewichtsunterschied zur Kontrollgruppe ab etwa Woche 8 nach dem Absetzen signifikant und stieg bis etwa Woche 20.<Fn n={fn('wu2025')} id="wu2025" /></li>
+        <li><strong>Kontrolltermin:</strong> Woche 8 bis 12, also wenn die Zunahme beginnt; das ist die Empfehlung aus unserem Hauptartikel, keine Studienvorgabe.</li>
+        <li><strong>Ein Jahr danach:</strong> Nach Semaglutid waren in der STEP-1-Verlängerung im Mittel zwei Drittel des Verlusts zurück.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Nach Tirzepatid lag die Zunahme in SURMOUNT-4 bei etwa 14 % in 52 Wochen.<Fn n={fn('aronne2024')} id="aronne2024" /> Nach Liraglutid allein lag die Zunahme in der S-LiTE-Nachbeobachtung 6 kg höher als nach Training.<Fn n={fn('jensen2024')} id="jensen2024" /></li>
+      </ul>
+      <p>Was das Werkzeug nicht tut: Es sagt nicht, ob oder wie du absetzen sollst, und es rechnet keine Dosen. Beides gehört in das Gespräch mit deiner Ärztin oder deinem Arzt.</p>
+    </div>
+
+    <ProductTeaser position="werkzeug-zeitplan" />
+
+    <Footnotes ids={fnIds} />
+  </article>
+
+  <script is:inline>
+    const PROFILE = {
+      'sema-spritze': { name: 'Semaglutid (Spritze)', hwzTage: 7, jahr: 'In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen von Semaglutid im Mittel zwei Drittel des Verlusts zurück.' },
+      'sema-tablette': { name: 'Semaglutid (Tablette)', hwzTage: 7, jahr: 'Für die Tablette gibt es noch keine Absetz-Daten; nach der Spritze waren ein Jahr später im Mittel zwei Drittel des Verlusts zurück (Übertrag).' },
+      tirzepatid: { name: 'Tirzepatid', hwzTage: 5, jahr: 'In SURMOUNT-4 lag die Zunahme nach dem Wechsel auf Placebo bei etwa 14 % in 52 Wochen.' },
+      liraglutid: { name: 'Liraglutid', hwzTage: 13 / 24, jahr: 'In der S-LiTE-Nachbeobachtung lag die Zunahme nach Liraglutid allein ein Jahr später 6 kg höher als nach Training.' },
+    };
+    const form = document.getElementById('zeitplan-form');
+    const ergebnis = document.getElementById('zeitplan-ergebnis');
+    const liste = document.querySelector('[data-zeitplan-liste]');
+    const kopf = document.querySelector('[data-zeitplan-kopf]');
+    let aktuelleEvents = [];
+
+    const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+    const fmt = (d) => d.toLocaleDateString('de-DE', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' });
+    const ics = (d) => `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
+
+    const eintrag = (titel, zeit, text) => {
+      const li = document.createElement('li');
+      li.className = 'rounded-xl2 border border-line bg-white p-4';
+      const h = document.createElement('p'); h.className = 'font-semibold text-ink'; h.textContent = titel;
+      const z = document.createElement('p'); z.className = 'mt-1 text-sm font-medium text-moss'; z.textContent = zeit;
+      const t = document.createElement('p'); t.className = 'mt-1 text-sm text-ink-2'; t.textContent = text;
+      li.append(h, z, t);
+      return li;
+    };
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const datumWert = form.datum.value;
+      if (!datumWert) { form.datum.focus(); return; }
+      const start = new Date(datumWert + 'T12:00:00');
+      if (Number.isNaN(start.getTime())) return;
+      const p = PROFILE[form.wirkstoff.value] || PROFILE['sema-spritze'];
+      const abgebaut = addDays(start, Math.max(1, Math.round(p.hwzTage * 5)));
+      const appetitVon = addDays(start, Math.max(1, Math.round(p.hwzTage * 2)));
+      const appetitBis = abgebaut;
+      const zunahme = addDays(start, 56);
+      const zunahmeBis = addDays(start, 140);
+      const kontrolleVon = addDays(start, 56);
+      const kontrolleBis = addDays(start, 84);
+      const jahr = addDays(start, 365);
+      const wiegetage = [1, 2, 4, 8, 12].map((w) => addDays(start, w * 7));
+
+      liste.replaceChildren(
+        eintrag('Wirkstoff weitgehend abgebaut', `um den ${fmt(abgebaut)}`, `Etwa fünf Halbwertszeiten nach der letzten Dosis (${p.name}). Die Wirkung auf den Appetit lässt schon vorher nach.`),
+        eintrag('Appetit kommt meist zurück', `${fmt(appetitVon)} bis ${fmt(appetitBis)}`, 'Mit sinkendem Wirkstoffspiegel arbeitet der Magen wieder schneller, das Sättigungssignal kommt später. Jetzt zählen Protein zuerst, feste Mahlzeiten und das Training, das schon läuft.'),
+        eintrag('Zunahme in Studien ab hier messbar', `ab ${fmt(zunahme)}, Anstieg bis etwa ${fmt(zunahmeBis)}`, 'Woche 8 bis 20 nach dem Absetzen (Meta-Analyse randomisierter Studien). Wer bis hierher Routinen hat, hat den Vorsprung.'),
+        eintrag('Kontrolltermin sinnvoll', `${fmt(kontrolleVon)} bis ${fmt(kontrolleBis)}`, 'Woche 8 bis 12: Gewicht, Blutwerte, Optionen besprechen. Termin jetzt ausmachen, nicht erst, wenn die Waage es sagt.'),
+        eintrag('Wiegetage', `jede Woche am ${start.toLocaleDateString('de-DE', { weekday: 'long' })}, zum Beispiel ${wiegetage.map((d) => d.toLocaleDateString('de-DE', { day: 'numeric', month: 'numeric' })).join(', ')}`, 'Einmal pro Woche, morgens, gleiche Bedingungen. Vorher festlegen, ab welcher Zunahme du reagierst.'),
+        eintrag('Ein Jahr danach', fmt(jahr), p.jahr + ' Was in Studien den Unterschied macht: Krafttraining, Protein, feste Mahlzeiten.'),
+      );
+      kopf.textContent = `Letzte Dosis ${fmt(start)}, ${p.name}. Orientierungswerte, keine Vorhersage.`;
+      ergebnis.classList.remove('hidden');
+      ergebnis.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      aktuelleEvents = [];
+      aktuelleEvents.push({ d: abgebaut, s: 'Nach der Spritze: Wirkstoff weitgehend abgebaut' });
+      aktuelleEvents.push({ d: appetitVon, s: 'Nach der Spritze: Appetit kommt meist zurück (bis ' + fmt(appetitBis) + ')' });
+      aktuelleEvents.push({ d: zunahme, s: 'Nach der Spritze: ab jetzt Zunahme in Studien messbar' });
+      aktuelleEvents.push({ d: kontrolleVon, s: 'Nach der Spritze: Kontrolltermin ausmachen (Woche 8 bis 12)' });
+      wiegetage.forEach((d) => aktuelleEvents.push({ d, s: 'Nach der Spritze: Wiegetag' }));
+      aktuelleEvents.push({ d: jahr, s: 'Nach der Spritze: ein Jahr nach der letzten Dosis' });
+    });
+
+    document.querySelector('[data-zeitplan-ics]').addEventListener('click', () => {
+      if (!aktuelleEvents.length) return;
+      const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
+      const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//nachderspritze.de//Zeitplan//DE', 'CALSCALE:GREGORIAN'];
+      aktuelleEvents.forEach((ev, i) => {
+        lines.push('BEGIN:VEVENT', `UID:zeitplan-${ics(ev.d)}-${i}@nachderspritze.de`, `DTSTAMP:${stamp}`, `DTSTART;VALUE=DATE:${ics(ev.d)}`, `DTEND;VALUE=DATE:${ics(addDays(ev.d, 1))}`, `SUMMARY:${ev.s}`, 'DESCRIPTION:Orientierung aus Fachinformation und Studien\\, kein ärztlicher Plan. nachderspritze.de/werkzeuge/zeitplan-nach-letzter-dosis/', 'END:VEVENT');
+      });
+      lines.push('END:VCALENDAR');
+      const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'nach-der-spritze-zeitplan.ics';
+      document.body.append(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(a.href);
+    });
+    document.querySelector('[data-zeitplan-drucken]').addEventListener('click', () => window.print());
+  </script>
+</Base>

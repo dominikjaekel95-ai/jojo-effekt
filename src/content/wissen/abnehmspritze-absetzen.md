@@ -39,7 +39,7 @@ Was auch immer der Grund ist: Ob und wie du dein Medikament absetzt, besprichst 
 
 ## Was nach der letzten Dosis passiert – Woche für Woche
 
-Die folgende Übersicht fasst zusammen, was aus Pharmakologie und Studien ableitbar ist. Individuell weicht der Verlauf ab.
+Die folgende Übersicht fasst zusammen, was aus Pharmakologie und Studien ableitbar ist. Individuell weicht der Verlauf ab. Wer die Punkte als Kalenderdaten für die eigene letzte Dosis sehen will, nutzt den [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/).
 
 **Woche 1 bis 2: Noch wenig Veränderung.** Semaglutid hat eine Halbwertszeit von etwa einer Woche, Tirzepatid von etwa fünf Tagen. In den ersten Tagen ist noch genug Wirkstoff im Körper; viele merken keinen Unterschied.
 

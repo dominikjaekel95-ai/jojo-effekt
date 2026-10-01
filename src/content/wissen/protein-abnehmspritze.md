@@ -49,6 +49,8 @@ Bei starkem Übergewicht (BMI über 35) rechnen viele Fachleute mit dem Zielgewi
 
 **Ausnahme Nierenerkrankung:** Dann legt die Ärztin oder der Arzt die Proteinmenge fest. Bei gesunden Nieren gibt es für diese Mengen keine Hinweise auf Schäden.
 
+Dein eigenes Tagesziel und die Menge pro Mahlzeit rechnet der [Proteinrechner](/werkzeuge/proteinrechner/) aus.
+
 ## Wo Protein drinsteckt
 
 Ungefähre Werte pro Portion:

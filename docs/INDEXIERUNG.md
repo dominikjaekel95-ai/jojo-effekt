@@ -43,6 +43,9 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | neuer Artikel, Painpoint Haarausfall | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/supplements-nach-abnehmspritze/ | neuer Abschnitt „Einzelne Supplements im Detail“, Tabelle erweitert | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/ernaehrung/ | Themenseite: acht neue Artikel und Fragen | 2026-10-01 | offen |
+| https://nachderspritze.de/werkzeuge/ | neue Seite: Übersicht der Werkzeuge | 2026-10-01 | offen |
+| https://nachderspritze.de/werkzeuge/zeitplan-nach-letzter-dosis/ | neues Werkzeug: Zeitplan aus Datum und Wirkstoff, Kalender-Export | 2026-10-01 | offen |
+| https://nachderspritze.de/werkzeuge/proteinrechner/ | neues Werkzeug: Proteinrechner | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/absetzen/ | neue Seite: Themenseite Absetzen und Pausieren (nach Merge des Hub-PR) | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/praeparate/ | neue Seite: Themenseite Absetzen nach Präparat (nach Merge des Hub-PR) | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/abnehmpille/ | neue Seite: Themenseite Abnehmpille (Priorität) (nach Merge des Hub-PR) | 2026-09-30 | offen |

@@ -32,7 +32,7 @@ Die meisten Menschen, die mit einer Abnehmspritze anfangen, hören innerhalb ein
 
 Die Gründe sind selten „Ich will nicht mehr abnehmen“. Häufiger sind es:
 
-- **Kosten.** Als Selbstzahler kostet die Therapie je nach Präparat und Dosis etwa 170 bis 480 € im Monat.
+- **Kosten.** Als Selbstzahler kostet die Therapie je nach Präparat und Dosis etwa 170 bis 480 € im Monat. Die aktuelle Erhebung mit Jahreskosten steht unter [Abnehmspritze: Kosten pro Monat und Jahr](/abnehmspritze-kosten/).
 - **Nebenwirkungen.** Übelkeit, Verstopfung, Reflux, Müdigkeit – für manche über Monate.
 - **Lieferengpässe** oder ein Wechsel der Praxis.
 - **Ein erreichtes Ziel.** Das Gewicht stimmt, die Frage ist: Wie weiter?

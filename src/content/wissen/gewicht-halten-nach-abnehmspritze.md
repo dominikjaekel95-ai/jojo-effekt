@@ -65,7 +65,7 @@ Der Wirkstoff ist weitgehend abgebaut. Der Appetit ist zurück, oft stärker als
 
 Die Zunahme wird in Studien ab jetzt messbar.<sup><a href="#fn-wu2025">1</a></sup> Das Ziel dieser Phase ist ein System, das ohne Plan läuft.
 
-- **Der Arzttermin.** Gewicht, Blutdruck, Blutzucker, Blutfette. Ehrlich berichten, wie es läuft. Optionen besprechen – auch die eines Wiedereinstiegs, falls nötig. In der STEP-1-Verlängerung näherten sich die Blutwerte ein Jahr nach dem Absetzen wieder den Ausgangswerten;<sup><a href="#fn-wilding2022ext">7</a></sup> deshalb lohnt sich die Kontrolle.
+- **Der Arzttermin.** Gewicht, Blutdruck, Blutzucker, Blutfette. Ehrlich berichten, wie es läuft. Optionen besprechen – auch die eines Wiedereinstiegs, falls nötig. In der STEP-1-Verlängerung näherten sich die Blutwerte ein Jahr nach dem Absetzen wieder den Ausgangswerten;<sup><a href="#fn-wilding2022ext">7</a></sup> deshalb lohnt sich die Kontrolle. Omega-3-Kapseln ersetzen sie nicht; was sie laut den zugelassenen Angaben leisten, steht unter [Omega-3 bei der Abnehmspritze](/wissen/omega-3-abnehmspritze/).
 - **Die Wiege-Regel festschreiben.** Zum Beispiel: bis +2 kg nichts tun; ab +3 kg zwei Wochen lang Protein und Training protokollieren; ab +5 kg Termin bei der Ärztin. Aufschreiben, an den Kühlschrank.
 - **Training verstetigen.** Zwei Einheiten bleiben. Wer mag, nimmt eine dritte dazu oder ergänzt Ausdauer. Was nicht geht: pausieren, „weil das Gewicht jetzt stabil ist“.
 - **Die Woche danach planen.** Was passiert im Urlaub, bei Krankheit, in stressigen Wochen? Eine Minimalversion festlegen: ein Training, Protein zum Frühstück, einmal wiegen.

@@ -33,6 +33,16 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/abnehmpille-absetzen/ | neuer Artikel, Pillen-Cluster, Priorität | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | neuer Artikel, Pillen-Cluster | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/wegovy-absetzen/ | neuer Abschnitt „Gilt das auch für die Wegovy-Tablette?“ | 2026-09-30 | offen |
+| https://nachderspritze.de/wissen/magnesium-abnehmspritze/ | neuer Artikel, Supplement-Reihe (Nischen-Painpoints) | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/vitamin-d-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/vitamin-b12-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/eisen-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/omega-3-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/glucomannan-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/abnehmspritze-gesicht/ | neuer Artikel, Painpoint „Ozempic Face“ | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | neuer Artikel, Painpoint Haarausfall | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/supplements-nach-abnehmspritze/ | neuer Abschnitt „Einzelne Supplements im Detail“, Tabelle erweitert | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/ernaehrung/ | Themenseite: acht neue Artikel und Fragen | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/absetzen/ | neue Seite: Themenseite Absetzen und Pausieren (nach Merge des Hub-PR) | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/praeparate/ | neue Seite: Themenseite Absetzen nach Präparat (nach Merge des Hub-PR) | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/abnehmpille/ | neue Seite: Themenseite Abnehmpille (Priorität) (nach Merge des Hub-PR) | 2026-09-30 | offen |

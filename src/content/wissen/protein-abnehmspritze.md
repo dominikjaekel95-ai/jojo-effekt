@@ -78,7 +78,9 @@ Das eigentliche Problem unter der Spritze ist nicht das Wissen, sondern der Hung
 4. **Frühstück mit Protein.** Skyr, Quark, Eier oder ein Shake statt Brot mit Süßem. Das ist die Mahlzeit, die die meisten verschenken.
 5. **Immer eine Notreserve.** Ein Stick oder ein Shake in der Tasche für Tage, an denen keine Mahlzeit klappt.
 6. **Kalt und mild bei Übelkeit.** Skyr, Hüttenkäse, kalter Fisch, Tofu – warme, fettige Gerichte verstärken die Übelkeit oft.
-7. **Ballaststoffe dazu, aber mit Wasser.** Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<sup><a href="#fn-dgeBallaststoffe">6</a></sup> Bei kleinen Portionen ist das schwer, deshalb Gemüse, Hülsenfrüchte, Haferflocken oder ein Ballaststoff-Stick – immer mit einem großen Glas Wasser.
+7. **Ballaststoffe dazu, aber mit Wasser.** Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<sup><a href="#fn-dgeBallaststoffe">6</a></sup> Bei kleinen Portionen ist das schwer, deshalb Gemüse, Hülsenfrüchte, Haferflocken oder ein Ballaststoff-Stick – immer mit einem großen Glas Wasser. Was [Glucomannan](/wissen/glucomannan-abnehmspritze/), der einzige Ballaststoff mit zugelassener Angabe, kann und was nicht, steht in einem eigenen Artikel.
+
+Zwei Folgen zu geringer Zufuhr zeigen sich mit Verzögerung: [Haarausfall](/wissen/haarausfall-abnehmspritze/) einige Monate nach schnellem Gewichtsverlust, und ein [eingefallenes Gesicht](/wissen/abnehmspritze-gesicht/), wenn zum Fett auch Muskeln verschwinden. Beides spricht für Protein bei jeder Mahlzeit, nicht für ein Haar- oder Hautpräparat.
 
 ## Welches Proteinpulver?
 

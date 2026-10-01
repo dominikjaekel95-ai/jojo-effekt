@@ -76,7 +76,7 @@ Kreatin-Monohydrat gehört zu den am besten untersuchten Nahrungsergänzungen.<s
 
 ### 4. Nicht zu schnell
 
-Wer unter der Spritze mehr als 1 % des Körpergewichts pro Woche verliert, sollte das mit der Ärztin besprechen. Ein langsamerer Verlauf schont Muskeln – und die Dosis ist Sache der Ärztin, nicht der Waage.
+Wer unter der Spritze mehr als 1 % des Körpergewichts pro Woche verliert, sollte das mit der Ärztin besprechen. Ein langsamerer Verlauf schont Muskeln – und die Dosis ist Sache der Ärztin, nicht der Waage. Das Tempo zeigt sich nicht nur an der fettfreien Masse, sondern auch im Gesicht; was dort passiert, steht unter [Eingefallenes Gesicht nach der Abnehmspritze](/wissen/abnehmspritze-gesicht/).
 
 ## Ein Tag mit wenig Appetit, aber genug Protein
 
@@ -89,7 +89,7 @@ Beispiel für eine Person mit 80 kg und Ziel 100 g Protein:
 | Nachmittags | Protein-Shake oder -Stick (Wasser oder Milch) | ca. 20–25 g |
 | Abends | 2 Eier mit Gemüse oder 150 g Fisch | ca. 14–30 g |
 
-Zusammen: 85 bis 105 g. Das ist mit kleinen Portionen machbar, wenn Protein bei jeder Mahlzeit zuerst kommt.
+Zusammen: 85 bis 105 g. Das ist mit kleinen Portionen machbar, wenn Protein bei jeder Mahlzeit zuerst kommt. Der Fisch am Abend liefert nebenbei Vitamin D; was es für die Muskeln bringt und wann ein Präparat sinnvoll ist, steht unter [Vitamin D bei der Abnehmspritze](/wissen/vitamin-d-abnehmspritze/).
 
 ---
 

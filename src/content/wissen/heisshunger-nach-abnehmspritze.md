@@ -45,7 +45,7 @@ Protein sättigt pro Kalorie stärker als Kohlenhydrate oder Fett. Übersichtsar
 
 ### 2. Volumen und Ballaststoffe
 
-Sättigung hängt auch davon ab, wie viel im Magen liegt. Gemüse, Salat, Suppen, Hülsenfrüchte liefern Masse mit wenig Energie. Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag;<sup><a href="#fn-dgeBallaststoffe">4</a></sup> wer unter der Spritze wenig gegessen hat, liegt oft bei der Hälfte. Langsam steigern, viel trinken.
+Sättigung hängt auch davon ab, wie viel im Magen liegt. Gemüse, Salat, Suppen, Hülsenfrüchte liefern Masse mit wenig Energie. Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag;<sup><a href="#fn-dgeBallaststoffe">4</a></sup> wer unter der Spritze wenig gegessen hat, liegt oft bei der Hälfte. Langsam steigern, viel trinken. Ein Ballaststoff-Präparat ändert am Heißhunger wenig; was Glucomannan, der einzige Ballaststoff mit zugelassener Angabe, tatsächlich kann, steht unter [Glucomannan bei der Abnehmspritze](/wissen/glucomannan-abnehmspritze/).
 
 ### 3. Feste Mahlzeiten statt Snacks
 

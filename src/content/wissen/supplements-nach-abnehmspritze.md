@@ -37,12 +37,13 @@ Grundregel der Verbraucherzentralen: Nahrungsergänzungsmittel sind Lebensmittel
 |---|---|---|---|---|
 | **Proteinpulver** (Molke, Casein, pflanzlich) | Protein trägt zur Erhaltung von Muskelmasse bei.<sup><a href="#fn-euClaims">3</a></sup> Bei Abnahme und Erhalt werden 1,2 bis 1,6 g/kg empfohlen.<sup><a href="#fn-leidy2015">2</a></sup> | alle, die die Menge über Lebensmittel nicht schaffen | 20 bis 30 g pro Portion, als Ergänzung zu Mahlzeiten | sinnvoll, wenn die Lücke real ist |
 | **Kreatin-Monohydrat** | Erhöht die körperliche Leistung bei Schnellkrafttraining; bei über 55-Jährigen kann es die Wirkung von Krafttraining auf die Muskelkraft verstärken (bei mindestens dreimal Training pro Woche).<sup><a href="#fn-euClaims">3</a></sup> Sicher und gut untersucht.<sup><a href="#fn-kreider2017">4</a></sup> | alle, die Krafttraining machen | 3 g täglich, auch an trainingsfreien Tagen | sinnvoll, nur mit Training |
-| **Ballaststoffe** (Flohsamen, Akazienfaser, Glucomannan, Haferkleie) | DGE: mindestens 30 g am Tag.<sup><a href="#fn-dgeBallaststoffe">5</a></sup> Zulässige Angaben hängen vom Ballaststoff ab (Glucomannan hat eine, andere nicht). | wer trotz Gemüse und Vollkorn unter 30 g bleibt | 5 bis 10 g, langsam steigern, immer mit viel Wasser | sinnvoll bei Lücke, Lebensmittel zuerst |
-| **Vitamin D** | Versorgung in Deutschland im Winter oft niedrig; Effekt auf Gewicht: keiner belegt | bei nachgewiesenem Mangel | nach Blutwert, ärztlich | nur bei Mangel |
-| **Vitamin B12** | Metformin kann den B12-Spiegel senken; Fachgesellschaften empfehlen die Kontrolle.<sup><a href="#fn-adaSoc2024">7</a></sup> | Metformin-Patienten, vegane Ernährung | nach Blutwert | nur bei Bedarf |
-| **Eisen** | Mangel häufig bei Frauen vor der Menopause; Überdosierung schadet | bei nachgewiesenem Mangel | nur ärztlich | nur bei Mangel |
+| **Ballaststoffe** (Flohsamen, Akazienfaser, Glucomannan, Haferkleie) | DGE: mindestens 30 g am Tag.<sup><a href="#fn-dgeBallaststoffe">5</a></sup> Zulässige Angaben hängen vom Ballaststoff ab ([Glucomannan](/wissen/glucomannan-abnehmspritze/) hat eine, andere nicht). | wer trotz Gemüse und Vollkorn unter 30 g bleibt | 5 bis 10 g, langsam steigern, immer mit viel Wasser | sinnvoll bei Lücke, Lebensmittel zuerst |
+| **Vitamin D** | Versorgung in Deutschland im Winter oft niedrig; Effekt auf Gewicht: keiner belegt. [Details](/wissen/vitamin-d-abnehmspritze/) | bei nachgewiesenem Mangel, im Winter vertretbar | nach Blutwert, ärztlich | nur bei Mangel |
+| **Vitamin B12** | Metformin kann den B12-Spiegel senken; Fachgesellschaften empfehlen die Kontrolle.<sup><a href="#fn-adaSoc2024">7</a></sup> [Details](/wissen/vitamin-b12-abnehmspritze/) | Metformin-Patienten, vegane Ernährung | nach Blutwert | nur bei Bedarf |
+| **Eisen** | Mangel häufig bei Frauen vor der Menopause; Überdosierung schadet. [Details](/wissen/eisen-abnehmspritze/) | bei nachgewiesenem Mangel | nur ärztlich | nur bei Mangel |
+| **Magnesium** | Bei kleinen Portionen oft knapp; gegen Krämpfe kein belegter Nutzen. [Details](/wissen/magnesium-abnehmspritze/) | bei sehr geringer Energiezufuhr | Lebensmittel zuerst, dann Präparat | nur bei Lücke |
 | **Elektrolyte** | Sinnvoll bei Erbrechen oder Durchfall unter der Therapie | unter der Spritze bei Nebenwirkungen | kurzfristig | nach dem Absetzen unnötig |
-| **Omega-3** | Keine Belege für Gewichtserhalt oder Muskelerhalt nach GLP-1 | – | – | nicht nötig |
+| **Omega-3** | Keine Belege für Gewichtserhalt oder Muskelerhalt nach GLP-1; die zugelassene Angabe betrifft die Herzfunktion. [Details](/wissen/omega-3-abnehmspritze/) | – | Fisch ein- bis zweimal pro Woche | nicht nötig |
 | **Probiotika „gegen Jojo“** | Keine Belege für Gewichtserhalt | – | – | nein |
 | **„Natürliche GLP-1-Booster“** (Berberin, Extrakte) | Keine zugelassene Angabe, keine Studien in der Größenordnung der Medikamente, mögliche Wechselwirkungen | – | – | nein |
 | **Fatburner, Stoffwechsel-Booster, Detox** | Keine Belege, teils riskante Inhaltsstoffe | – | – | nein |
@@ -54,6 +55,19 @@ Grundregel der Verbraucherzentralen: Nahrungsergänzungsmittel sind Lebensmittel
 **Kreatin** ist das am besten untersuchte Supplement für Kraft und Muskelmasse in Verbindung mit Training.<sup><a href="#fn-kreider2017">4</a></sup> Ohne Training bringt es fast nichts; mit zwei Krafteinheiten pro Woche macht es jede Einheit ein Stück wirksamer. Krafttraining selbst ist der Faktor mit der besten Evidenz gegen den Verlust an fettfreier Masse.<sup><a href="#fn-sardeli2018">9</a></sup> In den ersten zwei Wochen steigt das Gewicht durch Wasser um 0,5 bis 2 kg; das ist kein Fett. Alles Weitere unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
 
 **Ballaststoffe** sind die Nebenrolle mit ehrlichem Status: Sie gehören zu jeder Mahlzeit, und die meisten Menschen erreichen die 30 g nicht. Ein Supplement ist nur die zweite Wahl nach Hülsenfrüchten, Vollkorn und Gemüse. Wichtig: langsam steigern und viel trinken.
+
+## Einzelne Supplements im Detail
+
+Für die Vitamine und Mineralstoffe, nach denen unter der Spritze am häufigsten gefragt wird, gibt es eigene Artikel mit Referenzwerten, Lebensmitteltabellen und den zugelassenen Angaben:
+
+- [Magnesium](/wissen/magnesium-abnehmspritze/): warum die Zufuhr bei kleinen Portionen knapp wird und was gegen Krämpfe belegt ist.
+- [Vitamin D](/wissen/vitamin-d-abnehmspritze/): Mangel ist in Deutschland normal, die Winterdosis vertretbar, mehr nur nach Blutwert.
+- [Vitamin B12](/wissen/vitamin-b12-abnehmspritze/): Metformin und wenig tierische Lebensmittel als die zwei belegten Risiken.
+- [Eisen](/wissen/eisen-abnehmspritze/): das eine Supplement, das nie auf Verdacht genommen wird.
+- [Omega-3](/wissen/omega-3-abnehmspritze/): Fisch statt Kapsel, und warum Blutfette nach dem Absetzen dem Gewicht folgen.
+- [Glucomannan](/wissen/glucomannan-abnehmspritze/): der einzige Ballaststoff mit zugelassener Angabe zum Gewichtsverlust, und ihre Grenzen.
+
+Zwei Folgen schnellen Gewichtsverlusts, die oft als Supplement-Frage ankommen, haben ebenfalls eigene Seiten: [Haarausfall](/wissen/haarausfall-abnehmspritze/) und [eingefallenes Gesicht](/wissen/abnehmspritze-gesicht/). In beiden Fällen ist Versorgung der Hebel, nicht ein Präparat.
 
 ## Was du nicht brauchst
 

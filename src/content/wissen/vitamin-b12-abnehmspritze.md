@@ -8,6 +8,9 @@ pubDate: 2026-10-01
 keywords: ["vitamin b12 abnehmspritze", "vitamin b12 ozempic", "b12 metformin abnehmspritze", "vitamin b12 mangel abnehmspritze", "b12 wegovy", "müdigkeit abnehmspritze vitamin b12", "vitamin b12 vegan abnehmen"]
 sources: ["dgeReferenzwerte", "aroda2016", "adaSoc2024", "euClaims", "bls", "almandoz2024", "bfrHoechstmengen2021"]
 related: ["supplements-nach-abnehmspritze", "ozempic-absetzen", "eisen-abnehmspritze"]
+affiliate: ["vitaminB12Drops"]
+affiliateTitle: "Beispiel für Vitamin B12 in Tropfenform"
+affiliateIntro: "Ein Beispiel, keine Empfehlung einer Marke. Das Produkt ist hoch dosiert; hohe Dosen gehören zur Behandlung eines nachgewiesenen Mangels, nicht zur Vorsorge. Erst Blutwert, dann Präparat."
 faq:
   - q: "Senkt die Abnehmspritze selbst den Vitamin-B12-Spiegel?"
     a: "<p>Dafür gibt es keinen Beleg. Belegt ist der Effekt von Metformin, das viele Menschen mit Typ-2-Diabetes zusätzlich nehmen: In der DPP-Studie hatten nach fünf Jahren 4,3 % unter Metformin einen B12-Mangel gegenüber 2,3 % unter Placebo. Dazu kommt unter der Spritze, dass Fleisch, Fisch und Milchprodukte bei kleinen Portionen oft wegfallen.</p>"

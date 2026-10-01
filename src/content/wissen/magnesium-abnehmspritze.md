@@ -8,6 +8,9 @@ pubDate: 2026-10-01
 keywords: ["magnesium abnehmspritze", "magnesium wegovy", "magnesium ozempic", "magnesium mounjaro", "magnesiummangel abnehmspritze", "wadenkrämpfe abnehmspritze magnesium", "magnesium nach abnehmspritze"]
 sources: ["dgeReferenzwerte", "nvs2", "almandoz2024", "bls", "euClaims", "garrison2020", "bfrHoechstmengen2021", "who2020", "leidy2015"]
 related: ["supplements-nach-abnehmspritze", "ernaehrung-nach-abnehmspritze", "kreatin-abnehmspritze"]
+affiliate: ["magnesiumBisglycinat"]
+affiliateTitle: "Beispiel für ein Magnesiumpräparat"
+affiliateIntro: "Ein Beispiel, keine Empfehlung einer Marke. Es zählt die Menge in Milligramm: bis zu 250 mg am Tag aus Nahrungsergänzung, wie es das BfR vorschlägt, und nur, wenn Lebensmittel die Lücke nicht schließen."
 faq:
   - q: "Brauche ich unter der Abnehmspritze ein Magnesiumpräparat?"
     a: "<p>Nicht automatisch. Wer trotz kleinem Appetit täglich Vollkorn, Hülsenfrüchte, Nüsse oder Kerne isst und magnesiumreiches Mineralwasser trinkt, deckt den Bedarf meist. Wer über Wochen deutlich unter 1.200 Kalorien bleibt, kommt kaum auf 300 bis 350 mg; dann ist ein Präparat mit bis zu 250 mg am Tag eine vertretbare Ergänzung.</p>"

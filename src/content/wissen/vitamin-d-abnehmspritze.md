@@ -8,6 +8,9 @@ pubDate: 2026-10-01
 keywords: ["vitamin d abnehmspritze", "vitamin d wegovy", "vitamin d ozempic", "vitamin d mangel abnehmspritze", "vitamin d muskeln abnehmen", "vitamin d nach abnehmspritze", "vitamin d winter supplement"]
 sources: ["rabenberg2015", "dgeReferenzwerte", "euClaims", "almandoz2024", "bfrHoechstmengen2021", "who2020", "wilding2021dxa"]
 related: ["supplements-nach-abnehmspritze", "muskelabbau-abnehmspritze", "magnesium-abnehmspritze"]
+affiliate: ["vitaminD3Drops"]
+affiliateTitle: "Beispiel für Vitamin D3 in Tropfenform"
+affiliateIntro: "Ein Beispiel, keine Empfehlung einer Marke. Es zählt die Dosis: 20 µg (800 I.E.) am Tag für die Winterregel; mehr nur nach Blutwert und ärztlicher Absprache."
 faq:
   - q: "Soll ich unter der Abnehmspritze Vitamin D nehmen?"
     a: "<p>Von Oktober bis März ist eine Ergänzung von 20 µg am Tag für die meisten Erwachsenen in Deutschland vertretbar, mit oder ohne Spritze, weil die Haut in dieser Zeit kaum Vitamin D bildet. Wer sicher wissen will, ob ein Mangel vorliegt, lässt den Blutwert 25-OH-Vitamin-D bestimmen. Höhere Dosen nur nach Blutwert und ärztlicher Absprache.</p>"

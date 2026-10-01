@@ -8,6 +8,9 @@ pubDate: 2026-10-01
 keywords: ["krafttraining nach abnehmspritze", "abnehmspritze absetzen sport", "abnehmspritze krafttraining", "training nach abnehmspritze", "krafttraining anfänger abnehmspritze", "abnehmspritze training zuhause", "sport nach absetzen abnehmspritze"]
 sources: ["jensen2024", "sardeli2018", "who2020", "schoenfeld2016", "acsm2009", "leidy2015", "euClaims", "wilding2021dxa"]
 related: ["muskelabbau-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
+affiliate: ["gripDynamometer"]
+affiliateTitle: "Beispiel für ein Griffkraft-Messgerät"
+affiliateIntro: "Ein Beispiel, keine Empfehlung einer Marke. Griffkraft ist der einzige Muskelwert, den du zu Hause verlässlich misst; einmal pro Woche messen und notieren zeigt, ob die Kraft hält."
 faq:
   - q: "Reichen zwei Krafteinheiten pro Woche wirklich?"
     a: "<p>Für Einsteiger ja. Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten, und eine Meta-Analyse zeigt, dass zwei Einheiten pro Muskelgruppe und Woche mehr bringen als eine. Eine dritte Einheit ist ein Bonus, kein Muss. Entscheidend ist, dass die Belastung über die Wochen steigt.</p>"

@@ -3,6 +3,7 @@ title: "Ernährung nach der Abnehmspritze: Was du isst, wenn der Appetit zurück
 metaTitle: "Ernährung nach der Abnehmspritze: 5 Regeln und ein Beispieltag"
 description: "Nach dem Absetzen kommt der Appetit zurück. Fünf Regeln, die mit normalem Hunger funktionieren, ein Beispieltag und die Fehler, die das Gewicht zurückbringen."
 category: "Ernährung"
+image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 11
 pubDate: 2026-09-30
 keywords: ["nach der abnehmspritze ernährung", "ernährung nach abnehmspritze", "abnehmspritze ernährung danach", "was essen nach abnehmspritze", "ernährungsplan nach abnehmspritze", "ernährung nach wegovy", "abnehmspritze ernährung umstellen"]
@@ -40,6 +41,11 @@ Das Problem ist also nicht Wissen, sondern Struktur: Die Ernährung muss ohne di
 ### 1. Protein zuerst, bei jeder Mahlzeit
 
 Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Verteilt auf drei bis vier Mahlzeiten sind das 25 bis 35 g pro Mahlzeit. Die Reihenfolge auf dem Teller entscheidet: erst die Proteinquelle, dann Gemüse, dann der Rest. Wenn die Sättigung kommt, ist das Wichtigste drin. Rechenhilfe und Lebensmitteltabelle im [Protein-Artikel](/wissen/protein-abnehmspritze/).
+
+<figure class="my-8">
+  <img src="/grafiken/proteinbedarf-nach-abnehmspritze.svg" alt="Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten sind das 25 bis 35 Gramm pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Tagesmenge nach Körpergewicht, Zielkorridor aus Übersichtsarbeiten.<sup><a href="#fn-leidy2015">3</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ### 2. Volumen statt Verzicht
 

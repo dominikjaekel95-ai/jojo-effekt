@@ -3,6 +3,7 @@ title: "Krafttraining nach der Abnehmspritze: Der 30-Minuten-Plan für Einsteige
 metaTitle: "Krafttraining nach der Abnehmspritze: der 30-Minuten-Plan"
 description: "Zwei Einheiten pro Woche, sechs Übungen, zuhause oder im Studio. Warum Krafttraining nach dem Absetzen der stärkste Hebel ist, und ein 12-Wochen-Plan mit Steigerung."
 category: "Muskeln"
+image: /grafiken/training-s-lite.png
 order: 13
 pubDate: 2026-10-01
 keywords: ["krafttraining nach abnehmspritze", "abnehmspritze absetzen sport", "abnehmspritze krafttraining", "training nach abnehmspritze", "krafttraining anfänger abnehmspritze", "abnehmspritze training zuhause", "sport nach absetzen abnehmspritze"]
@@ -34,6 +35,11 @@ Drei Befunde, die den Unterschied ausmachen:
 3. **Es braucht weniger Zeit, als die meisten denken.** Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten für alle großen Muskelgruppen.<sup><a href="#fn-who2020">3</a></sup> Eine Meta-Analyse zeigt, dass zwei Einheiten pro Muskelgruppe und Woche mehr Muskelzuwachs bringen als eine; mehr als zwei bringt für Einsteiger wenig zusätzlich.<sup><a href="#fn-schoenfeld2016">4</a></sup>
 
 Spazierengehen, Radfahren und Schwimmen sind gut für Herz und Kopf. Sie ersetzen aber nicht den Reiz, den Muskeln brauchen, um zu bleiben.
+
+<figure class="my-8">
+  <img src="/grafiken/training-s-lite.svg" alt="Balkendiagramm aus der S-LiTE-Nachbeobachtung: Teilnehmende mit Trainingsprogramm hielten ein Jahr nach Therapieende Gewicht und Körperzusammensetzung. Nach Liraglutid allein lag die Zunahme 6,0 Kilogramm höher als nach Training." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Training entscheidet, was nach dem Absetzen bleibt: S-LiTE-Nachbeobachtung ein Jahr nach Therapieende.<sup><a href="#fn-jensen2024">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Die drei Prinzipien
 

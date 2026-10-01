@@ -19,7 +19,8 @@ import { themaByCategory, gehoertZu } from '../data/themen';
 
 interface Props { entry: CollectionEntry<'wissen'> }
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
+const toc = entry.data.toc ? headings.filter((h) => h.depth === 2) : [];
 const all = await getCollection('wissen', (a) => !a.data.draft);
 const related = entry.data.related
   .map((id) => all.find((a) => a.id === id))
@@ -53,6 +54,7 @@ const jsonLd = [
     publisher: { '@id': `${site.url}/#organization` },
     isPartOf: { '@id': `${site.url}/wissen/${thema.slug}/#collection` },
     keywords: entry.data.keywords.join(', '),
+    ...(entry.data.image ? { image: [`${site.url}${entry.data.image}`] } : {}),
     wordCount: words,
     about: { '@type': 'Thing', name: 'GLP-1-Rezeptoragonisten absetzen' },
   },
@@ -69,6 +71,7 @@ const jsonLd = [
 ---
 <Base
   title={entry.data.metaTitle ?? entry.data.title} description={entry.data.description} path={path} ogType="article"
+  ogImage={entry.data.image}
   jsonLd={jsonLd} publishedTime={entry.data.pubDate.toISOString()} modifiedTime={(entry.data.updatedDate ?? entry.data.pubDate).toISOString()}
 >
   <article class="container-narrow py-12">
@@ -79,6 +82,15 @@ const jsonLd = [
     <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">{entry.data.title}</h1>
     <p class="mt-4 text-lg text-ink-2">{entry.data.description}</p>
     <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+
+    {toc.length > 0 && (
+      <nav aria-labelledby="toc-h" class="mt-6 rounded-xl2 border border-line bg-paper p-5">
+        <h2 id="toc-h" class="text-base font-semibold text-ink">Inhalt</h2>
+        <ol class="mt-3 list-decimal space-y-1 pl-5 text-sm">
+          {toc.map((h) => (<li><a href={`#${h.slug}`} class="text-moss underline underline-offset-4">{h.text}</a></li>))}
+        </ol>
+      </nav>
+    )}
 
     <div class="prose-site mt-8">
       <Content />

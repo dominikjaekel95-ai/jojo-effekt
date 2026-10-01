@@ -3,6 +3,7 @@ title: "Wegovy absetzen: Was passiert danach, und was die Fachinformation sagt"
 metaTitle: "Wegovy absetzen: Verlauf, Halbwertszeit, Studien, Vorbereitung"
 description: "Wie lange Semaglutid im Körper bleibt, was in STEP 1 und STEP 4 nach dem Absetzen passierte, was die Fachinformation vorschreibt und wie du dich vorbereitest."
 category: "Präparate"
+image: /grafiken/weiter-oder-placebo.png
 order: 7
 pubDate: 2026-09-30
 keywords: ["wegovy absetzen", "wegovy absetzen gewicht", "wegovy absetzen jojo", "wegovy absetzen was passiert", "wegovy ausschleichen", "wegovy halbwertszeit", "wegovy absetzen erfahrungen"]
@@ -55,6 +56,11 @@ Für Semaglutid 2,4 mg gibt es zwei Studien, die das Absetzen direkt untersucht 
 | STEP 4<sup><a href="#fn-rubino2021">4</a></sup> | Nach 20 Wochen Aufdosierung Wechsel auf Placebo: +6,9 % in 48 Wochen. Wer weiter spritzte: −7,9 %. |
 
 Eine Meta-Analyse über verschiedene Adipositas-Medikamente zeigt, wann es losgeht: Die Zunahme wird etwa ab Woche 8 nach dem Absetzen messbar und setzt sich bis etwa Woche 20 fort.<sup><a href="#fn-wu2025">5</a></sup> Für Wegovy passt das zur Halbwertszeit: Woche 5 bis 7 ist der Wirkstoff weg, ab Woche 8 zeigt es die Waage.
+
+<figure class="my-8">
+  <img src="/grafiken/weiter-oder-placebo.svg" alt="Balkendiagramm: In STEP 4 nahmen Teilnehmende unter fortgeführtem Semaglutid in 48 Wochen weitere 7,9 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 6,9 Prozent zu. In SURMOUNT-4 nahmen Teilnehmende unter fortgeführtem Tirzepatid in 52 Wochen weitere 5,5 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 14 Prozent zu." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">STEP 4 im Vergleich mit SURMOUNT-4: Gewicht nach dem Wechsel auf Placebo gegenüber Fortführung.<sup><a href="#fn-rubino2021">4</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Ausschleichen: möglich, aber unbelegt
 

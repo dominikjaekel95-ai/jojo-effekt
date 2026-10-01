@@ -33,6 +33,8 @@ const artikel = (await getCollection('wissen', (a) => !a.data.draft)).sort((a, b
 // Preis pro Tag: Set-Preis geteilt durch 12 Wochen × 7 Tage
 const setDays = 12 * 7;
 const perDay = (site.price.set / setDays).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+// Gerundet auf 10 Cent für die Kurzform „rund 1,50 € am Tag“ neben dem Set-Preis
+const perDayRound = (Math.round((site.price.set / setDays) * 10) / 10).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 const title = 'Nach der Abnehmspritze: Muskeln behalten, Gewicht halten';
 const description = site.description;
@@ -63,7 +65,7 @@ const jsonLd: Record<string, unknown>[] = [];
           <a href="#set" class="btn-secondary">Was ist drin?</a>
         </div>
         <p class="mt-4 text-sm text-ink-3">
-          {site.price.set} € für 12 Wochen. Kein Geld jetzt. Erste Charge ab {site.preorderGoal} Vorbestellungen. Du erfährst es als Erstes.
+          {site.price.set} € für 12 Wochen, rund {perDayRound} € am Tag. Kein Geld jetzt. Erste Charge ab {site.preorderGoal} Vorbestellungen. Du erfährst es als Erstes.
         </p>
         <p class="mt-6 inline-block rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">
           {site.doctorSentence}
@@ -157,7 +159,7 @@ const jsonLd: Record<string, unknown>[] = [];
       </div>
       <div class="mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
         <Cta position="set" />
-        <span class="text-sm text-ink-3">{site.price.set} € für 12 Wochen · entspricht {site.price.setPerMonth} € im Monat</span>
+        <span class="text-sm text-ink-3">{site.price.set} € für 12 Wochen · entspricht {site.price.setPerMonth} € im Monat · rund {perDayRound} € am Tag</span>
       </div>
     </div>
   </section>
@@ -184,6 +186,10 @@ const jsonLd: Record<string, unknown>[] = [];
           während der Therapie trainiert hatten, ihr Gewicht und ihre Körperzusammensetzung ein ganzes Jahr nach dem
           Absetzen – wer nur das Medikament bekommen hatte, nahm im Schnitt 6 kg mehr wieder zu.<Fn n={fn('jensen2024')} id="jensen2024" /> Die WHO empfiehlt an mindestens zwei Tagen pro Woche muskelkräftigende Aktivitäten.<Fn n={fn('who2020')} id="who2020" /> Deshalb: zwei Einheiten, 30 Minuten, machbar.
         </p>
+        <figure class="my-6">
+          <a href="/wissen/krafttraining-nach-abnehmspritze/" class="block"><img src="/grafiken/training-s-lite.svg" alt="Balkendiagramm aus der S-LiTE-Nachbeobachtung: Teilnehmende mit Trainingsprogramm hielten ein Jahr nach Therapieende Gewicht und Körperzusammensetzung. Nach Liraglutid allein lag die Zunahme 6,0 Kilogramm höher als nach Training." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" /></a>
+          <figcaption class="text-sm text-ink-3">S-LiTE-Nachbeobachtung, ein Jahr nach Therapieende.<Fn n={fn('jensen2024')} id="jensen2024" /> Grafik: Nach der Spritze.</figcaption>
+        </figure>
         <h3>Ballaststoffe: die Nebenrolle, ehrlich benannt</h3>
         <p>
           Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag; die meisten Erwachsenen in Deutschland liegen darunter.<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> Mit den kleinen Portionen unter der Spritze wird es noch weniger. Der Stick liefert 5 g als Ergänzung zu Gemüse, Hülsenfrüchten und Vollkorn – nicht als Ersatz. Für Gewicht oder Sättigung behaupten wir nichts. Welcher Ballaststoff genau, sagen wir, sobald die Rezeptur steht; was Ballaststoffe können und was nicht, steht im <a href="/wissen/supplements-nach-abnehmspritze/">Supplements-Artikel</a>.
@@ -293,6 +299,10 @@ const jsonLd: Record<string, unknown>[] = [];
       <ul class="mt-6 flex flex-wrap gap-2" aria-label="Themen">
         {themen.map((t) => (<li><a href={`/wissen/${t.slug}/`} class="inline-block rounded-lg border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink no-underline hover:border-moss hover:text-moss">{t.name}</a></li>))}
       </ul>
+      <figure class="mt-8">
+        <a href="/wissen/abnehmspritze-absetzen/" class="block"><img src="/grafiken/absetzkurve-step-1.svg" alt="Liniendiagramm: Unter Semaglutid 2,4 mg sinkt das Gewicht in 68 Wochen im Mittel um 17,3 Prozent, unter Placebo um 2,0 Prozent. In den 52 Wochen nach dem Absetzen steigt es wieder; nach insgesamt 120 Wochen liegt es bei minus 5,6 Prozent (Semaglutid) und minus 0,1 Prozent (Placebo). Zwei Drittel des Verlusts sind nach einem Jahr ohne Medikament wieder da." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" /></a>
+        <figcaption class="mt-2 text-sm text-ink-3">Die Absetzkurve aus der STEP-1-Verlängerung: zwei Drittel des Verlusts sind ein Jahr ohne Medikament wieder da.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Was Woche für Woche passiert, steht unter <a href="/wissen/abnehmspritze-absetzen/" class="font-semibold text-moss underline underline-offset-4">Abnehmspritze absetzen</a>; alle Grafiken mit Quellen unter <a href="/grafiken/" class="font-semibold text-moss underline underline-offset-4">Grafiken</a>.</figcaption>
+      </figure>
       <div class="mt-8 grid gap-6 md:grid-cols-3">
         {artikel.map((a) => (
           <a href={`/wissen/${a.id}/`} class="card group block no-underline hover:border-moss">
@@ -307,7 +317,7 @@ const jsonLd: Record<string, unknown>[] = [];
         Absetzen nach Präparat: <a href="/wissen/#praeparate" class="font-semibold text-moss underline underline-offset-4">Übersicht nach Wirkstoff und Präparat</a> · <a href="/wissen/studien/" class="font-semibold text-moss underline underline-offset-4">Studien-Tracker</a>
       </p>
       <p class="mt-3 text-sm text-ink-2">
-        <a href="/wissen/" class="font-semibold text-moss underline underline-offset-4">Alle Artikel im Wissensbereich</a> · <a href="/glossar/" class="font-semibold text-moss underline underline-offset-4">Glossar: Begriffe erklärt</a> · <a href="/marktradar/" class="font-semibold text-moss underline underline-offset-4">Marktradar: Zulassungen, Preise, Kassen</a>
+        <a href="/wissen/" class="font-semibold text-moss underline underline-offset-4">Alle Artikel im Wissensbereich</a> · <a href="/glossar/" class="font-semibold text-moss underline underline-offset-4">Glossar: Begriffe erklärt</a> · <a href="/marktradar/" class="font-semibold text-moss underline underline-offset-4">Marktradar: Zulassungen, Preise, Kassen</a> · <a href="/grafiken/" class="font-semibold text-moss underline underline-offset-4">Grafiken: Studien, zitierfähig</a>
       </p>
     </div>
   </section>

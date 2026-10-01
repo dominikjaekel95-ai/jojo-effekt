@@ -3,6 +3,7 @@ title: "Gewicht halten nach der Abnehmspritze: Der 12-Wochen-Plan"
 metaTitle: "Gewicht halten nach der Abnehmspritze: 12-Wochen-Plan mit Regeln"
 description: "Die ersten 12 Wochen nach dem Absetzen entscheiden. Ein Plan in drei Phasen: Routinen aufbauen, Appetit auffangen, stabilisieren – mit Wiege-Regel."
 category: "Gewicht halten"
+image: /grafiken/training-s-lite.png
 order: 6
 pubDate: 2026-09-30
 keywords: ["nach abnehmspritze gewicht halten", "abnehmspritze absetzen gewicht halten", "abnehmspritze danach", "gewicht halten nach wegovy", "nach ozempic gewicht halten", "abnehmspritze absetzen plan"]
@@ -32,11 +33,21 @@ Der Plan verhindert den Jojo-Effekt nicht. Das kann kein Plan und kein Produkt. 
 
 Am besten startet der Plan **vor** der letzten Dosis, während der Appetit noch gedämpft ist. Wer schon abgesetzt hat, startet heute.
 
+<figure class="my-8">
+  <img src="/grafiken/training-s-lite.svg" alt="Balkendiagramm aus der S-LiTE-Nachbeobachtung: Teilnehmende mit Trainingsprogramm hielten ein Jahr nach Therapieende Gewicht und Körperzusammensetzung. Nach Liraglutid allein lag die Zunahme 6,0 Kilogramm höher als nach Training." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Der Grund für Regel eins: In der S-LiTE-Nachbeobachtung hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach Therapieende. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
+
 ## Die drei Regeln, die den ganzen Plan tragen
 
 1. **Zwei Krafteinheiten pro Woche.** 30 Minuten, Ganzkörper, zuhause mit Bändern oder im Studio. Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">4</a></sup> Feste Termine im Kalender, nicht „wenn Zeit ist“.
 2. **Protein zuerst, bei jeder Mahlzeit.** Ziel 1,2 bis 1,6 g pro kg Körpergewicht und Tag,<sup><a href="#fn-leidy2015">3</a></sup> verteilt auf drei bis vier Mahlzeiten. Rechenhilfe im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/).
 3. **Einmal pro Woche wiegen, mit Regel.** Gleicher Wochentag, morgens. Und vorher festgelegt: Bei welcher Zahl tust du was?
+
+<figure class="my-8">
+  <img src="/grafiken/zeitachse-phasen.svg" alt="Vier Phasen nach der letzten Dosis einer Abnehmspritze: Woche 1 bis 2 noch wenig Veränderung, Woche 2 bis 5 kehrt der Appetit zurück, Woche 5 bis 8 ist der Wirkstoff praktisch abgebaut, ab Woche 8 ist die Gewichtszunahme messbar und steigt bis etwa Woche 20." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Die vier Phasen nach der letzten Dosis, an denen sich die drei Abschnitte des Plans orientieren.<sup><a href="#fn-wu2025">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Phase 1: Wochen 1–4 – Routinen bauen
 

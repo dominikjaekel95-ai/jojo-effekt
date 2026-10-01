@@ -1,0 +1,131 @@
+---
+/**
+ * /grafiken/: alle Studien-Grafiken der Seite mit Quellen, Download (SVG, PNG) und Einbettungscode. Die Bilder liegen
+ * unter public/grafiken/ und werden mit `npm run grafiken` aus scripts/grafiken.mjs erzeugt; das Register steht in
+ * src/data/grafiken.ts. Jede Grafik ist frei verwendbar mit Quellenangabe und Link (CC BY 4.0), damit sie zitiert und
+ * verlinkt werden kann.
+ */
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+import { grafiken, hauptgrafiken, varianten } from '../../data/grafiken';
+import { getSources } from '../../data/sources';
+import { preise } from '../../data/markt';
+
+const title = 'Grafiken zur Abnehmspritze: Studien als Diagramm, zitierfähig';
+const description =
+  'Gewichtskurve nach dem Absetzen, Zeitachse der ersten Wochen, Körperzusammensetzung, Zulassungsstudien, Preise: Grafiken aus den Originalstudien, mit Quellen, frei verwendbar mit Link.';
+const path = '/grafiken/';
+const url = `${site.url}${path}`;
+const lizenz = 'https://creativecommons.org/licenses/by/4.0/deed.de';
+const stand = preise.stand;
+
+const imageNode = (g: (typeof grafiken)[number]) => ({
+  '@type': 'ImageObject',
+  '@id': `${url}#${g.id}`,
+  name: g.title,
+  description: g.alt,
+  caption: g.subtitle,
+  contentUrl: `${site.url}/grafiken/${g.id}.png`,
+  thumbnailUrl: `${site.url}/grafiken/${g.id}.png`,
+  encodingFormat: 'image/png',
+  width: 1800,
+  height: 1013,
+  inLanguage: 'de-DE',
+  license: lizenz,
+  acquireLicensePage: `${url}#nutzung`,
+  creditText: 'nachderspritze.de',
+  copyrightNotice: 'Nach der Spritze, CC BY 4.0',
+  creator: { '@id': `${site.url}/#organization` },
+  isPartOf: { '@id': `${url}#page` },
+});
+
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${url}#page`,
+    name: title,
+    description,
+    url,
+    inLanguage: 'de-DE',
+    isPartOf: { '@id': `${site.url}/#website` },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: hauptgrafiken.length,
+      itemListElement: hauptgrafiken.map((g, i) => ({ '@type': 'ListItem', position: i + 1, item: imageNode(g) })),
+    },
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Start', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Grafiken', item: url },
+    ],
+  },
+];
+
+const einbetten = (g: (typeof grafiken)[number]) =>
+  `<a href="${url}#${g.id}"><img src="${site.url}/grafiken/${g.id}.png" alt="${g.alt.replace(/"/g, '&quot;')}" width="1200" height="675"></a>\n<p>Grafik: <a href="${url}#${g.id}">nachderspritze.de</a>, CC BY 4.0</p>`;
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd} ogImage="/grafiken/absetzkurve-step-1.png">
+  <section class="container-wide py-12">
+    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › Grafiken</nav>
+    <p class="eyebrow mt-6">Grafiken · {hauptgrafiken.length} Diagramme</p>
+    <h1 class="h1 mt-3">Studien zur Abnehmspritze als Grafik, zitierfähig</h1>
+    <p class="mt-4 max-w-3xl text-lg text-ink-2">
+      Jede Grafik zeigt Zahlen aus einer Originalstudie oder einer Fachinformation, nichts aus Pressemeldungen. Titel, Quelle und
+      Domain stehen im Bild; der Alt-Text nennt jede Zahl. Alle Grafiken sind frei verwendbar, auch in Artikeln, Vorträgen und
+      Unterricht, solange Quelle und Link genannt werden.
+    </p>
+    <div id="nutzung" class="mt-6 max-w-3xl rounded-xl2 border border-line bg-white p-5 scroll-mt-24">
+      <h2 class="text-base font-semibold text-ink">Nutzung und Zitierweise</h2>
+      <p class="mt-2 text-sm text-ink-2">
+        Lizenz: <a href={lizenz} rel="license noopener" target="_blank" class="font-semibold text-moss underline underline-offset-4">CC BY 4.0</a>. Nennung als „Grafik: nachderspritze.de“ mit Link auf diese Seite oder den Artikel, aus dem die Grafik stammt. Die Studienquelle steht unter jeder Grafik und sollte mitgenannt werden. Veränderungen bitte kennzeichnen. Unter jeder Grafik steht ein fertiger Einbettungscode.
+      </p>
+      <p class="mt-2 text-sm text-ink-3">{site.doctorSentence}</p>
+    </div>
+    <ul class="mt-6 flex flex-wrap gap-2" aria-label="Sprungmarken">
+      {hauptgrafiken.map((g) => (<li><a href={`#${g.id}`} class="inline-block rounded-lg border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink no-underline hover:border-moss hover:text-moss">{g.title}</a></li>))}
+    </ul>
+  </section>
+
+  <section class="container-wide pb-16">
+    <div class="space-y-14">
+      {hauptgrafiken.map((g, i) => {
+        const quellen = getSources(g.sources);
+        const alts = varianten(g.id);
+        return (
+          <article id={g.id} class="scroll-mt-24" aria-labelledby={`${g.id}-h`}>
+            <p class="eyebrow">Grafik {i + 1}{g.monatlich ? ` · Stand ${stand}` : ''}</p>
+            <h2 id={`${g.id}-h`} class="h2 mt-2">{g.title}</h2>
+            <p class="mt-2 max-w-3xl text-ink-2">{g.subtitle}</p>
+            <figure class="mt-5">
+              <a href={`/grafiken/${g.id}.png`} class="block"><img src={`/grafiken/${g.id}.png`} alt={g.alt} width="1200" height="675" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" class="w-full rounded-xl2 border border-line bg-white" /></a>
+              <figcaption class="mt-2 text-sm text-ink-3">
+                Quellen: {quellen.map((q, j) => (<span>{j > 0 ? '; ' : ''}<a href={q.url} rel="noopener" target="_blank" class="underline underline-offset-4 hover:text-moss">{q.short}</a></span>))}. Grafik: Nach der Spritze, CC BY 4.0.
+              </figcaption>
+            </figure>
+            <div class="mt-4 grid gap-4 md:grid-cols-[1fr_1fr]">
+              <div class="rounded-xl2 border border-line bg-white p-4 text-sm">
+                <p class="font-semibold text-ink">Download</p>
+                <p class="mt-1 text-ink-2"><a href={`/grafiken/${g.id}.svg`} download class="font-semibold text-moss underline underline-offset-4">SVG (verlustfrei, 1200 × 675)</a> · <a href={`/grafiken/${g.id}.png`} download class="font-semibold text-moss underline underline-offset-4">PNG (1800 × 1013)</a></p>
+                {g.used.length > 0 && (<p class="mt-3 text-ink-2">Im Einsatz: {g.used.map((u, j) => (<span>{j > 0 ? ' · ' : ''}<a href={u.href} class="underline underline-offset-4 hover:text-moss">{u.label}</a></span>))}</p>)}
+                {alts.length > 0 && (<p class="mt-3 text-ink-2">Varianten mit denselben Daten: {alts.map((a, j) => (<span>{j > 0 ? ' · ' : ''}<a href={`/grafiken/${a.id}.png`} class="underline underline-offset-4 hover:text-moss">{a.title}</a></span>))}</p>)}
+              </div>
+              <details class="rounded-xl2 border border-line bg-white p-4 text-sm">
+                <summary class="cursor-pointer font-semibold text-ink">Einbetten (HTML mit Quellenlink)</summary>
+                <pre class="mt-3 overflow-x-auto whitespace-pre-wrap break-all rounded-lg bg-paper p-3 text-xs text-ink-2"><code>{einbetten(g)}</code></pre>
+              </details>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+    <div class="mt-14 max-w-3xl rounded-xl2 border border-line bg-paper p-5 text-sm text-ink-2">
+      <p>
+        Die Grafiken entstehen aus den Zahlen im Quellenregister der Seite und werden neu erzeugt, wenn sich eine Zahl ändert; die
+        Preisgrafik mit jeder monatlichen Erhebung im <a href="/marktradar/#preise" class="font-semibold text-moss underline underline-offset-4">Marktradar</a>. Fehler oder Wünsche: <a href={`mailto:${site.owner.email}`} class="font-semibold text-moss underline underline-offset-4">{site.owner.email}</a>. Die Artikel dazu stehen im <a href="/wissen/" class="font-semibold text-moss underline underline-offset-4">Wissensbereich</a>, der Hauptartikel unter <a href="/wissen/abnehmspritze-absetzen/" class="font-semibold text-moss underline underline-offset-4">Abnehmspritze absetzen</a>.
+      </p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Training entscheidet, was nach dem Absetzen bleibt</title>
+<desc id="d">Balkendiagramm aus der S-LiTE-Nachbeobachtung: Teilnehmende mit Trainingsprogramm hielten ein Jahr nach Therapieende Gewicht und Körperzusammensetzung. Nach Liraglutid allein lag die Zunahme 6,0 Kilogramm höher als nach Training.</desc>
+<rect width="1200" height="675" fill="#ffffff"/>
+<text x="56" y="62" font-size="32" font-weight="700" fill="#22201c" text-anchor="start" >Training entscheidet, was nach dem Absetzen bleibt</text>
+<text x="56" y="98" font-size="19" font-weight="400" fill="#4a463f" text-anchor="start" >S-LiTE-Nachbeobachtung: Zunahme ein Jahr nach Therapieende, Unterschied zur Trainingsgruppe</text>
+<line x1="140" y1="470" x2="1060" y2="470" stroke="#6b665d" stroke-width="1.5"/><rect x="260" y="464" width="220" height="6" rx="3" fill="#2f6b5a"/><text x="370" y="454" font-size="24" font-weight="700" fill="#2f6b5a" text-anchor="middle" >Gewicht gehalten</text><text x="370" y="504" font-size="19" font-weight="700" fill="#22201c" text-anchor="middle" >Mit Trainingsprogramm</text><text x="370" y="530" font-size="15" font-weight="400" fill="#4a463f" text-anchor="middle" >Gewicht und Körperzusammensetzung gehalten</text><rect x="720" y="230" width="220" height="240" rx="8" fill="#b8563e"/><text x="830" y="214" font-size="24" font-weight="700" fill="#b8563e" text-anchor="middle" >+6,0 kg mehr</text><text x="830" y="504" font-size="19" font-weight="700" fill="#22201c" text-anchor="middle" >Liraglutid allein</text><text x="830" y="530" font-size="15" font-weight="400" fill="#4a463f" text-anchor="middle" >Zunahme 6,0 kg höher als nach Training</text><text x="56" y="150" font-size="15" font-weight="400" fill="#6b665d" text-anchor="start" >Ein Jahr nach dem Ende der Behandlung, nach vorherigem Gewichtsverlust durch eine kalorienarme Diät und 52 Wochen Therapie</text>
+<line x1="56" y1="623" x2="1144" y2="623" stroke="#e2dace" stroke-width="1"/>
+<text x="56" y="651" font-size="15" font-weight="400" fill="#6b665d" text-anchor="start" >Quelle: Jensen et al., S-LiTE follow-up, eClinicalMedicine 2024</text>
+<text x="1144" y="651" font-size="15" font-weight="600" fill="#2f6b5a" text-anchor="end" >nachderspritze.de</text>
+</svg>

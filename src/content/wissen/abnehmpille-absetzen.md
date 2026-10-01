@@ -3,6 +3,7 @@ title: "Abnehmpille absetzen: Was für die Tablette gilt und was aus den Spritze
 metaTitle: "Abnehmpille absetzen: Wegovy-Tablette, Datenlage, Verlauf"
 description: "Die Wegovy-Tablette ist seit September 2026 in Apotheken. Was beim Absetzen der Abnehmpille bekannt ist, was aus Spritzen-Studien stammt und was du tun kannst."
 category: "Abnehmpille"
+image: /grafiken/abnehmpille-belegt-und-offen.png
 order: 16
 pubDate: 2026-09-30
 keywords: ["abnehmpille absetzen", "wegovy tablette absetzen", "wegovy pille absetzen", "abnehmtablette absetzen", "semaglutid tablette absetzen", "abnehmpille jojo effekt", "abnehmpille muskelabbau", "wegovy tabletten absetzen"]
@@ -61,6 +62,11 @@ OASIS 4 hat untersucht, was die Tablette während der Einnahme bewirkt. Was nach
 **Was sich übertragen lässt:** Die Wiederzunahme nach dem Absetzen hängt am Gewichtsverlust, nicht an der Darreichungsform. Wer abgenommen hat, hat mehr Hungerhormone und weniger Sättigungshormone im Blut, und das bleibt über Monate so.<sup><a href="#fn-sumithran2011">14</a></sup> Der Wirkstoff hat diesen Gegendruck gedämpft; fällt er weg, ist der Gegendruck da, egal ob er aus einer Tablette oder einer Spritze kam. Deshalb ist es plausibel, dass die Absetzkurve nach der Tablette so verläuft wie nach der Spritze: ein paar ruhige Wochen, dann ab etwa Woche 8 der Anstieg.
 
 **Was sich nicht übertragen lässt:** Wie viele Menschen die Tablette absetzen und wann, ist nicht untersucht. Für die Spritzen zeigen US-Versorgungsdaten, dass fast zwei Drittel der Menschen ohne Diabetes innerhalb eines Jahres aufhören.<sup><a href="#fn-rodriguez2025">13</a></sup> Ob eine tägliche Tablette häufiger vergessen, häufiger pausiert oder länger genommen wird, weiß niemand. Auch ob die Zunahme nach der Tablette im Mittel genauso groß ausfällt, ist eine Annahme, keine Messung.
+
+<figure class="my-8">
+  <img src="/grafiken/abnehmpille-belegt-und-offen.svg" alt="Zwei Felder: Links die Zulassungsstudie OASIS 4 der Semaglutid-Tablette mit minus 13,6 Prozent Gewicht gegenüber minus 2,2 Prozent unter Placebo nach 64 Wochen, bei durchgehender Einnahme minus 16,6 Prozent. Rechts der offene Punkt: Es gibt keine Studie zur Wiederzunahme nach dem Absetzen der Tablette; übertragbar mit Vorbehalt sind die Halbwertszeit von etwa einer Woche und die Spritzen-Daten, nach denen zwei Drittel des Verlusts nach einem Jahr zurück sind." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Was für die Tablette belegt ist und was fehlt, Stand Oktober 2026. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Abnehmpille und Muskelabbau
 

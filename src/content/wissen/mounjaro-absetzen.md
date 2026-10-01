@@ -3,6 +3,7 @@ title: "Mounjaro absetzen: Halbwertszeit, SURMOUNT-4 und was danach kommt"
 metaTitle: "Mounjaro absetzen: Verlauf, Halbwertszeit, SURMOUNT-4, Tipps"
 description: "Tirzepatid ist nach etwa vier Wochen abgebaut, schneller als Semaglutid. Was SURMOUNT-4 zum Gewicht nach dem Absetzen zeigt und wie du dich vorbereitest."
 category: "Präparate"
+image: /grafiken/halbwertszeiten-praeparate.png
 order: 9
 pubDate: 2026-09-30
 keywords: ["mounjaro absetzen", "mounjaro absetzen gewicht", "mounjaro absetzen jojo", "mounjaro absetzen was passiert", "tirzepatid absetzen", "mounjaro halbwertszeit", "mounjaro ausschleichen"]
@@ -51,6 +52,11 @@ Die Studie zum Absetzen von Tirzepatid heißt SURMOUNT-4.<sup><a href="#fn-aronn
 | Weiterbehandlung | −5,5 Prozentpunkte zusätzlich. Netto: etwa −25 %. |
 
 Zwei Dinge daran sind wichtig. Erstens: Ein Jahr nach dem Absetzen lag das Gewicht im Mittel noch knapp 10 % unter dem Start. Der Jojo-Effekt ist real, aber er frisst nicht alles auf. Zweitens: Die Streuung war groß. Ein Teil der Placebo-Gruppe hielt den Verlust weitgehend, ein Teil nahm fast alles wieder zu. Eine Meta-Analyse über mehrere Adipositas-Medikamente zeigt, dass die Zunahme etwa ab Woche 8 messbar wird und bis etwa Woche 20 anhält.<sup><a href="#fn-wu2025">5</a></sup> Bei Tirzepatid mit seiner kürzeren Halbwertszeit ist ein früherer Beginn plausibel.
+
+<figure class="my-8">
+  <img src="/grafiken/halbwertszeiten-praeparate.svg" alt="Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Warum Tirzepatid schneller weg ist als Semaglutid: Halbwertszeiten laut Fachinformation und die Faustregel „fünf Halbwertszeiten“. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Ausschleichen: sechs Stufen, kein Beleg
 

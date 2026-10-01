@@ -3,6 +3,7 @@ title: "Muskelabbau bei der Abnehmspritze vermeiden: Was wirklich hilft"
 metaTitle: "Muskelabbau bei Abnehmspritze vermeiden: Protein & Training"
 description: "Rund 40 % des Gewichtsverlusts unter der Abnehmspritze sind fettfreie Masse. Warum das passiert und wie Protein, Krafttraining und Kreatin dagegenhalten."
 category: "Muskeln"
+image: /grafiken/koerperzusammensetzung-step-1.png
 order: 3
 pubDate: 2026-09-30
 keywords: ["abnehmspritze muskelabbau", "abnehmspritze muskelverlust", "muskelabbau abnehmspritze vermeiden", "wegovy muskelabbau", "ozempic muskelabbau", "mounjaro muskelverlust", "abnehmspritze krafttraining"]
@@ -30,6 +31,11 @@ Die Abnehmspritze nimmt nicht nur Fett. Sie nimmt auch das, was du eigentlich be
 Bei jedem Gewichtsverlust verliert der Körper neben Fett auch fettfreie Masse: Muskeln, aber auch Wasser, Bindegewebe und etwas Organmasse. Bei klassischen Diäten liegt der Anteil meist bei einem Viertel. Für Semaglutid liefert die STEP-1-Studie den besten Anhaltspunkt: In einer Substudie mit 140 Teilnehmenden, deren Körperzusammensetzung per DXA gemessen wurde, entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Die Analyse war exploratorisch, also nicht auf diese Frage hin geplant, und die Zahl schwankt je nach Studie und Messmethode. Sicher ist: Es ist kein Randphänomen.
 
 Zwei Dinge relativieren das. Erstens: Wer 15 % seines Gewichts verliert, hat danach meist immer noch mehr absolute Muskelmasse als eine normalgewichtige Person, weil ein schwererer Körper mehr Muskeln braucht und aufbaut. Zweitens: Ein Teil der „fettfreien Masse“ ist Wasser und Gewebe, das mit dem Fett abgebaut wird. Trotzdem gilt: Muskeln, die weg sind, kommen nicht von allein zurück, und nach dem Absetzen kommt das Gewicht meist als Fett zurück.
+
+<figure class="my-8">
+  <img src="/grafiken/koerperzusammensetzung-step-1.svg" alt="Balken, der den Gewichtsverlust unter Semaglutid aufteilt: rund 60 Prozent Fettmasse und rund 40 Prozent fettfreie Masse, also Muskeln, Organe, Knochen und Wasser. Krafttraining und 1,2 bis 1,6 Gramm Protein pro Kilogramm halten den Anteil klein." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Anteil am Gewichtsverlust nach 68 Wochen Semaglutid, DXA-Substudie mit 140 Teilnehmenden.<sup><a href="#fn-wilding2021dxa">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Warum das unter der Spritze besonders passiert
 

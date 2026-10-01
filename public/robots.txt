@@ -3,3 +3,4 @@ Allow: /
 Disallow: /danke/
 
 Sitemap: https://nachderspritze.de/sitemap-index.xml
+Sitemap: https://nachderspritze.de/sitemap-grafiken.xml

@@ -8,17 +8,21 @@ order: 6
 pubDate: 2026-09-30
 updatedDate: 2026-10-01
 keywords: ["nach abnehmspritze gewicht halten", "abnehmspritze absetzen gewicht halten", "abnehmspritze danach", "gewicht halten nach wegovy", "nach ozempic gewicht halten", "abnehmspritze absetzen plan"]
-sources: ["wu2025", "jensen2024", "leidy2015", "who2020", "sumithran2011", "dgeBallaststoffe", "wilding2022ext"]
+sources: ["wu2025", "jensen2024", "leidy2015", "who2020", "sumithran2011", "dgeBallaststoffe", "wilding2022ext", "wing2006", "rodriguez2025", "fachinfoWegovy", "fachinfoMounjaro"]
 related: ["abnehmspritze-absetzen", "jojo-effekt-abnehmspritze", "protein-abnehmspritze"]
 faq:
   - q: "Wie oft sollte ich mich nach dem Absetzen wiegen?"
     a: "<p>Einmal pro Woche, immer am gleichen Wochentag, morgens nach der Toilette, vor dem Frühstück. Tägliches Wiegen schwankt um 1 bis 2 kg durch Wasser und verunsichert; monatliches Wiegen bemerkt eine Zunahme zu spät. Wichtiger als die Häufigkeit ist die Regel, was du bei welcher Zahl tust.</p>"
   - q: "Wie viel Zunahme nach dem Absetzen ist normal?"
-    a: "<p>Ein bis zwei Kilo in den ersten Wochen sind oft Wasser und Darminhalt, weil du wieder mehr isst – kein Fett. Wer Kreatin startet, sieht weitere 0,5 bis 2 kg Wasser. Ab etwa 3 kg über dem Absetz-Gewicht lohnt sich ein Blick auf Ernährung und Training; ab 5 kg ein Termin bei der Ärztin.</p>"
+    a: "<p>Ein bis zwei Kilo in den ersten Wochen sind oft Wasser und Darminhalt, weil du wieder mehr isst – kein Fett. Wer Kreatin startet, sieht weitere 0,5 bis 2 kg Wasser. Ab 1,4 kg über dem Startgewicht der Haltephase lohnt sich ein Blick auf Ernährung und Training, ab 2,3 kg ein Termin bei der Ärztin: Das sind die Zonen eines Programms zum Gewichthalten, in dem 45,7 % der betreuten Teilnehmenden in 18 Monaten 2,3 kg oder mehr wieder zunahmen, in der Kontrollgruppe 72,4 % (Wing 2006).</p>"
   - q: "Soll ich nach dem Absetzen Kalorien zählen?"
     a: "<p>Für die meisten ist eine Struktur wirksamer als Zählen: Protein zuerst, Gemüse bei jeder Mahlzeit, feste Essenszeiten, keine Flüssigkalorien. Wer gern zählt, kann das zwei Wochen lang tun, um ein Gefühl für Portionen ohne Spritze zu bekommen – dauerhaft hält es kaum jemand durch.</p>"
   - q: "Was, wenn das Gewicht trotz allem steigt?"
     a: "<p>Dann ist das kein Versagen, sondern Biologie. Sprich mit deiner Ärztin oder deinem Arzt über die Optionen – dazu kann auch ein Wiedereinstieg in die Therapie gehören. Adipositas gilt als chronische Erkrankung, und die Behandlung ist langfristig gedacht.</p>"
+  - q: "Wie lange wirkt die Abnehmspritze nach dem Absetzen?"
+    a: "<p>Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation bis etwa sieben Wochen nachweisbar, Tirzepatid nach rund 25 Tagen, Liraglutid nach etwa drei Tagen. Der Appetit kommt früher zurück, meist zwischen Woche 2 und 5. Den Verlauf Woche für Woche zeigt der Artikel <a href=\"/wissen/abnehmspritze-absetzen/\">Abnehmspritze absetzen</a>.</p>"
+  - q: "Warum setzen so viele die Abnehmspritze ab?"
+    a: "<p>In einer US-Auswertung von Versorgungsdaten hatten 64,8 % der Menschen ohne Typ-2-Diabetes ihre Therapie innerhalb eines Jahres beendet, wegen Kosten, Nebenwirkungen, Lieferengpässen, eines erreichten Ziels oder Kinderwunschs. Deshalb lohnt sich der Plan für die Zeit danach, auch wenn das Absetzen gerade nicht ansteht.</p>"
 affiliate: ["psyllium", "glucomannan", "gripDynamometer"]
 affiliateTitle: "Beispiele: Ballaststoffe zum Ergänzen und ein Griffkraft-Messgerät"
 affiliateIntro: "Drei Beispiele, keine Empfehlung einer Marke. Ballaststoffe immer mit reichlich Wasser; die DGE-Empfehlung von 30 g am Tag erreichst du in erster Linie über Gemüse, Hülsenfrüchte und Vollkorn. Das Messgerät misst die Griffkraft, den einen Muskelwert, der sich zu Hause verlässlich prüfen lässt; einmal pro Woche messen und notieren."

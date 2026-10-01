@@ -527,6 +527,13 @@ export const sources: Record<string, Source> = {
     url: 'https://www.medipreis.de/',
     note: 'Größenordnung für Selbstzahler; Tagespreise schwanken. Laufend aktualisierter Stand mit Datum im Marktradar (/marktradar/#preise).',
   },
+  wing2006: {
+    id: 'wing2006',
+    short: 'Wing et al., STOP Regain, NEJM 2006',
+    full: 'Wing RR, Tate DF, Gorin AA, Raynor HA, Fava JL. A self-regulation program for maintenance of weight loss. N Engl J Med. 2006;355(15):1563–1571.',
+    url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa061883',
+    note: 'Randomisierte Studie, 314 Erwachsene nach mindestens 10 % Gewichtsverlust, 18 Monate: tägliches Wiegen mit Zonen (grün bis +1,4 kg, gelb bis +2,3 kg, rot ab +2,3 kg) und festgelegter Reaktion. 45,7 % der persönlich betreuten Gruppe nahmen 2,3 kg oder mehr wieder zu, 72,4 % der Kontrollgruppe.',
+  },
   look2025surmount1dxa: {
     id: 'look2025surmount1dxa',
     short: 'Look et al., SURMOUNT-1 Körperzusammensetzung, Diabetes Obes Metab 2025',

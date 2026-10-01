@@ -21,6 +21,27 @@ import ShareButtons from '../components/ShareButtons.astro';
         <li>Du kannst dich jederzeit per E-Mail austragen lassen.</li>
       </ol>
     </div>
+    <div class="mx-auto mt-8 max-w-xl rounded-xl2 border border-line bg-white p-6 text-left" data-preisfrage>
+      <p class="font-semibold text-ink">Eine Frage, ein Klick: Welcher Preis wäre für dich für das 12-Wochen-Set in Ordnung?</p>
+      <p class="mt-1 text-sm text-ink-3">Freiwillig und anonym; wir zählen nur die Klicks. Das hilft uns, den Preis zu setzen.</p>
+      <div class="mt-3 flex flex-wrap gap-2" role="group" aria-label="Preis, der für dich in Ordnung wäre">
+        {['49', '79', '99', '129'].map((p) => (<button type="button" data-preis={p} class={`btn-secondary !px-3 !py-2 text-sm plausible-event-name=Preisfrage plausible-event-preis=${p}`}>{p} €</button>))}
+        <button type="button" data-preis="mehr" class="btn-secondary !px-3 !py-2 text-sm plausible-event-name=Preisfrage plausible-event-preis=mehr">mehr als 129 €</button>
+      </div>
+      <p class="mt-3 hidden text-sm font-medium text-moss" data-preisfrage-danke aria-live="polite">Danke, notiert.</p>
+    </div>
+    <script is:inline>
+      (() => {
+        const box = document.querySelector('[data-preisfrage]');
+        if (!box) return;
+        const buttons = box.querySelectorAll('button[data-preis]');
+        buttons.forEach((b) => b.addEventListener('click', () => {
+          buttons.forEach((x) => { x.disabled = true; if (x !== b) x.classList.add('opacity-50'); });
+          const danke = box.querySelector('[data-preisfrage-danke]');
+          if (danke) danke.classList.remove('hidden');
+        }));
+      })();
+    </script>
     <div class="mx-auto mt-8 max-w-xl rounded-xl2 border border-moss/30 bg-moss-light/40 p-6 text-left">
       <p class="eyebrow">Kennst du jemanden, der gerade absetzt?</p>
       <p class="mt-2 text-sm text-ink-2">Die erste Charge kommt, sobald {site.preorderGoal} Menschen sie wollen. Jede Empfehlung bringt sie näher. Der Text ist vorgeschrieben, du kannst ihn ändern.</p>

@@ -3,6 +3,7 @@ title: "Haarausfall unter und nach der Abnehmspritze: Warum er kommt, wie lange 
 metaTitle: "Haarausfall und Abnehmspritze: Ursache, Dauer, was hilft"
 description: "Haarausfall unter der Abnehmspritze ist meist ein telogenes Effluvium: Er beginnt zwei bis drei Monate nach schnellem Gewichtsverlust und klingt meist wieder ab."
 category: "Ernährung"
+image: /grafiken/haarausfall-zeitverlauf.png
 order: 25
 pubDate: 2026-10-01
 keywords: ["haarausfall abnehmspritze", "haarausfall ozempic", "haarausfall wegovy", "haarausfall mounjaro", "abnehmspritze haare", "haarausfall nach abnehmspritze", "haarausfall schnell abnehmen", "haarausfall abnehmen was tun"]
@@ -46,6 +47,11 @@ In Einzelfällen wird Haarausfall unter der Abnehmspritze berichtet. Ob dann das
 | Danach | Nachwachsende Haare werden sichtbar; bis zur alten Länge dauert es länger |
 
 Die Verzögerung erklärt, warum der Haarausfall oft erst auffällt, wenn die Abnahme schon langsamer geworden ist oder die Spritze schon abgesetzt wurde. Und sie erklärt den zweiten Fall: Wer nach dem Absetzen schnell wieder zunimmt und dann mit einer Crash-Diät gegensteuert, setzt einen neuen Auslöser. Eine Haltephase ohne große Gewichtsschwankungen ist deshalb auch für die Haare die beste Strategie; wie sie aussieht, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+
+<figure class="my-8">
+  <img src="/grafiken/haarausfall-zeitverlauf.png" alt="Zeitachse des telogenen Effluviums über zwölf Monate: Nach schnellem Gewichtsverlust wechseln viele Haare in die Ruhephase, zwei bis drei Monate später beginnt diffuser Haarausfall, der meist innerhalb von etwa sechs Monaten nach Beginn abklingt, wenn der Auslöser weggefallen ist; danach wachsen die Haare nach. Beeinflussbar sind Protein, Eisenwert, Zink und Biotin bei Lücke; länger als sechs Monate, fleckig oder mit Müdigkeit und Frieren ärztlich abklären." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Der typische Verlauf des telogenen Effluviums in Monaten nach dem Auslöser.<sup><a href="#fn-malkud2015">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Was sich beeinflussen lässt
 

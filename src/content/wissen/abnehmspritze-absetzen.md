@@ -5,7 +5,10 @@ description: "Appetit, Gewicht, Blutwerte: Was nach der letzten Dosis in welcher
 category: "Absetzen"
 order: 2
 pubDate: 2026-09-30
-keywords: ["abnehmspritze absetzen", "abnehmspritze absetzen was passiert", "wegovy absetzen", "ozempic absetzen", "mounjaro absetzen", "abnehmspritze ausschleichen", "abnehmspritze absetzen nebenwirkungen", "abnehmspritze absetzen gewicht halten"]
+updatedDate: 2026-10-01
+toc: true
+image: /grafiken/absetzkurve-step-1.png
+keywords: ["abnehmspritze absetzen", "abnehmspritze absetzen was passiert", "wegovy absetzen", "ozempic absetzen", "mounjaro absetzen", "abnehmspritze ausschleichen", "abnehmspritze absetzen nebenwirkungen", "abnehmspritze absetzen gewicht halten", "abnehmspritze absetzen gewichtskurve"]
 sources: ["rodriguez2025", "wu2025", "wilding2022ext", "aronne2024", "sumithran2011", "jensen2024", "leidy2015", "who2020", "dagLeitlinie", "eclinmed2026"]
 related: ["jojo-effekt-abnehmspritze", "gewicht-halten-nach-abnehmspritze", "protein-abnehmspritze"]
 faq:
@@ -39,7 +42,12 @@ Was auch immer der Grund ist: Ob und wie du dein Medikament absetzt, besprichst 
 
 ## Was nach der letzten Dosis passiert – Woche für Woche
 
-Die folgende Übersicht fasst zusammen, was aus Pharmakologie und Studien ableitbar ist. Individuell weicht der Verlauf ab.
+Die folgende Übersicht fasst zusammen, was aus Pharmakologie und Studien ableitbar ist. Individuell weicht der Verlauf ab. Wer die Punkte als Kalenderdaten für die eigene letzte Dosis sehen will, nutzt den [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/).
+
+<figure class="my-8">
+  <img src="/grafiken/zeitachse-nach-letzter-dosis.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Der Wirkstoff ist nach etwa fünf bis sieben Wochen weitgehend abgebaut, der Appetit kehrt ab Woche 2 bis 5 zurück, die Gewichtszunahme ist ab Woche 8 messbar und steigt bis etwa Woche 20. Ein Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis ist markiert." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Die ersten 20 Wochen nach der letzten Dosis: Halbwertszeiten laut Fachinformation, Zunahme laut Meta-Analyse.<sup><a href="#fn-wu2025">2</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 **Woche 1 bis 2: Noch wenig Veränderung.** Semaglutid hat eine Halbwertszeit von etwa einer Woche, Tirzepatid von etwa fünf Tagen. In den ersten Tagen ist noch genug Wirkstoff im Körper; viele merken keinen Unterschied.
 
@@ -50,6 +58,11 @@ Die folgende Übersicht fasst zusammen, was aus Pharmakologie und Studien ableit
 **Ab Woche 8: Die Zunahme wird messbar.** In einer Meta-Analyse randomisierter Studien war der Gewichtsunterschied zur Kontrollgruppe ab etwa Woche 8 nach dem Absetzen signifikant und wuchs bis etwa Woche 20 weiter.<sup><a href="#fn-wu2025">2</a></sup>
 
 **Nach einem Jahr:** In der STEP-1-Verlängerung waren im Mittel zwei Drittel des verlorenen Gewichts zurück, und die Verbesserungen bei Blutzucker, Blutdruck und Blutfetten hatten sich den Ausgangswerten wieder angenähert.<sup><a href="#fn-wilding2022ext">3</a></sup> Nach Tirzepatid lag die Zunahme in 52 Wochen bei etwa 14 % des Körpergewichts.<sup><a href="#fn-aronne2024">4</a></sup> Ein systematischer Review von 2026 bestätigt diese Verlaufskurve über verschiedene Studien hinweg.<sup><a href="#fn-eclinmed2026">10</a></sup>
+
+<figure class="my-8">
+  <img src="/grafiken/absetzkurve-step-1.png" alt="Liniendiagramm: Unter Semaglutid 2,4 mg sinkt das Gewicht in 68 Wochen im Mittel um 17,3 Prozent, unter Placebo um 2,0 Prozent. In den 52 Wochen nach dem Absetzen steigt es wieder; nach insgesamt 120 Wochen liegt es bei minus 5,6 Prozent (Semaglutid) und minus 0,1 Prozent (Placebo). Zwei Drittel des Verlusts sind nach einem Jahr ohne Medikament wieder da." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <figcaption class="mt-2 text-sm text-ink-3">Die Absetzkurve aus der STEP-1-Verlängerung: 68 Wochen Semaglutid, danach 52 Wochen ohne Medikament. Messpunkte Woche 0, 68 und 120; Verbindungslinien schematisch.<sup><a href="#fn-wilding2022ext">3</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Ausschleichen oder abrupt absetzen?
 

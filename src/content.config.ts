@@ -22,6 +22,10 @@ const wissen = defineCollection({
     related: z.array(z.string()).default([]),
     /** true = wird nicht gebaut (Vorlage, noch ohne echten Inhalt) */
     draft: z.boolean().default(false),
+    /** true = Inhaltsverzeichnis aus den H2-Überschriften über dem Text (für lange Hauptartikel) */
+    toc: z.boolean().default(false),
+    /** Vorschaubild für Teilen und Article-Schema, Pfad unter public/ (z. B. /grafiken/absetzkurve-step-1.png) */
+    image: z.string().optional(),
     /** Amazon-Partnerlinks am Artikelende: Schlüssel aus src/data/affiliate.ts (leer = keine Liste) */
     affiliate: z.array(z.string()).default([]),
     affiliateTitle: z.string().optional(),

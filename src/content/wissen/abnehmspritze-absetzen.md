@@ -9,7 +9,7 @@ updatedDate: 2026-10-01
 toc: true
 image: /grafiken/absetzkurve-step-1.png
 keywords: ["abnehmspritze absetzen", "abnehmspritze absetzen was passiert", "wegovy absetzen", "ozempic absetzen", "mounjaro absetzen", "abnehmspritze ausschleichen", "abnehmspritze absetzen nebenwirkungen", "abnehmspritze absetzen gewicht halten", "abnehmspritze absetzen gewichtskurve"]
-sources: ["rodriguez2025", "wu2025", "wilding2022ext", "aronne2024", "sumithran2011", "jensen2024", "leidy2015", "who2020", "dagLeitlinie", "eclinmed2026"]
+sources: ["rodriguez2025", "wu2025", "wilding2022ext", "aronne2024", "sumithran2011", "jensen2024", "leidy2015", "who2020", "dagLeitlinie", "eclinmed2026", "fachinfoWegovy", "fachinfoMounjaro"]
 related: ["jojo-effekt-abnehmspritze", "gewicht-halten-nach-abnehmspritze", "protein-abnehmspritze"]
 faq:
   - q: "Gibt es Entzugserscheinungen, wenn ich die Abnehmspritze absetze?"
@@ -27,6 +27,18 @@ faq:
 Die meisten Menschen, die mit einer Abnehmspritze anfangen, hören innerhalb eines Jahres wieder auf: In einer großen US-Auswertung waren es 64,8 % der Menschen ohne Typ-2-Diabetes.<sup><a href="#fn-rodriguez2025">1</a></sup> Trotzdem gibt es kaum verlässliche Informationen darüber, was danach passiert. Dieser Artikel fasst zusammen, was die Studien zeigen – Woche für Woche – und wie du die Zeit nach der letzten Dosis vorbereitest.
 
 > **Kurz gesagt:** Der Wirkstoff ist nach fünf bis sieben Wochen abgebaut. Der Appetit kommt früher zurück. Die Gewichtszunahme ist in Studien ab etwa Woche 8 messbar.<sup><a href="#fn-wu2025">2</a></sup> Wer vorbereitet ist, hat einen Vorsprung, den die Studien mit rund 6 kg beziffern.<sup><a href="#fn-jensen2024">6</a></sup>
+
+## Was passiert, wenn man die Abnehmspritze absetzt?
+
+Der Wirkstoff wird über Wochen abgebaut, der Appetit kommt zurück, und ohne Gegenmaßnahmen steigt das Gewicht: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen von Semaglutid im Mittel zwei Drittel des verlorenen Gewichts wieder da, und Blutzucker, Blutdruck und Blutfette näherten sich den Ausgangswerten.<sup><a href="#fn-wilding2022ext">3</a></sup> Ein Entzugssyndrom gibt es nicht; was wegfällt, ist die Appetitbremse. Wer in der Therapiezeit Krafttraining und Protein eingebaut hat, hält in Studien deutlich besser: In der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr nach Therapieende 6,0 kg mehr zu als nach einem Trainingsprogramm.<sup><a href="#fn-jensen2024">6</a></sup>
+
+## Wie schnell nimmt man nach dem Absetzen zu?
+
+Messbar ab etwa Woche 8: In einer Meta-Analyse randomisierter Studien war der Gewichtsunterschied zur Kontrollgruppe ab etwa acht Wochen nach dem Absetzen signifikant und stieg bis etwa Woche 20 weiter.<sup><a href="#fn-wu2025">2</a></sup> Nach einem Jahr ohne Medikament lag das Gewicht in der STEP-1-Verlängerung bei minus 5,6 % statt minus 17,3 % gegenüber dem Start; zwei Drittel des Verlusts waren zurück.<sup><a href="#fn-wilding2022ext">3</a></sup> Die ersten ein bis zwei Kilo in den ersten Wochen sind meist Wasser und Darminhalt, weil du wieder mehr isst; die Fettzunahme kommt langsamer und bleibt, wenn nichts dagegen steht.
+
+## Wie lange wirkt die Abnehmspritze nach dem Absetzen?
+
+Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche, ist nach etwa fünf Wochen weitgehend abgebaut und bis etwa sieben Wochen nach der letzten Dosis nachweisbar;<sup><a href="#fn-fachinfoWegovy">11</a></sup> Tirzepatid hat eine Halbwertszeit von etwa fünf Tagen und ist nach rund 25 Tagen weitgehend abgebaut.<sup><a href="#fn-fachinfoMounjaro">12</a></sup> Die Wirkung auf den Appetit lässt schon vorher nach, meist zwischen Woche 2 und 5. Diese Auswaschphase ist der Grund, warum die ersten Wochen trügen: Das Gewicht steht noch, der Wirkstoff ist schon fast weg. Die Zeitachse im nächsten Abschnitt zeigt beides nebeneinander; dein eigenes Datum rechnet der [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/) aus.
 
 ## Warum Menschen die Abnehmspritze absetzen
 

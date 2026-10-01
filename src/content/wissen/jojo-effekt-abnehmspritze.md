@@ -19,8 +19,10 @@ faq:
     a: "<p>Die Größenordnung ist ähnlich. Nach Semaglutid (STEP 1) waren nach einem Jahr rund zwei Drittel des Verlusts zurück, nach Tirzepatid (SURMOUNT-4) stieg das Gewicht in 52 Wochen um etwa 14 % – bei einem größeren vorherigen Verlust. Entscheidend ist weniger der Wirkstoff als das, was nach dem Absetzen passiert.</p>"
   - q: "Kann man den Jojo-Effekt nach der Abnehmspritze vermeiden?"
     a: "<p>Vollständig verhindern kann ihn kein Mittel. Was in Studien den Unterschied macht: ausreichend Protein, regelmäßiges Krafttraining, eine Ernährungsstruktur, die auch mit normalem Appetit funktioniert, und regelmäßiges Wiegen mit klarer Reaktionsschwelle. In der dänischen S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach Therapieende.</p>"
-  - q: "Soll ich die Spritze deshalb lieber gar nicht absetzen?"
-    a: "<p>Das ist eine medizinische Entscheidung, die du mit deiner Ärztin oder deinem Arzt triffst. Adipositas gilt als chronische Erkrankung, und Leitlinien sehen Medikamente als Teil einer langfristigen Behandlung. Trotzdem setzen in der Praxis die meisten innerhalb eines Jahres ab. Dieser Artikel hilft, den Zeitpunkt danach besser vorzubereiten.</p>"
+  - q: "Warum setzen so viele die Abnehmspritze wieder ab?"
+    a: "<p>In einer US-Auswertung von Versorgungsdaten hatten 64,8 % der Menschen ohne Typ-2-Diabetes ihre GLP-1-Therapie innerhalb eines Jahres beendet. Die Gründe sind Kosten, Nebenwirkungen, Lieferengpässe, ein erreichtes Ziel oder ein Kinderwunsch. Rund ein Drittel begann innerhalb eines Jahres erneut, meist wegen der Zunahme. Ob und wie du absetzt, entscheidest du mit deiner Ärztin oder deinem Arzt.</p>"
+  - q: "Gibt es den Jojo-Effekt nach der Abnehmspritze wirklich?"
+    a: "<p>Ja, in randomisierten Studien gemessen: In STEP 4 nahmen Teilnehmende nach dem Wechsel von Semaglutid auf Placebo in 48 Wochen 6,9 % zu, in SURMOUNT-4 nach dem Wechsel von Tirzepatid auf Placebo in 52 Wochen 14 %, und in der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen zwei Drittel des Verlusts zurück. Hinter jedem Mittelwert stehen Menschen mit fast vollständiger Zunahme und Menschen, die fast nichts zugenommen haben.</p>"
 ---
 
 Wer die Abnehmspritze absetzt, hört oft denselben Satz: „Dann kommt eh alles zurück.“ Das stimmt so pauschal nicht. Aber es stimmt öfter, als vielen lieb ist. Hier steht, was die Studien zeigen, warum der Körper nach dem Absetzen gegen dich arbeitet, und welche drei Dinge den Unterschied machen. Was in den Wochen nach der letzten Dosis konkret passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
@@ -76,7 +78,9 @@ Vier Mechanismen greifen ineinander. Der erste ist offensichtlich: Die Appetitbr
 
 Die Frage „absetzen oder nicht“ stellt sich für die meisten früher als geplant. In einer US-Auswertung von Versorgungsdaten hatten 64,8 % der Menschen ohne Typ-2-Diabetes ihre GLP-1-Therapie innerhalb eines Jahres beendet.<sup><a href="#fn-rodriguez2025">9</a></sup> Gründe sind Kosten, Nebenwirkungen, Lieferengpässe, ein erreichtes Ziel oder ein Kinderwunsch. Adipositas-Leitlinien betrachten Medikamente als Teil einer langfristigen Therapie,<sup><a href="#fn-dagLeitlinie">14</a></sup> aber die Realität sieht anders aus. Umso wichtiger ist, was in der Zeit danach passiert.
 
-## Was nachweislich hilft
+## Wie vermeide ich den Jojo-Effekt nach der Abnehmspritze?
+
+Mit drei Dingen, die in Studien den Unterschied machen: Krafttraining an mindestens zwei Tagen pro Woche (nach Liraglutid allein lag die Zunahme im Jahr nach Therapieende 6,0 kg höher als nach einem Trainingsprogramm, S-LiTE),<sup><a href="#fn-jensen2024">10</a></sup> 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag (Übersichtsarbeit Leidy 2015)<sup><a href="#fn-leidy2015">11</a></sup> und Dranbleiben an einer Struktur, die mit normalem Appetit funktioniert, mit festem Wiegetag und vorher festgelegter Reaktionsschwelle. Ganz verhindern lässt sich die Zunahme damit nicht; ohne solche Maßnahmen waren in der STEP-1-Verlängerung nach einem Jahr zwei Drittel zurück.<sup><a href="#fn-wilding2022ext">1</a></sup> Die Einzelheiten:
 
 ### Krafttraining: der stärkste Hebel
 

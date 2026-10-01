@@ -69,7 +69,7 @@ Das BfR schlägt für Nahrungsergänzungsmittel eine Höchstmenge von 25 µg pro
 
 ## Nach dem Absetzen
 
-Mit dem Appetit kommen Fleisch, Fisch, Eier und Milchprodukte zurück, und damit meist die Zufuhr. Wer weiter Metformin nimmt, bleibt in der Kontrolle. Wer vegan lebt, bleibt beim Präparat. Für alle anderen gilt: Ein einmal aufgefüllter Speicher reicht lange, und die Haltephase ist der richtige Zeitpunkt, die Lebensmittelauswahl so zu setzen, dass B12 nebenbei kommt.
+Mit dem Appetit kommen Fleisch, Fisch, Eier und Milchprodukte zurück, und damit meist die Zufuhr. Wer weiter Metformin nimmt, bleibt in der Kontrolle. Wer vegan lebt, bleibt beim Präparat. Für alle anderen gilt: Ein einmal aufgefüllter Speicher reicht lange, und die Haltephase ist der richtige Zeitpunkt, die Lebensmittelauswahl so zu setzen, dass B12 nebenbei kommt. Den Verlauf nach der letzten Dosis, Woche für Woche, beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 ## Wann du zur Ärztin oder zum Arzt gehst
 

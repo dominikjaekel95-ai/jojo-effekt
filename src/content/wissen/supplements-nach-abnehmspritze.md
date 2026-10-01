@@ -21,7 +21,7 @@ faq:
     a: "<p>Protein, Ballaststoffe und Kreatin sind Lebensmittelbestandteile ohne bekannte Wechselwirkung mit GLP-1-Medikamenten. Trotzdem gehört alles, was du regelmäßig nimmst, ins Gespräch mit deiner Ärztin, besonders bei Nierenerkrankungen und vor Blutabnahmen, weil Kreatin den Kreatinin-Wert verändert.</p>"
 ---
 
-Nach dem Absetzen der Abnehmspritze bekommt man viel angeboten: Multivitamine, Fatburner, „natürliche GLP-1-Booster“, Probiotika gegen den Jojo-Effekt. Das meiste davon ist Marketing. Hier steht, was belegt ist, was nur bei einem Mangel Sinn ergibt, und was du dir sparen kannst.
+Nach dem Absetzen der Abnehmspritze bekommt man viel angeboten: Multivitamine, Fatburner, „natürliche GLP-1-Booster“, Probiotika gegen den Jojo-Effekt. Das meiste davon ist Marketing. Hier steht, was belegt ist, was nur bei einem Mangel Sinn ergibt, und was du dir sparen kannst. Der Verlauf nach der letzten Dosis, Woche für Woche, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** Belegt sind drei Dinge, alle als Ergänzung zu Ernährung und Training: Protein, Kreatin mit Krafttraining, Ballaststoffe bei Lücke. Vitamine und Mineralstoffe nur bei nachgewiesenem Mangel. Fatburner und „GLP-1-Booster“: nein.
 

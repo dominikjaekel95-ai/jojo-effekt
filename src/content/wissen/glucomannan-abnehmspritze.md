@@ -35,7 +35,7 @@ Was die Angabe nicht sagt, ist genauso wichtig: nichts über Sättigung, nichts 
 
 „Natürliches Ozempic“, „Konjak statt Spritze“: Solche Überschriften gibt es, eine Studie dazu nicht. Für die Spritze liegt eine Zulassungsstudie mit 1.961 Teilnehmenden vor: 14,9 % Gewichtsverlust in 68 Wochen gegenüber 2,4 % unter Placebo.<sup><a href="#fn-wilding2021step1">5</a></sup> Für Glucomannan liegen Studien über wenige Wochen vor, in denen der Unterschied zu Placebo klein war und nur mit Kalorienreduktion auftrat.<sup><a href="#fn-efsa2010glucomannan">2</a></sup> Das reichte der EFSA für eine vorsichtig formulierte Angabe, und mehr darf niemand daraus machen. Wer ein Produkt als Ersatz für ein Medikament bewirbt, verstößt gegen das Lebensmittelrecht; was von „GLP-1-Boostern“ zu halten ist, steht in der [Supplement-Übersicht](/wissen/supplements-nach-abnehmspritze/).
 
-Wer überlegt, die Spritze abzusetzen, bespricht das mit der Ärztin oder dem Arzt. Ein Ballaststoff ist dafür kein Argument und kein Ersatz.
+Wer überlegt, die Spritze abzusetzen, bespricht das mit der Ärztin oder dem Arzt. Ein Ballaststoff ist dafür kein Argument und kein Ersatz. Wie das Absetzen in Studien verläuft, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 ## Glucomannan nach dem Absetzen
 

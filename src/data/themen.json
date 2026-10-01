@@ -48,7 +48,8 @@
         { "q": "Saxenda absetzen: die tägliche Spritze?", "slug": "saxenda-absetzen" },
         { "q": "Die Tablette absetzen: was ist bekannt?", "slug": "abnehmpille-absetzen" },
         { "q": "Tablette oder Spritze: was ist gleich, was nicht?", "slug": "abnehmpille-oder-spritze" },
-        { "q": "Wo stehen Zulassungen, Preise, Kassenregeln und Lieferbarkeit?", "href": "/marktradar/", "label": "Marktradar: Zulassungen, Preise, Kassen, Lieferbarkeit" }
+        { "q": "Wo stehen Zulassungen, Preise, Kassenregeln und Lieferbarkeit?", "href": "/marktradar/", "label": "Marktradar: Zulassungen, Preise, Kassen, Lieferbarkeit" },
+        { "q": "Was gilt präparatübergreifend nach der letzten Dosis?", "slug": "abnehmspritze-absetzen" }
       ],
       "include": ["abnehmpille-absetzen", "abnehmpille-oder-spritze"],
       "glossar": ["halbwertszeit", "glp-1-rezeptoragonist", "auswaschphase"],
@@ -76,7 +77,8 @@
         { "q": "Tablette oder Spritze: was ist gleich, was nicht?", "slug": "abnehmpille-oder-spritze" },
         { "q": "Gilt der Wegovy-Artikel auch für die Tablette?", "slug": "wegovy-absetzen" },
         { "q": "Verliere ich mit der Tablette Muskeln?", "slug": "muskelabbau-abnehmspritze" },
-        { "q": "Was kostet die Tablette, und zahlt die Kasse?", "href": "/marktradar/#preise", "label": "Marktradar: Preise und Kassenregeln" }
+        { "q": "Was kostet die Tablette, und zahlt die Kasse?", "href": "/marktradar/#preise", "label": "Marktradar: Preise und Kassenregeln" },
+        { "q": "Was ist für die Spritze belegt, Woche für Woche?", "slug": "abnehmspritze-absetzen" }
       ],
       "include": [],
       "glossar": ["halbwertszeit", "auswaschphase", "glp-1-rezeptoragonist", "absetzkurve"],
@@ -103,7 +105,8 @@
         { "q": "Woran erkenne ich, dass ich Muskeln verliere?", "slug": "muskelabbau-abnehmspritze" },
         { "q": "Wie sieht ein Trainingsplan aus, den ich durchhalte?", "slug": "krafttraining-nach-abnehmspritze" },
         { "q": "Bringt Kreatin etwas, und ist es sicher?", "slug": "kreatin-abnehmspritze" },
-        { "q": "Wie viel Protein brauche ich, und wann?", "slug": "protein-abnehmspritze" }
+        { "q": "Wie viel Protein brauche ich, und wann?", "slug": "protein-abnehmspritze" },
+        { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" }
       ],
       "include": [],
       "glossar": ["fettfreie-masse", "sarkopene-adipositas", "muskelproteinsynthese", "griffkraft", "dxa", "kreatin-monohydrat", "progressive-belastungssteigerung"],
@@ -137,7 +140,8 @@
         { "q": "Omega-3: Fisch oder Kapsel?", "slug": "omega-3-abnehmspritze" },
         { "q": "Was darf Glucomannan versprechen?", "slug": "glucomannan-abnehmspritze" },
         { "q": "Eingefallenes Gesicht: was lässt sich beeinflussen?", "slug": "abnehmspritze-gesicht" },
-        { "q": "Haarausfall nach der Spritze: wie lange?", "slug": "haarausfall-abnehmspritze" }
+        { "q": "Haarausfall nach der Spritze: wie lange?", "slug": "haarausfall-abnehmspritze" },
+        { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" }
       ],
       "include": [],
       "glossar": ["leucin-schwelle", "proteinverteilung", "glucomannan", "hedonischer-hunger", "neat"],
@@ -163,7 +167,8 @@
         { "q": "Warum kommt das Gewicht zurück?", "slug": "jojo-effekt-abnehmspritze" },
         { "q": "Wie sieht der 12-Wochen-Plan aus?", "slug": "gewicht-halten-nach-abnehmspritze" },
         { "q": "Was tue ich in den ersten acht Wochen?", "href": "/checkliste/", "label": "Checkliste: Die ersten 8 Wochen nach der letzten Dosis" },
-        { "q": "Verliere ich Muskeln oder Fett?", "slug": "muskelabbau-abnehmspritze" }
+        { "q": "Verliere ich Muskeln oder Fett?", "slug": "muskelabbau-abnehmspritze" },
+        { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" }
       ],
       "include": [],
       "glossar": ["haltephase", "absetzkurve", "set-point-theorie", "adaptive-thermogenese", "metabolische-adaptation", "leptin"],

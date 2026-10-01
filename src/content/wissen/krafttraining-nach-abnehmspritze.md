@@ -21,7 +21,7 @@ faq:
     a: "<p>Gut fürs Herz und für die Stimmung, aber es hält Muskeln nicht. Wer beides schafft, macht beides. Wer nur Zeit für eines hat, nimmt nach der Abnehmspritze das Krafttraining, weil dort die Muskeln verloren gegangen sind.</p>"
 ---
 
-Wer die Abnehmspritze absetzt, hört oft „mehr bewegen“. Das ist zu unpräzise. Die Studien zeigen etwas Genaueres: Krafttraining, zweimal pro Woche, mit steigender Belastung. Hier steht, warum das der stärkste Hebel ist, und ein Plan, den man ohne Vorwissen in 30 Minuten zuhause machen kann.
+Wer die Abnehmspritze absetzt, hört oft „mehr bewegen“. Das ist zu unpräzise. Die Studien zeigen etwas Genaueres: Krafttraining, zweimal pro Woche, mit steigender Belastung. Hier steht, warum das der stärkste Hebel ist, und ein Plan, den man ohne Vorwissen in 30 Minuten zuhause machen kann. Den Verlauf der Wochen nach der letzten Dosis beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** Zwei Einheiten pro Woche, sechs Übungen für den ganzen Körper, zwei bis drei Sätze mit 8 bis 12 Wiederholungen, Belastung alle zwei Wochen leicht steigern. Am besten schon vor der letzten Dosis anfangen. Bei Vorerkrankungen den Start mit der Ärztin oder dem Arzt abstimmen.
 

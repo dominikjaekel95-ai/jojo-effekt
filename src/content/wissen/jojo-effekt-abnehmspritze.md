@@ -21,7 +21,7 @@ faq:
     a: "<p>Das ist eine medizinische Entscheidung, die du mit deiner Ärztin oder deinem Arzt triffst. Adipositas gilt als chronische Erkrankung, und Leitlinien sehen Medikamente als Teil einer langfristigen Behandlung. Trotzdem setzen in der Praxis die meisten innerhalb eines Jahres ab. Dieser Artikel hilft, den Zeitpunkt danach besser vorzubereiten.</p>"
 ---
 
-Wer die Abnehmspritze absetzt, hört oft denselben Satz: „Dann kommt eh alles zurück.“ Das stimmt so pauschal nicht. Aber es stimmt öfter, als vielen lieb ist. Hier steht, was die Studien zeigen, warum der Körper nach dem Absetzen gegen dich arbeitet, und welche drei Dinge den Unterschied machen.
+Wer die Abnehmspritze absetzt, hört oft denselben Satz: „Dann kommt eh alles zurück.“ Das stimmt so pauschal nicht. Aber es stimmt öfter, als vielen lieb ist. Hier steht, was die Studien zeigen, warum der Körper nach dem Absetzen gegen dich arbeitet, und welche drei Dinge den Unterschied machen. Was in den Wochen nach der letzten Dosis konkret passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** Ein Jahr nach dem Absetzen von Semaglutid waren im Mittel zwei Drittel des verlorenen Gewichts zurück.<sup><a href="#fn-wilding2022ext">1</a></sup> Die Zunahme beginnt etwa ab Woche 8.<sup><a href="#fn-wu2025">4</a></sup> Wer in der Therapiezeit trainiert hat, hielt sein Gewicht in einer Studie auch ein Jahr ohne Medikament.<sup><a href="#fn-jensen2024">10</a></sup>
 

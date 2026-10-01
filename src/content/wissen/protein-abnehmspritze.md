@@ -24,7 +24,7 @@ affiliateTitle: "Beispiele für Proteinpulver mit mindestens 20 g Protein pro Po
 affiliateIntro: "Drei Beispiele, keine Empfehlung einer Marke. Worauf du achtest, steht oben: mindestens 20 g Protein pro Portion, wenig Zucker, bei empfindlichem Magen neutral oder Isolat."
 ---
 
-Unter der Abnehmspritze essen viele so wenig, dass sie nicht einmal das Minimum an Protein erreichen. Das kostet Muskeln. Hier steht, wie viel Protein du brauchst, wo es drinsteckt, und wie du die Menge schaffst, wenn du kaum Hunger hast.
+Unter der Abnehmspritze essen viele so wenig, dass sie nicht einmal das Minimum an Protein erreichen. Das kostet Muskeln. Hier steht, wie viel Protein du brauchst, wo es drinsteckt, und wie du die Menge schaffst, wenn du kaum Hunger hast. Was nach der letzten Dosis mit Appetit und Gewicht passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">2</a></sup> Verteilt auf drei bis vier Mahlzeiten, jeweils 25 bis 35 g, Protein immer zuerst.
 

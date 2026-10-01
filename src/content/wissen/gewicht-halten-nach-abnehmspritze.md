@@ -22,7 +22,7 @@ affiliateTitle: "Beispiele für Ballaststoffe zum Ergänzen"
 affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke. Ballaststoffe immer mit reichlich Wasser; die DGE-Empfehlung von 30 g am Tag erreichst du in erster Linie über Gemüse, Hülsenfrüchte und Vollkorn."
 ---
 
-Nach der letzten Dosis läuft eine Uhr. In Studien wird die Gewichtszunahme etwa ab Woche 8 messbar und setzt sich bis Woche 20 fort.<sup><a href="#fn-wu2025">1</a></sup> Die ersten 12 Wochen sind also das Fenster, in dem Routinen entstehen müssen, die auch mit normalem Appetit tragen. Dieser Plan gliedert sie in drei Phasen.
+Nach der letzten Dosis läuft eine Uhr. In Studien wird die Gewichtszunahme etwa ab Woche 8 messbar und setzt sich bis Woche 20 fort.<sup><a href="#fn-wu2025">1</a></sup> Die ersten 12 Wochen sind also das Fenster, in dem Routinen entstehen müssen, die auch mit normalem Appetit tragen. Dieser Plan gliedert sie in drei Phasen. Den Verlauf nach der letzten Dosis, Woche für Woche, beschreibt der Hauptartikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** Wochen 1–4 Routinen bauen (Training, Protein, Wiegen), Wochen 5–8 den zurückkehrenden Appetit auffangen (Volumen, Struktur), Wochen 9–12 stabilisieren und Regeln für danach festlegen. Ob und wie du das Medikament absetzt, entscheidest du mit deiner Ärztin.
 

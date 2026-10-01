@@ -60,7 +60,7 @@ Hämoglobin fällt erst, wenn die Speicher leer sind. Der frühere Marker ist Fe
 
 ## Nach dem Absetzen
 
-Mit dem Appetit kommen die Eisenlieferanten zurück: Fleisch zwei- bis dreimal pro Woche, Hülsenfrüchte, Haferflocken, Kerne, jeweils mit etwas Vitamin C. Wer unter der Spritze einen Mangel hatte, lässt Ferritin nach drei bis sechs Monaten erneut prüfen. In der Haltephase lohnt sich ein Blick auf die Proteinquellen: Wer Protein über Fleisch, Fisch und Hülsenfrüchte deckt, bekommt Eisen nebenbei. Wie viel Protein es braucht, steht unter [Protein nach der Abnehmspritze](/wissen/protein-abnehmspritze/).
+Mit dem Appetit kommen die Eisenlieferanten zurück: Fleisch zwei- bis dreimal pro Woche, Hülsenfrüchte, Haferflocken, Kerne, jeweils mit etwas Vitamin C. Wer unter der Spritze einen Mangel hatte, lässt Ferritin nach drei bis sechs Monaten erneut prüfen. In der Haltephase lohnt sich ein Blick auf die Proteinquellen: Wer Protein über Fleisch, Fisch und Hülsenfrüchte deckt, bekommt Eisen nebenbei. Wie viel Protein es braucht, steht unter [Protein nach der Abnehmspritze](/wissen/protein-abnehmspritze/). Was sonst in den ersten Wochen nach der letzten Dosis passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 ## Wann du zur Ärztin oder zum Arzt gehst
 

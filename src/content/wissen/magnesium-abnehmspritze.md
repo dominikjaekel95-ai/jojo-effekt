@@ -58,7 +58,7 @@ Für die Zeit unter und nach der Spritze heißt das: Krämpfe sind eher ein Hinw
 
 ## Nach dem Absetzen: Haltephase statt Pillen
 
-Nach dem Absetzen kommt der Appetit zurück, und damit meist auch die Zufuhr. In der Haltephase entscheidet, womit die größeren Portionen gefüllt werden: Wer bei Vollkorn, Hülsenfrüchten, Gemüse und Nüssen bleibt, braucht kein Magnesiumpräparat. Wer auf Weißmehl und Süßes zurückfällt, hat ein größeres Problem als Magnesium. Wie ein Tag mit zurückgekehrtem Appetit aussehen kann, steht unter [Ernährung nach der Abnehmspritze](/wissen/ernaehrung-nach-abnehmspritze/).
+Nach dem Absetzen kommt der Appetit zurück, und damit meist auch die Zufuhr. In der Haltephase entscheidet, womit die größeren Portionen gefüllt werden: Wer bei Vollkorn, Hülsenfrüchten, Gemüse und Nüssen bleibt, braucht kein Magnesiumpräparat. Wer auf Weißmehl und Süßes zurückfällt, hat ein größeres Problem als Magnesium. Wie ein Tag mit zurückgekehrtem Appetit aussehen kann, steht unter [Ernährung nach der Abnehmspritze](/wissen/ernaehrung-nach-abnehmspritze/). Was in den ersten Wochen nach der letzten Dosis insgesamt passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 ## Wann ein Präparat sinnvoll ist, und wie viel
 

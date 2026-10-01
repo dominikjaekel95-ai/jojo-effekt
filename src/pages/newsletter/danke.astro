@@ -1,0 +1,43 @@
+---
+/** Ziel der Weiterleitung aus /api/anmeldung/. noindex, nicht in der Sitemap. ?fehler=eingabe|technik blendet den passenden Text ein. */
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+---
+<Base title="Newsletter: Bestätigung" description="Bestätige deine Anmeldung zum Newsletter von Nach der Spritze über den Link in der Mail." path="/newsletter/danke/" noindex>
+  <section class="container-narrow py-20 text-center">
+    <div id="nl-ok">
+      <p class="eyebrow">Fast geschafft</p>
+      <h1 class="h1 mt-3">Bitte bestätige deine Anmeldung.</h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">Wir haben dir eine Mail mit einem Bestätigungslink geschickt. Erst nach dem Klick bist du angemeldet. Nichts angekommen? Ein Blick in den Spam-Ordner hilft meistens.</p>
+    </div>
+    <div id="nl-eingabe" class="hidden">
+      <p class="eyebrow">Das hat nicht geklappt</p>
+      <h1 class="h1 mt-3">Bitte E-Mail-Adresse und Kästchen prüfen.</h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">Für die Anmeldung brauchen wir eine gültige E-Mail-Adresse und dein Häkchen bei der Einwilligung. Oben rechts unter „Newsletter“ kannst du es noch einmal versuchen.</p>
+    </div>
+    <div id="nl-technik" class="hidden">
+      <p class="eyebrow">Das hat gerade nicht geklappt</p>
+      <h1 class="h1 mt-3">Wir tragen dich von Hand ein.</h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">Die Anmeldung ist technisch nicht durchgegangen. Schreib uns kurz an <a href={`mailto:${site.owner.email}?subject=Newsletter`} class="font-semibold text-moss underline underline-offset-4">{site.owner.email}</a>, dann erledigen wir das persönlich.</p>
+    </div>
+    <div class="mx-auto mt-10 max-w-xl rounded-xl2 border border-line bg-white p-6 text-left text-sm text-ink-2">
+      <p class="font-semibold text-ink">Bis die erste Ausgabe kommt</p>
+      <ul class="mt-2 space-y-1">
+        <li><a href="/checkliste/" class="text-moss underline underline-offset-4">Checkliste: die ersten 8 Wochen nach der letzten Dosis</a></li>
+        <li><a href="/wissen/absetzen/" class="text-moss underline underline-offset-4">Thema Absetzen und Pausieren</a></li>
+        <li><a href="/wissen/gewicht-halten/" class="text-moss underline underline-offset-4">Thema Gewicht halten</a></li>
+        <li><a href="/marktradar/" class="text-moss underline underline-offset-4">Marktradar: was sich gerade ändert</a></li>
+      </ul>
+      <p class="mt-4">Du hast eine Frage oder strauchelst gerade? Schreib an <a href={`mailto:${site.owner.email}?subject=${encodeURIComponent('Nach der Spritze: meine Frage')}`} class="text-moss underline underline-offset-4">{site.owner.email}</a>. Wir antworten persönlich.</p>
+    </div>
+    <p class="mt-6 text-sm font-medium text-ink">{site.doctorSentence}</p>
+  </section>
+  <script is:inline>
+    (function () {
+      var f = new URLSearchParams(location.search).get('fehler');
+      if (f !== 'eingabe' && f !== 'technik') return;
+      document.getElementById('nl-ok').classList.add('hidden');
+      document.getElementById('nl-' + f).classList.remove('hidden');
+    })();
+  </script>
+</Base>

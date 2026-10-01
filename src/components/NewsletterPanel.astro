@@ -1,0 +1,44 @@
+---
+/**
+ * Newsletter-Button im Header mit ausklappbarem Feld: Anmeldung (eigene Formular-POST an /api/anmeldung/, Double-Opt-in
+ * über MailerLite, keine Skripte Dritter) und Kontaktangebot. Texte: keine Superlative, keine Expertenversprechen,
+ * keine medizinische Beratung; der Pflichtsatz steht dabei. Wortlaut der Einwilligung wie in docs/NEWSLETTER.md.
+ */
+import { site } from '../data/site';
+const subject = encodeURIComponent('Nach der Spritze: meine Frage');
+---
+<details id="newsletter-panel" class="group md:relative">
+  <summary class="btn-secondary list-none !px-2.5 !py-1.5 text-xs sm:!px-3 sm:!py-2 sm:text-sm [&::-webkit-details-marker]:hidden plausible-event-name=Newsletter+Klick" role="button" aria-controls="newsletter-inhalt">Newsletter</summary>
+  <div id="newsletter-inhalt" class="absolute left-4 right-4 top-[4.5rem] z-50 rounded-xl2 border border-line bg-white p-5 shadow-lg md:left-auto md:right-0 md:top-full md:mt-2 md:w-[26rem]">
+    <p class="eyebrow">Newsletter · in Arbeit</p>
+    <p class="mt-2 text-lg font-bold leading-snug text-ink">Die Zeit nach der Spritze, {site.newsletter.cadence} eingeordnet.</p>
+    <p class="mt-2 text-sm text-ink-2">Neue Artikel, Studien und Marktentwicklungen, kurz und mit Quellen. Für die fachliche Einordnung bauen wir ein Netzwerk aus Ärztinnen, Ärzten und Ernährungsfachleuten auf. Die erste Ausgabe kommt, sobald sie fertig ist. Trag dich ein, dann bist du dabei.</p>
+    <form method="post" action="/api/anmeldung/" class="mt-4 space-y-3">
+      <div>
+        <label for="nl-email" class="block text-sm font-medium text-ink">E-Mail-Adresse</label>
+        <input id="nl-email" name="email" type="email" required autocomplete="email" placeholder="du@beispiel.de" class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2 text-sm text-ink placeholder:text-ink-3" />
+      </div>
+      <div class="hidden" aria-hidden="true"><label for="nl-website">Website</label><input id="nl-website" name="website" type="text" tabindex="-1" autocomplete="off" /></div>
+      <input type="hidden" name="quelle" value="header" />
+      <label class="flex items-start gap-2 text-xs text-ink-2">
+        <input type="checkbox" name="einwilligung" value="ja" required class="mt-0.5" />
+        <span>Ja, schickt mir {site.newsletter.cadence} den Newsletter von Nach der Spritze. Abmelden geht in jeder Mail. <a href="/datenschutz/" class="underline">Datenschutz</a></span>
+      </label>
+      <button type="submit" class="btn-primary w-full !py-2 text-sm">Eintragen</button>
+      <p class="text-xs text-ink-3">Du bekommst zuerst eine Bestätigungs-Mail. Erst nach dem Klick auf den Link bist du angemeldet.</p>
+    </form>
+    <div class="mt-5 border-t border-line pt-4">
+      <p class="text-sm font-semibold text-ink">Du strauchelst gerade nach dem Absetzen?</p>
+      <p class="mt-1 text-sm text-ink-2">Schreib uns, was dir fehlt: <a href={`mailto:${site.owner.email}?subject=${subject}`} class="font-semibold text-moss underline underline-offset-4 plausible-event-name=Kontakt+Klick plausible-event-kanal=newsletter">{site.owner.email}</a>. Wir antworten persönlich und kostenlos. Wir wollen verstehen, was Menschen nach der Abnehmspritze wirklich brauchen, und entwickeln unsere ersten Produkte unter Beratung erfahrener Mediziner. Die ersten Nutzer können sie kostenlos testen.</p>
+      <p class="mt-2 text-xs text-ink-3">Keine medizinische Beratung. {site.doctorSentence}</p>
+    </div>
+  </div>
+</details>
+<script is:inline>
+  (function () {
+    var d = document.getElementById('newsletter-panel');
+    if (!d) return;
+    document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) d.open = false; });
+  })();
+</script>

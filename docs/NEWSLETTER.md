@@ -70,6 +70,18 @@ In jedem der drei Formulare unter Integrations → Webhooks:
 
 Test: Formular mit eigener Adresse und gesetztem Häkchen absenden. Erwartung: Bestätigungs-Mail von MailerLite innerhalb einer Minute; in Vercel → Logs eine Zeile `newsletter: <Formular-ID> (<quelle>) → angelegt (201)`. Ohne Häkchen: `… ohne Häkchen, übersprungen`. Bei `401` stimmt das Signing Secret nicht überein, bei `500` fehlt eine Umgebungsvariable.
 
+### 3d. Newsletter-Button im Header (seit 01.10.2026)
+
+Oben rechts auf jeder Seite steht „Newsletter“; der Klick klappt ein Feld aus mit Anmeldung und Kontaktangebot (`src/components/NewsletterPanel.astro`). Das Formular postet ohne Skripte Dritter an `api/anmeldung.js`: E-Mail-Adresse, Einwilligungs-Kästchen (Pflicht, Wortlaut wie 2a), Honigtopf-Feld gegen Bots. Die Funktion legt die Adresse wie der Tally-Webhook mit Status `unconfirmed` in der Gruppe „Newsletter“ an (Feld `quelle` = `header`), MailerLite schickt die Bestätigungs-Mail, die Website leitet auf `/newsletter/danke/` weiter (noindex). Plausible: Ereignis „Newsletter Klick“ (Button), „Kontakt Klick“ (Mail-Link), Seitenaufruf-Ziel `/newsletter/danke/`.
+
+Das Kontaktangebot („Du strauchelst gerade nach dem Absetzen? Schreib uns“) führt auf `dominik@nachderspritze.de` mit Betreff „Nach der Spritze: meine Frage“. Auf dem Desktop gibt es dafür zusätzlich den Header-Button „Kontakt“, der die Mail direkt öffnet; auf dem Handy steht das Angebot nur im Newsletter-Feld. Wortlaut des Kontaktabsatzes hat Dominik am 01.10.2026 festgelegt, einschließlich „unter Beratung erfahrener Mediziner“ (statt „führende Medizinexperten“) und „Die ersten Nutzer können sie kostenlos testen“; beides ist eine bewusste Entscheidung des Betreibers und wird nicht ohne ihn geändert. Zweck: Gespräche in der Prototyp-Phase, um zu verstehen, was Menschen nach dem Absetzen brauchen. Regeln für die Antworten, weil sonst Heilmittelwerberecht und Heilkunde-Vorbehalt greifen:
+
+- Zuhören, einordnen, auf Artikel und Checkliste verweisen, nach dem Bedarf fragen. Keine individuelle medizinische Beratung, keine Dosierungs- oder Absetzempfehlung, keine Diagnose.
+- Nie „unser Arzt sagt“ oder „laut unserem Ärztenetzwerk“. Fachlicher Rat aus dem Netzwerk fließt in Artikel ein, nicht in Einzelantworten.
+- Jede Antwort endet mit dem Pflichtsatz, sobald es um das Medikament geht.
+- Antworten sind kostenlos und ohne Verkaufsabsicht; das Set wird nur erwähnt, wenn danach gefragt wird.
+- Erkenntnisse aus den Gesprächen (anonymisiert, ohne Zitat) kommen in die Themenliste in `docs/REDAKTION.md` als neue Artikelideen.
+
 ## 4. Nachweis und Abmeldung
 
 Tally speichert je Antwort den Zeitpunkt und den Wortlaut der Felder; das ist der Nachweis der ersten Einwilligung. Die Bestätigung (Double-Opt-in) protokolliert MailerLite. Abmeldungen laufen über den Link in jeder Mail; Abmeldewünsche per E-Mail an `hallo@` von Hand in MailerLite austragen und in Tally die Antwort löschen.

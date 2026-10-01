@@ -1,0 +1,131 @@
+---
+/**
+ * /abnehmspritze-kosten/: die monatliche Preiserhebung aus dem Marktradar als eigene, zitierfähige Seite.
+ * Datenquelle ist ausschließlich src/data/markt/preise.json (pflegt Dominik, mit `stand`) und kassen.json; die Seite
+ * rechnet daraus Jahreskosten als Größenordnung. Keine Bezugsquellen, keine Preisberatung, kein Vergleich mit dem Set.
+ */
+import Base from '../../layouts/Base.astro';
+import Faq from '../../components/Faq.astro';
+import { site } from '../../data/site';
+import { preise, kassen, fmtDate } from '../../data/markt';
+
+const MONATE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+const [jahr, monat] = preise.stand.split('-').map(Number);
+const monatJahr = `${MONATE[monat - 1]} ${jahr}`;
+const eur = (n: number) => n.toLocaleString('de-DE');
+
+/** Jahr rechnerisch: Pens, die vier Wochen reichen, × 13; Tabletten (30 Stück) und Saxenda (etwa 30 Tage) × 12. */
+const rows = preise.zeilen.map((z) => {
+  const monatEur = Number(String(z.monat).replace(/[^0-9]/g, ''));
+  const faktor = /Tablette|Saxenda/.test(z.praeparat) ? 12 : 13;
+  return { ...z, monatEur, faktor, jahrEur: monatEur * faktor };
+});
+const minMonat = Math.min(...rows.map((r) => r.monatEur));
+const maxMonat = Math.max(...rows.map((r) => r.monatEur));
+const minJahr = Math.min(...rows.map((r) => r.jahrEur));
+const maxJahr = Math.max(...rows.map((r) => r.jahrEur));
+
+const title = `Abnehmspritze: Kosten pro Monat und Jahr, Stand ${monatJahr}`;
+const description = `Was Abnehmspritzen und die Abnehmtablette Selbstzahler kosten: ca. ${eur(minMonat)} bis ${eur(maxMonat)} € im Monat, rechnerisch ${eur(minJahr)} bis ${eur(maxJahr)} € im Jahr. Mit Kassenregeln, Methodik und Quelle, monatlich aktualisiert.`;
+const path = '/abnehmspritze-kosten/';
+const url = `${site.url}${path}`;
+const published = '2026-10-01';
+
+const faq = [
+  {
+    q: 'Zahlt die Krankenkasse die Abnehmspritze?',
+    a: `<p>${kassen.regeln[0]?.regel ?? ''}</p><p>${kassen.regeln[1]?.regel ?? ''}</p>`,
+  },
+  {
+    q: 'Warum stehen hier nur Größenordnungen?',
+    a: '<p>Apothekenverkaufspreise unterscheiden sich zwischen Apotheken und ändern sich. Wir nehmen den niedrigsten Versandpreis aus dem Preisvergleich, runden auf 5 € und nennen das Datum. Für eine Kaufentscheidung ist der tagesaktuelle Preis der Apotheke maßgeblich; Bezugsquellen nennen wir nicht.</p>',
+  },
+  {
+    q: 'Wie sind die Jahreskosten gerechnet?',
+    a: '<p>Ein Pen reicht bei den Spritzen vier Wochen, deshalb Monatspreis mal 13. Tabletten kommen in Packungen zu 30 Stück, Saxenda-Pens reichen etwa 30 Tage; dort Monatspreis mal 12. Dosissteigerungen am Anfang und Pausen sind nicht eingerechnet; die Spanne zeigt die Größenordnung.</p>',
+  },
+];
+
+const jsonLd = [
+  {
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    headline: title,
+    description,
+    inLanguage: 'de-DE',
+    url,
+    mainEntityOfPage: url,
+    datePublished: new Date(published).toISOString(),
+    dateModified: new Date(preise.stand).toISOString(),
+    author: { '@type': 'Person', name: site.owner.name, url: `${site.url}/ueber/` },
+    publisher: { '@id': `${site.url}/#organization` },
+    image: [`${site.url}/grafiken/preise-im-monat.png`],
+    about: { '@type': 'Thing', name: 'Kosten von GLP-1-Rezeptoragonisten in Deutschland' },
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Start', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Marktradar', item: `${site.url}/marktradar/` },
+      { '@type': 'ListItem', position: 3, name: 'Kosten', item: url },
+    ],
+  },
+];
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd} ogType="article" ogImage="/grafiken/preise-im-monat.png" publishedTime={new Date(published).toISOString()} modifiedTime={new Date(preise.stand).toISOString()}>
+  <article class="container-narrow py-12">
+    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › <a href="/marktradar/" class="hover:text-moss">Marktradar</a> › Kosten</nav>
+    <p class="eyebrow mt-6">Preise · Stand {fmtDate(preise.stand)} · monatlich aktualisiert</p>
+    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">Was Abnehmspritzen kosten: Preise im Monat und im Jahr</h1>
+    <p class="mt-4 text-lg text-ink-2">
+      Selbstzahlerpreise für die zugelassenen Abnehmspritzen und die Abnehmtablette in Deutschland, als Größenordnung aus dem Preisvergleich, mit Datum und Quelle. Die Tabelle darf mit Nennung „nachderspritze.de“ zitiert werden.
+    </p>
+    <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+
+    <div class="prose-site mt-8">
+      <blockquote>
+        <p><strong>Kurz gesagt:</strong> Je nach Präparat und Dosis kostet die Therapie Selbstzahler etwa {eur(minMonat)} bis {eur(maxMonat)} € im Monat, rechnerisch {eur(minJahr)} bis {eur(maxJahr)} € im Jahr. Gesetzliche Kassen zahlen bei Adipositas ohne Diabetes nicht; bei Typ-2-Diabetes sind Ozempic und Mounjaro in der zugelassenen Indikation Kassenleistung.</p>
+      </blockquote>
+
+      <h2 id="tabelle">Preise je Präparat, Stand {fmtDate(preise.stand)}</h2>
+      <p>{preise.hinweis}</p>
+    </div>
+
+    <div class="mt-4 overflow-x-auto rounded-xl2 border border-line bg-white">
+      <table class="w-full min-w-[640px] text-left text-sm">
+        <thead class="bg-paper-2 text-xs font-semibold uppercase tracking-wide text-ink-3">
+          <tr><th class="px-4 py-3">Präparat</th><th class="px-4 py-3">pro Monat</th><th class="px-4 py-3">pro Jahr, rechnerisch</th><th class="px-4 py-3">Hinweis</th></tr>
+        </thead>
+        <tbody class="divide-y divide-line">
+          {rows.map((r) => (
+            <tr class="align-top"><td class="px-4 py-3 font-semibold text-ink">{r.praeparat}</td><td class="px-4 py-3 text-ink-2">{r.monat}</td><td class="px-4 py-3 text-ink-2">ca. {eur(r.jahrEur)} € <span class="text-ink-3">(× {r.faktor})</span></td><td class="px-4 py-3 text-ink-2">{r.hinweis}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-3 text-sm text-ink-3">Quelle: {preise.quelle}. Jahr rechnerisch: Monatspreis × 13 bei Pens, die vier Wochen reichen, × 12 bei Tabletten (30 Stück) und Saxenda (etwa 30 Tage). Dosissteigerung und Pausen nicht eingerechnet.</p>
+
+    <figure class="mt-8">
+      <img src="/grafiken/preise-im-monat.png" alt={`Balkendiagramm der monatlichen Selbstzahlerpreise als Größenordnung, Stand ${fmtDate(preise.stand)}: ${preise.zeilen.map((z) => `${z.praeparat} ${z.monat}`).join('; ')}.`} width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+      <figcaption class="mt-2 text-sm text-ink-3">Dieselben Zahlen als Grafik; frei verwendbar mit Quellenangabe (CC BY 4.0), Download unter <a href="/grafiken/#preise-im-monat" class="font-semibold text-moss underline underline-offset-4">Grafiken</a>.</figcaption>
+    </figure>
+
+    <div class="prose-site mt-10">
+      <h2 id="kassen">Was die Krankenkassen zahlen, Stand {fmtDate(kassen.stand)}</h2>
+      <dl>
+        {kassen.regeln.map((k) => (<><dt><strong>{k.gruppe}</strong></dt><dd>{k.regel}</dd></>))}
+      </dl>
+
+      <h2 id="methodik">Methodik</h2>
+      <p>Die Preise stammen aus dem Preisvergleich medipreis.de (niedrigster Versandpreis am Stichtag) und, für die Tablette, aus Presseberichten zum Marktstart; mit „Anbieterangabe“ markierte Zeilen stammen von Anbieterseiten und werden bei der nächsten Erhebung gegen den Preisvergleich geprüft. Beträge sind auf 5 € gerundet. Die Erhebung läuft einmal im Monat; das Datum steht oben und in jeder Zeile. Was wir nicht liefern: Bezugsquellen, Preisberatung, Empfehlungen für oder gegen ein Präparat. Der laufende Überblick zu Zulassungen, Lieferbarkeit und Kassenregeln steht im <a href="/marktradar/">Marktradar</a>.</p>
+
+      <h2 id="zitieren">So zitierst du diese Seite</h2>
+      <p>„Nach der Spritze: Was Abnehmspritzen kosten, Stand {fmtDate(preise.stand)}, nachderspritze.de/abnehmspritze-kosten/“. Die Tabelle und die Grafik dürfen mit dieser Nennung übernommen werden; bei Fragen zur Erhebung: <a href={`mailto:${site.owner.email}`}>{site.owner.email}</a>.</p>
+
+      <h2 id="danach">Und nach der letzten Dosis?</h2>
+      <p>Kosten sind der häufigste Grund, die Therapie zu beenden. Was danach mit Appetit, Gewicht und Blutwerten passiert, Woche für Woche, steht unter <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a>; den Vergleich von Tablette und Spritze unter <a href="/wissen/abnehmpille-oder-spritze/">Abnehmpille oder Spritze</a>.</p>
+    </div>
+
+    <Faq items={faq} id="kosten-faq" title="Häufige Fragen zu den Kosten" />
+  </article>
+</Base>

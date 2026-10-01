@@ -8,19 +8,21 @@ order: 11
 pubDate: 2026-09-30
 updatedDate: 2026-10-01
 keywords: ["nach der abnehmspritze ernährung", "ernährung nach abnehmspritze", "abnehmspritze ernährung danach", "was essen nach abnehmspritze", "ernährungsplan nach abnehmspritze", "ernährung nach wegovy", "abnehmspritze ernährung umstellen"]
-sources: ["wu2025", "sumithran2011", "leidy2015", "almandoz2024", "dgeBallaststoffe", "dgeEmpfehlungen", "wilding2022ext", "jensen2024"]
+sources: ["wu2025", "sumithran2011", "leidy2015", "almandoz2024", "dgeBallaststoffe", "dgeEmpfehlungen", "wilding2022ext", "jensen2024", "bls"]
 related: ["protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze", "supplements-nach-abnehmspritze"]
 faq:
   - q: "Muss ich nach der Abnehmspritze Kalorien zählen?"
     a: "<p>Nicht dauerhaft. Wirksamer ist eine Struktur, die mit normalem Hunger funktioniert: Protein zuerst, Gemüse bei jeder Mahlzeit, drei bis vier feste Mahlzeiten, keine Flüssigkalorien. Wer zwei Wochen lang zählt, bekommt ein Gefühl für Portionen ohne Spritze; danach reicht die wöchentliche Waage.</p>"
   - q: "Wie viele Kalorien brauche ich nach dem Absetzen?"
     a: "<p>Weniger als vor der Therapie, weil ein leichterer Körper weniger verbraucht und der Stoffwechsel nach Gewichtsverlust zusätzlich gedrosselt ist. Eine pauschale Zahl gibt es nicht. Praktisch: Mahlzeiten so groß, dass du satt wirst, aber mit Protein und Gemüse als Basis; die Waage einmal pro Woche zeigt, ob es passt.</p>"
-  - q: "Darf ich nach der Abnehmspritze wieder alles essen?"
-    a: "<p>Es gibt keine verbotenen Lebensmittel. Der Unterschied zur Zeit unter der Spritze: Der Appetit bremst nicht mehr automatisch. Was vorher mit kleinen Portionen funktioniert hat, funktioniert jetzt nur mit Struktur. Süßes und Alkohol sind die zwei Bereiche, in denen die Kalorien am schnellsten unbemerkt steigen.</p>"
+  - q: "Was sollte man nach der Abnehmspritze nicht essen?"
+    a: "<p>Verbotene Lebensmittel gibt es nicht; es gibt drei Dinge, die das Gewicht am schnellsten zurückbringen, weil der Appetit jetzt nicht mehr automatisch bremst: Flüssigkalorien (Alkohol, Säfte, Softdrinks, Milchkaffee), Snacks ohne Protein zwischen den Mahlzeiten und sehr große Portionen am Abend, wenn der Hunger am lautesten ist. Was vorher mit kleinen Portionen funktioniert hat, funktioniert jetzt nur mit Struktur: Protein zuerst, Gemüse bei jeder Mahlzeit, feste Essenszeiten.</p>"
   - q: "Hilft Intervallfasten nach der Abnehmspritze?"
     a: "<p>Für manche ja, weil es Struktur gibt. Für Menschen, die unter der Spritze ohnehin wenig gegessen haben, ist das Risiko, dass die Proteinmenge zu niedrig bleibt. Wenn Intervallfasten, dann mit Protein in jeder Essphase und ohne sehr lange Fenster.</p>"
   - q: "Zahlt die Krankenkasse eine Ernährungsberatung?"
     a: "<p>Viele gesetzliche Kassen bezuschussen eine Ernährungstherapie nach § 43 SGB V, wenn eine ärztliche Notwendigkeitsbescheinigung vorliegt. Frag deine Ärztin nach der Bescheinigung und deine Kasse nach zertifizierten Beraterinnen.</p>"
+  - q: "Was frühstücken nach der Abnehmspritze?"
+    a: "<p>Ein Frühstück mit mindestens 25 g Protein, weil dort am häufigsten Protein fehlt und der Heißhunger am Nachmittag dann vorprogrammiert ist. Beispiele: 200 g Skyr oder Magerquark mit Beeren und Haferflocken (rund 23 g Protein aus dem Skyr), zwei Eier mit Vollkornbrot und Hüttenkäse (rund 20 g), oder ein Porridge mit Milch, Quark und Nüssen. Wer morgens keinen Hunger hat, verschiebt das Frühstück, lässt es aber nicht ausfallen.</p>"
 ---
 
 Unter der Spritze war Ernährung einfach: Der Appetit hat die Portionen begrenzt. Nach dem Absetzen ist genau das weg. Dieser Artikel beschreibt, was sich ändert, welche fünf Regeln mit normalem Hunger funktionieren, und wie ein Tag damit aussieht. Was unter der Therapie gilt, steht im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/); hier geht es um die Zeit danach. Was in den ersten Wochen nach der letzten Dosis insgesamt passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).

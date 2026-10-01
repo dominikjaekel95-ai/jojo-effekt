@@ -59,9 +59,9 @@ export const affiliate = {
       hint: '500 µg B12 pro Tropfen (Methyl- und Adenosylcobalamin), vegan. Das liegt deutlich über den 25 µg, die das BfR für Nahrungsergänzung empfiehlt; hohe Dosen sind bei einem Mangel üblich, den der Blutwert zeigt. Vitamin B12 trägt zur Verringerung von Müdigkeit bei.',
     },
     vitaminD3Drops: {
-      name: "Dr. Jacob's Vitamin D3 K2 Öl, 20 ml",
-      asin: 'B016RCXAHE',
-      hint: '800 I.E. (20 µg) Vitamin D3 plus 20 µg K2 pro Tropfen; 20 µg entsprechen der Höchstmenge, die das BfR für Nahrungsergänzung empfiehlt. Vitamin D trägt zur Erhaltung normaler Knochen und einer normalen Muskelfunktion bei.',
+      name: "Dr. Jacob's Vitamin D3 Öl forte, 20 ml",
+      asin: 'B076DC1FCT',
+      hint: '2000 I.E. (50 µg) Vitamin D3 pro Tropfen, ohne K2. Das ist das Zweieinhalbfache der 20 µg, die das BfR für Nahrungsergänzung als Höchstmenge empfiehlt; so hohe Dosen gehören zu einem ärztlich festgestellten Mangel und in die dort genannte Menge. Vitamin D trägt zur Erhaltung normaler Knochen und einer normalen Muskelfunktion bei.',
     },
     omega3Fish: {
       name: 'natural elements Omega 3 Fischöl, 365 Kapseln',

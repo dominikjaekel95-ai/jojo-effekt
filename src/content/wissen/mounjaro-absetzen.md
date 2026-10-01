@@ -19,8 +19,10 @@ faq:
     a: "<p>Die Fachinformation sieht kein Ausschleichen vor; SURMOUNT-4 hat abrupt auf Placebo gewechselt, ohne Entzugserscheinungen. Mit sechs Dosisstufen ist ein schrittweises Reduzieren technisch möglich. Ob es sinnvoll ist, entscheidet deine Ärztin; ein Beleg für einen kleineren Jojo-Effekt fehlt.</p>"
   - q: "Ist der Jojo-Effekt nach Mounjaro stärker als nach Wegovy?"
     a: "<p>In Prozentpunkten ja, weil der Verlust vorher größer ist: In SURMOUNT-5 verloren Teilnehmende unter Tirzepatid 20,2 %, unter Semaglutid 13,7 %. Mehr Verlust heißt mehr, das zurückkommen kann. Der Anteil, der zurückkommt, ist in den Studien ähnlich: rund zwei Drittel innerhalb eines Jahres.</p>"
-  - q: "Kann ich nach dem Absetzen wieder mit Mounjaro anfangen?"
-    a: "<p>Medizinisch ja. Nach einer längeren Pause wird die Dosis in der Regel wieder aufgebaut, um Magen-Darm-Nebenwirkungen zu begrenzen. Ob, wann und wie, legt deine Ärztin oder dein Arzt fest.</p>"
+  - q: "Was passiert mit dem Körper, wenn man Mounjaro absetzt?"
+    a: "<p>Tirzepatid ist nach rund 25 Tagen weitgehend abgebaut; der Appetit kommt früher zurück, der Magen entleert sich wieder schneller, Übelkeit und Völlegefühl lassen nach. Ein Entzugssyndrom gibt es nicht. In SURMOUNT-4 stieg das Gewicht nach dem Wechsel auf Placebo in 52 Wochen um etwa 14 %, und Blutzucker, Blutdruck und Blutfette bewegten sich mit dem Gewicht zurück Richtung Ausgangswert. Bei Typ-2-Diabetes gehört die übrige Therapie dann angepasst, deshalb nur in Absprache mit der Ärztin.</p>"
+  - q: "Kann ich Mounjaro absetzen, ohne zuzunehmen?"
+    a: "<p>Ganz ohne Zunahme selten, aber mit deutlich weniger: In SURMOUNT-4 blieb das Gewicht ein Jahr nach dem Wechsel auf Placebo im Mittel noch knapp 10 % unter dem Start. Was den Unterschied macht, ist in Studien belegt: Krafttraining schon während der Therapie (in der S-LiTE-Studie 6,0 kg weniger Zunahme im Jahr nach Therapieende als nach dem Medikament allein), 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag und ein fester Wiegetag mit vorher festgelegter Reaktionsschwelle. Den Jojo-Effekt verhindert das nicht vollständig, es verkleinert ihn.</p>"
 ---
 
 Mounjaro ist die Abnehmspritze mit dem größten Gewichtsverlust in den Zulassungsstudien. Genau das macht das Absetzen zum Thema: Je mehr verloren wurde, desto mehr kann zurückkommen. Hier steht, was für Tirzepatid spezifisch ist. Die Grundlagen für alle Abnehmspritzen stehen im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).

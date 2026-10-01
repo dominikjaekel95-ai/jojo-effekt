@@ -11,14 +11,16 @@ related: ["abnehmspritze-absetzen", "ernaehrung-nach-abnehmspritze", "gewicht-ha
 faq:
   - q: "Wie lange dauert der Heißhunger nach dem Absetzen?"
     a: "<p>Der Appetit kommt zurück, sobald der Wirkstoff abgebaut ist: bei Semaglutid und Tirzepatid innerhalb von zwei bis sechs Wochen, bei Liraglutid innerhalb von Tagen. Die hormonellen Anpassungen nach Gewichtsverlust bleiben länger; in einer Studie waren sie ein Jahr nach der Diät noch messbar. Mit Struktur wird der Heißhunger in den meisten Fällen nach einigen Wochen leiser, weg ist er nicht.</p>"
-  - q: "Ist Heißhunger nach der Abnehmspritze ein Zeichen, dass ich sie wieder brauche?"
-    a: "<p>Nicht zwingend. Heißhunger ist die normale Reaktion des Körpers auf Gewichtsverlust plus wegfallende Appetitbremse. Wenn er trotz Protein, Ballaststoffen, Schlaf und fester Mahlzeitenstruktur nach Wochen unverändert stark ist oder in Essanfälle mündet, ist das ein Grund für ein Gespräch mit deiner Ärztin oder deinem Arzt, auch über einen Wiedereinstieg.</p>"
+  - q: "Warum habe ich trotz Abnehmspritze Hunger?"
+    a: "<p>Auch unter der Therapie ist Appetit normal: Die Medikamente dämpfen ihn, sie schalten ihn nicht ab, und in den Tagen vor der nächsten Dosis oder bei zu wenig Protein und Schlaf meldet er sich deutlicher. Was sich allgemein sagen lässt: Protein bei jeder Mahlzeit, feste Essenszeiten und genug Schlaf halten den Hunger kleiner, mit und ohne Spritze. Alles, was das Medikament selbst betrifft, etwa Dosis oder Wirkung, besprichst du mit deiner Ärztin oder deinem Arzt.</p>"
   - q: "Hilft mehr Protein wirklich gegen Heißhunger?"
     a: "<p>Ja, das ist einer der am besten belegten Effekte: Protein sättigt pro Kalorie stärker als Kohlenhydrate oder Fett. Übersichtsarbeiten empfehlen beim Abnehmen und Gewichthalten 1,2 bis 1,6 g pro kg Körpergewicht und Tag, verteilt auf die Mahlzeiten. Wer Heißhunger hat, prüft zuerst das Frühstück: Dort fehlt Protein am häufigsten.</p>"
   - q: "Was hat Schlaf mit Heißhunger zu tun?"
     a: "<p>Viel. In einer Studie sanken nach zwei Nächten mit vier Stunden Schlaf das Sättigungshormon Leptin und stieg das Hungerhormon Ghrelin, Hunger und Appetit nahmen zu. Wer nach dem Absetzen schlecht schläft, hat am nächsten Tag messbar mehr Hunger.</p>"
   - q: "Wann ist Heißhunger ein Fall für die Ärztin?"
     a: "<p>Wenn Essanfälle mit Kontrollverlust auftreten, wenn du heimlich isst oder danach Scham empfindest, wenn das Gewicht in vier Wochen um mehr als 3 kg steigt, oder wenn Heißhunger mit Zittern, Schwitzen oder Herzrasen einhergeht, was bei Diabetes auf Unterzucker hinweisen kann.</p>"
+  - q: "Warum habe ich Hunger auf Süßes?"
+    a: "<p>Weil nach Gewichtsverlust die Hungerhormone verschoben bleiben und der Körper schnelle Energie bevorzugt; in einer Studie waren diese Veränderungen ein Jahr nach einer Diät noch messbar. Dazu kommen zu wenig Schlaf, der Ghrelin steigen und Leptin sinken lässt, und Mahlzeiten ohne Protein, nach denen der Blutzucker schneller fällt. Was hilft: Protein zuerst bei jeder Mahlzeit, ein Frühstück mit mindestens 25 g Protein, Süßes geplant nach einer Mahlzeit statt verboten, und sieben Stunden Schlaf.</p>"
 ---
 
 Unter der Spritze war Essen eine Nebensache. Ein paar Wochen nach der letzten Dosis ist es plötzlich das Hauptthema: Gedanken ans Essen, Lust auf Süßes und Salziges, ein Hunger, der sich anders anfühlt als vor der Therapie. Das ist kein Charakterfehler, sondern Biologie, und man kann damit umgehen. Hier steht, was passiert und was hilft. Der Gesamtverlauf nach der letzten Dosis steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).

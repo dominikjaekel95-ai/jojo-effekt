@@ -21,7 +21,7 @@ faq:
     a: "<p>Wenn Essanfälle mit Kontrollverlust auftreten, wenn du heimlich isst oder danach Scham empfindest, wenn das Gewicht in vier Wochen um mehr als 3 kg steigt, oder wenn Heißhunger mit Zittern, Schwitzen oder Herzrasen einhergeht, was bei Diabetes auf Unterzucker hinweisen kann.</p>"
 ---
 
-Unter der Spritze war Essen eine Nebensache. Ein paar Wochen nach der letzten Dosis ist es plötzlich das Hauptthema: Gedanken ans Essen, Lust auf Süßes und Salziges, ein Hunger, der sich anders anfühlt als vor der Therapie. Das ist kein Charakterfehler, sondern Biologie, und man kann damit umgehen. Hier steht, was passiert und was hilft.
+Unter der Spritze war Essen eine Nebensache. Ein paar Wochen nach der letzten Dosis ist es plötzlich das Hauptthema: Gedanken ans Essen, Lust auf Süßes und Salziges, ein Hunger, der sich anders anfühlt als vor der Therapie. Das ist kein Charakterfehler, sondern Biologie, und man kann damit umgehen. Hier steht, was passiert und was hilft. Der Gesamtverlauf nach der letzten Dosis steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** Heißhunger nach dem Absetzen hat zwei Ursachen: Die Appetitbremse fällt weg, und die Hormone stehen nach Gewichtsverlust auf „Nachfüllen“. Was hilft: Protein zuerst, Volumen, feste Mahlzeiten, Schlaf, keine Flüssigkalorien, Trigger kennen, Krafttraining. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
 

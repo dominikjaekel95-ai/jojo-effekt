@@ -6,11 +6,11 @@ category: "Ernährung"
 order: 25
 pubDate: 2026-10-01
 keywords: ["haarausfall abnehmspritze", "haarausfall ozempic", "haarausfall wegovy", "haarausfall mounjaro", "abnehmspritze haare", "haarausfall nach abnehmspritze", "haarausfall schnell abnehmen", "haarausfall abnehmen was tun"]
-sources: ["malkud2015", "fachinfoWegovy", "leidy2015", "euClaims", "dgeReferenzwerte", "almandoz2024", "nvs2", "bfrHoechstmengen2021", "bls"]
+sources: ["malkud2015", "leidy2015", "euClaims", "dgeReferenzwerte", "almandoz2024", "nvs2", "bfrHoechstmengen2021", "bls"]
 related: ["protein-abnehmspritze", "eisen-abnehmspritze", "abnehmspritze-gesicht"]
 faq:
   - q: "Ist Haarausfall eine Nebenwirkung der Abnehmspritze?"
-    a: "<p>Die Fachinformation von Wegovy führt Haarausfall unter den häufigen Nebenwirkungen auf. Ob die Haare wegen des Wirkstoffs oder wegen des schnellen Gewichtsverlusts ausfallen, lässt sich aus einer Häufigkeitsangabe nicht ablesen. Das Muster, verzögert, diffus, vorübergehend, entspricht dem telogenen Effluvium, das nach jedem schnellen Gewichtsverlust auftreten kann. Fragen zum Medikament gehören zu deiner Ärztin.</p>"
+    a: "<p>In Einzelfällen wird Haarausfall unter der Abnehmspritze berichtet. Ob dann das Medikament oder der schnelle Gewichtsverlust der Auslöser ist, lässt sich von außen nicht unterscheiden. Das Muster, verzögert, diffus, vorübergehend, entspricht dem telogenen Effluvium, das nach jedem schnellen Gewichtsverlust auftreten kann. Fragen zum Medikament gehören zu deiner Ärztin.</p>"
   - q: "Wie lange dauert der Haarausfall?"
     a: "<p>Beim telogenen Effluvium beginnt der Ausfall zwei bis drei Monate nach dem Auslöser und klingt in der Regel innerhalb von etwa sechs Monaten ab, sobald der Auslöser wegfällt. Weil die Haare mit Verzögerung ausfallen, beginnt es oft erst, wenn die Abnahme schon langsamer geworden ist.</p>"
   - q: "Hilft Biotin gegen den Haarausfall?"
@@ -21,19 +21,19 @@ faq:
     a: "<p>Beim telogenen Effluvium ja, weil die Haarwurzeln erhalten bleiben; es dauert nur, bis die nachwachsenden Haare die alte Länge erreichen. Hält der Ausfall länger als sechs Monate an, ist er fleckig oder kommen Müdigkeit und Frieren dazu, gehört er abgeklärt: Eisen, Schilddrüse, erblicher Haarausfall.</p>"
 ---
 
-Haarausfall gehört zu den Sorgen, nach denen am häufigsten zusammen mit der Abnehmspritze gesucht wird, und die Antwort ist in den meisten Fällen beruhigend: Es handelt sich um ein telogenes Effluvium, einen verzögerten, diffusen und vorübergehenden Haarausfall, wie er nach jedem schnellen Gewichtsverlust auftreten kann. Dieser Artikel erklärt den Mechanismus, den Zeitplan, was sich beeinflussen lässt und wann der Ausfall ärztlich abgeklärt gehört. Er bewertet das Medikament nicht; die Fachinformation wird einmal zitiert, mehr nicht.
+Haarausfall gehört zu den Sorgen, nach denen am häufigsten zusammen mit der Abnehmspritze gesucht wird, und die Antwort ist in den meisten Fällen beruhigend: Es handelt sich um ein telogenes Effluvium, einen verzögerten, diffusen und vorübergehenden Haarausfall, wie er nach jedem schnellen Gewichtsverlust auftreten kann. Dieser Artikel erklärt den Mechanismus, den Zeitplan, was sich beeinflussen lässt und wann der Ausfall ärztlich abgeklärt gehört. Er bewertet das Medikament nicht.
 
-> **Kurz gesagt:** Beim telogenen Effluvium beginnt der Haarausfall zwei bis drei Monate nach dem Auslöser und klingt in der Regel innerhalb von etwa sechs Monaten ab.<sup><a href="#fn-malkud2015">1</a></sup> Schneller Gewichtsverlust ist ein bekannter Auslöser; unter der Spritze kommen Versorgungslücken bei Protein und Eisen dazu.<sup><a href="#fn-almandoz2024">6</a></sup> Beeinflussen lässt sich die Versorgung: 1,2 bis 1,6 g Protein pro kg Körpergewicht<sup><a href="#fn-leidy2015">3</a></sup> und ein Blick auf den Eisenwert. Kein Präparat lässt Haare schneller wachsen als normal.
+> **Kurz gesagt:** Beim telogenen Effluvium beginnt der Haarausfall zwei bis drei Monate nach dem Auslöser und klingt in der Regel innerhalb von etwa sechs Monaten ab.<sup><a href="#fn-malkud2015">1</a></sup> Schneller Gewichtsverlust ist ein bekannter Auslöser; unter der Spritze kommen Versorgungslücken bei Protein und Eisen dazu.<sup><a href="#fn-almandoz2024">5</a></sup> Beeinflussen lässt sich die Versorgung: 1,2 bis 1,6 g Protein pro kg Körpergewicht<sup><a href="#fn-leidy2015">2</a></sup> und ein Blick auf den Eisenwert. Kein Präparat lässt Haare schneller wachsen als normal.
 
 ## Warum Haare ausfallen: das telogene Effluvium
 
 Haare wachsen in Zyklen: eine lange Wachstumsphase, eine kurze Ruhephase, dann fällt das Haar aus, und ein neues wächst nach. Normalerweise sind die Zyklen der einzelnen Haare gegeneinander verschoben, deshalb fällt der tägliche Verlust nicht auf. Ein Auslöser kann viele Haare gleichzeitig in die Ruhephase schicken; zwei bis drei Monate später fallen sie gemeinsam aus. Das ist das telogene Effluvium.<sup><a href="#fn-malkud2015">1</a></sup> Zu den bekannten Auslösern gehören schneller Gewichtsverlust und stark kalorienreduzierte Diäten, außerdem fieberhafte Erkrankungen, Operationen, Geburt, Eisenmangel, Schilddrüsenstörungen und einige Medikamente.<sup><a href="#fn-malkud2015">1</a></sup>
 
-Unter der Spritze treffen zwei Auslöser zusammen: Das Gewicht sinkt schnell, und bei kleinen Portionen fehlen oft Protein, Eisen und andere Nährstoffe. Die Expertengruppe um Almandoz zählt genau diese Versorgungslücken zu den Punkten, auf die unter Adipositas-Medikamenten geachtet werden sollte.<sup><a href="#fn-almandoz2024">6</a></sup> Der Ausfall ist diffus, also über den ganzen Kopf verteilt, nicht in Flecken; die Haarwurzeln bleiben erhalten.
+Unter der Spritze treffen zwei Auslöser zusammen: Das Gewicht sinkt schnell, und bei kleinen Portionen fehlen oft Protein, Eisen und andere Nährstoffe. Die Expertengruppe um Almandoz zählt genau diese Versorgungslücken zu den Punkten, auf die unter Adipositas-Medikamenten geachtet werden sollte.<sup><a href="#fn-almandoz2024">5</a></sup> Der Ausfall ist diffus, also über den ganzen Kopf verteilt, nicht in Flecken; die Haarwurzeln bleiben erhalten.
 
-## Was die Fachinformation sagt
+## Spritze oder Gewichtsverlust?
 
-Die Fachinformation von Wegovy führt Haarausfall (Alopezie) unter den häufigen Nebenwirkungen auf, also bei 1 bis 10 von 100 Behandelten.<sup><a href="#fn-fachinfoWegovy">2</a></sup> Ob die Haare wegen des Wirkstoffs oder wegen des schnellen Gewichtsverlusts ausfallen, lässt sich aus einer Häufigkeitsangabe nicht ablesen; das Muster, verzögert, diffus, vorübergehend, entspricht dem telogenen Effluvium. Mehr sagen wir dazu nicht: Für Fragen zum Medikament, zur Dosis oder zu einer Pause ist deine Ärztin oder dein Arzt zuständig.
+In Einzelfällen wird Haarausfall unter der Abnehmspritze berichtet. Ob dann das Medikament oder der schnelle Gewichtsverlust der Auslöser ist, lässt sich von außen nicht unterscheiden; das Muster, verzögert, diffus, vorübergehend, entspricht in beiden Fällen dem telogenen Effluvium, und die Haarwurzeln bleiben erhalten. Mehr sagen wir dazu nicht: Für Fragen zum Medikament, zur Dosis oder zu einer Pause ist deine Ärztin oder dein Arzt zuständig.
 
 ## Der Zeitplan
 
@@ -51,15 +51,15 @@ Die Verzögerung erklärt, warum der Haarausfall oft erst auffällt, wenn die Ab
 
 ### Protein
 
-Haare bestehen aus Keratin, einem Protein. Für Gewichtsabnahme und -erhalt werden 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag empfohlen;<sup><a href="#fn-leidy2015">3</a></sup> unter der Spritze landen viele weit darunter, weil der Appetit die Portionen bestimmt. Eine Proteinverteilung über drei Mahlzeiten ist der einfachste Weg, die Menge zu erreichen. Wie viel das pro Mahlzeit ist, steht unter [Protein nach der Abnehmspritze](/wissen/protein-abnehmspritze/).
+Haare bestehen aus Keratin, einem Protein. Für Gewichtsabnahme und -erhalt werden 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag empfohlen;<sup><a href="#fn-leidy2015">2</a></sup> unter der Spritze landen viele weit darunter, weil der Appetit die Portionen bestimmt. Eine Proteinverteilung über drei Mahlzeiten ist der einfachste Weg, die Menge zu erreichen. Wie viel das pro Mahlzeit ist, steht unter [Protein nach der Abnehmspritze](/wissen/protein-abnehmspritze/).
 
 ### Eisen
 
-Eisenmangel ist ein eigener Auslöser des telogenen Effluviums.<sup><a href="#fn-malkud2015">1</a></sup> In der Nationalen Verzehrsstudie lagen 58 % der Frauen unter der empfohlenen Eisenzufuhr, lange vor der Spritze.<sup><a href="#fn-nvs2">7</a></sup> Wer unter der Spritze wenig Fleisch und Hülsenfrüchte isst und zusätzlich Haare verliert, lässt Ferritin und Blutbild prüfen, bevor irgendein Präparat ins Spiel kommt. Warum Eisen nie auf Verdacht genommen wird, steht unter [Eisen bei der Abnehmspritze](/wissen/eisen-abnehmspritze/).
+Eisenmangel ist ein eigener Auslöser des telogenen Effluviums.<sup><a href="#fn-malkud2015">1</a></sup> In der Nationalen Verzehrsstudie lagen 58 % der Frauen unter der empfohlenen Eisenzufuhr, lange vor der Spritze.<sup><a href="#fn-nvs2">6</a></sup> Wer unter der Spritze wenig Fleisch und Hülsenfrüchte isst und zusätzlich Haare verliert, lässt Ferritin und Blutbild prüfen, bevor irgendein Präparat ins Spiel kommt. Warum Eisen nie auf Verdacht genommen wird, steht unter [Eisen bei der Abnehmspritze](/wissen/eisen-abnehmspritze/).
 
 ### Zink, Biotin, Selen: nur bei Lücke
 
-Für Haare sind in der EU unter anderem diese Angaben zugelassen:<sup><a href="#fn-euClaims">4</a></sup> Zink, Biotin und Selen tragen zur Erhaltung normaler Haare bei. Keine Angabe spricht von Haarwachstum oder von weniger Haarausfall; die Angaben sagen, dass die Haare ohne ausreichende Versorgung nicht normal bleiben. Die DGE setzt für Zink 7 bis 10 mg (Frauen) bzw. 11 bis 16 mg (Männer) am Tag an, je nach Phytatgehalt der Ernährung, für Biotin 40 µg.<sup><a href="#fn-dgeReferenzwerte">5</a></sup>
+Für Haare sind in der EU unter anderem diese Angaben zugelassen:<sup><a href="#fn-euClaims">3</a></sup> Zink, Biotin und Selen tragen zur Erhaltung normaler Haare bei. Keine Angabe spricht von Haarwachstum oder von weniger Haarausfall; die Angaben sagen, dass die Haare ohne ausreichende Versorgung nicht normal bleiben. Die DGE setzt für Zink 7 bis 10 mg (Frauen) bzw. 11 bis 16 mg (Männer) am Tag an, je nach Phytatgehalt der Ernährung, für Biotin 40 µg.<sup><a href="#fn-dgeReferenzwerte">4</a></sup>
 
 | Lebensmittel, Portion | Zink, etwa | Biotin, etwa |
 |---|---|---|
@@ -70,13 +70,13 @@ Für Haare sind in der EU unter anderem diese Angaben zugelassen:<sup><a href="#
 | Ei, 1 Stück | 0,7 mg | 10 µg |
 | Erdnüsse, 30 g | 1 mg | 10 µg |
 
-Werte aus dem Bundeslebensmittelschlüssel, gerundet.<sup><a href="#fn-bls">9</a></sup>
+Werte aus dem Bundeslebensmittelschlüssel, gerundet.<sup><a href="#fn-bls">8</a></sup>
 
-Wer Fleisch, Haferflocken, Eier und Kerne isst, deckt Zink und Biotin nebenbei. Das BfR schlägt für Nahrungsergänzungsmittel höchstens 6,5 mg Zink am Tag vor;<sup><a href="#fn-bfrHoechstmengen2021">8</a></sup> „Haarvitamine“ mit einem Vielfachen davon sind nicht wirksamer, nur teurer. Hochdosiertes Biotin hat einen eigenen Haken: Es kann Laborwerte verfälschen, etwa für Schilddrüse und Herzmarker. Wer es nimmt, sagt es vor jeder Blutabnahme.
+Wer Fleisch, Haferflocken, Eier und Kerne isst, deckt Zink und Biotin nebenbei. Das BfR schlägt für Nahrungsergänzungsmittel höchstens 6,5 mg Zink am Tag vor;<sup><a href="#fn-bfrHoechstmengen2021">7</a></sup> „Haarvitamine“ mit einem Vielfachen davon sind nicht wirksamer, nur teurer. Hochdosiertes Biotin hat einen eigenen Haken: Es kann Laborwerte verfälschen, etwa für Schilddrüse und Herzmarker. Wer es nimmt, sagt es vor jeder Blutabnahme.
 
 ### Was nicht hilft
 
-Shampoos und Seren „gegen Haarausfall“ erreichen die Haarwurzel beim telogenen Effluvium nicht; der Auslöser liegt im Körper, nicht auf der Kopfhaut. Für kein Kosmetikprodukt gibt es eine zugelassene Angabe zum Haarwachstum.<sup><a href="#fn-euClaims">4</a></sup> Was hilft, ist unspektakulär: Auslöser beenden, Versorgung sichern, Zeit geben.
+Shampoos und Seren „gegen Haarausfall“ erreichen die Haarwurzel beim telogenen Effluvium nicht; der Auslöser liegt im Körper, nicht auf der Kopfhaut. Für kein Kosmetikprodukt gibt es eine zugelassene Angabe zum Haarwachstum.<sup><a href="#fn-euClaims">3</a></sup> Was hilft, ist unspektakulär: Auslöser beenden, Versorgung sichern, Zeit geben.
 
 ## Nach dem Absetzen
 

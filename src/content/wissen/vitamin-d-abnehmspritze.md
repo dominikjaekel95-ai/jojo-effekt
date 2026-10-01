@@ -55,7 +55,7 @@ Gemessen wird 25-OH-Vitamin-D im Blut. Der Test ist meist eine Selbstzahlerleist
 
 ## Nach dem Absetzen
 
-Der Bedarf bleibt gleich, die Lebensmittelauswahl wird leichter: Mit zurückgekehrtem Appetit kommen Lachs, Hering, Makrele und Eier wieder auf den Teller. Sie liefern einen Teil, nicht alles. Wer die Haltephase mit Krafttraining angeht, hat außerdem einen Grund, öfter draußen zu sein. Die Winterregel bleibt trotzdem: 20 µg von Oktober bis März, es sei denn, der Blutwert sagt etwas anderes.
+Der Bedarf bleibt gleich, die Lebensmittelauswahl wird leichter: Mit zurückgekehrtem Appetit kommen Lachs, Hering, Makrele und Eier wieder auf den Teller. Sie liefern einen Teil, nicht alles. Wer die Haltephase mit Krafttraining angeht, hat außerdem einen Grund, öfter draußen zu sein. Die Winterregel bleibt trotzdem: 20 µg von Oktober bis März, es sei denn, der Blutwert sagt etwas anderes. Wie die Wochen nach der letzten Dosis insgesamt verlaufen, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 ## Wann du zur Ärztin oder zum Arzt gehst
 

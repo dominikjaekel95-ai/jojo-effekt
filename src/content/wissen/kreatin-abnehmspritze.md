@@ -30,7 +30,7 @@ affiliateTitle: "Beispiele für Kreatin-Monohydrat"
 affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke. Es zählt der Rohstoff: reines Kreatin-Monohydrat, 3 g pro Tag, keine Mischungen mit Zusätzen."
 ---
 
-Zu Kreatin und Abnehmspritze gibt es im deutschsprachigen Netz fast nichts, obwohl die Kombination naheliegt: Unter GLP-1-Medikamenten gehen Muskeln verloren, und Kreatin ist das am besten untersuchte Supplement für Kraft und Training. Hier ist der Stand.
+Zu Kreatin und Abnehmspritze gibt es im deutschsprachigen Netz fast nichts, obwohl die Kombination naheliegt: Unter GLP-1-Medikamenten gehen Muskeln verloren, und Kreatin ist das am besten untersuchte Supplement für Kraft und Training. Hier ist der Stand. Was nach der letzten Dosis insgesamt passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** 3 g Kreatin-Monohydrat täglich, zusammen mit Krafttraining. Keine bekannte Wechselwirkung mit der Spritze. In den ersten Wochen steigt das Gewicht durch Wasser um 0,5 bis 2 kg – das ist normal.
 

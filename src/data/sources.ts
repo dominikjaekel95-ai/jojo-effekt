@@ -403,8 +403,8 @@ export const sources: Record<string, Source> = {
   },
   wharton2025oasis4: {
     id: 'wharton2025oasis4',
-    short: 'Wharton et al., OASIS 4, N Engl J Med 2025',
-    full: 'Wharton S, et al. Oral Semaglutide at a Dose of 25 mg in Adults with Overweight or Obesity. N Engl J Med. 2025;393(11):1077–1087.',
+    short: 'OASIS 4, N Engl J Med 2025',
+    full: 'Oral Semaglutide at a Dose of 25 mg in Adults with Overweight or Obesity (OASIS 4). N Engl J Med. 2025;393(11):1077–1087.',
     url: 'https://doi.org/10.1056/NEJMoa2500969',
     note: 'Zulassungsstudie der Semaglutid-Tablette 25 mg: 307 Teilnehmende ohne Diabetes; nach 64 Wochen −13,6 % gegenüber −2,2 % unter Placebo, bei durchgehender Einnahme −16,6 %. Gewichtsdaten nach dem Ende der Einnahme berichtet die Studie nicht.',
   },
@@ -417,8 +417,8 @@ export const sources: Record<string, Source> = {
   },
   wharton2025attain1: {
     id: 'wharton2025attain1',
-    short: 'Wharton et al., ATTAIN-1, N Engl J Med 2025',
-    full: 'Wharton S, et al. Orforglipron, an Oral Small-Molecule GLP-1 Receptor Agonist for Obesity Treatment. N Engl J Med. 2025;393(18):1796–1806.',
+    short: 'ATTAIN-1, N Engl J Med 2025',
+    full: 'Orforglipron, an Oral Small-Molecule GLP-1 Receptor Agonist for Obesity Treatment (ATTAIN-1). N Engl J Med. 2025;393(18):1796–1806.',
     url: 'https://doi.org/10.1056/NEJMoa2511774',
     note: 'Orforglipron (Eli Lilly), 3.127 Teilnehmende ohne Diabetes: nach 72 Wochen −12,4 % unter 36 mg (Wirksamkeitsschätzer) gegenüber Placebo. In der EU nicht zugelassen (Stand September 2026).',
   },

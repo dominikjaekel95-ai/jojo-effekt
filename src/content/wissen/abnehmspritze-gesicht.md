@@ -72,7 +72,7 @@ Filler, Eigenfett, Lifting: Angebote gibt es viele. Ob und wann sie sinnvoll sin
 
 ## Nach dem Absetzen
 
-In der STEP-1-Verlängerung waren ein Jahr nach der letzten Dosis im Mittel zwei Drittel des verlorenen Gewichts wieder da.<sup><a href="#fn-wilding2022ext">9</a></sup> Das Gesicht füllt sich dann wieder, aber das ist der Jojo-Effekt, nicht die Lösung. Die Haltephase hat für die Haut zwei Aufgaben: das Gewicht halten, damit sie Zeit bekommt, und die Körperzusammensetzung schützen, damit die Muskeln bleiben, die unter dem Fett waren. Wie das geht, steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
+In der STEP-1-Verlängerung waren ein Jahr nach der letzten Dosis im Mittel zwei Drittel des verlorenen Gewichts wieder da.<sup><a href="#fn-wilding2022ext">9</a></sup> Das Gesicht füllt sich dann wieder, aber das ist der Jojo-Effekt, nicht die Lösung. Die Haltephase hat für die Haut zwei Aufgaben: das Gewicht halten, damit sie Zeit bekommt, und die Körperzusammensetzung schützen, damit die Muskeln bleiben, die unter dem Fett waren. Wie das geht, steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/). Den Verlauf der ersten Wochen nach der letzten Dosis beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 ## Wann du zur Ärztin oder zum Arzt gehst
 

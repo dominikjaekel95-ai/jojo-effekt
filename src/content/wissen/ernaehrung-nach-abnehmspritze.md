@@ -21,7 +21,7 @@ faq:
     a: "<p>Viele gesetzliche Kassen bezuschussen eine Ernährungstherapie nach § 43 SGB V, wenn eine ärztliche Notwendigkeitsbescheinigung vorliegt. Frag deine Ärztin nach der Bescheinigung und deine Kasse nach zertifizierten Beraterinnen.</p>"
 ---
 
-Unter der Spritze war Ernährung einfach: Der Appetit hat die Portionen begrenzt. Nach dem Absetzen ist genau das weg. Dieser Artikel beschreibt, was sich ändert, welche fünf Regeln mit normalem Hunger funktionieren, und wie ein Tag damit aussieht. Was unter der Therapie gilt, steht im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/); hier geht es um die Zeit danach.
+Unter der Spritze war Ernährung einfach: Der Appetit hat die Portionen begrenzt. Nach dem Absetzen ist genau das weg. Dieser Artikel beschreibt, was sich ändert, welche fünf Regeln mit normalem Hunger funktionieren, und wie ein Tag damit aussieht. Was unter der Therapie gilt, steht im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/); hier geht es um die Zeit danach. Was in den ersten Wochen nach der letzten Dosis insgesamt passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** Protein zuerst, Volumen aus Gemüse und Ballaststoffen, drei bis vier feste Mahlzeiten, keine Flüssigkalorien, einmal pro Woche wiegen. Keine Crash-Diät. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
 

@@ -21,7 +21,7 @@ faq:
     a: "<p>Typische Zeichen: Treppen, Einkäufe oder Aufstehen vom Stuhl fallen schwerer als vor der Therapie; die Griffkraft lässt nach; Arme und Beine wirken schlaffer, obwohl das Gewicht sinkt. Eine Körperzusammensetzungsmessung (DXA oder BIA) beim Arzt oder im Studio macht es messbar.</p>"
 ---
 
-Die Abnehmspritze nimmt nicht nur Fett. Sie nimmt auch das, was du eigentlich behalten willst: Muskeln. Wie viel, warum, und was nachweislich hilft – ohne Panik, mit Zahlen.
+Die Abnehmspritze nimmt nicht nur Fett. Sie nimmt auch das, was du eigentlich behalten willst: Muskeln. Wie viel, warum, und was nachweislich hilft – ohne Panik, mit Zahlen. Den Gesamtverlauf nach dem Absetzen beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** Rund 40 % des Gewichtsverlusts unter Semaglutid waren in einer Substudie fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Krafttraining während einer Kalorienreduktion verhindert den Verlust weitgehend.<sup><a href="#fn-sardeli2018">2</a></sup> Dazu 1,2 bis 1,6 g Protein pro kg Körpergewicht<sup><a href="#fn-leidy2015">3</a></sup> und, wer trainiert, [Kreatin](/wissen/kreatin-abnehmspritze/).
 

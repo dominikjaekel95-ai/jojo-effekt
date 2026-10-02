@@ -11,6 +11,7 @@ const url = `${site.url}${path}`;
 
 const werkzeuge = [
   { href: '/werkzeuge/zeitplan-nach-letzter-dosis/', name: 'Zeitplan nach der letzten Dosis', text: 'Datum und Wirkstoff eingeben: wann der Wirkstoff abgebaut ist, wann der Appetit zurückkommt, ab wann die Zunahme messbar wird, wann der Kontrolltermin passt. Mit Kalender-Export.' },
+  { href: '/werkzeuge/ernaehrungsplan/', name: 'Ernährungsplan für sieben Tage', text: 'Drei Fragen zu Ernährungsform, Appetit und Gewicht: der passende Plan mit Mengen, Einkaufsliste und Austauschtabelle, kostenlos als PDF per Mail.' },
   { href: '/werkzeuge/proteinrechner/', name: 'Proteinrechner', text: 'Körpergewicht eingeben: Tagesziel von 1,2 bis 1,6 g pro kg, Menge pro Mahlzeit und Beispiele in Lebensmitteln.' },
   { href: '/checkliste/', name: 'Checkliste für die ersten 8 Wochen', text: 'Woche für Woche: Protein, Training, Wiegetag, Arzttermin. Als Seite und als PDF.' },
   { href: '/wissen/studien/', name: 'Studien-Tracker', text: 'Alle Absetz-Studien mit Kernzahl und Link zur Originalarbeit.' },
@@ -46,7 +47,7 @@ const jsonLd = [
     <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › Werkzeuge</nav>
     <p class="eyebrow mt-6">Werkzeuge</p>
     <h1 class="h1 mt-3">Rechner und Hilfen für die Zeit nach der Abnehmspritze</h1>
-    <p class="mt-4 max-w-2xl text-lg text-ink-2">Alles läuft im Browser, ohne Anmeldung und ohne Speicherung. Die Zahlen dahinter stammen aus Fachinformationen und Studien; die Quellen stehen auf jeder Seite.</p>
+    <p class="mt-4 max-w-2xl text-lg text-ink-2">Die Rechner laufen im Browser, ohne Anmeldung und ohne Speicherung; nur den Ernährungsplan schicken wir per Mail. Die Zahlen dahinter stammen aus Fachinformationen und Studien; die Quellen stehen auf jeder Seite.</p>
     <p class="mt-4 max-w-2xl rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
     <ul class="mt-8 grid gap-6 md:grid-cols-2">
       {werkzeuge.map((w) => (<li><a href={w.href} class="card group block h-full no-underline hover:border-moss"><h2 class="text-xl leading-snug text-ink group-hover:text-moss">{w.name}</h2><p class="mt-2 text-sm text-ink-2">{w.text}</p><p class="mt-4 text-sm font-semibold text-moss">Öffnen →</p></a></li>))}

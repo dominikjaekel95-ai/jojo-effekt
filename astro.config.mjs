@@ -79,7 +79,7 @@ export default defineConfig({
   build: { format: 'directory' },
   integrations: [
     sitemap({
-      filter: (page) => !/\/(danke|impressum|datenschutz)\/$/.test(page) && !/\/(checkliste|newsletter)\/danke\/$/.test(page) && (experienceLive || !/\/erfahrungen\/$/.test(page)) && !/\.(xml|txt|csv)$/.test(page),
+      filter: (page) => !/\/(danke|impressum|datenschutz)\/$/.test(page) && !/\/(checkliste|newsletter)\/danke\/$/.test(page) && !/\/werkzeuge\/ernaehrungsplan\/plan\//.test(page) && (experienceLive || !/\/erfahrungen\/$/.test(page)) && !/\.(xml|txt|csv)$/.test(page),
       changefreq: 'weekly',
       priority: 0.7,
       serialize(item) {

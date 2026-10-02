@@ -75,7 +75,7 @@ Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du
 | Nachmittags | Hüttenkäse oder ein Protein-Shake, ein Apfel | ca. 20 g | Hunger vor dem Abend abfangen |
 | Abends | Linsen- oder Bohneneintopf mit Gemüse, 2 Eier oder 150 g Fisch | ca. 30 g | Ballaststoffe und Protein, kein Nachschlag nötig |
 
-Zusammen rund 100 g Protein und 30 g Ballaststoffe, ohne Kalorienzählen. Die Mengen sind ein Beispiel für 80 kg; die Formel steht oben.
+Zusammen rund 100 g Protein und 30 g Ballaststoffe, ohne Kalorienzählen. Die Mengen sind ein Beispiel für 80 kg; die Formel steht oben. Sieben solcher Tage mit Einkaufsliste, passend zu Ernährungsform, Appetit und Gewicht, gibt es als [kostenlosen Ernährungsplan](/werkzeuge/ernaehrungsplan/).
 
 Haferflocken, Linsen, Fisch und Eier decken an so einem Tag nebenbei auch das, was unter der Spritze bei kleineren Portionen knapp werden kann. Was dann im Einzelnen gilt und wann ein Blutwert dran ist, steht unter [Magnesium](/wissen/magnesium-abnehmspritze/), [Vitamin D](/wissen/vitamin-d-abnehmspritze/), [Vitamin B12](/wissen/vitamin-b12-abnehmspritze/) und [Eisen](/wissen/eisen-abnehmspritze/). Der Fisch zweimal pro Woche liefert außerdem EPA und DHA; warum das für das Gewicht nichts bringt und trotzdem sinnvoll ist, steht unter [Omega-3 bei der Abnehmspritze](/wissen/omega-3-abnehmspritze/).
 

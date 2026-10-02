@@ -7,6 +7,7 @@ import Faq from '../components/Faq.astro';
 import PreorderForm from '../components/PreorderForm.astro';
 import SetIllustration from '../components/SetIllustration.astro';
 import MarktradarTeaser from '../components/MarktradarTeaser.astro';
+import ErnaehrungsplanTeaser from '../components/ErnaehrungsplanTeaser.astro';
 import { site } from '../data/site';
 import { themen } from '../data/themen';
 import { landingFaq } from '../data/faq';
@@ -76,6 +77,9 @@ const jsonLd: Record<string, unknown>[] = [];
       </div>
     </div>
   </section>
+
+  <!-- ============ 1a. ERNÄHRUNGSPLAN (Lead-Magnet, kostenlos gegen Newsletter-Anmeldung) ============ -->
+  <ErnaehrungsplanTeaser />
 
   <!-- ============ 1b. MARKTRADAR (Teaser ohne Markennamen, keine Affiliate-Links) ============ -->
   <MarktradarTeaser />

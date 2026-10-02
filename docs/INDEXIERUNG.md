@@ -52,7 +52,8 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | zwei Grafiken ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/abnehmpille-absetzen/ | Grafik „belegt und offen“ ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/protein-abnehmspritze/ | Grafik Proteinbedarf ergänzt | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/ernaehrung-nach-abnehmspritze/ | Grafik Proteinbedarf ergänzt | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/ernaehrung-nach-abnehmspritze/ | Grafik Proteinbedarf ergänzt; Abschnitt und FAQ zum 7-Tage-Plan | 2026-10-01 | offen |
+| https://nachderspritze.de/ernaehrungsplan/ | neue Seite: Ernährungsplan-Konfigurator (18 Pläne, PDF per Mail; Planseiten und PDFs noindex) | 2026-10-02 | offen |
 | https://nachderspritze.de/wissen/feiertage-nach-abnehmspritze/ | neuer Artikel: Feiertage nach der Abnehmspritze (Weihnachten, Absetzkurve, Wiegen) | 2026-10-02 | offen |
 | https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | Grafik Zeitverlauf ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/mounjaro-absetzen/ | Grafik Halbwertszeiten ergänzt | 2026-10-01 | offen |
@@ -61,6 +62,7 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/werkzeuge/ | neue Seite: Übersicht der Werkzeuge | 2026-10-01 | offen |
 | https://nachderspritze.de/werkzeuge/zeitplan-nach-letzter-dosis/ | neues Werkzeug: Zeitplan aus Datum und Wirkstoff, Kalender-Export | 2026-10-01 | offen |
 | https://nachderspritze.de/werkzeuge/proteinrechner/ | neues Werkzeug: Proteinrechner | 2026-10-01 | offen |
+| https://nachderspritze.de/werkzeuge/gewichtskorridor/ | neues Werkzeug: Gewichtskorridor mit drei Zonen (Wing 2006) | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/ozempic-absetzen/ | FAQ nach „Weitere Fragen“, updatedDate | 2026-10-01 | offen |
 | https://nachderspritze.de/abnehmspritze-kosten/ | neue Seite: monatliche Preiserhebung mit Jahreskosten, Kassenregeln, Methodik, Zitierhinweis (Link-Magnet) | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/absetzen/ | neue Seite: Themenseite Absetzen und Pausieren (nach Merge des Hub-PR) | 2026-09-30 | offen |

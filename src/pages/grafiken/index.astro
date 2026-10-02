@@ -6,6 +6,7 @@
  * verlinkt werden kann.
  */
 import Base from '../../layouts/Base.astro';
+import GrafikDaten from '../../components/GrafikDaten.astro';
 import { site } from '../../data/site';
 import { grafiken, hauptgrafiken, varianten } from '../../data/grafiken';
 import { getSources } from '../../data/sources';
@@ -103,6 +104,7 @@ const einbetten = (g: (typeof grafiken)[number]) =>
               <figcaption class="mt-2 text-sm text-ink-3">
                 Quellen: {quellen.map((q, j) => (<span>{j > 0 ? '; ' : ''}<a href={q.url} rel="noopener" target="_blank" class="underline underline-offset-4 hover:text-moss">{q.short}</a></span>))}. Grafik: Nach der Spritze, CC BY 4.0.
               </figcaption>
+              <GrafikDaten id={g.id} class="mt-3" />
             </figure>
             <div class="mt-4 grid gap-4 md:grid-cols-[1fr_1fr]">
               <div class="rounded-xl2 border border-line bg-white p-4 text-sm">
@@ -114,6 +116,7 @@ const einbetten = (g: (typeof grafiken)[number]) =>
               <details class="rounded-xl2 border border-line bg-white p-4 text-sm">
                 <summary class="cursor-pointer font-semibold text-ink">Einbetten (HTML mit Quellenlink)</summary>
                 <pre class="mt-3 overflow-x-auto whitespace-pre-wrap break-all rounded-lg bg-paper p-3 text-xs text-ink-2"><code>{einbetten(g)}</code></pre>
+                <button type="button" class="btn-secondary mt-3 text-sm plausible-event-name=Grafik+einbinden" data-code-kopieren>HTML kopieren</button>
               </details>
             </div>
           </article>
@@ -128,4 +131,17 @@ const einbetten = (g: (typeof grafiken)[number]) =>
       </p>
     </div>
   </section>
+
+  <script is:inline>
+    document.querySelectorAll('[data-code-kopieren]').forEach((knopf) => {
+      knopf.addEventListener('click', () => {
+        const code = knopf.parentElement.querySelector('code');
+        if (!code || !navigator.clipboard) return;
+        navigator.clipboard.writeText(code.textContent).then(
+          () => { knopf.textContent = 'Kopiert, Quellenlink bitte stehen lassen'; },
+          () => { knopf.textContent = 'Kopieren nicht möglich, bitte markieren'; }
+        );
+      });
+    });
+  </script>
 </Base>

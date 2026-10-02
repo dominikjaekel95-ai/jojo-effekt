@@ -19,7 +19,8 @@
         { "q": "Was gilt für mein Präparat?", "href": "/wissen/praeparate/", "label": "Absetzen nach Präparat: Wegovy, Ozempic, Mounjaro, Saxenda, Tablette" },
         { "q": "Wie halte ich das Gewicht danach?", "slug": "gewicht-halten-nach-abnehmspritze" },
         { "q": "Was tue ich in den ersten acht Wochen?", "href": "/checkliste/", "label": "Checkliste: Die ersten 8 Wochen nach der letzten Dosis" },
-        { "q": "Wann ist der Wirkstoff weg, wann kommt der Appetit zurück?", "href": "/werkzeuge/zeitplan-nach-letzter-dosis/", "label": "Zeitplan nach der letzten Dosis: Rechner mit Kalender-Export" }
+        { "q": "Wann ist der Wirkstoff weg, wann kommt der Appetit zurück?", "href": "/werkzeuge/zeitplan-nach-letzter-dosis/", "label": "Zeitplan nach der letzten Dosis: Rechner mit Kalender-Export" },
+        { "q": "Was kostet die Therapie im Jahr?", "href": "/abnehmspritze-kosten/#rechner", "label": "Jahreskosten-Rechner aus der monatlichen Preiserhebung" }
       ],
       "include": [],
       "glossar": ["halbwertszeit", "auswaschphase", "absetzkurve", "hedonischer-hunger", "ghrelin"],
@@ -144,7 +145,8 @@
         { "q": "Eingefallenes Gesicht: was lässt sich beeinflussen?", "slug": "abnehmspritze-gesicht" },
         { "q": "Haarausfall nach der Spritze: wie lange?", "slug": "haarausfall-abnehmspritze" },
         { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" },
-        { "q": "Wie viel Protein brauche ich bei meinem Gewicht?", "href": "/werkzeuge/proteinrechner/", "label": "Proteinrechner: Tagesziel und Menge pro Mahlzeit" }
+        { "q": "Wie viel Protein brauche ich bei meinem Gewicht?", "href": "/werkzeuge/proteinrechner/", "label": "Proteinrechner: Tagesziel und Menge pro Mahlzeit" },
+        { "q": "Gibt es einen Plan für eine ganze Woche?", "href": "/ernaehrungsplan/", "label": "Ernährungsplan: 7 Tage mit Einkaufsliste, kostenlos als PDF" }
       ],
       "include": [],
       "glossar": ["leucin-schwelle", "proteinverteilung", "glucomannan", "hedonischer-hunger", "neat"],
@@ -172,6 +174,7 @@
         { "q": "Was tue ich in den ersten acht Wochen?", "href": "/checkliste/", "label": "Checkliste: Die ersten 8 Wochen nach der letzten Dosis" },
         { "q": "Verliere ich Muskeln oder Fett?", "slug": "muskelabbau-abnehmspritze" },
         { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" },
+        { "q": "Ab welcher Zahl auf der Waage reagiere ich?", "href": "/werkzeuge/gewichtskorridor/", "label": "Gewichtskorridor: drei Zonen mit Reaktionsschwelle" },
         { "q": "Wie komme ich über Weihnachten und die Feiertage?", "slug": "feiertage-nach-abnehmspritze" }
       ],
       "include": [],

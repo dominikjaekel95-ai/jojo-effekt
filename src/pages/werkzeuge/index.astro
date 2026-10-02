@@ -1,21 +1,45 @@
 ---
 /** Übersicht der Werkzeuge: Rechner und Hilfen, die im Browser laufen, plus die Nachschlageseiten der Website. */
 import Base from '../../layouts/Base.astro';
+import Faq from '../../components/Faq.astro';
+import { faqJsonLd } from '../../data/faq';
 import { site } from '../../data/site';
 
-const title = 'Werkzeuge: Zeitplan nach der letzten Dosis, Proteinrechner, Checkliste';
+const title = 'Werkzeuge: Zeitplan, Proteinrechner, Gewichtskorridor, Jahreskosten';
 const description =
-  'Rechner und Hilfen für die Zeit nach der Abnehmspritze: Zeitplan nach der letzten Dosis, Proteinrechner, Checkliste für die ersten 8 Wochen, Studien-Tracker und Marktradar. Alles ohne Anmeldung.';
+  'Rechner für die Zeit nach der Abnehmspritze: Zeitplan nach der letzten Dosis, Proteinrechner, Gewichtskorridor mit Reaktionsschwelle, Jahreskosten-Rechner, Checkliste für die ersten 8 Wochen. Ohne Anmeldung.';
 const path = '/werkzeuge/';
 const url = `${site.url}${path}`;
 
-const werkzeuge = [
+const rechner = [
   { href: '/werkzeuge/zeitplan-nach-letzter-dosis/', name: 'Zeitplan nach der letzten Dosis', text: 'Datum und Wirkstoff eingeben: wann der Wirkstoff abgebaut ist, wann der Appetit zurückkommt, ab wann die Zunahme messbar wird, wann der Kontrolltermin passt. Mit Kalender-Export.' },
+  { href: '/ernaehrungsplan/', name: 'Ernährungsplan für sieben Tage', text: 'Drei Fragen zu Ernährungsform, Appetit und Gewicht: der passende Plan mit Mengen, Einkaufsliste und Austauschtabelle, kostenlos als PDF per Mail.' },
   { href: '/werkzeuge/proteinrechner/', name: 'Proteinrechner', text: 'Körpergewicht eingeben: Tagesziel von 1,2 bis 1,6 g pro kg, Menge pro Mahlzeit und Beispiele in Lebensmitteln.' },
+  { href: '/werkzeuge/gewichtskorridor/', name: 'Gewichtskorridor', text: 'Startgewicht der Haltephase eingeben: drei Zonen mit Reaktionsschwelle (grün, gelb, rot) nach einem erprobten Programm, und was in jeder Zone zu tun ist.' },
+  { href: '/abnehmspritze-kosten/#rechner', name: 'Jahreskosten-Rechner', text: 'Präparat und Dauer wählen: Kosten pro Jahr, pro Tag und für die gewählte Dauer, aus der monatlichen Preiserhebung. Größenordnung, keine Preisberatung.' },
+];
+const nachschlagen = [
   { href: '/checkliste/', name: 'Checkliste für die ersten 8 Wochen', text: 'Woche für Woche: Protein, Training, Wiegetag, Arzttermin. Als Seite und als PDF.' },
+  { href: '/grafiken/', name: 'Studien-Grafiken', text: 'Absetzkurve, Zeitachse, Halbwertszeiten, Proteinbedarf und mehr als SVG und PNG, frei verwendbar mit Quellenangabe.' },
   { href: '/wissen/studien/', name: 'Studien-Tracker', text: 'Alle Absetz-Studien mit Kernzahl und Link zur Originalarbeit.' },
   { href: '/marktradar/', name: 'Marktradar', text: 'Zulassungen, Preise als Größenordnung, Kassenregeln, Lieferbarkeit; monatlich geprüft.' },
   { href: '/glossar/', name: 'Glossar', text: 'Begriffe von Absetzkurve bis Telogenes Effluvium, kurz und belegt.' },
+];
+const alle = [...rechner, ...nachschlagen];
+
+const faq = [
+  {
+    q: 'Speichern die Rechner meine Eingaben?',
+    a: '<p>Nein. Alle Werkzeuge rechnen im Browser; nichts wird übertragen oder gespeichert. Es gibt keine Anmeldung und keine Cookies. Die Kalenderdatei des Zeitplans entsteht ebenfalls im Browser und wird nur heruntergeladen.</p>',
+  },
+  {
+    q: 'Woher kommen die Zahlen in den Werkzeugen?',
+    a: '<p>Aus Fachinformationen (Halbwertszeiten), Studien (Zunahme ab Woche 8, Wiederzunahme nach einem Jahr, Zonen des Gewichtskorridors, Proteinbedarf) und aus der monatlichen Preiserhebung des Marktradars. Jede Seite nennt ihre Quellen mit Link.</p>',
+  },
+  {
+    q: 'Ersetzen die Werkzeuge einen Arzttermin?',
+    a: '<p>Nein. Sie geben Orientierung, keine Diagnose und keine Therapieentscheidung. Ob und wie ein Medikament abgesetzt wird, entscheidet die behandelnde Ärztin oder der Arzt; kein Werkzeug enthält Dosierungen oder Absetz-Schemata.</p>',
+  },
 ];
 
 const jsonLd = [
@@ -29,9 +53,10 @@ const jsonLd = [
     isPartOf: { '@id': `${site.url}/#website` },
     mainEntity: {
       '@type': 'ItemList',
-      itemListElement: werkzeuge.map((w, i) => ({ '@type': 'ListItem', position: i + 1, name: w.name, url: `${site.url}${w.href}` })),
+      itemListElement: alle.map((w, i) => ({ '@type': 'ListItem', position: i + 1, name: w.name, url: `${site.url}${w.href}` })),
     },
   },
+  faqJsonLd(faq),
   {
     '@type': 'BreadcrumbList',
     itemListElement: [
@@ -46,10 +71,26 @@ const jsonLd = [
     <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › Werkzeuge</nav>
     <p class="eyebrow mt-6">Werkzeuge</p>
     <h1 class="h1 mt-3">Rechner und Hilfen für die Zeit nach der Abnehmspritze</h1>
-    <p class="mt-4 max-w-2xl text-lg text-ink-2">Alles läuft im Browser, ohne Anmeldung und ohne Speicherung. Die Zahlen dahinter stammen aus Fachinformationen und Studien; die Quellen stehen auf jeder Seite.</p>
+    <p class="mt-4 max-w-2xl text-lg text-ink-2">Vier Rechner für die Fragen, die nach der letzten Dosis zuerst kommen: Wann ist der Wirkstoff weg, wie viel Protein brauche ich, ab welcher Zahl auf der Waage reagiere ich, und was kostet die Therapie im Jahr. Die Rechner laufen im Browser, ohne Anmeldung und ohne Speicherung, nur den Ernährungsplan schicken wir per Mail; die Zahlen dahinter stammen aus Fachinformationen und Studien, die Quellen stehen auf jeder Seite.</p>
     <p class="mt-4 max-w-2xl rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
-    <ul class="mt-8 grid gap-6 md:grid-cols-2">
-      {werkzeuge.map((w) => (<li><a href={w.href} class="card group block h-full no-underline hover:border-moss"><h2 class="text-xl leading-snug text-ink group-hover:text-moss">{w.name}</h2><p class="mt-2 text-sm text-ink-2">{w.text}</p><p class="mt-4 text-sm font-semibold text-moss">Öffnen →</p></a></li>))}
+
+    <h2 class="h2 mt-10">Rechner</h2>
+    <ul class="mt-6 grid gap-6 md:grid-cols-2">
+      {rechner.map((w) => (<li><a href={w.href} class="card group block h-full no-underline hover:border-moss"><h3 class="text-xl leading-snug text-ink group-hover:text-moss">{w.name}</h3><p class="mt-2 text-sm text-ink-2">{w.text}</p><p class="mt-4 text-sm font-semibold text-moss">Öffnen →</p></a></li>))}
     </ul>
+
+    <h2 class="h2 mt-12">Nachschlagen</h2>
+    <ul class="mt-6 grid gap-6 md:grid-cols-2">
+      {nachschlagen.map((w) => (<li><a href={w.href} class="card group block h-full no-underline hover:border-moss"><h3 class="text-xl leading-snug text-ink group-hover:text-moss">{w.name}</h3><p class="mt-2 text-sm text-ink-2">{w.text}</p><p class="mt-4 text-sm font-semibold text-moss">Öffnen →</p></a></li>))}
+    </ul>
+
+    <div class="prose-site mt-12 max-w-3xl">
+      <h2 id="warum">Warum Rechner statt noch mehr Text</h2>
+      <p>Die Artikel im <a href="/wissen/">Wissensbereich</a> erklären, was nach dem Absetzen passiert und was dagegen hilft. Die Werkzeuge machen daraus deine Zahlen: dein Datum, an dem Semaglutid oder Tirzepatid weitgehend abgebaut ist, dein Proteinziel, deinen Gewichtskorridor, deine Jahreskosten. Wer mit konkreten Zahlen in die Haltephase geht, hat etwas, woran er die Wochen messen kann. Den Rahmen dazu gibt der Hauptartikel <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a>; die Reihenfolge der ersten acht Wochen steht in der <a href="/checkliste/">Checkliste</a>.</p>
+    </div>
+
+    <div class="mt-12 max-w-3xl">
+      <Faq items={faq} id="werkzeuge-faq" title="Häufige Fragen zu den Werkzeugen" />
+    </div>
   </section>
 </Base>

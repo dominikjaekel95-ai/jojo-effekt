@@ -5,6 +5,7 @@ description: "Nach der letzten Dosis kommt der Hunger zurück, oft als Heißhung
 category: "Absetzen"
 order: 14
 pubDate: 2026-10-01
+updatedDate: 2026-10-02
 keywords: ["heißhunger nach abnehmspritze", "abnehmspritze absetzen hunger", "abnehmspritze appetit zurück", "hunger nach abnehmspritze", "heißhunger nach absetzen abnehmspritze", "appetit nach absetzen wegovy", "abnehmspritze abgesetzt ständig hunger"]
 sources: ["sumithran2011", "wu2025", "leidy2015", "dgeBallaststoffe", "spiegel2004", "almandoz2024", "jensen2024", "fachinfoWegovy"]
 related: ["abnehmspritze-absetzen", "ernaehrung-nach-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -60,6 +61,8 @@ In einer Studie sanken nach zwei Nächten mit nur vier Stunden Schlaf das Sätti
 ### 5. Keine Flüssigkalorien, Alkohol als Trigger kennen
 
 Säfte, Softdrinks und Milchkaffee-Spezialitäten liefern Energie ohne Sättigung. Alkohol tut das auch und senkt zusätzlich die Hemmschwelle für das, was danach kommt. Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten nennen zwei bis drei Liter Flüssigkeit am Tag, weil Durst und Hunger leicht verwechselt werden.<sup><a href="#fn-almandoz2024">6</a></sup> Ein großes Glas Wasser und zehn Minuten Abstand sind kein Trick, sondern ein Test, ob es Hunger war.
+
+Wie viel mehr mit Alkohol gegessen wird und wie du über Weihnachten und andere Feiertage damit umgehst, steht unter [Feiertage nach der Abnehmspritze](/wissen/feiertage-nach-abnehmspritze/).
 
 ### 6. Deine Trigger aufschreiben
 

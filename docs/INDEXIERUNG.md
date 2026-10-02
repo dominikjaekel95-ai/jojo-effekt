@@ -54,6 +54,7 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/protein-abnehmspritze/ | Grafik Proteinbedarf ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/ernaehrung-nach-abnehmspritze/ | Grafik Proteinbedarf ergänzt; Abschnitt und FAQ zum 7-Tage-Plan | 2026-10-01 | offen |
 | https://nachderspritze.de/ernaehrungsplan/ | neue Seite: Ernährungsplan-Konfigurator (18 Pläne, PDF per Mail; Planseiten und PDFs noindex) | 2026-10-02 | offen |
+| https://nachderspritze.de/wissen/feiertage-nach-abnehmspritze/ | neuer Artikel: Feiertage nach der Abnehmspritze (Weihnachten, Absetzkurve, Wiegen) | 2026-10-02 | offen |
 | https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | Grafik Zeitverlauf ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/mounjaro-absetzen/ | Grafik Halbwertszeiten ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/ | Grafik Zeitachse im Hub | 2026-10-01 | offen |

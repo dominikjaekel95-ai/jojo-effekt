@@ -174,7 +174,8 @@
         { "q": "Was tue ich in den ersten acht Wochen?", "href": "/checkliste/", "label": "Checkliste: Die ersten 8 Wochen nach der letzten Dosis" },
         { "q": "Verliere ich Muskeln oder Fett?", "slug": "muskelabbau-abnehmspritze" },
         { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" },
-        { "q": "Ab welcher Zahl auf der Waage reagiere ich?", "href": "/werkzeuge/gewichtskorridor/", "label": "Gewichtskorridor: drei Zonen mit Reaktionsschwelle" }
+        { "q": "Ab welcher Zahl auf der Waage reagiere ich?", "href": "/werkzeuge/gewichtskorridor/", "label": "Gewichtskorridor: drei Zonen mit Reaktionsschwelle" },
+        { "q": "Wie komme ich über Weihnachten und die Feiertage?", "slug": "feiertage-nach-abnehmspritze" }
       ],
       "include": [],
       "glossar": ["haltephase", "absetzkurve", "set-point-theorie", "adaptive-thermogenese", "metabolische-adaptation", "leptin"],

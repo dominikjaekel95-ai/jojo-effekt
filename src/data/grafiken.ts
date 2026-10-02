@@ -62,6 +62,7 @@ export const grafiken: Grafik[] = [
     used: [
       { href: '/wissen/abnehmspritze-absetzen/', label: 'Abnehmspritze absetzen' },
       { href: '/wissen/', label: 'Wissensbereich' },
+      { href: '/wissen/feiertage-nach-abnehmspritze/', label: 'Feiertage nach der Abnehmspritze' },
     ],
   },
   {

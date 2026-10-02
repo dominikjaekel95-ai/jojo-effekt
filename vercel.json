@@ -3,7 +3,8 @@
   "trailingSlash": true,
   "rewrites": [
     { "source": "/api/newsletter/", "destination": "/api/newsletter" },
-    { "source": "/api/anmeldung/", "destination": "/api/anmeldung" }
+    { "source": "/api/anmeldung/", "destination": "/api/anmeldung" },
+    { "source": "/api/ernaehrungsplan/", "destination": "/api/ernaehrungsplan" }
   ],
   "headers": [
     {

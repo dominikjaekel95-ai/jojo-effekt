@@ -13,6 +13,7 @@ const url = `${site.url}${path}`;
 
 const rechner = [
   { href: '/werkzeuge/zeitplan-nach-letzter-dosis/', name: 'Zeitplan nach der letzten Dosis', text: 'Datum und Wirkstoff eingeben: wann der Wirkstoff abgebaut ist, wann der Appetit zurückkommt, ab wann die Zunahme messbar wird, wann der Kontrolltermin passt. Mit Kalender-Export.' },
+  { href: '/ernaehrungsplan/', name: 'Ernährungsplan für sieben Tage', text: 'Drei Fragen zu Ernährungsform, Appetit und Gewicht: der passende Plan mit Mengen, Einkaufsliste und Austauschtabelle, kostenlos als PDF per Mail.' },
   { href: '/werkzeuge/proteinrechner/', name: 'Proteinrechner', text: 'Körpergewicht eingeben: Tagesziel von 1,2 bis 1,6 g pro kg, Menge pro Mahlzeit und Beispiele in Lebensmitteln.' },
   { href: '/werkzeuge/gewichtskorridor/', name: 'Gewichtskorridor', text: 'Startgewicht der Haltephase eingeben: drei Zonen mit Reaktionsschwelle (grün, gelb, rot) nach einem erprobten Programm, und was in jeder Zone zu tun ist.' },
   { href: '/abnehmspritze-kosten/#rechner', name: 'Jahreskosten-Rechner', text: 'Präparat und Dauer wählen: Kosten pro Jahr, pro Tag und für die gewählte Dauer, aus der monatlichen Preiserhebung. Größenordnung, keine Preisberatung.' },
@@ -70,7 +71,7 @@ const jsonLd = [
     <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › Werkzeuge</nav>
     <p class="eyebrow mt-6">Werkzeuge</p>
     <h1 class="h1 mt-3">Rechner und Hilfen für die Zeit nach der Abnehmspritze</h1>
-    <p class="mt-4 max-w-2xl text-lg text-ink-2">Vier Rechner für die Fragen, die nach der letzten Dosis zuerst kommen: Wann ist der Wirkstoff weg, wie viel Protein brauche ich, ab welcher Zahl auf der Waage reagiere ich, und was kostet die Therapie im Jahr. Alles läuft im Browser, ohne Anmeldung und ohne Speicherung; die Zahlen dahinter stammen aus Fachinformationen und Studien, die Quellen stehen auf jeder Seite.</p>
+    <p class="mt-4 max-w-2xl text-lg text-ink-2">Vier Rechner für die Fragen, die nach der letzten Dosis zuerst kommen: Wann ist der Wirkstoff weg, wie viel Protein brauche ich, ab welcher Zahl auf der Waage reagiere ich, und was kostet die Therapie im Jahr. Die Rechner laufen im Browser, ohne Anmeldung und ohne Speicherung, nur den Ernährungsplan schicken wir per Mail; die Zahlen dahinter stammen aus Fachinformationen und Studien, die Quellen stehen auf jeder Seite.</p>
     <p class="mt-4 max-w-2xl rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
 
     <h2 class="h2 mt-10">Rechner</h2>

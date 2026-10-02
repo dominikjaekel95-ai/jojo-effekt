@@ -1,0 +1,55 @@
+---
+/**
+ * Ziel der Weiterleitung von api/ernaehrungsplan.js. noindex, nicht in der Sitemap (Filter „/danke/“ in astro.config.mjs).
+ * Zeigt bewusst keinen Download-Link: Der Plan kommt nach der Bestätigung per Mail. Fehlerfälle über ?fehler=eingabe|technik.
+ */
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+---
+<Base title="Fast geschafft: Bestätige deine Adresse" description="Dein Ernährungsplan kommt per Mail, sobald du die Anmeldung bestätigt hast." path="/ernaehrungsplan/danke/" noindex>
+  <section class="container-narrow py-20 text-center">
+    <div data-ok>
+      <p class="eyebrow">Fast geschafft</p>
+      <h1 class="h1 mt-3">Bestätige deine Adresse, dann kommt dein Plan.</h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">Wir haben dir eine Mail mit einem Bestätigungslink geschickt. Sobald du ihn geklickt hast, kommt dein Ernährungsplan als PDF, meist innerhalb weniger Minuten.</p>
+      <div class="mx-auto mt-8 max-w-xl rounded-xl2 border border-line bg-white p-6 text-left text-sm text-ink-2">
+        <p class="font-semibold text-ink">Keine Mail da?</p>
+        <ul class="mt-2 list-disc space-y-1 pl-5">
+          <li>Schau im Spam- oder Werbeordner nach. Absender ist Nach der Spritze, verschickt über MailerLite.</li>
+          <li>Warst du schon angemeldet, kommt keine Bestätigung, sondern direkt der Plan.</li>
+          <li>Nach einer halben Stunde immer noch nichts: Schreib an <a href={`mailto:${site.owner.email}`} class="text-moss underline underline-offset-4">{site.owner.email}</a>, dann schicke ich dir den Plan persönlich.</li>
+        </ul>
+      </div>
+    </div>
+    <div data-fehler="eingabe" hidden>
+      <p class="eyebrow">Da fehlt etwas</p>
+      <h1 class="h1 mt-3">Das hat nicht geklappt.</h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">Bitte prüfe deine E-Mail-Adresse und setze beide Häkchen. Dann noch einmal absenden.</p>
+      <p class="mt-8"><a href="/ernaehrungsplan/" class="btn-primary">Zurück zum Ernährungsplan</a></p>
+    </div>
+    <div data-fehler="technik" hidden>
+      <p class="eyebrow">Technischer Fehler</p>
+      <h1 class="h1 mt-3">Das hat leider nicht geklappt.</h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">Bei uns ist etwas schiefgegangen, nicht bei dir. Versuch es später noch einmal oder schreib an <a href={`mailto:${site.owner.email}`} class="text-moss underline underline-offset-4">{site.owner.email}</a>, dann schicke ich dir den Plan persönlich.</p>
+      <p class="mt-8"><a href="/ernaehrungsplan/" class="btn-primary">Zurück zum Ernährungsplan</a></p>
+    </div>
+    <div class="mx-auto mt-10 max-w-xl text-left text-sm text-ink-2">
+      <p class="font-semibold text-ink">Bis dahin</p>
+      <ul class="mt-2 space-y-1">
+        <li><a href="/wissen/ernaehrung-nach-abnehmspritze/" class="text-moss underline underline-offset-4">Die fünf Regeln für die Ernährung nach der Spritze</a></li>
+        <li><a href="/werkzeuge/proteinrechner/" class="text-moss underline underline-offset-4">Dein genaues Proteinziel</a></li>
+        <li><a href="/checkliste/" class="text-moss underline underline-offset-4">Die Checkliste für die ersten 8 Wochen</a></li>
+      </ul>
+    </div>
+    <p class="mt-8 text-sm font-medium text-ink">{site.doctorSentence}</p>
+  </section>
+  <script is:inline>
+    (() => {
+      const f = new URLSearchParams(location.search).get('fehler');
+      const box = f && document.querySelector(`[data-fehler="${f === 'technik' ? 'technik' : 'eingabe'}"]`);
+      if (!box) return;
+      document.querySelector('[data-ok]').hidden = true;
+      box.hidden = false;
+    })();
+  </script>
+</Base>

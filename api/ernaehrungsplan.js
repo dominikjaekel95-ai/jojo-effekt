@@ -1,5 +1,5 @@
 /**
- * Ernährungsplan anfordern (Vercel-Funktion, Web-API-Signatur). Formular: src/pages/werkzeuge/ernaehrungsplan/index.astro.
+ * Ernährungsplan anfordern (Vercel-Funktion, Web-API-Signatur). Formular: src/pages/ernaehrungsplan/index.astro.
  *
  * Nimmt POST /api/ernaehrungsplan/ als Formular (application/x-www-form-urlencoded) oder JSON an:
  *   ernaehrung (mischkost|vegetarisch|vegan), appetit (klein|normal), gewicht (kg, 35–250), email,
@@ -13,7 +13,7 @@
  *  3. Bereits aktive oder unbestätigte Adresse: Feld `plan` aktualisieren, Gruppe „Ernährungsplan“ entfernen und neu
  *     zuweisen, damit die Automation erneut auslöst (in MailerLite muss „erneut durchlaufen“ erlaubt sein), Gruppe
  *     „Newsletter“ hinzufügen. Abgemeldete Adressen bleiben abgemeldet (nichts wird reaktiviert).
- * Antwort: Weiterleitung (303) auf /werkzeuge/ernaehrungsplan/danke/, bei Eingabefehlern ?fehler=eingabe, bei technischen
+ * Antwort: Weiterleitung (303) auf /ernaehrungsplan/danke/, bei Eingabefehlern ?fehler=eingabe, bei technischen
  * Fehlern ?fehler=technik. Es werden keine E-Mail-Adressen und keine Antworten geloggt, nur Plan-ID und Ergebnis.
  *
  * Umgebungsvariablen (Vercel, nie ins Repo): MAILERLITE_API_KEY, MAILERLITE_GROUP_NEWSLETTER (wie api/newsletter.js) und
@@ -23,7 +23,7 @@
 import { gewichtsstufe, planId } from '../src/data/ernaehrungsplan-id.mjs';
 
 const MAILERLITE = 'https://connect.mailerlite.com/api';
-const DANKE = '/werkzeuge/ernaehrungsplan/danke/';
+const DANKE = '/ernaehrungsplan/danke/';
 
 const redirect = (to) => new Response(null, { status: 303, headers: { Location: to } });
 

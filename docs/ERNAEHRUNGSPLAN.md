@@ -1,13 +1,13 @@
 # Ernährungsplan (Lead-Magnet)
 
-Stand 02.10.2026. Kostenloser Plan für sieben Tage gegen Newsletter-Anmeldung, alternativ per persönlicher Mail an Dominik.
+Stand 02.10.2026. Kostenloser Plan für sieben Tage gegen Newsletter-Anmeldung, alternativ per persönlicher Mail an Dominik. Ersetzt die statische Fassung vom 01.10. (ein Plan für 80 kg mit Direktdownload `ernaehrungsplan-7-tage.pdf`, nie live); deren Verlinkung, FAQ und Indexierungszeile sind übernommen.
 
 ## Ablauf für Nutzer
 
-1. Startseite (Band direkt nach dem Hero), Werkzeuge-Übersicht oder Ernährungs-Artikel → `/werkzeuge/ernaehrungsplan/`.
+1. Startseite (Band direkt nach dem Hero), Werkzeuge-Übersicht, Ernährungs-Artikel (Abschnitt und FAQ), Themenseite Ernährung (`fragen`), Checkliste und Footer → `/ernaehrungsplan/`.
 2. Drei Fragen: Ernährungsform (Mischkost, vegetarisch, vegan), Appetit (noch klein, wieder normal), Gewicht (Slider 45 bis 160 kg → drei Stufen). Die Vorschau zeigt Tag 1 des passenden Plans.
 3. E-Mail, Häkchen „keins der Ausschlusskriterien“ (Nierenerkrankung, Schwangerschaft/Stillzeit, Essstörung, unter 18), Häkchen „Plan plus Newsletter“. Beides Pflicht.
-4. `api/ernaehrungsplan.js` legt die Adresse bei MailerLite an (Status `unconfirmed`, Gruppen „Newsletter“ und „Ernährungsplan“, Feld `plan` = `ep01` bis `ep18`) und leitet auf `/werkzeuge/ernaehrungsplan/danke/` weiter.
+4. `api/ernaehrungsplan.js` legt die Adresse bei MailerLite an (Status `unconfirmed`, Gruppen „Newsletter“ und „Ernährungsplan“, Feld `plan` = `ep01` bis `ep18`) und leitet auf `/ernaehrungsplan/danke/` weiter.
 5. MailerLite schickt die Bestätigungs-Mail (Double-Opt-in). Nach dem Klick ist die Adresse aktiv, die Automation schickt den Plan-Link.
 6. Ohne Newsletter: Mail an `site.owner.email` (Link im Formular, mit den Antworten und der Plannummer vorausgefüllt). Dominik antwortet mit dem PDF aus `public/downloads/ernaehrungsplan/` (Tabelle unten).
 
@@ -73,7 +73,7 @@ Stand 02.10.2026. Kostenloser Plan für sieben Tage gegen Newsletter-Anmeldung, 
 | ep17 | vegan | normal | 75 bis 95 kg | 100 g |
 | ep18 | vegan | normal | über 95 kg | 120 g |
 
-PDF: `https://nachderspritze.de/downloads/ernaehrungsplan/<plan>.pdf`, Vorschau als Seite: `/werkzeuge/ernaehrungsplan/plan/<plan>/` (beides noindex).
+PDF: `https://nachderspritze.de/downloads/ernaehrungsplan/<plan>.pdf`, Vorschau als Seite: `/ernaehrungsplan/plan/<plan>/` (beides noindex).
 
 ## Pflege
 

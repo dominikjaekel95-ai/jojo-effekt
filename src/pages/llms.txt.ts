@@ -29,7 +29,7 @@ export const GET: APIRoute = async () => {
     `- [Marktradar](${u('/marktradar/')}): Zulassungen, Marktstarts, Preise als Größenordnung, Kassenregeln, Lieferbarkeit; Stand ${radarLastmod()}; Feed ${u('/marktradar/feed.xml')}`,
     `- [Grafiken](${u('/grafiken/')}): ${hauptgrafiken.length} Studien-Grafiken (Absetzkurve, Zeitachse nach der letzten Dosis, Halbwertszeiten, Proteinbedarf, Preise) als SVG und PNG unter CC BY 4.0, Quelle im Bild, Alt-Text nennt jede Zahl`,
     `- [Werkzeuge](${u('/werkzeuge/')}): Zeitplan nach der letzten Dosis (Datum und Wirkstoff ergeben Meilensteine und Kalenderdatei) und Proteinrechner (Tagesziel 1,2 bis 1,6 g pro kg, Menge pro Mahlzeit); rechnen nur im Browser`,
-    `- [Ernährungsplan](${u('/werkzeuge/ernaehrungsplan/')}): sieben Tage mit Mengen, Einkaufsliste und Austauschtabelle, ausgewählt aus 18 Plänen nach Ernährungsform, Appetit und Gewichtsbereich (rund 1,2 g Protein pro kg); kostenlos als PDF per Mail`,
+    `- [Ernährungsplan](${u('/ernaehrungsplan/')}): sieben Tage mit Mengen, Einkaufsliste und Austauschtabelle, ausgewählt aus 18 Plänen nach Ernährungsform, Appetit und Gewichtsbereich (rund 1,2 g Protein pro kg); kostenlos als PDF per Mail`,
     `- [Über diese Seite](${u('/ueber/')}): Arbeitsweise, Quellenregeln, Kontakt`,
     '',
     '## Themen',

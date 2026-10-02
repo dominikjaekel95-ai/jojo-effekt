@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Erzeugt die 18 Ernährungspläne als PDF: public/downloads/ernaehrungsplan/<id>.pdf aus den gebauten Seiten
- * dist/werkzeuge/ernaehrungsplan/plan/<id>/index.html (Vorlage src/pages/werkzeuge/ernaehrungsplan/plan/[id].astro,
+ * dist/ernaehrungsplan/plan/<id>/index.html (Vorlage src/pages/ernaehrungsplan/plan/[id].astro,
  * Daten src/data/ernaehrungsplan.ts).
  *
  * Kurzform: npm run pdf:ernaehrungsplan (baut vorher). Die PDFs werden mit committet; neu erzeugen nach jeder Änderung an
@@ -14,11 +14,11 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const root = path.resolve('dist');
-const planDir = path.join(root, 'werkzeuge', 'ernaehrungsplan', 'plan');
+const planDir = path.join(root, 'ernaehrungsplan', 'plan');
 const outDir = path.resolve('public/downloads/ernaehrungsplan');
 
 if (!fs.existsSync(planDir)) {
-  console.error('dist/werkzeuge/ernaehrungsplan/plan/ fehlt. Erst `npm run build` ausführen.');
+  console.error('dist/ernaehrungsplan/plan/ fehlt. Erst `npm run build` ausführen.');
   process.exit(1);
 }
 const ids = fs.readdirSync(planDir).filter((d) => /^ep\d{2}$/.test(d)).sort();
@@ -93,7 +93,7 @@ try {
   await page.route('**/*', (route) => (route.request().url().startsWith(`http://127.0.0.1:${port}/`) ? route.continue() : route.abort()));
   fs.mkdirSync(outDir, { recursive: true });
   for (const id of ids) {
-    await page.goto(`http://127.0.0.1:${port}/werkzeuge/ernaehrungsplan/plan/${id}/`, { waitUntil: 'networkidle' });
+    await page.goto(`http://127.0.0.1:${port}/ernaehrungsplan/plan/${id}/`, { waitUntil: 'networkidle' });
     await page.emulateMedia({ media: 'print' });
     await page.evaluate(() => document.fonts.ready);
     const out = path.join(outDir, `${id}.pdf`);

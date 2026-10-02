@@ -6,11 +6,13 @@
  * eine MailerLite-Automation den Link auf das PDF. Alternative ohne Newsletter: Mail an site.owner.email.
  * Einrichtung, Test und Pflege: docs/ERNAEHRUNGSPLAN.md. Funktioniert ohne JavaScript; das Skript zeigt nur die Vorschau.
  */
-import Base from '../../../layouts/Base.astro';
-import Fn from '../../../components/Fn.astro';
-import Footnotes from '../../../components/Footnotes.astro';
-import { site } from '../../../data/site';
-import { plaene, ernaehrungOptionen, appetitOptionen, gewichtLabel, proteinZiel } from '../../../data/ernaehrungsplan';
+import Base from '../../layouts/Base.astro';
+import Fn from '../../components/Fn.astro';
+import Footnotes from '../../components/Footnotes.astro';
+import Faq from '../../components/Faq.astro';
+import { faqJsonLd } from '../../data/faq';
+import { site } from '../../data/site';
+import { plaene, ernaehrungOptionen, appetitOptionen, gewichtLabel, proteinZiel } from '../../data/ernaehrungsplan';
 
 const fnIds = ['leidy2015', 'dgeBallaststoffe', 'almandoz2024', 'bls'] as const;
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
@@ -23,11 +25,34 @@ const start = plaene.find((p) => p.ernaehrung === 'mischkost' && p.appetit === '
 
 const title = 'Ernährungsplan nach der Abnehmspritze: 7 Tage kostenlos als PDF';
 const description = 'Drei Fragen zu Ernährung, Appetit und Gewicht: dein Plan für sieben Tage mit Mengen, Einkaufsliste und genug Protein, kostenlos als PDF per Mail.';
-const path = '/werkzeuge/ernaehrungsplan/';
+const path = '/ernaehrungsplan/';
 const url = `${site.url}${path}`;
 const mailBetreff = 'Ernährungsplan ohne Newsletter';
 const mailText = 'Hallo Dominik,\n\nich hätte gern den Ernährungsplan, aber ohne Newsletter.\n\nErnährungsform: Mischkost\nAppetit: Wieder normal\nGewicht: 75 bis 95 kg\n';
 const mailHref = `mailto:${site.owner.email}?subject=${encodeURIComponent(mailBetreff)}&body=${encodeURIComponent(mailText)}`;
+
+const faq = [
+  {
+    q: 'Für wen ist der Plan gedacht?',
+    a: '<p>Für gesunde Erwachsene in den Wochen, in denen der Appetit nach der letzten Dosis zurückkommt, und für die Zeit unter der Therapie, in der viele zu wenig Protein essen. Für die zweite Gruppe gibt es die Variante „Appetit noch klein“ mit kleineren Portionen und Zwischenmahlzeiten. Nicht geeignet ist er bei Nierenerkrankungen, in Schwangerschaft und Stillzeit, bei einer Essstörung und für unter 18-Jährige.</p>',
+  },
+  {
+    q: 'Muss ich mich an die Reihenfolge halten?',
+    a: '<p>Nein. Die Tage lassen sich beliebig tauschen und wiederholen; wer am Wochenende kocht, bereitet Linsen, Reis und Quinoa für mehrere Tage vor. Wichtig ist das Muster: bei jeder Mahlzeit zuerst Protein, dazu Gemüse oder Obst, nichts Kalorienhaltiges trinken.</p>',
+  },
+  {
+    q: 'Was, wenn ich kein Fleisch oder keinen Fisch esse?',
+    a: '<p>Dann wählst du vegetarisch oder vegan. Der Plan enthält dann nur passende Gerichte, und die Austauschtabelle zeigt, wie viel Tofu, Tempeh, Linsen, Kichererbsen oder Edamame etwa 20 g Protein liefern. Pflanzliche Lebensmittel liefern pro 100 g meist weniger Protein, deshalb sind die Portionen etwas größer.</p>',
+  },
+  {
+    q: 'Muss ich Kalorien zählen?',
+    a: '<p>Nicht mit diesem Plan. Er arbeitet mit Protein, Ballaststoffen und Portionsgröße statt mit Kalorienzahlen. Ob die Menge passt, zeigt die Waage einmal pro Woche.</p>',
+  },
+  {
+    q: 'Warum kommt der Plan per Mail?',
+    a: '<p>Weil wir ihn zusammen mit dem Newsletter verschicken: Nach der Bestätigung deiner Adresse kommt der Plan, danach etwa alle zwei Wochen neue Artikel und Studien. Abmelden geht in jeder Mail. Wer keinen Newsletter möchte, schreibt Dominik eine Mail und bekommt den Plan persönlich.</p>',
+  },
+];
 
 const jsonLd = [
   {
@@ -48,6 +73,7 @@ const jsonLd = [
       { '@type': 'ListItem', position: 3, name: 'Ernährungsplan', item: url },
     ],
   },
+  faqJsonLd(faq),
 ];
 ---
 <Base title={title} description={description} path={path} jsonLd={jsonLd}>
@@ -139,6 +165,8 @@ const jsonLd = [
       </ul>
       <p>Ein allgemeiner Beispielplan für gesunde Erwachsene, keine Ernährungstherapie. Die Regeln dahinter stehen im Artikel <a href="/wissen/ernaehrung-nach-abnehmspritze/">Ernährung nach der Abnehmspritze</a>; dein genaues Proteinziel rechnet der <a href="/werkzeuge/proteinrechner/">Proteinrechner</a> aus.</p>
     </div>
+
+    <div class="mt-12"><Faq items={faq} id="plan-faq" title="Häufige Fragen zum Ernährungsplan" /></div>
 
     <Footnotes ids={fnIds} />
   </article>

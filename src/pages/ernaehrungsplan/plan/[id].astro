@@ -5,11 +5,11 @@
  * noindex und nicht in der Sitemap: Die Seite ist eine Druckvorlage, keine Landingpage. Keine Affiliate-Links, kein
  * Produkt-Teaser, keine Präparatenamen (CLAUDE.md: nichts davon in PDFs und Mails).
  */
-import Base from '../../../../layouts/Base.astro';
-import Fn from '../../../../components/Fn.astro';
-import Footnotes from '../../../../components/Footnotes.astro';
-import { site } from '../../../../data/site';
-import { plaene, pruefePlaene, ernaehrungOptionen, appetitOptionen, gewichtLabel, type Plan } from '../../../../data/ernaehrungsplan';
+import Base from '../../../layouts/Base.astro';
+import Fn from '../../../components/Fn.astro';
+import Footnotes from '../../../components/Footnotes.astro';
+import { site } from '../../../data/site';
+import { plaene, pruefePlaene, ernaehrungOptionen, appetitOptionen, gewichtLabel, type Plan } from '../../../data/ernaehrungsplan';
 
 export function getStaticPaths() {
   const fehler = pruefePlaene();
@@ -27,7 +27,7 @@ const ernaehrung = ernaehrungOptionen.find((o) => o.value === plan.ernaehrung)!;
 const appetit = appetitOptionen.find((o) => o.value === plan.appetit)!;
 const klein = plan.appetit === 'klein';
 const stand = new Date().toLocaleDateString('de-DE', { month: 'long', year: 'numeric' });
-const path = `/werkzeuge/ernaehrungsplan/plan/${plan.id}/`;
+const path = `/ernaehrungsplan/plan/${plan.id}/`;
 ---
 <Base title={`Dein Ernährungsplan: ${ernaehrung.label}, ${gewichtLabel[plan.gewicht]}`} description="Sieben Tage mit Mengen, Einkaufsliste und Austauschtabelle für die Zeit nach der Abnehmspritze." path={path} noindex>
   <article class="container-narrow py-10 print:py-0">

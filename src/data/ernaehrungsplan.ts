@@ -2,7 +2,7 @@
  * Ernährungsplan nach der Abnehmspritze: Lebensmittel, Mahlzeiten und der Generator für die 18 Pläne.
  *
  * Alles hier ist deterministisch: Gleiche Antworten ergeben immer denselben Plan. Die Pläne werden beim Build als
- * Seiten unter /werkzeuge/ernaehrungsplan/plan/<id>/ erzeugt und mit `npm run pdf:ernaehrungsplan` zu PDFs unter
+ * Seiten unter /ernaehrungsplan/plan/<id>/ erzeugt und mit `npm run pdf:ernaehrungsplan` zu PDFs unter
  * public/downloads/ernaehrungsplan/<id>.pdf gedruckt. MailerLite verschickt nur den Link (Feld `plan`).
  *
  * Zahlenregeln (CLAUDE.md): Proteingehalte je 100 g aus dem Bundeslebensmittelschlüssel (Quelle `bls`), gerundet;

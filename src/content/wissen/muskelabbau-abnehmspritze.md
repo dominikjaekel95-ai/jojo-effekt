@@ -6,7 +6,7 @@ category: "Muskeln"
 image: /grafiken/koerperzusammensetzung-step-1.png
 order: 3
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-02
 keywords: ["abnehmspritze muskelabbau", "abnehmspritze muskelverlust", "muskelabbau abnehmspritze vermeiden", "wegovy muskelabbau", "ozempic muskelabbau", "mounjaro muskelverlust", "abnehmspritze krafttraining"]
 sources: ["wilding2021dxa", "sardeli2018", "leidy2015", "who2020", "jensen2024", "euClaims", "kreider2017", "dgeProtein", "fothergill2016", "look2025surmount1dxa"]
 related: ["protein-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -64,7 +64,7 @@ Messbar wird es mit einer Körperzusammensetzungsanalyse: DXA beim Arzt oder in 
 
 ## Warum es wichtig ist
 
-Muskeln sind mehr als Optik. Sie tragen den Alltag (Treppen, Einkäufe, Aufstehen), schützen vor Stürzen im Alter, nehmen Zucker aus dem Blut auf und verbrauchen auch in Ruhe Energie. Weniger Muskelmasse heißt ein niedrigerer Grundumsatz – und der Stoffwechsel ist nach starkem Gewichtsverlust ohnehin gedrosselt.<sup><a href="#fn-fothergill2016">9</a></sup> Genau das ist einer der Mechanismen hinter dem [Jojo-Effekt nach der Abnehmspritze](/wissen/jojo-effekt-abnehmspritze/).
+Muskeln sind mehr als Optik. Sie tragen den Alltag (Treppen, Einkäufe, Aufstehen), schützen vor Stürzen im Alter, nehmen Zucker aus dem Blut auf und verbrauchen auch in Ruhe Energie. Weniger Muskelmasse heißt ein niedrigerer Grundumsatz – und der Stoffwechsel ist nach starkem Gewichtsverlust ohnehin gedrosselt.<sup><a href="#fn-fothergill2016">9</a></sup> Genau das ist einer der Mechanismen hinter dem [Jojo-Effekt nach der Abnehmspritze](/wissen/jojo-effekt-abnehmspritze/). Wie viel der Verbrauch nach dem Abnehmen in Messungen tatsächlich sinkt, steht unter [Kalorienbedarf nach der Abnehmspritze](/wissen/kalorienbedarf-nach-abnehmspritze/).
 
 ## Was nachweislich hilft
 

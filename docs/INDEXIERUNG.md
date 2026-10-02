@@ -24,7 +24,7 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/muskelabbau-abnehmspritze/ | neuer Abschnitt „Woran du Muskelabbau erkennst“ | 2026-09-30 | angemeldet 2026-10-01 |
 | https://nachderspritze.de/wissen/abnehmspritze-absetzen/ | neue Abschnitte „Was beim Absetzen körperlich passiert“ und „Wiedereinstieg“ | 2026-09-30 | angemeldet 2026-10-01 |
 | https://nachderspritze.de/wissen/ | Hub listet fünf neue Artikel | 2026-09-30 | angemeldet 2026-10-01 |
-| https://nachderspritze.de/glossar/ | neue Sektion: Glossar mit 20 Begriffen (nach Merge des Preview-Branches) | 2026-09-30 | offen |
+| https://nachderspritze.de/glossar/ | neue Sektion: Glossar mit 20 Begriffen (nach Merge des Preview-Branches) | 2026-09-30 | angemeldet 2026-10-02 |
 | https://nachderspritze.de/glossar/haltephase/ | eigener Begriff, Priorität | 2026-09-30 | offen |
 | https://nachderspritze.de/glossar/absetzkurve/ | eigener Begriff, Priorität | 2026-09-30 | offen |
 | https://nachderspritze.de/marktradar/ | neue Sektion: Marktradar (nach Merge des Preview-Branches) | 2026-09-30 | offen |

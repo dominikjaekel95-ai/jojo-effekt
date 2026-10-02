@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import GrafikDaten from '../../components/GrafikDaten.astro';
+import GrafikEinbinden from '../../components/GrafikEinbinden.astro';
 import { site } from '../../data/site';
 import { radar, radarTypeLabel, radarLastmod, zulassungen, preise, kassen, lieferbarkeit, fmtDate } from '../../data/markt';
 import { studien, studienLog, studienUpdated } from '../../data/studien';
@@ -209,4 +210,5 @@ const typeClass: Record<string, string> = {
       </p>
     </div>
   </section>
+  <GrafikEinbinden />
 </Base>

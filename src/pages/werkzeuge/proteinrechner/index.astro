@@ -8,9 +8,30 @@ import Base from '../../../layouts/Base.astro';
 import Fn from '../../../components/Fn.astro';
 import Footnotes from '../../../components/Footnotes.astro';
 import ProductTeaser from '../../../components/ProductTeaser.astro';
+import Faq from '../../../components/Faq.astro';
+import { faqJsonLd } from '../../../data/faq';
 import { site } from '../../../data/site';
 
 const fnIds = ['leidy2015', 'dgeProtein', 'euClaims', 'bls'] as const;
+
+const faq = [
+  {
+    q: 'Wie viel Protein pro Tag nach der Abnehmspritze?',
+    a: '<p>Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag. Bei 80 kg sind das 96 bis 128 g. Das DGE-Minimum von 0,8 g pro kg ist die Untergrenze für die Versorgung gesunder Erwachsener, nicht das Ziel beim Abnehmen oder Halten.</p>',
+  },
+  {
+    q: 'Wie viel Protein pro Mahlzeit?',
+    a: '<p>Dieselbe Übersichtsarbeit nennt mindestens etwa 25 bis 30 g pro Mahlzeit. Verteilt auf drei oder vier Mahlzeiten wirkt Protein besser als in einer großen Portion; bei kleinem Appetit hilft die Reihenfolge: Protein zuerst, dann Gemüse, dann der Rest.</p>',
+  },
+  {
+    q: 'Wann gilt der Rechner nicht?',
+    a: '<p>Bei Nierenerkrankungen und in der Schwangerschaft gehört die Proteinmenge in die ärztliche Sprechstunde. Bei starkem Übergewicht rechnen Fachleute teils mit dem Zielgewicht statt mit dem aktuellen Gewicht; dann liegt das Ziel niedriger.</p>',
+  },
+  {
+    q: 'Reicht Proteinpulver?',
+    a: '<p>Lebensmittel zuerst: Skyr, Quark, Eier, Fisch, Hülsenfrüchte, Tofu bringen neben Protein auch Eisen, B12 oder Ballaststoffe mit. Pulver oder ein Protein-Stick schließen die Lücke an Tagen, an denen der Appetit die Portionen bestimmt. Was sonst sinnvoll ist, steht unter Supplements nach der Abnehmspritze.</p>',
+  },
+];
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
 const lebensmittel = [
@@ -33,6 +54,20 @@ const url = `${site.url}${path}`;
 
 const jsonLd = [
   {
+    '@type': 'WebApplication',
+    '@id': `${url}#app`,
+    name: 'Proteinrechner nach der Abnehmspritze',
+    url,
+    description,
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'Web',
+    browserRequirements: 'JavaScript',
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+    inLanguage: 'de-DE',
+    provider: { '@id': `${site.url}/#organization` },
+  },
+  {
     '@type': 'WebPage',
     '@id': `${url}#page`,
     name: title,
@@ -40,8 +75,10 @@ const jsonLd = [
     url,
     inLanguage: 'de-DE',
     isPartOf: { '@id': `${site.url}/#website` },
+    mainEntity: { '@id': `${url}#app` },
     about: { '@type': 'Thing', name: 'Proteinbedarf bei Gewichtsabnahme und Gewichtserhalt' },
   },
+  faqJsonLd(faq),
   {
     '@type': 'BreadcrumbList',
     itemListElement: [
@@ -117,6 +154,13 @@ const jsonLd = [
       </ul>
       <p>Mehr zu Quellen, Timing und Tricks bei wenig Appetit unter <a href="/wissen/protein-abnehmspritze/">Protein bei der Abnehmspritze</a>, ein Beispieltag unter <a href="/wissen/ernaehrung-nach-abnehmspritze/">Ernährung nach der Abnehmspritze</a>, und wann Pulver sinnvoll ist unter <a href="/wissen/supplements-nach-abnehmspritze/">Supplements nach der Abnehmspritze</a>.</p>
     </div>
+
+    <div class="prose-site mt-10">
+      <h2 id="warum">Warum Protein nach der Abnehmspritze die erste Zahl ist</h2>
+      <p>Unter der Spritze bestimmt der Appetit die Portionen, und Protein bleibt oft als Erstes auf der Strecke. Nach der letzten Dosis kommt der Appetit zurück, der Bedarf an Protein bleibt: Es trägt zur Erhaltung von Muskelmasse bei<Fn n={fn('euClaims')} id="euClaims" /> und sättigt stärker als Kohlenhydrate oder Fett. Wer sein Tagesziel kennt und auf die Mahlzeiten verteilt, hat den einfachsten Hebel der Haltephase in der Hand. Ab welcher Zahl auf der Waage du zusätzlich reagierst, legt der <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> fest; wann der Appetit voraussichtlich zurückkommt, der <a href="/werkzeuge/zeitplan-nach-letzter-dosis/">Zeitplan nach der letzten Dosis</a>.</p>
+    </div>
+
+    <Faq items={faq} id="protein-faq" title="Häufige Fragen zum Proteinbedarf" />
 
     <ProductTeaser position="werkzeug-protein" />
 

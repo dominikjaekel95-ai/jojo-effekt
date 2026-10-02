@@ -1,0 +1,11 @@
+---
+/**
+ * Datentabelle unter einer Studien-Grafik auf .astro-Seiten (in Artikeln macht das ArticlePage.astro automatisch).
+ * Innerhalb der <figure> nach der <figcaption> einsetzen: <GrafikDaten id="absetzkurve-step-1" />
+ */
+import { grafikDatenHtml } from '../lib/grafik-daten';
+interface Props { id: string; class?: string }
+const { id, class: klasse = 'mt-2' } = Astro.props;
+const html = grafikDatenHtml(id, klasse);
+---
+{html && <Fragment set:html={html} />}

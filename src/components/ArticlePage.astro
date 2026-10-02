@@ -11,16 +11,20 @@ import Footnotes from './Footnotes.astro';
 import AuthorBox from './AuthorBox.astro';
 import ProductTeaser from './ProductTeaser.astro';
 import AffiliateLinks from './AffiliateLinks.astro';
+import GrafikEinbinden from './GrafikEinbinden.astro';
 import GlossarBox from './GlossarBox.astro';
 import ChecklistBox from './ChecklistBox.astro';
 import type { AffiliateKey } from '../data/affiliate';
 import { getCollection, render } from 'astro:content';
 import { site } from '../data/site';
 import { themaByCategory, gehoertZu } from '../data/themen';
+import { mitGrafikDaten } from '../lib/grafik-daten';
 
 interface Props { entry: CollectionEntry<'wissen'> }
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
+/* Datentabelle unter jeder Grafik (GEO): das gerenderte HTML wird ergänzt, sonst bleibt <Content /> der Weg */
+const html = entry.rendered?.html ? mitGrafikDaten(entry.rendered.html) : undefined;
 const toc = entry.data.toc ? headings.filter((h) => h.depth === 2) : [];
 const all = await getCollection('wissen', (a) => !a.data.draft);
 const related = entry.data.related
@@ -126,7 +130,8 @@ const jsonLd = [
     )}
 
     <div class="prose-site mt-8">
-      <Content />
+      {html !== undefined ? <Fragment set:html={html} /> : <Content />}
+      <GrafikEinbinden />
     </div>
 
     <GlossarBox text={`${entry.body ?? ''} ${faqText}`} class="mt-8" />

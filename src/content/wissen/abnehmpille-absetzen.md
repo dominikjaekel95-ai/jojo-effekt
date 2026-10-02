@@ -15,14 +15,14 @@ faq:
     a: "<p>Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche, bei Tablette und Spritze gleich. Nach fünf Wochen sind etwa 3 % übrig, nach sieben Wochen fast nichts. Der Appetit kommt meist in der zweiten bis vierten Woche zurück.</p>"
   - q: "Gibt es Studien zum Absetzen der Wegovy-Tablette?"
     a: "<p>Nein. Die Zulassungsstudie OASIS 4 berichtet keine Gewichtsdaten nach dem Ende der Einnahme. Belegt ist der Verlauf nur für die Spritze mit demselben Wirkstoff: Ein Jahr nach dem Absetzen waren zwei Drittel des Verlusts zurück. Für die Tablette ist das ein plausibler Übertrag, keine Messung.</p>"
-  - q: "Muss ich die Abnehmpille ausschleichen?"
-    a: "<p>Die Fachinformation sieht kein Ausschleichen vor, und die Studien haben abrupt abgesetzt, ohne Entzugserscheinungen. Die Tablette gibt es in mehreren Dosisstufen; ob ein schrittweises Reduzieren sinnvoll ist, entscheidet deine Ärztin oder dein Arzt. Einen Beleg, dass es die Zunahme abmildert, gibt es nicht.</p>"
+  - q: "Was passiert, wenn ich Semaglutid absetze?"
+    a: "<p>Semaglutid, der Wirkstoff von Wegovy-Spritze, Wegovy-Tablette, Ozempic und Rybelsus, hat eine Halbwertszeit von etwa einer Woche. Nach dem Absetzen sinkt der Spiegel über etwa fünf Wochen, die Appetitbremse fällt weg, Magenentleerung und Sättigung normalisieren sich, und ohne Gegenmaßnahmen kommt das Gewicht zurück: in der STEP-1-Verlängerung zwei Drittel des Verlusts nach einem Jahr. Bei Typ-2-Diabetes steigt zusätzlich der Blutzucker; dann nur in Absprache mit der Ärztin.</p>"
   - q: "Nehme ich nach der Tablette genauso zu wie nach der Spritze?"
     a: "<p>Das ist nicht untersucht. Weil Wirkstoff und Halbwertszeit gleich sind und die Wiederzunahme am Gewichtsverlust hängt, nicht an der Darreichungsform, ist ein ähnlicher Verlauf plausibel. Wie groß die Zunahme im Mittel ausfällt, kann erst eine Studie mit der Tablette zeigen.</p>"
   - q: "Gilt das auch für Rybelsus?"
     a: "<p>Rybelsus enthält denselben Wirkstoff, ist aber für Typ-2-Diabetes zugelassen. Beim Absetzen steht dort der Blutzucker im Vordergrund: Er steigt wieder, und die übrige Diabetestherapie muss angepasst werden. Deshalb nie ohne ärztliche Begleitung absetzen.</p>"
-  - q: "Kann ich von der Tablette auf die Spritze wechseln oder umgekehrt?"
-    a: "<p>Medizinisch ist beides derselbe Wirkstoff, ein Wechsel ist möglich. Wie er abläuft, regelt die Fachinformation, und die Entscheidung trifft deine Ärztin oder dein Arzt. Für die Zeit danach ändert ein Wechsel nichts: Die Halbwertszeit bleibt gleich.</p>"
+  - q: "Was passiert, wenn ich die Abnehmpille absetze?"
+    a: "<p>Gemessen ist es noch nicht: Es gibt keine Studie zur Zeit nach dem Absetzen der Tablette (Stand Oktober 2026). Übertragbar sind die Daten zum selben Wirkstoff als Spritze: Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut, der Appetit kommt früher zurück, die Zunahme ist in Studien ab etwa Woche 8 messbar, und nach einem Jahr waren in der STEP-1-Verlängerung zwei Drittel des Verlusts zurück. Ein Entzugssyndrom gibt es nicht.</p>"
 ---
 
 Seit dem 1. September 2026 gibt es in deutschen Apotheken die erste Abnehmpille: die Wegovy-Tablette mit dem Wirkstoff Semaglutid.<sup><a href="#fn-tabletteApotheken2026">1</a></sup> Wer sie nimmt, stellt irgendwann dieselbe Frage wie die Menschen mit der Spritze: Was passiert, wenn ich aufhöre? Die ehrliche Antwort: Für die Tablette hat das noch keine Studie untersucht. Was es gibt, sind die Daten zur Spritze mit demselben Wirkstoff, und die lassen sich in Teilen übertragen. Dieser Artikel sortiert, was gesichert ist, was Übertrag ist und was offen bleibt. Die Grundlagen für alle Präparate stehen im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).

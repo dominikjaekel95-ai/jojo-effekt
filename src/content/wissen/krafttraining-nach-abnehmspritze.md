@@ -84,6 +84,14 @@ Eine Regel für die ganze Zeit: Wenn du in allen Sätzen 12 saubere Wiederholung
 
 Training ist der Reiz, Protein ist der Baustoff. Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag,<sup><a href="#fn-leidy2015">6</a></sup> verteilt auf drei bis vier Mahlzeiten. Eine proteinreiche Mahlzeit nach dem Training ist sinnvoll; wichtiger ist die Tagesmenge. Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver körperlicher Betätigung, bei 3 g täglich.<sup><a href="#fn-euClaims">7</a></sup> Es macht jede Einheit ein Stück wirksamer, ersetzt aber keine. Mehr dazu unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
 
+## Schon während der Behandlung?
+
+Ja, und das ist der beste Zeitpunkt. Die Teilnehmenden der S-LiTE-Studie, die ein Jahr nach Therapieende am besten dastanden, hatten während der Medikamententherapie trainiert, nicht erst danach.<sup><a href="#fn-jensen2024">1</a></sup> Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier Masse weitgehend,<sup><a href="#fn-sardeli2018">2</a></sup> und genau in der Zeit unter der Spritze geht die meiste verloren.
+
+**Ist Krafttraining mit Mounjaro möglich?** Aus der Fachinformation ergibt sich kein Grund gegen Training; Tirzepatid ist kein Medikament, das Muskeln oder Kreislauf anders belastet als Semaglutid. Was viele unter der Therapie spüren, ist Schwäche und Übelkeit, vor allem in den Tagen nach der Spritze und nach jeder Dosissteigerung. Dann kürzer trainieren, nicht auslassen, und den Trainingstag auf die Tage legen, an denen es dir besser geht.
+
+**Ist Krafttraining während Wegovy empfehlenswert?** Für Semaglutid gilt dasselbe: Der Plan oben ist unter der Therapie genauso machbar, mit zwei Anpassungen. Erstens genug Protein, weil der Appetit die Portionen bestimmt und der Muskel ohne Baumaterial nicht auf das Training reagiert.<sup><a href="#fn-leidy2015">6</a></sup> Zweitens die Belastung langsamer steigern, wenn du wenig isst und dich müde fühlst. Ob Training in deiner Situation passt, etwa bei Herz-Kreislauf-Erkrankungen, Diabetes mit Insulin oder Gelenkproblemen, besprichst du mit deiner Ärztin oder deinem Arzt; Fragen zum Medikament selbst gehören ebenfalls dorthin.
+
 ## Sicherheit: wann du vorher fragst
 
 - Bei Herz-Kreislauf-Erkrankungen, Bluthochdruck ohne Einstellung, Diabetes mit Insulin oder Gelenkproblemen: Start mit der Ärztin oder dem Arzt besprechen.

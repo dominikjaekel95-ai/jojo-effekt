@@ -5,26 +5,27 @@ description: "Was Kreatin unter und nach der Abnehmspritze bringt, welche Dosis 
 category: "Muskeln"
 order: 5
 pubDate: 2026-09-30
+updatedDate: 2026-10-01
 keywords: ["kreatin abnehmspritze", "kreatin wegovy", "kreatin mounjaro", "kreatin ozempic", "kreatin glp-1", "kreatin und abnehmspritze wechselwirkung", "kreatin nach abnehmspritze"]
 sources: ["kreider2017", "euClaims", "sardeli2018", "who2020", "wilding2021dxa"]
 related: ["muskelabbau-abnehmspritze", "protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
 faq:
   - q: "Kann ich Kreatin nehmen, während ich die Abnehmspritze spritze?"
     a: "<p>Eine Wechselwirkung zwischen Kreatin-Monohydrat und GLP-1-Rezeptoragonisten ist nicht bekannt; Kreatin ist ein Lebensmittelbestandteil, den der Körper selbst bildet. Trotzdem: Sag deiner Ärztin, dass du es nimmst, vor allem wegen des Kreatinin-Laborwerts und bei Nierenerkrankungen.</p>"
-  - q: "Nimmt man mit Kreatin zu?"
-    a: "<p>In den ersten ein bis zwei Wochen steigt das Gewicht oft um 0,5 bis 2 kg. Das ist Wasser, das in die Muskelzellen eingelagert wird, kein Fett. Wer nach der Abnehmspritze jede Zahl auf der Waage fürchtet, sollte das vorher wissen – und den Wasseranstieg in seiner Wiege-Regel einplanen.</p>"
+  - q: "Kann man beim Abnehmen Kreatin nehmen?"
+    a: "<p>Ja, 3 g Kreatin-Monohydrat am Tag gelten bei gesunden Erwachsenen als gut untersucht und sicher, auch während einer Gewichtsabnahme. Es macht das Krafttraining wirksamer, das die Muskeln beim Abnehmen schützt; abnehmen tut man damit nicht. Zu Beginn kommen 0,5 bis 2 kg Wasser in die Muskulatur, kein Fett; der Kreatinin-Laborwert steigt leicht, was die Ärztin wissen sollte.</p>"
   - q: "Welche Dosis Kreatin ist sinnvoll?"
     a: "<p>3 g Kreatin-Monohydrat pro Tag, jeden Tag, auch an trainingsfreien Tagen. Das ist die Menge, auf die sich die zugelassenen EU-Angaben beziehen. Eine Ladephase mit höheren Dosen ist nicht nötig; der Speicher ist nach etwa vier Wochen voll.</p>"
   - q: "Ist Kreatin schlecht für die Nieren?"
     a: "<p>Bei gesunden Nieren zeigen Studien über Jahre keine Schäden in üblichen Dosen. Kreatin erhöht allerdings den Laborwert Kreatinin, den Ärztinnen zur Beurteilung der Nierenfunktion nutzen – ohne dass die Nieren schlechter arbeiten. Bei bestehender Nierenerkrankung Kreatin nur nach ärztlicher Rücksprache.</p>"
-  - q: "Wirkt Kreatin auch ohne Krafttraining?"
-    a: "<p>Kaum. Die zugelassenen Angaben beziehen sich auf Schnellkrafttraining und auf die Verstärkung der Wirkung von Krafttraining. Wer nicht trainiert, spart sich das Geld besser.</p>"
+  - q: "Was passiert, wenn ich Kreatin nehme, aber keinen Sport mache?"
+    a: "<p>Wenig. Die zugelassenen Angaben zu Kreatin beziehen sich auf die Leistung bei Schnellkrafttraining und auf die Wirkung von Krafttraining bei Erwachsenen über 55; ohne Training gibt es keinen belegten Nutzen für Muskeln oder Gewicht. Du siehst in den ersten Wochen 0,5 bis 2 kg Wasser in der Muskulatur auf der Waage, mehr nicht. Wer nicht trainiert, steckt das Geld besser in Protein.</p>"
   - q: "Kann ich Kreatin zusammen mit Wegovy nehmen?"
     a: "<p>Eine Wechselwirkung zwischen Kreatin-Monohydrat und Semaglutid ist nicht bekannt. Sinnvoll ist es nur mit Krafttraining, und die Wassereinlagerung von 0,5 bis 2 kg zeigt sich auf der Waage. Sag deiner Ärztin Bescheid, vor allem vor Blutabnahmen, weil Kreatin den Kreatinin-Wert erhöht.</p>"
   - q: "Kann ich Kreatin zusammen mit Mounjaro nehmen?"
     a: "<p>Auch für Tirzepatid ist keine Wechselwirkung mit Kreatin bekannt. Bei Typ-2-Diabetes werden die Nierenwerte ohnehin kontrolliert; die Ärztin sollte wissen, dass du Kreatin nimmst. Bei eingeschränkter Nierenfunktion nur nach Rücksprache.</p>"
-  - q: "Kann ich Kreatin zusammen mit Ozempic nehmen?"
-    a: "<p>Ja, eine Wechselwirkung ist nicht bekannt, auch nicht mit Metformin. Weil Ozempic meist bei Typ-2-Diabetes verordnet wird und dort eine eingeschränkte Nierenfunktion häufiger ist, gehört Kreatin hier immer ins Arztgespräch.</p>"
+  - q: "Ist Kreatin gut für die Fettverbrennung?"
+    a: "<p>Nein, nicht direkt. Kreatin verbrennt kein Fett und hat keine zugelassene Angabe zum Gewicht. Was es kann: Krafttraining leistungsfähiger machen, und mehr erhaltene Muskelmasse verbraucht auch in Ruhe Energie. Wer Kreatin als Abnehmmittel kauft, kauft das Falsche.</p>"
 affiliate: ["creatineEsn", "creatineNe"]
 affiliateTitle: "Beispiele für Kreatin-Monohydrat"
 affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke. Es zählt der Rohstoff: reines Kreatin-Monohydrat, 3 g pro Tag, keine Mischungen mit Zusätzen."
@@ -88,7 +89,7 @@ Ozempic ist derselbe Wirkstoff wie Wegovy in niedrigerer Dosis und zur Behandlun
 
 ## Kreatin ist kein Ersatz für Training
 
-Der wichtigste Satz zum Schluss: Kreatin macht Training wirksamer. Ohne Training macht es fast nichts. Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">4</a></sup> Wer damit anfängt, profitiert von Kreatin. Wer nicht trainiert, sollte das Geld lieber in gutes Protein stecken. Das Supplement, nach dem nach Kreatin am häufigsten gefragt wird, ist Magnesium; was davon belegt ist und was nicht, steht unter [Magnesium bei der Abnehmspritze](/wissen/magnesium-abnehmspritze/).
+Der wichtigste Satz zum Schluss: Kreatin macht Training wirksamer. Ohne Training macht es fast nichts. Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">4</a></sup> Wer damit anfängt, profitiert von Kreatin; ein Einstiegsplan mit sechs Übungen steht unter [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/). Wer nicht trainiert, sollte das Geld lieber in gutes Protein stecken; wie viel das ist, steht unter [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/). Das Supplement, nach dem nach Kreatin am häufigsten gefragt wird, ist Magnesium; was davon belegt ist und was nicht, steht unter [Magnesium bei der Abnehmspritze](/wissen/magnesium-abnehmspritze/).
 
 ---
 

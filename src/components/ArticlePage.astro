@@ -4,6 +4,7 @@
  * zum Thema), zur Seite (related, „Mehr zum Thema“) und nach unten (Glossar-Box) ist hier fest eingebaut.
  */
 import type { CollectionEntry } from 'astro:content';
+import { faqJsonLd } from '../data/faq';
 import Base from '../layouts/Base.astro';
 import Faq from './Faq.astro';
 import Footnotes from './Footnotes.astro';
@@ -96,6 +97,8 @@ const jsonLd = [
       { '@type': 'ListItem', position: 4, name: entry.data.title, item: url },
     ],
   },
+  // FAQPage-Schema aus den Artikel-FAQ: KI-Suchen lesen Frage und Antwort strukturiert; HTML wird zu Text reduziert
+  ...(entry.data.faq.length > 0 ? [faqJsonLd(entry.data.faq)] : []),
 ];
 ---
 <Base

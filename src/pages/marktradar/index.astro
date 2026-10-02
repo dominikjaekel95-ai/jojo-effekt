@@ -1,5 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
+import GrafikDaten from '../../components/GrafikDaten.astro';
+import GrafikEinbinden from '../../components/GrafikEinbinden.astro';
 import { site } from '../../data/site';
 import { radar, radarTypeLabel, radarLastmod, zulassungen, preise, kassen, lieferbarkeit, fmtDate } from '../../data/markt';
 import { studien, studienLog, studienUpdated } from '../../data/studien';
@@ -162,6 +164,7 @@ const typeClass: Record<string, string> = {
       <figure class="mt-6">
         <img src="/grafiken/preise-im-monat.png" alt={`Balkendiagramm der monatlichen Selbstzahlerpreise als Größenordnung, Stand ${fmtDate(preise.stand)}: ${preise.zeilen.map((z) => `${z.praeparat} ${z.monat}`).join('; ')}.`} width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
         <figcaption class="mt-2 text-sm text-ink-3">Dieselben Zahlen als Grafik, Stand {fmtDate(preise.stand)}; wird mit jeder Preiserhebung neu erzeugt. Frei verwendbar mit Quellenangabe, alle Grafiken unter <a href="/grafiken/" class="font-semibold text-moss underline underline-offset-4">Grafiken</a>.</figcaption>
+        <GrafikDaten id="preise-im-monat" class="mt-3" />
       </figure>
     </section>
 
@@ -207,4 +210,5 @@ const typeClass: Record<string, string> = {
       </p>
     </div>
   </section>
+  <GrafikEinbinden />
 </Base>

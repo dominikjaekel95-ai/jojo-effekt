@@ -61,6 +61,7 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/werkzeuge/ | neue Seite: Übersicht der Werkzeuge | 2026-10-01 | offen |
 | https://nachderspritze.de/werkzeuge/zeitplan-nach-letzter-dosis/ | neues Werkzeug: Zeitplan aus Datum und Wirkstoff, Kalender-Export | 2026-10-01 | offen |
 | https://nachderspritze.de/werkzeuge/proteinrechner/ | neues Werkzeug: Proteinrechner | 2026-10-01 | offen |
+| https://nachderspritze.de/werkzeuge/gewichtskorridor/ | neues Werkzeug: Gewichtskorridor mit drei Zonen (Wing 2006) | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/ozempic-absetzen/ | FAQ nach „Weitere Fragen“, updatedDate | 2026-10-01 | offen |
 | https://nachderspritze.de/abnehmspritze-kosten/ | neue Seite: monatliche Preiserhebung mit Jahreskosten, Kassenregeln, Methodik, Zitierhinweis (Link-Magnet) | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/absetzen/ | neue Seite: Themenseite Absetzen und Pausieren (nach Merge des Hub-PR) | 2026-09-30 | offen |

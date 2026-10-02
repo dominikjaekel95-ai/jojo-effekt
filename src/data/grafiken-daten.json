@@ -1,0 +1,152 @@
+{
+  "_kommentar": "Datenpunkte jeder Studien-Grafik als Tabelle (GEO: Sprachmodelle lesen Text, nicht Pixel). Schlüssel = Grafik-ID aus src/data/grafiken.ts. Zahlen identisch mit scripts/grafiken.mjs; bei jeder Änderung dort hier mitziehen. Die Preisgrafik (preise-im-monat) entsteht aus src/data/markt/preise.json und steht nicht hier.",
+  "absetzkurve-step-1": {
+    "spalten": ["Zeitpunkt", "Semaglutid 2,4 mg", "Placebo"],
+    "zeilen": [
+      ["Woche 0 (Start)", "0 %", "0 %"],
+      ["Woche 68 (Ende der Behandlung)", "−17,3 %", "−2,0 %"],
+      ["Woche 120 (52 Wochen ohne Medikament)", "−5,6 %", "−0,1 %"]
+    ],
+    "hinweis": "Mittlere Änderung des Körpergewichts gegenüber dem Start; Messpunkte Woche 0, 68 und 120. In den 52 Wochen ohne Medikament kamen 11,6 Prozentpunkte zurück, zwei Drittel des Verlusts.",
+    "quelle": "Wilding et al., STEP 1 trial extension, Diabetes Obes Metab 2022, 24(8), S. 1553–1564"
+  },
+  "absetzkurve-step-1-saeulen": {
+    "spalten": ["Kennzahl", "Wert"],
+    "zeilen": [
+      ["Verloren nach 68 Wochen Semaglutid 2,4 mg", "−17,3 %"],
+      ["Wieder zurück in 52 Wochen ohne Medikament", "+11,6 Prozentpunkte"],
+      ["Geblieben nach 120 Wochen", "−5,6 %"],
+      ["Anteil des Verlusts, der zurückkam", "zwei Drittel"]
+    ],
+    "hinweis": "Mittlere Gewichtsänderung gegenüber dem Start, Semaglutid-Gruppe der STEP-1-Verlängerung.",
+    "quelle": "Wilding et al., STEP 1 trial extension, Diabetes Obes Metab 2022, 24(8), S. 1553–1564"
+  },
+  "absetzkurve-step-1-kompakt": {
+    "spalten": ["Kennzahl", "Semaglutid 2,4 mg", "Placebo"],
+    "zeilen": [
+      ["Nach 68 Wochen Behandlung", "−17,3 %", "−2,0 %"],
+      ["Nach 120 Wochen (ein Jahr ohne Medikament)", "−5,6 %", "−0,1 %"],
+      ["Anteil des Verlusts, der in 52 Wochen zurückkam", "zwei Drittel", "–"]
+    ],
+    "hinweis": "Mittelwerte; die Streuung zwischen einzelnen Menschen ist groß.",
+    "quelle": "Wilding et al., STEP 1 trial extension, Diabetes Obes Metab 2022, 24(8), S. 1553–1564"
+  },
+  "zeitachse-nach-letzter-dosis": {
+    "spalten": ["Phase", "Zeitraum nach der letzten Dosis", "Grundlage"],
+    "zeilen": [
+      ["Wirkstoff im Körper", "bis etwa Woche 5 bis 7 weitgehend abgebaut", "Halbwertszeit laut Fachinformation: Semaglutid etwa 1 Woche, Tirzepatid etwa 5 Tage; Faustregel fünf Halbwertszeiten"],
+      ["Appetit kommt zurück", "Woche 2 bis 5, bleibt danach", "sinkender Wirkstoffspiegel"],
+      ["Zunahme messbar", "ab Woche 8 signifikant, Anstieg bis etwa Woche 20", "Meta-Analyse randomisierter Studien (Wu et al. 2025)"],
+      ["Ärztlicher Kontrolltermin", "Woche 8 bis 12", "Empfehlung dieser Seite: dann zeigt sich, ob die Zunahme beginnt"]
+    ],
+    "hinweis": "Was aus Pharmakologie und Studien ableitbar ist; der individuelle Verlauf weicht ab.",
+    "quelle": "Fachinformationen Wegovy und Mounjaro (EMA); Wu et al., Meta-Analyse, BMC Medicine 2025"
+  },
+  "zeitachse-phasen": {
+    "spalten": ["Phase", "Zeitraum nach der letzten Dosis", "Was passiert"],
+    "zeilen": [
+      ["Noch wenig Veränderung", "Woche 1 bis 2", "Genug Wirkstoff im Körper; viele merken keinen Unterschied"],
+      ["Der Appetit kommt zurück", "Woche 2 bis 5", "Wirkstoffspiegel sinkt, der Magen arbeitet schneller, Sättigung kommt später"],
+      ["Wirkstoff praktisch weg", "Woche 5 bis 8", "nach etwa fünf Halbwertszeiten weitgehend abgebaut"],
+      ["Zunahme messbar", "ab Woche 8", "in Studien ab Woche 8 signifikant, Anstieg bis etwa Woche 20"]
+    ],
+    "hinweis": "Halbwertszeiten laut Fachinformation (Semaglutid etwa eine Woche, Tirzepatid etwa fünf Tage); Zunahme laut Meta-Analyse randomisierter Studien.",
+    "quelle": "Fachinformationen Wegovy und Mounjaro (EMA); Wu et al., Meta-Analyse, BMC Medicine 2025"
+  },
+  "koerperzusammensetzung-step-1": {
+    "spalten": ["Anteil am Gewichtsverlust nach 68 Wochen", "Wert"],
+    "zeilen": [
+      ["Fettmasse", "rund 60 %"],
+      ["Fettfreie Masse (Muskeln, Organe, Knochen, Wasser)", "rund 40 %"]
+    ],
+    "hinweis": "DXA-Substudie mit 140 Teilnehmenden, exploratorische Analyse; Anteile gerundet. Wie viel der fettfreien Masse Muskel war, wurde nicht getrennt gemessen. Dagegen belegt: Krafttraining an mindestens zwei Tagen pro Woche und 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag.",
+    "quelle": "Wilding et al., STEP 1 body composition, J Endocr Soc 2021; Sardeli et al. 2018; Leidy et al. 2015; WHO 2020"
+  },
+  "training-s-lite": {
+    "spalten": ["Vergleich", "Mehr-Zunahme nach Liraglutid allein", "95-%-Konfidenzintervall"],
+    "zeilen": [
+      ["… gegenüber Training allein", "+6,0 kg", "2,1 bis 10,0 kg"],
+      ["… gegenüber Training plus Liraglutid", "+2,5 kg", "−1,5 bis 6,5 kg (nicht signifikant)"]
+    ],
+    "hinweis": "Gewichtszunahme im Jahr ohne jede Behandlung nach 8 Wochen kalorienarmer Diät und 52 Wochen Behandlung (Placebo, Training, Liraglutid oder beides). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau erhalten; nach Liraglutid allein kam das Gewicht zurück. Erwachsene mit Adipositas, betreutes Trainingsprogramm.",
+    "quelle": "Jensen et al., S-LiTE follow-up, eClinicalMedicine 2024, 69, 102475"
+  },
+  "wirksamkeit-zulassungsstudien": {
+    "spalten": ["Studie", "Präparat und Dauer", "Wirkstoff", "Placebo"],
+    "zeilen": [
+      ["STEP 1", "Semaglutid 2,4 mg Spritze, 68 Wochen", "−14,9 %", "−2,4 %"],
+      ["OASIS 4", "Semaglutid 25 mg Tablette, 64 Wochen", "−13,6 %", "−2,2 %"],
+      ["OASIS 1", "Semaglutid 50 mg Tablette, 68 Wochen", "−15,1 %", "−2,4 %"],
+      ["SURMOUNT-1", "Tirzepatid 15 mg Spritze, 72 Wochen", "−20,9 %", "−3,1 %"],
+      ["SCALE", "Liraglutid 3 mg Spritze, 56 Wochen", "−8,0 %", "−2,6 %"]
+    ],
+    "hinweis": "Mittlere Änderung des Körpergewichts. Verschiedene Studien mit verschiedenen Teilnehmenden und Laufzeiten; kein direkter Vergleich zwischen den Präparaten.",
+    "quelle": "STEP 1 (NEJM 2021), OASIS 4 (NEJM 2025), OASIS 1 (Lancet 2023), SURMOUNT-1 (NEJM 2022), SCALE (NEJM 2015)"
+  },
+  "weiter-oder-placebo": {
+    "spalten": ["Studie", "Zeitraum nach dem Wechsel", "Weiter behandelt", "Wechsel auf Placebo"],
+    "zeilen": [
+      ["STEP 4 (Semaglutid 2,4 mg)", "48 Wochen", "−7,9 %", "+6,9 %"],
+      ["SURMOUNT-4 (Tirzepatid)", "52 Wochen", "−5,5 %", "+14 %"]
+    ],
+    "hinweis": "Änderung des Körpergewichts ab dem Zeitpunkt des Wechsels; alle Teilnehmenden hatten davor mit dem Medikament abgenommen.",
+    "quelle": "Rubino et al., STEP 4, JAMA 2021; Aronne et al., SURMOUNT-4, JAMA 2024"
+  },
+  "halbwertszeiten-praeparate": {
+    "spalten": ["Wirkstoff", "Präparate", "Halbwertszeit", "Weitgehend abgebaut nach", "Hinweis"],
+    "zeilen": [
+      ["Semaglutid", "Wegovy (Spritze und Tablette), Ozempic, Rybelsus", "etwa 1 Woche", "etwa 5 Wochen", "laut Fachinformation bis etwa 7 Wochen im Blut nachweisbar"],
+      ["Tirzepatid", "Mounjaro", "etwa 5 Tage", "etwa 25 Tagen", "–"],
+      ["Liraglutid", "Saxenda", "etwa 13 Stunden", "etwa 3 Tagen", "–"]
+    ],
+    "hinweis": "Faustregel: Nach etwa fünf Halbwertszeiten ist ein Wirkstoff weitgehend abgebaut. Die Wirkung auf den Appetit lässt schon vorher spürbar nach.",
+    "quelle": "Fachinformationen Wegovy, Ozempic, Rybelsus, Mounjaro, Saxenda (EMA-Produktinformationen)"
+  },
+  "warum-das-gewicht-zurueckkommt": {
+    "spalten": ["Mechanismus", "Zahl", "Quelle"],
+    "zeilen": [
+      ["Die Appetitbremse fällt weg", "Semaglutid nach etwa 5 bis 7 Wochen abgebaut, Tirzepatid nach etwa 25 Tagen", "Fachinformationen (EMA)"],
+      ["Hungerhormone bleiben verschoben (Ghrelin höher, Leptin niedriger)", "noch ein Jahr nach einer Diät messbar: mehr Hunger, weniger Sättigung", "Sumithran et al., NEJM 2011"],
+      ["Weniger Energie in Ruhe", "Ruheenergieverbrauch 6 Jahre nach starkem Gewichtsverlust abgesenkt", "Fothergill et al., Obesity 2016"],
+      ["Ein Teil des Verlusts war fettfreie Masse", "rund 40 % des Gewichtsverlusts unter Semaglutid", "STEP-1-DXA-Substudie, Wilding et al. 2021"]
+    ],
+    "hinweis": "Vier belegte Mechanismen hinter dem Jojo-Effekt. Dagegen belegt: Krafttraining (Jensen 2024, Sardeli 2018) und Protein (Leidy 2015).",
+    "quelle": "Fachinformationen (EMA); Sumithran et al. 2011; Fothergill et al. 2016; Wilding et al. 2021; Jensen 2024; Sardeli 2018; Leidy 2015"
+  },
+  "proteinbedarf-nach-abnehmspritze": {
+    "spalten": ["Körpergewicht", "1,2 g pro kg", "1,6 g pro kg"],
+    "zeilen": [
+      ["60 kg", "72 g am Tag", "96 g am Tag"],
+      ["70 kg", "84 g am Tag", "112 g am Tag"],
+      ["80 kg", "96 g am Tag", "128 g am Tag"],
+      ["90 kg", "108 g am Tag", "144 g am Tag"],
+      ["100 kg", "120 g am Tag", "160 g am Tag"]
+    ],
+    "hinweis": "Empfehlung für Gewichtsabnahme und -erhalt: 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag, verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 g pro Mahlzeit; bei Nierenerkrankungen vorher ärztlich klären.",
+    "quelle": "Leidy et al., Am J Clin Nutr 2015, 101(6), S. 1320S–1329S"
+  },
+  "haarausfall-zeitverlauf": {
+    "spalten": ["Phase", "Monate nach dem Auslöser", "Was passiert"],
+    "zeilen": [
+      ["Schnelle Abnahme (Auslöser)", "Monat 0 bis 2", "Viele Haare wechseln gleichzeitig in die Ruhephase; sichtbar ist noch nichts"],
+      ["Haare fallen aus", "Beginn Monat 2 bis 3, Abklingen meist innerhalb von etwa 6 Monaten nach Beginn", "diffuser, vorübergehender Haarausfall (telogenes Effluvium)"],
+      ["Haare wachsen nach", "ab etwa Monat 6 bis 12", "sichtbar, sobald der Auslöser weggefallen ist; bis zur alten Länge dauert es länger"]
+    ],
+    "hinweis": "Beeinflussbar: Protein 1,2 bis 1,6 g pro kg Körpergewicht am Tag, Eisenwert (Ferritin) prüfen lassen, Zink und Biotin nur bei nachgewiesener Lücke. Ärztlich abklären: länger als sechs Monate, fleckig, oder mit Müdigkeit und Frieren.",
+    "quelle": "Malkud, J Clin Diagn Res 2015; Leidy et al., Am J Clin Nutr 2015; Almandoz et al., Obesity 2024"
+  },
+  "abnehmpille-belegt-und-offen": {
+    "spalten": ["Angabe", "Wert"],
+    "zeilen": [
+      ["OASIS 4: Semaglutid 25 mg Tablette, 64 Wochen, 307 Teilnehmende ohne Diabetes", "−13,6 %"],
+      ["OASIS 4: Placebo", "−2,2 %"],
+      ["OASIS 4: bei durchgehender Einnahme", "−16,6 %"],
+      ["Studie zur Wiederzunahme nach dem Absetzen der Tablette", "keine (Stand Oktober 2026)"],
+      ["Übertrag von der Spritze: Halbwertszeit", "etwa eine Woche, wie bei der Spritze"],
+      ["Übertrag von der Spritze: Verlauf nach dem Absetzen (STEP-1-Verlängerung)", "−17,3 % nach 68 Wochen, −5,6 % ein Jahr später; zwei Drittel zurück"],
+      ["Übertrag: Zunahme in Studien zu Adipositas-Medikamenten", "ab Woche 8 messbar"]
+    ],
+    "hinweis": "Mittelwerte gegenüber dem Start. Jede Aussage zur Tablette nach dem Absetzen ist ein Übertrag, keine Messung.",
+    "quelle": "OASIS 4 (NEJM 2025); Fachinformation Rybelsus (EMA); STEP-1-Verlängerung (2022); Wu et al. (2025)"
+  }
+}

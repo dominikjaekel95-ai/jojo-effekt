@@ -28,7 +28,7 @@ export const GET: APIRoute = async () => {
     `- [Glossar](${u('/glossar/')}): ${glossar.length} Begriffe zur Zeit nach der Abnehmspritze, je ein Satz Definition mit Quelle`,
     `- [Marktradar](${u('/marktradar/')}): Zulassungen, Marktstarts, Preise als Größenordnung, Kassenregeln, Lieferbarkeit; Stand ${radarLastmod()}; Feed ${u('/marktradar/feed.xml')}`,
     `- [Grafiken](${u('/grafiken/')}): ${hauptgrafiken.length} Studien-Grafiken (Absetzkurve, Zeitachse nach der letzten Dosis, Halbwertszeiten, Proteinbedarf, Preise) als SVG und PNG unter CC BY 4.0, Quelle im Bild, Alt-Text nennt jede Zahl`,
-    `- [Werkzeuge](${u('/werkzeuge/')}): Zeitplan nach der letzten Dosis (Datum und Wirkstoff ergeben Meilensteine und Kalenderdatei) und Proteinrechner (Tagesziel 1,2 bis 1,6 g pro kg, Menge pro Mahlzeit); rechnen nur im Browser`,
+    `- [Werkzeuge](${u('/werkzeuge/')}): Zeitplan nach der letzten Dosis (Datum und Wirkstoff ergeben Meilensteine und Kalenderdatei), Proteinrechner (Tagesziel 1,2 bis 1,6 g pro kg, Menge pro Mahlzeit), Gewichtskorridor (drei Zonen mit Reaktionsschwelle nach Wing 2006) und Jahreskosten-Rechner unter ${u('/abnehmspritze-kosten/#rechner')}; rechnen nur im Browser`,
     `- [Ernährungsplan](${u('/ernaehrungsplan/')}): sieben Tage mit Mengen, Einkaufsliste und Austauschtabelle, ausgewählt aus 18 Plänen nach Ernährungsform, Appetit und Gewichtsbereich (rund 1,2 g Protein pro kg); kostenlos als PDF per Mail`,
     `- [Über diese Seite](${u('/ueber/')}): Arbeitsweise, Quellenregeln, Kontakt`,
     '',

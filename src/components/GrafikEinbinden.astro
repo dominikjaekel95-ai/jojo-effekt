@@ -1,0 +1,46 @@
+---
+/**
+ * Fügt unter jeder eingebundenen Studien-Grafik (img unter /grafiken/) einen Knopf ein, der den HTML-Einbettungscode mit
+ * Quellenlink in die Zwischenablage kopiert. Die CC-BY-Lizenz verlangt die Quellenangabe ohnehin; der Knopf macht sie bequem,
+ * und der Link zurück auf die Seite ist die Gegenleistung. Reines Inline-Skript ohne Abhängigkeiten; ohne Clipboard-API
+ * bleibt die Seite unverändert.
+ */
+import { site } from '../data/site';
+---
+<script is:inline define:vars={{ siteUrl: site.url }}>
+  (function () {
+    if (!navigator.clipboard || !navigator.clipboard.writeText) return;
+    var canonical = document.querySelector('link[rel="canonical"]');
+    var pageUrl = canonical ? canonical.href : location.href.split('#')[0];
+    var imgs = document.querySelectorAll('figure img[src^="/grafiken/"]');
+    Array.prototype.forEach.call(imgs, function (img) {
+      var figure = img.closest('figure');
+      if (!figure || figure.querySelector('[data-einbinden]')) return;
+      var src = img.getAttribute('src');
+      var id = src.split('/').pop().replace(/\.(png|svg)$/, '');
+      var alt = (img.getAttribute('alt') || '').replace(/"/g, '&quot;');
+      var code = '<figure>\n  <a href="' + pageUrl + '"><img src="' + siteUrl + src + '" alt="' + alt + '" width="1200" height="675" loading="lazy"></a>\n  <figcaption>Grafik: <a href="' + pageUrl + '">nachderspritze.de</a>, CC BY 4.0; Studienquellen auf der verlinkten Seite</figcaption>\n</figure>';
+      var zeile = document.createElement('p');
+      zeile.className = 'mt-1 text-xs text-ink-3';
+      var knopf = document.createElement('button');
+      knopf.type = 'button';
+      knopf.setAttribute('data-einbinden', '');
+      knopf.className = 'font-semibold text-moss underline underline-offset-4 plausible-event-name=Grafik+einbinden';
+      knopf.textContent = 'Grafik einbinden: HTML mit Quellenlink kopieren';
+      knopf.addEventListener('click', function () {
+        navigator.clipboard.writeText(code).then(
+          function () { knopf.textContent = 'Kopiert. Bitte den Quellenlink stehen lassen (CC BY 4.0).'; },
+          function () { knopf.textContent = 'Kopieren nicht möglich; der Code steht unter /grafiken/.'; }
+        );
+      });
+      var link = document.createElement('a');
+      link.href = '/grafiken/#' + id;
+      link.className = 'underline underline-offset-4 hover:text-moss';
+      link.textContent = 'Download und Quellen';
+      zeile.appendChild(knopf);
+      zeile.appendChild(document.createTextNode(' · '));
+      zeile.appendChild(link);
+      figure.appendChild(zeile);
+    });
+  })();
+</script>

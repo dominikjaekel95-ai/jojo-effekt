@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import GrafikDaten from '../../components/GrafikDaten.astro';
 import GrafikEinbinden from '../../components/GrafikEinbinden.astro';
 import Cta from '../../components/Cta.astro';
 import { getCollection } from 'astro:content';
@@ -53,6 +54,7 @@ const chip = 'inline-block rounded-lg border border-line bg-white px-3 py-1.5 te
     <figure class="mt-8">
       <a href="/wissen/abnehmspritze-absetzen/" class="block"><img src="/grafiken/zeitachse-nach-letzter-dosis.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Der Wirkstoff ist nach etwa fünf bis sieben Wochen weitgehend abgebaut, der Appetit kehrt ab Woche 2 bis 5 zurück, die Gewichtszunahme ist ab Woche 8 messbar und steigt bis etwa Woche 20. Ein Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis ist markiert." width="1200" height="675" loading="eager" class="w-full rounded-xl2 border border-line bg-white" /></a>
       <figcaption class="mt-2 text-sm text-ink-3">Die ersten 20 Wochen nach der letzten Dosis; Woche für Woche erklärt unter <a href="/wissen/abnehmspritze-absetzen/" class="font-semibold text-moss underline underline-offset-4">Abnehmspritze absetzen</a>. Alle Grafiken mit Quellen und Download: <a href="/grafiken/" class="font-semibold text-moss underline underline-offset-4">Grafiken</a>.</figcaption>
+      <GrafikDaten id="zeitachse-nach-letzter-dosis" class="mt-3" />
     </figure>
     <ul class="mt-6 flex flex-wrap gap-2" aria-label="Themen">
       {themen.map((t) => (<li><a href={`/wissen/${t.slug}/`} class={chip}>{t.name}</a></li>))}

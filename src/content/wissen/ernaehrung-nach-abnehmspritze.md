@@ -6,9 +6,9 @@ category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 11
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-02
 keywords: ["nach der abnehmspritze ernährung", "ernährung nach abnehmspritze", "abnehmspritze ernährung danach", "was essen nach abnehmspritze", "ernährungsplan nach abnehmspritze", "ernährung nach wegovy", "abnehmspritze ernährung umstellen"]
-sources: ["wu2025", "sumithran2011", "leidy2015", "almandoz2024", "dgeBallaststoffe", "dgeEmpfehlungen", "wilding2022ext", "jensen2024", "bls"]
+sources: ["wu2025", "sumithran2011", "leidy2015", "almandoz2024", "dgeBallaststoffe", "dgeEmpfehlungen", "wilding2022ext", "jensen2024", "bls", "wing2006"]
 related: ["protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze", "supplements-nach-abnehmspritze"]
 faq:
   - q: "Muss ich nach der Abnehmspritze Kalorien zählen?"
@@ -64,7 +64,7 @@ Drei bis vier Mahlzeiten zu festen Zeiten, dazwischen nichts aus der Hand. Der H
 
 ### 5. Wiegen mit Regel, nicht mit Gefühl
 
-Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du reagierst und wie. Ein Korridor von plus 2 kg um das Absetz-Gewicht ist normal; ab plus 3 kg lohnt sich ein ehrlicher Blick auf Protein und Training, ab plus 5 kg ein Arzttermin. Der Plan dazu steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
+Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du reagierst und wie. Die Zonen aus der STOP-Regain-Studie: bis plus 1,4 kg nichts tun, ab plus 1,4 kg zwei Wochen lang Protein und Training prüfen, ab plus 2,3 kg Ursachen klären und den Kontrolltermin vorziehen.<sup><a href="#fn-wing2006">10</a></sup> Der Plan dazu steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/); wie oft die Waage sinnvoll ist und wann sie schadet, unter [Wie oft wiegen nach der Abnehmspritze?](/wissen/wie-oft-wiegen-nach-abnehmspritze/).
 
 ## Ein Tag nach der Spritze (80 kg, Ziel 100 g Protein)
 

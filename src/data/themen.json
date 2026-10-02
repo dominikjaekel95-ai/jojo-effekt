@@ -171,7 +171,8 @@
         { "q": "Wie sieht der 12-Wochen-Plan aus?", "slug": "gewicht-halten-nach-abnehmspritze" },
         { "q": "Was tue ich in den ersten acht Wochen?", "href": "/checkliste/", "label": "Checkliste: Die ersten 8 Wochen nach der letzten Dosis" },
         { "q": "Verliere ich Muskeln oder Fett?", "slug": "muskelabbau-abnehmspritze" },
-        { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" }
+        { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" },
+        { "q": "Wie oft auf die Waage, und ab wann reagieren?", "slug": "wie-oft-wiegen-nach-abnehmspritze" }
       ],
       "include": [],
       "glossar": ["haltephase", "absetzkurve", "set-point-theorie", "adaptive-thermogenese", "metabolische-adaptation", "leptin"],

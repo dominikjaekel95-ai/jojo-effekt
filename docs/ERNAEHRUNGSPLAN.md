@@ -50,6 +50,14 @@ Stand 02.10.2026. Kostenloser Plan für sieben Tage gegen Newsletter-Anmeldung, 
 5. Gleiche Adresse mit anderen Antworten noch einmal → Feld `plan` wechselt, zweite Plan-Mail kommt (nur mit erlaubtem erneutem Durchlauf).
 6. `curl -i https://nachderspritze.de/api/ernaehrungsplan/` → 405. Absenden ohne Häkchen → `?fehler=eingabe`.
 
+## Teststand 02.10.2026 (Produktion)
+
+- Neue Adresse, Formular → Danke-Seite → Bestätigungsmail (englisch, Betreff „Confirmation email“) → Klick auf „Confirm your email“ → MailerLite schickt die Plan-Mail nach etwa 5 Sekunden; in Gmail kam sie nach 5 bis 7 Minuten an. Link öffnet das richtige PDF (getestet mit ep05 und ep15). Funktioniert.
+- Ohne Klick auf den Bestätigungsbutton bleibt die Adresse „Unconfirmed“, und es kommt kein Plan. Das war der Fehler beim ersten Test (die Bestätigungsmail kam, der Button wurde nicht geklickt). Gmail fasst alle Bestätigungsmails mit gleichem Betreff zu einem Verlauf zusammen; beim Testen mit mehreren +-Adressen den Button in der jüngsten Mail klicken.
+- Zweiter Plan für eine schon aktive Adresse: Die Funktion aktualisiert das Feld `plan` und weist die Gruppe neu zu, aber MailerLite startet die Automation nicht erneut, obwohl „Re-enter automation“ aktiv ist (auch nicht bei manuellem Entfernen und Wieder-Hinzufügen mit 70 Sekunden Abstand). Die Danke-Seite sagt das; solche Anfragen beantwortet Dominik per Mail. Bestehende Newsletter-Abonnenten, die zum ersten Mal einen Plan anfordern, treten der Gruppe zum ersten Mal bei; dafür sollte die Automation normal starten (noch nicht getestet).
+- Betreff und Text der Bestätigungsmail lassen sich im aktuellen MailerLite-Tarif nicht ändern (Subscribe settings: „upgrade to a premium plan“). Optionen: Upgrade, eigene deutsche Bestätigung über die Website, Wechsel zu Brevo.
+- Testadressen in MailerLite: dominik.jaekel95+ernaehrungsplan@gmail.com, dominik.jaekel95+ep2@gmail.com (beide aktiv, in Newsletter und Ernährungsplan). Vor dem ersten echten Newsletter entfernen oder einer Test-Gruppe zuordnen.
+
 ## Die 18 Pläne
 
 | Plan | Ernährung | Appetit | Gewicht | Protein/Tag |

@@ -4,7 +4,7 @@ metaTitle: "Wie oft wiegen nach der Abnehmspritze? Was Studien zeigen"
 description: "Täglich, wöchentlich oder gar nicht? Was Studien zum Wiegen nach dem Abnehmen zeigen, warum die Regel wichtiger ist als die Häufigkeit und wann die Waage schadet."
 category: "Gewicht halten"
 order: 27
-pubDate: 2026-10-02
+pubDate: 2026-10-03
 keywords: ["wie oft wiegen abnehmen", "wie oft sollte man sich wiegen", "täglich wiegen sinnvoll", "gewicht halten wie oft wiegen", "wie oft wiegen nach abnehmspritze", "morgens oder abends wiegen", "gewichtsschwankungen von tag zu tag", "abnehmspritze absetzen gewicht kontrollieren"]
 sources: ["wing2006", "butryn2007", "zheng2016", "vuorinen2021", "madigan2015", "daley2019", "wu2025", "steinberg2014", "benn2016", "pacanowski2023", "zheng2015"]
 related: ["gewicht-halten-nach-abnehmspritze", "jojo-effekt-abnehmspritze", "abnehmspritze-absetzen"]

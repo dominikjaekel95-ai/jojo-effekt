@@ -6,7 +6,7 @@ category: "Gewicht halten"
 image: /grafiken/training-s-lite.png
 order: 6
 pubDate: 2026-09-30
-updatedDate: 2026-10-02
+updatedDate: 2026-10-03
 keywords: ["nach abnehmspritze gewicht halten", "abnehmspritze absetzen gewicht halten", "abnehmspritze danach", "gewicht halten nach wegovy", "nach ozempic gewicht halten", "abnehmspritze absetzen plan"]
 sources: ["wu2025", "jensen2024", "leidy2015", "who2020", "sumithran2011", "dgeBallaststoffe", "wilding2022ext", "wing2006", "rodriguez2025", "fachinfoWegovy", "fachinfoMounjaro"]
 related: ["abnehmspritze-absetzen", "jojo-effekt-abnehmspritze", "protein-abnehmspritze"]
@@ -84,7 +84,7 @@ Die Zunahme wird in Studien ab jetzt messbar.<sup><a href="#fn-wu2025">1</a></su
 - **Der Arzttermin.** Gewicht, Blutdruck, Blutzucker, Blutfette. Ehrlich berichten, wie es läuft. Optionen besprechen – auch die eines Wiedereinstiegs, falls nötig. In der STEP-1-Verlängerung näherten sich die Blutwerte ein Jahr nach dem Absetzen wieder den Ausgangswerten;<sup><a href="#fn-wilding2022ext">7</a></sup> deshalb lohnt sich die Kontrolle. Omega-3-Kapseln ersetzen sie nicht; was sie laut den zugelassenen Angaben leisten, steht unter [Omega-3 bei der Abnehmspritze](/wissen/omega-3-abnehmspritze/).
 - **Die Wiege-Regel festschreiben.** Die Zonen aus der STOP-Regain-Studie:<sup><a href="#fn-wing2006">8</a></sup> bis +1,4 kg nichts tun; ab +1,4 kg zwei Wochen lang Protein und Training protokollieren; ab +2,3 kg Ursachen klären und den Kontrolltermin vorziehen. Aufschreiben, an den Kühlschrank.
 - **Training verstetigen.** Zwei Einheiten bleiben. Wer mag, nimmt eine dritte dazu oder ergänzt Ausdauer. Was nicht geht: pausieren, „weil das Gewicht jetzt stabil ist“.
-- **Die Woche danach planen.** Was passiert im Urlaub, bei Krankheit, in stressigen Wochen? Eine Minimalversion festlegen: ein Training, Protein zum Frühstück, einmal wiegen.
+- **Die Woche danach planen.** Was passiert im Urlaub, bei Krankheit, in stressigen Wochen? Eine Minimalversion festlegen: ein Training, Protein zum Frühstück, einmal wiegen. Für Weihnachten und andere Feiertage, die oft genau in diese Wochen fallen, steht ein eigener Plan unter [Feiertage nach der Abnehmspritze](/wissen/feiertage-nach-abnehmspritze/).
 
 **Ziel am Ende von Phase 3:** Gewicht stabil, Training seit 12 Wochen regelmäßig, eine schriftliche Regel für die Zeit danach, ein Arzttermin hinter dir.
 

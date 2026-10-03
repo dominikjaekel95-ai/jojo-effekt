@@ -122,3 +122,5 @@ Was dann automatisch passiert: `/datenschutz/` zeigt Abschnitt 4b (Checkliste) u
 ## 8. Checkliste als PDF
 
 `/checkliste/` ist als Seite lesbar und druckbar. Das PDF unter `/downloads/checkliste-8-wochen.pdf` entsteht aus der gebauten Seite mit `npm run pdf:checkliste` (Playwright, Chromium) und wird mit committet. Nach jeder Änderung an `src/pages/checkliste/index.astro` neu erzeugen. `/downloads/` trägt `X-Robots-Tag: noindex` (`vercel.json`), damit das PDF nicht neben der Seite rankt.
+
+Der Ernährungsplan unter `/ernaehrungsplan/` sammelt Adressen ohne Tally: Das eigene Formular postet an `api/ernaehrungsplan.js`, die Adresse kommt mit Double-Opt-in in die Gruppen „Newsletter“ und „Ernährungsplan“, eine MailerLite-Automation schickt nach der Bestätigung den PDF-Link (Feld `plan`). Einrichtung, Mailtext und Test: `docs/ERNAEHRUNGSPLAN.md`.

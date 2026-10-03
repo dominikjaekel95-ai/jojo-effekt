@@ -25,15 +25,15 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/abnehmspritze-absetzen/ | neue Abschnitte „Was beim Absetzen körperlich passiert“ und „Wiedereinstieg“ | 2026-09-30 | angemeldet 2026-10-01 |
 | https://nachderspritze.de/wissen/ | Hub listet fünf neue Artikel | 2026-09-30 | angemeldet 2026-10-01 |
 | https://nachderspritze.de/glossar/ | neue Sektion: Glossar mit 20 Begriffen (nach Merge des Preview-Branches) | 2026-09-30 | angemeldet 2026-10-02 |
-| https://nachderspritze.de/glossar/haltephase/ | eigener Begriff, Priorität | 2026-09-30 | offen |
-| https://nachderspritze.de/glossar/absetzkurve/ | eigener Begriff, Priorität | 2026-09-30 | offen |
-| https://nachderspritze.de/marktradar/ | neue Sektion: Marktradar (nach Merge des Preview-Branches) | 2026-09-30 | offen |
-| https://nachderspritze.de/erfahrungen/ | Erfahrungsformular live, Seite jetzt indexierbar | 2026-09-30 | offen |
-| https://nachderspritze.de/checkliste/ | neue Seite: Checkliste „Die ersten 8 Wochen nach der letzten Dosis“ (nach Merge des PR) | 2026-09-30 | offen |
-| https://nachderspritze.de/wissen/abnehmpille-absetzen/ | neuer Artikel, Pillen-Cluster, Priorität | 2026-09-30 | offen |
-| https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | neuer Artikel, Pillen-Cluster | 2026-09-30 | offen |
-| https://nachderspritze.de/wissen/wegovy-absetzen/ | neuer Abschnitt „Gilt das auch für die Wegovy-Tablette?“ | 2026-09-30 | offen |
-| https://nachderspritze.de/wissen/magnesium-abnehmspritze/ | neuer Artikel, Supplement-Reihe (Nischen-Painpoints) | 2026-10-01 | offen |
+| https://nachderspritze.de/glossar/haltephase/ | eigener Begriff, Priorität | 2026-09-30 | angemeldet 2026-10-03 |
+| https://nachderspritze.de/glossar/absetzkurve/ | eigener Begriff, Priorität | 2026-09-30 | angemeldet 2026-10-03 |
+| https://nachderspritze.de/marktradar/ | neue Sektion: Marktradar (nach Merge des Preview-Branches) | 2026-09-30 | indexiert (geprüft 2026-10-03) |
+| https://nachderspritze.de/erfahrungen/ | Erfahrungsformular live, Seite jetzt indexierbar | 2026-09-30 | angemeldet 2026-10-03 |
+| https://nachderspritze.de/checkliste/ | neue Seite: Checkliste „Die ersten 8 Wochen nach der letzten Dosis“ (nach Merge des PR) | 2026-09-30 | angemeldet 2026-10-03 |
+| https://nachderspritze.de/wissen/abnehmpille-absetzen/ | neuer Artikel, Pillen-Cluster, Priorität | 2026-09-30 | angemeldet 2026-10-03 |
+| https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | neuer Artikel, Pillen-Cluster | 2026-09-30 | angemeldet 2026-10-03 |
+| https://nachderspritze.de/wissen/wegovy-absetzen/ | neuer Abschnitt „Gilt das auch für die Wegovy-Tablette?“ | 2026-09-30 | angemeldet 2026-10-03 |
+| https://nachderspritze.de/wissen/magnesium-abnehmspritze/ | neuer Artikel, Supplement-Reihe (Nischen-Painpoints) | 2026-10-01 | angemeldet 2026-10-03 |
 | https://nachderspritze.de/wissen/vitamin-d-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/vitamin-b12-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/eisen-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
@@ -49,19 +49,19 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/muskelabbau-abnehmspritze/ | Grafik Körperzusammensetzung ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/krafttraining-nach-abnehmspritze/ | Grafik S-LiTE ergänzt | 2026-10-01 | indexiert (geprüft 2026-10-02) |
 | https://nachderspritze.de/wissen/gewicht-halten-nach-abnehmspritze/ | zwei Grafiken ergänzt | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | zwei Grafiken ergänzt | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/abnehmpille-absetzen/ | Grafik „belegt und offen“ ergänzt | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | zwei Grafiken ergänzt | 2026-10-01 | angemeldet 2026-10-03 |
+| https://nachderspritze.de/wissen/abnehmpille-absetzen/ | Grafik „belegt und offen“ ergänzt | 2026-10-01 | angemeldet 2026-10-03 |
 | https://nachderspritze.de/wissen/protein-abnehmspritze/ | Grafik Proteinbedarf ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/ernaehrung-nach-abnehmspritze/ | Grafik Proteinbedarf ergänzt; Abschnitt und FAQ zum 7-Tage-Plan | 2026-10-01 | offen |
 | https://nachderspritze.de/ernaehrungsplan/ | neue Seite: Ernährungsplan-Konfigurator (18 Pläne, PDF per Mail; Planseiten und PDFs noindex) | 2026-10-02 | angemeldet 2026-10-02 |
 | https://nachderspritze.de/wissen/feiertage-nach-abnehmspritze/ | neuer Artikel: Feiertage nach der Abnehmspritze (Weihnachten, Absetzkurve, Wiegen) | 2026-10-02 | angemeldet 2026-10-02 |
 | https://nachderspritze.de/wissen/wie-oft-wiegen-nach-abnehmspritze/ | neuer Artikel: Wie oft wiegen (Studienlage, Zonen, Psyche) | 2026-10-03 | offen |
 | https://nachderspritze.de/wissen/gewicht-halten-nach-abnehmspritze/ | Wiege-Regel auf STOP-Regain-Zonen angeglichen, FAQ, updatedDate | 2026-10-03 | offen |
-| https://nachderspritze.de/checkliste/ | Regel für den Anstieg auf die Zonen angeglichen, PDF neu | 2026-10-03 | offen |
+| https://nachderspritze.de/checkliste/ | Regel für den Anstieg auf die Zonen angeglichen, PDF neu | 2026-10-03 | angemeldet 2026-10-03 |
 | https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | Grafik Zeitverlauf ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/mounjaro-absetzen/ | Grafik Halbwertszeiten ergänzt | 2026-10-01 | angemeldet 2026-10-02 |
 | https://nachderspritze.de/wissen/ | Grafik Zeitachse im Hub | 2026-10-01 | offen |
-| https://nachderspritze.de/marktradar/ | Preisgrafik ergänzt | 2026-10-01 | offen |
+| https://nachderspritze.de/marktradar/ | Preisgrafik ergänzt | 2026-10-01 | indexiert (geprüft 2026-10-03) |
 | https://nachderspritze.de/werkzeuge/ | neue Seite: Übersicht der Werkzeuge | 2026-10-01 | offen |
 | https://nachderspritze.de/werkzeuge/zeitplan-nach-letzter-dosis/ | neues Werkzeug: Zeitplan aus Datum und Wirkstoff, Kalender-Export | 2026-10-01 | angemeldet 2026-10-02 |
 | https://nachderspritze.de/werkzeuge/proteinrechner/ | neues Werkzeug: Proteinrechner | 2026-10-01 | angemeldet 2026-10-02 |

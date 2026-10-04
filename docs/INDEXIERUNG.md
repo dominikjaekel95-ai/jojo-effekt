@@ -34,18 +34,18 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | neuer Artikel, Pillen-Cluster | 2026-09-30 | angemeldet 2026-10-03 |
 | https://nachderspritze.de/wissen/wegovy-absetzen/ | neuer Abschnitt „Gilt das auch für die Wegovy-Tablette?“ | 2026-09-30 | angemeldet 2026-10-03 |
 | https://nachderspritze.de/wissen/magnesium-abnehmspritze/ | neuer Artikel, Supplement-Reihe (Nischen-Painpoints) | 2026-10-01 | angemeldet 2026-10-03 |
-| https://nachderspritze.de/wissen/vitamin-d-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/vitamin-b12-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/eisen-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/omega-3-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/glucomannan-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/abnehmspritze-gesicht/ | neuer Artikel, Painpoint „Ozempic Face“ | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | neuer Artikel, Painpoint Haarausfall | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/supplements-nach-abnehmspritze/ | neuer Abschnitt „Einzelne Supplements im Detail“, Tabelle erweitert | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/ernaehrung/ | Themenseite: acht neue Artikel und Fragen | 2026-10-01 | offen |
-| https://nachderspritze.de/grafiken/ | neue Seite: zwölf Studien-Grafiken mit Download, Einbettungscode, ImageObject-Schema | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/abnehmspritze-absetzen/ | Hauptartikel ausgebaut: Inhaltsverzeichnis, zwei Grafiken, updatedDate | 2026-10-01 | offen |
-| https://nachderspritze.de/wissen/jojo-effekt-abnehmspritze/ | drei Grafiken ergänzt | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/vitamin-d-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | bereits indexiert 2026-10-04 (laut URL-Prüfung auf Google, keine Anmeldung nötig) |
+| https://nachderspritze.de/wissen/vitamin-b12-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | bereits indexiert 2026-10-04 (laut URL-Prüfung auf Google, keine Anmeldung nötig) |
+| https://nachderspritze.de/wissen/eisen-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | bereits indexiert 2026-10-04 (laut URL-Prüfung auf Google, keine Anmeldung nötig) |
+| https://nachderspritze.de/wissen/omega-3-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | bereits indexiert 2026-10-04 (laut URL-Prüfung auf Google, keine Anmeldung nötig) |
+| https://nachderspritze.de/wissen/glucomannan-abnehmspritze/ | neuer Artikel, Supplement-Reihe | 2026-10-01 | bereits indexiert 2026-10-04 (laut URL-Prüfung auf Google, keine Anmeldung nötig) |
+| https://nachderspritze.de/wissen/abnehmspritze-gesicht/ | neuer Artikel, Painpoint „Ozempic Face“ | 2026-10-01 | angemeldet 2026-10-04 |
+| https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | neuer Artikel, Painpoint Haarausfall | 2026-10-01 | bereits indexiert 2026-10-04 (laut URL-Prüfung auf Google, keine Anmeldung nötig) |
+| https://nachderspritze.de/wissen/supplements-nach-abnehmspritze/ | neuer Abschnitt „Einzelne Supplements im Detail“, Tabelle erweitert | 2026-10-01 | indexiert (geprüft 2026-10-04, letztes Crawling 03.10.) |
+| https://nachderspritze.de/wissen/ernaehrung/ | Themenseite: acht neue Artikel und Fragen | 2026-10-01 | indexiert (geprüft 2026-10-04, letztes Crawling 04.10.) |
+| https://nachderspritze.de/grafiken/ | neue Seite: zwölf Studien-Grafiken mit Download, Einbettungscode, ImageObject-Schema | 2026-10-01 | indexiert (geprüft 2026-10-04, letztes Crawling 02.10.) |
+| https://nachderspritze.de/wissen/abnehmspritze-absetzen/ | Hauptartikel ausgebaut: Inhaltsverzeichnis, zwei Grafiken, updatedDate | 2026-10-01 | indexiert (geprüft 2026-10-04, letztes Crawling 02.10.) |
+| https://nachderspritze.de/wissen/jojo-effekt-abnehmspritze/ | drei Grafiken ergänzt | 2026-10-01 | indexiert (geprüft 2026-10-04, letztes Crawling 04.10.) |
 | https://nachderspritze.de/wissen/muskelabbau-abnehmspritze/ | Grafik Körperzusammensetzung ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/krafttraining-nach-abnehmspritze/ | Grafik S-LiTE ergänzt | 2026-10-01 | indexiert (geprüft 2026-10-02) |
 | https://nachderspritze.de/wissen/gewicht-halten-nach-abnehmspritze/ | zwei Grafiken ergänzt | 2026-10-01 | offen |
@@ -59,7 +59,7 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/gewicht-halten-nach-abnehmspritze/ | Wiege-Regel auf STOP-Regain-Zonen angeglichen, FAQ, updatedDate | 2026-10-03 | offen |
 | https://nachderspritze.de/checkliste/ | Regel für den Anstieg auf die Zonen angeglichen, PDF neu | 2026-10-03 | angemeldet 2026-10-03 |
 | https://nachderspritze.de/wissen/kalorienbedarf-nach-abnehmspritze/ | neuer Artikel: Kalorienbedarf und Grundumsatz nach dem Absetzen | 2026-10-04 | offen |
-| https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | Grafik Zeitverlauf ergänzt | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | Grafik Zeitverlauf ergänzt | 2026-10-01 | indexiert (geprüft 2026-10-04, letztes Crawling 04.10.) |
 | https://nachderspritze.de/wissen/mounjaro-absetzen/ | Grafik Halbwertszeiten ergänzt | 2026-10-01 | angemeldet 2026-10-02 |
 | https://nachderspritze.de/wissen/ | Grafik Zeitachse im Hub | 2026-10-01 | offen |
 | https://nachderspritze.de/marktradar/ | Preisgrafik ergänzt | 2026-10-01 | indexiert (geprüft 2026-10-03) |
@@ -73,7 +73,7 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/praeparate/ | neue Seite: Themenseite Absetzen nach Präparat (nach Merge des Hub-PR) | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/abnehmpille/ | neue Seite: Themenseite Abnehmpille (Priorität) (nach Merge des Hub-PR) | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/muskeln/ | neue Seite: Themenseite Muskeln (nach Merge des Hub-PR) | 2026-09-30 | offen |
-| https://nachderspritze.de/wissen/ernaehrung/ | neue Seite: Themenseite Ernährung (nach Merge des Hub-PR) | 2026-09-30 | offen |
+| https://nachderspritze.de/wissen/ernaehrung/ | neue Seite: Themenseite Ernährung (nach Merge des Hub-PR) | 2026-09-30 | indexiert (geprüft 2026-10-04, letztes Crawling 04.10.) |
 | https://nachderspritze.de/wissen/gewicht-halten/ | neue Seite: Themenseite Gewicht halten (nach Merge des Hub-PR) | 2026-09-30 | offen |
 | https://nachderspritze.de/wissen/ | Hub nach Themen gegliedert, verlinkt sechs Themenseiten | 2026-09-30 | angemeldet 2026-10-01 |
 | https://nachderspritze.de/wissen/protein-abnehmspritze/ | Priorität laut Dominik; war „Gefunden – zurzeit nicht indexiert“ | 2026-10-01 | angemeldet 2026-10-01 |

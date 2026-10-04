@@ -4,7 +4,7 @@ metaTitle: "Kalorienbedarf nach der Abnehmspritze: Grundumsatz berechnen"
 description: "Nach 10 % Gewichtsverlust verbraucht der Körper 300 bis 400 kcal am Tag weniger, als die Formel sagt. Grundumsatz schätzen, Spritze einordnen, Portionen anpassen."
 category: "Ernährung"
 order: 28
-pubDate: 2026-10-02
+pubDate: 2026-10-04
 keywords: ["kalorienbedarf nach abnehmspritze", "grundumsatz nach abnehmspritze", "grundumsatz nach dem abnehmen berechnen", "abnehmspritze absetzen wie viel essen", "kalorienbedarf berechnen nach gewichtsverlust", "stoffwechsel nach abnehmspritze absetzen", "mifflin st jeor formel"]
 sources: ["mifflin1990", "dgeEnergie", "leibel1995", "rosenbaum2010", "rosenbaum2008", "fothergill2016", "martins2020", "blundell2017", "ravussin2025", "wilding2021dxa", "look2025surmount1dxa", "levine2002", "leidy2015", "who2020", "wu2025"]
 related: ["jojo-effekt-abnehmspritze", "ernaehrung-nach-abnehmspritze", "muskelabbau-abnehmspritze"]

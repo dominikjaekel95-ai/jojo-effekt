@@ -6,9 +6,9 @@ category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 11
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
-keywords: ["nach der abnehmspritze ernährung", "ernährung nach abnehmspritze", "abnehmspritze ernährung danach", "was essen nach abnehmspritze", "ernährungsplan nach abnehmspritze", "ernährung nach wegovy", "abnehmspritze ernährung umstellen"]
-sources: ["wu2025", "sumithran2011", "leidy2015", "almandoz2024", "dgeBallaststoffe", "dgeEmpfehlungen", "wilding2022ext", "jensen2024", "bls"]
+updatedDate: 2026-10-03
+keywords: ["nach der abnehmspritze ernährung", "ernährung nach abnehmspritze", "abnehmspritze ernährung danach", "was essen nach abnehmspritze", "ernährungsplan nach abnehmspritze", "ernährungsplan nach abnehmspritze pdf", "ernährung nach wegovy", "abnehmspritze ernährung umstellen"]
+sources: ["wu2025", "sumithran2011", "leidy2015", "almandoz2024", "dgeBallaststoffe", "dgeEmpfehlungen", "wilding2022ext", "jensen2024", "bls", "wing2006"]
 related: ["protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze", "supplements-nach-abnehmspritze"]
 faq:
   - q: "Muss ich nach der Abnehmspritze Kalorien zählen?"
@@ -23,6 +23,8 @@ faq:
     a: "<p>Viele gesetzliche Kassen bezuschussen eine Ernährungstherapie nach § 43 SGB V, wenn eine ärztliche Notwendigkeitsbescheinigung vorliegt. Frag deine Ärztin nach der Bescheinigung und deine Kasse nach zertifizierten Beraterinnen.</p>"
   - q: "Was frühstücken nach der Abnehmspritze?"
     a: "<p>Ein Frühstück mit mindestens 25 g Protein, weil dort am häufigsten Protein fehlt und der Heißhunger am Nachmittag dann vorprogrammiert ist. Beispiele: 200 g Skyr oder Magerquark mit Beeren und Haferflocken (rund 23 g Protein aus dem Skyr), zwei Eier mit Vollkornbrot und Hüttenkäse (rund 20 g), oder ein Porridge mit Milch, Quark und Nüssen. Wer morgens keinen Hunger hat, verschiebt das Frühstück, lässt es aber nicht ausfallen.</p>"
+  - q: "Gibt es einen Ernährungsplan nach der Abnehmspritze als PDF?"
+    a: "<p>Ja. Der <a href=\"/ernaehrungsplan/\">Ernährungsplan nach der Abnehmspritze</a> umfasst sieben Tage mit Mengen, Einkaufsliste und Austauschtabelle. Drei Fragen zu Ernährungsform, Appetit und Gewicht wählen einen von 18 Plänen mit rund 1,2 g Protein pro kg Körpergewicht. Er kommt kostenlos als PDF per Mail, zusammen mit dem Newsletter; Kalorien gibt er nicht vor.</p>"
 ---
 
 Unter der Spritze war Ernährung einfach: Der Appetit hat die Portionen begrenzt. Nach dem Absetzen ist genau das weg. Dieser Artikel beschreibt, was sich ändert, welche fünf Regeln mit normalem Hunger funktionieren, und wie ein Tag damit aussieht. Was unter der Therapie gilt, steht im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/); hier geht es um die Zeit danach. Was in den ersten Wochen nach der letzten Dosis insgesamt passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
@@ -64,7 +66,7 @@ Drei bis vier Mahlzeiten zu festen Zeiten, dazwischen nichts aus der Hand. Der H
 
 ### 5. Wiegen mit Regel, nicht mit Gefühl
 
-Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du reagierst und wie. Ein Korridor von plus 2 kg um das Absetz-Gewicht ist normal; ab plus 3 kg lohnt sich ein ehrlicher Blick auf Protein und Training, ab plus 5 kg ein Arzttermin. Der Plan dazu steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
+Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du reagierst und wie. Die Zonen aus der STOP-Regain-Studie: bis plus 1,4 kg nichts tun, ab plus 1,4 kg zwei Wochen lang Protein und Training prüfen, ab plus 2,3 kg Ursachen klären und den Kontrolltermin vorziehen.<sup><a href="#fn-wing2006">10</a></sup> Der Plan dazu steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/); wie oft die Waage sinnvoll ist und wann sie schadet, unter [Wie oft wiegen nach der Abnehmspritze?](/wissen/wie-oft-wiegen-nach-abnehmspritze/).
 
 ## Ein Tag nach der Spritze (80 kg, Ziel 100 g Protein)
 
@@ -78,6 +80,10 @@ Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du
 Zusammen rund 100 g Protein und 30 g Ballaststoffe, ohne Kalorienzählen. Die Mengen sind ein Beispiel für 80 kg; die Formel steht oben.
 
 Haferflocken, Linsen, Fisch und Eier decken an so einem Tag nebenbei auch das, was unter der Spritze bei kleineren Portionen knapp werden kann. Was dann im Einzelnen gilt und wann ein Blutwert dran ist, steht unter [Magnesium](/wissen/magnesium-abnehmspritze/), [Vitamin D](/wissen/vitamin-d-abnehmspritze/), [Vitamin B12](/wissen/vitamin-b12-abnehmspritze/) und [Eisen](/wissen/eisen-abnehmspritze/). Der Fisch zweimal pro Woche liefert außerdem EPA und DHA; warum das für das Gewicht nichts bringt und trotzdem sinnvoll ist, steht unter [Omega-3 bei der Abnehmspritze](/wissen/omega-3-abnehmspritze/).
+
+## Der 7-Tage-Plan zum Ausdrucken
+
+Wer das Muster nicht jeden Tag neu zusammenstellen will: Der [Ernährungsplan nach der Abnehmspritze](/ernaehrungsplan/) führt es für sieben Tage durch, mit Mengen, Einkaufsliste und einer Austauschtabelle. Drei Fragen zu Ernährungsform (Mischkost, vegetarisch, vegan), Appetit und Gewicht wählen einen von 18 Plänen; das Proteinziel liegt bei rund 1,2 g pro kg.<sup><a href="#fn-leidy2015">3</a></sup> Die Proteinwerte sind gerundete Mittelwerte aus dem Bundeslebensmittelschlüssel.<sup><a href="#fn-bls">9</a></sup> Der Plan kommt kostenlos als PDF per Mail, zusammen mit dem Newsletter; ohne Newsletter schickt Dominik ihn auf Nachfrage persönlich. Dein genaues Tagesziel rechnet der [Proteinrechner](/werkzeuge/proteinrechner/).
 
 ## Was unter der Spritze funktioniert hat und jetzt nicht mehr
 

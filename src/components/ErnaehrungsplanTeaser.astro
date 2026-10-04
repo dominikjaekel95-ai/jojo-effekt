@@ -1,0 +1,20 @@
+---
+/**
+ * Startseiten-Band „Kostenloser Ernährungsplan“ direkt nach dem Hero, Link auf /ernaehrungsplan/.
+ * Keine Markennamen von Arzneimitteln (Startseite, check:text), kein Produktbezug.
+ */
+const href = '/ernaehrungsplan/';
+---
+<section class="border-b border-line bg-moss-light" aria-labelledby="ep-teaser-h">
+  <div class="container-wide grid items-center gap-6 py-10 md:grid-cols-[1.4fr_1fr]">
+    <div>
+      <p class="eyebrow">Kostenlos · als PDF per Mail</p>
+      <h2 id="ep-teaser-h" class="h2 mt-2">Dein kostenloser Ernährungsplan für die Zeit nach der Spritze</h2>
+      <p class="mt-3 max-w-xl text-ink-2">Drei Fragen, sieben Tage: Mahlzeiten mit Mengen, genug Protein für deinen Gewichtsbereich, Einkaufsliste und eine Tabelle zum Tauschen. Passend zu Ernährungsform und Appetit.</p>
+    </div>
+    <div class="flex flex-col items-start gap-3 md:items-end">
+      <a href={href} class="btn-primary plausible-event-name=Ernaehrungsplan+Teaser">Plan zusammenstellen</a>
+      <p class="text-sm text-ink-3">Dauert eine Minute.</p>
+    </div>
+  </div>
+</section>

@@ -9,7 +9,7 @@ import Fn from '../../components/Fn.astro';
 import Footnotes from '../../components/Footnotes.astro';
 import { site } from '../../data/site';
 
-const fnIds = ['wu2025', 'wilding2022ext', 'fachinfoWegovy', 'leidy2015', 'moore2015', 'who2020', 'acsm2009', 'jensen2024', 'dgeBallaststoffe', 'spiegel2004', 'sumithran2011', 'euClaims', 'kreider2017'] as const;
+const fnIds = ['wu2025', 'wilding2022ext', 'fachinfoWegovy', 'leidy2015', 'moore2015', 'who2020', 'acsm2009', 'jensen2024', 'dgeBallaststoffe', 'spiegel2004', 'sumithran2011', 'euClaims', 'kreider2017', 'wing2006'] as const;
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
 const form = site.checklistForm;
@@ -133,7 +133,7 @@ const cb = 'mt-0.5 inline-block h-4 w-4 shrink-0 rounded border border-ink-3';
       <p class="mt-1 text-sm text-ink-3">Ab etwa Woche 8 wird die Zunahme in Studien messbar und ist bis Woche 20 am steilsten.<Fn n={fn('wu2025')} id="wu2025" /> Jetzt zählt der Wochentrend.</p>
       <ul class="mt-3 space-y-2 text-ink-2">
         <li class={li}><span class={cb} aria-hidden="true"></span><span>Nur den Wochentrend lesen, nicht den Tageswert. Ein bis zwei Kilo Schwankung sind Wasser und Speicher, kein Fett.</span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Regel für den Anstieg: Steigt das Gewicht über zwei Wochen um mehr als 1,5 kg, zuerst Protein und Bewegung prüfen, nicht hungern. Hungern kostet Muskeln.</span></li>
+        <li class={li}><span class={cb} aria-hidden="true"></span><span>Regel für den Anstieg: Liegt das Wochenmittel mehr als 1,4 kg über dem Ausgangswert, zwei Wochen lang zuerst Protein und Bewegung prüfen, nicht hungern; ab 2,3 kg Ursachen klären.<Fn n={fn('wing2006')} id="wing2006" /> Hungern kostet Muskeln.</span></li>
         <li class={li}><span class={cb} aria-hidden="true"></span><span>Kontrolltermin wahrnehmen. Mitbringen: Gewichtsverlauf, Taillenumfang, Trainingsheft, Fragen.</span></li>
         <li class={li}><span class={cb} aria-hidden="true"></span><span>Bilanz nach acht Wochen: Was hat funktioniert, was fällt aus? In der S-LiTE-Studie hielten Menschen, die trainierten, Gewicht und Körperzusammensetzung ein Jahr nach dem Ende aller Behandlungen.<Fn n={fn('jensen2024')} id="jensen2024" /></span></li>
       </ul>
@@ -156,7 +156,7 @@ const cb = 'mt-0.5 inline-block h-4 w-4 shrink-0 rounded border border-ink-3';
       </p>
     </div>
 
-    <p class="no-print mt-8 text-sm"><a href="#pdf" class="font-semibold text-moss underline underline-offset-4">Checkliste als PDF anfordern</a> · <a href="/glossar/" class="font-semibold text-moss underline underline-offset-4">Begriffe im Glossar</a></p>
+    <p class="no-print mt-8 text-sm"><a href="#pdf" class="font-semibold text-moss underline underline-offset-4">Checkliste als PDF anfordern</a> · <a href="/ernaehrungsplan/" class="font-semibold text-moss underline underline-offset-4">7-Tage-Ernährungsplan</a> · <a href="/glossar/" class="font-semibold text-moss underline underline-offset-4">Begriffe im Glossar</a></p>
 
     <Footnotes ids={fnIds} />
   </article>

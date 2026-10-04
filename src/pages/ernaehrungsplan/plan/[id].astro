@@ -1,0 +1,105 @@
+---
+/**
+ * Druckvorlage eines Ernährungsplans (18 Seiten, ep01 bis ep18). Aus diesen Seiten erzeugt `npm run pdf:ernaehrungsplan`
+ * die PDFs unter public/downloads/ernaehrungsplan/<id>.pdf, die MailerLite nach der Bestätigung verschickt.
+ * noindex und nicht in der Sitemap: Die Seite ist eine Druckvorlage, keine Landingpage. Keine Affiliate-Links, kein
+ * Produkt-Teaser, keine Präparatenamen (CLAUDE.md: nichts davon in PDFs und Mails).
+ */
+import Base from '../../../layouts/Base.astro';
+import Fn from '../../../components/Fn.astro';
+import Footnotes from '../../../components/Footnotes.astro';
+import { site } from '../../../data/site';
+import { plaene, pruefePlaene, ernaehrungOptionen, appetitOptionen, gewichtLabel, type Plan } from '../../../data/ernaehrungsplan';
+
+export function getStaticPaths() {
+  const fehler = pruefePlaene();
+  if (fehler.length) throw new Error(`Ernährungsplan außerhalb des Zielkorridors:\n${fehler.join('\n')}`);
+  return plaene.map((plan) => ({ params: { id: plan.id }, props: { plan } }));
+}
+
+interface Props { plan: Plan }
+const { plan } = Astro.props;
+
+const fnIds = ['leidy2015', 'dgeBallaststoffe', 'almandoz2024', 'dgeEmpfehlungen', 'euClaims', 'bls'] as const;
+const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
+
+const ernaehrung = ernaehrungOptionen.find((o) => o.value === plan.ernaehrung)!;
+const appetit = appetitOptionen.find((o) => o.value === plan.appetit)!;
+const klein = plan.appetit === 'klein';
+const stand = new Date().toLocaleDateString('de-DE', { month: 'long', year: 'numeric' });
+const path = `/ernaehrungsplan/plan/${plan.id}/`;
+---
+<Base title={`Dein Ernährungsplan: ${ernaehrung.label}, ${gewichtLabel[plan.gewicht]}`} description="Sieben Tage mit Mengen, Einkaufsliste und Austauschtabelle für die Zeit nach der Abnehmspritze." path={path} noindex>
+  <article class="container-narrow py-10 print:py-0">
+    <p class="eyebrow">Nach der Spritze · Ernährungsplan · Stand {stand}</p>
+    <h1 class="h1 mt-3 !text-[2rem] sm:!text-[2.5rem]">Dein Ernährungsplan für sieben Tage</h1>
+    <dl class="mt-5 grid gap-3 rounded-xl2 border border-line bg-white p-5 text-sm sm:grid-cols-4">
+      <div><dt class="text-ink-3">Ernährungsform</dt><dd class="mt-1 font-semibold text-ink">{ernaehrung.label}</dd></div>
+      <div><dt class="text-ink-3">Appetit</dt><dd class="mt-1 font-semibold text-ink">{appetit.label}</dd></div>
+      <div><dt class="text-ink-3">Gewicht</dt><dd class="mt-1 font-semibold text-ink">{gewichtLabel[plan.gewicht]}</dd></div>
+      <div><dt class="text-ink-3">Protein pro Tag</dt><dd class="mt-1 font-semibold text-moss">rund {plan.ziel} g</dd></div>
+    </dl>
+
+    <div class="prose-site mt-8">
+      <h2>So funktioniert der Plan</h2>
+      <ul>
+        <li><strong>Protein zuerst.</strong> Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<Fn n={fn('leidy2015')} id="leidy2015" /> Dein Plan liegt am unteren Ende, bei rund {plan.ziel} g, verteilt auf drei Mahlzeiten und {klein ? 'zwei bis vier kleine Zwischenmahlzeiten' : 'bis zu zwei Zwischenmahlzeiten'}. Iss bei jeder Mahlzeit zuerst die Proteinquelle, dann Gemüse, dann den Rest.</li>
+        <li><strong>Gemüse und Obst nach Hunger.</strong> Was unter „dazu“ steht, zählt nicht in die Proteinsumme und hat keine feste Menge. Eine Handvoll pro Mahlzeit ist ein guter Anfang.</li>
+        <li><strong>Ballaststoffe langsam steigern.</strong> Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> Hülsenfrüchte, Haferflocken und Vollkorn im Plan bringen dich dorthin. Wer vorher wenig gegessen hat, steigert über zwei Wochen und trinkt dazu genug.</li>
+        <li><strong>Trinken.</strong> Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten nennen zwei bis drei Liter Flüssigkeit am Tag.<Fn n={fn('almandoz2024')} id="almandoz2024" /> Wasser, Tee und schwarzer Kaffee sind die Getränke, die die DGE als Standard empfiehlt.<Fn n={fn('dgeEmpfehlungen')} id="dgeEmpfehlungen" /></li>
+        {klein
+          ? <li><strong>Kleine Portionen sind Absicht.</strong> Die Mengen sind kleiner als üblich, dafür gibt es Zwischenmahlzeiten. Wenn der Appetit zurückkommt, nimm den Plan „Wieder normal“ mit derselben Ernährungsform.</li>
+          : <li><strong>Satt ist genug.</strong> Die Mengen sind Richtwerte. Wenn du vorher satt bist, lass den Rest der Beilage liegen, nicht das Protein.</li>}
+        <li><strong>Tauschen ist erlaubt.</strong> Tage dürfen in beliebiger Reihenfolge stehen. Proteinquellen tauschst du mit der Tabelle am Ende gegeneinander aus.</li>
+      </ul>
+      <p>Protein trägt zur Erhaltung von Muskelmasse bei.<Fn n={fn('euClaims')} id="euClaims" /> Der Plan gibt keine Kalorienmenge vor; er steuert Protein, Ballaststoffe und Portionsgröße. Die Proteinwerte sind gerundete Durchschnittswerte.<Fn n={fn('bls')} id="bls" /></p>
+    </div>
+
+    <h2 class="h2 mt-10 print:mt-0 print:[break-before:page]">Die sieben Tage</h2>
+    <div class="mt-4 space-y-5 print:space-y-3">
+      {plan.tage.map((tag) => (
+        <div class="rounded-xl2 border border-line bg-white p-5 [break-inside:avoid] print:px-4 print:py-3">
+          <div class="flex items-baseline justify-between gap-4 border-b border-line pb-2">
+            <h3 class="text-lg font-semibold text-ink">Tag {tag.nr}</h3>
+            <p class="text-sm text-ink-3">zusammen rund {tag.protein} g Protein</p>
+          </div>
+          <ul class="mt-2 divide-y divide-line">
+            {tag.mahlzeiten.map((m) => (
+              <li class="grid gap-x-3 gap-y-0.5 py-2 text-sm sm:grid-cols-[7rem_1fr_4.5rem] print:py-1 print:text-[12.5px] print:leading-snug">
+                <span class="font-semibold text-ink-3">{m.titel}</span>
+                <span><span class="font-semibold text-ink">{m.name}:</span> <span class="text-ink-2">{m.positionen.map((p) => p.text).join(', ')}</span>{m.dazu && <span class="text-ink-3"> · dazu {m.dazu}</span>}</span>
+                <span class="text-ink-2 sm:text-right">ca. {m.protein} g</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 rounded-xl2 border border-line bg-white p-5 [break-inside:avoid] print:mt-6">
+      <h2 class="text-lg font-semibold text-ink">Einkaufsliste für die Woche</h2>
+      <p class="mt-1 text-xs text-ink-3">Summen aus allen sieben Tagen, aufgerundet. Gekochte Hülsenfrüchte gibt es im Glas oder in der Dose.</p>
+      <ul class="mt-3 gap-6 text-sm text-ink-2 sm:columns-2">
+        {plan.einkauf.map((e) => (<li class="flex gap-2 py-0.5 [break-inside:avoid]"><span aria-hidden="true">☐</span><span>{e.text}</span></li>))}
+      </ul>
+      <p class="mt-4 text-sm text-ink-2"><span class="font-semibold text-ink">Außerdem, ohne feste Menge:</span> {plan.dazu.join(', ')}</p>
+    </div>
+
+    <div class="mt-6 rounded-xl2 border border-line bg-white p-5 [break-inside:avoid]">
+      <h2 class="text-lg font-semibold text-ink">Austauschtabelle</h2>
+      <p class="mt-1 text-xs text-ink-3">Jede Zeile liefert etwa 20 g Protein. Tausche innerhalb einer Mahlzeit gleich viel gegen gleich viel.</p>
+      <ul class="mt-3 gap-6 text-sm text-ink-2 sm:columns-2">
+        {plan.tausch.map((t) => (<li class="py-0.5">{t.text}</li>))}
+      </ul>
+    </div>
+
+    <div class="mt-10 rounded-xl2 border border-line bg-paper p-5 text-sm text-ink-2 [break-inside:avoid]">
+      <h2 class="text-base font-semibold text-ink">Was dieser Plan ist und was nicht</h2>
+      <p class="mt-2">Ein allgemeiner Beispielplan für gesunde Erwachsene, ausgewählt nach drei Angaben: Ernährungsform, Appetit und Gewichtsbereich. Er ist keine Ernährungstherapie und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Nicht geeignet ist er bei Nierenerkrankungen, in Schwangerschaft und Stillzeit, bei einer Essstörung (auch früher) und für unter 18-Jährige. Bei Diabetes, Medikamenten mit Ernährungsvorgaben oder Unverträglichkeiten sprich vorher mit deiner Ärztin, deinem Arzt oder einer Ernährungsfachkraft.</p>
+      <p class="mt-3 font-medium text-ink">{site.doctorSentence}</p>
+      <p class="mt-3">Mehr zu Protein, Ballaststoffen und dem Alltag nach dem Absetzen: nachderspritze.de/wissen/ernaehrung-nach-abnehmspritze/ · Fragen: {site.owner.email}</p>
+    </div>
+
+    <Footnotes ids={fnIds} />
+  </article>
+</Base>

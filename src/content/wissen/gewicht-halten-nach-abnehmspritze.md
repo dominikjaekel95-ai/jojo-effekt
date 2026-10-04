@@ -6,13 +6,13 @@ category: "Gewicht halten"
 image: /grafiken/training-s-lite.png
 order: 6
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-03
 keywords: ["nach abnehmspritze gewicht halten", "abnehmspritze absetzen gewicht halten", "abnehmspritze danach", "gewicht halten nach wegovy", "nach ozempic gewicht halten", "abnehmspritze absetzen plan"]
 sources: ["wu2025", "jensen2024", "leidy2015", "who2020", "sumithran2011", "dgeBallaststoffe", "wilding2022ext", "wing2006", "rodriguez2025", "fachinfoWegovy", "fachinfoMounjaro"]
 related: ["abnehmspritze-absetzen", "jojo-effekt-abnehmspritze", "protein-abnehmspritze"]
 faq:
   - q: "Wie oft sollte ich mich nach dem Absetzen wiegen?"
-    a: "<p>Einmal pro Woche, immer am gleichen Wochentag, morgens nach der Toilette, vor dem Frühstück. Tägliches Wiegen schwankt um 1 bis 2 kg durch Wasser und verunsichert; monatliches Wiegen bemerkt eine Zunahme zu spät. Wichtiger als die Häufigkeit ist die Regel, was du bei welcher Zahl tust.</p>"
+    a: "<p>Mindestens einmal pro Woche, besser täglich mit Wochenmittel, wenn dich die Zahl nicht aus der Bahn wirft. In der STOP-Regain-Studie wogen sich die Teilnehmenden täglich und hatten feste Zonen; nach 18 Monaten hatten 45,7 % der betreuten Gruppe 2,3 kg oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 %. Wichtiger als die Häufigkeit ist die Regel, was du bei welcher Zahl tust. Was die Studien im Einzelnen zeigen und wann die Waage schadet, steht unter <a href=\"/wissen/wie-oft-wiegen-nach-abnehmspritze/\">Wie oft wiegen nach der Abnehmspritze?</a></p>"
   - q: "Wie viel Zunahme nach dem Absetzen ist normal?"
     a: "<p>Ein bis zwei Kilo in den ersten Wochen sind oft Wasser und Darminhalt, weil du wieder mehr isst – kein Fett. Wer Kreatin startet, sieht weitere 0,5 bis 2 kg Wasser. Ab 1,4 kg über dem Startgewicht der Haltephase lohnt sich ein Blick auf Ernährung und Training, ab 2,3 kg ein Termin bei der Ärztin: Das sind die Zonen eines Programms zum Gewichthalten, in dem 45,7 % der betreuten Teilnehmenden in 18 Monaten 2,3 kg oder mehr wieder zunahmen, in der Kontrollgruppe 72,4 % (Wing 2006).</p>"
   - q: "Soll ich nach dem Absetzen Kalorien zählen?"
@@ -47,7 +47,7 @@ Am besten startet der Plan **vor** der letzten Dosis, während der Appetit noch 
 
 1. **Zwei Krafteinheiten pro Woche.** 30 Minuten, Ganzkörper, zuhause mit Bändern oder im Studio. Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">4</a></sup> Feste Termine im Kalender, nicht „wenn Zeit ist“.
 2. **Protein zuerst, bei jeder Mahlzeit.** Ziel 1,2 bis 1,6 g pro kg Körpergewicht und Tag,<sup><a href="#fn-leidy2015">3</a></sup> verteilt auf drei bis vier Mahlzeiten. Rechenhilfe im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/).
-3. **Einmal pro Woche wiegen, mit Regel.** Gleicher Wochentag, morgens. Und vorher festgelegt: Bei welcher Zahl tust du was?
+3. **Wiegen mit Regel, mindestens einmal pro Woche.** Morgens, gleiche Bedingungen; täglich mit Wochenmittel ist in Studien am besten belegt.<sup><a href="#fn-wing2006">8</a></sup> Und vorher festgelegt: Bei welcher Zahl tust du was? Die Studienlage steht unter [Wie oft wiegen nach der Abnehmspritze?](/wissen/wie-oft-wiegen-nach-abnehmspritze/).
 
 <figure class="my-8">
   <img src="/grafiken/zeitachse-phasen.png" alt="Vier Phasen nach der letzten Dosis einer Abnehmspritze: Woche 1 bis 2 noch wenig Veränderung, Woche 2 bis 5 kehrt der Appetit zurück, Woche 5 bis 8 ist der Wirkstoff praktisch abgebaut, ab Woche 8 ist die Gewichtszunahme messbar und steigt bis etwa Woche 20." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
@@ -82,9 +82,9 @@ Der Wirkstoff ist weitgehend abgebaut. Der Appetit ist zurück, oft stärker als
 Die Zunahme wird in Studien ab jetzt messbar.<sup><a href="#fn-wu2025">1</a></sup> Das Ziel dieser Phase ist ein System, das ohne Plan läuft.
 
 - **Der Arzttermin.** Gewicht, Blutdruck, Blutzucker, Blutfette. Ehrlich berichten, wie es läuft. Optionen besprechen – auch die eines Wiedereinstiegs, falls nötig. In der STEP-1-Verlängerung näherten sich die Blutwerte ein Jahr nach dem Absetzen wieder den Ausgangswerten;<sup><a href="#fn-wilding2022ext">7</a></sup> deshalb lohnt sich die Kontrolle. Omega-3-Kapseln ersetzen sie nicht; was sie laut den zugelassenen Angaben leisten, steht unter [Omega-3 bei der Abnehmspritze](/wissen/omega-3-abnehmspritze/).
-- **Die Wiege-Regel festschreiben.** Zum Beispiel: bis +2 kg nichts tun; ab +3 kg zwei Wochen lang Protein und Training protokollieren; ab +5 kg Termin bei der Ärztin. Aufschreiben, an den Kühlschrank.
+- **Die Wiege-Regel festschreiben.** Die Zonen aus der STOP-Regain-Studie:<sup><a href="#fn-wing2006">8</a></sup> bis +1,4 kg nichts tun; ab +1,4 kg zwei Wochen lang Protein und Training protokollieren; ab +2,3 kg Ursachen klären und den Kontrolltermin vorziehen. Aufschreiben, an den Kühlschrank.
 - **Training verstetigen.** Zwei Einheiten bleiben. Wer mag, nimmt eine dritte dazu oder ergänzt Ausdauer. Was nicht geht: pausieren, „weil das Gewicht jetzt stabil ist“.
-- **Die Woche danach planen.** Was passiert im Urlaub, bei Krankheit, in stressigen Wochen? Eine Minimalversion festlegen: ein Training, Protein zum Frühstück, einmal wiegen.
+- **Die Woche danach planen.** Was passiert im Urlaub, bei Krankheit, in stressigen Wochen? Eine Minimalversion festlegen: ein Training, Protein zum Frühstück, einmal wiegen. Für Weihnachten und andere Feiertage, die oft genau in diese Wochen fallen, steht ein eigener Plan unter [Feiertage nach der Abnehmspritze](/wissen/feiertage-nach-abnehmspritze/).
 
 **Ziel am Ende von Phase 3:** Gewicht stabil, Training seit 12 Wochen regelmäßig, eine schriftliche Regel für die Zeit danach, ein Arzttermin hinter dir.
 

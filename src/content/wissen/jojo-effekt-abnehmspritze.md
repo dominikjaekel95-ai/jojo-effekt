@@ -6,7 +6,7 @@ category: "Gewicht halten"
 image: /grafiken/warum-das-gewicht-zurueckkommt.png
 order: 1
 pubDate: 2026-09-30
-updatedDate: 2026-10-02
+updatedDate: 2026-10-04
 keywords: ["jojo effekt abnehmspritze", "abnehmspritze jojo effekt", "wegovy jojo effekt", "ozempic jojo effekt", "mounjaro jojo effekt", "abnehmspritze zunehmen danach", "jojo effekt abnehmspritze vermeiden"]
 sources: ["wilding2022ext", "rubino2021", "aronne2024", "wu2025", "eclinmed2026", "sumithran2011", "fothergill2016", "wilding2021dxa", "rodriguez2025", "jensen2024", "leidy2015", "sardeli2018", "who2020", "dagLeitlinie"]
 related: ["abnehmspritze-absetzen", "muskelabbau-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]

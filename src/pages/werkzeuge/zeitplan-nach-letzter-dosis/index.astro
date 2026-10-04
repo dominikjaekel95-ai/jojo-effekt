@@ -8,9 +8,30 @@ import Base from '../../../layouts/Base.astro';
 import Fn from '../../../components/Fn.astro';
 import Footnotes from '../../../components/Footnotes.astro';
 import ProductTeaser from '../../../components/ProductTeaser.astro';
+import Faq from '../../../components/Faq.astro';
+import { faqJsonLd } from '../../../data/faq';
 import { site } from '../../../data/site';
 
 const fnIds = ['fachinfoWegovy', 'fachinfoOzempic', 'fachinfoRybelsus', 'fachinfoMounjaro', 'fachinfoSaxenda', 'wu2025', 'wilding2022ext', 'aronne2024', 'jensen2024'] as const;
+
+const faq = [
+  {
+    q: 'Wie lange wirkt die Abnehmspritze nach der letzten Dosis nach?',
+    a: '<p>Semaglutid (Wegovy, Ozempic, als Tablette Rybelsus und Wegovy-Tablette) hat eine Halbwertszeit von etwa einer Woche und ist nach etwa fünf Wochen weitgehend abgebaut, laut Fachinformation bis etwa sieben Wochen nachweisbar. Tirzepatid (Mounjaro) hat etwa fünf Tage Halbwertszeit und ist nach rund 25 Tagen weitgehend abgebaut, Liraglutid (Saxenda) nach etwa drei Tagen. Die Wirkung auf den Appetit lässt schon vorher nach.</p>',
+  },
+  {
+    q: 'Ab wann nimmt man nach dem Absetzen wieder zu?',
+    a: '<p>In einer Meta-Analyse randomisierter Studien war die Gewichtszunahme ab etwa Woche 8 nach dem Absetzen messbar und setzte sich bis etwa Woche 20 fort. Ein Jahr nach dem Absetzen von Semaglutid waren in der STEP-1-Verlängerung im Mittel zwei Drittel des verlorenen Gewichts zurück. Der Zeitplan setzt deshalb den Kontrolltermin in Woche 8 bis 12 und markiert die Wiegetage.</p>',
+  },
+  {
+    q: 'Ist der Zeitplan ein Absetz-Plan oder ein Ausschleich-Schema?',
+    a: '<p>Nein. Das Werkzeug beginnt nach der letzten Dosis und enthält keine Dosierungen, keine Schritte zum Reduzieren und keine Empfehlung, ob oder wann abgesetzt wird. Diese Entscheidung triffst du mit deiner Ärztin oder deinem Arzt.</p>',
+  },
+  {
+    q: 'Was steht in der Kalenderdatei?',
+    a: '<p>Die Orientierungspunkte als Termine: Wirkstoff weitgehend abgebaut, Appetit kommt zurück, Zunahme messbar, Kontrolltermin, Wiegetage in Woche 1, 2, 4, 8 und 12 sowie der Ein-Jahres-Punkt. Die Datei entsteht im Browser und lässt sich in jeden Kalender importieren; nichts wird übertragen.</p>',
+  },
+];
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
 const title = 'Zeitplan nach der letzten Dosis: Was wann passiert (Rechner)';
@@ -21,6 +42,20 @@ const url = `${site.url}${path}`;
 
 const jsonLd = [
   {
+    '@type': 'WebApplication',
+    '@id': `${url}#app`,
+    name: 'Zeitplan nach der letzten Dosis',
+    url,
+    description,
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'Web',
+    browserRequirements: 'JavaScript',
+    isAccessibleForFree: true,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+    inLanguage: 'de-DE',
+    provider: { '@id': `${site.url}/#organization` },
+  },
+  {
     '@type': 'WebPage',
     '@id': `${url}#page`,
     name: title,
@@ -28,8 +63,10 @@ const jsonLd = [
     url,
     inLanguage: 'de-DE',
     isPartOf: { '@id': `${site.url}/#website` },
+    mainEntity: { '@id': `${url}#app` },
     about: { '@type': 'Thing', name: 'Zeitlicher Verlauf nach dem Absetzen von GLP-1-Rezeptoragonisten' },
   },
+  faqJsonLd(faq),
   {
     '@type': 'BreadcrumbList',
     itemListElement: [
@@ -92,6 +129,14 @@ const jsonLd = [
       </ul>
       <p>Was das Werkzeug nicht tut: Es sagt nicht, ob oder wie du absetzen sollst, und es rechnet keine Dosen. Beides gehört in das Gespräch mit deiner Ärztin oder deinem Arzt.</p>
     </div>
+
+    <div class="prose-site mt-10">
+      <h2 id="warum">Warum ein Datum mehr hilft als eine Wochenzahl</h2>
+      <p>„Nach fünf bis sieben Wochen ist Semaglutid weitgehend abgebaut“ bleibt abstrakt. Ein Datum im Kalender nicht: Es sagt, ab wann der Appetit voraussichtlich wieder da ist, und legt die Wiegetage und den Kontrolltermin dorthin, wo die Zunahme in Studien beginnt.<Fn n={fn('wu2025')} id="wu2025" /> Wer die Haltephase mit festen Terminen beginnt, merkt die Drift früher; ab welcher Zahl du dann reagierst, legt der <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> fest, und wie viel Protein in diese Wochen gehört, der <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>.</p>
+      <p>Die Mittelwerte sagen nichts über dich allein: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen im Mittel zwei Drittel des Verlusts zurück,<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> hinter dem Mittel stehen Menschen mit fast vollständiger Zunahme und Menschen, die fast nichts zugenommen haben. Was den Unterschied gemacht hat, zeigt die S-LiTE-Nachbeobachtung: Nach Liraglutid allein lag die Zunahme im Jahr nach Therapieende 6,0 kg höher als nach einem Trainingsprogramm.<Fn n={fn('jensen2024')} id="jensen2024" /></p>
+    </div>
+
+    <Faq items={faq} id="zeitplan-faq" title="Häufige Fragen zum Zeitplan" />
 
     <ProductTeaser position="werkzeug-zeitplan" />
 

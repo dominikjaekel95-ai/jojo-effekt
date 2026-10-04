@@ -146,7 +146,8 @@
         { "q": "Haarausfall nach der Spritze: wie lange?", "slug": "haarausfall-abnehmspritze" },
         { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" },
         { "q": "Wie viel Protein brauche ich bei meinem Gewicht?", "href": "/werkzeuge/proteinrechner/", "label": "Proteinrechner: Tagesziel und Menge pro Mahlzeit" },
-        { "q": "Gibt es einen Plan für eine ganze Woche?", "href": "/ernaehrungsplan/", "label": "Ernährungsplan: 7 Tage mit Einkaufsliste, kostenlos als PDF" }
+        { "q": "Gibt es einen Plan für eine ganze Woche?", "href": "/ernaehrungsplan/", "label": "Ernährungsplan: 7 Tage mit Einkaufsliste, kostenlos als PDF" },
+        { "q": "Wie viele Kalorien brauche ich jetzt noch?", "slug": "kalorienbedarf-nach-abnehmspritze" }
       ],
       "include": [],
       "glossar": ["leucin-schwelle", "proteinverteilung", "glucomannan", "hedonischer-hunger", "neat"],

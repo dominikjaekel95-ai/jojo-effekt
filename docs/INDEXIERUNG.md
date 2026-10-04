@@ -58,6 +58,7 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/wie-oft-wiegen-nach-abnehmspritze/ | neuer Artikel: Wie oft wiegen (Studienlage, Zonen, Psyche) | 2026-10-03 | offen |
 | https://nachderspritze.de/wissen/gewicht-halten-nach-abnehmspritze/ | Wiege-Regel auf STOP-Regain-Zonen angeglichen, FAQ, updatedDate | 2026-10-03 | offen |
 | https://nachderspritze.de/checkliste/ | Regel für den Anstieg auf die Zonen angeglichen, PDF neu | 2026-10-03 | angemeldet 2026-10-03 |
+| https://nachderspritze.de/wissen/kalorienbedarf-nach-abnehmspritze/ | neuer Artikel: Kalorienbedarf und Grundumsatz nach dem Absetzen | 2026-10-04 | offen |
 | https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | Grafik Zeitverlauf ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/mounjaro-absetzen/ | Grafik Halbwertszeiten ergänzt | 2026-10-01 | angemeldet 2026-10-02 |
 | https://nachderspritze.de/wissen/ | Grafik Zeitachse im Hub | 2026-10-01 | offen |

@@ -6,7 +6,7 @@ category: "Gewicht halten"
 image: /grafiken/warum-das-gewicht-zurueckkommt.png
 order: 1
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-04
 keywords: ["jojo effekt abnehmspritze", "abnehmspritze jojo effekt", "wegovy jojo effekt", "ozempic jojo effekt", "mounjaro jojo effekt", "abnehmspritze zunehmen danach", "jojo effekt abnehmspritze vermeiden"]
 sources: ["wilding2022ext", "rubino2021", "aronne2024", "wu2025", "eclinmed2026", "sumithran2011", "fothergill2016", "wilding2021dxa", "rodriguez2025", "jensen2024", "leidy2015", "sardeli2018", "who2020", "dagLeitlinie"]
 related: ["abnehmspritze-absetzen", "muskelabbau-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -70,7 +70,7 @@ Vier Mechanismen greifen ineinander. Der erste ist offensichtlich: Die Appetitbr
 
 **1. Der Appetit kommt zurück – und zwar stärker als vorher.** Nach starkem Gewichtsverlust verschiebt der Körper seine Hormone: Das Hungerhormon Ghrelin steigt, Sättigungshormone wie Leptin sinken. Diese Veränderungen waren in einer Studie ein Jahr nach der Diät noch messbar.<sup><a href="#fn-sumithran2011">6</a></sup> Unter der Spritze fällt das nicht auf. Danach schon.
 
-**2. Der Energieverbrauch ist niedriger als vorher.** Ein leichterer Körper braucht weniger Kalorien, und zusätzlich drosselt der Stoffwechsel nach starkem Gewichtsverlust oft über das Erwartbare hinaus. Bei Teilnehmenden einer Abnehm-Show war der Ruheumsatz sechs Jahre später noch deutlich abgesenkt.<sup><a href="#fn-fothergill2016">7</a></sup> Das heißt: Die gleiche Portion, die vorher das Gewicht gehalten hat, führt jetzt zur Zunahme.
+**2. Der Energieverbrauch ist niedriger als vorher.** Ein leichterer Körper braucht weniger Kalorien, und zusätzlich drosselt der Stoffwechsel nach starkem Gewichtsverlust oft über das Erwartbare hinaus. Bei Teilnehmenden einer Abnehm-Show war der Ruheumsatz sechs Jahre später noch deutlich abgesenkt.<sup><a href="#fn-fothergill2016">7</a></sup> Das heißt: Die gleiche Portion, die vorher das Gewicht gehalten hat, führt jetzt zur Zunahme. Wie groß der Unterschied in Messungen ist und wie du deinen Bedarf schätzt, steht unter [Kalorienbedarf nach der Abnehmspritze](/wissen/kalorienbedarf-nach-abnehmspritze/).
 
 **3. Ein Teil des Verlusts waren Muskeln.** In einer Substudie von STEP 1 entfielen rund 40 % des verlorenen Gewichts auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">8</a></sup> Muskeln verbrauchen auch in Ruhe Energie und sind das Organ, das Kraft und Alltag trägt. Weniger Muskeln bedeuten weniger Grundumsatz – und wenn das Gewicht zurückkommt, kommt es meist als Fett.
 

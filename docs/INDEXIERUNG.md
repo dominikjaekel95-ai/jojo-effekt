@@ -46,7 +46,7 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/grafiken/ | neue Seite: zwölf Studien-Grafiken mit Download, Einbettungscode, ImageObject-Schema | 2026-10-01 | indexiert (geprüft 2026-10-04, letztes Crawling 02.10.) |
 | https://nachderspritze.de/wissen/abnehmspritze-absetzen/ | Hauptartikel ausgebaut: Inhaltsverzeichnis, zwei Grafiken, updatedDate | 2026-10-01 | indexiert (geprüft 2026-10-04, letztes Crawling 02.10.) |
 | https://nachderspritze.de/wissen/jojo-effekt-abnehmspritze/ | drei Grafiken ergänzt | 2026-10-01 | indexiert (geprüft 2026-10-04, letztes Crawling 04.10.) |
-| https://nachderspritze.de/wissen/muskelabbau-abnehmspritze/ | Grafik Körperzusammensetzung ergänzt | 2026-10-01 | offen |
+| https://nachderspritze.de/wissen/muskelabbau-abnehmspritze/ | Grafik Körperzusammensetzung ergänzt | 2026-10-01 | angemeldet 2026-10-05 |
 | https://nachderspritze.de/wissen/krafttraining-nach-abnehmspritze/ | Grafik S-LiTE ergänzt | 2026-10-01 | indexiert (geprüft 2026-10-02) |
 | https://nachderspritze.de/wissen/gewicht-halten-nach-abnehmspritze/ | zwei Grafiken ergänzt | 2026-10-01 | offen |
 | https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | zwei Grafiken ergänzt | 2026-10-01 | angemeldet 2026-10-03 |

@@ -3,48 +3,107 @@ import Logo from './Logo.astro';
 import { site } from '../data/site';
 import { themen } from '../data/themen';
 const year = new Date().getFullYear();
+const kontakt = `mailto:${site.owner.email}?subject=${encodeURIComponent('Nach der Spritze: meine Frage')}`;
 ---
-<footer class="mt-24 border-t border-line bg-paper-2">
-  <div class="container-wide grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+<footer class="ft">
+  <div class="container-wide ft-grid">
     <div>
       <Logo />
-      <p class="mt-4 max-w-md text-sm text-ink-2">
-        Ein Projekt von {site.owner.name}, {site.owner.city}. Lebensmittel und ein Ernährungs- und Trainingsprogramm –
-        kein Medikament, keine medizinische Beratung.
-      </p>
-      <p class="mt-3 max-w-md text-sm font-medium text-ink">{site.doctorSentence}</p>
+      <p class="ft-t">Ein Projekt von {site.owner.name}, {site.owner.city}. Ein Ernährungs- und Trainingsprogramm, keine medizinische Beratung. {site.medicalTeamSentence}</p>
+      <p class="ft-t ft-doc">{site.doctorSentence}</p>
+      <p class="ft-t">Fragen, Hinweise, Kritik: <a href={kontakt} class="plausible-event-name=Kontakt+Klick plausible-event-kanal=footer">{site.owner.email}</a></p>
     </div>
-    <nav aria-label="Seiten" class="text-sm">
-      <p class="eyebrow mb-3">Seite</p>
-      <ul class="space-y-2">
-        <li><a href="/#set" class="hover:text-moss">Das Set</a></li>
-        <li><a href="/#preis" class="hover:text-moss">Preis und Vorbestellung</a></li>
-        <li><a href="/#faq" class="hover:text-moss">Häufige Fragen</a></li>
-        <li><a href="/wissen/" class="hover:text-moss">Wissen: Absetzen, Jojo-Effekt, Muskeln</a></li>
-        <li><a href="/wissen/studien/" class="hover:text-moss">Studien-Tracker: Absetzen und Gewicht</a></li>
-        <li><a href="/glossar/" class="hover:text-moss">Glossar: Begriffe erklärt</a></li>
-        <li><a href="/marktradar/" class="hover:text-moss">Marktradar: Zulassungen, Preise, Kassen</a></li>
-        <li><a href="/abnehmspritze-kosten/" class="hover:text-moss">Kosten: Preise pro Monat und Jahr</a></li>
-        <li><a href="/grafiken/" class="hover:text-moss">Grafiken: Studien, zitierfähig</a></li>
-        <li><a href="/werkzeuge/" class="hover:text-moss">Werkzeuge: Zeitplan, Protein, Korridor, Kosten</a></li>
-        <li><a href="/ueber/" class="hover:text-moss">Über diese Seite</a></li>
+    <nav aria-label="Seiten">
+      <p class="ft-h">Seite</p>
+      <ul>
+        <li><a href="/#programm">Das Programm</a></li>
+        <li><a href="/#warteliste">Warteliste</a></li>
+        <li><a href="/#faq">Häufige Fragen</a></li>
+        <li><a href="/wissen/">Wissen: Absetzen, Jojo-Effekt, Muskeln</a></li>
+        <li><a href="/wissen/studien/">Studien-Tracker: Absetzen und Gewicht</a></li>
+        <li><a href="/glossar/">Glossar: Begriffe erklärt</a></li>
+        <li><a href="/marktradar/">Marktradar: Zulassungen, Preise, Kassen</a></li>
+        <li><a href="/abnehmspritze-kosten/">Kosten: Preise pro Monat und Jahr</a></li>
+        <li><a href="/grafiken/">Grafiken: Studien, zitierfähig</a></li>
+        <li><a href="/werkzeuge/">Werkzeuge: Zeitplan, Protein, Korridor, Kosten</a></li>
+        <li><a href="/ueber/">Über diese Seite</a></li>
       </ul>
     </nav>
-    <nav aria-label="Themen" class="text-sm">
-      <p class="eyebrow mb-3">Themen</p>
-      <ul class="space-y-2">
-        {themen.map((t) => (<li><a href={`/wissen/${t.slug}/`} class="hover:text-moss">{t.name}</a></li>))}
-        <li><a href="/checkliste/" class="hover:text-moss">Checkliste: die ersten 8 Wochen</a></li>
-        <li><a href="/ernaehrungsplan/" class="hover:text-moss">Ernährungsplan: 7 Tage, kostenlos</a></li>
+    <nav aria-label="Themen">
+      <p class="ft-h">Themen</p>
+      <ul>
+        {themen.map((t) => (<li><a href={`/wissen/${t.slug}/`}>{t.name}</a></li>))}
+        <li><a href="/checkliste/">Checkliste: die ersten 8 Wochen</a></li>
+        <li><a href="/ernaehrungsplan/">Ernährungsplan: 7 Tage, kostenlos</a></li>
       </ul>
     </nav>
-    <nav aria-label="Rechtliches" class="text-sm">
-      <p class="eyebrow mb-3">Rechtliches</p>
-      <ul class="space-y-2">
-        <li><a href="/impressum/" class="hover:text-moss">Impressum</a></li>
-        <li><a href="/datenschutz/" class="hover:text-moss">Datenschutz</a></li>
+    <nav aria-label="Rechtliches">
+      <p class="ft-h">Rechtliches</p>
+      <ul>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/datenschutz/">Datenschutz</a></li>
       </ul>
-      <p class="mt-6 text-xs text-ink-3">© {year} {site.name}. Keine Cookies, keine Tracker mit Profilbildung.</p>
+      <p class="ft-small">© {year} {site.name}. Keine Cookies, keine Tracker mit Profilbildung.</p>
     </nav>
   </div>
 </footer>
+
+<style>
+  .ft {
+    margin-top: 6rem;
+    border-top: 1px solid var(--color-line);
+    font-size: 0.875rem;
+    color: var(--color-ink-2);
+  }
+  .ft-grid {
+    display: grid;
+    gap: 2.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
+  }
+  .ft-t {
+    margin-top: 0.875rem;
+    max-width: 34em;
+    line-height: 1.55;
+  }
+  .ft-doc {
+    color: var(--color-ink);
+  }
+  .ft-h {
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+    margin-bottom: 0.75rem;
+  }
+  .ft ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.45rem;
+  }
+  .ft a {
+    color: var(--color-ink-2);
+    text-decoration: none;
+  }
+  .ft a:hover {
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .ft-t a {
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-underline-offset: 3px;
+  }
+  .ft-small {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--color-ink-3);
+  }
+  @media (min-width: 768px) {
+    .ft-grid {
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.8fr);
+    }
+  }
+</style>

@@ -1,6 +1,6 @@
 ---
 /**
- * FAQ als <details>, ohne JavaScript. Die passende FAQPage-JSON-LD baut die Seite selbst
+ * FAQ als <details>, ohne JavaScript, mit Haarlinien statt Box. Die passende FAQPage-JSON-LD baut die Seite selbst
  * über faqJsonLd() aus src/data/faq.ts.
  */
 export interface FaqItem { q: string; a: string }
@@ -9,14 +9,14 @@ const { items, id = 'faq', title = 'Häufige Fragen' } = Astro.props;
 ---
 <section id={id} aria-labelledby={`${id}-h`} class="scroll-mt-20">
   <h2 id={`${id}-h`} class="h2">{title}</h2>
-  <div class="mt-6 divide-y divide-line rounded-xl2 border border-line bg-white">
+  <div class="mt-6 border-t border-line">
     {items.map((item) => (
-      <details class="group px-5 py-4">
-        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-ink [&::-webkit-details-marker]:hidden">
+      <details class="group border-b border-line">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[1.0625rem] leading-snug font-medium text-ink sm:text-lg [&::-webkit-details-marker]:hidden" style="font-stretch:108%">
           {item.q}
-          <svg class="h-5 w-5 shrink-0 text-moss transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="h-[18px] w-[18px] shrink-0 text-ink transition-transform duration-300 group-open:rotate-45" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2v14M2 9h14" stroke="currentColor" stroke-width="1.5"/></svg>
         </summary>
-        <div class="prose-site mt-3 text-[1rem]" set:html={item.a} />
+        <div class="prose-site -mt-1 pb-5 text-[1rem]" set:html={item.a} />
       </details>
     ))}
   </div>

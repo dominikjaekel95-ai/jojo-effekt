@@ -1,377 +1,284 @@
 @import "tailwindcss";
-/* Schriften aller Design-Varianten. Der Browser lädt nur die Dateien, die das aktive Theme wirklich benutzt. */
-@import "@fontsource-variable/source-sans-3";
-@import "@fontsource-variable/ibm-plex-sans";
-@import "@fontsource/ibm-plex-mono/500.css";
-@import "@fontsource-variable/bricolage-grotesque";
-@import "@fontsource-variable/schibsted-grotesk";
-@import "@fontsource-variable/hanken-grotesk";
+/* Mona Sans, variabel: Breite 75–125 %, Gewicht 200–900. Selbst gehostet, keine externen Requests. */
+@import "@fontsource-variable/mona-sans/standard.css";
 
-/* Farb- und Formtokens. Die Werte hier sind die Defaults (Variante B „Magazin“);
-   html[data-theme="…"] weiter unten überschreibt sie je Variante. PUBLIC_THEME steuert das. */
+/* Design-System „Kalk“ (seit 06.10.2026). Ein Theme, keine Varianten.
+   Die Token-Namen sind historisch (moss, amber, clay) und bleiben, damit alle Seiten sie weiter benutzen können.
+   Bedeutung der Akzente ist fest:
+   - moss  = Grün #2E5944: Links, fettfreie Masse, positiv, Training
+   - amber = Gelb #E8CF55: NUR Markierung, Unterstrich, Hervorhebung, nie Text auf hellem Grund
+   - amber-dark = Ocker für Text, wenn es „gelb“ gemeint ist (≥ 4,5:1 auf Grund und Grund 2)
+   - clay  = Braun #7A4718: Wiederzunahme
+   - placebo = Grau #878982 (gepunktet), sand = Fettmasse */
 @theme {
-  --font-sans: "Source Sans 3 Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-sans: "Mona Sans Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
-  --color-paper: #f7f2ea;
-  --color-paper-2: #efe8dc;
-  --color-ink: #22201c;
-  --color-ink-2: #4a463f;
-  --color-ink-3: #6b665d;
-  --color-line: #e2dace;
+  --color-paper: #efefeb;
+  --color-paper-2: #e5e5df;
+  --color-ink: #141513;
+  --color-ink-2: #3f413c;
+  --color-ink-3: #5e605a;
+  --color-line: #d3d4cd;
 
-  --color-moss: #2f6b5a;
-  --color-moss-dark: #24554a;
-  --color-moss-light: #dcebe4;
-  --color-amber: #d9962d;
-  --color-amber-dark: #8a5a12;
-  --color-amber-light: #fbefd9;
-  --color-clay: #b8563e;
-  --color-clay-light: #f7e3dc;
+  --color-moss: #2e5944;
+  --color-moss-dark: #234535;
+  --color-moss-light: #dfe6df;
+  --color-amber: #e8cf55;
+  --color-amber-dark: #735c10;
+  --color-amber-light: #f3e9b5;
+  --color-clay: #7a4718;
+  --color-clay-light: #ebe1d6;
+  --color-placebo: #878982;
+  --color-sand: #b5a27c;
+  --color-sand-edge: #6f6247;
 
-  --radius-xl2: 1.25rem;
+  --radius-xl2: 1rem;
+  --ease-kalk: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 :root {
-  --font-head: "Bricolage Grotesque Variable", var(--font-sans);
-  --font-stat: var(--font-head);
-  --font-kicker: var(--font-head);
-  --head-fvs: "opsz" 96;
-  --h-weight: 700;
-  --h-tracking: -0.012em;
-  --h-leading: 1.08;
-  --h-transform: none;
-  --kicker-size: 0.85rem;
-  --kicker-weight: 700;
-  --kicker-style: normal;
-  --kicker-transform: uppercase;
-  --kicker-tracking: 0.12em;
-  --kicker-color: var(--color-moss);
-  --kicker-rule: inline-block;
-  --kicker-rule-w: 1.25rem;
-  --kicker-rule-h: 3px;
-  --radius-btn: 999px;
-  --btn-bg: var(--color-moss);
-  --btn-fg: #ffffff;
-  --btn-hover: var(--color-moss-dark);
-  --btn-shadow: none;
-  --btn-weight: 700;
-  --btn2-border: rgba(34, 32, 28, 0.25);
-  --btn2-fg: var(--color-ink);
-  --card-bg: #ffffff;
-  --card-border: var(--color-line);
-  --card-border-w: 1px;
-  --card-shadow: 0 10px 28px -18px rgba(34, 32, 28, 0.35);
-  --band-bg: #2a2622;
-  --band-fg: #f7f2ea;
-  --band-muted: rgba(247, 242, 234, 0.75);
-  --band-line: rgba(255, 255, 255, 0.14);
-  --band-kicker: var(--color-amber);
-  --stat-1: var(--color-amber);
-  --stat-2: var(--color-moss-light);
-  --stat-3: var(--color-clay-light);
-  --stat-weight: 700;
-  --stat-tracking: -0.02em;
-  --brand-weight: 700;
-  --body-size: 1.0625rem;
-}
-
-/* ---------- Variante A „Praxis“: klinisch, klar, Plex + Mono ---------- */
-html[data-theme="a"] {
-  --font-sans: "IBM Plex Sans Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-head: "IBM Plex Sans Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-stat: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --font-kicker: "IBM Plex Mono", ui-monospace, Menlo, monospace;
-  --head-fvs: normal;
-  --color-paper: #ffffff;
-  --color-paper-2: #f3f6f6;
-  --color-ink: #10201f;
-  --color-ink-2: #3b4948;
-  --color-ink-3: #5e6c6b;
-  --color-line: #d9e1e0;
-  --color-moss: #0e6b63;
-  --color-moss-dark: #0a524c;
-  --color-moss-light: #d8ebe8;
-  --color-amber: #b9861f;
-  --color-amber-dark: #7d5a12;
-  --color-amber-light: #f7efdc;
-  --color-clay: #b0483a;
-  --color-clay-light: #f5e1dd;
-  --radius-xl2: 6px;
-  --h-weight: 600;
-  --h-tracking: -0.02em;
-  --h-leading: 1.1;
-  --kicker-size: 0.78rem;
-  --kicker-weight: 500;
-  --kicker-transform: uppercase;
-  --kicker-tracking: 0.16em;
-  --kicker-rule-w: 1.5rem;
-  --kicker-rule-h: 1px;
-  --radius-btn: 4px;
-  --btn-weight: 600;
-  --btn2-border: #b8c4c3;
-  --card-shadow: none;
-  --band-bg: #f3f6f6;
-  --band-fg: #10201f;
-  --band-muted: #3b4948;
-  --band-line: #c9d4d3;
-  --band-kicker: #0e6b63;
-  --stat-1: #0e6b63;
-  --stat-2: #7d5a12;
-  --stat-3: #b0483a;
-  --stat-weight: 500;
-  --stat-tracking: -0.03em;
-  --brand-weight: 600;
-}
-
-/* ---------- Variante C „Kraft“: kontrastreich, kantig, Schibsted ---------- */
-html[data-theme="c"] {
-  --font-sans: "Schibsted Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-head: "Schibsted Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-stat: var(--font-head);
-  --font-kicker: var(--font-head);
-  --head-fvs: normal;
-  --color-paper: #ffffff;
-  --color-paper-2: #f2f2f0;
-  --color-ink: #111111;
-  --color-ink-2: #333333;
-  --color-ink-3: #5a5a5a;
-  --color-line: #111111;
-  --color-moss: #c73b17;
-  --color-moss-dark: #a12f10;
-  --color-moss-light: #fbe3dc;
-  --color-amber: #f2a900;
-  --color-amber-dark: #6e4c00;
-  --color-amber-light: #fff1cc;
-  --color-clay: #0b6e4f;
-  --color-clay-light: #dcefe6;
-  --radius-xl2: 0px;
-  --h-weight: 800;
-  --h-tracking: -0.03em;
-  --h-leading: 1.0;
-  --kicker-size: 0.85rem;
-  --kicker-weight: 700;
-  --kicker-transform: uppercase;
-  --kicker-tracking: 0.08em;
-  --kicker-color: #111111;
-  --kicker-rule-w: 2rem;
-  --kicker-rule-h: 3px;
-  --radius-btn: 0px;
-  --btn-bg: #111111;
-  --btn-fg: #ffffff;
-  --btn-hover: #c73b17;
-  --btn-weight: 700;
-  --btn2-border: #111111;
-  --card-border: #111111;
-  --card-border-w: 2px;
-  --card-shadow: 6px 6px 0 #111111;
-  --band-bg: #111111;
-  --band-fg: #ffffff;
-  --band-muted: rgba(255, 255, 255, 0.72);
-  --band-line: rgba(255, 255, 255, 0.25);
-  --band-kicker: #f2a900;
-  --stat-1: #ff6a45;
-  --stat-2: #f2a900;
-  --stat-3: #7fd1ae;
-  --stat-weight: 800;
-  --stat-tracking: -0.04em;
-  --brand-weight: 800;
-}
-
-/* ---------- Variante D „Ruhe“: minimal, hell, leichte Hanken Grotesk ---------- */
-html[data-theme="d"], html[data-theme="d1"], html[data-theme="d2"], html[data-theme="d3"] {
-  --font-sans: "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-head: "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-stat: var(--font-head);
-  --font-kicker: var(--font-head);
-  --head-fvs: normal;
-  --color-paper: #f6f5f2;
-  --color-paper-2: #edebe6;
-  --color-ink: #1a1a1a;
-  --color-ink-2: #4b4b4b;
-  --color-ink-3: #6f6f6f;
-  --color-line: #dedbd4;
-  --color-moss: #4f6b57;
-  --color-moss-dark: #3d5444;
-  --color-moss-light: #e3eae4;
-  --color-amber: #c27a4a;
-  --color-amber-dark: #8a4f2a;
-  --color-amber-light: #f6e9e0;
-  --color-clay: #a35f4d;
-  --color-clay-light: #f3e4df;
-  --radius-xl2: 0px;
-  --h-weight: 400;
-  --h-tracking: -0.025em;
-  --h-leading: 1.04;
-  --kicker-size: 0.78rem;
-  --kicker-weight: 500;
-  --kicker-transform: uppercase;
-  --kicker-tracking: 0.22em;
-  --kicker-color: #6f6f6f;
-  --kicker-rule: none;
-  --radius-btn: 999px;
-  --btn-bg: #1a1a1a;
-  --btn-fg: #f6f5f2;
-  --btn-hover: #3a3a3a;
-  --btn-weight: 500;
-  --btn2-border: #b9b6ae;
-  --card-bg: transparent;
-  --card-border: transparent;
-  --card-border-w: 1px;
-  --card-shadow: none;
-  --card-top: 1px solid #dedbd4;
-  --band-bg: #f6f5f2;
-  --band-fg: #1a1a1a;
-  --band-muted: #4b4b4b;
-  --band-line: #dedbd4;
-  --band-kicker: #6f6f6f;
-  --stat-1: #1a1a1a;
-  --stat-2: #4f6b57;
-  --stat-3: #c27a4a;
-  --stat-weight: 300;
-  --stat-tracking: -0.04em;
-  --brand-weight: 500;
-  --body-size: 1.1rem;
+  --ease: cubic-bezier(0.65, 0, 0.35, 1);
+  /* Seitenrand: mobil 20 px, wächst bis 56 px */
+  --pad: clamp(1.25rem, 4vw, 3.5rem);
+  /* Überschriften: Mona Sans breit */
+  --h-stretch: 118%;
+  --h-weight: 520;
+  --h-tracking: -0.018em;
+  /* Dunkle Blöcke */
+  --dark-bg: #141513;
+  --dark-fg: #efefeb;
+  --dark-muted: #c9cac3;
+  --dark-line: rgba(239, 239, 235, 0.2);
+  --dark-field: #26271f;
 }
 
 @utility btn {
-  @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-[1.05rem] no-underline transition-colors duration-150;
-  border-radius: var(--radius-btn);
-  font-weight: var(--btn-weight);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 560;
+  font-stretch: 108%;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.3s var(--ease);
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
 @utility stat {
-  font-family: var(--font-stat);
-  font-weight: var(--stat-weight);
-  letter-spacing: var(--stat-tracking);
-  @apply text-6xl leading-none sm:text-7xl;
+  font-stretch: 125%;
+  font-weight: 480;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+  @apply text-6xl sm:text-7xl;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    background: var(--color-paper);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
   body {
     @apply bg-paper text-ink font-sans antialiased;
-    font-size: var(--body-size);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-stretch: 100%;
+    font-weight: 400;
   }
   h1, h2, h3, h4 {
-    font-family: var(--font-head);
-    font-variation-settings: var(--head-fvs);
+    font-stretch: var(--h-stretch);
     font-weight: var(--h-weight);
     letter-spacing: var(--h-tracking);
-    text-transform: var(--h-transform);
     text-wrap: balance;
   }
+  h3, h4 {
+    font-stretch: 110%;
+    font-weight: 540;
+    letter-spacing: -0.01em;
+  }
   :target {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 5.5rem;
   }
   ::selection {
-    background: var(--color-moss-light);
+    background: var(--color-amber);
+    color: var(--color-ink);
   }
-  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
-    outline: 3px solid var(--color-amber);
-    outline-offset: 2px;
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  input[type="checkbox"], input[type="radio"], input[type="range"] {
+    accent-color: var(--color-ink);
+  }
+  /* Hochgestellte Fußnoten ohne Zeilensprung */
+  sup {
+    font-size: 0.62em;
+    line-height: 0;
+    vertical-align: 0.62em;
+    font-weight: 500;
+    font-stretch: 100%;
+    letter-spacing: 0;
   }
 }
 
 @layer components {
   .container-narrow {
-    @apply mx-auto w-full max-w-3xl px-4 sm:px-6;
+    width: 100%;
+    margin-inline: auto;
+    max-width: calc(45rem + 2 * var(--pad));
+    padding-inline: var(--pad);
   }
   .container-wide {
-    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+    width: 100%;
+    margin-inline: auto;
+    max-width: calc(75rem + 2 * var(--pad));
+    padding-inline: var(--pad);
   }
+  /* Wortmarke */
   .brand {
-    font-family: var(--font-head);
-    font-weight: var(--brand-weight);
-    font-variation-settings: var(--head-fvs);
+    font-stretch: 125%;
+    font-weight: 600;
+    font-size: 1.0625rem;
     letter-spacing: -0.01em;
-    @apply text-[1.15rem] text-ink;
+    line-height: 1;
+    white-space: nowrap;
+    color: var(--color-ink);
   }
+  /* Pille in Tinte */
   .btn-primary {
     @apply btn;
-    background: var(--btn-bg);
-    color: var(--btn-fg);
-    box-shadow: var(--btn-shadow);
+    background: var(--color-ink);
+    color: var(--color-paper);
+    border: 1px solid var(--color-ink);
   }
   .btn-primary:hover {
-    background: var(--btn-hover);
+    background: #33352f;
+    border-color: #33352f;
   }
   .btn-secondary {
-    @apply btn bg-transparent;
-    border: 1px solid var(--btn2-border);
-    color: var(--btn2-fg);
+    @apply btn;
+    background: transparent;
+    color: var(--color-ink);
+    border: 1px solid #b4b6af;
   }
   .btn-secondary:hover {
-    border-color: var(--color-moss);
-    color: var(--color-moss);
+    border-color: var(--color-ink);
   }
+  /* Kleiner grauer Satzanfang über Überschriften: keine Versalien, keine Sperrung, kein Strich */
   .eyebrow {
-    @apply inline-flex items-center gap-3;
-    font-family: var(--font-kicker);
-    font-size: var(--kicker-size);
-    font-weight: var(--kicker-weight);
-    font-style: var(--kicker-style);
-    text-transform: var(--kicker-transform);
-    letter-spacing: var(--kicker-tracking);
-    color: var(--kicker-color);
-  }
-  .eyebrow::before {
-    content: "";
-    display: var(--kicker-rule);
-    width: var(--kicker-rule-w);
-    height: var(--kicker-rule-h);
-    background: currentColor;
+    display: inline-block;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    font-weight: 450;
+    font-stretch: 100%;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--color-ink-3);
   }
   .h1 {
-    font-family: var(--font-head);
-    font-variation-settings: var(--head-fvs);
+    font-stretch: var(--h-stretch);
     font-weight: var(--h-weight);
-    letter-spacing: var(--h-tracking);
-    line-height: var(--h-leading);
-    text-transform: var(--h-transform);
-    @apply text-[2.25rem] text-ink sm:text-[3.5rem];
+    letter-spacing: -0.022em;
+    line-height: 1.02;
+    color: var(--color-ink);
+    font-size: clamp(2.25rem, 5.2vw, 4rem);
   }
   .h2 {
-    font-family: var(--font-head);
-    font-variation-settings: var(--head-fvs);
+    font-stretch: var(--h-stretch);
     font-weight: var(--h-weight);
     letter-spacing: var(--h-tracking);
-    line-height: var(--h-leading);
-    @apply text-3xl text-ink sm:text-[2.4rem];
+    line-height: 1.06;
+    color: var(--color-ink);
+    font-size: clamp(1.75rem, 3.4vw, 2.75rem);
   }
+  /* Karte ohne Rahmenfarbe und Schatten: Haarlinie oben, Inhalt bündig. Mit eigener Fläche (bg-…) wird sie zur ruhigen Box. */
   .card {
-    background: var(--card-bg);
-    border: var(--card-border-w) solid var(--card-border);
-    border-top: var(--card-top, var(--card-border-w) solid var(--card-border));
+    display: block;
+    background: transparent;
+    border: 0;
+    border-top: 1px solid var(--color-line);
+    border-radius: 0;
+    padding: 1.25rem 0 0.5rem;
+    transition: border-color 0.3s var(--ease);
+  }
+  .card[class*="bg-"] {
+    border: 1px solid var(--color-line);
     border-radius: var(--radius-xl2);
-    box-shadow: var(--card-shadow);
-    @apply p-6;
+    padding: 1.5rem;
   }
+  /* Dunkler Block: Tinte mit hellem Text */
   .band {
-    background: var(--band-bg);
-    color: var(--band-fg);
+    background: var(--dark-bg);
+    color: var(--dark-fg);
   }
-  .band .h2 { color: var(--band-fg); }
-  .band .eyebrow { color: var(--band-kicker); }
-  .band .band-muted { color: var(--band-muted); }
-  .band .band-line { border-color: var(--band-line); }
-  .band .fn { color: var(--stat-2); }
-  .stat-1 { color: var(--stat-1); }
-  .stat-2 { color: var(--stat-2); }
-  .stat-3 { color: var(--stat-3); }
+  .band .h2, .band h2, .band h3 { color: var(--dark-fg); }
+  .band .eyebrow { color: var(--dark-muted); }
+  .band .band-muted { color: var(--dark-muted); }
+  .band .band-line { border-color: var(--dark-line); }
+  .band .fn { color: var(--dark-muted); }
+  .band a { color: var(--dark-fg); }
+  /* Auf Tinte: Gelb-Button mit Tinte */
+  .band .btn-primary {
+    background: var(--color-amber);
+    border-color: var(--color-amber);
+    color: var(--color-ink);
+  }
+  .band .btn-primary:hover {
+    background: #f0da70;
+    border-color: #f0da70;
+  }
+  .band .btn-secondary {
+    color: var(--dark-fg);
+    border-color: var(--dark-line);
+  }
+  .stat-1 { color: var(--color-ink); }
+  .stat-2 { color: var(--color-moss); }
+  .stat-3 { color: var(--color-clay); }
+  .band .stat-1 { color: var(--dark-fg); }
+  .band .stat-2 { color: #a9c8b6; }
+  .band .stat-3 { color: #d8b48e; }
+  /* Fußnotenverweis (Komponente Fn): <sup><a class="fn">n</a></sup> */
   .fn {
-    @apply align-super text-[0.65em] font-semibold text-moss no-underline;
+    color: var(--color-ink-3);
+    text-decoration: none;
+    padding: 0 1px;
+    font-weight: 500;
   }
+  .fn:hover {
+    color: var(--color-moss);
+  }
+  /* Fließtext */
   .prose-site {
-    @apply text-[1.1rem] leading-[1.65] text-ink-2;
+    font-size: 1.125rem;
+    line-height: 1.65;
+    color: var(--color-ink-2);
   }
   .prose-site h2 {
-    @apply mt-12 mb-4 text-[1.85rem] leading-[1.15] text-ink scroll-mt-24;
+    @apply mt-14 mb-4 scroll-mt-24;
+    font-size: clamp(1.55rem, 2.6vw, 2rem);
+    line-height: 1.12;
+    color: var(--color-ink);
   }
   .prose-site h3 {
-    @apply mt-8 mb-3 text-[1.35rem] text-ink;
+    @apply mt-9 mb-3;
+    font-size: 1.3rem;
+    line-height: 1.25;
+    color: var(--color-ink);
   }
   .prose-site p {
     @apply my-4;
@@ -382,15 +289,31 @@ html[data-theme="d"], html[data-theme="d1"], html[data-theme="d2"], html[data-th
   .prose-site ol {
     @apply my-4 list-decimal space-y-2 pl-6;
   }
+  .prose-site li::marker {
+    color: var(--color-ink-3);
+  }
   .prose-site a {
-    @apply text-moss underline decoration-moss/40 underline-offset-4 hover:decoration-moss;
+    color: var(--color-moss);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-moss) 40%, transparent);
+    text-underline-offset: 4px;
+  }
+  .prose-site a:hover {
+    text-decoration-color: var(--color-moss);
   }
   .prose-site strong {
-    @apply font-semibold text-ink;
+    font-weight: 600;
+    color: var(--color-ink);
   }
+  /* Zitat: ruhig, ohne Farbbalken; Haarlinien oben und unten */
   .prose-site blockquote {
-    @apply my-7 border-l-[3px] border-amber bg-amber-light/50 px-5 py-4 text-[1.1rem] leading-snug text-ink;
-    border-radius: 0 var(--radius-xl2) var(--radius-xl2) 0;
+    @apply my-8 py-5;
+    border-top: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+    font-size: 1.25rem;
+    line-height: 1.45;
+    font-stretch: 106%;
+    color: var(--color-ink);
   }
   .prose-site blockquote p {
     @apply my-0;
@@ -414,7 +337,10 @@ html[data-theme="d"], html[data-theme="d1"], html[data-theme="d2"], html[data-th
     }
   }
   .prose-site th {
-    @apply border-b-2 border-ink/60 px-3 py-2 text-left font-semibold text-ink;
+    @apply px-3 py-2 text-left;
+    font-weight: 560;
+    color: var(--color-ink);
+    border-bottom: 1px solid var(--color-ink);
   }
   .prose-site td {
     @apply border-b border-line px-3 py-2 align-top;
@@ -423,103 +349,15 @@ html[data-theme="d"], html[data-theme="d1"], html[data-theme="d2"], html[data-th
     @apply my-10 border-line;
   }
   .prose-site sup a {
-    @apply no-underline font-semibold;
+    color: var(--color-ink-3);
+    text-decoration: none;
+    font-weight: 500;
   }
-}
-
-/* ---------- D-Paletten (Struktur wie D, andere Farben) ---------- */
-/* D1 „Pflaume & Aprikose“: tiefes Pflaume als Markenfarbe, Aprikose als Wärme, kühles Kreideweiß */
-html[data-theme="d1"] {
-  --color-paper: #f5f4f1;
-  --color-paper-2: #ebe9e4;
-  --color-ink: #221a25;
-  --color-ink-2: #4c4350;
-  --color-ink-3: #6f6672;
-  --color-line: #dcd7d9;
-  --color-moss: #5c2d5e;
-  --color-moss-dark: #46204a;
-  --color-moss-light: #ece0ec;
-  --color-amber: #d9824f;
-  --color-amber-dark: #9a4f22;
-  --color-amber-light: #f9e5d8;
-  --color-clay: #4d5f73;
-  --color-clay-light: #e2e7ec;
-  --btn-bg: #5c2d5e;
-  --btn-fg: #ffffff;
-  --btn-hover: #46204a;
-  --btn2-border: #b9b3bb;
-  --kicker-color: #6f6672;
-  --band-kicker: #6f6672;
-  --card-top: 1px solid #dcd7d9;
-  --band-bg: #f5f4f1;
-  --band-fg: #221a25;
-  --band-muted: #4c4350;
-  --band-line: #dcd7d9;
-  --stat-1: #5c2d5e;
-  --stat-2: #9a4f22;
-  --stat-3: #221a25;
-}
-/* D2 „Tinte & Safran“: Tintenblau-Schwarz statt Hellblau, Safran als einziger warmer Akzent */
-html[data-theme="d2"] {
-  --color-paper: #f5f4f0;
-  --color-paper-2: #ebeae5;
-  --color-ink: #14213d;
-  --color-ink-2: #3a4560;
-  --color-ink-3: #5f6a82;
-  --color-line: #d9dbe0;
-  --color-moss: #2a3d7c;
-  --color-moss-dark: #1d2c5e;
-  --color-moss-light: #e1e5f2;
-  --color-amber: #e3a51a;
-  --color-amber-dark: #7a5300;
-  --color-amber-light: #fbeecb;
-  --color-clay: #b5482e;
-  --color-clay-light: #f4ddd6;
-  --btn-bg: #14213d;
-  --btn-fg: #ffffff;
-  --btn-hover: #2a3d7c;
-  --btn2-border: #b3b8c6;
-  --kicker-color: #5f6a82;
-  --band-kicker: #5f6a82;
-  --card-top: 1px solid #d9dbe0;
-  --band-bg: #f5f4f0;
-  --band-fg: #14213d;
-  --band-muted: #3a4560;
-  --band-line: #d9dbe0;
-  --stat-1: #14213d;
-  --stat-2: #2a3d7c;
-  --stat-3: #7a5300;
-}
-/* D3 „Bordeaux & Stein“: Weinrot als Markenfarbe, Ocker und Schiefer als Begleiter */
-html[data-theme="d3"] {
-  --color-paper: #f4f2ee;
-  --color-paper-2: #eae7e2;
-  --color-ink: #231b1e;
-  --color-ink-2: #4b4346;
-  --color-ink-3: #6d6467;
-  --color-line: #ddd8d6;
-  --color-moss: #6e2334;
-  --color-moss-dark: #55192a;
-  --color-moss-light: #f0dfe3;
-  --color-amber: #b0882a;
-  --color-amber-dark: #7a5c12;
-  --color-amber-light: #f5ecd6;
-  --color-clay: #4f5b66;
-  --color-clay-light: #e2e6ea;
-  --btn-bg: #6e2334;
-  --btn-fg: #ffffff;
-  --btn-hover: #55192a;
-  --btn2-border: #b9b2b0;
-  --kicker-color: #6d6467;
-  --band-kicker: #6d6467;
-  --card-top: 1px solid #ddd8d6;
-  --band-bg: #f4f2ee;
-  --band-fg: #231b1e;
-  --band-muted: #4b4346;
-  --band-line: #ddd8d6;
-  --stat-1: #6e2334;
-  --stat-2: #7a5c12;
-  --stat-3: #4f5b66;
+  .prose-site sup a:hover {
+    color: var(--color-moss);
+  }
+  /* Zahlen: Mona Sans hat als Tabellenziffern eine Mono-Form mit gestrichener Null; deshalb bewusst proportionale
+     Ziffern. Die Klasse .num bleibt als Kennzeichnung für Zahlen. */
 }
 
 /* Druck und PDF (Checkliste): Navigation, Footer und Formulare ausblenden, Kästchen sichtbar lassen */

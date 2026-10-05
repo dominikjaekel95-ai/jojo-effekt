@@ -63,10 +63,12 @@ const graph = [
 ---
 
 <!doctype html>
-<html lang={site.lang} data-theme={site.theme}>
+<html lang={site.lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {/* Klassen für Bewegung: „js“ = Skripte laufen (sonst Endzustand), „rm“ = reduzierte Bewegung (Endzustand sofort) */}
+    <script is:inline>document.documentElement.classList.add('js');if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm');</script>
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -74,7 +76,7 @@ const graph = [
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="theme-color" content="#faf7f2" />
+    <meta name="theme-color" content="#efefeb" />
 
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={site.name} />

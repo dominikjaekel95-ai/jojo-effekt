@@ -8,8 +8,9 @@ export const site = {
   url: import.meta.env.SITE ?? 'https://nachderspritze.de',
   locale: 'de_DE',
   lang: 'de',
+  // Startseiten-Description (≤ 165 Zeichen). Seit 06.10.2026 Programm statt Set: Angebot geändert.
   description:
-    'Das 12-Wochen-Set für die Zeit nach der Abnehmspritze: Protein, Ballaststoffe, Kreatin und ein Programm mit zwei Krafteinheiten pro Woche. Jetzt vorbestellen – ohne Zahlung.',
+    'Das 12-Wochen-Programm für die Zeit nach der Abnehmspritze: Krafttraining, genug Protein, ein Plan für die Waage. Jetzt kostenlos auf die Warteliste.',
 
   // Allgemeine Kontaktadresse (Impressum, Datenschutz, Organization-Schema). Weiterleitung über ImprovMX.
   email: 'hallo@nachderspritze.de',
@@ -31,22 +32,18 @@ export const site = {
   // Öffentliche Profile für das Organization-Schema (sameAs), z. B. LinkedIn. Leer lassen, bis vorhanden.
   sameAs: [] as string[],
 
-  // Angebot
+  // Angebot (seit 06.10.2026): 12-Wochen-Programm, Warteliste statt Vorbestellung. Preis nur als Rahmen nennen
+  // („Basis-Programm geplant unter 129 €“), keine Stufen ausformulieren, kein Vergleich mit Spritzenkosten.
   price: {
-    set: 129,
-    perMonth: 49,
-    setMonths: 3,
-    setPerMonth: 43,
-    injectionMin: 170,
-    injectionMax: 490,
+    programUnder: 129,
   },
-  preorderGoal: 100,
 
-  // Design-Variante (a Praxis, b Magazin, c Kraft, d Ruhe) – siehe src/styles/global.css
-  theme: import.meta.env.PUBLIC_THEME ?? 'd1',
-
-  // Externe Dienste (aus .env; leer = Platzhalter/aus)
-  tallyFormId: import.meta.env.PUBLIC_TALLY_FORM_ID || 'b5bO9o',
+  // Warteliste: Formular WaitlistForm → api/anmeldung.js (quelle=warteliste) → MailerLite mit Double-Opt-in.
+  // ownGroup: false, solange es in MailerLite keine eigene Gruppe „Warteliste“ gibt (Env MAILERLITE_GROUP_WARTELISTE
+  // nicht gesetzt). Dann landet die Adresse in der Newsletter-Gruppe mit quelle=warteliste, und die Einwilligung nennt
+  // Warteliste UND Newsletter. Erst auf true setzen, wenn die Env-Variable in Vercel steht; dann wird der Newsletter
+  // ein eigenes, freiwilliges Häkchen.
+  waitlist: { ownGroup: false },
   // Erfahrungsformular „Deine Erfahrung nach der Abnehmspritze“ (Tally). `live` erst auf true setzen, wenn das
   // Formular in Tally veröffentlicht ist; vorher zeigt /erfahrungen/ nur die Regeln und die E-Mail-Adresse.
   experienceForm: { id: 'ODOJWR', live: true },
@@ -70,12 +67,17 @@ export const site = {
   // Pflichtsatz, der auf jeder Seite mit Produktbezug prominent steht
   doctorSentence:
     'Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.',
+  // Einzige erlaubte Formulierung zu Ärzten, wörtlich (CLAIMS.md, Abschnitt H; rechtlich abgestimmt 06.10.2026):
+  // anonym, nur Über-Seite, Artikelfuß, Footer. Nie beim Programm, beim Starterpaket oder in Werbung.
+  // Hebt die Regel „kein fachlich geprüft“ nicht auf.
+  medicalTeamSentence:
+    'Bei medizinischen Fragen berät uns ein Arzt. Die Inhalte bleiben allgemeine Information und ersetzen keine ärztliche Beratung.',
 } as const;
 
 export const nav = [
-  { href: '/#set', label: 'Das Set' },
-  { href: '/#preis', label: 'Preis' },
+  { href: '/#programm', label: 'Programm' },
+  { href: '/#kurve', label: 'Warum' },
   { href: '/wissen/', label: 'Wissen' },
-  { href: '/marktradar/', label: 'Marktradar' },
+  { href: '/werkzeuge/', label: 'Werkzeuge' },
   { href: '/#faq', label: 'FAQ' },
 ] as const;

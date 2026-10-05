@@ -1,0 +1,209 @@
+---
+/**
+ * Werkzeug: Ernährungsplan als Lead-Magnet. Drei Fragen (Ernährungsform, Appetit, Gewicht) wählen einen von 18 fertigen
+ * Plänen (src/data/ernaehrungsplan.ts). Das Formular postet an api/ernaehrungsplan.js; die Funktion legt die Adresse bei
+ * MailerLite an (Double-Opt-in, Gruppen „Newsletter“ und „Ernährungsplan“, Feld `plan`), und nach der Bestätigung verschickt
+ * eine MailerLite-Automation den Link auf das PDF. Alternative ohne Newsletter: Mail an site.owner.email.
+ * Einrichtung, Test und Pflege: docs/ERNAEHRUNGSPLAN.md. Funktioniert ohne JavaScript; das Skript zeigt nur die Vorschau.
+ */
+import Base from '../../layouts/Base.astro';
+import Fn from '../../components/Fn.astro';
+import Footnotes from '../../components/Footnotes.astro';
+import Faq from '../../components/Faq.astro';
+import { faqJsonLd } from '../../data/faq';
+import { site } from '../../data/site';
+import { plaene, ernaehrungOptionen, appetitOptionen, gewichtLabel, proteinZiel } from '../../data/ernaehrungsplan';
+
+const fnIds = ['leidy2015', 'dgeBallaststoffe', 'almandoz2024', 'bls'] as const;
+const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
+
+// Vorschau: Tag 1 jedes Plans, kompakt für das Skript. Startwert: Mischkost, normaler Appetit, 85 kg.
+const vorschau = Object.fromEntries(
+  plaene.map((p) => [p.id, { ziel: p.ziel, tag: p.tage[0].mahlzeiten.map((m) => ({ titel: m.titel, name: m.name, text: m.positionen.map((x) => x.text).join(', '), protein: m.protein })) }]),
+);
+const start = plaene.find((p) => p.ernaehrung === 'mischkost' && p.appetit === 'normal' && p.gewicht === '75bis95')!;
+
+const title = 'Ernährungsplan nach der Abnehmspritze: 7 Tage kostenlos als PDF';
+const description = 'Drei Fragen zu Ernährung, Appetit und Gewicht: dein Plan für sieben Tage mit Mengen, Einkaufsliste und genug Protein, kostenlos als PDF per Mail.';
+const path = '/ernaehrungsplan/';
+const url = `${site.url}${path}`;
+const mailBetreff = 'Ernährungsplan ohne Newsletter';
+const mailText = 'Hallo Dominik,\n\nich hätte gern den Ernährungsplan, aber ohne Newsletter.\n\nErnährungsform: Mischkost\nAppetit: Wieder normal\nGewicht: 75 bis 95 kg\n';
+const mailHref = `mailto:${site.owner.email}?subject=${encodeURIComponent(mailBetreff)}&body=${encodeURIComponent(mailText)}`;
+
+const faq = [
+  {
+    q: 'Für wen ist der Plan gedacht?',
+    a: '<p>Für gesunde Erwachsene in den Wochen, in denen der Appetit nach der letzten Dosis zurückkommt, und für die Zeit unter der Therapie, in der viele zu wenig Protein essen. Für die zweite Gruppe gibt es die Variante „Appetit noch klein“ mit kleineren Portionen und Zwischenmahlzeiten. Nicht geeignet ist er bei Nierenerkrankungen, in Schwangerschaft und Stillzeit, bei einer Essstörung und für unter 18-Jährige.</p>',
+  },
+  {
+    q: 'Muss ich mich an die Reihenfolge halten?',
+    a: '<p>Nein. Die Tage lassen sich beliebig tauschen und wiederholen; wer am Wochenende kocht, bereitet Linsen, Reis und Quinoa für mehrere Tage vor. Wichtig ist das Muster: bei jeder Mahlzeit zuerst Protein, dazu Gemüse oder Obst, nichts Kalorienhaltiges trinken.</p>',
+  },
+  {
+    q: 'Was, wenn ich kein Fleisch oder keinen Fisch esse?',
+    a: '<p>Dann wählst du vegetarisch oder vegan. Der Plan enthält dann nur passende Gerichte, und die Austauschtabelle zeigt, wie viel Tofu, Tempeh, Linsen, Kichererbsen oder Edamame etwa 20 g Protein liefern. Pflanzliche Lebensmittel liefern pro 100 g meist weniger Protein, deshalb sind die Portionen etwas größer.</p>',
+  },
+  {
+    q: 'Muss ich Kalorien zählen?',
+    a: '<p>Nicht mit diesem Plan. Er arbeitet mit Protein, Ballaststoffen und Portionsgröße statt mit Kalorienzahlen. Ob die Menge passt, zeigt die Waage einmal pro Woche.</p>',
+  },
+  {
+    q: 'Warum kommt der Plan per Mail?',
+    a: '<p>Weil wir ihn zusammen mit dem Newsletter verschicken: Nach der Bestätigung deiner Adresse kommt der Plan, danach etwa alle zwei Wochen neue Artikel und Studien. Abmelden geht in jeder Mail. Wer keinen Newsletter möchte, schreibt Dominik eine Mail und bekommt den Plan persönlich.</p>',
+  },
+];
+
+const jsonLd = [
+  {
+    '@type': 'WebPage',
+    '@id': `${url}#page`,
+    name: title,
+    description,
+    url,
+    inLanguage: 'de-DE',
+    isPartOf: { '@id': `${site.url}/#website` },
+    about: { '@type': 'Thing', name: 'Ernährung nach dem Absetzen einer Abnehmspritze' },
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Start', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Werkzeuge', item: `${site.url}/werkzeuge/` },
+      { '@type': 'ListItem', position: 3, name: 'Ernährungsplan', item: url },
+    ],
+  },
+  faqJsonLd(faq),
+];
+---
+<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+  <article class="container-narrow py-12">
+    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › <a href="/werkzeuge/" class="hover:text-moss">Werkzeuge</a> › Ernährungsplan</nav>
+    <p class="eyebrow mt-6">Werkzeug · kostenlos</p>
+    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">Dein kostenloser Ernährungsplan für die Zeit nach der Spritze</h1>
+    <p class="mt-4 text-lg text-ink-2">Drei Fragen, ein Plan für sieben Tage: Mahlzeiten mit Mengen, genug Protein für deinen Gewichtsbereich, Einkaufsliste und eine Tabelle zum Tauschen. Ausgewählt aus 18 Plänen, als PDF per Mail.</p>
+    <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+
+    <form id="ep-form" method="post" action="/api/ernaehrungsplan/" class="plausible-event-name=Ernaehrungsplan+Anfrage mt-8 space-y-6 rounded-xl2 border border-line bg-white p-5 sm:p-6">
+      <fieldset>
+        <legend class="text-base font-semibold text-ink">1. Wie isst du?</legend>
+        <div class="mt-3 grid gap-3 sm:grid-cols-3">
+          {ernaehrungOptionen.map((o) => (
+            <label class="flex cursor-pointer gap-3 rounded-lg border border-line bg-paper p-3 text-sm has-checked:border-moss has-checked:bg-moss-light">
+              <input type="radio" name="ernaehrung" value={o.value} checked={o.value === 'mischkost'} required class="mt-1 accent-moss" />
+              <span><span class="block font-semibold text-ink">{o.label}</span><span class="text-ink-2">{o.text}</span></span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="text-base font-semibold text-ink">2. Wie ist dein Appetit gerade?</legend>
+        <div class="mt-3 grid gap-3 sm:grid-cols-2">
+          {appetitOptionen.map((o) => (
+            <label class="flex cursor-pointer gap-3 rounded-lg border border-line bg-paper p-3 text-sm has-checked:border-moss has-checked:bg-moss-light">
+              <input type="radio" name="appetit" value={o.value} checked={o.value === 'normal'} required class="mt-1 accent-moss" />
+              <span><span class="block font-semibold text-ink">{o.label}</span><span class="text-ink-2">{o.text}</span></span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="ep-gewicht" class="text-base font-semibold text-ink">3. Wie viel wiegst du ungefähr?</label>
+        <div class="mt-3 flex items-center gap-4">
+          <input id="ep-gewicht" name="gewicht" type="range" min="45" max="160" step="1" value="85" class="w-full accent-moss" aria-describedby="ep-gewicht-wert" />
+          <output id="ep-gewicht-wert" for="ep-gewicht" class="w-20 shrink-0 text-right text-lg font-semibold text-moss">85 kg</output>
+        </div>
+        <p class="mt-1 text-xs text-ink-3">Gespeichert wird nur die Nummer des passenden Plans, nicht dein Gewicht.</p>
+      </div>
+
+      <div id="ep-vorschau" class="rounded-lg border border-line bg-paper p-4" aria-live="polite">
+        <p class="text-sm text-ink-2"><span class="font-semibold text-ink">Dein Plan:</span> <span data-profil>Mischkost · Appetit wieder normal · 75 bis 95 kg</span> · rund <span data-ziel>{proteinZiel['75bis95']}</span> g Protein am Tag</p>
+        <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-ink-3">So sieht Tag 1 aus</p>
+        <ul class="mt-2 space-y-1 text-sm text-ink-2" data-tag>
+          {start.tage[0].mahlzeiten.map((m) => (<li><span class="font-semibold text-ink">{m.titel}:</span> {m.name} ({m.positionen.map((x) => x.text).join(', ')}), ca. {m.protein} g</li>))}
+        </ul>
+        <p class="mt-3 text-xs text-ink-3">Im PDF: alle sieben Tage, Einkaufsliste, Austauschtabelle und Hinweise.</p>
+      </div>
+
+      <div>
+        <label for="ep-email" class="text-base font-semibold text-ink">4. Wohin sollen wir den Plan schicken?</label>
+        <input id="ep-email" name="email" type="email" autocomplete="email" required placeholder="deine@adresse.de" class="mt-2 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink" />
+      </div>
+
+      <div class="space-y-3 text-sm text-ink-2">
+        <label class="flex gap-3">
+          <input type="checkbox" name="eignung" value="ja" required class="mt-1 accent-moss" />
+          <span>Keiner dieser Punkte trifft auf mich zu: Nierenerkrankung, Schwangerschaft oder Stillzeit, Essstörung (auch früher), jünger als 18 Jahre. <span class="text-ink-3">Trifft einer zu, ist ein allgemeiner Plan nicht das Richtige; sprich dann mit deiner Ärztin, deinem Arzt oder einer Ernährungsfachkraft.</span></span>
+        </label>
+        <label class="flex gap-3">
+          <input type="checkbox" name="einwilligung" value="ja" required class="mt-1 accent-moss" />
+          <span>Schickt mir den Plan per Mail und meldet mich für den Newsletter von Nach der Spritze an ({site.newsletter.cadence}: neue Artikel und Studien zur Zeit nach der Abnehmspritze, gelegentlich Neuigkeiten zum Set). Der Plan kommt, sobald ich die Anmeldung per Link bestätigt habe. Abmelden geht in jeder Mail. Details in der <a href="/datenschutz/" class="text-moss underline underline-offset-4">Datenschutzerklärung</a>.</span>
+        </label>
+      </div>
+
+      <div class="hidden" aria-hidden="true">
+        <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <button type="submit" class="btn-primary">Plan per Mail anfordern</button>
+        <span class="text-xs text-ink-3">Kostenlos. Keine Weitergabe deiner Adresse.</span>
+      </div>
+
+      <p class="border-t border-line pt-4 text-sm text-ink-2">Lieber ohne Newsletter? Schreib mir eine Mail mit deinen drei Antworten an <a id="ep-mail" href={mailHref} class="font-semibold text-moss underline underline-offset-4">{site.owner.email}</a>, dann schicke ich dir den Plan persönlich. Dominik</p>
+    </form>
+
+    <div class="prose-site mt-12">
+      <h2 id="so-entsteht-der-plan">So entsteht dein Plan</h2>
+      <ul>
+        <li><strong>Protein nach Gewichtsbereich.</strong> Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<Fn n={fn('leidy2015')} id="leidy2015" /> Die Pläne rechnen mit dem unteren Wert und der Mitte des Bereichs: rund {proteinZiel.unter75} g bei {gewichtLabel.unter75}, rund {proteinZiel['75bis95']} g bei {gewichtLabel['75bis95']}, rund {proteinZiel.ueber95} g bei {gewichtLabel.ueber95}.</li>
+        <li><strong>Portionen nach Appetit.</strong> Ist der Appetit noch klein, sind die Hauptmahlzeiten kleiner und es gibt zwei bis vier proteinreiche Zwischenmahlzeiten. Ist er wieder normal, reichen drei Mahlzeiten und bis zu zwei kleine dazwischen.</li>
+        <li><strong>Ballaststoffe und Trinken.</strong> Hülsenfrüchte, Haferflocken und Vollkorn bringen dich in Richtung der 30 g Ballaststoffe, die die DGE empfiehlt.<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> Für Flüssigkeit nennen Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten zwei bis drei Liter am Tag.<Fn n={fn('almandoz2024')} id="almandoz2024" /></li>
+        <li><strong>Keine Kalorienvorgabe.</strong> Der Plan steuert Protein, Ballaststoffe und Portionsgröße. Die Proteinwerte sind gerundete Durchschnittswerte aus dem Bundeslebensmittelschlüssel.<Fn n={fn('bls')} id="bls" /></li>
+      </ul>
+      <p>Ein allgemeiner Beispielplan für gesunde Erwachsene, keine Ernährungstherapie. Die Regeln dahinter stehen im Artikel <a href="/wissen/ernaehrung-nach-abnehmspritze/">Ernährung nach der Abnehmspritze</a>; dein genaues Proteinziel rechnet der <a href="/werkzeuge/proteinrechner/">Proteinrechner</a> aus.</p>
+    </div>
+
+    <div class="mt-12"><Faq items={faq} id="plan-faq" title="Häufige Fragen zum Ernährungsplan" /></div>
+
+    <Footnotes ids={fnIds} />
+  </article>
+
+  <script type="application/json" id="ep-daten" set:html={JSON.stringify(vorschau)}></script>
+  <script is:inline>
+    (() => {
+      const form = document.getElementById('ep-form');
+      const daten = JSON.parse(document.getElementById('ep-daten').textContent || '{}');
+      const slider = document.getElementById('ep-gewicht');
+      const wert = document.getElementById('ep-gewicht-wert');
+      const box = document.getElementById('ep-vorschau');
+      const mail = document.getElementById('ep-mail');
+      const E = ['mischkost', 'vegetarisch', 'vegan'];
+      const A = ['klein', 'normal'];
+      const G = ['unter75', '75bis95', 'ueber95'];
+      const label = { mischkost: 'Mischkost', vegetarisch: 'Vegetarisch', vegan: 'Vegan', klein: 'Appetit noch klein', normal: 'Appetit wieder normal', unter75: 'unter 75 kg', '75bis95': '75 bis 95 kg', ueber95: 'über 95 kg' };
+      const stufe = (kg) => (kg < 75 ? 'unter75' : kg <= 95 ? '75bis95' : 'ueber95');
+      const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+      function update() {
+        const e = form.ernaehrung.value || 'mischkost';
+        const a = form.appetit.value || 'normal';
+        const kg = Number(slider.value);
+        const g = stufe(kg);
+        wert.textContent = kg >= 160 ? '160+ kg' : `${kg} kg`;
+        const id = 'ep' + String(E.indexOf(e) * 6 + A.indexOf(a) * 3 + G.indexOf(g) + 1).padStart(2, '0');
+        const p = daten[id];
+        if (!p) return;
+        box.querySelector('[data-profil]').textContent = `${label[e]} · ${label[a]} · ${label[g]}`;
+        box.querySelector('[data-ziel]').textContent = p.ziel;
+        box.querySelector('[data-tag]').innerHTML = p.tag.map((m) => `<li><span class="font-semibold text-ink">${esc(m.titel)}:</span> ${esc(m.name)} (${esc(m.text)}), ca. ${m.protein} g</li>`).join('');
+        const text = `Hallo Dominik,\n\nich hätte gern den Ernährungsplan, aber ohne Newsletter.\n\nErnährungsform: ${label[e]}\nAppetit: ${label[a].replace('Appetit ', '')}\nGewicht: ${label[g]}\n\n(Plan ${id})\n`;
+        mail.href = `mailto:${mail.textContent.trim()}?subject=${encodeURIComponent('Ernährungsplan ohne Newsletter')}&body=${encodeURIComponent(text)}`;
+      }
+      form.addEventListener('change', update);
+      slider.addEventListener('input', update);
+      update();
+    })();
+  </script>
+</Base>

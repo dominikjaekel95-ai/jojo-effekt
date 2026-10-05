@@ -6,7 +6,7 @@ category: "Muskeln"
 image: /grafiken/training-s-lite.png
 order: 13
 pubDate: 2026-10-01
-updatedDate: 2026-10-02
+updatedDate: 2026-10-05
 keywords: ["krafttraining nach abnehmspritze", "abnehmspritze absetzen sport", "abnehmspritze krafttraining", "training nach abnehmspritze", "krafttraining anfänger abnehmspritze", "abnehmspritze training zuhause", "sport nach absetzen abnehmspritze"]
 sources: ["jensen2024", "sardeli2018", "who2020", "schoenfeld2016", "acsm2009", "leidy2015", "euClaims", "wilding2021dxa"]
 related: ["muskelabbau-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]

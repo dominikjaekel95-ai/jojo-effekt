@@ -6,7 +6,7 @@ category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 4
 pubDate: 2026-09-30
-updatedDate: 2026-10-02
+updatedDate: 2026-10-05
 keywords: ["abnehmspritze protein", "abnehmspritze protein wie viel", "eiweiß abnehmspritze", "wegovy protein", "ozempic eiweiß wie viel", "proteinshake abnehmspritze", "abnehmspritze ernährung eiweiß"]
 sources: ["dgeProtein", "leidy2015", "wilding2021dxa", "euClaims", "sardeli2018", "dgeBallaststoffe"]
 related: ["ernaehrung-nach-abnehmspritze", "supplements-nach-abnehmspritze", "muskelabbau-abnehmspritze"]

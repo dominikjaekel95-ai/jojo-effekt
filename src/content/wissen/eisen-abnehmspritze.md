@@ -5,7 +5,7 @@ description: "Wenig Fleisch, kleine Portionen, Menstruation: Warum Eisen unter d
 category: "Ernährung"
 order: 21
 pubDate: 2026-10-01
-updatedDate: 2026-10-02
+updatedDate: 2026-10-05
 keywords: ["eisen abnehmspritze", "eisenmangel abnehmspritze", "eisen wegovy", "eisen ozempic", "müde abnehmspritze eisen", "ferritin abnehmspritze", "eisen abnehmen frauen"]
 sources: ["nvs2", "dgeReferenzwerte", "euClaims", "bls", "almandoz2024", "bfrHoechstmengen2021"]
 related: ["supplements-nach-abnehmspritze", "vitamin-b12-abnehmspritze", "ernaehrung-nach-abnehmspritze"]

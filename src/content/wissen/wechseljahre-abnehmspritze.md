@@ -4,7 +4,7 @@ metaTitle: "Abnehmspritze in den Wechseljahren: Muskeln, Knochen, Absetzen"
 description: "Wechseljahre: Der Fettzuwachs verdoppelt sich, die Magermasse sinkt. Was das für die Abnehmspritze und die Zeit danach heißt und was bei Frauen ab 50 belegt hilft."
 category: "Muskeln"
 order: 29
-pubDate: 2026-10-02
+pubDate: 2026-10-05
 keywords: ["abnehmspritze wechseljahre", "abnehmspritze absetzen wechseljahre", "abnehmen wechseljahre muskeln erhalten", "muskelabbau wechseljahre abnehmen", "gewichtszunahme wechseljahre bauchfett", "krafttraining wechseljahre abnehmen", "protein wechseljahre muskeln", "wechseljahre knochendichte abnehmen"]
 sources: ["greendale2019", "lovejoy2008", "davis2012", "tchang2025", "yang2025", "wilding2021dxa", "look2025surmount1dxa", "jensen2024", "zibellini2015", "villareal2017", "jensen2024bone", "khalafi2023", "mojtahedi2011", "moore2015", "dgeProtein", "leidy2015", "who2020", "euClaims", "gibson2023", "wu2025"]
 related: ["muskelabbau-abnehmspritze", "krafttraining-nach-abnehmspritze", "protein-abnehmspritze"]

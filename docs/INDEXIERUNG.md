@@ -61,6 +61,7 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/kalorienbedarf-nach-abnehmspritze/ | neuer Artikel: Kalorienbedarf und Grundumsatz nach dem Absetzen | 2026-10-04 | offen |
 | https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | Grafik Zeitverlauf ergänzt | 2026-10-01 | indexiert (geprüft 2026-10-04, letztes Crawling 04.10.) |
 | https://nachderspritze.de/wissen/mounjaro-absetzen/ | Grafik Halbwertszeiten ergänzt | 2026-10-01 | angemeldet 2026-10-02 |
+| https://nachderspritze.de/wissen/wechseljahre-abnehmspritze/ | neuer Artikel: Wechseljahre und Abnehmspritze (Körperzusammensetzung, Wirksamkeit, Knochen, Training, Protein) | 2026-10-05 | offen |
 | https://nachderspritze.de/wissen/ | Grafik Zeitachse im Hub | 2026-10-01 | offen |
 | https://nachderspritze.de/marktradar/ | Preisgrafik ergänzt | 2026-10-01 | indexiert (geprüft 2026-10-03) |
 | https://nachderspritze.de/werkzeuge/ | neue Seite: Übersicht der Werkzeuge | 2026-10-01 | offen |

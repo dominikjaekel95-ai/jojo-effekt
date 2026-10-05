@@ -109,7 +109,8 @@
         { "q": "Bringt Kreatin etwas, und ist es sicher?", "slug": "kreatin-abnehmspritze" },
         { "q": "Wie viel Protein brauche ich, und wann?", "slug": "protein-abnehmspritze" },
         { "q": "Was passiert nach der letzten Dosis, Woche für Woche?", "slug": "abnehmspritze-absetzen" },
-        { "q": "Wie viel Protein bei meinem Gewicht?", "href": "/werkzeuge/proteinrechner/", "label": "Proteinrechner: Tagesziel und Menge pro Mahlzeit" }
+        { "q": "Wie viel Protein bei meinem Gewicht?", "href": "/werkzeuge/proteinrechner/", "label": "Proteinrechner: Tagesziel und Menge pro Mahlzeit" },
+        { "q": "Was ändert sich in den Wechseljahren?", "slug": "wechseljahre-abnehmspritze" }
       ],
       "include": [],
       "glossar": ["fettfreie-masse", "sarkopene-adipositas", "muskelproteinsynthese", "griffkraft", "dxa", "kreatin-monohydrat", "progressive-belastungssteigerung"],

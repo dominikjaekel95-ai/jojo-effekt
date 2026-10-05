@@ -2,11 +2,15 @@
 
 Jede gesundheits- oder nährwertbezogene Aussage auf der Website steht hier mit ihrer Grundlage. Rechtsrahmen: Health-Claims-Verordnung (EG) Nr. 1924/2006, Liste zulässiger Angaben VO (EU) Nr. 432/2012 (ergänzt u. a. durch VO (EU) 2017/672), Heilmittelwerbegesetz (HWG), Lebensmittelinformations-VO (EU) 1178/2011, Nahrungsergänzungsmittel-VO (NemV).
 
-**Grundregel der Seite:** Aussagen **über das Set** nur mit zugelassenem Wortlaut und erfüllten Bedingungen. Aussagen **über Studien und Physiologie** (Wissensbereich) sind redaktionell, jede Zahl mit Quelle, ohne Bezug „das Set bewirkt …“. Verboten überall: „ersetzt/verstärkt die Spritze“, „verhindert den Jojo-Effekt“, Krankheitsbezug als Produktnutzen, „von Ärzten empfohlen“, Medikamentennamen als Werbeaussage.
+**Angebot seit 06.10.2026 (Redesign „Kalk“):** Das 12-Wochen-Programm (zwei Krafteinheiten pro Woche, Proteinziel mit Rezepten, Gewichtskorridor, wöchentlicher Check-in per E-Mail), Ziel der Seite ist die Warteliste. Kein Set-Verkauf, keine Vorbestellung. Optional später „Programm mit Starterpaket“ (Protein, Kreatin). Aussagen **über das Programm** sind beschreibend (was drin ist, wie es abläuft), nie Wirkversprechen; kein Arztbezug beim Programm, beim Starterpaket oder in Werbung (Abschnitt H). Die Health Claims in A und die Mengenangaben in B gelten nur noch für ein Starterpaket, falls es kommt, und im Affiliate-Kontext (Abschnitt E unten); auf der Startseite steht derzeit kein Health Claim.
+
+**Grundregel der Seite:** Aussagen **über das Set** (jetzt: über ein mögliches Starterpaket) nur mit zugelassenem Wortlaut und erfüllten Bedingungen. Aussagen **über Studien und Physiologie** (Wissensbereich) sind redaktionell, jede Zahl mit Quelle, ohne Bezug „das Set bewirkt …“. Verboten überall: „ersetzt/verstärkt die Spritze“, „verhindert den Jojo-Effekt“, Krankheitsbezug als Produktnutzen, „von Ärzten empfohlen“, Medikamentennamen als Werbeaussage.
 
 Status: ✅ zugelassen und Bedingung erfüllt · ⚠️ prüfen (Michi / ggf. Anwalt) · ❌ nicht verwenden
 
 ## A. Zugelassene Health Claims, die die Seite verwendet
+
+> **Stand 06.10.2026: für Starterpaket, falls es kommt.** Das Set wird nicht mehr angeboten; die Spalte „Wo“ beschreibt den früheren Einsatz. A1 bis A3 dürfen für ein Starterpaket mit Protein und Kreatin nur mit erfüllten Bedingungen verwendet werden; in den Artikeln bleiben sie redaktionell wie bisher. Startseite, Programm-Teaser (`ProductTeaser.astro`) und Wartelisten-Formular enthalten keinen Health Claim.
 
 | # | Wortlaut auf der Seite | Wo | Grundlage | Bedingung | Status |
 |---|---|---|---|---|---|
@@ -15,6 +19,8 @@ Status: ✅ zugelassen und Bedingung erfüllt · ⚠️ prüfen (Michi / ggf. An
 | A3 | „Die tägliche Einnahme von Kreatin kann die Wirkung von Krafttraining auf die Muskelkraft bei Erwachsenen über 55 Jahren verstärken.“ | **Nur** in den Artikeln Kreatin und Muskelabbau, dort mit Bedingung genannt. **Von der Startseite entfernt.** | VO (EU) 2017/672 | 3 g/Tag **und** Krafttraining ≥ 3×/Woche über mehrere Wochen bei 65–75 % 1RM; Hinweis an Verbraucher darüber; nur für Lebensmittel, die sich an Erwachsene > 55 mit regelmäßigem Krafttraining richten. **Das Programm sieht 2×/Woche vor → Bedingung für eine Produktaussage nicht erfüllt.** Deshalb nicht produktbezogen verwenden. Option: 3×-Variante im Programm anbieten und Zielgruppenhinweis ergänzen. | ⚠️ nur redaktionell |
 
 ## B. Nährwertbezogene Angaben (VO 1924/2006, Anhang)
+
+> **Stand 06.10.2026: für Starterpaket, falls es kommt.** B1 und B3 nur, wenn ein Starterpaket die Mengen tatsächlich liefert; B2 (Ballaststoff-Stick) entfällt, ein Ballaststoff ist im Starterpaket nicht geplant.
 
 | # | Aussage | Wo | Grundlage | Status |
 |---|---|---|---|---|
@@ -71,7 +77,7 @@ Status: ✅ zugelassen und Bedingung erfüllt · ⚠️ prüfen (Michi / ggf. An
 | # | Aussage | Wo | Einschätzung | Status |
 |---|---|---|---|---|
 | D1 | Überschrift „Nach der Spritze: Muskeln behalten, Gewicht halten.“ | Hero, Title, OG-Bild | „Gewicht halten“ beschreibt das Ziel der Nutzer, nicht eine Wirkung des Sets; kein Wirkstoffbezug. Trotzdem Bezug zu „Gewichtskontrolle“ (Art. 13 HCVO). Alternative ohne Gewichtsbezug: „Nach der Spritze: Muskeln behalten. Dranbleiben.“ (Variante B/C im Code als Kommentar). | ⚠️ |
-| D2 | „Vier Bausteine, ein Ziel: das Erreichte halten.“ | Set-Überschrift | Wie D1. | ⚠️ |
+| D2 | „Vier Bausteine, ein Ziel: das Erreichte halten.“ | Set-Überschrift (seit 06.10.2026 nicht mehr verwendet) | Wie D1. | ⚠️ |
 | D3 | „Der Stick schließt die Lücke.“ (Protein) | Set-Karte | Bezieht sich auf die Proteinmenge (faktisch 20 g), nicht auf eine Wirkung. | ✅ |
 | D4 | „Wirkt nur zusammen mit Krafttraining“ (Kreatin) | Set-Karte | Konsistent mit Claim-Bedingung; keine Zusatzwirkung behauptet. | ✅ |
 | D5 | „Das Set liefert Protein, Ballaststoffe und Kreatin und begleitet dich durch zwei Krafteinheiten pro Woche.“ | Problem-Sektion, Artikel-Fußzeilen | Beschreibt Inhalt, keine Wirkung. Frühere Formulierung „Genau dafür ist das Set“ wurde entfernt (implizierter Nutzen gegen Regain). | ✅ |
@@ -81,7 +87,12 @@ Status: ✅ zugelassen und Bedingung erfüllt · ⚠️ prüfen (Michi / ggf. An
 | D9 | „Sättigung“ / „Verdauung“ für den Ballaststoff-Stick | – | Kein zugelassener allgemeiner Ballaststoff-Claim für Sättigung. Nicht verwendet. Möglich wären spezifische Claims (z. B. Glucomannan 3 g/Tag → Gewichtsverlust im Rahmen kalorienarmer Ernährung, mit Warnhinweis Erstickungsgefahr; Weizenkleie 10 g/Tag → Darmpassage) – hängt von der Rezeptur ab. | ❌ bis Rezeptur steht |
 | D11 | Markenseiten „Wegovy absetzen“, „Ozempic absetzen“, „Mounjaro absetzen“ | /wissen/ | Rein informativ: Fachinformation, Zulassungsstudien, Absetz-Studien, Pflichtsatz oben und unten, Markeninhaber genannt, keine Bewertung der Präparate, keine Bezugsquelle, keine Absetz-Anleitung. SURMOUNT-5-Vergleich als Studienzitat. Kein Produkt-Claim auf diesen Seiten außer der Standard-Produktbox. | ✅ (HWG § 10: keine Publikumswerbung für Rx-Arzneimittel, da keine Werbung) |
 | D12 | Erfahrungsberichte-Seite (Entwurf, draft: true) | /wissen/ (nicht gebaut) | Geht erst live mit ≥ 5 echten, eingewilligten, anonymisierten Berichten; kein Health Claim in Zitaten, keine Dosierungs- oder Absetz-Empfehlungen. Regeln stehen als Kommentar in der Datei. | ⚠️ bis Berichte vorliegen |
-| D10 | „Für wen nicht“: Schwangere, < 18, Nierenerkrankung, Schluckbeschwerden, Essstörung | Für-wen, Artikel | Liste kommt von Michi; Schluckbeschwerden wegen Ballaststoff-Warnhinweis ergänzt. | ⚠️ Michi bestätigt |
+| D10 | „Für wen nicht“: Schwangere, Stillende, < 18, Nierenerkrankung (Proteinziel nur nach Rücksprache), Essstörung | Für-wen (Startseite), Artikel | Seit 06.10.2026 ohne Schluckbeschwerden: Der Hinweis gehörte zum Ballaststoff-Stick des Sets, das Programm enthält keinen. Kommt ein Starterpaket mit Ballaststoff, wieder ergänzen. | ⚠️ bestätigen |
+
+| D13 | Programm-Beschreibung: „Zwei Krafteinheiten pro Woche à 30 Minuten“, „Dein Tagesziel in Gramm und Rezepte für kleine Portionen“, „Ein Gewichtskorridor statt Kalorienzählen“, „Ein Check-in pro Woche per E-Mail … Orientierung, keine medizinische Beratung“ | Startseite, Programm-Teaser, FAQ | Beschreibt Inhalt und Ablauf, keine Wirkung. Zahlen zu Training und Protein stehen getrennt davon als Studienaussagen mit Quelle (C6–C10). | ✅ |
+| D14 | „Was wir nicht sagen: dass das Programm die Spritze ersetzt oder den Jojo-Effekt verhindert. Das kann kein Programm versprechen.“ | Startseite (Programm), FAQ | Nachfolger von D6 für das Programm; Negativ-Abgrenzung, bewusst prominent. | ✅ |
+| D15 | Preis nur als Rahmen: „Basis-Programm geplant unter 129 €“ | Startseite (Warteliste), Programm-Teaser, FAQ, Danke-Seite | Keine Stufen ausformuliert, kein Countdown, keine Knappheit, keine Rabatt-Optik, **kein Vergleich mit den Kosten der Spritze** (früherer Set-Vergleich im Marktradar entfernt). | ✅ |
+| D16 | Wartelisten-Häkchen „Ich hätte Interesse an einem Starterpaket mit Protein und Kreatin. Freiwillig, ohne Verpflichtung.“ | Wartelisten-Formular | Interessenabfrage ohne Wirkaussage; keine Health Claims neben dem Häkchen. | ✅ |
 
 ## E. Nicht verwendet (bewusst) 
 
@@ -123,3 +134,15 @@ Register: `src/data/affiliate.ts`, Komponente `src/components/AffiliateLinks.ast
 | E6 | Keine Marken-, Arzt- oder Medikamentennennung neben den Produkten; „Beispiele, keine Empfehlung einer Marke“ | alle Listen | HCVO Art. 12 lit. c (keine Empfehlung durch Ärzte); HWG § 11 | ✅ |
 | E7 | Links nur auf der Website – nicht in E-Mails, Tally-Benachrichtigungen, PDFs oder Social-Posts | Prozessregel | Amazon-Teilnahmevereinbarung (keine Offline-/E-Mail-Nutzung) | ✅ Regel |
 
+## H. Absender und Ärzte (seit 06.10.2026, rechtlich abgestimmt)
+
+- Absender überall: „Ein Projekt von Dominik Jäkel, Berlin“, mit Namen, ohne Foto.
+- Ärzte **nur anonym** und **nur wörtlich mit diesem Satz** (in `src/data/site.ts` als `medicalTeamSentence`):
+  „Bei medizinischen Fragen berät uns ein Arzt. Die Inhalte bleiben allgemeine Information und ersetzen keine ärztliche Beratung.“
+- Erlaubte Orte: Über-Seite, AuthorBox bzw. Artikelfuß, Footer. Sonst nirgends.
+- Nie beim Programm, beim Starterpaket, im Wartelisten-Formular, auf der Danke-Seite oder in Werbung (Anzeigen, Newsletter-Werbung, Affiliate-Listen; vgl. E6). Keine Namen, keine Klinik, kein Hinweis auf Publikationen.
+- Keine andere Formulierung: nicht „Ärztinnen und Ärzte aus unserem Team …“, nicht „gegengelesen“, nie „ärztlich geprüft“, „ärztlich empfohlen“, „ärztlich betreut“, „von Ärzten empfohlen“ (siehe E).
+- Der Satz ersetzt die Regel „kein fachlich geprüft“ **nicht**: „fachlich geprüft“ bleibt verboten, solange `reviewer` in `src/data/site.ts` `null` ist (check:text prüft das).
+- Der Pflichtsatz D7 („Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.“) bleibt unverändert und ist kein Arztbezug im Sinne dieser Regel.
+
+Prüfprotokoll-Ergänzung 06.10.2026 (Claude Code, Redesign „Kalk“ Stufe 1): Startseite, Programm-Teaser, Danke-Seite, Kopf-Newsletter und Footer gegen A–H geprüft. Set-Claims aus Startseite, FAQ und Produktbox entfernt; Arztbezug im Kopf-Newsletter („unter Beratung erfahrener Mediziner“) entfernt; Footer mit dem Satz aus H. Offen: Über-Seite (Text unverändert, Vorschlag folgt separat), AuthorBox, ältere Artikel-Fußzeilen mit Set-Bezug.

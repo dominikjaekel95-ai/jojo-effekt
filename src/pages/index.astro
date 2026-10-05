@@ -537,6 +537,13 @@ const jsonLd: Record<string, unknown>[] = [];
     position: static;
     grid-column: 1 / -1;
   }
+  @media (min-width: 901px) {
+    :global(html.rm) .chart, :global(html:not(.js)) .chart {
+      position: sticky;
+      top: 5.5rem;
+      align-self: start;
+    }
+  }
 
   /* ---------- Abschnitte ---------- */
   .sec {

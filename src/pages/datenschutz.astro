@@ -2,10 +2,10 @@
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
 ---
-<Base title="Datenschutzerklärung" description="Welche Daten Nach der Spritze verarbeitet: Hosting bei Vercel, Vorbestell-Formular bei Tally, Statistik mit Plausible – ohne Cookies." path="/datenschutz/" noindex>
+<Base title="Datenschutzerklärung" description="Welche Daten Nach der Spritze verarbeitet: Hosting bei Vercel, Warteliste und Newsletter über MailerLite, Formulare bei Tally, Statistik mit Plausible, ohne Cookies." path="/datenschutz/" noindex>
   <section class="container-narrow py-14">
     <h1 class="h1 !text-4xl">Datenschutzerklärung</h1>
-    <p class="mt-3 text-sm text-ink-3">Stand: 2. Oktober 2026</p>
+    <p class="mt-3 text-sm text-ink-3">Stand: 6. Oktober 2026</p>
     <div class="prose-site mt-6">
       <h2>1. Verantwortlicher</h2>
       <p>
@@ -15,7 +15,7 @@ import { site } from '../data/site';
       <h2>2. Das Wichtigste in Kürze</h2>
       <ul>
         <li>Diese Seite setzt <strong>keine Cookies</strong> und nutzt keine Tracking-Dienste mit Profilbildung. Deshalb gibt es kein Cookie-Banner.</li>
-        <li>Wir verarbeiten deine E-Mail-Adresse nur, wenn du dich selbst in die Vorbestell-Liste einträgst, uns einen Erfahrungsbericht schickst, die Checkliste anforderst oder den Newsletter ankreuzt.</li>
+        <li>Wir verarbeiten deine E-Mail-Adresse nur, wenn du dich selbst auf die Warteliste setzt, uns einen Erfahrungsbericht schickst, die Checkliste oder den Ernährungsplan anforderst oder den Newsletter bestellst.</li>
         <li>Alle eingesetzten Dienstleister verarbeiten Daten in der EU oder unter EU-Standardvertragsklauseln.</li>
       </ul>
 
@@ -29,19 +29,26 @@ import { site } from '../data/site';
         kurzer Zeit gelöscht.
       </p>
 
-      <h2>4. Vorbestell-Formular (Tally)</h2>
+      <h2>4. Warteliste für das 12-Wochen-Programm</h2>
       <p>
-        Das Formular für die Vorbestell-Liste wird von Tally BV, Sint-Baafsplein 2, 9000 Gent, Belgien, bereitgestellt und
-        als eingebetteter Rahmen (iframe) geladen. Beim Laden des Formulars wird deine IP-Adresse an Tally übermittelt. Wenn
-        du das Formular absendest, speichert Tally in unserem Auftrag die eingegebenen Daten: E-Mail-Adresse, deine Angabe
-        zum Therapiestatus, deine Angabe zur Zahlungsbereitschaft, optional das Präparat, optional deinen Freitext und optional dein Kreuz beim Newsletter (Abschnitt 4c).
+        Auf der Startseite kannst du dich mit deiner E-Mail-Adresse auf die Warteliste für das geplante 12-Wochen-Programm setzen.
+        Unsere Website übermittelt deine E-Mail-Adresse, den Zeitpunkt, die Herkunft „Warteliste“ und, falls du das Kästchen
+        ankreuzt, dein Interesse an einem Starterpaket direkt an unseren Versanddienst {site.newsletter.provider?.name ?? 'für E-Mails'} (Abschnitt 4c). <strong>Double-Opt-in:</strong>
+        Du bekommst zuerst eine Bestätigungs-Mail; erst nach dem Klick auf den Link stehst du auf der
+        Liste.{site.waitlist.ownGroup ? ' Den Newsletter bekommst du nur, wenn du ihn im Formular zusätzlich ankreuzt.' : ' Mit derselben Einwilligung bestellst du auch den Newsletter (Abschnitt 4c); das Formular nennt beides ausdrücklich.'}
       </p>
       <p>
-        <strong>Zweck:</strong> Erfassung des Interesses an dem geplanten Set und Information über Produktionsstart, Preis und
-        Bestellmöglichkeit. <strong>Rechtsgrundlage:</strong> deine Einwilligung, Art. 6 Abs. 1 lit. a DSGVO. Wir schreiben
-        dir nur, wenn es Neuigkeiten zum Set gibt. <strong>Widerruf:</strong> jederzeit per E-Mail an {site.email}; wir löschen deine Daten dann umgehend. <strong>Speicherdauer:</strong> bis zum Widerruf,
-        spätestens 12 Monate nach Abschluss des Projekts. Mit Tally besteht ein Auftragsverarbeitungsvertrag; Tally hostet
-        in der EU.
+        <strong>Zweck:</strong> Information über Start, Preis und Ablauf des Programms. <strong>Rechtsgrundlage:</strong> deine
+        Einwilligung, Art. 6 Abs. 1 lit. a DSGVO. <strong>Widerruf:</strong> jederzeit über den Abmeldelink in jeder Mail oder per
+        E-Mail an {site.email}; wir löschen deine Daten dann umgehend. <strong>Speicherdauer:</strong> bis zum Widerruf, spätestens
+        12 Monate nach Abschluss des Projekts.
+      </p>
+      <p>
+        <strong>Frühere Vorbestell-Liste (Tally):</strong> Bis Oktober 2026 lief die Vorbestellung für ein geplantes Set über ein
+        eingebettetes Formular von Tally BV, Sint-Baafsplein 2, 9000 Gent, Belgien. Dort gespeichert sind E-Mail-Adresse, Angaben
+        zum Therapiestatus und zur Zahlungsbereitschaft, optional Präparat, Freitext und das Kreuz beim Newsletter. Für diese
+        Einträge gelten Zweck, Rechtsgrundlage (Einwilligung) und Speicherdauer wie bei der Eintragung angegeben; Widerruf und
+        Löschung jederzeit per E-Mail an {site.email}. Mit Tally besteht ein Auftragsverarbeitungsvertrag; Tally hostet in der EU.
       </p>
 
       <h2>4a. Erfahrungsberichte (Tally)</h2>
@@ -79,12 +86,13 @@ import { site } from '../data/site';
 
       <h2>4c. Newsletter</h2>
       <p>
-        In den Formularen für Vorbestellung, Erfahrungsberichte und Checkliste gibt es ein optionales Kästchen „Newsletter“. Wenn du
-        es ankreuzt, speichert Tally in unserem Auftrag deine E-Mail-Adresse, den Zeitpunkt und den Wortlaut der Einwilligung.
-        Außerdem gibt es im Kopf jeder Seite ein Newsletter-Formular; dort eingetragene Adressen übermittelt unsere Website direkt
-        an MailerLite, zusammen mit dem Zeitpunkt und der Herkunft „Website“. Der
+        In den Tally-Formularen für Erfahrungsberichte und Checkliste (bis Oktober 2026 auch Vorbestellung) gibt es ein optionales
+        Kästchen „Newsletter“. Wenn du es ankreuzt, speichert Tally in unserem Auftrag deine E-Mail-Adresse, den Zeitpunkt und den
+        Wortlaut der Einwilligung. Außerdem gibt es im Kopf jeder Seite ein Newsletter-Formular und auf der Startseite das
+        Wartelisten-Formular (Abschnitt 4); dort eingetragene Adressen übermittelt unsere Website direkt an MailerLite, zusammen mit
+        dem Zeitpunkt und der Herkunft („Website“ bzw. „Warteliste“). Der
         Newsletter erscheint {site.newsletter.cadence} und enthält neue Artikel, Studien und Entwicklungen zur Zeit nach der
-        Abnehmspritze, gelegentlich auch Neuigkeiten zum Set. <strong>Double-Opt-in:</strong> Vor der ersten Ausgabe bekommst du eine
+        Abnehmspritze, gelegentlich auch Neuigkeiten zum Programm. <strong>Double-Opt-in:</strong> Vor der ersten Ausgabe bekommst du eine
         Bestätigungs-Mail mit einem Link; erst nach dem Klick bist du angemeldet. Zeitpunkt und IP-Adresse der Bestätigung werden
         als Nachweis protokolliert. <strong>Rechtsgrundlage:</strong> deine Einwilligung,
         Art. 6 Abs. 1 lit. a DSGVO und § 7 Abs. 2 Nr. 2 UWG. <strong>Widerruf:</strong> jederzeit über den Abmeldelink in jeder Mail
@@ -122,7 +130,7 @@ import { site } from '../data/site';
         Wir nutzen Plausible Analytics (Plausible Insights OÜ, Västriku tn 2, 50403 Tartu, Estland), gehostet in der EU.
         Plausible setzt keine Cookies und speichert keine personenbezogenen Daten. Die IP-Adresse wird nur flüchtig zur
         Bildung eines täglich wechselnden, nicht rückführbaren Kennzeichens verwendet und nicht gespeichert. Erfasst werden
-        aufgerufene Seiten, Verweisquelle, Gerätetyp, Land und Klicks auf den Button „Vorbestellen“. Rechtsgrundlage ist Art.
+        aufgerufene Seiten, Verweisquelle, Gerätetyp, Land und Klicks auf Buttons wie „Warteliste“ (ohne Formularinhalte). Rechtsgrundlage ist Art.
         6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, die Nutzung der Seite zu verstehen). Ein Widerspruch ist nicht nötig,
         weil keine personenbezogenen Daten verarbeitet werden; Details unter <a href="https://plausible.io/data-policy" rel="noopener" target="_blank">plausible.io/data-policy</a>.
       </p>

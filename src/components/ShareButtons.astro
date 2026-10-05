@@ -8,11 +8,11 @@ import { site } from '../data/site';
 interface Props { position: string; class?: string }
 const { position, class: cls = '' } = Astro.props;
 const url = `${site.url}/?utm_source=empfehlung&utm_medium=teilen&utm_campaign=${position}`;
-const text = `Ich habe mich für ein 12-Wochen-Set für die Zeit nach der Abnehmspritze vorgemerkt: Protein, Ballaststoffe, Kreatin und ein Trainingsplan, mit Studien statt Versprechen. Falls du auch gerade absetzt: ${url}`;
+const text = `Ich stehe auf der Warteliste für ein 12-Wochen-Programm für die Zeit nach der Abnehmspritze: Krafttraining, genug Protein und ein Plan für die Waage, mit Studien statt Versprechen. Falls du auch gerade absetzt: ${url}`;
 const wa = `https://wa.me/?text=${encodeURIComponent(text)}`;
 const mail = `mailto:?subject=${encodeURIComponent('Für die Zeit nach der Abnehmspritze')}&body=${encodeURIComponent(text)}`;
 const li = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
-const btn = 'inline-flex items-center gap-2 rounded-lg border border-line bg-white px-4 py-2 text-sm font-semibold text-ink no-underline hover:border-moss hover:text-moss';
+const btn = 'inline-flex min-h-11 items-center gap-2 rounded-full border border-[#b4b6af] bg-transparent px-4 py-2 text-sm font-medium text-ink no-underline hover:border-ink';
 ---
 <div class={`flex flex-wrap items-center gap-3 ${cls}`}>
   <a href={wa} target="_blank" rel="noopener" class={`${btn} plausible-event-name=Teilen+Klick plausible-event-kanal=whatsapp`}>WhatsApp</a>

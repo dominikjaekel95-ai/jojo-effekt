@@ -82,8 +82,13 @@ export function groupsFor(formId) {
   return groups;
 }
 
-/** Adresse anlegen oder den Gruppen hinzufügen. Gibt ein Ergebnisobjekt für das Log zurück. */
-export async function subscribe({ email, source }, groups) {
+/**
+ * Adresse anlegen oder den Gruppen hinzufügen. Gibt ein Ergebnisobjekt für das Log zurück.
+ * `fields` (optional) sind zusätzliche MailerLite-Felder, z. B. { starterpaket: 'ja' } aus dem Wartelisten-Formular
+ * (api/anmeldung.js); bei bestehenden Adressen werden sie ergänzt, ein Fehler dabei hält die Anmeldung nicht auf.
+ */
+export async function subscribe({ email, source, fields = {} }, groups) {
+  const extra = fields && typeof fields === 'object' ? fields : {};
   const lookup = await mailerlite(`/subscribers/${encodeURIComponent(email)}`);
   if (lookup.status === 200) {
     const { data } = await lookup.json();
@@ -94,6 +99,9 @@ export async function subscribe({ email, source }, groups) {
         if (!add.ok) return { outcome: 'fehler', status: add.status };
         status = add.status;
       }
+      if (Object.keys(extra).length) {
+        await mailerlite(`/subscribers/${data.id}`, { method: 'PUT', body: JSON.stringify({ fields: extra }) }).catch(() => null);
+      }
       return { outcome: 'gruppe', status };
     }
     // unsubscribed, bounced, junk: nicht automatisch reaktivieren
@@ -101,8 +109,13 @@ export async function subscribe({ email, source }, groups) {
   }
   if (lookup.status !== 404) return { outcome: 'fehler', status: lookup.status };
 
-  const body = { email, status: 'unconfirmed', groups, fields: { quelle: source } };
+  const body = { email, status: 'unconfirmed', groups, fields: { quelle: source, ...extra } };
   let create = await mailerlite('/subscribers', { method: 'POST', body: JSON.stringify(body) });
+  if (create.status === 422 && Object.keys(extra).length) {
+    // Ein Zusatzfeld (z. B. `starterpaket`) existiert im Konto nicht: ohne Zusatzfelder, aber mit `quelle` anlegen
+    body.fields = { quelle: source };
+    create = await mailerlite('/subscribers', { method: 'POST', body: JSON.stringify(body) });
+  }
   if (create.status === 422) {
     // Feld `quelle` existiert im Konto nicht: ohne Feld anlegen, damit die Anmeldung nicht verloren geht
     delete body.fields;

@@ -1,20 +1,200 @@
 ---
 /**
- * Startseiten-Band „Kostenloser Ernährungsplan“ direkt nach dem Hero, Link auf /ernaehrungsplan/.
+ * Startseiten-Abschnitt „Kostenloser Ernährungsplan“, Link auf /ernaehrungsplan/. Zeigt einen echten Beispieltag aus
+ * src/data/ernaehrungsplan.ts (Mischkost, kleiner Appetit, 75 bis 95 kg): Mahlzeiten und Protein, das sich beim
+ * Scrollen bis zum Tagesziel aufbaut. Proteinwerte aus dem BLS (Quelle bls), Tagesziel 1,2 g/kg (leidy2015).
  * Keine Markennamen von Arzneimitteln (Startseite, check:text), kein Produktbezug.
  */
+import Fn from './Fn.astro';
+import { erstellePlan, gewichtLabel } from '../data/ernaehrungsplan';
+interface Props { fnBls: number; fnLeidy: number }
+const { fnBls, fnLeidy } = Astro.props;
 const href = '/ernaehrungsplan/';
+const plan = erstellePlan('mischkost', 'klein', '75bis95');
+const tag = plan.tage[0];
+const max = Math.max(plan.ziel, tag.protein) * 1.08;
+const pct = (g: number) => Math.round((g / max) * 1000) / 10;
+let acc = 0;
+const segs = tag.mahlzeiten.map((mz) => {
+  const s = { left: pct(acc), width: pct(mz.protein) };
+  acc += mz.protein;
+  return s;
+});
 ---
-<section class="border-b border-line bg-moss-light" aria-labelledby="ep-teaser-h">
-  <div class="container-wide grid items-center gap-6 py-10 md:grid-cols-[1.4fr_1fr]">
+<section id="ernaehrungsplan" class="ep" aria-labelledby="ep-h">
+  <div class="container-wide ep-grid">
     <div>
-      <p class="eyebrow">Kostenlos · als PDF per Mail</p>
-      <h2 id="ep-teaser-h" class="h2 mt-2">Dein kostenloser Ernährungsplan für die Zeit nach der Spritze</h2>
-      <p class="mt-3 max-w-xl text-ink-2">Drei Fragen, sieben Tage: Mahlzeiten mit Mengen, genug Protein für deinen Gewichtsbereich, Einkaufsliste und eine Tabelle zum Tauschen. Passend zu Ernährungsform und Appetit.</p>
+      <p class="eyebrow" data-rv>Kostenlos, als PDF per Mail</p>
+      <h2 id="ep-h" class="ep-h2" data-rv>Dein Ernährungsplan für die Zeit nach der Spritze.</h2>
+      <p class="ep-intro" data-rv style="--i:1">Drei Fragen, sieben Tage: Mahlzeiten mit Mengen, genug Protein für deinen Gewichtsbereich, Einkaufsliste und eine Tabelle zum Tauschen. Passend zu Ernährungsform und Appetit.</p>
+      <div class="ep-cta" data-rv style="--i:2">
+        <a href={href} class="btn-primary plausible-event-name=Ernaehrungsplan+Teaser">Plan zusammenstellen</a>
+        <span class="ep-min">Dauert eine Minute.</span>
+      </div>
     </div>
-    <div class="flex flex-col items-start gap-3 md:items-end">
-      <a href={href} class="btn-primary plausible-event-name=Ernaehrungsplan+Teaser">Plan zusammenstellen</a>
-      <p class="text-sm text-ink-3">Dauert eine Minute.</p>
-    </div>
+    <figure class="ep-day" data-ep>
+      <figcaption class="ep-cap">Beispiel aus dem Plan: Tag 1, Mischkost, kleiner Appetit, {gewichtLabel[plan.gewicht]}</figcaption>
+      <div class="ep-bar" role="img" aria-label={`Protein an Tag 1: ${tag.protein} Gramm aus ${tag.mahlzeiten.length} kleinen Mahlzeiten, Tagesziel ${plan.ziel} Gramm.`}>
+        {segs.map((s, i) => (<b style={`left:${s.left}%;width:${s.width}%;--i:${i}`}></b>))}
+        <i class="ep-ziel" style={`left:${pct(plan.ziel)}%`}><span>Ziel {plan.ziel} g</span></i>
+      </div>
+      <ol class="ep-list">
+        {tag.mahlzeiten.map((mz, i) => (
+          <li style={`--i:${i}`}><span class="ep-slot">{mz.titel}</span><span class="ep-name">{mz.name}</span><span class="ep-g num">{mz.protein} g</span></li>
+        ))}
+      </ol>
+      <p class="ep-sum"><span>Protein an diesem Tag</span><span class="num"><strong>{tag.protein} g</strong> von {plan.ziel} g</span></p>
+      <p class="ep-src">Proteinwerte aus dem Bundeslebensmittelschlüssel, gerundet.<Fn n={fnBls} id="bls" /> Tagesziel 1,2 g pro kg Körpergewicht.<Fn n={fnLeidy} id="leidy2015" /></p>
+    </figure>
   </div>
 </section>
+
+<style>
+  .ep {
+    background: var(--color-paper-2);
+    padding: clamp(5rem, 12vh, 9rem) 0;
+  }
+  .ep-grid {
+    display: grid;
+    gap: 3.5rem 6rem;
+    align-items: center;
+  }
+  .ep-h2 {
+    margin-top: 0.75rem;
+    font-size: clamp(2.125rem, 4.4vw, 4.25rem);
+    line-height: 1.02;
+  }
+  .ep-intro {
+    margin-top: 1.5rem;
+    font-size: clamp(1.0625rem, 1.5vw, 1.3125rem);
+    line-height: 1.5;
+    color: var(--color-ink-2);
+    max-width: 32em;
+  }
+  .ep-cta {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+  }
+  .ep-cta .btn-primary {
+    min-height: 3.25rem;
+    padding-inline: 1.75rem;
+  }
+  .ep-min {
+    font-size: 0.9375rem;
+    color: var(--color-ink-3);
+  }
+  .ep-day {
+    margin: 0;
+  }
+  .ep-cap {
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
+  .ep-bar {
+    position: relative;
+    height: 0.875rem;
+    margin-top: 2.75rem;
+    border-radius: 999px;
+    background: var(--color-paper);
+  }
+  .ep-bar b {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: var(--color-moss);
+    border-right: 2px solid var(--color-paper-2);
+    transform-origin: left;
+    transition: transform 0.7s var(--ease), opacity 0.4s;
+    transition-delay: calc(var(--i, 0) * 260ms);
+  }
+  .ep-bar b:first-child {
+    border-radius: 999px 0 0 999px;
+  }
+  .ep-ziel {
+    position: absolute;
+    top: -0.5rem;
+    bottom: -0.5rem;
+    width: 2px;
+    margin-left: -1px;
+    background: var(--color-ink);
+  }
+  .ep-ziel span {
+    position: absolute;
+    bottom: calc(100% + 0.35rem);
+    right: 0;
+    font-style: normal;
+    font-size: 0.8125rem;
+    font-weight: 560;
+    white-space: nowrap;
+    color: var(--color-ink);
+    box-shadow: inset 0 -0.4em 0 var(--color-amber);
+    padding: 0 2px;
+  }
+  .ep-list {
+    list-style: none;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-line);
+  }
+  .ep-list li {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr) auto;
+    gap: 0.25rem 1rem;
+    align-items: baseline;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--color-line);
+    font-size: 0.9375rem;
+    transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+    transition-delay: calc(var(--i, 0) * 260ms);
+  }
+  .ep-slot {
+    color: var(--color-ink-3);
+  }
+  .ep-name {
+    color: var(--color-ink);
+  }
+  .ep-g {
+    color: var(--color-moss);
+    font-weight: 560;
+  }
+  .ep-sum {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.9rem;
+    font-size: 0.9375rem;
+    color: var(--color-ink-2);
+  }
+  .ep-sum strong {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+  .ep-src {
+    margin-top: 1rem;
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+  }
+  :global(html.js:not(.rm)) .ep-day:not(.in) .ep-bar b {
+    transform: scaleX(0);
+  }
+  :global(html.js:not(.rm)) .ep-day:not(.in) .ep-list li {
+    opacity: 0.25;
+  }
+  @media (min-width: 900px) {
+    .ep-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+  @media (max-width: 520px) {
+    .ep-list li {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+    .ep-slot {
+      grid-column: 1 / -1;
+      font-size: 0.8125rem;
+    }
+  }
+</style>

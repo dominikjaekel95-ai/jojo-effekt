@@ -1,5 +1,5 @@
 {
-  "stand": "2026-09-30",
+  "stand": "2026-10-05",
   "status": "ok",
   "quelle": {
     "name": "BfArM / PharmNet.Bund, Lieferengpassmeldungen",
@@ -32,6 +32,10 @@
     }
   ],
   "log": [
+    {
+      "date": "2026-10-05",
+      "text": "Abruf ok. Fundstellen: Semaglutid 0, Tirzepatid 0, Liraglutid 0."
+    },
     {
       "date": "2026-09-30",
       "text": "Abruf ok. Fundstellen: Semaglutid 0, Tirzepatid 0, Liraglutid 0."

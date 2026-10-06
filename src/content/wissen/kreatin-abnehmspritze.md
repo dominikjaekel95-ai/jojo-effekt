@@ -70,7 +70,7 @@ Für Menschen über 55 kommt dazu, dass die zugelassene Angabe zur Muskelkraft g
 
 ## Das mit der Waage
 
-Kreatin zieht Wasser in die Muskelzellen. In den ersten ein bis zwei Wochen steigt das Gewicht deshalb typischerweise um 0,5 bis 2 kg. Das ist kein Fett, es ist Wasser im Muskel – und es bleibt, solange du Kreatin nimmst. Wer nach der Abnehmspritze mit Sorge auf die Waage schaut, sollte das wissen, bevor die Zahl steigt. Praktisch: Starte Kreatin und Training gleichzeitig, akzeptiere den Sprung in Woche 1 bis 2 als neuen Ausgangswert und miss ab dann.
+Kreatin zieht Wasser in die Muskelzellen. In den ersten Wochen, verteilt über etwa vier Wochen, steigt das Gewicht deshalb typischerweise um 0,5 bis 2 kg. Das ist kein Fett, es ist Wasser im Muskel – und es bleibt, solange du Kreatin nimmst. Wer nach der Abnehmspritze mit Sorge auf die Waage schaut, sollte das wissen, bevor die Zahl steigt. Praktisch: Starte Kreatin und Training gleichzeitig, akzeptiere den Anstieg der ersten vier Wochen als neuen Ausgangswert und miss ab dann.
 
 <figure class="my-8">
   <img src="/grafiken/kreatin-speicher-im-muskel.png" alt="Zwei Verläufe des Kreatinspeichers im Muskel aus einer Studie mit 31 Männern, zwischen den Messpunkten schematisch: Mit 3 Gramm Kreatin pro Tag stieg das Gesamtkreatin im Muskel allmählich und lag nach 28 Tagen etwa 20 Prozent über dem Ausgangswert. Mit einer Ladephase von 20 Gramm pro Tag über 6 Tage war derselbe Anstieg von etwa 20 Prozent nach 6 Tagen erreicht; ohne weitere Einnahme lag der Wert 30 Tage nach dem Ende wieder beim Ausgangswert. Mit dem Speicher steigt das Wasser in der Muskelzelle; das zeigt die Waage, Fett ist es nicht." width="1200" height="675" loading="lazy" class="w-full" />

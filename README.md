@@ -12,7 +12,7 @@ Statische Website (Astro 7, Tailwind 4), live unter https://nachderspritze.de. D
 
 ```bash
 npm install
-cp .env.example .env      # optional: SITE_URL und Plausible-Skript-ID (Tally-ID und Theme-Variable werden nicht mehr gelesen)
+cp .env.example .env      # optional: SITE_URL und Plausible-Skript-ID
 npm run dev               # http://localhost:4321
 npm run build             # statischer Build nach dist/
 npm run check             # Typprüfung

@@ -148,6 +148,7 @@ const rechner: Record<string, (root: HTMLElement) => void> = {
     const mz = Number(root.dataset.mahlzeiten ?? 4);
     setzeZahl(root, '[data-p-mlo]', String(Math.round(lo / mz)), false);
     setzeZahl(root, '[data-p-mhi]', String(Math.round(hi / mz)), false);
+    qa(root, '[data-p-schale]').forEach((s) => (s.style.transform = `scaleY(${Math.min(1, hi / mz / 60).toFixed(3)})`));
     const ist = regler(root, 'ist');
     if (ist) {
       const g = Number(ist.value);
@@ -195,6 +196,7 @@ const rechner: Record<string, (root: HTMLElement) => void> = {
     strecke(q(root, '[data-b-eher]'), 0, (tag - 400) / max);
   },
   teller(root) {
+    const de = (n: number, d = 0) => n.toLocaleString('de-DE', { minimumFractionDigits: 0, maximumFractionDigits: d });
     const gruppe = root.getAttribute('data-gruppe');
     const ziel = Number((gruppe && root.getAttribute(`data-ziel-${gruppe}`)) || root.getAttribute('data-ziel') || 1);
     const dec = Number(root.dataset.dec ?? 0);

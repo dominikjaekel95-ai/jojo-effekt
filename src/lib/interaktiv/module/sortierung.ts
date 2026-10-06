@@ -67,7 +67,7 @@ export function sortierung(_a: Attr, ctx: Ctx): string {
     name: 'sortierung',
     titel: 'Zwölf Mittel, nach Belegen sortiert',
     unter: 'Tippe einen Eintrag an, um die Begründung zu sehen',
-    inhalt: `<div class="so-start" data-so-start aria-hidden="true"></div><div class="so-raster">${html}</div>`,
+    inhalt: `<div class="so-buehne"><div class="so-start" data-so-start aria-hidden="true"></div><div class="so-raster">${html}</div></div>`,
     fuss: `Nahrungsergänzungsmittel sind Lebensmittel und werden nicht auf Wirksamkeit geprüft.${f('klartextNem')} Die Einzelheiten mit Dosis und Quellen stehen in der Tabelle unten.`,
   });
 }

@@ -101,7 +101,7 @@
 }
 .ia-z {
   display: inline-block;
-  text-align: right;
+  text-align: left;
 }
 
 /* ============ Steuerung ============ */
@@ -388,7 +388,13 @@
   transition: opacity 0.5s var(--ia-ease);
 }
 .ia-absetzkurve .k-pla {
-  transition: opacity 1s var(--ia-ease) 0.3s;
+  transition: opacity 0.4s var(--ia-ease);
+}
+.ia-absetzkurve .k-pla1 {
+  transition: opacity 0.9s var(--ia-ease) 0.3s;
+}
+.ia-absetzkurve .k-pla2 {
+  transition: opacity 0.9s var(--ia-ease) 1.8s;
 }
 .ia-absetzkurve .k-l1 {
   transition: stroke-dashoffset 1.25s var(--ia-ease) 0.2s;
@@ -428,7 +434,7 @@
 html.ia-an .ia-absetzkurve:not(.ia-in) .k-grid {
   opacity: 0.25;
 }
-html.ia-an .ia-absetzkurve:not(.ia-in) :is(.k-pla, .k-p1, .k-p2, .k-st2, .k-dose, .k-acht, .k-hl) {
+html.ia-an .ia-absetzkurve:not(.ia-in) :is(.k-pla1, .k-pla2, .k-p1, .k-p2, .k-st2, .k-dose, .k-acht, .k-hl) {
   opacity: 0;
 }
 html.ia-an .ia-absetzkurve:not(.ia-in) :is(.k-l1, .k-l2, .k-brace) {
@@ -728,6 +734,46 @@ html.ia-an .z-liste {
     grid-column: 2;
   }
 }
+.z-leiste {
+  display: grid;
+  grid-template-columns: repeat(13, minmax(0, 1fr));
+  gap: 3px;
+}
+.z-leiste i {
+  display: block;
+  height: 14px;
+  border-radius: 2px;
+  background: #c9cac2;
+  transform-origin: 0 50%;
+  transition: transform 0.45s var(--ia-ease), opacity 0.3s var(--ia-ease);
+  transition-delay: calc(var(--i) * 70ms);
+}
+.z-leiste i.z-fenster {
+  background: var(--color-amber);
+}
+.z-leiste i.z-nach {
+  background: var(--color-moss);
+}
+.z-leiste-l {
+  display: grid;
+  grid-template-columns: 2fr 7fr 4fr;
+  gap: 3px;
+  margin: 0.4rem 0 1.2rem;
+  font-size: 0.75rem;
+  color: var(--color-ink-3);
+}
+html.ia-an .ia-zeitachse:not(.ia-in) .z-leiste i {
+  transform: scaleX(0);
+  opacity: 0;
+}
+.z-fenster-satz {
+  margin: -0.4rem 0 1rem !important;
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  background: var(--color-amber-light);
+  font-size: 0.9375rem;
+  color: var(--color-ink);
+}
 .z-datum-satz {
   margin: -0.4rem 0 1rem !important;
   font-size: 0.9375rem;
@@ -944,6 +990,56 @@ html.ia-an .ia-zusammensetzung:not(.ia-in) .zs-c::after {
 .p-ltext {
   margin-top: 0.3rem !important;
   font-weight: 450;
+}
+.p-teller {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.p-schale {
+  flex: 1 1 0;
+  max-width: 7rem;
+  transition: opacity 0.3s var(--ia-ease);
+}
+.p-schale.aus {
+  display: none;
+}
+.p-sch {
+  position: relative;
+  display: block;
+  height: 64px;
+  border-bottom: 1px solid var(--color-ink);
+}
+.p-sch i {
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 0;
+  height: 100%;
+  border-radius: 4px 4px 0 0;
+  background: var(--color-moss);
+  transform-origin: 50% 100%;
+  transition: transform 0.45s var(--ia-ease);
+}
+.p-sch-l {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--color-ink-3);
+  text-align: center;
+}
+.p-sch-l b {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 560;
+  color: var(--color-ink);
+}
+html.ia-an .ia-protein:not(.ia-in) .p-sch {
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+}
+.ia-protein .p-sch {
+  transition: transform 0.7s var(--ia-ease) calc(0.9s + var(--i) * 0.12s);
 }
 .p-lg-band {
   border-top-width: 8px;
@@ -1313,6 +1409,13 @@ html.ia-an .ia-punktfeld:not(.ia-in) .pf-d::after {
   background: var(--color-placebo);
   opacity: 0.7;
   transition: opacity 0.5s var(--ia-ease) 0.2s;
+}
+.vg-pla-ext {
+  opacity: 0.35;
+  border-radius: 0 3px 3px 0;
+}
+.vg-pla:not(.vg-pla-ext) {
+  border-radius: 3px 0 0 3px;
 }
 .vg-wz {
   display: block;
@@ -1911,6 +2014,12 @@ html.ia-an .ia-zonen:not(.ia-in) .zo-marke {
 .be-ticks {
   margin: 0.35rem 0 0 3.2rem;
 }
+@media (max-width: 479px) {
+  .be-ticks span:nth-child(2),
+  .be-ticks span:nth-child(4) {
+    display: none;
+  }
+}
 .be-satz {
   margin-top: 1rem !important;
   font-size: 1rem;
@@ -2048,15 +2157,22 @@ html.ia-an .ia-teller:not(.ia-in) .te-ein {
 }
 
 /* ============ Sortierung ============ */
-.so-start {
+.so-buehne {
   position: relative;
+}
+.so-start {
+  position: absolute;
+  left: 50%;
+  top: 45%;
   width: 0;
   height: 0;
-  margin: 0 auto;
 }
 .so-raster {
   display: grid;
   gap: 1.5rem;
+}
+html.ia-an .ia-sortierung:not(.ia-in) [data-so-item] {
+  opacity: 0;
 }
 @media (min-width: 700px) {
   .so-raster {

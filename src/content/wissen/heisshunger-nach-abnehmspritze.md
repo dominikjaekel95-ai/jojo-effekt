@@ -26,7 +26,7 @@ faq:
 
 Unter der Spritze war Essen eine Nebensache. Ein paar Wochen nach der letzten Dosis ist es plötzlich das Hauptthema: Gedanken ans Essen, Lust auf Süßes und Salziges, ein Hunger, der sich anders anfühlt als vor der Therapie. Das ist kein Charakterfehler, sondern Biologie, und man kann damit umgehen. Hier steht, was passiert und was hilft. Der Gesamtverlauf nach der letzten Dosis steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
-<div data-interaktiv="zeitachse" data-wirkstoffe="semaglutid"></div>
+<div data-interaktiv="zeitachse" data-wirkstoffe="semaglutid" data-fenster="ja"></div>
 
 > **Kurz gesagt:** Heißhunger nach dem Absetzen hat zwei Ursachen: Die Appetitbremse fällt weg, und die Hormone stehen nach Gewichtsverlust auf „Nachfüllen“. Was hilft: Protein zuerst, Volumen, feste Mahlzeiten, Schlaf, keine Flüssigkalorien, Trigger kennen, Krafttraining. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
 

@@ -104,7 +104,7 @@ export function wirkstoffspiegel(a: Attr, ctx: Ctx): string {
     `<div class="ia-stat"><p class="ia-gross"><span class="ia-z" data-ia-zahl${proWahl('x', 'wirkstoff', by(hwzZahl))}>${hwzZahl(start)}</span><small${proWahl('x', 'wirkstoff', by(hwzEinheit))}>${hwzEinheit(start)}</small></p>` +
     `<p class="ia-klein">Halbwertszeit von <span${proWahl('x', 'wirkstoff', by((w) => w.name))}>${start.name}</span>: Danach ist noch die Hälfte im Körper.</p></div>` +
     `<div class="ia-stat"><p class="ia-gross">≈ <span class="ia-z" data-ia-zahl${proWahl('x', 'wirkstoff', by(fuenfZahl))}>${fuenfZahl(start)}</span><small> Tage</small></p>` +
-    `<p class="ia-klein">bis fünf Halbwertszeiten vorbei sind. Dann sind noch etwa 3 % übrig.</p></div>` +
+    `<p class="ia-klein">dauern fünf Halbwertszeiten. Dann ist noch etwa 3\u00a0% übrig.</p></div>` +
     `</div>`;
   const buehne =
     `<div class="ia-buehne s-buehne">` +
@@ -113,7 +113,7 @@ export function wirkstoffspiegel(a: Attr, ctx: Ctx): string {
     `</div>`;
   const rechnen =
     regler(ctx, 'tag', 'Tage nach der letzten Dosis', { min: 0, max: TAGE, step: 1, wert: tag, einheit: 'Tage' }) +
-    `<p class="s-satz"><span data-s-tagtext>${tag === 0 ? 'Am Tag der letzten Dosis' : tag === 1 ? 'Nach einem Tag' : `Nach ${tag} Tagen`}</span> ist rechnerisch noch etwa <strong><span data-s-rest>${restText(rest)}</span> %</strong> des Wirkstoffs im Körper.</p>`;
+    `<p class="s-satz"><span data-s-tagtext>${tag === 0 ? 'Am Tag der letzten Dosis' : tag === 1 ? 'Nach einem Tag' : `Nach ${tag} Tagen`}</span> ist rechnerisch noch etwa <strong><span data-s-rest>${restText(rest)}</span>\u00a0%</strong> des Wirkstoffs im Körper.</p>`;
   return rahmen({
     ctx,
     name: 'wirkstoffspiegel',

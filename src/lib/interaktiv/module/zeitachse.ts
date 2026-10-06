@@ -78,6 +78,9 @@ function absetzen(a: Attr, ctx: Ctx): string {
       ? wahl(ctx, 'datum', 'Letzte Dosis am', XMAS.map((x) => ({ wert: x.wert, label: x.label })), xmasStart.wert, 'z-datum') +
         `<p class="z-datum-satz" aria-live="polite"${proWahl('x', 'datum', Object.fromEntries(XMAS.map((x) => [x.wert, x.satz])))}>${esc(xmasStart.satz)}</p>`
       : '');
+  const fensterSatz = ja(a, 'fenster')
+    ? `<p class="z-fenster-satz">Das Fenster: Der Appetit kommt zurück, bevor die Waage etwas zeigt. In diesen Wochen macht Struktur den Unterschied.</p>`
+    : '';
   const legende =
     `<div class="ia-legende">` +
     `<span><i class="ia-lg z-lg-bar"></i>Wirkstoff im Körper</span>` +
@@ -93,7 +96,7 @@ function absetzen(a: Attr, ctx: Ctx): string {
     titel: xmas ? 'Wo Weihnachten auf der Zeitachse nach der letzten Dosis liegt' : 'Woche für Woche nach der letzten Dosis',
     unter: 'Balken: Anteil des Wirkstoffs, der noch im Körper ist',
     attrs,
-    inhalt: umschalter + `<div class="z-liste" data-ia-scrub>${reihen}</div>` + legende,
+    inhalt: umschalter + fensterSatz + `<div class="z-liste" data-ia-scrub>${reihen}</div>` + legende,
     fuss: `Anteil vereinfacht aus der Halbwertszeit laut Fachinformation gerechnet.${fnAlle} Zunahme laut Meta-Analyse randomisierter Studien.${fnWu} Individuell weicht der Verlauf ab.`,
   });
 }
@@ -130,6 +133,8 @@ function haar(ctx: Ctx): string {
     titel: 'Der Zeitplan des Haarausfalls nach schneller Abnahme',
     unter: 'Telogenes Effluvium, typischer Verlauf in Monaten nach dem Auslöser',
     inhalt:
+      `<div class="z-leiste" aria-hidden="true">${zeilen.map((zl, i) => `<i class="${zl.klasse ?? 'z-ruhe'}" style="--i:${i}"></i>`).join('')}</div>` +
+      `<div class="z-leiste-l" aria-hidden="true"><span>Auslöser</span><span>Ausfall sichtbar</span><span>Nachwachsen</span></div>` +
       `<div class="z-liste" data-ia-scrub>${reihen}</div>` +
       `<div class="ia-legende"><span><i class="ia-lg z-lg-fenster"></i>Ausfall sichtbar</span><span><i class="ia-lg ia-lg-moss"></i>Haare wachsen nach</span></div>`,
     fuss: `Typischer Verlauf laut Übersichtsarbeit; einzelne Verläufe weichen ab.${q} Länger als sechs Monate, fleckig oder mit Müdigkeit und Frieren: ärztlich abklären.`,

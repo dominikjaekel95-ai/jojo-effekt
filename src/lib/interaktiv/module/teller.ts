@@ -4,7 +4,10 @@
  * data-vorlage: magnesium | vitamin-c | omega-3 | b12 | ballaststoffe | protein-lebensmittel | protein-tag-muskeln |
  * protein-tag-ernaehrung.
  */
-import { type Attr, type Ctx, de, esc, fn, proWahl, rahmen, wahl } from '../basis';
+import { type Attr, type Ctx, esc, fn, proWahl, rahmen, wahl } from '../basis';
+
+/** Zahl ohne überflüssige Nullen (2,5 statt 2,50; 1,75 bleibt) */
+const de = (n: number, dec = 0) => n.toLocaleString('de-DE', { minimumFractionDigits: 0, maximumFractionDigits: dec });
 import { teller as vorlagen } from '../daten';
 
 export function teller(a: Attr, ctx: Ctx): string {

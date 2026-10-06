@@ -33,7 +33,10 @@ export function vergleich(a: Attr, ctx: Ctx): string {
       `<div class="vg-spur" aria-hidden="true">` +
       (v.min < 0 ? `<span class="vg-null" style="left:${null0.toFixed(2)}%"></span>` : '') +
       (b.placebo !== undefined
-        ? `<span class="vg-pla" style="left:${pc(b.placebo).toFixed(2)}%;width:${Math.max(0.8, pc(b.placeboBis ?? b.placebo) - pc(b.placebo)).toFixed(2)}%"></span>`
+        ? `<span class="vg-pla" style="left:${null0.toFixed(2)}%;width:${(pc(b.placebo) - null0).toFixed(2)}%"></span>` +
+          (b.placeboBis !== undefined
+            ? `<span class="vg-pla vg-pla-ext" style="left:${pc(b.placebo).toFixed(2)}%;width:${(pc(b.placeboBis) - pc(b.placebo)).toFixed(2)}%"></span>`
+            : '')
         : '') +
       `<span class="vg-bar vg-${b.farbe}${neg ? ' vg-neg' : ''}" style="left:${links.toFixed(2)}%;width:${breite.toFixed(2)}%"></span>` +
       (b.bis !== undefined

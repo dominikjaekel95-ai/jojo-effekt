@@ -50,8 +50,8 @@ function svg(mob: boolean, o: { placebo: boolean; acht: boolean; komposition: bo
     xs.map(([w, t, an]) => `<text class="ia-ax" x="${x(w)}" y="${H - m.b + 22}" text-anchor="${an}">${t}</text>`).join('') +
     `</g>` +
     (o.placebo
-      ? `<g class="k-pla"><path class="ia-pla" d="${P(D.p1)}"/><path class="ia-pla" d="${P(D.p2)}"/>` +
-        (mob ? '' : `<text class="ia-ax" x="${x(120)}" y="${y(placebo.w120) - 11}" text-anchor="end">Placebo ${de(placebo.w120, 1)} %</text>`) +
+      ? `<g class="k-pla"><path class="ia-pla k-pla1" d="${P(D.p1)}"/><path class="ia-pla k-pla2" d="${P(D.p2)}"/>` +
+        (mob ? '' : `<text class="ia-ax k-pla2" x="${x(120)}" y="${y(placebo.w120) - 11}" text-anchor="end">Placebo ${de(placebo.w120, 1)} %</text>`) +
         `</g>`
       : '') +
     `<g class="k-dose"><line class="ia-dose" x1="${x(68)}" x2="${x(68)}" y1="${m.t - 8}" y2="${H - m.b}"/>` +
@@ -63,7 +63,7 @@ function svg(mob: boolean, o: { placebo: boolean; acht: boolean; komposition: bo
     `<path class="ia-line k-l1" pathLength="1" d="${P(D.s1)}"/>` +
     `<path class="ia-line ia-line-clay k-l2" pathLength="1" d="${P(D.s2)}"/>` +
     `<g class="k-p1"><circle class="ia-dot" cx="${x(68)}" cy="${y(sema.w68)}" r="5.5"/>` +
-    `<text class="ia-lab" x="${x(68) - 10}" y="${y(sema.w68) + (mob ? 4 : 5)}" text-anchor="end">${de(sema.w68, 1)} %</text></g>` +
+    `<text class="ia-lab" x="${x(68) - 8}" y="${y(sema.w68) + (mob ? 19 : 22)}" text-anchor="end">${de(sema.w68, 1)} %</text></g>` +
     `<g class="k-p2"><circle class="ia-dot ia-dot-clay" cx="${x(120)}" cy="${y(sema.w120)}" r="5.5"/>` +
     `<text class="ia-lab ia-lab-clay" x="${x(120) - 12}" y="${y(sema.w120) - 12}" text-anchor="end">${de(sema.w120, 1)} %</text></g>` +
     `<path class="ia-brace k-brace" pathLength="1" d="${brace}"/>` +
@@ -82,7 +82,7 @@ function komposition(ctx: Ctx, verlust: number): string {
     `<div class="ia-komp">` +
     `<p class="ia-komp-t">Woraus die ${de(Math.abs(verlust), 1)} % Verlust bestanden${fn(ctx, 'wilding2021dxa')}</p>` +
     `<div class="ia-komp-bar" aria-hidden="true"><span class="ia-komp-fett" style="width:60%"></span><span class="ia-komp-ff" style="width:40%"></span></div>` +
-    `<div class="ia-komp-l"><span class="ia-komp-lf">≈ 60 % Fettmasse</span><span class="ia-komp-lm">≈ 40 % fettfreie Masse: Muskeln, Organe, Wasser</span></div>` +
+    `<div class="ia-komp-l"><span class="ia-komp-lf">≈ 60 % Fettmasse</span><span class="ia-komp-lm">≈ 40 % fettfreie Masse</span></div>` +
     `</div>`
   );
 }
@@ -105,7 +105,7 @@ export function absetzkurve(a: Attr, ctx: Ctx): string {
   const fuss =
     `Mittelwerte der STEP-1-Verlängerung; Messpunkte in Woche 0, 68 und 120, die Linien dazwischen sind schematisch.${q}` +
     (o.acht ? ` Ab etwa Woche 8 nach dem Absetzen ist die Zunahme in Studien messbar.${fn(ctx, wu2025.quelle)}` : '') +
-    (o.komposition ? ' Zusammensetzung aus der DXA-Substudie von STEP 1, exploratorische Analyse.' : '');
+    (o.komposition ? ' Fettfreie Masse umfasst Muskeln, Organe und Wasser; Zusammensetzung aus der DXA-Substudie von STEP 1, exploratorische Analyse.' : '');
   return rahmen({
     ctx,
     name: 'absetzkurve',

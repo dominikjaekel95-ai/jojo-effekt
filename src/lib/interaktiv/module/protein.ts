@@ -3,7 +3,7 @@
  * Optionen: data-dge="ja" (Marke 0,8 g/kg, dgeProtein), data-luecke="ja" (zweiter Regler: was du heute isst),
  * data-kg="80", data-mahlzeiten="4".
  */
-import { type Attr, type Ctx, fn, ja, num, rahmen, regler, wahl, zahl } from '../basis';
+import { type Attr, type Ctx, fn, ja, num, proWahl, rahmen, regler, wahl, zahl } from '../basis';
 
 const ACHSE = 250;
 const pc = (g: number) => ((Math.max(0, Math.min(ACHSE, g)) / ACHSE) * 100).toFixed(2);
@@ -35,6 +35,16 @@ export function protein(a: Attr, ctx: Ctx): string {
     `<div class="p-mz">` +
     wahl(ctx, 'mahlzeiten', 'Mahlzeiten am Tag', [{ wert: '3', label: 'drei' }, { wert: '4', label: 'vier' }], String(mz), 'p-mz-wahl') +
     `<p class="p-mz-satz">Pro Mahlzeit: <strong><span data-p-mlo>${Math.round(lo / mz)}</span> bis <span data-p-mhi>${Math.round(hi / mz)}</span> g</strong> Protein.</p>` +
+    `</div>` +
+    `<div class="p-teller" aria-hidden="true">` +
+    ['Morgens', 'Mittags', 'Nachmittags', 'Abends']
+      .map(
+        (m, i) =>
+          `<div class="p-schale${i === 2 && mz === 3 ? ' aus' : ''}"${i === 2 ? proWahl('k', 'mahlzeiten', { '3': 'aus', '4': '' }) : ''} style="--i:${i}">` +
+          `<span class="p-sch"><i data-p-schale style="transform:scaleY(${Math.min(1, hi / mz / 60).toFixed(3)})"></i></span>` +
+          `<span class="p-sch-l">${m}<b><span data-p-mlo>${Math.round(lo / mz)}</span>–<span data-p-mhi>${Math.round(hi / mz)}</span> g</b></span></div>`,
+      )
+      .join('') +
     `</div>`;
   const lueckeHtml = luecke
     ? regler(ctx, 'ist', 'So viel isst du an einem normalen Tag', { min: 20, max: 200, step: 5, wert: ist, einheit: 'g' }) +

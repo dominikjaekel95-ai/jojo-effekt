@@ -37,7 +37,7 @@ export interface Antworten {
 }
 
 export const ernaehrungOptionen: { value: Ernaehrung; label: string; text: string }[] = [
-  { value: 'mischkost', label: 'Mischkost', text: 'Fleisch an drei, Fisch an zwei Tagen pro Woche' },
+  { value: 'mischkost', label: 'Mischkost', text: 'Fleisch an drei, Fisch an zwei Tagen pro Woche als Hauptgericht' },
   { value: 'pescetarisch', label: 'Pescetarisch', text: 'Fisch statt Fleisch, dazu Milch und Eier' },
   { value: 'vegetarisch', label: 'Vegetarisch', text: 'mit Milchprodukten und Eiern' },
   { value: 'vegan', label: 'Vegan', text: 'rein pflanzlich' },

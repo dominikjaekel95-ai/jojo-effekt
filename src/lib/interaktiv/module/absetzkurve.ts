@@ -76,11 +76,12 @@ function svg(mob: boolean, o: { placebo: boolean; acht: boolean; komposition: bo
   );
 }
 
-/** Woraus der Verlust bestand: geteilter Balken unter der Kurve (wilding2021dxa) */
-function komposition(ctx: Ctx, verlust: number): string {
+/** Woraus der Verlust bestand: geteilter Balken unter der Kurve (wilding2021dxa, DXA-Substudie von STEP 1 mit eigener
+ *  Teilnehmerzahl; deshalb ohne die Prozentzahl der Kurve). */
+function komposition(ctx: Ctx): string {
   return (
     `<div class="ia-komp">` +
-    `<p class="ia-komp-t">Woraus die ${de(Math.abs(verlust), 1)} % Verlust bestanden${fn(ctx, 'wilding2021dxa')}</p>` +
+    `<p class="ia-komp-t">Woraus der Verlust in STEP 1 bestand (DXA-Substudie)${fn(ctx, 'wilding2021dxa')}</p>` +
     `<div class="ia-komp-bar" aria-hidden="true"><span class="ia-komp-fett" style="width:60%"></span><span class="ia-komp-ff" style="width:40%"></span></div>` +
     `<div class="ia-komp-l"><span class="ia-komp-lf">≈ 60 % Fettmasse</span><span class="ia-komp-lm">≈ 40 % fettfreie Masse</span></div>` +
     `</div>`
@@ -115,7 +116,7 @@ export function absetzkurve(a: Attr, ctx: Ctx): string {
       stats +
       `<div class="ia-buehne ia-buehne-kurve">${svg(false, o)}${svg(true, o)}</div>` +
       legende +
-      (o.komposition ? komposition(ctx, sema.w68) : ''),
+      (o.komposition ? komposition(ctx) : ''),
     fuss,
   });
 }

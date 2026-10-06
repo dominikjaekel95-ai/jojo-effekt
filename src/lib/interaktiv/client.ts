@@ -279,10 +279,10 @@ function sortiere(root: HTMLElement) {
     el.animate(
       [
         { transform: `translate(${dx}px, ${dy}px)`, opacity: 0 },
-        { transform: `translate(${dx}px, ${dy}px)`, opacity: 1, offset: 0.25 },
+        { transform: `translate(${dx}px, ${dy}px)`, opacity: 1, offset: 0.15 },
         { transform: 'translate(0, 0)', opacity: 1 },
       ],
-      { duration: 1100, delay: 120 + i * 70, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'backwards' },
+      { duration: 950, delay: 40 + i * 55, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'backwards' },
     );
   });
 }

@@ -61,7 +61,9 @@ export function teller(a: Attr, ctx: Ctx): string {
         `</button>`,
     )
     .join('');
-  const zielText = Object.fromEntries(v.ziele.map((z) => [z.wert, z.zielText]));
+  // Zahl und Einheit nicht trennen (300 mg)
+  const fest = (t: string) => t.replace(/(\d) (mg|µg|g|kg)\b/g, '$1\u00a0$2');
+  const zielText = Object.fromEntries(v.ziele.map((z) => [z.wert, fest(z.zielText)]));
   return rahmen({
     ctx,
     name: 'teller',
@@ -71,7 +73,7 @@ export function teller(a: Attr, ctx: Ctx): string {
     inhalt:
       (mehr ? wahl(ctx, 'gruppe', 'Wert für', v.ziele.map((z) => ({ wert: z.wert, label: z.label })), start.wert) : '') +
       `<div class="te-kopf"><p class="ia-gross"><span data-t-summe class="ia-z" data-ia-zahl>${summe}</span><small> ${esc(v.einheit)}</small></p>` +
-      `<p class="ia-klein">${esc(v.naehrstoff)} aus deiner Auswahl. ${esc(v.zielLabel ?? 'Tageswert')}: <span${proWahl('x', 'gruppe', zielText)}>${esc(start.zielText)}</span>${qZ}. <span data-t-satz>${satz}</span></p></div>` +
+      `<p class="ia-klein">${esc(v.naehrstoff)} aus deiner Auswahl. ${esc(v.zielLabel ?? 'Tageswert')}: <span${proWahl('x', 'gruppe', zielText)}>${esc(fest(start.zielText))}</span>${qZ}. <span data-t-satz>${satz}</span></p></div>` +
       `<div class="te-leiste" aria-hidden="true"><div class="te-spur"><div class="te-ein">${segs.join('')}<span class="te-ext" data-t-ext style="transform:${ext}"></span></div><span class="te-ziel"></span></div>` +
       `<div class="te-skala"><span>0</span><span class="te-skala-m"${proWahl('x', 'gruppe', Object.fromEntries(v.ziele.map((z) => [z.wert, `${de(z.ziel, v.dec)} ${v.einheit}`])))}>${de(ziel, v.dec)} ${esc(v.einheit)}</span><span${proWahl('x', 'gruppe', Object.fromEntries(v.ziele.map((z) => [z.wert, `${de(z.ziel * 2, v.dec)} ${v.einheit}`])))}>${de(ziel * 2, v.dec)} ${esc(v.einheit)}</span></div></div>` +
       `<div class="te-liste" role="group" aria-label="${v.tag ? 'Mahlzeiten' : 'Lebensmittel'}">${knoepfe}</div>`,

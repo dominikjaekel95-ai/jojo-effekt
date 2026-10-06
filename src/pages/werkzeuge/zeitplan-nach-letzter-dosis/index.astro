@@ -111,6 +111,7 @@ const jsonLd = [
     <section id="zeitplan-ergebnis" class="zp-res hidden" aria-live="polite">
       <h2 class="k-h2">Dein Zeitplan</h2>
       <p class="k-note" data-zeitplan-kopf></p>
+      <p class="zp-orient">Allgemeine Orientierung aus Fachinformation und Studien, keine Vorhersage für dich.</p>
       <figure class="zp-vis" aria-hidden="true">
         <div class="zp-lanes" data-zeitplan-bild></div>
         <div class="zp-axis"><span style="left:0%">0</span><span style="left:20%">4</span><span style="left:40%">8</span><span style="left:60%">12</span><span style="left:80%">16</span><span style="left:100%">20 Wochen</span></div>
@@ -120,7 +121,7 @@ const jsonLd = [
         <button type="button" class="btn-secondary" data-zeitplan-ics>In den Kalender (ICS-Datei)</button>
         <button type="button" class="btn-secondary" data-zeitplan-drucken>Drucken</button>
       </div>
-      <p class="k-note">Alle Angaben sind Mittelwerte aus Fachinformation und Studien: allgemeine Orientierung, keine Vorhersage für dich. Was in jeder Phase zu tun ist, steht unter <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a> und in der <a href="/checkliste/">Checkliste für die ersten 8 Wochen</a>.</p>
+      <p class="k-note">Alle Angaben sind Mittelwerte aus Fachinformation und Studien. Was in jeder Phase zu tun ist, steht unter <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a> und in der <a href="/checkliste/">Checkliste für die ersten 8 Wochen</a>.</p>
     </section>
 
     <div class="prose-site mt-12">
@@ -230,7 +231,7 @@ const jsonLd = [
         bahn('Zunahme', [{ von: 56, bis: 140, cls: 'zp-zunahme' }], 2),
         bahn('Wiegen', wochen.map((w) => ({ von: w * 7, punkt: true, cls: 'zp-punkt' })), 3),
       );
-      kopf.textContent = `Letzte Dosis ${fmt(start)}, ${p.name}. Allgemeine Orientierung aus Studien, keine Vorhersage für dich. Woche 0 beginnt am ${start.toLocaleDateString('de-DE', { day: 'numeric', month: 'long' })}.`;
+      kopf.textContent = `Letzte Dosis ${fmt(start)}, ${p.name}. Woche 0 beginnt am ${start.toLocaleDateString('de-DE', { day: 'numeric', month: 'long' })}.`;
       ergebnis.classList.remove('hidden');
       ergebnis.classList.remove('zp-in');
       if (RM) ergebnis.classList.add('zp-in');
@@ -294,6 +295,13 @@ const jsonLd = [
   }
   .zp-res .k-note a {
     color: var(--color-moss);
+  }
+  .zp-orient {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.55;
+    font-weight: 500;
+    color: var(--color-ink);
   }
   /* Bild: vier Bahnen über 20 Wochen */
   .zp-vis {

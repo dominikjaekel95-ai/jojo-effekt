@@ -14,7 +14,7 @@ faq:
   - q: "Wie oft sollte ich mich nach dem Absetzen wiegen?"
     a: "<p>Mindestens einmal pro Woche, besser täglich mit Wochenmittel, wenn dich die Zahl nicht aus der Bahn wirft. In der STOP-Regain-Studie wogen sich die Teilnehmenden täglich und hatten feste Zonen; nach 18 Monaten hatten 45,7 % der betreuten Gruppe 2,3 kg oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 %. Wichtiger als die Häufigkeit ist die Regel, was du bei welcher Zahl tust. Was die Studien im Einzelnen zeigen und wann die Waage schadet, steht unter <a href=\"/wissen/wie-oft-wiegen-nach-abnehmspritze/\">Wie oft wiegen nach der Abnehmspritze?</a></p>"
   - q: "Wie viel Zunahme nach dem Absetzen ist normal?"
-    a: "<p>Ein bis zwei Kilo in den ersten Wochen sind oft Wasser und Darminhalt, weil du wieder mehr isst – kein Fett. Wer Kreatin startet, sieht weitere 0,5 bis 2 kg Wasser. Ab 1,4 kg über dem Startgewicht der Haltephase lohnt sich ein Blick auf Ernährung und Training, ab 2,3 kg ein Termin bei der Ärztin: Das sind die Zonen eines Programms zum Gewichthalten, in dem 45,7 % der betreuten Teilnehmenden in 18 Monaten 2,3 kg oder mehr wieder zunahmen, in der Kontrollgruppe 72,4 % (Wing 2006).</p>"
+    a: "<p>Ein bis zwei Kilo in den ersten Wochen sind oft Wasser und Darminhalt, weil du wieder mehr isst – kein Fett. Wer Kreatin startet, sieht zusätzlich Wasser in der Muskulatur auf der Waage, ebenfalls kein Fett. Ab 1,4 kg über dem Startgewicht der Haltephase lohnt sich ein Blick auf Ernährung und Training, ab 2,3 kg den Plan prüfen: Das sind die Zonen eines Programms zum Gewichthalten, in dem 45,7 % der betreuten Teilnehmenden in 18 Monaten 2,3 kg oder mehr wieder zunahmen, in der Kontrollgruppe 72,4 % (Wing 2006).</p>"
   - q: "Soll ich nach dem Absetzen Kalorien zählen?"
     a: "<p>Für die meisten ist eine Struktur wirksamer als Zählen: Protein zuerst, Gemüse bei jeder Mahlzeit, feste Essenszeiten, keine Flüssigkalorien. Wer gern zählt, kann das zwei Wochen lang tun, um ein Gefühl für Portionen ohne Spritze zu bekommen – dauerhaft hält es kaum jemand durch.</p>"
   - q: "Was, wenn das Gewicht trotz allem steigt?"
@@ -62,7 +62,7 @@ Der Wirkstoff ist noch im Körper, der Appetit noch klein. Das ist die einfachst
 
 - **Training:** Zwei feste Termine. In Woche 1 und 2 leicht, nur die Bewegungen lernen: Kniebeuge, Rudern, Drücken, Hüftstrecken, Rumpf. Ab Woche 3 die Belastung steigern.
 - **Protein:** Tagesmenge berechnen, auf Mahlzeiten verteilen, Frühstück umstellen (Skyr, Quark, Eier oder Shake). Eine Notreserve (Stick oder Shake) immer dabei.
-- **Wiegen:** Ausgangswert festhalten. Wer Kreatin startet, rechnet mit 0,5 bis 2 kg Wasser in den ersten zwei Wochen – das ist der neue Ausgangswert, nicht Fett.
+- **Wiegen:** Ausgangswert festhalten. Wer Kreatin startet: Es bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur. Das zeigt die Waage, ist aber kein Fett; der Wert danach ist der neue Ausgangswert.
 
 **Ziel am Ende von Phase 1:** Acht Trainingseinheiten absolviert, Protein an mindestens fünf von sieben Tagen erreicht, ein Wiege-Protokoll mit vier Einträgen.
 
@@ -83,7 +83,7 @@ Der Wirkstoff ist weitgehend abgebaut. Der Appetit ist zurück, oft stärker als
 Die Zunahme wird in Studien ab jetzt messbar.<sup><a href="#fn-wu2025">1</a></sup> Das Ziel dieser Phase ist ein System, das ohne Plan läuft.
 
 - **Das Gespräch mit der Ärztin oder dem Arzt.** Den Gewichtsverlauf mitnehmen, ehrlich berichten, wie es läuft. Optionen besprechen – auch die eines Wiedereinstiegs, falls nötig. In der STEP-1-Verlängerung näherten sich die Blutwerte ein Jahr nach dem Absetzen wieder den Ausgangswerten.<sup><a href="#fn-wilding2022ext">7</a></sup> Was Omega-3-Kapseln laut den zugelassenen Angaben leisten, steht unter [Omega-3 bei der Abnehmspritze](/wissen/omega-3-abnehmspritze/).
-- **Die Wiege-Regel festschreiben.** Die Zonen aus der STOP-Regain-Studie:<sup><a href="#fn-wing2006">8</a></sup> bis +1,4 kg nichts tun; ab +1,4 kg zwei Wochen lang Protein und Training protokollieren; ab +2,3 kg Ursachen klären und mit der Ärztin oder dem Arzt besprechen. Aufschreiben, an den Kühlschrank.
+- **Die Wiege-Regel festschreiben.** Die Zonen aus der STOP-Regain-Studie:<sup><a href="#fn-wing2006">8</a></sup> bis +1,4 kg nichts tun; ab +1,4 kg zwei Wochen lang Protein und Training protokollieren; ab +2,3 kg den Plan prüfen (Protein, Training, Schlaf, Flüssigkalorien), die Maßnahmen aus Gelb laufen weiter. Aufschreiben, an den Kühlschrank.
 - **Training verstetigen.** Zwei Einheiten bleiben. Wer mag, nimmt eine dritte dazu oder ergänzt Ausdauer. Was nicht geht: pausieren, „weil das Gewicht jetzt stabil ist“.
 - **Die Woche danach planen.** Was passiert im Urlaub, bei Krankheit, in stressigen Wochen? Eine Minimalversion festlegen: ein Training, Protein zum Frühstück, einmal wiegen. Für Weihnachten und andere Feiertage, die oft genau in diese Wochen fallen, steht ein eigener Plan unter [Feiertage nach der Abnehmspritze](/wissen/feiertage-nach-abnehmspritze/).
 

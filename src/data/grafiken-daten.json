@@ -148,5 +148,208 @@
     ],
     "hinweis": "Mittelwerte gegenüber dem Start. Jede Aussage zur Tablette nach dem Absetzen ist ein Übertrag, keine Messung.",
     "quelle": "OASIS 4 (NEJM 2025); Fachinformation Rybelsus (EMA); STEP-1-Verlängerung (2022); Wu et al. (2025)"
+  },
+  "kreatin-speicher-im-muskel": {
+    "spalten": ["Einnahme", "Messzeitpunkt", "Gesamtkreatin im Muskel gegenüber dem Ausgangswert"],
+    "zeilen": [
+      ["3 g pro Tag, ohne Ladephase", "nach 28 Tagen", "etwa +20 %"],
+      ["Ladephase: 20 g pro Tag über 6 Tage", "nach 6 Tagen", "etwa +20 %"],
+      ["Ladephase, danach keine Einnahme", "30 Tage nach dem Ende", "wieder beim Ausgangswert"]
+    ],
+    "hinweis": "Studie mit 31 Männern, Muskelbiopsien; Verlauf zwischen den Messpunkten in der Grafik schematisch. Mit dem Speicher steigt das Wasser in der Muskelzelle; das zeigt die Waage, Fett ist es nicht.",
+    "quelle": "Hultman et al., J Appl Physiol 1996, 81(1), S. 232–237; Kreider et al., J Int Soc Sports Nutr 2017, 14, 18"
+  },
+  "wirkstoff-abbau-nach-letzter-dosis": {
+    "spalten": ["Wirkstoff", "Präparate", "Halbwertszeit", "Weitgehend abgebaut nach (fünf Halbwertszeiten)"],
+    "zeilen": [
+      ["Liraglutid", "Saxenda", "etwa 13 Stunden", "etwa 3 Tagen"],
+      ["Tirzepatid", "Mounjaro", "etwa 5 Tage", "etwa 25 Tagen"],
+      ["Semaglutid", "Wegovy, Ozempic", "etwa 1 Woche", "etwa 5 Wochen; laut Fachinformation bis etwa 7 Wochen nachweisbar"]
+    ],
+    "hinweis": "Rechnerischer Anteil im Körper aus der Halbwertszeit: Nach jeder Halbwertszeit ist noch die Hälfte da. Vereinfachte Rechnung; die Wirkung auf den Appetit lässt schon vorher nach.",
+    "quelle": "Fachinformationen Saxenda, Mounjaro, Wegovy, Ozempic (EMA-Produktinformationen); eigene Rechnung"
+  },
+  "s-lite-liraglutid-und-training": {
+    "spalten": ["Vergleich", "Zeitraum", "Unterschied", "95-%-Konfidenzintervall"],
+    "zeilen": [
+      ["Zunahme nach Liraglutid allein gegenüber Training allein", "Jahr ohne Behandlung (Woche 52 bis 104)", "+6,0 kg", "2,1 bis 10,0 kg"],
+      ["Gewicht: Training plus Liraglutid gegenüber Liraglutid allein", "Studienbeginn bis ein Jahr nach dem Ende (Woche 0 bis 104)", "−5,1 kg", "−10,0 bis −0,2 kg"],
+      ["Körperfettanteil: Training plus Liraglutid gegenüber Liraglutid allein", "Studienbeginn bis ein Jahr nach dem Ende (Woche 0 bis 104)", "−2,3 Prozentpunkte", "−4,3 bis −0,3"]
+    ],
+    "hinweis": "Erwachsene mit Adipositas: acht Wochen kalorienarme Diät, dann 52 Wochen Placebo, betreutes Training, Liraglutid oder beides, danach 52 Wochen ohne Behandlung. Nach Training blieben Gewicht und Körperzusammensetzung erhalten; nach Liraglutid allein kam das Gewicht zurück.",
+    "quelle": "Lundgren et al., S-LiTE, NEJM 2021; Jensen et al., S-LiTE follow-up, eClinicalMedicine 2024, 69, 102475"
+  },
+  "heisshunger-vor-der-waage": {
+    "spalten": ["Was passiert", "Zeitraum nach der letzten Dosis", "Grundlage"],
+    "zeilen": [
+      ["Semaglutid wird abgebaut", "weitgehend abgebaut nach etwa 5 bis 7 Wochen", "Halbwertszeit etwa 1 Woche laut Fachinformation"],
+      ["Appetit kommt zurück", "Woche 2 bis 5, bleibt danach", "sinkender Wirkstoffspiegel"],
+      ["Hungerhormone verschoben (mehr Ghrelin, weniger Leptin)", "nach Gewichtsverlust noch ein Jahr später messbar", "Sumithran et al. 2011"],
+      ["Gewichtszunahme messbar", "ab etwa Woche 8, Anstieg bis etwa Woche 20", "Meta-Analyse randomisierter Studien (Wu et al. 2025)"],
+      ["Fenster: Hunger zurück, Waage zeigt noch wenig", "Woche 2 bis 8", "aus den Zeilen darüber abgeleitet"]
+    ],
+    "hinweis": "Der individuelle Verlauf weicht ab.",
+    "quelle": "Fachinformation Wegovy (EMA); Sumithran et al., NEJM 2011; Wu et al., Meta-Analyse, BMC Medicine 2025"
+  },
+  "schlaf-und-hungerhormone": {
+    "spalten": ["Messgröße", "Veränderung nach zwei Nächten mit 4 Stunden im Bett"],
+    "zeilen": [
+      ["Leptin (Sättigungshormon)", "−18 %"],
+      ["Ghrelin (Hungerhormon)", "+28 %"],
+      ["Hunger (eigene Einschätzung)", "+24 %"],
+      ["Appetit (eigene Einschätzung)", "+23 %"],
+      ["Appetit auf kalorienreiche Lebensmittel mit viel Kohlenhydraten", "+33 bis 45 %"]
+    ],
+    "hinweis": "Vergleich mit zwei Nächten mit 10 Stunden im Bett; 12 gesunde junge Männer, Laborbedingungen mit festgelegter Kalorienzufuhr. Die Studie zeigt die Richtung, nicht die Größe im Alltag.",
+    "quelle": "Spiegel et al., Ann Intern Med 2004, 141(11), S. 846–850"
+  },
+  "absetzen-im-ersten-jahr": {
+    "spalten": ["Gruppe", "Therapie innerhalb eines Jahres beendet"],
+    "zeilen": [
+      ["Erwachsene ohne Typ-2-Diabetes", "64,8 %"],
+      ["alle Gruppen, mit und ohne Typ-2-Diabetes", "53,6 %"]
+    ],
+    "hinweis": "Versorgungsdaten aus den USA, Erwachsene mit Übergewicht oder Adipositas, die einen GLP-1-Rezeptoragonisten begonnen hatten. In der Grafik steht 1 Punkt für 1 Prozent, gerundet.",
+    "quelle": "Rodriguez et al., JAMA Netw Open 2025, 8(1), e2457349"
+  },
+  "step-2-typ-2-diabetes": {
+    "spalten": ["Gruppe", "Mittlere Gewichtsänderung nach 68 Wochen"],
+    "zeilen": [
+      ["Semaglutid 2,4 mg (Dosis wie bei Wegovy)", "−9,6 %"],
+      ["Semaglutid 1,0 mg (Dosis wie bei Ozempic)", "−7,0 %"],
+      ["Placebo", "−3,4 %"]
+    ],
+    "hinweis": "Randomisierte, placebokontrollierte Studie mit Erwachsenen mit Übergewicht oder Adipositas und Typ-2-Diabetes. Weniger Verlust heißt weniger, das nach dem Absetzen zurückkommen kann; am Mechanismus ändert das nichts.",
+    "quelle": "Davies et al., STEP 2, Lancet 2021, 397(10278), S. 971–984"
+  },
+  "supplements-was-belegt-ist": {
+    "spalten": ["Supplement", "Stufe", "Bedingung"],
+    "zeilen": [
+      ["Protein", "belegt, mit Bedingung", "wenn 1,2 bis 1,6 g pro kg Körpergewicht am Tag über Mahlzeiten nicht zusammenkommen"],
+      ["Kreatin-Monohydrat", "belegt, mit Bedingung", "3 g täglich, nur zusammen mit Krafttraining"],
+      ["Ballaststoffe", "belegt, mit Bedingung", "wenn unter 30 g am Tag; Lebensmittel zuerst"],
+      ["Vitamin D", "nur bei nachgewiesenem Mangel", "nach Blutwert"],
+      ["Vitamin B12", "nur bei nachgewiesenem Mangel", "bei Metformin oder veganer Ernährung kontrollieren lassen"],
+      ["Eisen", "nur bei nachgewiesenem Mangel", "nur nach ärztlich gemessenem Wert, nie auf Verdacht"],
+      ["Magnesium", "nur bei nachgewiesenem Mangel", "bei sehr kleinen Portionen; Lebensmittel zuerst"],
+      ["Fatburner, Detox, Stoffwechsel-Booster", "kein Beleg für das Gewicht", "keine Belege, teils riskante Inhaltsstoffe"],
+      ["„Natürliche GLP-1-Booster“ (Berberin, Extrakte)", "kein Beleg für das Gewicht", "keine zugelassene Angabe, mögliche Wechselwirkungen"],
+      ["Probiotika „gegen Jojo“", "kein Beleg für das Gewicht", "keine Belege für Gewichtserhalt"],
+      ["Omega-3", "kein Beleg für das Gewicht", "kein Beleg für Gewicht oder Muskeln nach der Spritze"]
+    ],
+    "hinweis": "Nahrungsergänzungsmittel sind Lebensmittel und werden nicht auf Wirksamkeit geprüft. Vitamine und Mineralstoffe: erst messen, dann ergänzen.",
+    "quelle": "Leidy et al. 2015; Kreider et al. 2017; EU-Register zugelassener Angaben (VO (EU) Nr. 432/2012); DGE; ADA Standards of Care 2024; Verbraucherzentralen; Almandoz et al. 2024"
+  },
+  "versorgung-in-deutschland": {
+    "spalten": ["Nährstoff", "Gruppe oder Grenzwert", "Anteil der Erwachsenen", "Erhebung"],
+    "zeilen": [
+      ["Magnesium", "Männer, Zufuhr unter der Empfehlung", "26 %", "Nationale Verzehrsstudie II"],
+      ["Magnesium", "Frauen, Zufuhr unter der Empfehlung", "29 %", "Nationale Verzehrsstudie II"],
+      ["Eisen", "Männer, Zufuhr unter der Empfehlung", "14 %", "Nationale Verzehrsstudie II"],
+      ["Eisen", "Frauen, Zufuhr unter der Empfehlung", "58 %", "Nationale Verzehrsstudie II"],
+      ["Vitamin D", "Blutwert unter 30 nmol/l (Mangel)", "30,2 %", "DEGS1"],
+      ["Vitamin D", "Blutwert unter 50 nmol/l", "61,6 %", "DEGS1"]
+    ],
+    "hinweis": "Erhoben vor der Zeit der GLP-1-Medikamente; Vitamin D im Winter deutlich niedriger als im Sommer.",
+    "quelle": "Max Rubner-Institut, Nationale Verzehrsstudie II, 2008; Rabenberg et al., DEGS1, BMC Public Health 2015"
+  },
+  "fett-und-fettfreie-masse-zwei-studien": {
+    "spalten": ["Studie", "Wirkstoff und Dauer", "Anteil Fettmasse am Gewichtsverlust", "Anteil fettfreie Masse"],
+    "zeilen": [
+      ["STEP 1, DXA-Substudie (140 Teilnehmende)", "Semaglutid 2,4 mg, 68 Wochen", "rund 60 %", "rund 40 %"],
+      ["SURMOUNT-1, DXA-Substudie (160 Teilnehmende)", "Tirzepatid, 72 Wochen", "rund 75 %", "rund 25 %"]
+    ],
+    "hinweis": "SURMOUNT-1 unter Tirzepatid: Körpergewicht −21,3 %, Fettmasse −33,9 %, fettfreie Masse −10,9 % (Placebo −5,3 %, −8,2 %, −2,6 %); das Verhältnis war unter Tirzepatid und Placebo ähnlich. Fettfreie Masse heißt Muskeln, Organe, Knochen, Wasser. Zwei verschiedene Studien, kein direkter Vergleich der Wirkstoffe.",
+    "quelle": "Wilding et al., STEP 1 body composition, J Endocr Soc 2021; Look et al., SURMOUNT-1, Diabetes Obes Metab 2025, 27(5), S. 2720–2729"
+  },
+  "training-art-fettfreie-masse": {
+    "spalten": ["Gruppe (26 Wochen Diät)", "Verlust an fettfreier Masse", "Knochendichte der Hüfte"],
+    "zeilen": [
+      ["Krafttraining", "−1,0 kg", "unter 1 %, nicht signifikant"],
+      ["Kraft plus Ausdauer", "−1,7 kg", "–"],
+      ["Ausdauertraining", "−2,7 kg", "−3 %"]
+    ],
+    "hinweis": "Randomisierte Studie mit 160 Erwachsenen ab 65 Jahren mit Adipositas, beide Geschlechter; Gewicht im Mittel −9 %. Für die kombinierte Gruppe ist der Wert der Hüfte hier nicht aufgeführt.",
+    "quelle": "Villareal et al., NEJM 2017, 376(20), S. 1943–1955"
+  },
+  "wiegen-zonen-stop-regain": {
+    "spalten": ["Angabe", "Wert"],
+    "zeilen": [
+      ["Zone grün (bezogen auf das Gewicht zu Studienbeginn)", "bis +1,4 kg"],
+      ["Zone gelb", "bis +2,3 kg"],
+      ["Zone rot", "ab +2,3 kg"],
+      ["2,3 kg oder mehr wieder zugenommen: persönlich betreute Gruppe", "45,7 %"],
+      ["2,3 kg oder mehr wieder zugenommen: Kontrollgruppe", "72,4 %"]
+    ],
+    "hinweis": "314 Erwachsene nach mindestens 10 % Gewichtsverlust, 18 Monate, tägliches Wiegen mit vorher festgelegter Reaktion je Zone. In einer späteren Studie (LIMIT, 583 Erwachsene) verhinderte Wiegen ohne festgelegte Reaktion die Wiederzunahme nicht.",
+    "quelle": "Wing et al., STOP Regain, NEJM 2006, 355(15), S. 1563–1571; Daley et al., LIMIT, Public Health Res 2019"
+  },
+  "feiertage-gewicht": {
+    "spalten": ["Studie", "Messung", "Ergebnis"],
+    "zeilen": [
+      ["Vernetzte Waagen, Deutschland (Helander 2016)", "Weihnachten: 10 Tage danach gegenüber 10 Tage davor", "+0,6 %"],
+      ["Vernetzte Waagen, Deutschland (Helander 2016)", "Ostern", "+0,2 %"],
+      ["Haltephase nach mindestens 5 % Gewichtsverlust (NoHoW, Turicchi 2020)", "Weihnachten", "+1,35 %"],
+      ["Randomisierte Studie (Mason 2018): wiegen, notieren, zehn Tipps", "nach den Feiertagen", "−0,13 kg"],
+      ["Randomisierte Studie (Mason 2018): Vergleichsgruppe", "nach den Feiertagen", "+0,37 kg"]
+    ],
+    "hinweis": "Mittelwerte. Unterschied in der randomisierten Studie: 0,49 kg. In der Waagen-Studie war etwa die Hälfte der Zunahme kurz danach wieder weg, die andere Hälfte blieb bis in den Sommer oder länger.",
+    "quelle": "Helander et al., NEJM 2016; Turicchi et al., NoHoW, PLoS ONE 2020; Mason et al., BMJ 2018"
+  },
+  "wechseljahre-koerperzusammensetzung": {
+    "spalten": ["Messgröße pro Jahr", "Vor dem Übergang", "Im Übergang"],
+    "zeilen": [
+      ["Fettmasse", "+0,25 kg", "+0,45 kg"],
+      ["Fettfreie Masse", "+0,2 %", "−0,2 %"]
+    ],
+    "hinweis": "SWAN-Studie mit DXA-Messungen bei 1246 Frauen. Beides lief bis etwa zwei Jahre nach der letzten Regelblutung weiter; das Gewicht selbst stieg im Übergang nicht schneller als vorher.",
+    "quelle": "Greendale et al., SWAN, JCI Insight 2019, 4(5), e124865"
+  },
+  "protein-verteilung": {
+    "spalten": ["Verteilung", "Frühstück", "Mittag", "Abend", "Muskelproteinsynthese über 24 Stunden"],
+    "zeilen": [
+      ["Gleichmäßig", "etwa 30 g", "etwa 30 g", "etwa 30 g", "25 % höher"],
+      ["Abendlastig", "etwa 10 g", "etwa 15 g", "etwa 65 g", "Vergleichswert"]
+    ],
+    "hinweis": "Gleiche Tagesmenge, gesunde Erwachsene; kleine Studie, gemessen wurde die Muskelproteinsynthese, nicht die Muskelmasse. Empfehlung für Gewichtsabnahme und -erhalt: mindestens etwa 25 bis 30 g Protein pro Mahlzeit.",
+    "quelle": "Mamerow et al., J Nutr 2014, 144(6), S. 876–880; Leidy et al., Am J Clin Nutr 2015"
+  },
+  "kalorienbedarf-zwei-effekte": {
+    "spalten": ["Schritt", "Tagesbedarf"],
+    "zeilen": [
+      ["Vorher, 95 kg (Formel mal 1,4)", "2.277 kcal"],
+      ["Leichterer Körper", "−210 kcal"],
+      ["Formel für 80 kg (mal 1,4)", "2.067 kcal"],
+      ["Anpassung nach Gewichtsverlust", "−300 bis 400 kcal"],
+      ["Eher tatsächlich", "rund 1.700 bis 1.800 kcal"]
+    ],
+    "hinweis": "Rechenbeispiel: Frau, 45 Jahre, 170 cm. Ruheenergieverbrauch nach Mifflin-St-Jeor (1.627 kcal bei 95 kg, 1.477 kcal bei 80 kg) mal Aktivitätsfaktor 1,4, eigene Rechnung, gerundet. Anpassung: Messwerte nach mindestens 10 % Gewichtsverlust, individuell verschieden.",
+    "quelle": "Mifflin et al., Am J Clin Nutr 1990; DGE-Referenzwerte Energie; Leibel et al., NEJM 1995; Rosenbaum und Leibel, Int J Obes 2010"
+  },
+  "protein-tag-beispiel": {
+    "spalten": ["Mahlzeit", "Beispiel", "Protein"],
+    "zeilen": [
+      ["Morgens", "200 g Skyr mit Beeren und 2 EL Haferflocken", "ca. 24 g"],
+      ["Mittags", "Salat oder Gemüse, 120 g Hähnchen, Fisch oder Tofu, 1 Scheibe Vollkornbrot", "ca. 30 g"],
+      ["Nachmittags", "Hüttenkäse oder ein Protein-Shake, ein Apfel", "ca. 20 g"],
+      ["Abends", "Linsen- oder Bohneneintopf, 2 Eier oder 150 g Fisch", "ca. 30 g"],
+      ["Zusammen", "Zielbereich bei 80 kg: 96 bis 128 g (1,2 bis 1,6 g pro kg)", "rund 100 g"]
+    ],
+    "hinweis": "Beispiel für 80 kg Körpergewicht; zusammen auch rund 30 g Ballaststoffe. Proteinwerte aus dem Bundeslebensmittelschlüssel, gerundet.",
+    "quelle": "Leidy et al., Am J Clin Nutr 2015; Bundeslebensmittelschlüssel (BLS 3.02)"
+  },
+  "ballaststoffe-portionen": {
+    "spalten": ["Lebensmittel, Portion", "Ballaststoffe, etwa"],
+    "zeilen": [
+      ["Linsen gekocht, 150 g", "8 g"],
+      ["Vollkornbrot, 2 Scheiben (100 g)", "8 g"],
+      ["Himbeeren, 125 g", "6 g"],
+      ["Brokkoli gegart, 200 g", "6 g"],
+      ["Haferflocken, 50 g", "5 g"],
+      ["Leinsamen geschrotet, 1 EL (10 g)", "4 g"],
+      ["Glucomannan, Tagesmenge laut zugelassener Angabe", "3 g"]
+    ],
+    "hinweis": "Richtwert mindestens 30 g Ballaststoffe am Tag; die 3 g Glucomannan sind ein Zehntel davon. Werte aus dem Bundeslebensmittelschlüssel, gerundet.",
+    "quelle": "Bundeslebensmittelschlüssel (BLS 3.02); DGE, Richtwert Ballaststoffe; EU-Register zugelassener Angaben (VO (EU) Nr. 432/2012)"
   }
 }

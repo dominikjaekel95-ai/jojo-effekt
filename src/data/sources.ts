@@ -765,6 +765,13 @@ export const sources: Record<string, Source> = {
     url: 'https://doi.org/10.1002/oby.20946',
     note: 'Systematischer Review von 17 Längsschnittstudien an Erwachsenen in Abnehmprogrammen: Regelmäßiges Wiegen ging mit mehr Gewichtsverlust einher und nicht mit mehr Depressivität oder Angst.',
   },
+  hultman1996: {
+    id: 'hultman1996',
+    short: 'Hultman et al., J Appl Physiol 1996',
+    full: 'Hultman E, Söderlund K, Timmons JA, Cederblad G, Greenhaff PL. Muscle creatine loading in men. J Appl Physiol. 1996;81(1):232–237.',
+    url: 'https://doi.org/10.1152/jappl.1996.81.1.232',
+    note: '31 Männer, Muskelbiopsien: 20 g Kreatin pro Tag über 6 Tage erhöhten das Gesamtkreatin im Muskel um etwa 20 %; 3 g pro Tag erreichten denselben Anstieg allmählich über 28 Tage. Ohne weitere Einnahme lag der Wert 30 Tage nach dem Ende wieder beim Ausgangswert.',
+  },
 };
 
 export function getSources(ids: readonly string[]): Source[] {

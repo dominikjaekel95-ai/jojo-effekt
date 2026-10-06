@@ -487,7 +487,7 @@ export function neu({ warn }) {
   {
     const px = (kg) => M + (kg / 3) * (W - 2 * M);
     let b = '';
-    b += T(px(0), 176, 'Gewicht zu Studienbeginn', { size: 14, fill: C.ink3 });
+    b += T(px(0), 176, 'Gewicht nach der Abnahme (Studienbeginn)', { size: 14, fill: C.ink3 });
     b += T(px(1.4), 176, '+1,4 kg', { st: 'axis', size: 14, fill: C.ink3, anchor: 'middle', tnum: true });
     b += T(px(2.3), 176, '+2,3 kg', { st: 'axis', size: 14, fill: C.ink3, anchor: 'middle', tnum: true });
     b += R(px(0), 190, px(1.4) - px(0), 44, { fill: C.lean, rx: 0 });
@@ -515,7 +515,7 @@ export function neu({ warn }) {
         title: 'Wiegen mit Zonen: was die STOP-Regain-Studie zeigt',
         subtitle: '314 Erwachsene nach mindestens 10 % Gewichtsverlust, 18 Monate; tägliches Wiegen mit festgelegter Reaktion je Zone',
         source: 'Wing et al., STOP Regain, NEJM 2006;355(15):1563–1571; Daley et al., LIMIT, Public Health Res 2019',
-        alt: 'Zonen der STOP-Regain-Studie bezogen auf das Gewicht zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, rot ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie nicht.',
+        alt: 'Zonen der STOP-Regain-Studie bezogen auf das Gewicht nach der Abnahme, zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, rot ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie nicht.',
       },
       b,
     );

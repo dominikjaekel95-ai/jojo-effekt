@@ -283,7 +283,7 @@ export const grafiken: Grafik[] = [
     id: 'wiegen-zonen-stop-regain',
     title: 'Wiegen mit Zonen: was die STOP-Regain-Studie zeigt',
     subtitle: 'Grün, gelb, rot mit festgelegter Reaktion: Anteil mit Wiederzunahme nach 18 Monaten',
-    alt: 'Zonen der STOP-Regain-Studie bezogen auf das Gewicht zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, rot ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie nicht.',
+    alt: 'Zonen der STOP-Regain-Studie bezogen auf das Gewicht nach der Abnahme, zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, rot ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie nicht.',
     sources: ['wing2006', 'daley2019'],
     used: [],
     ziel: [

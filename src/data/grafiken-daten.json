@@ -210,7 +210,7 @@
       ["alle Gruppen, mit und ohne Typ-2-Diabetes", "53,6 %"]
     ],
     "hinweis": "Versorgungsdaten aus den USA, Erwachsene mit Übergewicht oder Adipositas, die einen GLP-1-Rezeptoragonisten begonnen hatten. In der Grafik steht 1 Punkt für 1 Prozent, gerundet.",
-    "quelle": "Rodriguez et al., JAMA Netw Open 2025, 8(1), e2457349"
+    "quelle": "Rodriguez et al., JAMA Netw Open 2025, 8(1)"
   },
   "step-2-typ-2-diabetes": {
     "spalten": ["Gruppe", "Mittlere Gewichtsänderung nach 68 Wochen"],
@@ -275,7 +275,7 @@
   "wiegen-zonen-stop-regain": {
     "spalten": ["Angabe", "Wert"],
     "zeilen": [
-      ["Zone grün (bezogen auf das Gewicht zu Studienbeginn)", "bis +1,4 kg"],
+      ["Zone grün (bezogen auf das Gewicht nach der Abnahme, zu Studienbeginn)", "bis +1,4 kg"],
       ["Zone gelb", "bis +2,3 kg"],
       ["Zone rot", "ab +2,3 kg"],
       ["2,3 kg oder mehr wieder zugenommen: persönlich betreute Gruppe", "45,7 %"],
@@ -303,7 +303,7 @@
       ["Fettfreie Masse", "+0,2 %", "−0,2 %"]
     ],
     "hinweis": "SWAN-Studie mit DXA-Messungen bei 1246 Frauen. Beides lief bis etwa zwei Jahre nach der letzten Regelblutung weiter; das Gewicht selbst stieg im Übergang nicht schneller als vorher.",
-    "quelle": "Greendale et al., SWAN, JCI Insight 2019, 4(5), e124865"
+    "quelle": "Greendale et al., SWAN, JCI Insight 2019, 4(5)"
   },
   "protein-verteilung": {
     "spalten": ["Verteilung", "Frühstück", "Mittag", "Abend", "Muskelproteinsynthese über 24 Stunden"],

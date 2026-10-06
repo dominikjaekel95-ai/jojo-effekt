@@ -1,6 +1,7 @@
 /**
  * Wiegen mit Zonen aus STOP Regain (wing2006): grün bis +1,4 kg, gelb bis +2,3 kg, rot ab +2,3 kg über dem Gewicht am
  * Ende der Abnahme. Zwei Regler (Ausgangsgewicht, Wochenmittel) setzen die Marke; die Zone schaltet den Text um.
+ * Routine-Hilfe, keine medizinische Einschätzung: Seit 07.10.2026 löst keine Zone eine Arzt-Empfehlung aus (rot: Plan prüfen).
  */
 import { type Attr, type Ctx, de, fn, num, proWahl, rahmen, regler } from '../basis';
 
@@ -10,7 +11,7 @@ const pc = (kg: number) => ((Math.min(MAX, Math.max(0, kg)) / MAX) * 100).toFixe
 const ZONEN = {
   gruen: { name: 'Grün: nichts tun.', text: 'Das ist der Bereich, in dem Wasser, Salz, Zyklus und Darminhalt schwanken.' },
   gelb: { name: 'Gelb: zwei Wochen gegensteuern.', text: 'Protein an jedem Tag prüfen, zwei Krafteinheiten, Flüssigkalorien streichen, auf Schlaf achten. Dann wieder wiegen.' },
-  rot: { name: 'Rot: Ursachen klären.', text: 'Hat das Gegensteuern zwei Wochen lang nicht gewirkt, gehört der Gewichtsverlauf ins Gespräch mit der Ärztin oder dem Arzt.' },
+  rot: { name: 'Rot: Plan prüfen.', text: 'Hat das Gegensteuern zwei Wochen lang nicht gewirkt: Protein, Training, Schlaf und Flüssigkalorien durchgehen; die Maßnahmen aus Gelb laufen weiter.' },
 } as const;
 type Zone = keyof typeof ZONEN;
 

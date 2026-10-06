@@ -75,6 +75,10 @@
 .k-a:hover {
   text-decoration-color: var(--color-moss);
 }
+.k-lede sup a {
+  color: var(--color-ink-3);
+  text-decoration: none;
+}
 .k-doc {
   margin-top: 1.5rem;
   max-width: 44em;

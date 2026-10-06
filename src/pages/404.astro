@@ -1,10 +1,39 @@
 ---
+/** 404. noindex. Gestaltung „Kalk“ seit 06.10.2026: große Zahl, Wege zurück als Zeilen. */
 import Base from '../layouts/Base.astro';
+import SeitenKopf from '../components/SeitenKopf.astro';
+import Pfeil from '../components/Pfeil.astro';
+const wege = [
+  { href: '/wissen/', t: 'Wissensbereich', d: 'Absetzen, Jojo-Effekt, Muskeln: die Fakten, mit Quellen.' },
+  { href: '/', t: 'Startseite', d: 'Das 12-Wochen-Programm für die Zeit nach der Abnehmspritze.' },
+  { href: '/werkzeuge/', t: 'Werkzeuge', d: 'Zeitplan, Proteinrechner, Gewichtskorridor, Jahreskosten.' },
+  { href: '/glossar/', t: 'Glossar', d: 'Begriffe von Absetzkurve bis Halbwertszeit.' },
+];
 ---
 <Base title="Seite nicht gefunden" description="Diese Seite gibt es nicht." noindex>
-  <section class="container-narrow py-24 text-center">
-    <p class="eyebrow">404</p>
-    <h1 class="h1 mt-3 !text-4xl">Diese Seite gibt es nicht.</h1>
-    <p class="mt-4 text-ink-2">Vielleicht hilft der <a href="/wissen/" class="font-semibold text-moss underline underline-offset-4">Wissensbereich</a> oder die <a href="/" class="font-semibold text-moss underline underline-offset-4">Startseite</a>.</p>
-  </section>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: '404' }]} title="Diese Seite gibt es nicht." size="m" doc={false}>
+    <p>Vielleicht hilft der <a href="/wissen/">Wissensbereich</a> oder die <a href="/">Startseite</a>.</p>
+  </SeitenKopf>
+  <div class="container-wide k-end">
+    <p class="nf-n" aria-hidden="true" data-rv>404</p>
+    <ul class="k-rows nf-rows">
+      {wege.map((w, i) => (<li data-rv style={`--i:${i}`}><a href={w.href} class="k-row"><span class="k-row-t">{w.t}</span><span class="k-row-d">{w.d}</span><Pfeil /></a></li>))}
+    </ul>
+  </div>
 </Base>
+
+<style>
+  .nf-n {
+    margin-top: clamp(2rem, 5vh, 3rem);
+    font-stretch: 125%;
+    font-weight: 460;
+    letter-spacing: -0.04em;
+    line-height: 0.85;
+    font-size: clamp(6rem, 18vw, 13rem);
+    color: var(--color-ink);
+  }
+  .nf-rows {
+    max-width: 52rem;
+    margin-top: 2.5rem;
+  }
+</style>

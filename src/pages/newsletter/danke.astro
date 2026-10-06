@@ -1,43 +1,89 @@
 ---
-/** Ziel der Weiterleitung aus /api/anmeldung/. noindex, nicht in der Sitemap. ?fehler=eingabe|technik blendet den passenden Text ein. */
+/**
+ * Ziel der Weiterleitung aus /api/anmeldung/ (quelle=header). noindex, nicht in der Sitemap. ?fehler=eingabe|technik
+ * blendet den passenden Text ein. Gestaltung „Kalk“ seit 06.10.2026.
+ */
 import Base from '../../layouts/Base.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
+import Pfeil from '../../components/Pfeil.astro';
 import { site } from '../../data/site';
+const weiter = [
+  { href: '/checkliste/', label: 'Checkliste: die ersten 8 Wochen nach der letzten Dosis' },
+  { href: '/wissen/absetzen/', label: 'Thema Absetzen und Pausieren' },
+  { href: '/wissen/gewicht-halten/', label: 'Thema Gewicht halten' },
+  { href: '/marktradar/', label: 'Marktradar: was sich gerade ändert' },
+];
 ---
 <Base title="Newsletter: Bestätigung" description="Bestätige deine Anmeldung zum Newsletter von Nach der Spritze über den Link in der Mail." path="/newsletter/danke/" noindex>
-  <section class="container-narrow py-20 text-center">
-    <div id="nl-ok">
-      <p class="eyebrow">Fast geschafft</p>
-      <h1 class="h1 mt-3">Bitte bestätige deine Anmeldung.</h1>
-      <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">Wir haben dir über unseren Versanddienst MailerLite eine Mail mit einem Bestätigungslink geschickt. Erst nach dem Klick bist du angemeldet. Nichts angekommen? Ein Blick in den Spam-Ordner hilft meistens.</p>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: 'Newsletter' }]} meta="Newsletter" title="Bitte bestätige deine Anmeldung." doc={false} class="nd-ok">
+    <p>Wir haben dir über unseren Versanddienst MailerLite eine Mail mit einem Bestätigungslink geschickt. Erst nach dem Klick bist du angemeldet. Nichts angekommen? Ein Blick in den Spam-Ordner hilft meistens.</p>
+  </SeitenKopf>
+
+  <div class="container-wide k-end">
+    <div class="nd">
+      <div id="nl-eingabe" class="nd-msg" hidden>
+        <p class="nd-msg-h">Das hat nicht geklappt: Bitte E-Mail-Adresse und Kästchen prüfen.</p>
+        <p>Für die Anmeldung brauchen wir eine gültige E-Mail-Adresse und dein Häkchen bei der Einwilligung. Oben rechts unter „Newsletter“ kannst du es noch einmal versuchen.</p>
+      </div>
+      <div id="nl-technik" class="nd-msg" hidden>
+        <p class="nd-msg-h">Das hat gerade nicht geklappt. Wir tragen dich von Hand ein.</p>
+        <p>Die Anmeldung ist technisch nicht durchgegangen. Schreib uns kurz an <a href={`mailto:${site.owner.email}?subject=Newsletter`} class="k-a">{site.owner.email}</a>, dann erledigen wir das persönlich.</p>
+      </div>
+
+      <section class="nd-block" aria-labelledby="bis-h" data-rv>
+        <h2 id="bis-h" class="k-h3">Bis die erste Ausgabe kommt</h2>
+        <ul class="k-rows">
+          {weiter.map((w) => (<li><a href={w.href} class="k-row"><span class="k-row-t">{w.label}</span><Pfeil /></a></li>))}
+        </ul>
+        <p class="nd-p">Du hast eine Frage oder strauchelst gerade? Schreib an <a href={`mailto:${site.owner.email}?subject=${encodeURIComponent('Nach der Spritze: meine Frage')}`} class="k-a">{site.owner.email}</a>. Wir antworten persönlich.</p>
+      </section>
+
+      <p class="k-doc nd-doc">{site.doctorSentence}</p>
     </div>
-    <div id="nl-eingabe" class="hidden">
-      <p class="eyebrow">Das hat nicht geklappt</p>
-      <h1 class="h1 mt-3">Bitte E-Mail-Adresse und Kästchen prüfen.</h1>
-      <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">Für die Anmeldung brauchen wir eine gültige E-Mail-Adresse und dein Häkchen bei der Einwilligung. Oben rechts unter „Newsletter“ kannst du es noch einmal versuchen.</p>
-    </div>
-    <div id="nl-technik" class="hidden">
-      <p class="eyebrow">Das hat gerade nicht geklappt</p>
-      <h1 class="h1 mt-3">Wir tragen dich von Hand ein.</h1>
-      <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">Die Anmeldung ist technisch nicht durchgegangen. Schreib uns kurz an <a href={`mailto:${site.owner.email}?subject=Newsletter`} class="font-semibold text-moss underline underline-offset-4">{site.owner.email}</a>, dann erledigen wir das persönlich.</p>
-    </div>
-    <div class="mx-auto mt-10 max-w-xl rounded-xl2 border border-line bg-white p-6 text-left text-sm text-ink-2">
-      <p class="font-semibold text-ink">Bis die erste Ausgabe kommt</p>
-      <ul class="mt-2 space-y-1">
-        <li><a href="/checkliste/" class="text-moss underline underline-offset-4">Checkliste: die ersten 8 Wochen nach der letzten Dosis</a></li>
-        <li><a href="/wissen/absetzen/" class="text-moss underline underline-offset-4">Thema Absetzen und Pausieren</a></li>
-        <li><a href="/wissen/gewicht-halten/" class="text-moss underline underline-offset-4">Thema Gewicht halten</a></li>
-        <li><a href="/marktradar/" class="text-moss underline underline-offset-4">Marktradar: was sich gerade ändert</a></li>
-      </ul>
-      <p class="mt-4">Du hast eine Frage oder strauchelst gerade? Schreib an <a href={`mailto:${site.owner.email}?subject=${encodeURIComponent('Nach der Spritze: meine Frage')}`} class="text-moss underline underline-offset-4">{site.owner.email}</a>. Wir antworten persönlich.</p>
-    </div>
-    <p class="mt-6 text-sm font-medium text-ink">{site.doctorSentence}</p>
-  </section>
+  </div>
   <script is:inline>
     (function () {
       var f = new URLSearchParams(location.search).get('fehler');
       if (f !== 'eingabe' && f !== 'technik') return;
-      document.getElementById('nl-ok').classList.add('hidden');
-      document.getElementById('nl-' + f).classList.remove('hidden');
+      document.getElementById('nl-' + f).hidden = false;
+      var ok = document.querySelector('.nd-ok .k-lede');
+      if (ok) ok.hidden = true;
+      var h = document.querySelector('.nd-ok h1');
+      if (h) h.textContent = f === 'eingabe' ? 'Bitte E-Mail-Adresse und Kästchen prüfen.' : 'Wir tragen dich von Hand ein.';
     })();
   </script>
 </Base>
+
+<style>
+  .nd {
+    max-width: 46rem;
+  }
+  .nd-msg {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    background: var(--color-paper-2);
+    color: var(--color-ink-2);
+  }
+  .nd-msg-h {
+    font-weight: 560;
+    color: var(--color-ink);
+    margin-bottom: 0.4rem;
+  }
+  .nd-block {
+    margin-top: 3rem;
+  }
+  .nd-block .k-rows {
+    margin-top: 1rem;
+  }
+  .nd-block .k-row-t {
+    font-size: 1.125rem;
+  }
+  .nd-p {
+    margin-top: 1.5rem;
+    color: var(--color-ink-2);
+  }
+  .nd-doc {
+    margin-top: 2.5rem;
+  }
+</style>

@@ -1,5 +1,11 @@
 ---
+/**
+ * Glossar-Übersicht /glossar/: Begriffe nach Buchstaben, DefinedTermSet-JSON-LD. Gestaltung „Kalk“ seit 06.10.2026:
+ * Begriff links, Definition rechts, Haarlinien; eigene Begriffe mit gelber Markierung statt Etikett.
+ */
 import Base from '../../layouts/Base.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
+import Pfeil from '../../components/Pfeil.astro';
 import { getCollection } from 'astro:content';
 import { site } from '../../data/site';
 import { byTerm } from '../../lib/glossar';
@@ -39,45 +45,181 @@ const jsonLd = [
 ];
 ---
 <Base title={title} description={description} path="/glossar/" jsonLd={jsonLd}>
-  <section class="container-wide py-14">
-    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › Glossar</nav>
-    <p class="eyebrow mt-6">Glossar</p>
-    <h1 class="h1 mt-3">Begriffe zur Zeit nach der Abnehmspritze</h1>
-    <p class="mt-4 max-w-2xl text-lg text-ink-2">
-      Was Studien und Fachinformationen meinen, wenn sie von fettfreier Masse, Halbwertszeit oder adaptiver Thermogenese
-      sprechen. Jeder Eintrag: eine Definition in einem Satz, die wichtigste Zahl mit Quelle, und der Artikel, der das
-      Thema vertieft. Zwei Begriffe haben wir selbst geprägt, weil es dafür kein Wort gab; sie sind gekennzeichnet.
-    </p>
-    <p class="mt-3 max-w-2xl text-sm text-ink-3">
-      {entries.length} Begriffe · Stand {latest?.toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })} · Fehlt ein Begriff? Schreib an <a href={`mailto:${site.owner.email}`} class="underline">{site.owner.email}</a>.
-    </p>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: 'Glossar' }]} meta={`Glossar, ${entries.length} Begriffe`} title="Begriffe zur Zeit nach der Abnehmspritze" doc={false}>
+    <p>Was Studien und Fachinformationen meinen, wenn sie von fettfreier Masse, Halbwertszeit oder adaptiver Thermogenese sprechen. Jeder Eintrag: eine Definition in einem Satz, die wichtigste Zahl mit Quelle, und der Artikel, der das Thema vertieft. Zwei Begriffe haben wir selbst geprägt, weil es dafür kein Wort gab; sie sind gekennzeichnet.</p>
+    <p class="gl-stand" slot="nach">{entries.length} Begriffe · Stand {latest?.toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })} · Fehlt ein Begriff? Schreib an <a href={`mailto:${site.owner.email}`} class="k-q">{site.owner.email}</a>.</p>
+  </SeitenKopf>
 
-    <nav aria-label="Buchstaben" class="mt-8 flex flex-wrap gap-2 text-sm font-semibold">
-      {letters.map((l) => (<a href={`#buchstabe-${l}`} class="rounded-lg border border-line bg-white px-3 py-1 text-ink hover:border-moss hover:text-moss">{l}</a>))}
+  <div class="container-wide k-end">
+    <nav aria-label="Buchstaben" class="k-jump gl-abc">
+      {letters.map((l) => (<a href={`#buchstabe-${l}`}>{l}</a>))}
     </nav>
 
     {letters.map((l) => (
-      <section id={`buchstabe-${l}`} class="mt-10 scroll-mt-24" aria-labelledby={`buchstabe-${l}-h`}>
-        <h2 id={`buchstabe-${l}-h`} class="text-2xl font-bold text-moss">{l}</h2>
-        <div class="mt-4 grid gap-4 md:grid-cols-2">
-          {entries.filter((e) => e.data.term[0].toUpperCase() === l).map((e) => (
-            <a href={`/glossar/${e.id}/`} class="card group block no-underline hover:border-moss">
-              <p class="text-xl font-bold leading-snug text-ink group-hover:text-moss">{e.data.term}{e.data.own && (<> <span class="ml-2 align-middle rounded-md bg-amber-light px-2 py-0.5 text-xs font-semibold text-amber-dark">Begriff von Nach der Spritze</span></>)}</p>
-              <p class="mt-2 text-sm text-ink-2">{e.data.short}</p>
-            </a>
+      <section id={`buchstabe-${l}`} class="gl-sec scroll-mt-24" aria-labelledby={`buchstabe-${l}-h`}>
+        <h2 id={`buchstabe-${l}-h`} class="gl-l" data-rv>{l}</h2>
+        <ul class="gl-list">
+          {entries.filter((e) => e.data.term[0].toUpperCase() === l).map((e, i) => (
+            <li data-rv style={`--i:${i % 4}`}>
+              <a href={`/glossar/${e.id}/`} class="gl-row">
+                <span class="gl-t"><span class:list={['gl-term', e.data.own && 'gl-own']}>{e.data.term}</span>{e.data.own && (<span class="gl-tag">Begriff von Nach der Spritze</span>)}</span>
+                <span class="gl-d">{e.data.short}</span>
+                <Pfeil />
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
     ))}
 
-    <div class="mt-14 rounded-xl2 border border-line bg-white p-6">
-      <p class="eyebrow">Wie das Glossar entsteht</p>
-      <p class="mt-2 max-w-2xl text-ink-2">
-        Aufgenommen werden Begriffe, die in den Studien zur Zeit nach GLP-1-Medikamenten vorkommen und die sonst nirgends
-        verständlich erklärt sind. Jede Zahl verweist auf die Originalarbeit. Eigene Begriffe ({own.map((e) => e.data.term).join(', ')}) sind als solche
-        markiert. Vertiefungen stehen im <a href="/wissen/" class="font-semibold text-moss underline underline-offset-4">Wissensbereich</a>, die Studien im <a href="/wissen/studien/" class="font-semibold text-moss underline underline-offset-4">Studien-Tracker</a>, aktuelle Entwicklungen im <a href="/marktradar/" class="font-semibold text-moss underline underline-offset-4">Marktradar</a>.
-      </p>
-      <p class="mt-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
-    </div>
-  </section>
+    <section class="k-sec gl-how" aria-labelledby="wie-h" data-rv>
+      <h2 id="wie-h" class="k-h3">Wie das Glossar entsteht</h2>
+      <div>
+        <p>
+          Aufgenommen werden Begriffe, die in den Studien zur Zeit nach GLP-1-Medikamenten vorkommen und die sonst nirgends
+          verständlich erklärt sind. Jede Zahl verweist auf die Originalarbeit. Eigene Begriffe ({own.map((e) => e.data.term).join(', ')}) sind als solche
+          markiert. Vertiefungen stehen im <a href="/wissen/" class="k-a">Wissensbereich</a>, die Studien im <a href="/wissen/studien/" class="k-a">Studien-Tracker</a>, aktuelle Entwicklungen im <a href="/marktradar/" class="k-a">Marktradar</a>.
+        </p>
+        <p class="gl-doc">{site.doctorSentence}</p>
+      </div>
+    </section>
+  </div>
 </Base>
+
+<style>
+  .gl-stand {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
+  .gl-abc {
+    gap: 0.25rem 1.1rem;
+    font-size: 1rem;
+  }
+  .gl-abc a {
+    font-stretch: 118%;
+    font-weight: 520;
+    color: var(--color-ink);
+    min-width: 1.25rem;
+    text-align: center;
+  }
+  .gl-sec {
+    display: grid;
+    gap: 0.5rem 2rem;
+    margin-top: clamp(2.5rem, 6vh, 3.75rem);
+  }
+  .gl-l {
+    font-stretch: 125%;
+    font-weight: 470;
+    letter-spacing: -0.03em;
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    line-height: 0.95;
+    color: var(--color-ink);
+  }
+  .gl-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--color-ink);
+  }
+  .gl-list li {
+    border-bottom: 1px solid var(--color-line);
+  }
+  .gl-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.35rem 2.5rem;
+    padding: 1.15rem 0;
+    color: inherit;
+    text-decoration: none;
+  }
+  .gl-t {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.9rem;
+  }
+  .gl-term {
+    font-stretch: 115%;
+    font-weight: 520;
+    letter-spacing: -0.012em;
+    font-size: clamp(1.1875rem, 1.7vw, 1.4rem);
+    line-height: 1.25;
+    color: var(--color-ink);
+  }
+  /* Eigene Begriffe: gelbe Markierung unter dem Wort */
+  .gl-own {
+    background-image: linear-gradient(var(--color-amber), var(--color-amber));
+    background-repeat: no-repeat;
+    background-size: 100% 0.18em;
+    background-position: 0 92%;
+  }
+  .gl-tag {
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+  }
+  .gl-d {
+    grid-column: 1;
+    font-size: 0.975rem;
+    line-height: 1.55;
+    color: var(--color-ink-2);
+    max-width: 48em;
+  }
+  .gl-row > :global(svg) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    transition: transform 0.4s var(--ease);
+  }
+  .gl-row:hover .gl-term {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+  }
+  .gl-row:hover > :global(svg) {
+    transform: translateX(4px);
+  }
+  @media (min-width: 900px) {
+    .gl-sec {
+      grid-template-columns: 8rem minmax(0, 1fr);
+    }
+    .gl-l {
+      position: sticky;
+      top: 6rem;
+      align-self: start;
+      padding-top: 0.85rem;
+    }
+    .gl-row {
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr) auto;
+      align-items: baseline;
+    }
+    .gl-d {
+      grid-column: 2;
+    }
+    .gl-row > :global(svg) {
+      grid-column: 3;
+      grid-row: 1;
+    }
+  }
+  .gl-how {
+    display: grid;
+    gap: 0.75rem 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-ink);
+    color: var(--color-ink-2);
+  }
+  .gl-how > div {
+    max-width: 44em;
+  }
+  .gl-doc {
+    margin-top: 0.75rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-ink);
+  }
+  @media (min-width: 900px) {
+    .gl-how {
+      grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+    }
+  }
+</style>

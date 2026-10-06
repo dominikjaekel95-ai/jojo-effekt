@@ -52,10 +52,10 @@ export const site = {
   // das Formular zeigt (sonst steht dort der Weg per E-Mail) und ob der Datenschutz-Abschnitt 4b erscheint.
   checklistForm: { live: true },
   // Newsletter: Das optionale Kästchen „Newsletter“ steht im Tally-Erfahrungsformular (Übergabe per Webhook an api/newsletter.js)
-  // und in den eigenen Formularen, die an api/anmeldung.js bzw. api/ernaehrungsplan.js posten: Header-Formular (NewsletterPanel;
-  // die Einwilligung dort ist die Newsletter-Einwilligung), ChecklisteForm (freiwilliges Häkchen), WaitlistForm (die Einwilligung
-  // nennt Warteliste UND Newsletter, solange waitlist.ownGroup false ist; sonst freiwilliges Zusatz-Häkchen) und das Formular des
-  // Ernährungsplans (Einwilligung „Plan plus Newsletter“). Versand über MailerLite mit Double-Opt-in (docs/NEWSLETTER.md,
+  // und in den eigenen Formularen, die an api/anmeldung.js bzw. api/ernaehrungsplan.js posten: ChecklisteForm (freiwilliges
+  // Häkchen), WaitlistForm (freiwilliges Zusatz-Häkchen, solange waitlist.ownGroup true ist) und das Formular des
+  // Ernährungsplans (Einwilligung „Plan plus Newsletter“). Ein eigenes Newsletter-Formular im Kopf gibt es seit 06.10.2026
+  // nicht mehr; dort steht nur „Schreib uns“. Versand über MailerLite mit Double-Opt-in (docs/NEWSLETTER.md,
   // docs/NEWSLETTER-SETUP.md). `provider` auf null setzen, falls der Versand pausiert; Datenschutz und Danke-Seiten folgen.
   newsletter: {
     provider: {

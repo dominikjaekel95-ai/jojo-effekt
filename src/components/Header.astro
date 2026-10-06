@@ -1,11 +1,11 @@
 ---
 /**
- * Kopf: Wortmarke, Hauptnavigation, Kontakt „Schreib uns“, Newsletter (ruhig, als Textknopf) und Button „Warteliste“.
+ * Kopf: Wortmarke, Hauptnavigation, Kontakt „Schreib uns“ und Button „Warteliste“. Den Newsletter-Knopf gibt es seit
+ * 06.10.2026 nicht mehr; der Newsletter ist ein freiwilliges Häkchen bei Checkliste, Ernährungsplan und Warteliste.
  * Unter 1024 px: Warteliste bleibt sichtbar, der Rest liegt im Menü (<details>, funktioniert auch ohne Skript;
  * das kleine Skript schließt es bei Klick außerhalb, Escape und Linkwahl).
  */
 import Logo from './Logo.astro';
-import NewsletterPanel from './NewsletterPanel.astro';
 import { nav, site } from '../data/site';
 const kontakt = `mailto:${site.owner.email}?subject=${encodeURIComponent('Nach der Spritze: meine Frage')}`;
 ---
@@ -17,7 +17,6 @@ const kontakt = `mailto:${site.owner.email}?subject=${encodeURIComponent('Nach d
     </nav>
     <div class="hd-r">
       <a href={kontakt} class="hd-link hd-desk plausible-event-name=Kontakt+Klick plausible-event-kanal=header">Schreib uns</a>
-      <NewsletterPanel />
       <a href="/#warteliste" class="btn-primary hd-cta plausible-event-name=Warteliste+Klick plausible-event-position=header">Warteliste</a>
       <details class="hd-menu" id="hd-menu">
         <summary aria-label="Menü öffnen">
@@ -26,7 +25,6 @@ const kontakt = `mailto:${site.owner.email}?subject=${encodeURIComponent('Nach d
         <nav aria-label="Menü" class="hd-mnav">
           {nav.map((item) => (<a href={item.href}>{item.label}</a>))}
           <a href={kontakt} class="plausible-event-name=Kontakt+Klick plausible-event-kanal=menue">Schreib uns</a>
-          <button type="button" class="hd-mnl" data-open-newsletter>Newsletter</button>
         </nav>
       </details>
     </div>
@@ -124,7 +122,7 @@ const kontakt = `mailto:${site.owner.email}?subject=${encodeURIComponent('Nach d
     border-bottom: 1px solid var(--color-line);
     padding: 0.25rem var(--pad) 1rem;
   }
-  .hd-mnav a, .hd-mnl {
+  .hd-mnav a {
     display: flex;
     align-items: center;
     min-height: 3.25rem;
@@ -134,20 +132,9 @@ const kontakt = `mailto:${site.owner.email}?subject=${encodeURIComponent('Nach d
     font-size: 1.1875rem;
     font-stretch: 112%;
     font-weight: 480;
-    background: none;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
-    padding: 0;
-    text-align: left;
-    cursor: pointer;
-    font-family: inherit;
   }
   .hd-mnav a:first-child {
     border-top: 0;
-  }
-  :global(html:not(.js)) .hd-mnl {
-    display: none;
   }
   @media (max-width: 420px) {
     .hd-in { height: 3.75rem; gap: 0.5rem; }
@@ -175,12 +162,9 @@ const kontakt = `mailto:${site.owner.email}?subject=${encodeURIComponent('Nach d
   (function () {
     var m = document.getElementById('hd-menu');
     if (!m) return;
-    var nl = document.getElementById('newsletter-panel');
     document.addEventListener('click', function (e) { if (m.open && !m.contains(e.target)) m.open = false; });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && m.open) { m.open = false; m.querySelector('summary').focus(); } });
     m.addEventListener('toggle', function () { m.querySelector('summary').setAttribute('aria-label', m.open ? 'Menü schließen' : 'Menü öffnen'); });
     m.querySelectorAll('.hd-mnav a').forEach(function (a) { a.addEventListener('click', function () { m.open = false; }); });
-    var b = m.querySelector('[data-open-newsletter]');
-    if (b && nl) b.addEventListener('click', function (e) { e.stopPropagation(); m.open = false; nl.open = true; var f = nl.querySelector('input[type=email]'); if (f) f.focus(); });
   })();
 </script>

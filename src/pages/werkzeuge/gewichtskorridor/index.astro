@@ -219,7 +219,7 @@ const jsonLd = [
       else if (diff < 1.4) pos = (diff / 1.4) * 40;
       else if (diff < 2.3) pos = 40 + ((diff - 1.4) / 0.9) * 25;
       else pos = Math.min(100, 65 + ((diff - 2.3) / 2.3) * 35);
-      marker.style.setProperty('--pos', `${pos}%`);
+      marker.style.setProperty('--pos', pos.toFixed(2));
       marker.dataset.seite = pos > 75 ? 'rechts' : pos < 15 ? 'links' : '';
       q('[data-marker-text]').textContent = `heute ${kg(aktuell)}`;
       marker.classList.remove('hidden');
@@ -313,6 +313,7 @@ const jsonLd = [
   /* Leiste mit drei Zonen und Marke für heute */
   .kr-bar {
     position: relative;
+    container-type: inline-size;
     margin-top: 2rem;
     padding-top: 2.75rem;
   }
@@ -334,13 +335,14 @@ const jsonLd = [
   .kr-seg span:last-child {
     border-radius: 0 999px 999px 0;
   }
+  /* Marke ohne eigene Breite, verschoben um --pos Prozent der Leiste (cqi): kein Überlauf nach rechts */
   .kr-mk {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 2.6rem;
-    transform: translateX(var(--pos, 0%));
+    transform: translateX(calc(var(--pos, 0) * 1cqi));
     transition: transform 0.8s var(--ease);
     pointer-events: none;
   }

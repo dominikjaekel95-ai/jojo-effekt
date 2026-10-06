@@ -5,6 +5,7 @@ description: "Omega-3 hält weder Gewicht noch Muskeln, Belege fehlen. Was EPA u
 category: "Ernährung"
 order: 22
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["omega 3 abnehmspritze", "omega 3 wegovy", "omega 3 ozempic", "fischöl abnehmspritze", "omega 3 nach abnehmspritze", "omega 3 kapseln abnehmen", "epa dha abnehmspritze"]
 sources: ["efsa2010fats", "euClaims", "dgeEmpfehlungen", "bls", "wilding2022ext", "almandoz2024", "wilding2021dxa", "who2020", "leidy2015"]
 related: ["supplements-nach-abnehmspritze", "vitamin-d-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
@@ -57,6 +58,8 @@ Werte aus dem Bundeslebensmittelschlüssel, gerundet.<sup><a href="#fn-bls">4</a
 
 Lesart: Eine Portion Lachs oder Makrele pro Woche liefert rund 2,5 g EPA und DHA, also mehr als die 1,75 g, die sich aus 250 mg am Tag für eine Woche ergeben. Die DGE-Empfehlung von ein- bis zweimal Fisch pro Woche ist damit auch rechnerisch die Lösung.<sup><a href="#fn-dgeEmpfehlungen">3</a></sup> Wer keinen Fisch isst, deckt den Wert über eine Kapsel mit 250 bis 500 mg EPA und DHA; bei veganer Ernährung über Algenöl, das DHA und meist auch EPA enthält. Leinöl, Rapsöl und Walnüsse liefern ALA; der Körper wandelt davon nur einen kleinen Teil in EPA und DHA um.<sup><a href="#fn-efsa2010fats">1</a></sup>
 
+<div data-interaktiv="teller" data-vorlage="omega-3"></div>
+
 ## Unter der Spritze: wenn die Portionen klein werden
 
 Wer unter der Spritze auf 1.000 bis 1.200 Kalorien am Tag kommt, isst meist auch wenig Fett, und fetter Fisch gehört zu den Lebensmitteln, die bei kleinem Appetit als Erstes gestrichen werden. Die Expertengruppe um Almandoz empfiehlt bei sehr geringer Energiezufuhr unter Adipositas-Medikamenten, auf Protein, Ballaststoffe, Flüssigkeit und Mikronährstoffe zu achten.<sup><a href="#fn-almandoz2024">6</a></sup> Praktisch löst Fisch als Proteinportion zweimal pro Woche drei Dinge auf einmal: Protein, EPA und DHA und einen Teil des Vitamin D, das in fettem Fisch steckt. Mehr dazu unter [Vitamin D bei der Abnehmspritze](/wissen/vitamin-d-abnehmspritze/).
@@ -87,4 +90,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Omega-3-Kapseln sind Nahrungsergänzungsmittel; sie ersetzen weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament; Omega-3 ist nicht enthalten.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Omega-3-Kapseln sind Nahrungsergänzungsmittel; sie ersetzen weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*

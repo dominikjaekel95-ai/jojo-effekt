@@ -6,9 +6,9 @@ category: "Präparate"
 image: /grafiken/halbwertszeiten-praeparate.png
 order: 9
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["mounjaro absetzen", "mounjaro absetzen gewicht", "mounjaro absetzen jojo", "mounjaro absetzen was passiert", "tirzepatid absetzen", "mounjaro halbwertszeit", "mounjaro ausschleichen"]
-sources: ["fachinfoMounjaro", "jastreboff2022", "aronne2024", "aronne2025surmount5", "wu2025", "jensen2024", "leidy2015", "who2020"]
+sources: ["fachinfoMounjaro", "jastreboff2022", "aronne2024", "aronne2025surmount5", "wu2025", "jensen2024", "leidy2015", "who2020", "fachinfoWegovy", "rubino2021"]
 related: ["abnehmspritze-absetzen", "wegovy-absetzen", "gewicht-halten-nach-abnehmspritze"]
 faq:
   - q: "Wie lange bleibt Mounjaro nach der letzten Spritze im Körper?"
@@ -45,6 +45,8 @@ Tirzepatid hat laut Fachinformation eine Halbwertszeit von etwa fünf Tagen.<sup
 
 Das Zeitfenster, in dem man Routinen ohne Gegenwind aufbauen kann, ist bei Mounjaro also kürzer als bei Wegovy. Wer absetzen will, sollte Training und Proteinroutine deshalb schon Wochen vor der letzten Dosis stehen haben.
 
+<div data-interaktiv="wirkstoffspiegel" data-wirkstoffe="tirzepatid,semaglutid" data-tag="21"></div>
+
 ## Was mit dem Gewicht passiert: SURMOUNT-4
 
 Die Studie zum Absetzen von Tirzepatid heißt SURMOUNT-4.<sup><a href="#fn-aronne2024">3</a></sup> Alle Teilnehmenden bekamen zunächst 36 Wochen Mounjaro und verloren im Mittel 20,9 %. Dann wurde die Hälfte auf Placebo umgestellt, die andere Hälfte spritzte weiter:
@@ -53,6 +55,8 @@ Die Studie zum Absetzen von Tirzepatid heißt SURMOUNT-4.<sup><a href="#fn-aronn
 |---|---|
 | Wechsel auf Placebo | +14 Prozentpunkte. Netto nach insgesamt 88 Wochen: noch etwa −9,9 % gegenüber dem Start. |
 | Weiterbehandlung | −5,5 Prozentpunkte zusätzlich. Netto: etwa −25 %. |
+
+<div data-interaktiv="gabelung" data-studien="surmount4,step4"></div>
 
 Zwei Dinge daran sind wichtig. Erstens: Ein Jahr nach dem Absetzen lag das Gewicht im Mittel noch knapp 10 % unter dem Start. Der Jojo-Effekt ist real, aber er frisst nicht alles auf. Zweitens: Die Streuung war groß. Ein Teil der Placebo-Gruppe hielt den Verlust weitgehend, ein Teil nahm fast alles wieder zu. Eine Meta-Analyse über mehrere Adipositas-Medikamente zeigt, dass die Zunahme etwa ab Woche 8 messbar wird und bis etwa Woche 20 anhält.<sup><a href="#fn-wu2025">5</a></sup> Bei Tirzepatid mit seiner kürzeren Halbwertszeit ist ein früherer Beginn plausibel.
 
@@ -84,4 +88,4 @@ Der ausführliche Plan: [Gewicht halten nach der Abnehmspritze: der 12-Wochen-Pl
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Mounjaro ist eine Marke von Eli Lilly. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Programm für die Zeit danach, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Mounjaro ist eine Marke von Eli Lilly. Das 12-Wochen-Programm von Nach der Spritze setzt nach der letzten Dosis an, mit Krafttraining, Proteinziel und Gewichtskorridor; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

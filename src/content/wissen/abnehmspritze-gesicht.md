@@ -5,6 +5,7 @@ description: "Eingefallene Wangen nach der Spritze: kein Krankheitsbild, sondern
 category: "Ernährung"
 order: 24
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["abnehmspritze gesicht", "ozempic face", "ozempic gesicht", "abnehmspritze eingefallenes gesicht", "wegovy gesicht eingefallen", "abnehmspritze haut hängt", "abnehmspritze falten", "schnell abnehmen gesicht eingefallen"]
 sources: ["wilding2021step1", "wilding2021dxa", "leidy2015", "who2020", "euClaims", "dgeReferenzwerte", "bls", "proksch2014", "wilding2022ext"]
 related: ["muskelabbau-abnehmspritze", "protein-abnehmspritze", "haarausfall-abnehmspritze"]
@@ -43,6 +44,8 @@ Das passiert bei jeder schnellen Gewichtsabnahme, nach Magenoperationen genauso 
 
 Beim Abnehmen mit Semaglutid entfielen in einer Substudie rund 40 % des Gewichtsverlusts auf fettfreie Masse, darunter Muskeln.<sup><a href="#fn-wilding2021dxa">2</a></sup> Das macht die Wangen nicht voller, aber es entscheidet, wie der Körper insgesamt aussieht: Fett weg und Muskeln da ist etwas anderes als Fett weg und Muskeln weg. Was den Muskelanteil klein hält, ist belegt: 1,2 bis 1,6 g Protein pro kg Körpergewicht<sup><a href="#fn-leidy2015">3</a></sup> und Krafttraining an mindestens zwei Tagen pro Woche.<sup><a href="#fn-who2020">4</a></sup> Wie das praktisch aussieht, steht unter [Muskelabbau bei der Abnehmspritze](/wissen/muskelabbau-abnehmspritze/) und [Protein nach der Abnehmspritze](/wissen/protein-abnehmspritze/).
 
+<div data-interaktiv="zusammensetzung"></div>
+
 ### Die Haut versorgen
 
 Für die Haut sind in der EU unter anderem diese Angaben zugelassen:<sup><a href="#fn-euClaims">5</a></sup> Vitamin C trägt zu einer normalen Kollagenbildung für eine normale Funktion der Haut bei. Zink und Biotin tragen zur Erhaltung normaler Haut bei. Keine dieser Angaben verspricht straffere Haut; sie sagen, dass die Haut ohne ausreichende Versorgung nicht normal arbeitet. Unter der Spritze ist das kein theoretisches Problem: Wer bei 1.000 Kalorien am Tag Obst und Gemüse streicht, kommt kaum auf die 95 mg (Frauen) bzw. 110 mg (Männer) Vitamin C, die die DGE ansetzt.<sup><a href="#fn-dgeReferenzwerte">6</a></sup>
@@ -57,6 +60,8 @@ Für die Haut sind in der EU unter anderem diese Angaben zugelassen:<sup><a href
 | Kartoffeln gegart, 200 g | 25 mg |
 
 Werte aus dem Bundeslebensmittelschlüssel, gerundet.<sup><a href="#fn-bls">7</a></sup> Eine Paprika oder eine Portion Beeren am Tag deckt den Wert; ein Präparat braucht es dafür nicht.
+
+<div data-interaktiv="teller" data-vorlage="vitamin-c"></div>
 
 ### Kollagenpeptide: ein Hinweis, kein Beleg
 
@@ -83,4 +88,4 @@ In der STEP-1-Verlängerung waren ein Jahr nach der letzten Dosis im Mittel zwei
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Mittel für die Haut; es enthält Protein, Ballaststoffe und Kreatin, kein Kollagen und kein Vitamin C.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Mittel für die Haut. Wer vom Start erfahren will, trägt sich auf die [Warteliste](/#warteliste) ein.*

@@ -5,6 +5,7 @@ description: "Nach 10 % Gewichtsverlust verbraucht der Körper 300 bis 400 kcal 
 category: "Ernährung"
 order: 28
 pubDate: 2026-10-04
+updatedDate: 2026-10-06
 keywords: ["kalorienbedarf nach abnehmspritze", "grundumsatz nach abnehmspritze", "grundumsatz nach dem abnehmen berechnen", "abnehmspritze absetzen wie viel essen", "kalorienbedarf berechnen nach gewichtsverlust", "stoffwechsel nach abnehmspritze absetzen", "mifflin st jeor formel"]
 sources: ["mifflin1990", "dgeEnergie", "leibel1995", "rosenbaum2010", "rosenbaum2008", "fothergill2016", "martins2020", "blundell2017", "ravussin2025", "wilding2021dxa", "look2025surmount1dxa", "levine2002", "leidy2015", "who2020", "wu2025"]
 related: ["jojo-effekt-abnehmspritze", "ernaehrung-nach-abnehmspritze", "muskelabbau-abnehmspritze"]
@@ -53,6 +54,8 @@ Zwei Rechenbeispiele, vor und nach einem Gewichtsverlust von rund 15 kg (eigene 
 
 Pro 15 kg weniger senkt die Formel den Ruheenergieverbrauch um 150 kcal, den Tagesbedarf bei Faktor 1,4 um 210 kcal. Das ist der erste Effekt. Der zweite steht nicht in der Formel.
 
+<div data-interaktiv="bedarf"></div>
+
 ## Warum der echte Verbrauch unter der Formel liegt
 
 Gemessen verbraucht der Körper nach Gewichtsverlust weniger, als die Formel für das neue Gewicht ausgibt. In stationären Messungen an 41 Personen lag der Gesamtenergieverbrauch nach Halten eines um mindestens 10 % reduzierten Gewichts um 6 bis 8 kcal pro Kilogramm fettfreier Masse und Tag unter dem erwarteten Wert; Ruhe- und Aktivitätsverbrauch trugen je 3 bis 4 kcal pro Kilogramm bei.<sup><a href="#fn-leibel1995">3</a></sup> Bei 50 kg fettfreier Masse sind das 300 bis 400 kcal am Tag, die Größenordnung, die Übersichtsarbeiten nennen.<sup><a href="#fn-rosenbaum2010">4</a></sup> Für die Beispiele oben heißt das: Die Frau mit 80 kg braucht nicht 2.067, sondern eher 1.700 bis 1.800 kcal, der Mann mit 95 kg nicht 2.562, sondern eher 2.150 bis 2.250.
@@ -60,6 +63,8 @@ Gemessen verbraucht der Körper nach Gewichtsverlust weniger, als die Formel fü
 Der Effekt verschwindet nicht von allein. Bei Menschen, die ein um mindestens 10 % reduziertes Gewicht länger als ein Jahr gehalten hatten, war der Verbrauch in derselben Größenordnung abgesenkt wie direkt nach dem Abnehmen.<sup><a href="#fn-rosenbaum2008">5</a></sup> Nach extremem Gewichtsverlust kann es Jahre dauern: Bei 14 Teilnehmenden einer Abnehm-Show lag der Ruheenergieverbrauch sechs Jahre später rund 500 kcal am Tag unter dem Wert, den Gewicht und Körperzusammensetzung erwarten lassen.<sup><a href="#fn-fothergill2016">6</a></sup>
 
 Das ist aber kein Gesetz. Nach moderatem Gewichtsverlust ist die Anpassung klein: Bei Frauen, die mit einer Diät etwa 14 kg abgenommen hatten, lag der Ruheverbrauch 92 kcal am Tag unter dem erwarteten Wert, nach vier Wochen Gewichtsstabilisierung noch 38 kcal; und die Größe der Anpassung sagte nicht voraus, wer nach einem Jahr wieder zugenommen hatte.<sup><a href="#fn-martins2020">7</a></sup> Die metabolische Adaptation erklärt also, warum die alte Portion zu groß ist. Sie erklärt nicht, warum das Gewicht zurückkommt; das tun Appetit und Portion.
+
+<div data-interaktiv="vergleich" data-vorlage="anpassung"></div>
 
 ## Was die Spritze mit dem Verbrauch macht, und was nicht
 
@@ -82,4 +87,4 @@ Die Zahlen oben sind Mittelwerte aus kleinen Messreihen; dein Verbrauch kann dar
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin für jeden Tag und begleitet dich durch zwei Krafteinheiten pro Woche – als Lebensmittel mit Programm, nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze arbeitet mit einem Gewichtskorridor statt mit Kalorienzählen, dazu mit Proteinziel und zwei Krafteinheiten pro Woche; es ist kein Medikament und kein Diätplan. Start und Preis über die [Warteliste](/#warteliste).*

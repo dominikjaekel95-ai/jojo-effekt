@@ -5,6 +5,7 @@ description: "Wer unter der Abnehmspritze wenig isst, kommt selten auf 300 bis 3
 category: "Ernährung"
 order: 18
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["magnesium abnehmspritze", "magnesium wegovy", "magnesium ozempic", "magnesium mounjaro", "magnesiummangel abnehmspritze", "wadenkrämpfe abnehmspritze magnesium", "magnesium nach abnehmspritze"]
 sources: ["dgeReferenzwerte", "nvs2", "almandoz2024", "bls", "euClaims", "garrison2020", "bfrHoechstmengen2021", "who2020", "leidy2015"]
 related: ["supplements-nach-abnehmspritze", "ernaehrung-nach-abnehmspritze", "kreatin-abnehmspritze"]
@@ -34,6 +35,8 @@ Magnesium ist nach Kreatin das Supplement, nach dem Menschen unter der Abnehmspr
 
 Magnesium steckt vor allem in Lebensmitteln mit Volumen: Vollkorn, Hülsenfrüchte, grünes Gemüse, Nüsse und Kerne. Genau diese Lebensmittel fallen bei kleinem Appetit als Erstes weg, weil sie sättigen, bevor der Teller leer ist. Wer unter der Spritze auf 1.000 bis 1.200 Kalorien am Tag kommt, isst oft Joghurt, Eier, etwas Fleisch oder Fisch und wenig davon, was Magnesium liefert. Die Expertengruppe um Almandoz empfiehlt deshalb bei sehr geringer Energiezufuhr unter Adipositas-Medikamenten eine Ergänzung von Mikronährstoffen.<sup><a href="#fn-almandoz2024">3</a></sup>
 
+<div data-interaktiv="punktfeld" data-vorlage="magnesium"></div>
+
 Wie viel die typischen Lieferanten bringen, zeigt die Tabelle. Die Werte sind aus dem Bundeslebensmittelschlüssel gerundet.<sup><a href="#fn-bls">4</a></sup>
 
 | Lebensmittel, Portion | Magnesium, etwa |
@@ -48,6 +51,8 @@ Wie viel die typischen Lieferanten bringen, zeigt die Tabelle. Die Werte sind au
 | Mineralwasser, 1 Liter | 20 bis 110 mg, je nach Sorte |
 
 Lesart: Mit Haferflocken zum Frühstück, einer Handvoll Kerne und einem magnesiumreichen Mineralwasser kommen auch bei kleinen Portionen rund 300 mg zusammen. Ohne diese drei wird es eng.
+
+<div data-interaktiv="teller" data-vorlage="magnesium"></div>
 
 ## Was die zugelassenen Angaben sagen
 
@@ -88,4 +93,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Magnesium ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament; Magnesium ist nicht enthalten.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Magnesium ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*

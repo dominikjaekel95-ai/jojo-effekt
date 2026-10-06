@@ -6,7 +6,7 @@ category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 11
 pubDate: 2026-09-30
-updatedDate: 2026-10-03
+updatedDate: 2026-10-06
 keywords: ["nach der abnehmspritze ernährung", "ernährung nach abnehmspritze", "abnehmspritze ernährung danach", "was essen nach abnehmspritze", "ernährungsplan nach abnehmspritze", "ernährungsplan nach abnehmspritze pdf", "ernährung nach wegovy", "abnehmspritze ernährung umstellen"]
 sources: ["wu2025", "sumithran2011", "leidy2015", "almandoz2024", "dgeBallaststoffe", "dgeEmpfehlungen", "wilding2022ext", "jensen2024", "bls", "wing2006"]
 related: ["protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze", "supplements-nach-abnehmspritze"]
@@ -68,6 +68,8 @@ Drei bis vier Mahlzeiten zu festen Zeiten, dazwischen nichts aus der Hand. Der H
 
 Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du reagierst und wie. Die Zonen aus der STOP-Regain-Studie: bis plus 1,4 kg nichts tun, ab plus 1,4 kg zwei Wochen lang Protein und Training prüfen, ab plus 2,3 kg Ursachen klären und den Kontrolltermin vorziehen.<sup><a href="#fn-wing2006">10</a></sup> Der Plan dazu steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/); wie oft die Waage sinnvoll ist und wann sie schadet, unter [Wie oft wiegen nach der Abnehmspritze?](/wissen/wie-oft-wiegen-nach-abnehmspritze/).
 
+<div data-interaktiv="zonen"></div>
+
 ## Ein Tag nach der Spritze (80 kg, Ziel 100 g Protein)
 
 | Zeit | Mahlzeit | Protein | Wozu |
@@ -78,6 +80,8 @@ Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du
 | Abends | Linsen- oder Bohneneintopf mit Gemüse, 2 Eier oder 150 g Fisch | ca. 30 g | Ballaststoffe und Protein, kein Nachschlag nötig |
 
 Zusammen rund 100 g Protein und 30 g Ballaststoffe, ohne Kalorienzählen. Die Mengen sind ein Beispiel für 80 kg; die Formel steht oben.
+
+<div data-interaktiv="teller" data-vorlage="protein-tag-ernaehrung"></div>
 
 Haferflocken, Linsen, Fisch und Eier decken an so einem Tag nebenbei auch das, was unter der Spritze bei kleineren Portionen knapp werden kann. Was dann im Einzelnen gilt und wann ein Blutwert dran ist, steht unter [Magnesium](/wissen/magnesium-abnehmspritze/), [Vitamin D](/wissen/vitamin-d-abnehmspritze/), [Vitamin B12](/wissen/vitamin-b12-abnehmspritze/) und [Eisen](/wissen/eisen-abnehmspritze/). Der Fisch zweimal pro Woche liefert außerdem EPA und DHA; warum das für das Gewicht nichts bringt und trotzdem sinnvoll ist, steht unter [Omega-3 bei der Abnehmspritze](/wissen/omega-3-abnehmspritze/).
 
@@ -105,4 +109,4 @@ Wenn das Gewicht trotz Struktur steigt, wenn Essanfälle auftreten oder wenn Typ
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin als Ergänzung zu genau dieser Ernährung – als Lebensmittel mit Programm, nicht als Ersatz für Mahlzeiten und nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze baut auf dieser Ernährung auf: ein persönliches Proteinziel, Rezepte für kleine Portionen und zwei Krafteinheiten pro Woche. Es ersetzt keine Mahlzeiten und ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

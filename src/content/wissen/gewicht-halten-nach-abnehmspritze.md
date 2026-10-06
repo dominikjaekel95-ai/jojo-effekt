@@ -6,7 +6,7 @@ category: "Gewicht halten"
 image: /grafiken/training-s-lite.png
 order: 6
 pubDate: 2026-09-30
-updatedDate: 2026-10-03
+updatedDate: 2026-10-06
 keywords: ["nach abnehmspritze gewicht halten", "abnehmspritze absetzen gewicht halten", "abnehmspritze danach", "gewicht halten nach wegovy", "nach ozempic gewicht halten", "abnehmspritze absetzen plan"]
 sources: ["wu2025", "jensen2024", "leidy2015", "who2020", "sumithran2011", "dgeBallaststoffe", "wilding2022ext", "wing2006", "rodriguez2025", "fachinfoWegovy", "fachinfoMounjaro"]
 related: ["abnehmspritze-absetzen", "jojo-effekt-abnehmspritze", "protein-abnehmspritze"]
@@ -31,6 +31,8 @@ affiliateIntro: "Drei Beispiele, keine Empfehlung einer Marke. Ballaststoffe imm
 Nach der letzten Dosis läuft eine Uhr. In Studien wird die Gewichtszunahme etwa ab Woche 8 messbar und setzt sich bis Woche 20 fort.<sup><a href="#fn-wu2025">1</a></sup> Die ersten 12 Wochen sind also das Fenster, in dem Routinen entstehen müssen, die auch mit normalem Appetit tragen. Dieser Plan gliedert sie in drei Phasen. Den Verlauf nach der letzten Dosis, Woche für Woche, beschreibt der Hauptartikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** Wochen 1–4 Routinen bauen (Training, Protein, Wiegen), Wochen 5–8 den zurückkehrenden Appetit auffangen (Volumen, Struktur), Wochen 9–12 stabilisieren und Regeln für danach festlegen. Ob und wie du das Medikament absetzt, entscheidest du mit deiner Ärztin.
+
+<div data-interaktiv="plan12" data-vorlage="halten"></div>
 
 ## Vorher: Was der Plan kann und was nicht
 
@@ -86,6 +88,8 @@ Die Zunahme wird in Studien ab jetzt messbar.<sup><a href="#fn-wu2025">1</a></su
 - **Training verstetigen.** Zwei Einheiten bleiben. Wer mag, nimmt eine dritte dazu oder ergänzt Ausdauer. Was nicht geht: pausieren, „weil das Gewicht jetzt stabil ist“.
 - **Die Woche danach planen.** Was passiert im Urlaub, bei Krankheit, in stressigen Wochen? Eine Minimalversion festlegen: ein Training, Protein zum Frühstück, einmal wiegen. Für Weihnachten und andere Feiertage, die oft genau in diese Wochen fallen, steht ein eigener Plan unter [Feiertage nach der Abnehmspritze](/wissen/feiertage-nach-abnehmspritze/).
 
+<div data-interaktiv="zonen"></div>
+
 **Ziel am Ende von Phase 3:** Gewicht stabil, Training seit 12 Wochen regelmäßig, eine schriftliche Regel für die Zeit danach, ein Arzttermin hinter dir.
 
 ## Der Plan auf einer Seite
@@ -101,4 +105,4 @@ Die Zunahme wird in Studien ab jetzt messbar.<sup><a href="#fn-wu2025">1</a></su
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze folgt genau diesem Aufbau: Protein-, Ballaststoff- und Kreatin-Sticks für jeden Tag, Trainingspläne für zwei Einheiten pro Woche, ein wöchentlicher Check-in. Es ist ein Lebensmittel mit Programm, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze folgt diesem Aufbau: zwei Krafteinheiten pro Woche, ein persönliches Proteinziel mit Rezepten, ein Gewichtskorridor statt Kalorienzählen und ein Check-in pro Woche per E-Mail. Es ist kein Medikament und verhindert den Jojo-Effekt nicht. Start und Preis erfährst du zuerst über die [Warteliste](/#warteliste).*

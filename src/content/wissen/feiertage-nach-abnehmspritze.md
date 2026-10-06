@@ -5,6 +5,7 @@ description: "Nach Weihnachten wiegen Erwachsene in Deutschland im Mittel 0,6 % 
 category: "Gewicht halten"
 order: 26
 pubDate: 2026-10-02
+updatedDate: 2026-10-06
 keywords: ["abnehmspritze weihnachten", "feiertage nach abnehmspritze", "feiertage zunehmen vermeiden", "wie viel nimmt man über weihnachten zu", "an weihnachten nicht zunehmen studie", "weihnachten abnehmspritze absetzen", "weihnachtsspeck nach abnehmspritze"]
 sources: ["helander2016", "yanovski2000", "diazzavala2017", "turicchi2020", "wu2025", "fachinfoWegovy", "fachinfoMounjaro", "sumithran2011", "mason2018", "wing2006", "leidy2015", "who2020", "kwok2019", "jensen2024"]
 related: ["gewicht-halten-nach-abnehmspritze", "heisshunger-nach-abnehmspritze", "abnehmspritze-absetzen"]
@@ -50,6 +51,8 @@ Wo Weihnachten auf der Absetzkurve liegt, hängt vom Datum der letzten Dosis ab:
 
 Den Zeitplan für dein Datum rechnet das Werkzeug [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/), mit Kalendereintrag für den Kontrolltermin.
 
+<div data-interaktiv="zeitachse" data-wirkstoffe="semaglutid,tirzepatid" data-weihnachten="ja"></div>
+
 <figure class="my-8">
   <img src="/grafiken/zeitachse-nach-letzter-dosis.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Der Wirkstoff ist nach etwa fünf bis sieben Wochen weitgehend abgebaut, der Appetit kehrt ab Woche 2 bis 5 zurück, die Gewichtszunahme ist ab Woche 8 messbar und steigt bis etwa Woche 20. Ein Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis ist markiert." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Die ersten 20 Wochen nach der letzten Dosis: Halbwertszeiten laut Fachinformation, Zunahme laut Meta-Analyse.<sup><a href="#fn-wu2025">5</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
@@ -58,6 +61,8 @@ Den Zeitplan für dein Datum rechnet das Werkzeug [Zeitplan nach der letzten Dos
 ## Was in Studien gegen die Feiertagszunahme hilft
 
 Wiegen plus ein paar einfache Regeln verhindern die Feiertagszunahme. In einer randomisierten Studie mit 272 Erwachsenen über zwei Weihnachtsperioden wogen die Teilnehmenden, die sich mindestens zweimal pro Woche wogen, das Gewicht notierten und zehn Tipps zum Gewichtsmanagement bekamen, nach den Feiertagen 0,49 kg weniger als die Vergleichsgruppe mit einem Faltblatt: −0,13 kg gegenüber +0,37 kg.<sup><a href="#fn-mason2018">9</a></sup> Die Vergleichsgruppe nahm also genau die Feiertagszunahme zu, die auch die Beobachtungsstudien zeigen; die Wiegegruppe nicht.
+
+<div data-interaktiv="vergleich" data-vorlage="mason"></div>
 
 Das passt zu dem, was aus der Haltephase nach Diäten bekannt ist. In der STOP-Regain-Studie mit 314 Erwachsenen nach mindestens 10 % Gewichtsverlust wogen sich die Teilnehmenden täglich und hatten feste Zonen: bis +1,4 kg nichts tun, bis +2,3 kg gegensteuern, ab +2,3 kg Hilfe holen. Nach 18 Monaten hatten 45,7 % der persönlich betreuten Gruppe 2,3 kg oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 %.<sup><a href="#fn-wing2006">10</a></sup> Entscheidend ist in beiden Studien nicht die Waage allein, sondern Waage plus Regel: vorher festlegen, ab welcher Zahl du reagierst und wie. Wie die Zonen im Alltag funktionieren, steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
 
@@ -76,8 +81,8 @@ Ein bis zwei Kilo mehr nach Neujahr sind zum Teil Wasser, das der Körper mit Sa
 
 ## Was dieser Artikel nicht sagt
 
-Ob du über die Feiertage weiterspritzt, pausierst oder absetzt, ist eine Therapieentscheidung für das Arztgespräch; wir sagen nichts zu Dosierungen, Pausen oder Wiedereinstieg. Und wir behaupten nicht, dass irgendein Produkt die Feiertagszunahme verhindert. Das 12-Wochen-Set liefert Protein, Ballaststoffe, Kreatin und zwei Krafteinheiten pro Woche; die Regeln oben musst du trotzdem selbst einhalten.
+Ob du über die Feiertage weiterspritzt, pausierst oder absetzt, ist eine Therapieentscheidung für das Arztgespräch; wir sagen nichts zu Dosierungen, Pausen oder Wiedereinstieg. Und wir behaupten nicht, dass irgendein Produkt die Feiertagszunahme verhindert. Auch unser 12-Wochen-Programm nimmt dir die Regeln oben nicht ab; es gibt ihnen nur einen Rahmen.
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin für jeden Tag und begleitet dich durch zwei Krafteinheiten pro Woche – als Lebensmittel mit Programm, nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze begleitet die Wochen nach der letzten Dosis mit zwei Krafteinheiten pro Woche, einem Proteinziel und einem Check-in pro Woche; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

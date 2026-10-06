@@ -5,9 +5,9 @@ description: "Protein, Kreatin, Ballaststoffe: dafür gibt es Belege. Vitamine n
 category: "Ernährung"
 order: 12
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["nach der abnehmspritze supplements", "abnehmspritze supplements", "abnehmspritze nahrungsergänzung", "nahrungsergänzungsmittel nach abnehmspritze", "abnehmspritze vitamine", "abnehmspritze welche supplements", "supplements nach wegovy"]
-sources: ["almandoz2024", "leidy2015", "euClaims", "kreider2017", "dgeBallaststoffe", "klartextNem", "adaSoc2024", "wilding2021dxa", "sardeli2018"]
+sources: ["almandoz2024", "leidy2015", "euClaims", "kreider2017", "dgeBallaststoffe", "klartextNem", "adaSoc2024", "wilding2021dxa", "sardeli2018", "who2020"]
 related: ["kreatin-abnehmspritze", "protein-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
 faq:
   - q: "Brauche ich nach der Abnehmspritze ein Multivitamin?"
@@ -23,6 +23,8 @@ faq:
 ---
 
 Nach dem Absetzen der Abnehmspritze bekommt man viel angeboten: Multivitamine, Fatburner, „natürliche GLP-1-Booster“, Probiotika gegen den Jojo-Effekt. Das meiste davon ist Marketing. Hier steht, was belegt ist, was nur bei einem Mangel Sinn ergibt, und was du dir sparen kannst. Der Verlauf nach der letzten Dosis, Woche für Woche, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+
+<div data-interaktiv="sortierung"></div>
 
 > **Kurz gesagt:** Belegt sind drei Dinge, alle als Ergänzung zu Ernährung und Training: Protein, Kreatin mit Krafttraining, Ballaststoffe bei Lücke. Vitamine und Mineralstoffe nur bei nachgewiesenem Mangel. Fatburner und „GLP-1-Booster“: nein.
 
@@ -57,7 +59,11 @@ Grundregel der Verbraucherzentralen: Nahrungsergänzungsmittel sind Lebensmittel
 
 **Protein** ist kein Supplement im eigentlichen Sinn, sondern ein Lebensmittel in praktischer Form. Die Frage ist nur, ob du 1,2 bis 1,6 g pro kg über Mahlzeiten schaffst. Wer bei 80 kg auf 100 g kommt, braucht kein Pulver. Wer bei 60 g hängt, weil der Appetit noch klein ist oder die Zeit fehlt, für den ist ein Shake oder Stick der einfachste Weg. Details im [Protein-Artikel](/wissen/protein-abnehmspritze/).
 
+<div data-interaktiv="protein" data-luecke="ja"></div>
+
 **Kreatin** ist das am besten untersuchte Supplement für Kraft und Muskelmasse in Verbindung mit Training.<sup><a href="#fn-kreider2017">4</a></sup> Ohne Training bringt es fast nichts; mit zwei Krafteinheiten pro Woche macht es jede Einheit ein Stück wirksamer. Krafttraining selbst ist der Faktor mit der besten Evidenz gegen den Verlust an fettfreier Masse.<sup><a href="#fn-sardeli2018">9</a></sup> In den ersten zwei Wochen steigt das Gewicht durch Wasser um 0,5 bis 2 kg; das ist kein Fett. Alles Weitere unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
+
+<div data-interaktiv="streifen" data-vorlage="kreatin-woche"></div>
 
 **Ballaststoffe** sind die Nebenrolle mit ehrlichem Status: Sie gehören zu jeder Mahlzeit, und die meisten Menschen erreichen die 30 g nicht. Ein Supplement ist nur die zweite Wahl nach Hülsenfrüchten, Vollkorn und Gemüse. Wichtig: langsam steigern und viel trinken.
 
@@ -86,4 +92,4 @@ Alles, was mit „Stoffwechsel ankurbeln“, „Fett verbrennen“, „entgiften
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze enthält genau die drei Bausteine mit Belegen, Protein, Ballaststoffe und Kreatin, zusammen mit einem Trainingsprogramm. Es ist ein Lebensmittel mit Programm, kein Medikament, und es ersetzt keine Vitamine bei einem Mangel.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze setzt auf das, was hier belegt ist: Protein über Mahlzeiten, Krafttraining und Ballaststoffe aus Lebensmitteln. Es ist kein Medikament und ersetzt keine Vitamine bei einem Mangel. Start und Preis über die [Warteliste](/#warteliste).*

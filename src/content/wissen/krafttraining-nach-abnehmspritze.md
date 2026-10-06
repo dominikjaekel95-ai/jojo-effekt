@@ -6,7 +6,7 @@ category: "Muskeln"
 image: /grafiken/training-s-lite.png
 order: 13
 pubDate: 2026-10-01
-updatedDate: 2026-10-05
+updatedDate: 2026-10-06
 keywords: ["krafttraining nach abnehmspritze", "abnehmspritze absetzen sport", "abnehmspritze krafttraining", "training nach abnehmspritze", "krafttraining anfänger abnehmspritze", "abnehmspritze training zuhause", "sport nach absetzen abnehmspritze"]
 sources: ["jensen2024", "sardeli2018", "who2020", "schoenfeld2016", "acsm2009", "leidy2015", "euClaims", "wilding2021dxa"]
 related: ["muskelabbau-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -39,6 +39,8 @@ Drei Befunde, die den Unterschied ausmachen:
 3. **Es braucht weniger Zeit, als die meisten denken.** Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten für alle großen Muskelgruppen.<sup><a href="#fn-who2020">3</a></sup> Eine Meta-Analyse zeigt, dass zwei Einheiten pro Muskelgruppe und Woche mehr Muskelzuwachs bringen als eine; mehr als zwei bringt für Einsteiger wenig zusätzlich.<sup><a href="#fn-schoenfeld2016">4</a></sup>
 
 Spazierengehen, Radfahren und Schwimmen sind gut für Herz und Kopf. Sie ersetzen aber nicht den Reiz, den Muskeln brauchen, um zu bleiben.
+
+<div data-interaktiv="zusammensetzung"></div>
 
 <figure class="my-8">
   <img src="/grafiken/training-s-lite.png" alt="Balkendiagramm aus der S-LiTE-Nachbeobachtung: Im Jahr nach Therapieende nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach dem Trainingsprogramm (95-Prozent-Konfidenzintervall 2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau erhalten." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
@@ -83,6 +85,8 @@ Ablauf einer Einheit: 3 Minuten Aufwärmen (zügig gehen, Arme kreisen, 10 Knieb
 
 Eine Regel für die ganze Zeit: Wenn du in allen Sätzen 12 saubere Wiederholungen schaffst, wird die Übung beim nächsten Mal schwerer, nie länger.
 
+<div data-interaktiv="plan12" data-vorlage="training"></div>
+
 ## Was das Training braucht: Protein und, wenn du willst, Kreatin
 
 Training ist der Reiz, Protein ist der Baustoff. Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag,<sup><a href="#fn-leidy2015">6</a></sup> verteilt auf drei bis vier Mahlzeiten. Eine proteinreiche Mahlzeit nach dem Training ist sinnvoll; wichtiger ist die Tagesmenge. Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver körperlicher Betätigung, bei 3 g täglich.<sup><a href="#fn-euClaims">7</a></sup> Es macht jede Einheit ein Stück wirksamer, ersetzt aber keine. Mehr dazu unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
@@ -104,4 +108,4 @@ Ja, und das ist der beste Zeitpunkt. Die Teilnehmenden der S-LiTE-Studie, die ei
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder sportmedizinische Beratung. Das 12-Wochen-Set von Nach der Spritze enthält genau diesen Plan als Programm mit wöchentlichem Check-in, dazu Protein-, Ballaststoff- und Kreatin-Sticks. Es ist ein Lebensmittel mit Programm, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder sportmedizinische Beratung. Das 12-Wochen-Programm von Nach der Spritze enthält diesen Plan: zwei Einheiten pro Woche à 30 Minuten, zuhause mit Bändern oder im Studio, und ein Check-in pro Woche per E-Mail. Es ist kein Medikament. Start und Preis erfährst du zuerst über die [Warteliste](/#warteliste).*

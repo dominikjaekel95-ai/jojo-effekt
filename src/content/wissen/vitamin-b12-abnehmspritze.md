@@ -5,6 +5,7 @@ description: "Vitamin B12 steckt fast nur in tierischen Lebensmitteln, Metformin
 category: "Ernährung"
 order: 20
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["vitamin b12 abnehmspritze", "vitamin b12 ozempic", "b12 metformin abnehmspritze", "vitamin b12 mangel abnehmspritze", "b12 wegovy", "müdigkeit abnehmspritze vitamin b12", "vitamin b12 vegan abnehmen"]
 sources: ["dgeReferenzwerte", "aroda2016", "adaSoc2024", "euClaims", "bls", "almandoz2024", "bfrHoechstmengen2021"]
 related: ["supplements-nach-abnehmspritze", "ozempic-absetzen", "eisen-abnehmspritze"]
@@ -44,9 +45,13 @@ B12 wird von Mikroorganismen gebildet und reichert sich in tierischen Lebensmitt
 
 Die Expertengruppe um Almandoz nennt B12 ausdrücklich unter den Mikronährstoffen, die bei sehr geringer Energiezufuhr unter Adipositas-Medikamenten ergänzt werden sollten.<sup><a href="#fn-almandoz2024">6</a></sup>
 
+<div data-interaktiv="teller" data-vorlage="b12"></div>
+
 ## Metformin: der belegte Risikofaktor
 
 Viele Menschen mit Typ-2-Diabetes nehmen Semaglutid oder Tirzepatid zusammen mit Metformin. Metformin verringert die Aufnahme von B12 im Darm. Die Diabetes Prevention Program Outcomes Study verfolgte das über Jahre: Nach fünf Jahren hatten 4,3 % der Teilnehmenden unter Metformin einen B12-Mangel, unter Placebo 2,3 %, und das Risiko stieg mit jedem weiteren Jahr der Einnahme.<sup><a href="#fn-aroda2016">2</a></sup> Die amerikanische Diabetes-Gesellschaft empfiehlt deshalb regelmäßige Kontrollen des Spiegels bei Metformin-Therapie, besonders bei Nervenbeschwerden oder Blutarmut.<sup><a href="#fn-adaSoc2024">3</a></sup>
+
+<div data-interaktiv="punktfeld" data-vorlage="b12"></div>
 
 Wer also Metformin nimmt und zusätzlich unter der Spritze weniger tierische Lebensmittel isst, hat zwei Gründe für einen niedrigen Wert. Das ist der Fall, in dem der Blutwert nicht optional ist. Mehr zum Absetzen bei Typ-2-Diabetes steht unter [Ozempic absetzen](/wissen/ozempic-absetzen/).
 
@@ -85,4 +90,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin B12 ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament; Vitamin B12 ist nicht enthalten.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin B12 ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*

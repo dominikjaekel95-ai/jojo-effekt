@@ -5,6 +5,7 @@ description: "Wechseljahre: Der Fettzuwachs verdoppelt sich, die Magermasse sink
 category: "Muskeln"
 order: 29
 pubDate: 2026-10-05
+updatedDate: 2026-10-06
 keywords: ["abnehmspritze wechseljahre", "abnehmspritze absetzen wechseljahre", "abnehmen wechseljahre muskeln erhalten", "muskelabbau wechseljahre abnehmen", "gewichtszunahme wechseljahre bauchfett", "krafttraining wechseljahre abnehmen", "protein wechseljahre muskeln", "wechseljahre knochendichte abnehmen"]
 sources: ["greendale2019", "lovejoy2008", "davis2012", "tchang2025", "yang2025", "wilding2021dxa", "look2025surmount1dxa", "jensen2024", "zibellini2015", "villareal2017", "jensen2024bone", "khalafi2023", "mojtahedi2011", "moore2015", "dgeProtein", "leidy2015", "who2020", "euClaims", "gibson2023", "wu2025"]
 related: ["muskelabbau-abnehmspritze", "krafttraining-nach-abnehmspritze", "protein-abnehmspritze"]
@@ -39,6 +40,8 @@ Für dich heißt das: Die Waage ist in dieser Phase ein schlechter Messwert für
 
 Nach den vorliegenden Daten nicht schlechter. In einer nachträglichen Auswertung von 2542 Frauen aus den Studien SURMOUNT-1, -3 und -4 war die Gewichtsabnahme unter Tirzepatid vor, während und nach den Wechseljahren ähnlich: In SURMOUNT-1 nach 72 Wochen 26 % bei prämenopausalen, 23 % bei perimenopausalen und 23 % bei postmenopausalen Frauen, gegenüber 2 bis 3 % unter Placebo.<sup><a href="#fn-tchang2025">4</a></sup> Für Semaglutid gibt es keine veröffentlichte Auswertung nach Menopausenstatus, nur nach Geschlecht: In einer Meta-Analyse von 14 Studien verloren Frauen unter GLP-1-Rezeptoragonisten im Mittel 1,0 kg beziehungsweise 1,7 Prozentpunkte mehr als Männer.<sup><a href="#fn-yang2025">5</a></sup>
 
+<div data-interaktiv="vergleich" data-vorlage="tchang"></div>
+
 Was die Studien nicht zeigen: ob Frauen in den Wechseljahren unter der Spritze anders viel Muskel verlieren, und wie das Gewicht nach dem Absetzen bei ihnen verläuft. Beides wurde nicht getrennt ausgewertet.
 
 ## Absetzen in den Wechseljahren: zwei Verluste treffen aufeinander
@@ -53,6 +56,8 @@ Gewichtsverlust kostet Knochendichte, vor allem an der Hüfte. In einer Meta-Ana
 
 Zwei Studien zeigen, was den Unterschied macht. In einer randomisierten Studie mit 160 adipösen Erwachsenen ab 65 Jahren, die mit Diät 9 % abnahmen, verlor die Gruppe mit Ausdauertraining 2,7 kg fettfreie Masse und 3 % Knochendichte an der Hüfte, die Gruppe mit Krafttraining 1,0 kg fettfreie Masse und unter 1 % Knochendichte, nicht signifikant.<sup><a href="#fn-villareal2017">10</a></sup> Und in einer Sekundäranalyse der S-LiTE-Studie mit 195 Erwachsenen senkte Liraglutid allein die Knochendichte an Hüfte und Wirbelsäule gegenüber Training allein, während die Kombination aus Training und Medikament die Knochendichte an Hüfte, Wirbelsäule und Unterarm trotz des größten Gewichtsverlusts von 16,9 kg stabil hielt.<sup><a href="#fn-jensen2024bone">11</a></sup>
 
+<div data-interaktiv="vergleich" data-vorlage="villareal"></div>
+
 Daraus folgt kein Rat zum Medikament, aber einer zum Training: Wer unter der Spritze oder danach abnimmt, schützt die Knochen am besten mit Krafttraining. Ob eine Knochendichtemessung sinnvoll ist, und ob Calcium und Vitamin D ausreichen, klärst du mit deiner Ärztin; was zu Vitamin D unter der Spritze bekannt ist, steht unter [Vitamin D bei der Abnehmspritze](/wissen/vitamin-d-abnehmspritze/).
 
 ## Was in Studien bei Frauen nach den Wechseljahren hilft
@@ -66,8 +71,8 @@ Daraus folgt kein Rat zum Medikament, aber einer zum Training: Wer unter der Spr
 
 ## Was dieser Artikel nicht sagt
 
-Wir bewerten keine Hormontherapie, weder für noch gegen; ob sie in Frage kommt, hängt von Beschwerden, Vorerkrankungen und Risiken ab und ist ein Gespräch mit deiner Gynäkologin oder deinem Gynäkologen. Wir nennen keine Dosierungen und geben keine Empfehlung, die Spritze wegen der Wechseljahre länger zu nehmen oder früher abzusetzen; das ist eine Therapieentscheidung. Und wir behaupten nicht, dass irgendein Produkt den Muskel- oder Knochenverlust verhindert. Das 12-Wochen-Set liefert Protein, Ballaststoffe und Kreatin und zwei Krafteinheiten pro Woche; das Training musst du machen.
+Wir bewerten keine Hormontherapie, weder für noch gegen; ob sie in Frage kommt, hängt von Beschwerden, Vorerkrankungen und Risiken ab und ist ein Gespräch mit deiner Gynäkologin oder deinem Gynäkologen. Wir nennen keine Dosierungen und geben keine Empfehlung, die Spritze wegen der Wechseljahre länger zu nehmen oder früher abzusetzen; das ist eine Therapieentscheidung. Und wir behaupten nicht, dass irgendein Produkt den Muskel- oder Knochenverlust verhindert. Auch unser 12-Wochen-Programm plant das Training nur; machen musst du es selbst.
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder gynäkologische Beratung. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin für jeden Tag und begleitet dich durch zwei Krafteinheiten pro Woche – als Lebensmittel mit Programm, nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder gynäkologische Beratung. Das 12-Wochen-Programm von Nach der Spritze plant zwei Krafteinheiten pro Woche und ein persönliches Proteinziel für die Zeit danach; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

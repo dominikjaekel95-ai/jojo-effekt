@@ -6,7 +6,7 @@ category: "Muskeln"
 image: /grafiken/koerperzusammensetzung-step-1.png
 order: 3
 pubDate: 2026-09-30
-updatedDate: 2026-10-04
+updatedDate: 2026-10-06
 keywords: ["abnehmspritze muskelabbau", "abnehmspritze muskelverlust", "muskelabbau abnehmspritze vermeiden", "wegovy muskelabbau", "ozempic muskelabbau", "mounjaro muskelverlust", "abnehmspritze krafttraining"]
 sources: ["wilding2021dxa", "sardeli2018", "leidy2015", "who2020", "jensen2024", "euClaims", "kreider2017", "dgeProtein", "fothergill2016", "look2025surmount1dxa"]
 related: ["protein-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -35,6 +35,8 @@ Die Abnehmspritze nimmt nicht nur Fett. Sie nimmt auch das, was du eigentlich be
 ## Wie viel Muskelmasse geht verloren?
 
 Bei jedem Gewichtsverlust verliert der Körper neben Fett auch fettfreie Masse: Muskeln, aber auch Wasser, Bindegewebe und etwas Organmasse. Bei klassischen Diäten liegt der Anteil meist bei einem Viertel. Für Semaglutid liefert die STEP-1-Studie den besten Anhaltspunkt: In einer Substudie mit 140 Teilnehmenden, deren Körperzusammensetzung per DXA gemessen wurde, entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Die Analyse war exploratorisch, also nicht auf diese Frage hin geplant, und die Zahl schwankt je nach Studie und Messmethode. Sicher ist: Es ist kein Randphänomen.
+
+<div data-interaktiv="zusammensetzung" data-studien="step1,surmount1" data-rechner="ja"></div>
 
 Zwei Dinge relativieren das. Erstens: Wer 15 % seines Gewichts verliert, hat danach meist immer noch mehr absolute Muskelmasse als eine normalgewichtige Person, weil ein schwererer Körper mehr Muskeln braucht und aufbaut. Zweitens: Ein Teil der „fettfreien Masse“ ist Wasser und Gewebe, das mit dem Fett abgebaut wird. Trotzdem gilt: Muskeln, die weg sind, kommen nicht von allein zurück, und nach dem Absetzen kommt das Gewicht meist als Fett zurück.
 
@@ -82,6 +84,8 @@ Was das praktisch heißt:
 
 Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Protein trägt zur Erhaltung von Muskelmasse bei.<sup><a href="#fn-euClaims">6</a></sup> Wichtig ist die Verteilung: mindestens etwa 25 bis 30 g pro Mahlzeit, drei- bis viermal am Tag, und bei jeder Mahlzeit das Protein zuerst – gerade, wenn der Appetit klein ist. Wie viel das für dein Gewicht ist und wie du es mit wenig Hunger schaffst, steht im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/).
 
+<div data-interaktiv="protein" data-dge="ja"></div>
+
 ### 3. Kreatin – als Ergänzung zum Training
 
 Kreatin-Monohydrat gehört zu den am besten untersuchten Nahrungsergänzungen.<sup><a href="#fn-kreider2017">7</a></sup> Bei 3 g pro Tag erhöht Kreatin die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver körperlicher Betätigung; bei Erwachsenen über 55 Jahren kann die tägliche Einnahme die Wirkung von Krafttraining auf die Muskelkraft verstärken – Bedingung ist dort Krafttraining an mindestens drei Tagen pro Woche über mehrere Wochen.<sup><a href="#fn-euClaims">6</a></sup> Ohne Training bringt Kreatin wenig. Mehr dazu unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
@@ -101,8 +105,10 @@ Beispiel für eine Person mit 80 kg und Ziel 100 g Protein:
 | Nachmittags | Protein-Shake oder -Stick (Wasser oder Milch) | ca. 20–25 g |
 | Abends | 2 Eier mit Gemüse oder 150 g Fisch | ca. 14–30 g |
 
-Zusammen: 85 bis 105 g. Das ist mit kleinen Portionen machbar, wenn Protein bei jeder Mahlzeit zuerst kommt. Der Fisch am Abend liefert nebenbei Vitamin D; was es für die Muskeln bringt und wann ein Präparat sinnvoll ist, steht unter [Vitamin D bei der Abnehmspritze](/wissen/vitamin-d-abnehmspritze/).
+Zusammen: rund 80 bis 105 g. Das ist mit kleinen Portionen machbar, wenn Protein bei jeder Mahlzeit zuerst kommt. Der Fisch am Abend liefert nebenbei Vitamin D; was es für die Muskeln bringt und wann ein Präparat sinnvoll ist, steht unter [Vitamin D bei der Abnehmspritze](/wissen/vitamin-d-abnehmspritze/).
+
+<div data-interaktiv="teller" data-vorlage="protein-tag-muskeln"></div>
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Bei Nierenerkrankungen sprich vor einer Erhöhung der Proteinzufuhr oder Kreatin-Einnahme mit deiner Ärztin. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin und begleitet dich durch zwei Krafteinheiten pro Woche – als Lebensmittel mit Programm, nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Bei Nierenerkrankungen sprich vor einer Erhöhung der Proteinzufuhr oder Kreatin-Einnahme mit deiner Ärztin. Das 12-Wochen-Programm von Nach der Spritze plant zwei Krafteinheiten pro Woche und ein persönliches Proteinziel; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

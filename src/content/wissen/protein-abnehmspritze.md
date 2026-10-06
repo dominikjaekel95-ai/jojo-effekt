@@ -6,9 +6,9 @@ category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 4
 pubDate: 2026-09-30
-updatedDate: 2026-10-05
+updatedDate: 2026-10-06
 keywords: ["abnehmspritze protein", "abnehmspritze protein wie viel", "eiweiß abnehmspritze", "wegovy protein", "ozempic eiweiß wie viel", "proteinshake abnehmspritze", "abnehmspritze ernährung eiweiß"]
-sources: ["dgeProtein", "leidy2015", "wilding2021dxa", "euClaims", "sardeli2018", "dgeBallaststoffe"]
+sources: ["dgeProtein", "leidy2015", "wilding2021dxa", "euClaims", "sardeli2018", "dgeBallaststoffe", "bls"]
 related: ["ernaehrung-nach-abnehmspritze", "supplements-nach-abnehmspritze", "muskelabbau-abnehmspritze"]
 faq:
   - q: "Wie viel Protein pro Tag brauche ich unter der Abnehmspritze?"
@@ -33,6 +33,8 @@ Unter der Abnehmspritze essen viele so wenig, dass sie nicht einmal das Minimum 
 ## Wie viel Protein beim Abnehmen?
 
 Die DGE setzt für gesunde Erwachsene 0,8 g Protein pro kg Körpergewicht und Tag an, ab 65 Jahren 1,0 g.<sup><a href="#fn-dgeProtein">1</a></sup> Das ist ein Wert für Menschen, die ihr Gewicht halten und keinen Muskelabbau riskieren. Beim Abnehmen ist die Lage anders: Der Körper ist im Defizit und baut auch Muskelprotein ab. Übersichtsarbeiten empfehlen deshalb während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g pro kg.<sup><a href="#fn-leidy2015">2</a></sup> Protein trägt zur Erhaltung von Muskelmasse bei.<sup><a href="#fn-euClaims">4</a></sup> Warum Frauen in und nach den Wechseljahren eher am oberen Rand liegen sollten, steht unter [Wechseljahre und Abnehmspritze](/wissen/wechseljahre-abnehmspritze/).
+
+<div data-interaktiv="protein" data-dge="ja"></div>
 
 Unter der Abnehmspritze ist das besonders relevant: In einer Substudie der STEP-1-Studie entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">3</a></sup> Ein Grund dafür ist die niedrige Proteinzufuhr bei gedämpftem Appetit.
 
@@ -72,10 +74,11 @@ Ungefähre Werte pro Portion:
 | Linsen, gekocht | 200 g | 18 g |
 | Hüttenkäse | 150 g | 17 g |
 | Molkenprotein-Pulver | 30 g | 22–25 g |
-| Protein-Stick (Nach der Spritze) | 1 Stick | ≥ 20 g |
 | Milch | 250 ml | 8 g |
 
 Was auffällt: Um auf 100 g zu kommen, braucht es bei jeder Mahlzeit eine echte Proteinquelle. Ein Brötchen mit Marmelade und ein Salat bringen zusammen unter 10 g.
+
+<div data-interaktiv="teller" data-vorlage="protein-lebensmittel"></div>
 
 ## Wie du die Menge mit wenig Appetit schaffst
 
@@ -104,4 +107,4 @@ Protein ist Baustoff. Der Reiz, ihn zu verbauen, kommt vom Training. Krafttraini
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Bei Nierenerkrankungen die Proteinmenge mit der Ärztin abstimmen. Der Protein-Stick im 12-Wochen-Set von Nach der Spritze liefert mindestens 20 g Protein pro Portion; Protein trägt zur Erhaltung von Muskelmasse bei.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Bei Nierenerkrankungen die Proteinmenge mit der Ärztin abstimmen. Im 12-Wochen-Programm von Nach der Spritze bekommst du dein Tagesziel in Gramm und Rezepte für kleine Portionen. Start und Preis über die [Warteliste](/#warteliste).*

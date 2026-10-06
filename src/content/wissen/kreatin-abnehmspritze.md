@@ -5,9 +5,9 @@ description: "Was Kreatin unter und nach der Abnehmspritze bringt, welche Dosis 
 category: "Muskeln"
 order: 5
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["kreatin abnehmspritze", "kreatin wegovy", "kreatin mounjaro", "kreatin ozempic", "kreatin glp-1", "kreatin und abnehmspritze wechselwirkung", "kreatin nach abnehmspritze"]
-sources: ["kreider2017", "euClaims", "sardeli2018", "who2020", "wilding2021dxa"]
+sources: ["kreider2017", "euClaims", "sardeli2018", "who2020", "wilding2021dxa", "fachinfoWegovy", "fachinfoMounjaro"]
 related: ["muskelabbau-abnehmspritze", "protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
 faq:
   - q: "Kann ich Kreatin nehmen, während ich die Abnehmspritze spritze?"
@@ -33,6 +33,8 @@ affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke. Es zählt der Roh
 
 Zu Kreatin und Abnehmspritze gibt es im deutschsprachigen Netz fast nichts, obwohl die Kombination naheliegt: Unter GLP-1-Medikamenten gehen Muskeln verloren, und Kreatin ist das am besten untersuchte Supplement für Kraft und Training. Hier ist der Stand. Was nach der letzten Dosis insgesamt passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
+<div data-interaktiv="kreatin"></div>
+
 > **Kurz gesagt:** 3 g Kreatin-Monohydrat täglich, zusammen mit Krafttraining. Keine bekannte Wechselwirkung mit der Spritze. In den ersten Wochen steigt das Gewicht durch Wasser um 0,5 bis 2 kg – das ist normal.
 
 ## Was Kreatin ist und was es tut
@@ -50,6 +52,8 @@ Das Positionspapier der International Society of Sports Nutrition fasst Hunderte
 
 In einer Substudie der STEP-1-Studie entfielen rund 40 % des Gewichtsverlusts unter Semaglutid auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">5</a></sup> Das wirksamste Gegenmittel ist Krafttraining: Es verhindert den Verlust an fettfreier Masse während einer Kalorienreduktion weitgehend.<sup><a href="#fn-sardeli2018">3</a></sup> Kreatin macht dieses Training effektiver, weil mehr Leistung pro Einheit möglich ist. Es ersetzt das Training nicht; es verstärkt es.
 
+<div data-interaktiv="zusammensetzung"></div>
+
 Für Menschen über 55 kommt dazu, dass die zugelassene Angabe zur Muskelkraft genau diese Gruppe betrifft – und dass Muskelverlust im Alter (Sarkopenie) das größere Risiko ist als ein paar Kilo mehr.
 
 **Was es nicht gibt:** Studien, die Kreatin gezielt bei Menschen unter oder nach GLP-1-Therapie untersucht haben. Die Empfehlung leitet sich aus der allgemeinen Evidenz ab, nicht aus GLP-1-spezifischen Daten. Das ist ehrlicherweise der Stand.
@@ -61,6 +65,8 @@ Für Menschen über 55 kommt dazu, dass die zugelassene Angabe zur Muskelkraft g
 - **Wann:** egal. Jeden Tag, auch an trainingsfreien Tagen, am einfachsten mit einer festen Mahlzeit oder im Protein-Shake. Eine Ladephase ist nicht nötig; nach etwa vier Wochen ist der Speicher voll.
 - **Womit:** in Wasser, Saft oder Shake einrühren. Kreatin ist geschmacklos, löst sich in kaltem Wasser etwas schlechter.
 - **Wie lange:** solange du trainierst. Setzt man ab, leert sich der Speicher über etwa vier Wochen.
+
+<div data-interaktiv="streifen" data-vorlage="kreatin-woche"></div>
 
 ## Das mit der Waage
 
@@ -83,6 +89,8 @@ Wegovy enthält Semaglutid, das einmal pro Woche gespritzt wird und eine Halbwer
 
 Mounjaro enthält Tirzepatid mit einer Halbwertszeit von etwa fünf Tagen. Auch hier ist keine Wechselwirkung mit Kreatin bekannt. Der Unterschied zu Semaglutid liegt beim Absetzen: Tirzepatid ist nach etwa vier Wochen abgebaut, der Appetit kommt früher zurück, und der Gewichtsverlust war in den Studien größer, also war auch mehr fettfreie Masse im Spiel. Wer unter Mounjaro trainiert, hat mit Kreatin einen Grund mehr, das Training bis über das Absetzen hinaus durchzuhalten. Für Menschen mit Typ-2-Diabetes gilt zusätzlich: Kreatin verändert den Blutzucker nicht, aber die Nierenwerte werden bei Diabetes ohnehin regelmäßig kontrolliert; die Ärztin sollte wissen, dass Kreatin im Spiel ist.
 
+<div data-interaktiv="wirkstoffspiegel" data-wirkstoffe="semaglutid,tirzepatid" data-start="tirzepatid" data-tag="28"></div>
+
 ## Kreatin und Ozempic
 
 Ozempic ist derselbe Wirkstoff wie Wegovy in niedrigerer Dosis und zur Behandlung des Typ-2-Diabetes zugelassen. Keine bekannte Wechselwirkung mit Kreatin. Zwei Besonderheiten: Viele Ozempic-Patienten nehmen zusätzlich Metformin, und auch dafür ist keine Wechselwirkung mit Kreatin beschrieben. Und bei Diabetes ist eine eingeschränkte Nierenfunktion häufiger; sie ist die eine Situation, in der Kreatin nur nach ärztlicher Rücksprache genommen werden sollte. Wer Ozempic off-label zum Abnehmen nimmt, für den gilt dasselbe wie unter Wegovy.
@@ -93,4 +101,4 @@ Der wichtigste Satz zum Schluss: Kreatin macht Training wirksamer. Ohne Training
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Im 12-Wochen-Set von Nach der Spritze sind 3 g Kreatin-Monohydrat pro Tag enthalten – zusammen mit einem Programm mit zwei Krafteinheiten pro Woche, weil Kreatin nur so Sinn ergibt.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Im 12-Wochen-Programm von Nach der Spritze sind zwei Krafteinheiten pro Woche fest eingeplant, weil Kreatin nur mit Training Sinn ergibt; das Programm selbst ist kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*

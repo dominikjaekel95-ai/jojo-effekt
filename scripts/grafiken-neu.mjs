@@ -103,9 +103,9 @@ export function neu({ warn }) {
   {
     let b = '';
     const cols = [
-      { x: M, when: 'Woche 52 bis 104', whenSub: 'Jahr ohne Behandlung', big: '+6,0 kg', c: C.regain, h: 'mehr Zunahme nach Liraglutid allein', d: 'als nach Training allein (ohne Medikament)', ci: '95-%-KI 2,1 bis 10,0 kg' },
-      { x: 446, when: 'Woche 0 bis 104', whenSub: 'Studienbeginn bis ein Jahr nach dem Ende', big: '−5,1 kg', c: C.lean, h: 'Gewicht mit Training plus Liraglutid', d: 'gegenüber Liraglutid allein', ci: '95-%-KI −10,0 bis −0,2 kg' },
-      { x: 828, when: 'Woche 0 bis 104', whenSub: 'Studienbeginn bis ein Jahr nach dem Ende', big: '−2,3 Punkte', c: C.lean, h: 'Körperfettanteil mit Training plus Liraglutid', d: 'gegenüber Liraglutid allein (Prozentpunkte)', ci: '95-%-KI −4,3 bis −0,3 Prozentpunkte' },
+      { x: M, when: 'Woche 52 bis 104', whenSub: ['Jahr ohne Behandlung'], big: '+6,0 kg', c: C.regain, h: 'mehr Zunahme nach Liraglutid allein', d: 'als nach Training allein (ohne Medikament)', ci: '95-%-KI 2,1 bis 10,0 kg' },
+      { x: 446, when: 'Woche 0 bis 104', whenSub: ['Behandlungsbeginn (Woche 0, nach der Diät)', 'bis ein Jahr nach dem Ende'], big: '−5,1 kg', c: C.lean, h: 'Gewicht mit Training plus Liraglutid', d: 'gegenüber Liraglutid allein', ci: '95-%-KI −10,0 bis −0,2 kg' },
+      { x: 828, when: 'Woche 0 bis 104', whenSub: ['Behandlungsbeginn (Woche 0, nach der Diät)', 'bis ein Jahr nach dem Ende'], big: '−2,3 Punkte', c: C.lean, h: 'Körperfettanteil mit Training plus Liraglutid', d: 'gegenüber Liraglutid allein (Prozentpunkte)', ci: '95-%-KI −4,3 bis −0,3 Prozentpunkte' },
     ];
     const cw = 306;
     const size = Math.min(...cols.map((c) => fit(c.big, cw, 'big', F.bigger)));
@@ -114,10 +114,10 @@ export function neu({ warn }) {
     cols.forEach((c, i) => {
       if (i) b += L(c.x - 24, 150, c.x - 24, 420);
       b += T(c.x, 164, c.when, { st: 'head', size: F.text, fill: C.ink2 });
-      b += T(c.x, 184, c.whenSub, { size: F.small, fill: C.ink3 });
-      b += T(c.x, 254, c.big, { st: 'big', size, fill: c.c });
-      b += P(c.x, 292, c.h, { st: 'head', size: F.label, maxW: cw, lh: 24 }).svg;
-      const dy = 292 + hl * 24 + 6;
+      c.whenSub.forEach((s, j) => (b += T(c.x, 184 + j * 18, s, { size: F.small, fill: C.ink3 })));
+      b += T(c.x, 268, c.big, { st: 'big', size, fill: c.c });
+      b += P(c.x, 306, c.h, { st: 'head', size: F.label, maxW: cw, lh: 24 }).svg;
+      const dy = 306 + hl * 24 + 6;
       b += P(c.x, dy, c.d, { size: F.small, fill: C.ink2, maxW: cw, lh: 19 }).svg;
       b += T(c.x, dy + dl * 19 + 10, c.ci, { size: F.small, fill: C.ink3 });
     });
@@ -142,7 +142,7 @@ export function neu({ warn }) {
         title: 'Liraglutid mit oder ohne Training: was danach bleibt',
         subtitle: 'S-LiTE: nach einer Diät ein Jahr Behandlung, danach ein Jahr ohne; Vergleiche der Gruppen mit 95-%-Konfidenzintervall',
         source: 'Lundgren et al., S-LiTE, NEJM 2021; Jensen et al., S-LiTE follow-up, eClinicalMedicine 2024;69:102475',
-        alt: 'Drei Kennzahlen aus der S-LiTE-Studie mit Liraglutid: Im Jahr ohne Behandlung (Woche 52 bis 104) nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein ohne Medikament (95-Prozent-Konfidenzintervall 2,1 bis 10,0). Von Studienbeginn bis ein Jahr nach dem Ende (Woche 0 bis 104) lagen Teilnehmende mit Training plus Liraglutid 5,1 Kilogramm niedriger (minus 10,0 bis minus 0,2) und beim Körperfettanteil 2,3 Prozentpunkte niedriger (minus 4,3 bis minus 0,3) als nach Liraglutid allein. Nach Training blieben Gewicht und Körperzusammensetzung erhalten. Studienablauf: 8 Wochen Diät, 52 Wochen Behandlung, 52 Wochen ohne Behandlung.',
+        alt: 'Drei Kennzahlen aus der S-LiTE-Studie mit Liraglutid: Im Jahr ohne Behandlung (Woche 52 bis 104) nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein ohne Medikament (95-Prozent-Konfidenzintervall 2,1 bis 10,0). Von Behandlungsbeginn (Woche 0, nach der Diät) bis ein Jahr nach dem Ende (Woche 104) lagen Teilnehmende mit Training plus Liraglutid 5,1 Kilogramm niedriger (minus 10,0 bis minus 0,2) und beim Körperfettanteil 2,3 Prozentpunkte niedriger (minus 4,3 bis minus 0,3) als nach Liraglutid allein. Nach Training blieben Gewicht und Körperzusammensetzung erhalten. Studienablauf: 8 Wochen Diät, 52 Wochen Behandlung, 52 Wochen ohne Behandlung.',
       },
       b,
     );
@@ -260,7 +260,7 @@ export function neu({ warn }) {
     b += T(M + 148, 461, 'weiter behandelt', { size: F.small, fill: C.ink2 });
     b += T(M + 300, 461, '1 Punkt = 1 Prozent, gerundet', { size: F.small, fill: C.ink3 });
     b += L(M, 492, W - M, 492);
-    b += P(M, 526, 'Auswertung von Versorgungsdaten Erwachsener mit Übergewicht oder Adipositas in den USA, die einen GLP-1-Rezeptoragonisten begonnen hatten. Gründe fürs Absetzen waren unter anderem Gewichtsverlust, Einkommen und Nebenwirkungen.', { size: F.small, fill: C.ink3, lh: 19 }).svg;
+    b += P(M, 526, 'Auswertung von Versorgungsdaten Erwachsener mit Übergewicht oder Adipositas in den USA, die einen GLP-1-Rezeptoragonisten begonnen hatten.', { size: F.small, fill: C.ink3, lh: 19 }).svg;
     add(
       'absetzen-im-ersten-jahr.svg',
       {
@@ -476,8 +476,7 @@ export function neu({ warn }) {
       const y = 222 + i * 62;
       b += T(x, y + 6, lab, { st: 'head', size: F.text });
       if (v === null) {
-        b += dottedBar(pxB(0), y - 13, pxB(1) - pxB(0), 26, C.ink3);
-        b += T(pxB(1) + 10, y + 6, 'unter 1 %, n. s.', { size: F.small, fill: C.ink2 });
+        b += T(pxB(0) + 10, y + 6, 'unter 1 %, n. s.', { size: F.small, fill: C.ink2 });
       } else {
         b += R(pxB(0), y - 13, pxB(v) - pxB(0), 26, { fill: C.ink, rx: 1 });
         b += T(pxB(v) + 10, y + 8, `−${de(v)} %`, { st: 'num', size: F.value });
@@ -533,7 +532,7 @@ export function neu({ warn }) {
         title: 'Wiegen mit Zonen: was die STOP-Regain-Studie zeigt',
         subtitle: '314 Erwachsene nach mindestens 10 % Gewichtsverlust, 18 Monate; tägliches Wiegen mit festgelegter Reaktion je Zone',
         source: 'Wing et al., STOP Regain, NEJM 2006;355(15):1563–1571; Daley et al., LIMIT, Public Health Res 2019',
-        alt: 'Zonen der STOP-Regain-Studie bezogen auf das Gewicht nach der Abnahme, zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, obere Zone (in der Studie rot) ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie nicht.',
+        alt: 'STOP-Regain-Studie mit 314 Erwachsenen nach mindestens 10 Prozent Gewichtsverlust, tägliches Wiegen über 18 Monate. Zonen bezogen auf das Gewicht nach der Abnahme, zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, obere Zone (in der Studie rot) ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie (LIMIT, 2019) nicht.',
       },
       b,
     );

@@ -105,9 +105,9 @@
   "warum-das-gewicht-zurueckkommt": {
     "spalten": ["Mechanismus", "Zahl", "Quelle"],
     "zeilen": [
-      ["Die Appetitbremse fällt weg", "Semaglutid nach etwa 5 bis 7 Wochen weitgehend abgebaut, Tirzepatid nach etwa 25 Tagen", "Fachinformationen (EMA)"],
+      ["Die Appetitbremse fällt weg", "Semaglutid nach etwa 5 Wochen weitgehend abgebaut, bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen", "Fachinformationen (EMA)"],
       ["Hungerhormone bleiben verschoben (Ghrelin höher, Leptin niedriger)", "noch ein Jahr nach einer Diät messbar: mehr Hunger, weniger Sättigung", "Sumithran et al., NEJM 2011"],
-      ["Weniger Energie in Ruhe", "Ruheenergieverbrauch 6 Jahre nach starkem Gewichtsverlust abgesenkt", "Fothergill et al., Obesity 2016"],
+      ["Weniger Energie in Ruhe", "Ruheenergieverbrauch 6 Jahre nach starkem Gewichtsverlust abgesenkt (kleine Studie, 14 Teilnehmende, Extremfall)", "Fothergill et al., Obesity 2016"],
       ["Ein Teil des Verlusts war fettfreie Masse", "rund 40 % des Gewichtsverlusts unter Semaglutid", "STEP-1-DXA-Substudie, Wilding et al. 2021"]
     ],
     "hinweis": "Vier Mechanismen, nach Gewichtsverlust belegt und auf die Zeit nach der Spritze übertragen. In Studien halfen beim Halten: Krafttraining (Jensen 2024, Sardeli 2018) und Protein (Leidy 2015).",
@@ -173,8 +173,8 @@
     "spalten": ["Vergleich", "Zeitraum", "Unterschied", "95-%-Konfidenzintervall"],
     "zeilen": [
       ["Zunahme nach Liraglutid allein gegenüber Training allein", "Jahr ohne Behandlung (Woche 52 bis 104)", "+6,0 kg", "2,1 bis 10,0 kg"],
-      ["Gewicht: Training plus Liraglutid gegenüber Liraglutid allein", "Studienbeginn bis ein Jahr nach dem Ende (Woche 0 bis 104)", "−5,1 kg", "−10,0 bis −0,2 kg"],
-      ["Körperfettanteil: Training plus Liraglutid gegenüber Liraglutid allein", "Studienbeginn bis ein Jahr nach dem Ende (Woche 0 bis 104)", "−2,3 Prozentpunkte", "−4,3 bis −0,3 Prozentpunkte"]
+      ["Gewicht: Training plus Liraglutid gegenüber Liraglutid allein", "Behandlungsbeginn (Woche 0, nach der Diät) bis ein Jahr nach dem Ende (Woche 104)", "−5,1 kg", "−10,0 bis −0,2 kg"],
+      ["Körperfettanteil: Training plus Liraglutid gegenüber Liraglutid allein", "Behandlungsbeginn (Woche 0, nach der Diät) bis ein Jahr nach dem Ende (Woche 104)", "−2,3 Prozentpunkte", "−4,3 bis −0,3 Prozentpunkte"]
     ],
     "hinweis": "Erwachsene mit Adipositas: acht Wochen kalorienarme Diät, dann 52 Wochen Placebo, betreutes Training, Liraglutid oder beides, danach 52 Wochen ohne Behandlung. Nach Training blieben Gewicht und Körperzusammensetzung erhalten; nach Liraglutid allein kam das Gewicht zurück.",
     "quelle": "Lundgren et al., S-LiTE, NEJM 2021; Jensen et al., S-LiTE follow-up, eClinicalMedicine 2024, 69, 102475"
@@ -209,7 +209,7 @@
       ["Erwachsene ohne Typ-2-Diabetes", "64,8 %"],
       ["Erwachsene mit Typ-2-Diabetes", "46,5 %"]
     ],
-    "hinweis": "Versorgungsdaten aus den USA von 125.474 Erwachsenen mit Übergewicht oder Adipositas, die einen GLP-1-Rezeptoragonisten begonnen hatten. Gründe fürs Absetzen waren unter anderem Gewichtsverlust, Einkommen und Nebenwirkungen. In der Grafik steht 1 Punkt für 1 Prozent, gerundet.",
+    "hinweis": "Versorgungsdaten aus den USA von 125.474 Erwachsenen mit Übergewicht oder Adipositas, die einen GLP-1-Rezeptoragonisten begonnen hatten. In der Grafik steht 1 Punkt für 1 Prozent, gerundet.",
     "quelle": "Rodriguez et al., JAMA Netw Open 2025, 8(1)"
   },
   "step-2-typ-2-diabetes": {

@@ -8,7 +8,7 @@ order: 13
 pubDate: 2026-10-01
 updatedDate: 2026-10-06
 keywords: ["krafttraining nach abnehmspritze", "abnehmspritze absetzen sport", "abnehmspritze krafttraining", "training nach abnehmspritze", "krafttraining anfänger abnehmspritze", "abnehmspritze training zuhause", "sport nach absetzen abnehmspritze"]
-sources: ["jensen2024", "sardeli2018", "who2020", "schoenfeld2016", "acsm2009", "leidy2015", "euClaims", "wilding2021dxa"]
+sources: ["jensen2024", "sardeli2018", "who2020", "schoenfeld2016", "acsm2009", "leidy2015", "euClaims", "wilding2021dxa", "villareal2017"]
 related: ["muskelabbau-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
 affiliate: ["gripDynamometer"]
 affiliateTitle: "Beispiel für ein Griffkraft-Messgerät"
@@ -43,11 +43,16 @@ Spazierengehen, Radfahren und Schwimmen sind gut für Herz und Kopf. Sie ersetze
 <div data-interaktiv="zusammensetzung"></div>
 
 <figure class="my-8">
-  <img src="/grafiken/training-s-lite.png" alt="Balkendiagramm aus der S-LiTE-Nachbeobachtung: Im Jahr nach Therapieende nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach dem Trainingsprogramm (95-Prozent-Konfidenzintervall 2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau erhalten." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
-  <figcaption class="mt-2 text-sm text-ink-3">Training vor dem Absetzen: In der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr nach Therapieende 6,0 kg mehr zu als nach dem Trainingsprogramm.<sup><a href="#fn-jensen2024">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/training-s-lite.png" alt="Punktdiagramm mit 95-Prozent-Konfidenzintervallen aus der S-LiTE-Nachbeobachtung: Im Jahr ohne Behandlung (Woche 52 bis 104) nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein ohne Medikament (2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau ein Jahr nach Therapieende erhalten. Studienablauf: 8 Wochen kalorienarme Diät, 52 Wochen Placebo, Training, Liraglutid oder beides, danach 52 Wochen ohne Behandlung." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">S-LiTE-Nachbeobachtung: Nach Liraglutid allein nahmen Teilnehmende im Jahr ohne Behandlung 6,0 kg mehr zu als nach Training allein; gegenüber Training plus Liraglutid waren es 2,5 kg (nicht signifikant).<sup><a href="#fn-jensen2024">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
 Für Frauen in und nach den Wechseljahren gilt das doppelt: Zum Verlust aus der Therapie kommt der aus dem Alter, und Krafttraining ist die Trainingsform, die in Studien auch die Knochendichte beim Abnehmen schützt. Die Zahlen dazu stehen unter [Wechseljahre und Abnehmspritze](/wissen/wechseljahre-abnehmspritze/).
+
+<figure class="my-8">
+  <img src="/grafiken/training-art-fettfreie-masse.png" alt="Zwei Balkengruppen aus einer randomisierten Studie mit 160 Erwachsenen ab 65 Jahren mit Adipositas, 26 Wochen Diät und im Mittel 9 Prozent Gewichtsverlust: Verlust an fettfreier Masse mit Krafttraining 1,0 Kilogramm, mit Kraft plus Ausdauer 1,7 Kilogramm, mit Ausdauertraining 2,7 Kilogramm. Knochendichte der Hüfte: minus 2,6 Prozent mit Ausdauertraining, minus 1,1 Prozent mit Kraft plus Ausdauer, mit Krafttraining weniger als 1 Prozent und nicht signifikant." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Bei gleicher Diät verlor die Krafttrainingsgruppe am wenigsten fettfreie Masse; die Knochendichte der Hüfte sank mit Ausdauertraining um 2,6 %, mit Kraft plus Ausdauer um 1,1 %, mit Krafttraining um weniger als 1 %.<sup><a href="#fn-villareal2017">9</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Die drei Prinzipien
 

@@ -7,7 +7,7 @@ order: 5
 pubDate: 2026-09-30
 updatedDate: 2026-10-06
 keywords: ["kreatin abnehmspritze", "kreatin wegovy", "kreatin mounjaro", "kreatin ozempic", "kreatin glp-1", "kreatin und abnehmspritze wechselwirkung", "kreatin nach abnehmspritze"]
-sources: ["kreider2017", "euClaims", "sardeli2018", "who2020", "wilding2021dxa", "fachinfoWegovy", "fachinfoMounjaro"]
+sources: ["kreider2017", "euClaims", "sardeli2018", "who2020", "wilding2021dxa", "fachinfoWegovy", "fachinfoMounjaro", "hultman1996"]
 related: ["muskelabbau-abnehmspritze", "protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
 faq:
   - q: "Kann ich Kreatin nehmen, während ich die Abnehmspritze spritze?"
@@ -71,6 +71,11 @@ Für Menschen über 55 kommt dazu, dass die zugelassene Angabe zur Muskelkraft g
 ## Das mit der Waage
 
 Kreatin zieht Wasser in die Muskelzellen. In den ersten ein bis zwei Wochen steigt das Gewicht deshalb typischerweise um 0,5 bis 2 kg. Das ist kein Fett, es ist Wasser im Muskel – und es bleibt, solange du Kreatin nimmst. Wer nach der Abnehmspritze mit Sorge auf die Waage schaut, sollte das wissen, bevor die Zahl steigt. Praktisch: Starte Kreatin und Training gleichzeitig, akzeptiere den Sprung in Woche 1 bis 2 als neuen Ausgangswert und miss ab dann.
+
+<figure class="my-8">
+  <img src="/grafiken/kreatin-speicher-im-muskel.png" alt="Zwei Verläufe des Kreatinspeichers im Muskel aus einer Studie mit 31 Männern, zwischen den Messpunkten schematisch: Mit 3 Gramm Kreatin pro Tag stieg das Gesamtkreatin im Muskel allmählich und lag nach 28 Tagen etwa 20 Prozent über dem Ausgangswert. Mit einer Ladephase von 20 Gramm pro Tag über 6 Tage war derselbe Anstieg von etwa 20 Prozent nach 6 Tagen erreicht; ohne weitere Einnahme lag der Wert 30 Tage nach dem Ende wieder beim Ausgangswert. Mit dem Speicher steigt das Wasser in der Muskelzelle; das zeigt die Waage, Fett ist es nicht." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Kreatinspeicher im Muskel mit 3 g pro Tag und mit Ladephase; derselbe Anstieg von etwa 20 %, ohne Ladephase nach etwa vier Wochen.<sup><a href="#fn-kreider2017">1</a>, <a href="#fn-hultman1996">8</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Sicherheit: Nieren, Laborwerte, Wechselwirkungen
 

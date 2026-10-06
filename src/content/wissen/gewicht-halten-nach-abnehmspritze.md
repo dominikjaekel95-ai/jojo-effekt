@@ -41,8 +41,8 @@ Der Plan verhindert den Jojo-Effekt nicht. Das kann kein Plan und kein Produkt. 
 Am besten startet der Plan **vor** der letzten Dosis, während der Appetit noch gedämpft ist. Wer schon abgesetzt hat, startet heute.
 
 <figure class="my-8">
-  <img src="/grafiken/training-s-lite.png" alt="Balkendiagramm aus der S-LiTE-Nachbeobachtung: Im Jahr nach Therapieende nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach dem Trainingsprogramm (95-Prozent-Konfidenzintervall 2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau erhalten." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
-  <figcaption class="mt-2 text-sm text-ink-3">Der Grund für Regel eins: In der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr nach Therapieende 6,0 kg mehr zu als nach dem Trainingsprogramm. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/training-s-lite.png" alt="Punktdiagramm mit 95-Prozent-Konfidenzintervallen aus der S-LiTE-Nachbeobachtung: Im Jahr ohne Behandlung (Woche 52 bis 104) nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein ohne Medikament (2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau ein Jahr nach Therapieende erhalten. Studienablauf: 8 Wochen kalorienarme Diät, 52 Wochen Placebo, Training, Liraglutid oder beides, danach 52 Wochen ohne Behandlung." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Der Grund für Regel eins: In der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr ohne Behandlung 6,0 kg mehr zu als nach Training allein. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
 ## Die drei Regeln, die den ganzen Plan tragen
@@ -52,7 +52,7 @@ Am besten startet der Plan **vor** der letzten Dosis, während der Appetit noch 
 3. **Wiegen mit Regel, mindestens einmal pro Woche.** Morgens, gleiche Bedingungen; täglich mit Wochenmittel ist in Studien am besten belegt.<sup><a href="#fn-wing2006">8</a></sup> Und vorher festgelegt: Bei welcher Zahl tust du was? Die Studienlage steht unter [Wie oft wiegen nach der Abnehmspritze?](/wissen/wie-oft-wiegen-nach-abnehmspritze/).
 
 <figure class="my-8">
-  <img src="/grafiken/zeitachse-phasen.png" alt="Vier Phasen nach der letzten Dosis einer Abnehmspritze: Woche 1 bis 2 noch wenig Veränderung, Woche 2 bis 5 kehrt der Appetit zurück, Woche 5 bis 8 ist der Wirkstoff praktisch abgebaut, ab Woche 8 ist die Gewichtszunahme messbar und steigt bis etwa Woche 20." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/zeitachse-phasen.png" alt="Vier Phasen nach der letzten Dosis am Beispiel Semaglutid (Halbwertszeit etwa eine Woche): Woche 0 bis 2 noch wenig Veränderung, Woche 2 bis 5 kehrt der Appetit zurück, Woche 5 bis 8 ist der Wirkstoff praktisch abgebaut, ab Woche 8 ist die Gewichtszunahme messbar und steigt bis etwa Woche 20. Bei Tirzepatid (Halbwertszeit etwa fünf Tage) ist der Wirkstoff schon nach etwa 25 Tagen abgebaut." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Die vier Phasen nach der letzten Dosis, an denen sich die drei Abschnitte des Plans orientieren.<sup><a href="#fn-wu2025">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 

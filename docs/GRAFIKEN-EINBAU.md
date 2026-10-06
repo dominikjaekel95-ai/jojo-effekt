@@ -17,8 +17,153 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 - Alle 15 bestehenden Grafiken sind mit gleichen Dateinamen und URLs neu gerendert; die Einbindungen in den Artikeln bleiben gültig.
 - Die neuen Grafiken haben den Kalk-Grund `#EFEFEB` im Bild. Die alten Einbindungen tragen noch `class="w-full rounded-xl2 border border-line bg-white"`; im Kalk-Design ohne Rahmen und ohne weißen Grund einbinden (`class="w-full"`), sonst entsteht ein Kasten.
-- Zwei Alt-Texte beschreiben die alte Form: `training-s-lite` beginnt jetzt mit „Diagramm aus der S-LiTE-Nachbeobachtung“ (statt „Balkendiagramm“, die Grafik zeigt Punkt und Konfidenzintervall), `warum-das-gewicht-zurueckkommt` mit „Vier Spalten“ (statt „Vier Karten“). Zahlen und übriger Text unverändert; in den Artikeln (jojo-effekt, krafttraining, gewicht-halten) beim nächsten Bearbeiten angleichen.
+- Nach der Prüfrunde haben sich bei mehreren bestehenden Grafiken Titel, Beschriftung und Alt-Text geändert (Liste im nächsten Abschnitt). Die Zahlen sind dieselben.
+- Jede Grafik trägt jetzt im Bild die Lizenzzeile „Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe (CC BY 4.0)“; der Satz in der Bildunterschrift bleibt trotzdem (Regel aus CLAUDE.md).
 - `wirkstoff-abbau-nach-letzter-dosis` ist im Register eine Variante von `halbwertszeiten-praeparate` (gleiche Daten, Abbaukurven statt Balken).
+
+## Bestehende Einbindungen anpassen
+
+Diese Einbindungen stehen schon in Artikeln. Der Alt-Text im Markdown ist jeweils eine eigene Kopie; er muss dem neuen Bild folgen. Ersetzt wird nur der Inhalt von `alt="…"` bzw. der Text der `<figcaption>`; Fußnoten bleiben, wie sie sind. Bei der Gelegenheit die alte Klasse `class="w-full rounded-xl2 border border-line bg-white"` durch `class="w-full"` ersetzen, falls noch vorhanden. `updatedDate` nur setzen, wenn sich am Artikeltext etwas ändert, nicht für Alt-Text oder Bildunterschrift allein.
+
+### `abnehmpille-absetzen.md` · Zeile 68 · abnehmpille-belegt-und-offen
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Zwei Felder: Links die Zulassungsstudie OASIS 4 der Semaglutid-Tablette 25 Milligramm mit 307 Teilnehmenden ohne Diabetes: minus 13,6 Prozent Gewicht gegenüber minus 2,2 Prozent unter Placebo nach 64 Wochen, bei durchgehender Einnahme minus 16,6 Prozent. Rechts der offene Punkt: Es gibt noch keine Studie zur Wiederzunahme nach dem Absetzen der Tablette (Stand Oktober 2026). Übertragbar mit Vorbehalt: gleicher Wirkstoff mit einer Halbwertszeit von etwa einer Woche; nach dem Absetzen der Spritze waren in der STEP-1-Verlängerung zwei Drittel des Verlusts nach einem Jahr zurück (von minus 17,3 auf minus 5,6 Prozent); in Studien zu Adipositas-Medikamenten ist die Zunahme ab Woche 8 messbar.
+```
+
+### `abnehmpille-oder-spritze.md` · Zeile 66 · wirksamkeit-zulassungsstudien
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Balkendiagramm aus fünf großen Studien, mittlere Änderung des Körpergewichts: STEP 1 (Semaglutid 2,4 Milligramm Spritze, 68 Wochen) minus 14,9 Prozent gegenüber minus 2,4 Prozent unter Placebo; OASIS 4 (Semaglutid-Tablette 25 Milligramm, 64 Wochen) minus 13,6 gegenüber minus 2,2; OASIS 1 (Semaglutid-Tablette 50 Milligramm, nicht zugelassen, 68 Wochen) minus 15,1 gegenüber minus 2,4; SURMOUNT-1 (Tirzepatid 15 Milligramm, höchster Studienarm, 72 Wochen) minus 20,9 gegenüber minus 3,1; SCALE (Liraglutid 3 Milligramm, 56 Wochen) minus 8,0 gegenüber minus 2,6 Prozent. Kein direkter Vergleich zwischen den Studien.
+```
+
+- **Bildunterschrift anpassen:** „in den Zulassungsstudien“ stimmt nicht für alle fünf: OASIS 1 prüfte 50 mg, eine nicht zugelassene Dosis. Vorschlag (Fußnote wie bisher):
+
+```html
+Mittlere Gewichtsänderung in fünf großen Studien, Wirkstoff gegenüber Placebo; OASIS 1 prüfte eine nicht zugelassene Dosis (50 mg). Verschiedene Studien, kein direkter Vergleich. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.
+```
+
+### `abnehmpille-oder-spritze.md` · Zeile 81 · halbwertszeiten-praeparate
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten.
+```
+
+### `abnehmspritze-absetzen.md` · Zeile 60 · zeitachse-nach-letzter-dosis
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Semaglutid (Halbwertszeit etwa eine Woche) ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar, Tirzepatid (Halbwertszeit etwa fünf Tage) nach etwa 25 Tagen. Der Appetit kehrt, abgeleitet aus dem sinkenden Wirkstoffspiegel, ab Woche 2 bis 5 zurück; die Gewichtszunahme ist ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Als Vorschlag dieser Seite ist ein ärztlicher Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis markiert.
+```
+
+### `abnehmspritze-absetzen.md` · Zeile 75 · absetzkurve-step-1
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Liniendiagramm: Unter Semaglutid 2,4 mg sinkt das Gewicht in 68 Wochen im Mittel um 17,3 Prozent, unter Placebo um 2,0 Prozent. In den 52 Wochen nach dem Absetzen steigt es wieder; nach insgesamt 120 Wochen liegt es bei minus 5,6 Prozent (Semaglutid) und minus 0,1 Prozent (Placebo). Zwei Drittel des Verlusts, 11,6 Prozentpunkte, sind nach einem Jahr ohne Medikament wieder da. Messpunkte Woche 0, 68 und 120, Verlauf dazwischen schematisch.
+```
+
+### `feiertage-nach-abnehmspritze.md` · Zeile 54 · zeitachse-nach-letzter-dosis
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Semaglutid (Halbwertszeit etwa eine Woche) ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar, Tirzepatid (Halbwertszeit etwa fünf Tage) nach etwa 25 Tagen. Der Appetit kehrt, abgeleitet aus dem sinkenden Wirkstoffspiegel, ab Woche 2 bis 5 zurück; die Gewichtszunahme ist ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Als Vorschlag dieser Seite ist ein ärztlicher Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis markiert.
+```
+
+### `gewicht-halten-nach-abnehmspritze.md` · Zeile 42 · training-s-lite
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Punktdiagramm mit 95-Prozent-Konfidenzintervallen aus der S-LiTE-Nachbeobachtung: Im Jahr ohne Behandlung (Woche 52 bis 104) nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein ohne Medikament (2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau ein Jahr nach Therapieende erhalten. Studienablauf: 8 Wochen kalorienarme Diät, 52 Wochen Placebo, Training, Liraglutid oder beides, danach 52 Wochen ohne Behandlung.
+```
+
+- **Bildunterschrift anpassen:** Statt „nach dem Trainingsprogramm“ genauer „nach Training allein“ (ohne Medikament), wie im neuen Titel der Grafik. Vorschlag (Fußnote wie bisher):
+
+```html
+Der Grund für Regel eins: In der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr ohne Behandlung 6,0 kg mehr zu als nach Training allein. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.
+```
+
+### `gewicht-halten-nach-abnehmspritze.md` · Zeile 53 · zeitachse-phasen
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Vier Phasen nach der letzten Dosis am Beispiel Semaglutid (Halbwertszeit etwa eine Woche): Woche 0 bis 2 noch wenig Veränderung, Woche 2 bis 5 kehrt der Appetit zurück, Woche 5 bis 8 ist der Wirkstoff praktisch abgebaut, ab Woche 8 ist die Gewichtszunahme messbar und steigt bis etwa Woche 20. Bei Tirzepatid (Halbwertszeit etwa fünf Tage) ist der Wirkstoff schon nach etwa 25 Tagen abgebaut.
+```
+
+### `haarausfall-abnehmspritze.md` · Zeile 52 · haarausfall-zeitverlauf
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Zeitachse des telogenen Effluviums über zwölf Monate, schematisch: Nach schnellem Gewichtsverlust wechseln viele Haare in die Ruhephase, zwei bis drei Monate später beginnt diffuser Haarausfall, der meist innerhalb von etwa sechs Monaten nach Beginn abklingt, wenn der Auslöser weggefallen ist; danach wachsen die Haare nach. Beeinflussbar sind Protein (1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht am Tag), der Eisenwert sowie Zink und Biotin bei nachgewiesener Lücke; länger als sechs Monate, fleckig oder mit Müdigkeit und Frieren ärztlich abklären.
+```
+
+- **Bildunterschrift anpassen:** Der Verlauf ist schematisch; „typisch“ steht nicht mehr im Titel der Grafik. Vorschlag (Fußnote wie bisher):
+
+```html
+Der Verlauf des telogenen Effluviums in Monaten nach dem Auslöser, schematisch.<sup><a href="#fn-malkud2015">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.
+```
+
+### `jojo-effekt-abnehmspritze.md` · Zeile 65 · warum-das-gewicht-zurueckkommt
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Vier Spalten mit den Mechanismen des Jojo-Effekts, nach Gewichtsverlust belegt und auf die Zeit nach der Abnehmspritze übertragen: Die Appetitbremse fällt weg, sobald der Wirkstoff weitgehend abgebaut ist (Semaglutid nach etwa fünf bis sieben Wochen, Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. In Studien halfen beim Halten: Krafttraining und Protein.
+```
+
+- **Bildunterschrift anpassen:** Die Mechanismen sind nach Gewichtsverlust belegt, nicht nach dem Absetzen der Spritze gemessen; die Grafik sagt das jetzt im Untertitel. Vorschlag (Fußnote wie bisher):
+
+```html
+Vier Mechanismen, nach Gewichtsverlust belegt und auf die Zeit nach der Spritze übertragen; die Quellen stehen in den Abschnitten darunter. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.
+```
+
+### `krafttraining-nach-abnehmspritze.md` · Zeile 44 · training-s-lite
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Punktdiagramm mit 95-Prozent-Konfidenzintervallen aus der S-LiTE-Nachbeobachtung: Im Jahr ohne Behandlung (Woche 52 bis 104) nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein ohne Medikament (2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau ein Jahr nach Therapieende erhalten. Studienablauf: 8 Wochen kalorienarme Diät, 52 Wochen Placebo, Training, Liraglutid oder beides, danach 52 Wochen ohne Behandlung.
+```
+
+- **Bildunterschrift anpassen:** „Training vor dem Absetzen“ trifft den Vergleich nicht: Die 6,0 kg sind Liraglutid allein gegenüber Training allein. Vorschlag (Fußnote wie bisher):
+
+```html
+S-LiTE-Nachbeobachtung: Nach Liraglutid allein nahmen Teilnehmende im Jahr ohne Behandlung 6,0 kg mehr zu als nach Training allein; gegenüber Training plus Liraglutid waren es 2,5 kg (nicht signifikant).<sup><a href="#fn-jensen2024">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.
+```
+
+### `mounjaro-absetzen.md` · Zeile 60 · halbwertszeiten-praeparate
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten.
+```
+
+### `muskelabbau-abnehmspritze.md` · Zeile 42 · koerperzusammensetzung-step-1
+
+- **Alt-Text ersetzen** (Grafik geändert oder Alt-Text unvollständig):
+
+```text
+Balken, der den Gewichtsverlust nach 68 Wochen Semaglutid in einer DXA-Substudie mit 140 Teilnehmenden aufteilt: rund 60 Prozent Fettmasse und rund 40 Prozent fettfreie Masse, also Muskeln, Organe, Knochen und Wasser; wie viel davon Muskel war, wurde nicht getrennt gemessen. In Diätstudien hielt Krafttraining den Verlust an fettfreier Masse klein; empfohlen sind Krafttraining an mindestens zwei Tagen pro Woche und 1,2 bis 1,6 Gramm Protein pro Kilogramm Körpergewicht am Tag.
+```
+
+### Seiten außerhalb der Artikel
+
+- `src/pages/wissen/index.astro` (Zeile 55, `zeitachse-nach-letzter-dosis`): Alt-Text wie oben bei `abnehmspritze-absetzen.md` ersetzen. Datei mit Konfliktrisiko: nur diese Zeile ändern.
+- `preise-im-monat` auf `/abnehmspritze-kosten/` und `/marktradar/`: Der Alt-Text entsteht dort aus `preise.json`; die geänderten Zeilen (Wegovy ohne „Anfangsstufen“, Ozempic „nur für Typ-2-Diabetes zugelassen“) kommen automatisch an.
+
 
 ## Einbau je Artikel
 
@@ -31,7 +176,7 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/kreatin-speicher-im-muskel.png" alt="Zwei Verläufe des Kreatinspeichers im Muskel aus einer Studie mit 31 Männern: Mit 3 Gramm Kreatin pro Tag stieg das Gesamtkreatin im Muskel allmählich und lag nach 28 Tagen etwa 20 Prozent über dem Ausgangswert. Mit einer Ladephase von 20 Gramm pro Tag über 6 Tage war derselbe Anstieg von etwa 20 Prozent nach 6 Tagen erreicht; ohne weitere Einnahme lag der Wert 30 Tage nach dem Ende wieder beim Ausgangswert. Mit dem Speicher steigt das Wasser in der Muskelzelle; das zeigt die Waage, Fett ist es nicht." width="1200" height="675" loading="lazy" class="w-full" />
+  <img src="/grafiken/kreatin-speicher-im-muskel.png" alt="Zwei Verläufe des Kreatinspeichers im Muskel aus einer Studie mit 31 Männern, zwischen den Messpunkten schematisch: Mit 3 Gramm Kreatin pro Tag stieg das Gesamtkreatin im Muskel allmählich und lag nach 28 Tagen etwa 20 Prozent über dem Ausgangswert. Mit einer Ladephase von 20 Gramm pro Tag über 6 Tage war derselbe Anstieg von etwa 20 Prozent nach 6 Tagen erreicht; ohne weitere Einnahme lag der Wert 30 Tage nach dem Ende wieder beim Ausgangswert. Mit dem Speicher steigt das Wasser in der Muskelzelle; das zeigt die Waage, Fett ist es nicht." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Kreatinspeicher im Muskel mit 3 g pro Tag und mit Ladephase; derselbe Anstieg von etwa 20 %, ohne Ladephase nach etwa vier Wochen.<sup><a href="#fn-kreider2017">1</a>, <a href="#fn-hultman1996">6</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
@@ -45,7 +190,7 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/wirkstoff-abbau-nach-letzter-dosis.png" alt="Drei Abbaukurven nach der letzten Dosis, gerechnet aus der Halbwertszeit laut Fachinformation: Liraglutid (Saxenda) hat eine Halbwertszeit von etwa 13 Stunden und ist nach etwa 3 Tagen weitgehend abgebaut; Tirzepatid (Mounjaro) etwa 5 Tage, weitgehend abgebaut nach etwa 25 Tagen; Semaglutid (Wegovy, Ozempic) etwa 1 Woche, weitgehend abgebaut nach etwa 5 Wochen und bis etwa 7 Wochen nachweisbar. Faustregel: nach fünf Halbwertszeiten weitgehend abgebaut." width="1200" height="675" loading="lazy" class="w-full" />
+  <img src="/grafiken/wirkstoff-abbau-nach-letzter-dosis.png" alt="Drei Abbaukurven nach der letzten Dosis, gerechnet aus der Halbwertszeit laut Fachinformation: Liraglutid (Saxenda) hat eine Halbwertszeit von etwa 13 Stunden und ist nach etwa 3 Tagen weitgehend abgebaut; Tirzepatid (Mounjaro) etwa 5 Tage, weitgehend abgebaut nach etwa 25 Tagen; Semaglutid (Wegovy, Ozempic) etwa 1 Woche, weitgehend abgebaut nach etwa 5 Wochen und laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar. Faustregel: nach fünf Halbwertszeiten weitgehend abgebaut." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Rechnerischer Wirkstoffabbau nach der letzten Dosis: Liraglutid ist nach etwa drei Tagen weitgehend abgebaut, Tirzepatid nach etwa 25 Tagen, Semaglutid nach etwa fünf Wochen.<sup><a href="#fn-fachinfoSaxenda">1</a>, <a href="#fn-fachinfoMounjaro">10</a>, <a href="#fn-fachinfoWegovy">11</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
@@ -58,7 +203,7 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/s-lite-liraglutid-und-training.png" alt="Drei Kennzahlen aus der S-LiTE-Studie mit Liraglutid: Im Jahr ohne Behandlung nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein (95-Prozent-Konfidenzintervall 2,1 bis 10,0). Von Studienbeginn bis ein Jahr nach dem Ende lagen Teilnehmende mit Training plus Liraglutid 5,1 Kilogramm niedriger (minus 10,0 bis minus 0,2) und beim Körperfettanteil 2,3 Prozentpunkte niedriger (minus 4,3 bis minus 0,3) als nach Liraglutid allein. Nach Training blieben Gewicht und Körperzusammensetzung erhalten." width="1200" height="675" loading="lazy" class="w-full" />
+  <img src="/grafiken/s-lite-liraglutid-und-training.png" alt="Drei Kennzahlen aus der S-LiTE-Studie mit Liraglutid: Im Jahr ohne Behandlung (Woche 52 bis 104) nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein ohne Medikament (95-Prozent-Konfidenzintervall 2,1 bis 10,0). Von Studienbeginn bis ein Jahr nach dem Ende (Woche 0 bis 104) lagen Teilnehmende mit Training plus Liraglutid 5,1 Kilogramm niedriger (minus 10,0 bis minus 0,2) und beim Körperfettanteil 2,3 Prozentpunkte niedriger (minus 4,3 bis minus 0,3) als nach Liraglutid allein. Nach Training blieben Gewicht und Körperzusammensetzung erhalten. Studienablauf: 8 Wochen Diät, 52 Wochen Behandlung, 52 Wochen ohne Behandlung." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">S-LiTE: was ein Jahr nach dem Ende der Behandlung mit Liraglutid mit und ohne Training blieb, mit 95-%-Konfidenzintervallen.<sup><a href="#fn-jensen2024">3</a>, <a href="#fn-lundgren2021">4</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
@@ -71,7 +216,7 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/heisshunger-vor-der-waage.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis: Semaglutid baut sich mit einer Halbwertszeit von etwa einer Woche ab und ist nach etwa 5 bis 7 Wochen weitgehend weg. Der Appetit kommt in Woche 2 bis 5 zurück und bleibt. Die Hungerhormone sind nach Gewichtsverlust verschoben, mehr Ghrelin und weniger Leptin, noch ein Jahr später messbar. Die Gewichtszunahme ist erst ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Markiert ist das Fenster von Woche 2 bis 8, in dem der Hunger zurück ist, die Waage aber noch wenig zeigt." width="1200" height="675" loading="lazy" class="w-full" />
+  <img src="/grafiken/heisshunger-vor-der-waage.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis: Semaglutid baut sich mit einer Halbwertszeit von etwa einer Woche ab und ist nach etwa 5 bis 7 Wochen weitgehend weg. Der Appetit kommt, abgeleitet aus dem sinkenden Wirkstoffspiegel, in Woche 2 bis 5 zurück und bleibt. Die Hungerhormone sind nach einer Diät verschoben, mehr Ghrelin und weniger Leptin, noch ein Jahr später messbar (Studie ohne Medikament). Die Gewichtszunahme ist erst ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Markiert ist das Fenster von Woche 2 bis 8, in dem der Hunger zurück ist, die Waage aber noch wenig zeigt." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Der Hunger kommt vor der Waage: Wirkstoffabbau, Appetit, Hungerhormone und messbare Zunahme in den ersten 20 Wochen nach der letzten Dosis.<sup><a href="#fn-sumithran2011">1</a>, <a href="#fn-wu2025">2</a>, <a href="#fn-fachinfoWegovy">8</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
@@ -97,8 +242,8 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/absetzen-im-ersten-jahr.png" alt="Zwei Punktraster mit je 100 Punkten: Von Menschen ohne Typ-2-Diabetes hatten 64,8 Prozent ihre GLP-1-Therapie innerhalb eines Jahres beendet, über alle Gruppen mit und ohne Typ-2-Diabetes 53,6 Prozent. US-Versorgungsdaten von Erwachsenen mit Übergewicht oder Adipositas." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Innerhalb eines Jahres hatten 64,8 % der Menschen ohne Typ-2-Diabetes ihre Therapie beendet, über alle Gruppen 53,6 %; US-Versorgungsdaten.<sup><a href="#fn-rodriguez2025">9</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/absetzen-im-ersten-jahr.png" alt="Zwei Punktraster mit je 100 Punkten aus US-Versorgungsdaten von 125.474 Erwachsenen mit Übergewicht oder Adipositas: Von Menschen ohne Typ-2-Diabetes hatten 64,8 Prozent ihre GLP-1-Therapie innerhalb eines Jahres beendet, von Menschen mit Typ-2-Diabetes 46,5 Prozent." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Innerhalb eines Jahres hatten 64,8 % der Menschen ohne Typ-2-Diabetes ihre Therapie beendet und 46,5 % der Menschen mit Typ-2-Diabetes; US-Versorgungsdaten von 125.474 Erwachsenen.<sup><a href="#fn-rodriguez2025">9</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
 
@@ -110,8 +255,8 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/absetzen-im-ersten-jahr.png" alt="Zwei Punktraster mit je 100 Punkten: Von Menschen ohne Typ-2-Diabetes hatten 64,8 Prozent ihre GLP-1-Therapie innerhalb eines Jahres beendet, über alle Gruppen mit und ohne Typ-2-Diabetes 53,6 Prozent. US-Versorgungsdaten von Erwachsenen mit Übergewicht oder Adipositas." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Innerhalb eines Jahres hatten 64,8 % der Menschen ohne Typ-2-Diabetes ihre Therapie beendet, über alle Gruppen 53,6 %; US-Versorgungsdaten.<sup><a href="#fn-rodriguez2025">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/absetzen-im-ersten-jahr.png" alt="Zwei Punktraster mit je 100 Punkten aus US-Versorgungsdaten von 125.474 Erwachsenen mit Übergewicht oder Adipositas: Von Menschen ohne Typ-2-Diabetes hatten 64,8 Prozent ihre GLP-1-Therapie innerhalb eines Jahres beendet, von Menschen mit Typ-2-Diabetes 46,5 Prozent." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Innerhalb eines Jahres hatten 64,8 % der Menschen ohne Typ-2-Diabetes ihre Therapie beendet und 46,5 % der Menschen mit Typ-2-Diabetes; US-Versorgungsdaten von 125.474 Erwachsenen.<sup><a href="#fn-rodriguez2025">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
 
@@ -119,13 +264,13 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 - **Grafik:** `/grafiken/wirkstoff-abbau-nach-letzter-dosis.png`
 - **Wo:** unter `## Wie lange Ozempic nachwirkt`, nach dem Absatz des Abschnitts, vor „## Was mit dem Gewicht passiert“
-- **Quellen im Frontmatter:** `fachinfoOzempic` = 1, `fachinfoSaxenda` = 8 (anhängen), `fachinfoMounjaro` = 9 (anhängen)
-- **Hinten an `sources` anhängen:** `fachinfoSaxenda`, `fachinfoMounjaro`
+- **Quellen im Frontmatter:** `fachinfoOzempic` = 1, `fachinfoWegovy` = 8 (anhängen), `fachinfoSaxenda` = 9 (anhängen), `fachinfoMounjaro` = 10 (anhängen)
+- **Hinten an `sources` anhängen:** `fachinfoWegovy`, `fachinfoSaxenda`, `fachinfoMounjaro`
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/wirkstoff-abbau-nach-letzter-dosis.png" alt="Drei Abbaukurven nach der letzten Dosis, gerechnet aus der Halbwertszeit laut Fachinformation: Liraglutid (Saxenda) hat eine Halbwertszeit von etwa 13 Stunden und ist nach etwa 3 Tagen weitgehend abgebaut; Tirzepatid (Mounjaro) etwa 5 Tage, weitgehend abgebaut nach etwa 25 Tagen; Semaglutid (Wegovy, Ozempic) etwa 1 Woche, weitgehend abgebaut nach etwa 5 Wochen und bis etwa 7 Wochen nachweisbar. Faustregel: nach fünf Halbwertszeiten weitgehend abgebaut." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Rechnerischer Wirkstoffabbau nach der letzten Dosis: Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut und bis etwa sieben Wochen nachweisbar; zum Vergleich Liraglutid und Tirzepatid.<sup><a href="#fn-fachinfoOzempic">1</a>, <a href="#fn-fachinfoSaxenda">8</a>, <a href="#fn-fachinfoMounjaro">9</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/wirkstoff-abbau-nach-letzter-dosis.png" alt="Drei Abbaukurven nach der letzten Dosis, gerechnet aus der Halbwertszeit laut Fachinformation: Liraglutid (Saxenda) hat eine Halbwertszeit von etwa 13 Stunden und ist nach etwa 3 Tagen weitgehend abgebaut; Tirzepatid (Mounjaro) etwa 5 Tage, weitgehend abgebaut nach etwa 25 Tagen; Semaglutid (Wegovy, Ozempic) etwa 1 Woche, weitgehend abgebaut nach etwa 5 Wochen und laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar. Faustregel: nach fünf Halbwertszeiten weitgehend abgebaut." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Rechnerischer Wirkstoffabbau nach der letzten Dosis: Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar; zum Vergleich Liraglutid und Tirzepatid.<sup><a href="#fn-fachinfoOzempic">1</a>, <a href="#fn-fachinfoWegovy">8</a>, <a href="#fn-fachinfoSaxenda">9</a>, <a href="#fn-fachinfoMounjaro">10</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
 
@@ -137,8 +282,8 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/step-2-typ-2-diabetes.png" alt="Balkendiagramm aus der Studie STEP 2 mit Menschen mit Typ-2-Diabetes: Nach 68 Wochen lag das Gewicht unter Semaglutid 2,4 Milligramm (Dosis wie bei Wegovy) im Mittel 9,6 Prozent niedriger, unter 1,0 Milligramm (Dosis wie bei Ozempic) 7,0 Prozent und unter Placebo 3,4 Prozent. Weniger Verlust heißt weniger, das nach dem Absetzen zurückkommen kann." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">STEP 2 mit Menschen mit Typ-2-Diabetes: −9,6 % unter 2,4 mg, −7,0 % unter 1,0 mg (Ozempic-Dosis), −3,4 % unter Placebo nach 68 Wochen.<sup><a href="#fn-davies2021step2">2</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/step-2-typ-2-diabetes.png" alt="Balkendiagramm aus der Studie STEP 2 mit Erwachsenen mit Übergewicht und Typ-2-Diabetes: Nach 68 Wochen lag das Gewicht unter Semaglutid 2,4 Milligramm im Mittel 9,6 Prozent niedriger, unter Semaglutid 1,0 Milligramm 7,0 Prozent und unter Placebo 3,4 Prozent. Weniger Verlust heißt weniger, was nach dem Absetzen zurückkommen kann." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">STEP 2 mit Menschen mit Typ-2-Diabetes: −9,6 % unter Semaglutid 2,4 mg, −7,0 % unter Semaglutid 1,0 mg, −3,4 % unter Placebo nach 68 Wochen.<sup><a href="#fn-davies2021step2">2</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
 
@@ -151,8 +296,8 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/wirkstoff-abbau-nach-letzter-dosis.png" alt="Drei Abbaukurven nach der letzten Dosis, gerechnet aus der Halbwertszeit laut Fachinformation: Liraglutid (Saxenda) hat eine Halbwertszeit von etwa 13 Stunden und ist nach etwa 3 Tagen weitgehend abgebaut; Tirzepatid (Mounjaro) etwa 5 Tage, weitgehend abgebaut nach etwa 25 Tagen; Semaglutid (Wegovy, Ozempic) etwa 1 Woche, weitgehend abgebaut nach etwa 5 Wochen und bis etwa 7 Wochen nachweisbar. Faustregel: nach fünf Halbwertszeiten weitgehend abgebaut." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Rechnerischer Wirkstoffabbau nach der letzten Dosis: Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut und bis etwa sieben Wochen nachweisbar; zum Vergleich Liraglutid und Tirzepatid.<sup><a href="#fn-fachinfoWegovy">1</a>, <a href="#fn-fachinfoSaxenda">11</a>, <a href="#fn-fachinfoMounjaro">12</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/wirkstoff-abbau-nach-letzter-dosis.png" alt="Drei Abbaukurven nach der letzten Dosis, gerechnet aus der Halbwertszeit laut Fachinformation: Liraglutid (Saxenda) hat eine Halbwertszeit von etwa 13 Stunden und ist nach etwa 3 Tagen weitgehend abgebaut; Tirzepatid (Mounjaro) etwa 5 Tage, weitgehend abgebaut nach etwa 25 Tagen; Semaglutid (Wegovy, Ozempic) etwa 1 Woche, weitgehend abgebaut nach etwa 5 Wochen und laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar. Faustregel: nach fünf Halbwertszeiten weitgehend abgebaut." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Rechnerischer Wirkstoffabbau nach der letzten Dosis: Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar; zum Vergleich Liraglutid und Tirzepatid.<sup><a href="#fn-fachinfoWegovy">1</a>, <a href="#fn-fachinfoSaxenda">11</a>, <a href="#fn-fachinfoMounjaro">12</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
 
@@ -164,8 +309,8 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/supplements-was-belegt-ist.png" alt="Drei Spalten zu Supplements nach der Abnehmspritze. Belegt, mit Bedingung: Protein, wenn 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht am Tag über Mahlzeiten nicht zusammenkommen; Kreatin-Monohydrat, 3 Gramm täglich, nur mit Krafttraining; Ballaststoffe, wenn man unter 30 Gramm am Tag bleibt. Nur bei nachgewiesenem Mangel: Vitamin D nach Blutwert, Vitamin B12 bei Metformin oder veganer Ernährung kontrollieren, Eisen nur nach gemessenem Wert, Magnesium bei sehr kleinen Portionen. Kein Beleg für das Gewicht: Fatburner, Detox und Booster, sogenannte natürliche GLP-1-Booster wie Berberin, Probiotika gegen den Jojo-Effekt, Omega-3 für Gewicht oder Muskeln." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Supplements nach der Abnehmspritze in drei Stufen: belegt mit Bedingung, nur bei nachgewiesenem Mangel, kein Beleg für das Gewicht.<sup><a href="#fn-leidy2015">2</a>, <a href="#fn-euClaims">3</a>, <a href="#fn-kreider2017">4</a>, <a href="#fn-dgeBallaststoffe">5</a>, <a href="#fn-klartextNem">6</a>, <a href="#fn-adaSoc2024">7</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/supplements-was-belegt-ist.png" alt="Drei Spalten zu Supplements nach der Abnehmspritze. Sinnvoll, mit Bedingung: Protein (zugelassene Angabe: Erhalt von Muskelmasse), wenn 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht am Tag über Mahlzeiten nicht zusammenkommen; Kreatin-Monohydrat (zugelassene Angabe: Leistung bei Schnellkrafttraining), 3 Gramm täglich, nur mit Krafttraining; Ballaststoffe, wenn man unter dem Richtwert von 30 Gramm am Tag bleibt. Nur bei Mangel oder Lücke: Vitamin D nach Blutwert, Vitamin B12 bei Metformin oder veganer Ernährung kontrollieren, Eisen nur nach gemessenem Wert, Magnesium bei Lücke wie sehr kleinen Portionen. Kein Beleg für den versprochenen Nutzen: Fatburner, Detox und Booster, sogenannte natürliche GLP-1-Booster wie Berberin, Probiotika gegen den Jojo-Effekt, Omega-3 für Gewicht oder Muskeln." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Supplements nach der Abnehmspritze in drei Stufen: sinnvoll mit Bedingung, nur bei Mangel oder Lücke, kein Beleg für den versprochenen Nutzen.<sup><a href="#fn-leidy2015">2</a>, <a href="#fn-euClaims">3</a>, <a href="#fn-kreider2017">4</a>, <a href="#fn-dgeBallaststoffe">5</a>, <a href="#fn-klartextNem">6</a>, <a href="#fn-adaSoc2024">7</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
 
@@ -233,7 +378,7 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/fett-und-fettfreie-masse-zwei-studien.png" alt="Zwei Balken, die den Gewichtsverlust aufteilen: In der STEP-1-Substudie mit Semaglutid entfielen rund 60 Prozent auf Fettmasse und rund 40 Prozent auf fettfreie Masse, in der SURMOUNT-1-Substudie mit Tirzepatid rund 75 Prozent auf Fettmasse und rund 25 Prozent auf fettfreie Masse. Unter Tirzepatid sanken Körpergewicht um 21,3 Prozent, Fettmasse um 33,9 Prozent und fettfreie Masse um 10,9 Prozent (Placebo 5,3, 8,2 und 2,6 Prozent). Zwei verschiedene Studien, kein direkter Vergleich." width="1200" height="675" loading="lazy" class="w-full" />
+  <img src="/grafiken/fett-und-fettfreie-masse-zwei-studien.png" alt="Zwei Balken, die den Gewichtsverlust aufteilen: In der STEP-1-Substudie mit Semaglutid (140 Teilnehmende, 68 Wochen) entfielen rund 60 Prozent auf Fettmasse und rund 40 Prozent auf fettfreie Masse, in der SURMOUNT-1-Substudie mit Tirzepatid (160 Teilnehmende, 72 Wochen) rund 75 Prozent auf Fettmasse und rund 25 Prozent auf fettfreie Masse. Unter Tirzepatid sanken Körpergewicht um 21,3 Prozent, Fettmasse um 33,9 Prozent und fettfreie Masse um 10,9 Prozent (Placebo 5,3, 8,2 und 2,6 Prozent). Zwei verschiedene Studien, kein direkter Vergleich." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Anteil von Fett und fettfreier Masse am Gewichtsverlust in zwei DXA-Substudien: rund 60 zu 40 % unter Semaglutid, rund 75 zu 25 % unter Tirzepatid.<sup><a href="#fn-wilding2021dxa">1</a>, <a href="#fn-look2025surmount1dxa">10</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
@@ -246,7 +391,7 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/fett-und-fettfreie-masse-zwei-studien.png" alt="Zwei Balken, die den Gewichtsverlust aufteilen: In der STEP-1-Substudie mit Semaglutid entfielen rund 60 Prozent auf Fettmasse und rund 40 Prozent auf fettfreie Masse, in der SURMOUNT-1-Substudie mit Tirzepatid rund 75 Prozent auf Fettmasse und rund 25 Prozent auf fettfreie Masse. Unter Tirzepatid sanken Körpergewicht um 21,3 Prozent, Fettmasse um 33,9 Prozent und fettfreie Masse um 10,9 Prozent (Placebo 5,3, 8,2 und 2,6 Prozent). Zwei verschiedene Studien, kein direkter Vergleich." width="1200" height="675" loading="lazy" class="w-full" />
+  <img src="/grafiken/fett-und-fettfreie-masse-zwei-studien.png" alt="Zwei Balken, die den Gewichtsverlust aufteilen: In der STEP-1-Substudie mit Semaglutid (140 Teilnehmende, 68 Wochen) entfielen rund 60 Prozent auf Fettmasse und rund 40 Prozent auf fettfreie Masse, in der SURMOUNT-1-Substudie mit Tirzepatid (160 Teilnehmende, 72 Wochen) rund 75 Prozent auf Fettmasse und rund 25 Prozent auf fettfreie Masse. Unter Tirzepatid sanken Körpergewicht um 21,3 Prozent, Fettmasse um 33,9 Prozent und fettfreie Masse um 10,9 Prozent (Placebo 5,3, 8,2 und 2,6 Prozent). Zwei verschiedene Studien, kein direkter Vergleich." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Anteil von Fett und fettfreier Masse am Gewichtsverlust in zwei DXA-Substudien: rund 60 zu 40 % unter Semaglutid, rund 75 zu 25 % unter Tirzepatid.<sup><a href="#fn-wilding2021dxa">10</a>, <a href="#fn-look2025surmount1dxa">11</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
@@ -255,12 +400,12 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 - **Grafik:** `/grafiken/kalorienbedarf-zwei-effekte.png`
 - **Wo:** unter `## Warum der echte Verbrauch unter der Formel liegt`, nach dem ersten Absatz des Abschnitts (mit „Für die Beispiele oben heißt das …“)
-- **Quellen im Frontmatter:** `mifflin1990` = 1, `dgeEnergie` = 2, `leibel1995` = 3, `rosenbaum2010` = 4
+- **Quellen im Frontmatter:** `mifflin1990` = 1, `dgeEnergie` = 2, `leibel1995` = 3, `rosenbaum2010` = 4, `martins2020` = 7
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/kalorienbedarf-zwei-effekte.png" alt="Wasserfalldiagramm für eine Frau mit 45 Jahren und 170 Zentimetern: Vor dem Abnehmen mit 95 Kilogramm liegt der Tagesbedarf laut Formel bei 2.277 kcal. Der leichtere Körper senkt ihn um 210 kcal auf 2.067 kcal bei 80 Kilogramm. Die Anpassung nach Gewichtsverlust senkt den tatsächlichen Verbrauch um weitere 300 bis 400 kcal, auf eher rund 1.700 bis 1.800 kcal. Formel nach Mifflin-St-Jeor mal Aktivitätsfaktor 1,4, gerundet; die Anpassung ist individuell verschieden." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Rechenbeispiel von 95 auf 80 kg: Die Formel senkt den Tagesbedarf um 210 kcal, die Anpassung nach Gewichtsverlust um weitere 300 bis 400 kcal.<sup><a href="#fn-mifflin1990">1</a>, <a href="#fn-dgeEnergie">2</a>, <a href="#fn-leibel1995">3</a>, <a href="#fn-rosenbaum2010">4</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/kalorienbedarf-zwei-effekte.png" alt="Wasserfalldiagramm für eine Frau mit 45 Jahren und 170 Zentimetern: Vor dem Abnehmen mit 95 Kilogramm liegt der Tagesbedarf laut Formel bei 2.277 kcal. Der leichtere Körper senkt ihn um 210 kcal auf 2.067 kcal bei 80 Kilogramm. Die Anpassung nach Gewichtsverlust senkt den tatsächlichen Verbrauch in Messungen um weitere 300 bis 400 kcal, auf rund 1.700 bis 1.800 kcal; beim Ruheumsatz war die Anpassung in einer anderen Studie deutlich kleiner (92 kcal am Tag). Formel nach Mifflin-St-Jeor mal Aktivitätsfaktor 1,4, gerundet." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Rechenbeispiel von 95 auf 80 kg: Die Formel senkt den Tagesbedarf um 210 kcal, die Anpassung nach Gewichtsverlust in Messungen um weitere 300 bis 400 kcal; beim Ruheumsatz war sie in einer anderen Studie deutlich kleiner.<sup><a href="#fn-mifflin1990">1</a>, <a href="#fn-dgeEnergie">2</a>, <a href="#fn-leibel1995">3</a>, <a href="#fn-rosenbaum2010">4</a>, <a href="#fn-martins2020">7</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
 
@@ -273,8 +418,8 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/training-art-fettfreie-masse.png" alt="Zwei Balkengruppen aus einer randomisierten Studie mit 160 Erwachsenen ab 65 Jahren mit Adipositas, 26 Wochen Diät und im Mittel 9 Prozent Gewichtsverlust: Verlust an fettfreier Masse mit Krafttraining 1,0 Kilogramm, mit Kraft plus Ausdauer 1,7 Kilogramm, mit Ausdauertraining 2,7 Kilogramm. Knochendichte der Hüfte: minus 3 Prozent mit Ausdauertraining, mit Krafttraining unter 1 Prozent und nicht signifikant." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Bei gleicher Diät verlor die Krafttrainingsgruppe am wenigsten fettfreie Masse; nur mit Ausdauertraining sank die Knochendichte der Hüfte messbar.<sup><a href="#fn-villareal2017">9</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/training-art-fettfreie-masse.png" alt="Zwei Balkengruppen aus einer randomisierten Studie mit 160 Erwachsenen ab 65 Jahren mit Adipositas, 26 Wochen Diät und im Mittel 9 Prozent Gewichtsverlust: Verlust an fettfreier Masse mit Krafttraining 1,0 Kilogramm, mit Kraft plus Ausdauer 1,7 Kilogramm, mit Ausdauertraining 2,7 Kilogramm. Knochendichte der Hüfte: minus 2,6 Prozent mit Ausdauertraining, minus 1,1 Prozent mit Kraft plus Ausdauer, mit Krafttraining weniger als 1 Prozent und nicht signifikant." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Bei gleicher Diät verlor die Krafttrainingsgruppe am wenigsten fettfreie Masse; die Knochendichte der Hüfte sank mit Ausdauertraining um 2,6 %, mit Kraft plus Ausdauer um 1,1 %, mit Krafttraining um weniger als 1 %.<sup><a href="#fn-villareal2017">9</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
 
@@ -286,8 +431,8 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/training-art-fettfreie-masse.png" alt="Zwei Balkengruppen aus einer randomisierten Studie mit 160 Erwachsenen ab 65 Jahren mit Adipositas, 26 Wochen Diät und im Mittel 9 Prozent Gewichtsverlust: Verlust an fettfreier Masse mit Krafttraining 1,0 Kilogramm, mit Kraft plus Ausdauer 1,7 Kilogramm, mit Ausdauertraining 2,7 Kilogramm. Knochendichte der Hüfte: minus 3 Prozent mit Ausdauertraining, mit Krafttraining unter 1 Prozent und nicht signifikant." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Bei gleicher Diät verlor die Krafttrainingsgruppe am wenigsten fettfreie Masse; nur mit Ausdauertraining sank die Knochendichte der Hüfte messbar.<sup><a href="#fn-villareal2017">10</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/training-art-fettfreie-masse.png" alt="Zwei Balkengruppen aus einer randomisierten Studie mit 160 Erwachsenen ab 65 Jahren mit Adipositas, 26 Wochen Diät und im Mittel 9 Prozent Gewichtsverlust: Verlust an fettfreier Masse mit Krafttraining 1,0 Kilogramm, mit Kraft plus Ausdauer 1,7 Kilogramm, mit Ausdauertraining 2,7 Kilogramm. Knochendichte der Hüfte: minus 2,6 Prozent mit Ausdauertraining, minus 1,1 Prozent mit Kraft plus Ausdauer, mit Krafttraining weniger als 1 Prozent und nicht signifikant." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Bei gleicher Diät verlor die Krafttrainingsgruppe am wenigsten fettfreie Masse; die Knochendichte der Hüfte sank mit Ausdauertraining um 2,6 %, mit Kraft plus Ausdauer um 1,1 %, mit Krafttraining um weniger als 1 %.<sup><a href="#fn-villareal2017">10</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
 
@@ -299,7 +444,7 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/wechseljahre-koerperzusammensetzung.png" alt="Zwei Balkengruppen aus der SWAN-Studie mit 1246 Frauen: Der jährliche Zuwachs an Fettmasse stieg von 0,25 Kilogramm vor dem Übergang auf 0,45 Kilogramm im Übergang. Die fettfreie Masse nahm vor dem Übergang um 0,2 Prozent pro Jahr zu und sank im Übergang um 0,2 Prozent pro Jahr. Beides lief bis etwa zwei Jahre nach der letzten Regelblutung weiter; das Gewicht selbst stieg nicht schneller als vorher." width="1200" height="675" loading="lazy" class="w-full" />
+  <img src="/grafiken/wechseljahre-koerperzusammensetzung.png" alt="Zwei Balkengruppen aus der SWAN-Studie mit 1.246 Frauen: Der jährliche Zuwachs an Fettmasse stieg von 0,25 Kilogramm vor dem Übergang auf 0,45 Kilogramm im Übergang. Die fettfreie Masse nahm vor dem Übergang um 0,2 Prozent pro Jahr zu und sank im Übergang um 0,2 Prozent pro Jahr. Beides lief bis etwa zwei Jahre nach der letzten Regelblutung weiter; das Gewicht selbst stieg nicht schneller als vorher." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">SWAN-Studie: Im Übergang wuchs die Fettmasse pro Jahr schneller, die fettfreie Masse nahm ab; das Gewicht stieg nicht schneller als vorher.<sup><a href="#fn-greendale2019">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
@@ -312,8 +457,8 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/wiegen-zonen-stop-regain.png" alt="Zonen der STOP-Regain-Studie bezogen auf das Gewicht nach der Abnahme, zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, rot ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie nicht." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">STOP Regain: Zonen mit festgelegter Reaktion; 45,7 % gegenüber 72,4 % nahmen 2,3 kg oder mehr wieder zu.<sup><a href="#fn-wing2006">1</a>, <a href="#fn-daley2019">6</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/wiegen-zonen-stop-regain.png" alt="Zonen der STOP-Regain-Studie bezogen auf das Gewicht nach der Abnahme, zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, obere Zone (in der Studie rot) ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie nicht." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">STOP Regain: drei Zonen mit festgelegter Reaktion; in der persönlich betreuten Gruppe nahmen 45,7 % 2,3 kg oder mehr wieder zu, in der Kontrollgruppe 72,4 %.<sup><a href="#fn-wing2006">1</a>, <a href="#fn-daley2019">6</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
 
@@ -326,8 +471,8 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/wiegen-zonen-stop-regain.png" alt="Zonen der STOP-Regain-Studie bezogen auf das Gewicht nach der Abnahme, zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, rot ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie nicht." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">STOP Regain: Zonen mit festgelegter Reaktion; 45,7 % gegenüber 72,4 % nahmen 2,3 kg oder mehr wieder zu.<sup><a href="#fn-wing2006">8</a>, <a href="#fn-daley2019">12</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/wiegen-zonen-stop-regain.png" alt="Zonen der STOP-Regain-Studie bezogen auf das Gewicht nach der Abnahme, zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, obere Zone (in der Studie rot) ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie nicht." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">STOP Regain: drei Zonen mit festgelegter Reaktion; in der persönlich betreuten Gruppe nahmen 45,7 % 2,3 kg oder mehr wieder zu, in der Kontrollgruppe 72,4 %.<sup><a href="#fn-wing2006">8</a>, <a href="#fn-daley2019">12</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
 
@@ -353,7 +498,7 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/protein-verteilung.png" alt="Zwei Balkengruppen: gleichmäßige Verteilung mit etwa 30 Gramm Protein zu Frühstück, Mittag und Abend gegenüber abendlastiger Verteilung mit etwa 10, 15 und 65 Gramm bei gleicher Tagesmenge. Bei gleichmäßiger Verteilung lag die Muskelproteinsynthese über 24 Stunden um 25 Prozent höher. Empfehlung für Gewichtsabnahme und -erhalt: mindestens etwa 25 bis 30 Gramm Protein pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full" />
+  <img src="/grafiken/protein-verteilung.png" alt="Zwei Balkengruppen: gleichmäßige Verteilung mit etwa 30 Gramm Protein zu Frühstück, Mittag und Abend gegenüber abendlastiger Verteilung mit etwa 10, 15 und 65 Gramm bei gleicher Tagesmenge. Bei gleichmäßiger Verteilung lag die Muskelproteinsynthese über 24 Stunden um 25 Prozent höher. Kleine Studie, gemessen wurde die Muskelproteinsynthese, nicht die Muskelmasse. Empfehlung für Gewichtsabnahme und -erhalt: mindestens etwa 25 bis 30 Gramm Protein pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Gleiche Tagesmenge, anders verteilt: Mit etwa 30 g zu jeder Mahlzeit lag die Muskelproteinsynthese über 24 Stunden 25 % höher als abendlastig.<sup><a href="#fn-leidy2015">2</a>, <a href="#fn-mamerow2014">7</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
@@ -366,7 +511,7 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/protein-tag-beispiel.png" alt="Gestapelter Balken eines Beispieltags bei 80 Kilogramm Körpergewicht: morgens 200 Gramm Skyr mit Beeren und Haferflocken, etwa 24 Gramm Protein; mittags Salat oder Gemüse mit 120 Gramm Hähnchen, Fisch oder Tofu und einer Scheibe Vollkornbrot, etwa 30 Gramm; nachmittags Hüttenkäse oder ein Protein-Shake und ein Apfel, etwa 20 Gramm; abends Linsen- oder Bohneneintopf mit 2 Eiern oder 150 Gramm Fisch, etwa 30 Gramm. Zusammen rund 100 Gramm, im Zielbereich von 96 bis 128 Gramm (1,2 bis 1,6 Gramm pro Kilogramm)." width="1200" height="675" loading="lazy" class="w-full" />
+  <img src="/grafiken/protein-tag-beispiel.png" alt="Gestapelter Balken eines Beispieltags bei 80 Kilogramm Körpergewicht: morgens 200 Gramm Skyr mit Beeren und 2 Esslöffeln Haferflocken, etwa 24 Gramm Protein; mittags Salat oder Gemüse mit 120 Gramm Hähnchen, Fisch oder Tofu und einer Scheibe Vollkornbrot, etwa 30 Gramm (mit Tofu weniger); nachmittags Hüttenkäse oder ein Protein-Shake und ein Apfel, etwa 20 Gramm; abends Linsen- oder Bohneneintopf mit 2 Eiern oder 150 Gramm Fisch, etwa 30 Gramm. Zusammen rund 100 Gramm Protein, im Zielbereich von 96 bis 128 Gramm (1,2 bis 1,6 Gramm pro Kilogramm), und rund 30 Gramm Ballaststoffe." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Ein Beispieltag mit rund 100 g Protein bei 80 kg, im Zielbereich von 96 bis 128 g.<sup><a href="#fn-leidy2015">3</a>, <a href="#fn-bls">9</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
@@ -379,7 +524,7 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 
 ```html
 <figure class="my-8">
-  <img src="/grafiken/ballaststoffe-portionen.png" alt="Balkendiagramm der Ballaststoffe je Portion: Linsen gekocht 150 Gramm etwa 8 Gramm, Vollkornbrot 2 Scheiben etwa 8 Gramm, Himbeeren 125 Gramm etwa 6 Gramm, Brokkoli gegart 200 Gramm etwa 6 Gramm, Haferflocken 50 Gramm etwa 5 Gramm, Leinsamen 1 Esslöffel etwa 4 Gramm, Glucomannan als Tagesmenge laut zugelassener Angabe 3 Gramm. Richtwert mindestens 30 Gramm am Tag; die 3 Gramm Glucomannan sind ein Zehntel davon." width="1200" height="675" loading="lazy" class="w-full" />
+  <img src="/grafiken/ballaststoffe-portionen.png" alt="Balkendiagramm der Ballaststoffe je Portion: Linsen gekocht 150 Gramm etwa 8 Gramm, Vollkornbrot 2 Scheiben etwa 8 Gramm, Himbeeren 125 Gramm etwa 6 Gramm, Brokkoli gegart 200 Gramm etwa 6 Gramm, Haferflocken 50 Gramm etwa 5 Gramm, Leinsamen 1 Esslöffel etwa 4 Gramm, Glucomannan als Tagesmenge laut zugelassener Angabe 3 Gramm. Richtwert mindestens 30 Gramm am Tag; die 3 Gramm Glucomannan sind ein Zehntel davon. Die Angabe zu Glucomannan gilt für drei Portionen zu je 1 Gramm mit ein bis zwei Gläsern Wasser vor den Mahlzeiten bei kalorienarmer Ernährung; nie ohne reichlich Wasser einnehmen (Erstickungsgefahr)." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Ballaststoffe je Portion: Linsen und Vollkornbrot liefern je etwa 8 g, die Glucomannan-Tagesmenge 3 g, ein Zehntel des Richtwerts von 30 g.<sup><a href="#fn-euClaims">1</a>, <a href="#fn-dgeBallaststoffe">3</a>, <a href="#fn-bls">7</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 ```
@@ -390,7 +535,7 @@ Die Fußnotennummern sind gegen das Frontmatter auf diesem Branch gerechnet. Än
 |---|---|
 | `kreatin-abnehmspritze` | `hultman1996` |
 | `saxenda-absetzen` | `fachinfoMounjaro`, `fachinfoWegovy` |
-| `ozempic-absetzen` | `fachinfoSaxenda`, `fachinfoMounjaro` |
+| `ozempic-absetzen` | `fachinfoWegovy`, `fachinfoSaxenda`, `fachinfoMounjaro` |
 | `wegovy-absetzen` | `fachinfoSaxenda`, `fachinfoMounjaro` |
 | `supplements-nach-abnehmspritze` | `nvs2`, `rabenberg2015` |
 | `magnesium-abnehmspritze` | `rabenberg2015` |
@@ -416,7 +561,7 @@ Neu in `src/data/sources.ts`: `hultman1996` (Hultman et al., J Appl Physiol 1996
 | `supplements-was-belegt-ist` | `supplements-nach-abnehmspritze` | leidy2015, kreider2017, euClaims, dgeBallaststoffe, adaSoc2024, klartextNem, almandoz2024 |
 | `versorgung-in-deutschland` | `supplements-nach-abnehmspritze`, `magnesium-abnehmspritze`, `eisen-abnehmspritze`, `vitamin-d-abnehmspritze` | nvs2, rabenberg2015 |
 | `fett-und-fettfreie-masse-zwei-studien` | `muskelabbau-abnehmspritze`, `kalorienbedarf-nach-abnehmspritze` | wilding2021dxa, look2025surmount1dxa |
-| `kalorienbedarf-zwei-effekte` | `kalorienbedarf-nach-abnehmspritze` | mifflin1990, dgeEnergie, leibel1995, rosenbaum2010 |
+| `kalorienbedarf-zwei-effekte` | `kalorienbedarf-nach-abnehmspritze` | mifflin1990, dgeEnergie, leibel1995, rosenbaum2010, martins2020 |
 | `training-art-fettfreie-masse` | `krafttraining-nach-abnehmspritze`, `wechseljahre-abnehmspritze` | villareal2017 |
 | `wechseljahre-koerperzusammensetzung` | `wechseljahre-abnehmspritze` | greendale2019 |
 | `wiegen-zonen-stop-regain` | `wie-oft-wiegen-nach-abnehmspritze`, `gewicht-halten-nach-abnehmspritze` | wing2006, daley2019 |

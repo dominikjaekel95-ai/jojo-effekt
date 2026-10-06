@@ -18,7 +18,7 @@ export const sources: Record<string, Source> = {
     full:
       'Rodriguez PJ, Zhang V, Gratzl S, et al. Discontinuation and Reinitiation of Dual-Labeled GLP-1 Receptor Agonists Among US Adults With Overweight or Obesity. JAMA Netw Open. 2025;8(1):e2457349.',
     url: 'https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2829779',
-    note: 'Ein Jahr nach Therapiebeginn hatten 64,8 % der Menschen ohne Typ-2-Diabetes abgesetzt (über alle Gruppen: 53,6 %).',
+    note: 'Versorgungsdaten von 125.474 Erwachsenen in den USA: Ein Jahr nach Therapiebeginn hatten 64,8 % der Menschen ohne Typ-2-Diabetes abgesetzt und 46,5 % der Menschen mit Typ-2-Diabetes (über alle Gruppen: 53,6 %).',
   },
   wilding2021dxa: {
     id: 'wilding2021dxa',
@@ -34,7 +34,7 @@ export const sources: Record<string, Source> = {
     full:
       'Wilding JPH, Batterham RL, Davies M, et al. Weight regain and cardiometabolic effects after withdrawal of semaglutide: The STEP 1 trial extension. Diabetes Obes Metab. 2022;24(8):1553–1564.',
     url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9542252/',
-    note: 'Ein Jahr nach dem Absetzen waren im Mittel zwei Drittel des verlorenen Gewichts wieder da.',
+    note: 'Ein Jahr nach dem Absetzen waren im Mittel zwei Drittel des verlorenen Gewichts wieder da: nach 68 Wochen Semaglutid −17,3 % (Placebo −2,0 %), nach 120 Wochen −5,6 % (Placebo −0,1 %), also 11,6 Prozentpunkte zurück.',
   },
   rubino2021: {
     id: 'rubino2021',
@@ -74,7 +74,7 @@ export const sources: Record<string, Source> = {
     full:
       'Jensen SBK, Blond MB, Sandsdal RM, et al. Healthy weight loss maintenance with exercise, GLP-1 receptor agonist, or both combined followed by one year without treatment: a post-treatment analysis of a randomised placebo-controlled trial. eClinicalMedicine. 2024;69:102475.',
     url: 'https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(24)00054-3/fulltext',
-    note: 'Ein Jahr nach Therapieende: Wer trainiert hatte, hielt Gewicht und Körperzusammensetzung; nach Liraglutid allein kam das Gewicht zurück (6,0 kg mehr Zunahme als nach Training).',
+    note: 'Ein Jahr nach Therapieende: Wer trainiert hatte, hielt Gewicht und Körperzusammensetzung; nach Liraglutid allein kam das Gewicht zurück (6,0 kg mehr Zunahme als nach Training allein, 95-%-KI 2,1 bis 10,0; 2,5 kg mehr als nach Training plus Liraglutid, −1,5 bis 6,5, nicht signifikant). Von Studienbeginn bis Woche 104 lag die Gruppe mit Training plus Liraglutid 5,1 kg (−10,0 bis −0,2) und beim Körperfettanteil 2,3 Prozentpunkte (−4,3 bis −0,3) unter Liraglutid allein.',
   },
   lundgren2021: {
     id: 'lundgren2021',
@@ -97,7 +97,7 @@ export const sources: Record<string, Source> = {
     full:
       'Leidy HJ, Clifton PM, Astrup A, et al. The role of protein in weight loss and maintenance. Am J Clin Nutr. 2015;101(6):1320S–1329S.',
     url: 'https://doi.org/10.3945/ajcn.114.084038',
-    note: 'Empfiehlt für Gewichtsabnahme und -erhalt eine Proteinzufuhr von 1,2–1,6 g pro kg Körpergewicht und Tag.',
+    note: 'Empfiehlt für Gewichtsabnahme und -erhalt eine Proteinzufuhr von 1,2–1,6 g pro kg Körpergewicht und Tag, mit mindestens etwa 25 bis 30 g pro Mahlzeit.',
   },
   dgeProtein: {
     id: 'dgeProtein',
@@ -175,7 +175,7 @@ export const sources: Record<string, Source> = {
     full:
       'Davies M, Færch L, Jeppesen OK, et al. Semaglutide 2·4 mg once a week in adults with overweight or obesity, and type 2 diabetes (STEP 2): a randomised, double-blind, double-dummy, placebo-controlled, phase 3 trial. Lancet. 2021;397(10278):971–984.',
     url: 'https://doi.org/10.1016/S0140-6736(21)00213-0',
-    note: 'Bei Typ-2-Diabetes: −9,6 % unter 2,4 mg, −7,0 % unter 1,0 mg (Ozempic-Dosis), −3,4 % unter Placebo nach 68 Wochen.',
+    note: 'Bei Typ-2-Diabetes: −9,6 % unter 2,4 mg, −7,0 % unter 1,0 mg, −3,4 % unter Placebo nach 68 Wochen.',
   },
   jastreboff2022: {
     id: 'jastreboff2022',
@@ -244,7 +244,7 @@ export const sources: Record<string, Source> = {
     full:
       'Spiegel K, Tasali E, Penev P, Van Cauter E. Brief Communication: Sleep Curtailment in Healthy Young Men Is Associated with Decreased Leptin Levels, Elevated Ghrelin Levels, and Increased Hunger and Appetite. Ann Intern Med. 2004;141(11):846–850.',
     url: 'https://doi.org/10.7326/0003-4819-141-11-200412070-00008',
-    note: 'Zwei Nächte mit vier Stunden Schlaf: Leptin sank, Ghrelin stieg, Hunger und Appetit nahmen zu.',
+    note: 'Zwei Nächte mit vier Stunden im Bett gegenüber zwei Nächten mit zehn Stunden, 12 gesunde junge Männer: Leptin −18 %, Ghrelin +28 %, Hunger +24 %, Appetit +23 %, Appetit auf kalorienreiche Lebensmittel mit viel Kohlenhydraten +33 bis 45 %.',
   },
   fachinfoSaxenda: {
     id: 'fachinfoSaxenda',
@@ -266,7 +266,7 @@ export const sources: Record<string, Source> = {
     short: 'Fachinformation Wegovy (EMA-Produktinformation)',
     full: 'Europäische Arzneimittel-Agentur. Wegovy (Semaglutid): Zusammenfassung der Merkmale des Arzneimittels. Amsterdam: EMA.',
     url: 'https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy',
-    note: 'Fünf Dosisstufen von 0,25 bis 2,4 mg; Halbwertszeit etwa eine Woche; bei geplanter Schwangerschaft mindestens zwei Monate vorher absetzen.',
+    note: 'Fünf Dosisstufen von 0,25 bis 2,4 mg; Halbwertszeit etwa eine Woche; nach der letzten Dosis von 2,4 mg etwa sieben Wochen im Blut nachweisbar; bei geplanter Schwangerschaft mindestens zwei Monate vorher absetzen.',
   },
   fachinfoOzempic: {
     id: 'fachinfoOzempic',
@@ -305,7 +305,7 @@ export const sources: Record<string, Source> = {
     full:
       'Mamerow MM, Mettler JA, English KL, et al. Dietary Protein Distribution Positively Influences 24-h Muscle Protein Synthesis in Healthy Adults. J Nutr. 2014;144(6):876–880.',
     url: 'https://doi.org/10.3945/jn.113.185280',
-    note: 'Gleichmäßige Verteilung (etwa 30 g pro Mahlzeit) erhöhte die 24-Stunden-Muskelproteinsynthese um rund 25 % gegenüber einer abendlastigen Verteilung.',
+    note: 'Gleichmäßige Verteilung (etwa 30 g pro Mahlzeit) erhöhte die 24-Stunden-Muskelproteinsynthese um rund 25 % gegenüber einer abendlastigen Verteilung (etwa 10, 15 und 65 g).',
   },
   lowe2007: {
     id: 'lowe2007',
@@ -349,7 +349,7 @@ export const sources: Record<string, Source> = {
     short: 'Malkud, J Clin Diagn Res 2015',
     full: 'Malkud S. Telogen Effluvium: A Review. J Clin Diagn Res. 2015;9(9):WE01–WE03.',
     url: 'https://doi.org/10.7860/JCDR/2015/15219.6492',
-    note: 'Übersicht: diffuser Haarausfall etwa zwei bis drei Monate nach einem Auslöser (u. a. schneller Gewichtsverlust), meist selbstlimitierend.',
+    note: 'Übersicht: diffuser Haarausfall etwa zwei bis drei Monate nach einem Auslöser (u. a. schneller Gewichtsverlust), meist selbstlimitierend; die akute Form klingt meist innerhalb von etwa sechs Monaten ab.',
   },
   burd2013: {
     id: 'burd2013',
@@ -588,7 +588,7 @@ export const sources: Record<string, Source> = {
     short: 'Villareal et al., NEJM 2017',
     full: 'Villareal DT, Aguirre L, Gurney AB, et al. Aerobic or resistance exercise, or both, in dieting obese older adults. N Engl J Med. 2017;376(20):1943–1955.',
     url: 'https://doi.org/10.1056/NEJMoa1616338',
-    note: 'Randomisierte Studie mit 160 adipösen Erwachsenen ab 65 Jahren, 26 Wochen Diät (−9 % Gewicht): Mit Krafttraining ging 1,0 kg fettfreie Masse verloren, mit Ausdauertraining 2,7 kg, mit beidem 1,7 kg; die Knochendichte der Hüfte sank nur in der Ausdauergruppe messbar (3 %), in der Kraftgruppe unter 1 % (nicht signifikant). Beide Geschlechter.',
+    note: 'Randomisierte Studie mit 160 adipösen Erwachsenen ab 65 Jahren, 26 Wochen Diät (−9 % Gewicht): Mit Krafttraining ging 1,0 kg fettfreie Masse verloren, mit Ausdauertraining 2,7 kg, mit beidem 1,7 kg; die Knochendichte der Hüfte sank mit Ausdauertraining um 2,6 %, mit beidem um 1,1 %, mit Krafttraining um weniger als 1 % (nicht signifikant). Beide Geschlechter.',
   },
   jensen2024bone: {
     id: 'jensen2024bone',

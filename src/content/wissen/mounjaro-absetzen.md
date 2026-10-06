@@ -18,7 +18,7 @@ faq:
   - q: "Muss ich Mounjaro ausschleichen?"
     a: "<p>Die Fachinformation sieht kein Ausschleichen vor; SURMOUNT-4 hat abrupt auf Placebo gewechselt, ohne Entzugserscheinungen. Mit sechs Dosisstufen ist ein schrittweises Reduzieren technisch möglich. Ob es sinnvoll ist, entscheidet deine Ärztin; ein Beleg für einen kleineren Jojo-Effekt fehlt.</p>"
   - q: "Ist der Jojo-Effekt nach Mounjaro stärker als nach Wegovy?"
-    a: "<p>In Prozentpunkten ja, weil der Verlust vorher größer ist: In SURMOUNT-5 verloren Teilnehmende unter Tirzepatid 20,2 %, unter Semaglutid 13,7 %. Mehr Verlust heißt mehr, das zurückkommen kann. Der Anteil, der zurückkommt, ist in den Studien ähnlich: rund zwei Drittel innerhalb eines Jahres.</p>"
+    a: "<p>In Prozentpunkten ja, weil der Verlust vorher größer ist: In SURMOUNT-5 verloren Teilnehmende unter Tirzepatid 20,2 %, unter Semaglutid 13,7 %. Mehr Verlust heißt mehr, das zurückkommen kann. Zurück kommt bei Tirzepatid etwa die Hälfte innerhalb eines Jahres: In SURMOUNT-4 lag das Gewicht nach vorher −20,9 % ein Jahr nach dem Wechsel auf Placebo noch knapp 10 % unter dem Start.</p>"
   - q: "Was passiert mit dem Körper, wenn man Mounjaro absetzt?"
     a: "<p>Tirzepatid ist nach rund 25 Tagen weitgehend abgebaut; der Appetit kommt früher zurück, der Magen entleert sich wieder schneller, Übelkeit und Völlegefühl lassen nach. Ein Entzugssyndrom gibt es nicht. In SURMOUNT-4 stieg das Gewicht nach dem Wechsel auf Placebo in 52 Wochen um etwa 14 %, und Blutzucker, Blutdruck und Blutfette bewegten sich mit dem Gewicht zurück Richtung Ausgangswert. Bei Typ-2-Diabetes gehört die übrige Therapie dann angepasst, deshalb nur in Absprache mit der Ärztin.</p>"
   - q: "Kann ich Mounjaro absetzen, ohne zuzunehmen?"

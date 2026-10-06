@@ -58,8 +58,8 @@ export const grafiken: Grafik[] = [
   {
     id: 'zeitachse-nach-letzter-dosis',
     title: 'Die ersten 20 Wochen nach der letzten Dosis',
-    subtitle: 'Wirkstoffabbau, Appetit, messbare Zunahme und Kontrolltermin auf einer Zeitachse',
-    alt: 'Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Semaglutid (Halbwertszeit etwa eine Woche) ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar, Tirzepatid (Halbwertszeit etwa fünf Tage) nach etwa 25 Tagen. Der Appetit kehrt, abgeleitet aus dem sinkenden Wirkstoffspiegel, ab Woche 2 bis 5 zurück; die Gewichtszunahme ist ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Als Vorschlag dieser Seite ist ein ärztlicher Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis markiert.',
+    subtitle: 'Wirkstoffabbau, Appetit und messbare Zunahme auf einer Zeitachse',
+    alt: 'Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Semaglutid (Halbwertszeit etwa eine Woche) ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar, Tirzepatid (Halbwertszeit etwa fünf Tage) nach etwa 25 Tagen. Der Appetit kehrt, abgeleitet aus dem sinkenden Wirkstoffspiegel, ab Woche 2 bis 5 zurück; die Gewichtszunahme ist ab etwa Woche 8 messbar und steigt bis etwa Woche 20.',
     sources: ['fachinfoWegovy', 'fachinfoMounjaro', 'wu2025'],
     used: [
       { href: '/wissen/abnehmspritze-absetzen/', label: 'Abnehmspritze absetzen' },

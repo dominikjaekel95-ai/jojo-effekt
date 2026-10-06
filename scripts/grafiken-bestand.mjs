@@ -132,12 +132,12 @@ export function bestand({ preise, fmtDate, warn }) {
   {
     const px = (w) => 360 + (w / 20) * 730;
     let b = '';
-    b += gridX([0, 4, 8, 12, 16, 20], px, 158, 552, (w) => `Woche ${w}`, 146);
+    b += gridX([0, 4, 8, 12, 16, 20], px, 158, 516, (w) => `Woche ${w}`, 146);
+    // Drei Zeilen; der Kontrolltermin (Vorschlag dieser Seite) ist seit 06.10.2026 entfernt.
     const rows = [
-      { y: 192, label: 'Wirkstoff im Körper', sub: 'am Beispiel Semaglutid', note: 'Semaglutid (Halbwertszeit etwa 1 Woche) nach etwa 5 Wochen weitgehend abgebaut, laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar (gepunktet); Tirzepatid (etwa 5 Tage) schon nach etwa 25 Tagen' },
-      { y: 288, label: 'Appetit kommt zurück', sub: 'aus dem Wirkstoffspiegel', note: 'Woche 2 bis 5, mit sinkendem Wirkstoffspiegel; bleibt danach (abgeleitet, nicht gemessen)' },
-      { y: 384, label: 'Zunahme messbar', sub: 'Meta-Analyse', note: 'ab etwa Woche 8 messbar, Anstieg bis etwa Woche 20 (Meta-Analyse randomisierter Studien)' },
-      { y: 480, label: 'Kontrolltermin', sub: 'Vorschlag dieser Seite', note: 'Vorschlag dieser Seite: ärztlicher Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis, dann zeigt sich, ob die Zunahme beginnt' },
+      { y: 204, label: 'Wirkstoff im Körper', sub: 'am Beispiel Semaglutid', note: 'Semaglutid (Halbwertszeit etwa 1 Woche) nach etwa 5 Wochen weitgehend abgebaut, laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar (gepunktet); Tirzepatid (etwa 5 Tage) schon nach etwa 25 Tagen' },
+      { y: 324, label: 'Appetit kommt zurück', sub: 'aus dem Wirkstoffspiegel', note: 'Woche 2 bis 5, mit sinkendem Wirkstoffspiegel; bleibt danach (abgeleitet, nicht gemessen)' },
+      { y: 444, label: 'Zunahme messbar', sub: 'Meta-Analyse', note: 'ab etwa Woche 8 messbar, Anstieg bis etwa Woche 20 (Meta-Analyse randomisierter Studien)' },
     ];
     for (const row of rows) {
       b += T(M, row.y + 6, row.label, { st: 'head', size: F.label });
@@ -150,14 +150,13 @@ export function bestand({ preise, fmtDate, warn }) {
     b += R(px(2), rows[1].y - h / 2, px(5) - px(2), h, { fill: C.regain });
     b += L(px(5), rows[1].y, px(20), rows[1].y, { c: C.regain, w: 2 });
     b += R(px(8), rows[2].y - h / 2, px(20) - px(8), h, { fill: C.regain });
-    b += R(px(8), rows[3].y - h / 2, px(12) - px(8), h, { stroke: C.ink, sw: 1.6 });
     add(
       'zeitachse-nach-letzter-dosis.svg',
       {
         title: 'Die ersten 20 Wochen nach der letzten Dosis',
         subtitle: 'Was aus Pharmakologie und Studien ableitbar ist; der individuelle Verlauf weicht ab',
         source: 'Fachinformationen Wegovy und Mounjaro (EMA); Wu et al., Meta-Analyse, BMC Medicine 2025',
-        alt: 'Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Semaglutid (Halbwertszeit etwa eine Woche) ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar, Tirzepatid (Halbwertszeit etwa fünf Tage) nach etwa 25 Tagen. Der Appetit kehrt, abgeleitet aus dem sinkenden Wirkstoffspiegel, ab Woche 2 bis 5 zurück; die Gewichtszunahme ist ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Als Vorschlag dieser Seite ist ein ärztlicher Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis markiert.',
+        alt: 'Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Semaglutid (Halbwertszeit etwa eine Woche) ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar, Tirzepatid (Halbwertszeit etwa fünf Tage) nach etwa 25 Tagen. Der Appetit kehrt, abgeleitet aus dem sinkenden Wirkstoffspiegel, ab Woche 2 bis 5 zurück; die Gewichtszunahme ist ab etwa Woche 8 messbar und steigt bis etwa Woche 20.',
       },
       b,
     );

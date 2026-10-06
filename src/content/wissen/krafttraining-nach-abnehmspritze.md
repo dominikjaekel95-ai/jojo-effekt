@@ -70,6 +70,8 @@ Jede Übung gibt es in einer Zuhause-Variante (Körpergewicht oder Band) und ein
 
 Ablauf einer Einheit: 3 Minuten Aufwärmen (zügig gehen, Arme kreisen, 10 Kniebeugen ohne Gewicht), dann die sechs Übungen mit je zwei Sätzen in Woche 1 bis 4 und drei Sätzen ab Woche 5, 60 bis 90 Sekunden Pause. Das dauert 25 bis 30 Minuten.
 
+<div data-interaktiv="zusammensetzung"></div>
+
 ## 12 Wochen mit Steigerung
 
 | Wochen | Sätze × Wiederholungen | Ziel |

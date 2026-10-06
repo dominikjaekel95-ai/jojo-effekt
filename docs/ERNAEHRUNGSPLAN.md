@@ -87,7 +87,7 @@ Gruppe „Ernährungsplan“ (ID als Vercel-Variable `MAILERLITE_GROUP_ERNAEHRUN
 
 ## Prüfung im Build
 
-`pruefePlaene()` läuft beim Bauen der Planseiten für alle 56 Grundpläne, jeden mit jeder einzelnen passenden Vorliebe und mit allen Vorlieben zusammen (rund 900 Pläne, etwa 2 s). Der Build bricht ab, wenn ein Tag außerhalb von Ziel − 5 g bis Ziel + 12 g liegt, ein Tag nicht drei Hauptmahlzeiten hat oder ein Gericht an zwei Tagen hintereinander steht.
+`pruefePlaene()` läuft beim Bauen der Planseiten für alle 56 Grundpläne, jeden mit jeder einzelnen passenden Vorliebe, allen Paaren und Dreiern und allen Vorlieben zusammen (rund 18.600 Pläne, etwa 3 s). Liegt ein Tag außerhalb des Bereichs, wählt der Generator Zwischen- und Hauptmahlzeiten dieses Tages neu. Der Build bricht ab, wenn ein Tag außerhalb von Ziel − 5 g bis Ziel + 12 g liegt, ein Tag nicht drei Hauptmahlzeiten hat oder ein Gericht an zwei Tagen hintereinander steht.
 
 ## PDFs
 

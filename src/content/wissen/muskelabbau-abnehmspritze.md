@@ -102,10 +102,10 @@ Beispiel für eine Person mit 80 kg und Ziel 100 g Protein:
 |---|---|---|
 | Morgens | 200 g Skyr mit Beeren | ca. 22 g |
 | Mittags | Kleine Portion Linsensuppe mit 100 g Hähnchen oder Tofu | ca. 25–30 g |
-| Nachmittags | Protein-Shake oder -Stick (Wasser oder Milch) | ca. 20–25 g |
-| Abends | 2 Eier mit Gemüse oder 150 g Fisch | ca. 14–30 g |
+| Nachmittags | Protein-Shake mit Milch | ca. 25–30 g |
+| Abends | 150 g Fisch oder 2 Eier mit 150 g Hüttenkäse | ca. 30 g |
 
-Zusammen: rund 80 bis 105 g. Das ist mit kleinen Portionen machbar, wenn Protein bei jeder Mahlzeit zuerst kommt. Der Fisch am Abend liefert nebenbei Vitamin D; was es für die Muskeln bringt und wann ein Präparat sinnvoll ist, steht unter [Vitamin D bei der Abnehmspritze](/wissen/vitamin-d-abnehmspritze/).
+Zusammen: rund 100 bis 110 g. Das ist mit kleinen Portionen machbar, wenn Protein bei jeder Mahlzeit zuerst kommt. Der Fisch am Abend liefert nebenbei Vitamin D; was es für die Muskeln bringt und wann ein Präparat sinnvoll ist, steht unter [Vitamin D bei der Abnehmspritze](/wissen/vitamin-d-abnehmspritze/).
 
 <div data-interaktiv="teller" data-vorlage="protein-tag-muskeln"></div>
 

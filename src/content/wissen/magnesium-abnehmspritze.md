@@ -52,8 +52,6 @@ Wie viel die typischen Lieferanten bringen, zeigt die Tabelle. Die Werte sind au
 
 Lesart: Mit Haferflocken zum Frühstück, einer Handvoll Kerne und einem magnesiumreichen Mineralwasser kommen auch bei kleinen Portionen rund 300 mg zusammen. Ohne diese drei wird es eng.
 
-<div data-interaktiv="teller" data-vorlage="magnesium"></div>
-
 ## Was die zugelassenen Angaben sagen
 
 Für Magnesium sind in der EU unter anderem diese gesundheitsbezogenen Angaben zugelassen:<sup><a href="#fn-euClaims">5</a></sup> Magnesium trägt zu einer normalen Muskelfunktion bei, zur Verringerung von Müdigkeit und Ermüdung, zu einem normalen Energiestoffwechsel, zur Erhaltung normaler Knochen und zum Elektrolytgleichgewicht. Nicht zugelassen und deshalb unzulässig sind Aussagen wie „gegen Krämpfe“, „beim Abnehmen“ oder „gegen den Jojo-Effekt“. Wenn ein Produkt so wirbt, ist das ein Grund, es nicht zu kaufen.

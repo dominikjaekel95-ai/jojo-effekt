@@ -47,11 +47,6 @@ Das Problem ist also nicht Wissen, sondern Struktur: Die Ernährung muss ohne di
 
 Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 g pro Mahlzeit. Die Reihenfolge auf dem Teller entscheidet: erst die Proteinquelle, dann Gemüse, dann der Rest. Wenn die Sättigung kommt, ist das Wichtigste drin. Rechenhilfe und Lebensmitteltabelle im [Protein-Artikel](/wissen/protein-abnehmspritze/).
 
-<figure class="my-8">
-  <img src="/grafiken/proteinbedarf-nach-abnehmspritze.png" alt="Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 Gramm pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Tagesmenge nach Körpergewicht, Zielkorridor aus Übersichtsarbeiten.<sup><a href="#fn-leidy2015">3</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
-
 ### 2. Volumen statt Verzicht
 
 Sättigung hängt stark davon ab, wie viel Masse im Magen liegt, nicht nur von Kalorien. Gemüse, Salat, Suppen, Hülsenfrüchte und Obst liefern Volumen mit wenig Energie. Die DGE-Empfehlungen setzen auf mindestens fünf Portionen Obst und Gemüse am Tag, Vollkorn und regelmäßig Hülsenfrüchte.<sup><a href="#fn-dgeEmpfehlungen">6</a></sup> Praktisch: Jede Mahlzeit besteht zur Hälfte aus Gemüse oder Salat.

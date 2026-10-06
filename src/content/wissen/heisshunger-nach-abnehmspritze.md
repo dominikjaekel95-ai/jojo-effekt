@@ -38,11 +38,6 @@ Unter der Spritze war Essen eine Nebensache. Ein paar Wochen nach der letzten Do
 
 **Die Waage reagiert mit Verzögerung.** In einer Meta-Analyse wurde die Gewichtszunahme etwa ab Woche 8 nach dem Absetzen messbar.<sup><a href="#fn-wu2025">2</a></sup> Der Heißhunger kommt vorher. Das ist das Fenster, in dem Struktur den Unterschied macht.
 
-<figure class="my-8">
-  <img src="/grafiken/heisshunger-vor-der-waage.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis: Semaglutid baut sich mit einer Halbwertszeit von etwa einer Woche ab und ist nach etwa 5 bis 7 Wochen weitgehend weg. Der Appetit kommt, abgeleitet aus dem sinkenden Wirkstoffspiegel, in Woche 2 bis 5 zurück und bleibt. Die Hungerhormone sind nach einer Diät verschoben, mehr Ghrelin und weniger Leptin, noch ein Jahr später messbar (Studie ohne Medikament). Die Gewichtszunahme ist erst ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Markiert ist das Fenster von Woche 2 bis 8, in dem der Hunger zurück ist, die Waage aber noch wenig zeigt." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Der Hunger kommt vor der Waage: Wirkstoffabbau, Appetit, Hungerhormone und messbare Zunahme in den ersten 20 Wochen nach der letzten Dosis.<sup><a href="#fn-sumithran2011">1</a>, <a href="#fn-wu2025">2</a>, <a href="#fn-fachinfoWegovy">8</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
-
 ## Hunger oder Heißhunger?
 
 Hunger ist ein Körpersignal: Er kommt langsam, ist unspezifisch und verschwindet nach einer normalen Mahlzeit. Heißhunger kommt schnell, will etwas Bestimmtes, meist süß, fettig oder salzig, und tritt oft in denselben Situationen auf: abends, bei Müdigkeit, nach Stress, nach Alkohol. Nach dem Absetzen mischen sich beide. Das hilft bei der Einordnung: Gegen Hunger hilft Essen, gegen Heißhunger hilft Struktur.
@@ -67,11 +62,6 @@ Drei bis vier Mahlzeiten zu festen Zeiten, dazwischen nichts. Klingt streng, ist
 
 In einer Studie sanken nach zwei Nächten mit nur vier Stunden Schlaf das Sättigungshormon Leptin und stieg das Hungerhormon Ghrelin; Hunger und Appetit nahmen deutlich zu, besonders auf Süßes und Salziges.<sup><a href="#fn-spiegel2004">5</a></sup> Nach dem Absetzen ist Schlafmangel deshalb kein Nebenthema. Sieben Stunden sind das Ziel, und der Heißhunger nach einer kurzen Nacht ist erklärbar, nicht persönlich.
 
-<figure class="my-8">
-  <img src="/grafiken/schlaf-und-hungerhormone.png" alt="Balkendiagramm: Nach zwei Nächten mit 4 Stunden im Bett gegenüber zwei Nächten mit 10 Stunden sank das Sättigungshormon Leptin um 18 Prozent, das Hungerhormon Ghrelin stieg um 28 Prozent, der Hunger um 24 Prozent und der Appetit um 23 Prozent; der Appetit auf kalorienreiche Lebensmittel mit viel Kohlenhydraten stieg um 33 bis 45 Prozent. Kleine Studie mit 12 gesunden jungen Männern unter Laborbedingungen." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Zwei Nächte mit vier Stunden im Bett gegenüber zehn Stunden: Leptin sank, Ghrelin, Hunger und Appetit stiegen.<sup><a href="#fn-spiegel2004">5</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
-
 ### 5. Keine Flüssigkalorien, Alkohol als Trigger kennen
 
 Säfte, Softdrinks und Milchkaffee-Spezialitäten liefern Energie ohne Sättigung. Alkohol tut das auch und senkt zusätzlich die Hemmschwelle für das, was danach kommt. Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten nennen zwei bis drei Liter Flüssigkeit am Tag, weil Durst und Hunger leicht verwechselt werden.<sup><a href="#fn-almandoz2024">6</a></sup> Ein großes Glas Wasser und zehn Minuten Abstand sind kein Trick, sondern ein Test, ob es Hunger war.
@@ -85,8 +75,6 @@ Eine Woche lang notieren: Wann kam der Heißhunger, was ging voraus, was hast du
 ### 7. Krafttraining
 
 Nicht gegen den Heißhunger direkt, aber gegen das, was er anrichtet. In der S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach Therapieende, nach dem Medikament allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">7</a></sup> Wer trainiert, kann sich außerdem mehr Protein leisten, und das schließt den Kreis zu Punkt 1. Der Plan steht unter [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/).
-
-<div data-interaktiv="slite"></div>
 
 ## Was nicht hilft
 

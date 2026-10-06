@@ -53,7 +53,9 @@ let io: IntersectionObserver | null = null;
 
 /** Beobachtet alle noch nicht eingeblendeten Elemente unterhalb von `root`. Mehrfach aufrufbar. */
 export function beobachte(root: ParentNode = document): void {
-  const els = root.querySelectorAll<HTMLElement>('[data-rv]:not(.in), [data-draw]:not(.in), [data-count]:not(.in)');
+  // html.bw: das Skript läuft. Ohne diese Klasse blendet seiten.css nach etwa 3 s alles ein (Skript blockiert oder fehlerhaft).
+  document.documentElement.classList.add('bw');
+  const els =root.querySelectorAll<HTMLElement>('[data-rv]:not(.in), [data-draw]:not(.in), [data-count]:not(.in)');
   if (reduziert() || !('IntersectionObserver' in window)) {
     els.forEach((e) => e.classList.add('in'));
     return;

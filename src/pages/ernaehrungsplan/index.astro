@@ -1,10 +1,12 @@
 ---
 /**
- * Werkzeug: Ernährungsplan als Lead-Magnet. Drei Fragen (Ernährungsform, Appetit, Gewicht) wählen einen von 18 fertigen
- * Plänen (src/data/ernaehrungsplan.ts). Das Formular postet an api/ernaehrungsplan.js; die Funktion legt die Adresse bei
- * MailerLite an (Double-Opt-in, Gruppen „Newsletter“ und „Ernährungsplan“, Feld `plan`), und nach der Bestätigung verschickt
- * eine MailerLite-Automation den Link auf das PDF. Alternative ohne Newsletter: Mail an site.owner.email.
- * Einrichtung, Test und Pflege: docs/ERNAEHRUNGSPLAN.md. Funktioniert ohne JavaScript; das Skript zeigt nur die Vorschau.
+ * Werkzeug: Ernährungsplan als Lead-Magnet. Fragen zu Ernährungsform, Laktose, Appetit, Gewicht und Vorlieben wählen
+ * einen von 56 Grundplänen für 14 Tage (src/data/ernaehrungsplan.ts); Vorlieben tauschen Gerichte. Die Vorschau rechnet
+ * mit demselben Generator im Browser (Tag 1, 14-Tage-Balken), ohne JavaScript steht ein Beispiel.
+ * Das Formular postet an api/ernaehrungsplan.js: MailerLite (Double-Opt-in, Gruppen „Newsletter“ und „Ernährungsplan“,
+ * Felder `plan` und `vorlieben`); nach der Bestätigung verschickt eine Automation den Link auf die Planseite
+ * /ernaehrungsplan/plan/<plan>/?v=<vorlieben> und das PDF. Alternative ohne Newsletter: Mail an site.owner.email.
+ * Einrichtung, Test und Pflege: docs/ERNAEHRUNGSPLAN.md.
  */
 import Base from '../../layouts/Base.astro';
 import Fn from '../../components/Fn.astro';
@@ -12,37 +14,78 @@ import Footnotes from '../../components/Footnotes.astro';
 import Faq from '../../components/Faq.astro';
 import { faqJsonLd } from '../../data/faq';
 import { site } from '../../data/site';
-import { plaene, ernaehrungOptionen, appetitOptionen, gewichtLabel, proteinZiel } from '../../data/ernaehrungsplan';
+import { VORLIEBEN, alleKombinationen } from '../../data/ernaehrungsplan-id.mjs';
+import {
+  erstellePlan,
+  ernaehrungOptionen,
+  appetitOptionen,
+  gewichtLabel,
+  proteinZiel,
+  referenzKg,
+  vorliebenText,
+  erlaubteVorlieben,
+  anzahlGerichte,
+  TAGE,
+} from '../../data/ernaehrungsplan';
 
-const fnIds = ['leidy2015', 'dgeBallaststoffe', 'almandoz2024', 'bls'] as const;
+const fnIds = ['leidy2015', 'bls', 'dgeBallaststoffe', 'almandoz2024'] as const;
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
-// Vorschau: Tag 1 jedes Plans, kompakt für das Skript. Startwert: Mischkost, normaler Appetit, 85 kg.
-const vorschau = Object.fromEntries(
-  plaene.map((p) => [p.id, { ziel: p.ziel, tag: p.tage[0].mahlzeiten.map((m) => ({ titel: m.titel, name: m.name, text: m.positionen.map((x) => x.text).join(', '), protein: m.protein })) }]),
-);
-const start = plaene.find((p) => p.ernaehrung === 'mischkost' && p.appetit === 'normal' && p.gewicht === '75bis95')!;
+// Startwert ohne JavaScript und vor der ersten Eingabe: Mischkost, nicht laktosefrei, Appetit normal, 80 kg.
+const START_KG = 80;
+const start = erstellePlan({ ernaehrung: 'mischkost', appetit: 'normal', gewicht: '70bis85', laktosefrei: false });
+const tag1 = start.tage[0];
+const SKALA = 145; // gemeinsame Höhe der 14-Tage-Balken für alle Varianten, damit sie beim Wechsel wachsen und schrumpfen
+const erlaubtStart = new Set(erlaubteVorlieben('mischkost', false));
+const varianten = alleKombinationen().length;
+// Gewichtsregler 45 bis 160 kg; die Stufen als Abschnitte darunter, gleich breit wie ihr Bereich auf dem Regler
+const MIN_KG = 45;
+const MAX_KG = 160;
+const stufen = [
+  { g: 'bis70', von: MIN_KG, bis: 70, text: 'unter 70' },
+  { g: '70bis85', von: 70, bis: 85, text: '70–85' },
+  { g: '85bis100', von: 85, bis: 100, text: '85–100' },
+  { g: 'ueber100', von: 100, bis: MAX_KG, text: 'über 100 kg' },
+] as const;
+// Tag 1 als Balken aus Abschnitten (gleiche Rechnung wie im Skript unten)
+const oben1 = Math.max(start.ziel, tag1.protein) * 1.06;
+let acc1 = 0;
+const segStart = Array.from({ length: 7 }, (_, i) => {
+  const m = tag1.mahlzeiten[i];
+  const style = `transform:translateX(${((acc1 / oben1) * 100).toFixed(2)}%) scaleX(${m ? Math.max(0, m.protein / oben1 - 0.006).toFixed(4) : 0})`;
+  acc1 += m ? m.protein : 0;
+  return { style, snack: m?.slot === 'snack' };
+});
+const breite = (s: (typeof stufen)[number]) => `${(((s.bis - s.von) / (MAX_KG - MIN_KG)) * 100).toFixed(2)}%`;
 
-const title = 'Ernährungsplan nach der Abnehmspritze: 7 Tage kostenlos als PDF';
-const description = 'Drei Fragen zu Ernährung, Appetit und Gewicht: dein Plan für sieben Tage mit Mengen, Einkaufsliste und genug Protein, kostenlos als PDF per Mail.';
+const title = 'Ernährungsplan nach der Abnehmspritze: 14 Tage kostenlos als PDF';
+const description = 'Ein paar Fragen zu Ernährung, Appetit, Gewicht und Vorlieben: dein Plan für 14 Tage mit Mengen, Einkaufslisten, Rezepten und genug Protein, kostenlos per Mail.';
 const path = '/ernaehrungsplan/';
 const url = `${site.url}${path}`;
 const mailBetreff = 'Ernährungsplan ohne Newsletter';
-const mailText = 'Hallo Dominik,\n\nich hätte gern den Ernährungsplan, aber ohne Newsletter.\n\nErnährungsform: Mischkost\nAppetit: Wieder normal\nGewicht: 75 bis 95 kg\n';
+const mailText = 'Hallo Dominik,\n\nich hätte gern den Ernährungsplan, aber ohne Newsletter.\n\nErnährungsform: Mischkost\nLaktosefrei: nein\nAppetit: Wieder normal\nGewicht: 70 bis 85 kg\nVorlieben: keine\n';
 const mailHref = `mailto:${site.owner.email}?subject=${encodeURIComponent(mailBetreff)}&body=${encodeURIComponent(mailText)}`;
 
 const faq = [
   {
     q: 'Für wen ist der Plan gedacht?',
-    a: '<p>Für gesunde Erwachsene in den Wochen, in denen der Appetit nach der letzten Dosis zurückkommt, und für die Zeit unter der Therapie, in der viele zu wenig Protein essen. Für die zweite Gruppe gibt es die Variante „Appetit noch klein“ mit kleineren Portionen und Zwischenmahlzeiten. Nicht geeignet ist er bei Nierenerkrankungen, in Schwangerschaft und Stillzeit, bei einer Essstörung und für unter 18-Jährige.</p>',
+    a: '<p>Für gesunde Erwachsene in den Wochen, in denen der Appetit nach der letzten Dosis zurückkommt, und für die Zeit unter der Therapie, in der viele zu wenig Protein essen. Für die zweite Gruppe gibt es die Variante „Appetit noch klein“ mit kleineren Tellern und mehr Zwischenmahlzeiten. Nicht geeignet ist er bei Nierenerkrankungen, in Schwangerschaft und Stillzeit, bei einer Essstörung und für unter 18-Jährige.</p>',
+  },
+  {
+    q: 'Was bewirken die Vorlieben?',
+    a: '<p>Gerichte mit den Lebensmitteln, die du ankreuzt, kommen im Plan öfter vor; der Rest bleibt abwechslungsreich, und kein Gericht steht an zwei Tagen hintereinander. Die Mengen rechnet der Plan danach neu, damit jeder Tag dein Proteinziel erreicht. Auf deiner Planseite kannst du Vorlieben jederzeit ändern.</p>',
   },
   {
     q: 'Muss ich mich an die Reihenfolge halten?',
-    a: '<p>Nein. Die Tage lassen sich beliebig tauschen und wiederholen; wer am Wochenende kocht, bereitet Linsen, Reis und Quinoa für mehrere Tage vor. Wichtig ist das Muster: bei jeder Mahlzeit zuerst Protein, dazu Gemüse oder Obst, nichts Kalorienhaltiges trinken.</p>',
+    a: '<p>Nein. Die Tage lassen sich tauschen und wiederholen; wer am Wochenende kocht, bereitet Linsen, Reis oder Quinoa für mehrere Tage vor. Wichtig ist das Muster: bei jeder Mahlzeit zuerst Protein, dazu Gemüse oder Obst, nichts Kalorienhaltiges trinken.</p>',
   },
   {
     q: 'Was, wenn ich kein Fleisch oder keinen Fisch esse?',
-    a: '<p>Dann wählst du vegetarisch oder vegan. Der Plan enthält dann nur passende Gerichte, und die Austauschtabelle zeigt, wie viel Tofu, Tempeh, Linsen, Kichererbsen oder Edamame etwa 20 g Protein liefern. Pflanzliche Lebensmittel liefern pro 100 g meist weniger Protein, deshalb sind die Portionen etwas größer.</p>',
+    a: '<p>Dann wählst du pescetarisch, vegetarisch oder vegan. Der Plan enthält dann nur passende Gerichte, und die Austauschtabelle zeigt, wie viel Tofu, Tempeh, Linsen, Kichererbsen oder Edamame etwa 20 g Protein liefern. Pflanzliche Lebensmittel liefern pro 100 g meist weniger Protein, deshalb sind die Portionen etwas größer.</p>',
+  },
+  {
+    q: 'Ich vertrage keine Laktose. Geht das?',
+    a: '<p>Ja. Mit dem Häkchen „laktosefrei“ nimmt der Plan laktosefreie Milch, Joghurt und Quark und lässt Skyr, Hüttenkäse und Feta weg. Gereifter Hartkäse wie Gouda bleibt drin, er ist von Natur aus praktisch laktosefrei. Vegane Pläne sind immer laktosefrei.</p>',
   },
   {
     q: 'Muss ich Kalorien zählen?',
@@ -50,7 +93,7 @@ const faq = [
   },
   {
     q: 'Warum kommt der Plan per Mail?',
-    a: '<p>Weil wir ihn zusammen mit dem Newsletter verschicken: Nach der Bestätigung deiner Adresse kommt der Plan, danach etwa alle zwei Wochen neue Artikel und Studien. Abmelden geht in jeder Mail. Wer keinen Newsletter möchte, schreibt Dominik eine Mail und bekommt den Plan persönlich.</p>',
+    a: '<p>Weil wir ihn zusammen mit dem Newsletter verschicken: Nach der Bestätigung deiner Adresse kommt ein Link auf deinen Plan und das PDF, danach etwa alle zwei Wochen neue Artikel und Studien. Auf der Planseite wechselst du die Variante, wenn sich etwas ändert, zum Beispiel der Appetit. Abmelden geht in jeder Mail. Wer keinen Newsletter möchte, schreibt Dominik eine Mail und bekommt den Plan persönlich.</p>',
   },
 ];
 
@@ -77,133 +120,925 @@ const jsonLd = [
 ];
 ---
 <Base title={title} description={description} path={path} jsonLd={jsonLd}>
-  <article class="container-narrow py-12">
-    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › <a href="/werkzeuge/" class="hover:text-moss">Werkzeuge</a> › Ernährungsplan</nav>
-    <p class="eyebrow mt-6">Werkzeug · kostenlos</p>
-    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">Dein kostenloser Ernährungsplan für die Zeit nach der Spritze</h1>
-    <p class="mt-4 text-lg text-ink-2">Drei Fragen, ein Plan für sieben Tage: Mahlzeiten mit Mengen, genug Protein für deinen Gewichtsbereich, Einkaufsliste und eine Tabelle zum Tauschen. Ausgewählt aus 18 Plänen, als PDF per Mail.</p>
-    <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+  <article class="epf">
+    <div class="container-wide">
+      <nav aria-label="Brotkrumen" class="epf-krumen"><a href="/">Start</a> › <a href="/werkzeuge/">Werkzeuge</a> › Ernährungsplan</nav>
+      <div class="epf-kopf">
+        <div>
+          <p class="eyebrow">Kostenlos, als Link und PDF per Mail</p>
+          <h1 class="h1 epf-h1">Dein kostenloser Ernährungsplan für die Zeit nach der Spritze</h1>
+          <p class="epf-lead">Vier Fragen, ein Plan für {TAGE} Tage: Mahlzeiten mit Mengen, genug Protein für deinen Gewichtsbereich, zwei Einkaufslisten, Rezeptkarten und eine Tabelle zum Tauschen. Zusammengestellt aus {anzahlGerichte} alltagstauglichen Gerichten mit Zutaten aus dem Supermarkt.</p>
+        </div>
+        <dl class="epf-zahlen">
+          <div><dt>Tage</dt><dd>{TAGE}</dd></div>
+          <div><dt>Gerichte</dt><dd>{anzahlGerichte}</dd></div>
+          <div><dt>Grundvarianten</dt><dd>{varianten}</dd></div>
+          <div><dt>Vorlieben</dt><dd>{VORLIEBEN.length}</dd></div>
+        </dl>
+      </div>
 
-    <form id="ep-form" method="post" action="/api/ernaehrungsplan/" class="plausible-event-name=Ernaehrungsplan+Anfrage mt-8 space-y-6 rounded-xl2 border border-line bg-white p-5 sm:p-6">
-      <fieldset>
-        <legend class="text-base font-semibold text-ink">1. Wie isst du?</legend>
-        <div class="mt-3 grid gap-3 sm:grid-cols-3">
-          {ernaehrungOptionen.map((o) => (
-            <label class="flex cursor-pointer gap-3 rounded-lg border border-line bg-paper p-3 text-sm has-checked:border-moss has-checked:bg-moss-light">
-              <input type="radio" name="ernaehrung" value={o.value} checked={o.value === 'mischkost'} required class="mt-1 accent-moss" />
-              <span><span class="block font-semibold text-ink">{o.label}</span><span class="text-ink-2">{o.text}</span></span>
+      <form id="ep-form" method="post" action="/api/ernaehrungsplan/" class="epf-form plausible-event-name=Ernaehrungsplan+Anfrage">
+        <div class="epf-grid">
+        <div class="epf-fragen">
+          <fieldset class="epf-frage">
+            <legend><span class="epf-nr">1</span>Wie isst du?</legend>
+            <div class="epf-kacheln epf-kacheln-4">
+              {ernaehrungOptionen.map((o) => (
+                <label class="epf-kachel">
+                  <input type="radio" name="ernaehrung" value={o.value} checked={o.value === 'mischkost'} required />
+                  <span class="epf-k-titel">{o.label}</span>
+                  <span class="epf-k-text">{o.text}</span>
+                </label>
+              ))}
+            </div>
+            <label class="epf-schalter" data-laktose>
+              <input type="checkbox" name="laktosefrei" value="ja" />
+              <span class="epf-schalter-spur" aria-hidden="true"></span>
+              <span><span class="epf-k-titel">Laktosefrei</span> <span class="epf-k-text" data-laktose-text>laktosefreie Milch, Joghurt und Quark; ohne Skyr, Hüttenkäse und Feta</span></span>
             </label>
-          ))}
-        </div>
-      </fieldset>
+          </fieldset>
 
-      <fieldset>
-        <legend class="text-base font-semibold text-ink">2. Wie ist dein Appetit gerade?</legend>
-        <div class="mt-3 grid gap-3 sm:grid-cols-2">
-          {appetitOptionen.map((o) => (
-            <label class="flex cursor-pointer gap-3 rounded-lg border border-line bg-paper p-3 text-sm has-checked:border-moss has-checked:bg-moss-light">
-              <input type="radio" name="appetit" value={o.value} checked={o.value === 'normal'} required class="mt-1 accent-moss" />
-              <span><span class="block font-semibold text-ink">{o.label}</span><span class="text-ink-2">{o.text}</span></span>
+          <fieldset class="epf-frage">
+            <legend><span class="epf-nr">2</span>Wie ist dein Appetit gerade?</legend>
+            <div class="epf-kacheln epf-kacheln-2">
+              {appetitOptionen.map((o) => (
+                <label class="epf-kachel">
+                  <input type="radio" name="appetit" value={o.value} checked={o.value === 'normal'} required />
+                  <span class="epf-k-titel">{o.label}</span>
+                  <span class="epf-k-text">{o.text}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <div class="epf-frage">
+            <div class="epf-gewicht-kopf">
+              <label for="ep-gewicht" class="epf-legende"><span class="epf-nr">3</span>Wie viel wiegst du ungefähr?</label>
+              <output id="ep-gewicht-wert" for="ep-gewicht" class="epf-kg">{START_KG} kg</output>
+            </div>
+            <input id="ep-gewicht" name="gewicht" type="range" min={MIN_KG} max={MAX_KG} step="1" value={START_KG} class="epf-regler" aria-describedby="ep-gewicht-hinweis" />
+            <ol class="epf-stufen" aria-hidden="true">
+              {stufen.map((s) => (<li data-stufe={s.g} class={s.g === '70bis85' ? 'an' : ''} style={`width:${breite(s)}`}><span>{s.text}</span></li>))}
+            </ol>
+            <p id="ep-gewicht-hinweis" class="epf-hinweis">Der Plan rechnet mit vier Gewichtsstufen. Gespeichert wird nur die Nummer des passenden Plans, nicht dein Gewicht.</p>
+          </div>
+
+          <fieldset class="epf-frage">
+            <legend><span class="epf-nr">4</span>Was isst du gern? <span class="epf-optional">freiwillig</span></legend>
+            <p class="epf-hinweis epf-hinweis-oben">Gerichte damit kommen öfter vor. Die Auswahl passt sich deiner Ernährungsform an.</p>
+            <div class="epf-vorlieben">
+              {VORLIEBEN.map((v) => (
+                <label class="epf-v" data-v={v.key} data-form={v.form} data-laktose={v.laktose ? 'ja' : undefined} hidden={!erlaubtStart.has(v.key)}>
+                  <input type="checkbox" name="v" value={v.key} disabled={!erlaubtStart.has(v.key)} />
+                  <span class="epf-v-text"><span class="epf-v-name">{vorliebenText[v.key].label}</span><span class="epf-v-hinweis">{vorliebenText[v.key].hinweis}</span></span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+        </div>
+
+        <aside class="epf-vorschau" aria-label="Vorschau auf deinen Plan">
+          <div class="epf-pv" data-pv>
+            <p class="epf-pv-kopf"><span>Dein Plan</span><span data-pv-profil>Mischkost · Appetit wieder normal · 70 bis 85 kg</span></p>
+            <p class="epf-pv-ziel"><span class="epf-pv-zahl" data-pv-ziel>{start.ziel}</span><span class="epf-pv-einheit">g Protein am Tag</span></p>
+            <p class="epf-pv-rechnung" data-pv-rechnung>1,2 g × {referenzKg['70bis85']} kg, die Mitte deiner Gewichtsstufe<Fn n={fn('leidy2015')} id="leidy2015" /></p>
+
+            <div class="epf-pv-14" role="img" aria-label="Protein an allen 14 Tagen im Zielbereich" data-pv-14>
+              <span class="epf-pv-zielwrap" style={`transform:translateY(${(100 - (start.ziel / SKALA) * 100).toFixed(2)}%)`} data-pv-ziellinie><span>Ziel</span></span>
+              <ol>
+                {start.tage.map((t, i) => (<li style={`--i:${i}`}><b style={`transform:scaleY(${(t.protein / SKALA).toFixed(3)})`}></b></li>))}
+              </ol>
+            </div>
+            <p class="epf-pv-unter"><span>Tag 1</span><span>14 Tage, jeder Tag im Ziel</span></p>
+
+            <div class="epf-pv-tag">
+              <div class="epf-pv-balken" aria-hidden="true" data-pv-balken>
+                {segStart.map((x) => (<b class={x.snack ? 'snack' : ''} style={x.style}></b>))}
+                <i data-pv-tagziel style={`transform:translateX(${((start.ziel / oben1) * 100).toFixed(2)}%)`}></i>
+              </div>
+              <ol class="epf-pv-liste" data-pv-liste>
+                {tag1.mahlzeiten.map((m) => (<li class={m.slot === 'snack' ? 'snack' : ''}><span class="epf-pv-slot">{m.titel}</span><span class="epf-pv-name"><span>{m.name}</span></span><span class="epf-pv-g">{m.protein} g</span></li>))}
+              </ol>
+              <p class="epf-pv-summe"><span>Protein an Tag 1</span><span><strong data-pv-summe>{tag1.protein} g</strong> von <span data-pv-ziel2>{start.ziel}</span> g</span></p>
+            </div>
+            <p class="epf-pv-fuss">Im Plan: alle {TAGE} Tage mit Mengen, Einkaufslisten für zwei Wochen, Rezeptkarten, Austauschtabelle. Proteinwerte aus dem Bundeslebensmittelschlüssel, gerundet.<Fn n={fn('bls')} id="bls" /></p>
+          </div>
+        </aside>
+        </div>
+
+        <div class="epf-senden band">
+          <div class="epf-senden-text">
+            <p class="epf-nr epf-nr-hell">5</p>
+            <h2 class="h2 epf-senden-h">Wohin sollen wir den Plan schicken?</h2>
+            <p class="band-muted">Du bekommst einen Link auf deine Planseite und das PDF. Auf der Seite kannst du später die Variante wechseln oder Vorlieben ändern, ohne neue Mail.</p>
+          </div>
+          <div class="epf-senden-form">
+            <label for="ep-email" class="sr-only">E-Mail-Adresse</label>
+            <div class="epf-zeile">
+              <input id="ep-email" name="email" type="email" autocomplete="email" required placeholder="Deine E-Mail-Adresse" />
+              <button type="submit" class="btn-primary">Plan anfordern</button>
+            </div>
+            <label class="epf-check">
+              <input type="checkbox" name="eignung" value="ja" required />
+              <span>Keiner dieser Punkte trifft auf mich zu: Nierenerkrankung, Schwangerschaft oder Stillzeit, Essstörung (auch früher), jünger als 18 Jahre. <span class="band-muted">Trifft einer zu, ist ein allgemeiner Plan nicht das Richtige; sprich dann mit deiner Ärztin, deinem Arzt oder einer Ernährungsfachkraft.</span></span>
             </label>
-          ))}
+            <label class="epf-check">
+              <input type="checkbox" name="einwilligung" value="ja" required />
+              <span>Schickt mir den Plan per Mail und meldet mich für den Newsletter von Nach der Spritze an ({site.newsletter.cadence}: neue Artikel und Studien zur Zeit nach der Abnehmspritze, gelegentlich Neuigkeiten zum Programm). Der Plan kommt, sobald ich die Anmeldung per Link bestätigt habe. Abmelden geht in jeder Mail. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</span>
+            </label>
+            <div class="hidden" aria-hidden="true">
+              <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+            </div>
+            <p class="epf-mikro band-muted">Kostenlos. Keine Weitergabe deiner Adresse. Gespeichert werden Adresse, Plannummer und Vorlieben, nicht dein Gewicht.</p>
+            <p class="epf-ohne">Lieber ohne Newsletter? Schreib mir eine Mail mit deinen Antworten an <a id="ep-mail" href={mailHref}>{site.owner.email}</a>, dann schicke ich dir den Plan persönlich. Dominik</p>
+          </div>
         </div>
-      </fieldset>
+      </form>
 
-      <div>
-        <label for="ep-gewicht" class="text-base font-semibold text-ink">3. Wie viel wiegst du ungefähr?</label>
-        <div class="mt-3 flex items-center gap-4">
-          <input id="ep-gewicht" name="gewicht" type="range" min="45" max="160" step="1" value="85" class="w-full accent-moss" aria-describedby="ep-gewicht-wert" />
-          <output id="ep-gewicht-wert" for="ep-gewicht" class="w-20 shrink-0 text-right text-lg font-semibold text-moss">85 kg</output>
+      <div class="epf-text">
+        <div class="prose-site">
+          <h2 id="so-entsteht-der-plan">So entsteht dein Plan</h2>
+          <ul>
+            <li><strong>Protein nach Gewichtsbereich.</strong> Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<Fn n={fn('leidy2015')} id="leidy2015" /> Die Pläne rechnen mit dem unteren Wert und der Mitte der Gewichtsstufe: rund {proteinZiel.bis70} g bei {gewichtLabel.bis70}, {proteinZiel['70bis85']} g bei {gewichtLabel['70bis85']}, {proteinZiel['85bis100']} g bei {gewichtLabel['85bis100']} und {proteinZiel.ueber100} g bei {gewichtLabel.ueber100} (gerechnet mit {referenzKg.ueber100} kg; wer deutlich mehr wiegt, findet sein Ziel im <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>).</li>
+            <li><strong>Mengen, die aufgehen.</strong> Jedes Gericht hat ein Grundrezept für eine normale Portion. Ein Faktor je Tag passt die Mengen an, bis der Tag das Ziel erreicht; jede Zutat zählt mit ihrem Proteingehalt aus dem Bundeslebensmittelschlüssel.<Fn n={fn('bls')} id="bls" /> Der Rechenweg steht im Plan.</li>
+            <li><strong>Portionen nach Appetit.</strong> Ist der Appetit noch klein, sind Frühstück, Mittag und Abend kleiner, und es gibt zwei bis vier proteinreiche Zwischenmahlzeiten. Ist er wieder normal, reichen drei Mahlzeiten und bis zu zwei kleine dazwischen.</li>
+            <li><strong>Abwechslung.</strong> {anzahlGerichte} Gerichte, kein Gericht an zwei Tagen hintereinander. Bei Mischkost gibt es Fleisch an drei und Fisch an zwei Tagen pro Woche, sonst Eier, Milchprodukte und Hülsenfrüchte. Deine Vorlieben verschieben die Auswahl, nicht das Ziel.</li>
+            <li><strong>Ballaststoffe und Trinken.</strong> Hülsenfrüchte, Haferflocken und Vollkorn bringen dich in Richtung der 30 g Ballaststoffe, die die DGE empfiehlt.<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> Für Flüssigkeit nennen Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten zwei bis drei Liter am Tag.<Fn n={fn('almandoz2024')} id="almandoz2024" /></li>
+            <li><strong>Keine Kalorienvorgabe.</strong> Der Plan steuert Protein, Ballaststoffe und Portionsgröße.</li>
+          </ul>
+          <p>Ein allgemeiner Beispielplan für gesunde Erwachsene, keine Ernährungstherapie. Die Regeln dahinter stehen im Artikel <a href="/wissen/ernaehrung-nach-abnehmspritze/">Ernährung nach der Abnehmspritze</a>; dein genaues Proteinziel rechnet der <a href="/werkzeuge/proteinrechner/">Proteinrechner</a> aus.</p>
+          <p class="epf-arzt">{site.doctorSentence}</p>
         </div>
-        <p class="mt-1 text-xs text-ink-3">Gespeichert wird nur die Nummer des passenden Plans, nicht dein Gewicht.</p>
+
+        <div class="epf-faq"><Faq items={faq} id="plan-faq" title="Häufige Fragen zum Ernährungsplan" /></div>
+
+        <Footnotes ids={fnIds} />
       </div>
-
-      <div id="ep-vorschau" class="rounded-lg border border-line bg-paper p-4" aria-live="polite">
-        <p class="text-sm text-ink-2"><span class="font-semibold text-ink">Dein Plan:</span> <span data-profil>Mischkost · Appetit wieder normal · 75 bis 95 kg</span> · rund <span data-ziel>{proteinZiel['75bis95']}</span> g Protein am Tag</p>
-        <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-ink-3">So sieht Tag 1 aus</p>
-        <ul class="mt-2 space-y-1 text-sm text-ink-2" data-tag>
-          {start.tage[0].mahlzeiten.map((m) => (<li><span class="font-semibold text-ink">{m.titel}:</span> {m.name} ({m.positionen.map((x) => x.text).join(', ')}), ca. {m.protein} g</li>))}
-        </ul>
-        <p class="mt-3 text-xs text-ink-3">Im PDF: alle sieben Tage, Einkaufsliste, Austauschtabelle und Hinweise.</p>
-      </div>
-
-      <div>
-        <label for="ep-email" class="text-base font-semibold text-ink">4. Wohin sollen wir den Plan schicken?</label>
-        <input id="ep-email" name="email" type="email" autocomplete="email" required placeholder="deine@adresse.de" class="mt-2 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink" />
-      </div>
-
-      <div class="space-y-3 text-sm text-ink-2">
-        <label class="flex gap-3">
-          <input type="checkbox" name="eignung" value="ja" required class="mt-1 accent-moss" />
-          <span>Keiner dieser Punkte trifft auf mich zu: Nierenerkrankung, Schwangerschaft oder Stillzeit, Essstörung (auch früher), jünger als 18 Jahre. <span class="text-ink-3">Trifft einer zu, ist ein allgemeiner Plan nicht das Richtige; sprich dann mit deiner Ärztin, deinem Arzt oder einer Ernährungsfachkraft.</span></span>
-        </label>
-        <label class="flex gap-3">
-          <input type="checkbox" name="einwilligung" value="ja" required class="mt-1 accent-moss" />
-          <span>Schickt mir den Plan per Mail und meldet mich für den Newsletter von Nach der Spritze an ({site.newsletter.cadence}: neue Artikel und Studien zur Zeit nach der Abnehmspritze, gelegentlich Neuigkeiten zum Set). Der Plan kommt, sobald ich die Anmeldung per Link bestätigt habe. Abmelden geht in jeder Mail. Details in der <a href="/datenschutz/" class="text-moss underline underline-offset-4">Datenschutzerklärung</a>.</span>
-        </label>
-      </div>
-
-      <div class="hidden" aria-hidden="true">
-        <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
-      </div>
-
-      <div class="flex flex-wrap items-center gap-3">
-        <button type="submit" class="btn-primary">Plan per Mail anfordern</button>
-        <span class="text-xs text-ink-3">Kostenlos. Keine Weitergabe deiner Adresse.</span>
-      </div>
-
-      <p class="border-t border-line pt-4 text-sm text-ink-2">Lieber ohne Newsletter? Schreib mir eine Mail mit deinen drei Antworten an <a id="ep-mail" href={mailHref} class="font-semibold text-moss underline underline-offset-4">{site.owner.email}</a>, dann schicke ich dir den Plan persönlich. Dominik</p>
-    </form>
-
-    <div class="prose-site mt-12">
-      <h2 id="so-entsteht-der-plan">So entsteht dein Plan</h2>
-      <ul>
-        <li><strong>Protein nach Gewichtsbereich.</strong> Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<Fn n={fn('leidy2015')} id="leidy2015" /> Die Pläne rechnen mit dem unteren Wert und der Mitte des Bereichs: rund {proteinZiel.unter75} g bei {gewichtLabel.unter75}, rund {proteinZiel['75bis95']} g bei {gewichtLabel['75bis95']}, rund {proteinZiel.ueber95} g bei {gewichtLabel.ueber95}.</li>
-        <li><strong>Portionen nach Appetit.</strong> Ist der Appetit noch klein, sind die Hauptmahlzeiten kleiner und es gibt zwei bis vier proteinreiche Zwischenmahlzeiten. Ist er wieder normal, reichen drei Mahlzeiten und bis zu zwei kleine dazwischen.</li>
-        <li><strong>Ballaststoffe und Trinken.</strong> Hülsenfrüchte, Haferflocken und Vollkorn bringen dich in Richtung der 30 g Ballaststoffe, die die DGE empfiehlt.<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> Für Flüssigkeit nennen Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten zwei bis drei Liter am Tag.<Fn n={fn('almandoz2024')} id="almandoz2024" /></li>
-        <li><strong>Keine Kalorienvorgabe.</strong> Der Plan steuert Protein, Ballaststoffe und Portionsgröße. Die Proteinwerte sind gerundete Durchschnittswerte aus dem Bundeslebensmittelschlüssel.<Fn n={fn('bls')} id="bls" /></li>
-      </ul>
-      <p>Ein allgemeiner Beispielplan für gesunde Erwachsene, keine Ernährungstherapie. Die Regeln dahinter stehen im Artikel <a href="/wissen/ernaehrung-nach-abnehmspritze/">Ernährung nach der Abnehmspritze</a>; dein genaues Proteinziel rechnet der <a href="/werkzeuge/proteinrechner/">Proteinrechner</a> aus.</p>
     </div>
-
-    <div class="mt-12"><Faq items={faq} id="plan-faq" title="Häufige Fragen zum Ernährungsplan" /></div>
-
-    <Footnotes ids={fnIds} />
   </article>
-
-  <script type="application/json" id="ep-daten" set:html={JSON.stringify(vorschau)}></script>
-  <script is:inline>
-    (() => {
-      const form = document.getElementById('ep-form');
-      const daten = JSON.parse(document.getElementById('ep-daten').textContent || '{}');
-      const slider = document.getElementById('ep-gewicht');
-      const wert = document.getElementById('ep-gewicht-wert');
-      const box = document.getElementById('ep-vorschau');
-      const mail = document.getElementById('ep-mail');
-      const E = ['mischkost', 'vegetarisch', 'vegan'];
-      const A = ['klein', 'normal'];
-      const G = ['unter75', '75bis95', 'ueber95'];
-      const label = { mischkost: 'Mischkost', vegetarisch: 'Vegetarisch', vegan: 'Vegan', klein: 'Appetit noch klein', normal: 'Appetit wieder normal', unter75: 'unter 75 kg', '75bis95': '75 bis 95 kg', ueber95: 'über 95 kg' };
-      const stufe = (kg) => (kg < 75 ? 'unter75' : kg <= 95 ? '75bis95' : 'ueber95');
-      const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-      function update() {
-        const e = form.ernaehrung.value || 'mischkost';
-        const a = form.appetit.value || 'normal';
-        const kg = Number(slider.value);
-        const g = stufe(kg);
-        wert.textContent = kg >= 160 ? '160+ kg' : `${kg} kg`;
-        const id = 'ep' + String(E.indexOf(e) * 6 + A.indexOf(a) * 3 + G.indexOf(g) + 1).padStart(2, '0');
-        const p = daten[id];
-        if (!p) return;
-        box.querySelector('[data-profil]').textContent = `${label[e]} · ${label[a]} · ${label[g]}`;
-        box.querySelector('[data-ziel]').textContent = p.ziel;
-        box.querySelector('[data-tag]').innerHTML = p.tag.map((m) => `<li><span class="font-semibold text-ink">${esc(m.titel)}:</span> ${esc(m.name)} (${esc(m.text)}), ca. ${m.protein} g</li>`).join('');
-        const text = `Hallo Dominik,\n\nich hätte gern den Ernährungsplan, aber ohne Newsletter.\n\nErnährungsform: ${label[e]}\nAppetit: ${label[a].replace('Appetit ', '')}\nGewicht: ${label[g]}\n\n(Plan ${id})\n`;
-        mail.href = `mailto:${mail.textContent.trim()}?subject=${encodeURIComponent('Ernährungsplan ohne Newsletter')}&body=${encodeURIComponent(text)}`;
-      }
-      form.addEventListener('change', update);
-      slider.addEventListener('input', update);
-      update();
-    })();
-  </script>
 </Base>
+
+<script>
+  import { erstellePlan, planId, erlaubteVorlieben, gewichtLabel, referenzKg, vorliebenText, type Ernaehrung, type Appetit, type Vorliebe } from '../../data/ernaehrungsplan';
+  import { gewichtsstufe } from '../../data/ernaehrungsplan-id.mjs';
+
+  const form = document.getElementById('ep-form') as HTMLFormElement | null;
+  if (form) {
+    const SKALA = 145;
+    const $ = <T extends Element = HTMLElement>(s: string) => form.querySelector<T>(s)!;
+    const slider = $<HTMLInputElement>('#ep-gewicht');
+    const kgWert = $('#ep-gewicht-wert');
+    const lfBox = $<HTMLInputElement>('input[name="laktosefrei"]');
+    const lfText = $('[data-laktose-text]');
+    const stufen = [...form.querySelectorAll<HTMLElement>('[data-stufe]')];
+    const vBoxen = [...form.querySelectorAll<HTMLElement>('[data-v]')];
+    const pv = $('[data-pv]');
+    const zielEl = $('[data-pv-ziel]');
+    const ziel2 = $('[data-pv-ziel2]');
+    const summeEl = $('[data-pv-summe]');
+    const profil = $('[data-pv-profil]');
+    const rechnung = $('[data-pv-rechnung]');
+    const zielLinie = $('[data-pv-ziellinie]');
+    const balken14 = [...form.querySelectorAll<HTMLElement>('[data-pv-14] b')];
+    const segs = [...form.querySelectorAll<HTMLElement>('[data-pv-balken] b')];
+    const tagZiel = $('[data-pv-tagziel]');
+    const liste = $('[data-pv-liste]');
+    const mail = document.getElementById('ep-mail') as HTMLAnchorElement | null;
+    const rm = document.documentElement.classList.contains('rm');
+    const fnRechnung = rechnung.querySelector('sup')?.outerHTML ?? '';
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] as string);
+    const label: Record<string, string> = { mischkost: 'Mischkost', pescetarisch: 'Pescetarisch', vegetarisch: 'Vegetarisch', vegan: 'Vegan', klein: 'Appetit noch klein', normal: 'Appetit wieder normal' };
+    let letzteListe = '';
+    let zielJetzt = Number(zielEl.textContent) || 0;
+    let summeJetzt = Number.parseInt(summeEl.textContent ?? '0', 10) || 0;
+
+    /** Zahl weich hochzählen (oder sofort bei reduzierter Bewegung). */
+    function zaehle(el: HTMLElement, von: number, bis: number, suffix = '') {
+      if (rm || von === bis) {
+        el.textContent = `${bis}${suffix}`;
+        return;
+      }
+      const t0 = performance.now();
+      const schritt = (t: number) => {
+        const p = Math.min(1, (t - t0) / 600);
+        const e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+        el.textContent = `${Math.round(von + (bis - von) * e)}${suffix}`;
+        if (p < 1) requestAnimationFrame(schritt);
+      };
+      requestAnimationFrame(schritt);
+    }
+
+    function update() {
+      const e = (form!.elements.namedItem('ernaehrung') as RadioNodeList).value as Ernaehrung;
+      const a = (form!.elements.namedItem('appetit') as RadioNodeList).value as Appetit;
+      const kg = Number(slider.value);
+      const g = gewichtsstufe(kg) ?? '70bis85';
+      const vegan = e === 'vegan';
+      lfBox.disabled = vegan;
+      if (vegan) lfBox.checked = true;
+      lfText.textContent = vegan ? 'vegan ist immer laktosefrei' : 'laktosefreie Milch, Joghurt und Quark; ohne Skyr, Hüttenkäse und Feta';
+      const lf = vegan || lfBox.checked;
+      kgWert.textContent = kg >= 160 ? '160+ kg' : `${kg} kg`;
+      stufen.forEach((s) => s.classList.toggle('an', s.dataset.stufe === g));
+
+      const erlaubt = new Set(erlaubteVorlieben(e, lf));
+      vBoxen.forEach((l) => {
+        const ok = erlaubt.has(l.dataset.v as Vorliebe);
+        const input = l.querySelector('input')!;
+        l.hidden = !ok;
+        input.disabled = !ok;
+      });
+      const v = vBoxen.filter((l) => !l.hidden && l.querySelector('input')!.checked).map((l) => l.dataset.v as Vorliebe);
+
+      const plan = erstellePlan({ ernaehrung: e, appetit: a, gewicht: g, laktosefrei: lf, vorlieben: v });
+      const tag = plan.tage[0];
+      profil.textContent = `${label[e]}${lf && !vegan ? ', laktosefrei' : ''} · ${label[a]} · ${gewichtLabel[g]}`;
+      zaehle(zielEl, zielJetzt, plan.ziel);
+      zielJetzt = plan.ziel;
+      ziel2.textContent = String(plan.ziel);
+      rechnung.innerHTML = `1,2 g × ${referenzKg[g]} kg, die Mitte deiner Gewichtsstufe${fnRechnung}`;
+
+      // 14 Tage: Balken wachsen oder schrumpfen, die Ziellinie wandert mit
+      plan.tage.forEach((t, i) => balken14[i] && (balken14[i].style.transform = `scaleY(${(t.protein / SKALA).toFixed(3)})`));
+      zielLinie.style.transform = `translateY(${(100 - (plan.ziel / SKALA) * 100).toFixed(2)}%)`;
+
+      // Tag 1: Abschnitte des Balkens verschieben sich, statt zu springen
+      const oben = Math.max(plan.ziel, tag.protein) * 1.06;
+      let acc = 0;
+      segs.forEach((s, i) => {
+        const m = tag.mahlzeiten[i];
+        const w = m ? m.protein / oben : 0;
+        s.style.transform = `translateX(${((acc / oben) * 100).toFixed(2)}%) scaleX(${Math.max(0, w - 0.006).toFixed(4)})`;
+        s.classList.toggle('snack', !!m && m.slot === 'snack');
+        acc += m ? m.protein : 0;
+      });
+      tagZiel.style.transform = `translateX(${((plan.ziel / oben) * 100).toFixed(2)}%)`;
+      zaehle(summeEl, summeJetzt, tag.protein, ' g');
+      summeJetzt = tag.protein;
+
+      const html = tag.mahlzeiten
+        .map((m, i) => `<li class="${m.slot === 'snack' ? 'snack' : ''}${m.bevorzugt ? ' fav' : ''}" style="--i:${i}"><span class="epf-pv-slot">${esc(m.titel)}</span><span class="epf-pv-name"><span>${esc(m.name)}</span></span><span class="epf-pv-g">${m.protein} g</span></li>`)
+        .join('');
+      if (html !== letzteListe) {
+        letzteListe = html;
+        if (rm) liste.innerHTML = html;
+        else {
+          liste.classList.add('wechsel');
+          window.setTimeout(() => {
+            liste.innerHTML = html;
+            requestAnimationFrame(() => liste.classList.remove('wechsel'));
+          }, 180);
+        }
+      }
+
+      if (mail) {
+        const text = `Hallo Dominik,\n\nich hätte gern den Ernährungsplan, aber ohne Newsletter.\n\nErnährungsform: ${label[e]}\nLaktosefrei: ${lf ? 'ja' : 'nein'}\nAppetit: ${label[a].replace('Appetit ', '')}\nGewicht: ${gewichtLabel[g]}\nVorlieben: ${v.length ? v.map((x) => vorliebenText[x].label).join(', ') : 'keine'}\n\n(Plan ${planId(e, a, g, lf)}${v.length ? `, v=${v.join(',')}` : ''})\n`;
+        mail.href = `mailto:${mail.textContent?.trim()}?subject=${encodeURIComponent('Ernährungsplan ohne Newsletter')}&body=${encodeURIComponent(text)}`;
+      }
+    }
+
+    // Erst wenn die Vorschau sichtbar ist: Balken aus null wachsen lassen
+    const start = () => {
+      pv.classList.add('in');
+      update();
+    };
+    if (!rm && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((es) => {
+        if (es.some((x) => x.isIntersecting)) {
+          io.disconnect();
+          start();
+        }
+      }, { threshold: 0.25 });
+      io.observe(pv);
+    } else start();
+    form.addEventListener('change', update);
+    slider.addEventListener('input', update);
+  }
+</script>
+
+<style>
+  .epf {
+    padding: clamp(1.5rem, 4vw, 2.5rem) 0 5rem;
+  }
+  .epf-krumen {
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
+  .epf-krumen a:hover {
+    color: var(--color-ink);
+  }
+  .epf-kopf {
+    display: grid;
+    gap: 2rem 4rem;
+    margin-top: clamp(2rem, 5vw, 3.5rem);
+    align-items: end;
+  }
+  .epf-h1 {
+    margin-top: 0.75rem;
+    max-width: 14em;
+    font-size: clamp(2.25rem, 5vw, 4rem);
+  }
+  .epf-lead {
+    margin-top: 1.25rem;
+    max-width: 36em;
+    font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+    line-height: 1.55;
+    color: var(--color-ink-2);
+  }
+  .epf-zahlen {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 1rem;
+    border-top: 1px solid var(--color-ink);
+  }
+  @media (min-width: 560px) {
+    .epf-zahlen {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .epf-zahlen div {
+    padding-top: 0.75rem;
+  }
+  .epf-zahlen dt {
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+  }
+  .epf-zahlen dd {
+    margin-top: 0.15rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+    font-stretch: 125%;
+    font-weight: 480;
+    letter-spacing: -0.035em;
+    color: var(--color-ink);
+  }
+  @media (min-width: 1000px) {
+    .epf-kopf {
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    }
+  }
+
+  /* Formular: Fragen links, Vorschau rechts (klebend), Absenden als dunkler Block darunter */
+  .epf-form {
+    margin-top: clamp(2.5rem, 6vw, 4.5rem);
+  }
+  .epf-grid {
+    display: grid;
+    gap: 2.5rem 4.5rem;
+  }
+  @media (min-width: 1000px) {
+    .epf-grid {
+      grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+      align-items: start;
+    }
+    .epf-vorschau {
+      position: sticky;
+      top: 5.5rem;
+    }
+  }
+  .epf-fragen {
+    display: grid;
+    gap: 2.75rem;
+  }
+  .epf-frage {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+  .epf-frage legend,
+  .epf-legende {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    line-height: 1.2;
+    font-weight: 520;
+    font-stretch: 114%;
+    letter-spacing: -0.012em;
+    color: var(--color-ink);
+    margin-bottom: 1rem;
+  }
+  .epf-nr {
+    font-stretch: 125%;
+    font-weight: 480;
+    color: var(--color-ink-3);
+    font-size: 0.85em;
+  }
+  .epf-optional {
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-stretch: 100%;
+    letter-spacing: 0;
+    color: var(--color-ink-3);
+  }
+  .epf-kacheln {
+    display: grid;
+    gap: 0.6rem;
+  }
+  .epf-kacheln-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .epf-kacheln-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .epf-kachel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.85rem 1rem 0.9rem;
+    border: 1px solid #b4b6af;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.25s var(--ease), border-color 0.25s, color 0.25s;
+  }
+  .epf-kachel:hover {
+    border-color: var(--color-ink);
+  }
+  .epf-kachel input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    cursor: pointer;
+  }
+  .epf-kachel:has(input:checked) {
+    background: var(--color-ink);
+    border-color: var(--color-ink);
+    color: var(--color-paper);
+  }
+  .epf-kachel:has(input:focus-visible) {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+  .epf-k-titel {
+    font-weight: 560;
+    font-stretch: 108%;
+    font-size: 1rem;
+  }
+  .epf-k-text {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: var(--color-ink-3);
+  }
+  .epf-kachel:has(input:checked) .epf-k-text {
+    color: #c9cac3;
+  }
+  .epf-schalter {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    position: relative;
+  }
+  .epf-schalter input {
+    position: absolute;
+    opacity: 0;
+    width: 2.6rem;
+    height: 1.5rem;
+    margin: 0;
+    cursor: pointer;
+  }
+  .epf-schalter-spur {
+    flex: none;
+    position: relative;
+    width: 2.6rem;
+    height: 1.5rem;
+    border-radius: 999px;
+    background: #c9cac3;
+    transition: background-color 0.25s var(--ease);
+  }
+  .epf-schalter-spur::after {
+    content: '';
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.1875rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.3s var(--ease);
+  }
+  .epf-schalter input:checked + .epf-schalter-spur {
+    background: var(--color-ink);
+  }
+  .epf-schalter input:checked + .epf-schalter-spur::after {
+    transform: translateX(1.1rem);
+  }
+  .epf-schalter input:focus-visible + .epf-schalter-spur {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+  .epf-schalter input:disabled + .epf-schalter-spur {
+    opacity: 0.55;
+  }
+  .epf-schalter .epf-k-text {
+    display: block;
+  }
+
+  .epf-gewicht-kopf {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .epf-kg {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    line-height: 1;
+    font-stretch: 125%;
+    font-weight: 480;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+  }
+  .epf-regler {
+    width: 100%;
+    margin: 0.5rem 0 0;
+    accent-color: var(--color-ink);
+    height: 1.75rem;
+  }
+  .epf-stufen {
+    display: flex;
+    list-style: none;
+    margin: 0.35rem 0 0;
+    padding: 0;
+  }
+  .epf-stufen li {
+    position: relative;
+    white-space: nowrap;
+    padding-top: 0.55rem;
+    border-top: 2px solid var(--color-line);
+    font-size: 0.75rem;
+    line-height: 1.2;
+    color: var(--color-ink-3);
+    transition: border-color 0.3s var(--ease), color 0.3s;
+  }
+  .epf-stufen li + li {
+    border-left: 1px solid var(--color-line);
+    padding-left: 0.35rem;
+  }
+  .epf-stufen li.an {
+    border-top-color: var(--color-ink);
+    color: var(--color-ink);
+  }
+  .epf-stufen li.an span {
+    box-shadow: inset 0 -0.45em 0 var(--color-amber);
+  }
+  .epf-hinweis {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
+  .epf-hinweis-oben {
+    margin: -0.4rem 0 0.9rem;
+  }
+  .epf-vorlieben {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.25rem;
+    border-top: 1px solid var(--color-line);
+  }
+  @media (min-width: 560px) {
+    .epf-vorlieben {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .epf-v {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--color-line);
+    cursor: pointer;
+  }
+  .epf-v[hidden] {
+    display: none;
+  }
+  .epf-v input {
+    flex: none;
+    width: 1.05rem;
+    height: 1.05rem;
+    margin-top: 0.15rem;
+  }
+  .epf-v-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+  .epf-v-name {
+    font-size: 0.9375rem;
+    font-weight: 520;
+    line-height: 1.3;
+  }
+  .epf-v-hinweis {
+    font-size: 0.75rem;
+    line-height: 1.35;
+    color: var(--color-ink-3);
+  }
+  .epf-v:has(input:checked) .epf-v-name {
+    box-shadow: inset 0 -0.42em 0 var(--color-amber);
+  }
+
+  /* Vorschau */
+  .epf-pv {
+    background: var(--color-paper-2);
+    border-radius: 20px;
+    padding: clamp(1.25rem, 3vw, 2rem);
+  }
+  .epf-pv-kopf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.25rem 1rem;
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
+  .epf-pv-kopf span:first-child {
+    color: var(--color-ink);
+    font-weight: 540;
+  }
+  .epf-pv-ziel {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+  .epf-pv-zahl {
+    font-size: clamp(3.5rem, 7vw, 5rem);
+    line-height: 0.9;
+    font-stretch: 125%;
+    font-weight: 480;
+    letter-spacing: -0.04em;
+    color: var(--color-moss);
+  }
+  .epf-pv-einheit {
+    font-size: 1rem;
+    color: var(--color-ink-2);
+  }
+  .epf-pv-rechnung {
+    margin-top: 0.4rem;
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
+  .epf-pv-14 {
+    position: relative;
+    height: 6.5rem;
+    margin-top: 1.75rem;
+    border-bottom: 1px solid var(--color-ink);
+  }
+  .epf-pv-14 ol {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(14, minmax(0, 1fr));
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .epf-pv-14 li {
+    position: relative;
+  }
+  .epf-pv-14 b {
+    position: absolute;
+    inset: 0;
+    background: var(--color-moss);
+    transform-origin: bottom;
+    transition: transform 0.7s var(--ease);
+    transition-delay: calc(var(--i, 0) * 28ms);
+  }
+  .epf-pv-zielwrap {
+    position: absolute;
+    inset: 0;
+    border-top: 1.5px solid var(--color-ink);
+    z-index: 1;
+    pointer-events: none;
+    transition: transform 0.7s var(--ease);
+  }
+  .epf-pv-zielwrap span {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 0.2rem);
+    font-size: 0.75rem;
+    font-weight: 560;
+    box-shadow: inset 0 -0.4em 0 var(--color-amber);
+    padding: 0 2px;
+  }
+  .epf-pv-unter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--color-ink-3);
+  }
+  :global(html.js:not(.rm)) .epf-pv:not(.in) .epf-pv-14 b {
+    transform: scaleY(0) !important;
+  }
+  .epf-pv-tag {
+    margin-top: 1.75rem;
+  }
+  .epf-pv-balken {
+    position: relative;
+    height: 0.75rem;
+    border-radius: 999px;
+    background: var(--color-paper);
+    overflow: hidden;
+  }
+  .epf-pv-balken b {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--color-moss);
+    transform-origin: left;
+    transition: transform 0.7s var(--ease), background-color 0.3s;
+  }
+  :global(html.js:not(.rm)) .epf-pv:not(.in) .epf-pv-balken b {
+    transform: scaleX(0) !important;
+  }
+  .epf-pv-balken b.snack {
+    background: #6e8f7d;
+  }
+  /* Ziel-Markierung: volle Breite, damit translateX in Prozent der Balkenbreite rechnet */
+  .epf-pv-balken i {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    width: 100%;
+    border-left: 2px solid var(--color-ink);
+    transition: transform 0.7s var(--ease);
+  }
+  .epf-pv-liste {
+    list-style: none;
+    margin: 0.9rem 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-line);
+  }
+  .epf-pv-liste :global(li) {
+    display: grid;
+    grid-template-columns: 6.25rem minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: baseline;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--color-line);
+    font-size: 0.9375rem;
+    transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+    transition-delay: calc(var(--i, 0) * 35ms);
+  }
+  .epf-pv-liste.wechsel :global(li) {
+    opacity: 0;
+    transform: translateY(4px);
+    transition-delay: 0s;
+  }
+  .epf-pv-liste :global(.epf-pv-slot) {
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+  }
+  .epf-pv-liste :global(.epf-pv-name) {
+    color: var(--color-ink);
+  }
+  .epf-pv-liste :global(li.snack .epf-pv-name) {
+    color: var(--color-ink-2);
+  }
+  .epf-pv-liste :global(li.fav .epf-pv-name span) {
+    box-shadow: inset 0 -0.42em 0 var(--color-amber);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  .epf-pv-liste :global(.epf-pv-g) {
+    color: var(--color-moss);
+    font-weight: 560;
+    white-space: nowrap;
+  }
+  .epf-pv-summe {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.8rem;
+    font-size: 0.9375rem;
+    color: var(--color-ink-2);
+  }
+  .epf-pv-summe strong {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+  .epf-pv-fuss {
+    margin-top: 1.25rem;
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+  }
+  @media (max-width: 420px) {
+    .epf-pv-liste :global(li) {
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 0 0.75rem;
+    }
+    .epf-pv-liste :global(.epf-pv-slot) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* Absenden: dunkler Block */
+  .epf-senden {
+    margin-top: clamp(2.5rem, 6vw, 4.5rem);
+    display: grid;
+    gap: 1.75rem 4rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border-radius: 20px;
+  }
+  @media (min-width: 900px) {
+    .epf-senden {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    }
+  }
+  .epf-nr-hell {
+    font-size: 1.5rem;
+    color: var(--dark-muted);
+  }
+  .epf-senden-h {
+    margin-top: 0.5rem;
+  }
+  .epf-senden-text p.band-muted {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .epf-zeile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .epf-zeile input {
+    flex: 1 1 14rem;
+    min-width: 0;
+    height: 3.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--dark-line);
+    background: var(--dark-field);
+    color: var(--dark-fg);
+    font: inherit;
+    font-size: 1rem;
+    padding: 0 1.375rem;
+  }
+  .epf-zeile input::placeholder {
+    color: var(--dark-muted);
+  }
+  .epf-zeile .btn-primary {
+    flex: none;
+    height: 3.25rem;
+    padding-inline: 1.75rem;
+  }
+  .epf-check {
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--dark-fg);
+    cursor: pointer;
+  }
+  .epf-check input {
+    flex: none;
+    width: 1.05rem;
+    height: 1.05rem;
+    margin-top: 0.15rem;
+    accent-color: var(--color-amber);
+  }
+  .epf-check a,
+  .epf-ohne a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .epf-mikro {
+    margin-top: 1rem;
+    font-size: 0.8125rem;
+  }
+  .epf-ohne {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--dark-line);
+    font-size: 0.875rem;
+    color: var(--dark-muted);
+  }
+  .epf-ohne a {
+    color: var(--dark-fg);
+    overflow-wrap: anywhere;
+  }
+
+  .epf-text {
+    max-width: 45rem;
+    margin-top: clamp(3.5rem, 8vw, 6rem);
+  }
+  .epf-text .prose-site h2 {
+    margin-top: 0;
+  }
+  .epf-arzt {
+    color: var(--color-ink) !important;
+    font-weight: 520;
+  }
+  .epf-faq {
+    margin-top: 4rem;
+  }
+</style>

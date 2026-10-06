@@ -1,7 +1,7 @@
 ---
 /**
  * Startseiten-Abschnitt „Kostenloser Ernährungsplan“, Link auf /ernaehrungsplan/. Zeigt einen echten Beispieltag aus
- * src/data/ernaehrungsplan.ts (Mischkost, kleiner Appetit, 75 bis 95 kg): Mahlzeiten und Protein, das sich beim
+ * src/data/ernaehrungsplan.ts (Mischkost, kleiner Appetit, 85 bis 100 kg): Mahlzeiten und Protein, das sich beim
  * Scrollen bis zum Tagesziel aufbaut. Proteinwerte aus dem BLS (Quelle bls), Tagesziel 1,2 g/kg (leidy2015).
  * Keine Markennamen von Arzneimitteln (Startseite, check:text), kein Produktbezug.
  */
@@ -10,7 +10,7 @@ import { erstellePlan, gewichtLabel } from '../data/ernaehrungsplan';
 interface Props { fnBls: number; fnLeidy: number }
 const { fnBls, fnLeidy } = Astro.props;
 const href = '/ernaehrungsplan/';
-const plan = erstellePlan('mischkost', 'klein', '75bis95');
+const plan = erstellePlan({ ernaehrung: 'mischkost', appetit: 'klein', gewicht: '85bis100', laktosefrei: false });
 const tag = plan.tage[0];
 const max = Math.max(plan.ziel, tag.protein) * 1.08;
 const pct = (g: number) => Math.round((g / max) * 1000) / 10;
@@ -24,9 +24,9 @@ const segs = tag.mahlzeiten.map((mz) => {
 <section id="ernaehrungsplan" class="ep" aria-labelledby="ep-h">
   <div class="container-wide ep-grid">
     <div>
-      <p class="eyebrow" data-rv>Kostenlos, als PDF per Mail</p>
+      <p class="eyebrow" data-rv>Kostenlos, als Link und PDF per Mail</p>
       <h2 id="ep-h" class="ep-h2" data-rv>Dein Ernährungsplan für die Zeit nach der Spritze.</h2>
-      <p class="ep-intro" data-rv style="--i:1">Drei Fragen, sieben Tage: Mahlzeiten mit Mengen, genug Protein für deinen Gewichtsbereich, Einkaufsliste und eine Tabelle zum Tauschen. Passend zu Ernährungsform und Appetit.</p>
+      <p class="ep-intro" data-rv style="--i:1">Vier Fragen, 14 Tage: Mahlzeiten mit Mengen, genug Protein für deinen Gewichtsbereich, Einkaufslisten, Rezeptkarten und eine Tabelle zum Tauschen. Passend zu Ernährungsform, Appetit und dem, was du gern isst.</p>
       <div class="ep-cta" data-rv style="--i:2">
         <a href={href} class="btn-primary plausible-event-name=Ernaehrungsplan+Teaser">Plan zusammenstellen</a>
         <span class="ep-min">Dauert eine Minute.</span>

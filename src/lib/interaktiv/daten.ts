@@ -520,7 +520,7 @@ export const vergleiche: Record<string, Vergleich> = {
       {
         titel: 'Verlust an Knochendichte der Hüfte, %',
         balken: [
-          { label: 'Mit Ausdauertraining', wert: 3, text: '3 %', farbe: 'clay' },
+          { label: 'Mit Ausdauertraining', wert: 2.6, text: '2,6 %', farbe: 'clay' },
           { label: 'Mit Krafttraining', wert: 1, text: 'unter 1 %, nicht signifikant', farbe: 'moss', blass: true },
         ],
       },

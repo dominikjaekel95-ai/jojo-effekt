@@ -76,11 +76,22 @@
   color: var(--color-ink);
   white-space: nowrap;
 }
+/* Sehr schmale Handys: große Zahl eine Stufe kleiner, damit Zahl und Einheit nebeneinander passen */
+@media (max-width: 399px) {
+  .ia-gross {
+    font-size: var(--fs-5);
+  }
+}
 .ia-gross small {
-  font-size: var(--fs-4);
+  font-size: var(--fs-3);
   font-stretch: 115%;
   letter-spacing: -0.01em;
   font-weight: 500;
+}
+@media (min-width: 768px) {
+  .ia-gross small {
+    font-size: var(--fs-4);
+  }
 }
 .ia-klein {
   overflow-wrap: break-word;
@@ -151,6 +162,18 @@
   cursor: pointer;
   white-space: nowrap;
   transition: background-color 0.25s var(--ia-ease), color 0.25s var(--ia-ease);
+}
+/* Schmale Handys: drei Knöpfe passen nebeneinander */
+@media (max-width: 479px) {
+  .ia-wahl-k button {
+    padding: 0 0.75rem;
+    font-size: var(--fs-1);
+  }
+}
+@media (max-width: 359px) {
+  .ia-wahl-k button {
+    padding: 0 0.5rem;
+  }
 }
 .ia-wahl-k button:hover {
   color: var(--color-ink);

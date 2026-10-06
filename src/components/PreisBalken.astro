@@ -1,0 +1,180 @@
+---
+/**
+ * Selbstzahlerpreise aus src/data/markt/preise.json als Tabelle mit Balken, die sich beim Einblenden zeichnen
+ * (Marktradar, Kostenseite). Alle Zahlen und Hinweise stehen als Text in der Tabelle; der Balken ist Beiwerk.
+ * Gefüllter Balken: Preis aus dem Preisvergleich; Balken nur mit Kontur: Anbieter- oder Presseangabe, Prüfung folgt.
+ * `jahr` ergänzt die rechnerischen Jahreskosten (× 13 bei Pens, die vier Wochen reichen, × 12 bei Tabletten und Saxenda).
+ * Keine Bezugsquellen, keine Preisberatung, kein Vergleich mit dem Programm.
+ */
+import { preise, fmtDate } from '../data/markt';
+
+interface Props { jahr?: boolean }
+const { jahr = false } = Astro.props;
+
+const eur = (n: number) => n.toLocaleString('de-DE');
+const rows = preise.zeilen.map((z) => {
+  const monatEur = Number(String(z.monat).replace(/[^0-9]/g, ''));
+  const faktor = /Tablette|Saxenda/.test(z.praeparat) ? 12 : 13;
+  return { ...z, monatEur, faktor, jahrEur: monatEur * faktor, geprueft: /^Preisvergleich/i.test(z.hinweis) };
+});
+const max = Math.max(...rows.map((r) => r.monatEur));
+const vorlaeufig = rows.some((r) => !r.geprueft);
+---
+<div class:list={['pb', jahr && 'pb-jahr']} data-draw>
+  <table class="pb-t">
+    <caption class="sr-only">Selbstzahlerpreise im Monat als Größenordnung, Stand {fmtDate(preise.stand)}</caption>
+    <thead>
+      <tr><th scope="col">Präparat</th><th scope="col">Hinweis</th><th scope="col">pro Monat</th>{jahr && <th scope="col">pro Jahr, rechnerisch</th>}</tr>
+    </thead>
+    <tbody>
+      {rows.map((r, i) => (
+        <tr style={`--i:${i};--w:${(r.monatEur / max).toFixed(4)}`}>
+          <th scope="row" class="pb-n">{r.praeparat}</th>
+          <td class="pb-h">{r.hinweis}</td>
+          <td class="pb-v"><span class="pb-track"><span class:list={['k-bar', 'pb-bar', !r.geprueft && 'pb-open']} aria-hidden="true"></span><span class="pb-l">{r.monat}</span></span></td>
+          {jahr && <td class="pb-j">ca. {eur(r.jahrEur)} € <span>(× {r.faktor})</span></td>}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  {vorlaeufig && (
+    <p class="pb-key" aria-hidden="true"><span><i></i>Preisvergleich</span><span><i class="o"></i>Anbieter- oder Presseangabe, Prüfung folgt</span></p>
+  )}
+</div>
+
+<style>
+  .pb {
+    margin-top: 2rem;
+  }
+  .pb-t {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  .pb-t thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .pb-t tbody {
+    display: block;
+    border-top: 1px solid var(--color-ink);
+  }
+  .pb-t tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "n" "h" "v" "j";
+    gap: 0.15rem 2rem;
+    padding: 0.95rem 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .pb-n {
+    grid-area: n;
+    font-size: 0.9375rem;
+    font-weight: 520;
+    line-height: 1.35;
+    color: var(--color-ink);
+  }
+  .pb-h {
+    grid-area: h;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    color: var(--color-ink-3);
+  }
+  .pb-v {
+    grid-area: v;
+    align-self: center;
+    padding-top: 0.45rem;
+  }
+  .pb-j {
+    grid-area: j;
+    font-size: 0.875rem;
+    color: var(--color-ink-2);
+    white-space: nowrap;
+  }
+  .pb-j span {
+    color: var(--color-ink-3);
+  }
+  .pb-track {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    height: 1.5rem;
+  }
+  .pb-bar {
+    flex: none;
+    width: calc((100% - 5.5rem) * var(--w, 1));
+    height: 10px;
+    border-radius: 2px;
+    background: var(--color-ink);
+  }
+  .pb-open {
+    background: transparent;
+    box-shadow: inset 0 0 0 1.5px var(--color-ink);
+  }
+  .pb-l {
+    flex: none;
+    font-size: 0.9375rem;
+    font-weight: 520;
+    font-stretch: 112%;
+    color: var(--color-ink);
+    white-space: nowrap;
+  }
+  .pb-key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    margin-top: 1rem;
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+  }
+  .pb-key span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .pb-key i {
+    display: inline-block;
+    width: 22px;
+    height: 10px;
+    border-radius: 2px;
+    background: var(--color-ink);
+  }
+  .pb-key i.o {
+    background: transparent;
+    box-shadow: inset 0 0 0 1.5px var(--color-ink);
+  }
+  :global(html.js:not(.rm)) .pb .pb-l {
+    opacity: 0;
+    transition: opacity 0.6s var(--ease);
+    transition-delay: calc(700ms + var(--i, 0) * 60ms);
+  }
+  :global(html.js:not(.rm)) .pb.in .pb-l {
+    opacity: 1;
+  }
+  @media (min-width: 760px) {
+    .pb-t tr {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+      grid-template-areas: "n v" "h v";
+    }
+    .pb-jahr .pb-t tr {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) 9.5rem;
+      grid-template-areas: "n v j" "h v j";
+    }
+    .pb-v {
+      padding-top: 0;
+    }
+    .pb-j {
+      align-self: center;
+      text-align: right;
+    }
+  }
+  @media print {
+    .pb .pb-l {
+      opacity: 1 !important;
+    }
+  }
+</style>

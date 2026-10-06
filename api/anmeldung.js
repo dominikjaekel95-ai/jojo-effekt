@@ -19,7 +19,7 @@
  *   checkliste  MAILERLITE_GROUP_CHECKLISTE, falls gesetzt, plus Newsletter nur mit newsletter=ja.
  *
  * Weiterleitung (303): warteliste → /danke/, checkliste → /checkliste/danke/, header → /newsletter/danke/; Fehler mit
- * ?fehler=eingabe bzw. ?fehler=technik (Warteliste auf /danke/, sonst auf /newsletter/danke/).
+ * ?fehler=eingabe bzw. ?fehler=technik auf dieselbe Seite (die Checkliste bietet das PDF auch im Fehlerfall an).
  * Es werden keine E-Mail-Adressen geloggt. Umgebungsvariablen wie in api/newsletter.js, dazu optional
  * MAILERLITE_GROUP_WARTELISTE (ID der Gruppe „Warteliste“). Ist sie gesetzt, in src/data/site.ts
  * `waitlist.ownGroup` auf true stellen, damit der Einwilligungstext passt.
@@ -32,7 +32,7 @@ const redirect = (to) => new Response(null, { status: 303, headers: { Location: 
 const ZIEL = {
   warteliste: { ok: '/danke/', fehler: '/danke/' },
   header: { ok: '/newsletter/danke/', fehler: '/newsletter/danke/' },
-  checkliste: { ok: '/checkliste/danke/', fehler: '/newsletter/danke/' },
+  checkliste: { ok: '/checkliste/danke/', fehler: '/checkliste/danke/' },
 };
 
 export function parseQuelle(value) {

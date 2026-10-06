@@ -1,0 +1,6 @@
+---
+/** Pfeil nach rechts für Zeilenlisten (wie auf der Startseite). Dekorativ. */
+interface Props { size?: number }
+const { size = 18 } = Astro.props;
+---
+<svg width={size} height={size} viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>

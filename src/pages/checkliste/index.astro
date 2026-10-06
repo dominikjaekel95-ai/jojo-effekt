@@ -1,10 +1,15 @@
 ---
 /**
  * Checkliste „Die ersten 8 Wochen nach der letzten Dosis“. Lesbar als Seite, druckbar (print-CSS) und als PDF unter
- * /downloads/checkliste-8-wochen.pdf (wird mit scripts/checkliste-pdf.mjs aus dieser Seite erzeugt).
- * Das Tally-Formular (E-Mail gegen PDF) erscheint, sobald site.checklistForm.live true ist.
+ * /downloads/checkliste-8-wochen.pdf (wird mit scripts/checkliste-pdf.mjs aus dieser Seite erzeugt; nach jeder Änderung
+ * `npm run pdf:checkliste` und das PDF mit committen).
+ * Seit 06.10.2026 eigenes Formular (ChecklisteForm → /api/anmeldung/, quelle=checkliste) statt Tally; es erscheint, solange
+ * site.checklistForm.live true ist, sonst der Weg per E-Mail. Die Kästchen lassen sich auf der Seite abhaken; gespeichert
+ * wird nichts (kein localStorage, keine Cookies).
  */
 import Base from '../../layouts/Base.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
+import ChecklisteForm from '../../components/ChecklisteForm.astro';
 import Fn from '../../components/Fn.astro';
 import Footnotes from '../../components/Footnotes.astro';
 import { site } from '../../data/site';
@@ -13,7 +18,6 @@ const fnIds = ['wu2025', 'wilding2022ext', 'fachinfoWegovy', 'leidy2015', 'moore
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
 const form = site.checklistForm;
-const embedSrc = form.id ? `https://tally.so/embed/${form.id}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1` : '';
 const title = 'Checkliste: Die ersten 8 Wochen nach der letzten Dosis';
 const description =
   'Woche für Woche nach der Abnehmspritze: Messwerte, Protein, Krafttraining, Schlaf, Wiegetag. Aus den Absetz-Studien abgeleitet, mit Quellen, als Seite und PDF.';
@@ -39,125 +43,394 @@ const jsonLd = [
     ],
   },
 ];
-const box = 'rounded-xl2 border border-line bg-white p-5';
-const li = 'flex gap-3';
-const cb = 'mt-0.5 inline-block h-4 w-4 shrink-0 rounded border border-ink-3';
+// Wochenleiste: Spannen in Wochen, Anker der Abschnitte
+const leiste = [
+  { href: '#w0-h', label: 'Woche 0', kurz: 'Woche 0', span: 1 },
+  { href: '#w12-h', label: 'Woche 1 bis 2', kurz: '1–2', span: 2 },
+  { href: '#w34-h', label: 'Woche 3 bis 4', kurz: '3–4', span: 2 },
+  { href: '#w56-h', label: 'Woche 5 bis 6', kurz: '5–6', span: 2 },
+  { href: '#w78-h', label: 'Woche 7 bis 8', kurz: '7–8', span: 2 },
+];
 ---
 <Base title={title} description={description} path="/checkliste/" jsonLd={jsonLd}>
-  <article class="container-narrow py-12">
-    <nav aria-label="Brotkrumen" class="text-sm text-ink-3 no-print"><a href="/" class="hover:text-moss">Start</a> › Checkliste</nav>
-    <p class="eyebrow mt-6">Checkliste</p>
-    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">Die ersten 8 Wochen nach der letzten Dosis</h1>
-    <p class="mt-4 text-lg text-ink-2">
-      Die Absetz-Studien zeigen immer denselben Verlauf: ein paar ruhige Wochen, dann ab etwa Woche 8 die Zunahme.<Fn n={fn('wu2025')} id="wu2025" /> Diese Checkliste ordnet die acht Wochen davor. Sie sagt nicht, ob oder wann du absetzt; das legst du mit deiner Ärztin oder deinem Arzt fest. Sie sagt, was du in dieser Zeit für Muskeln, Gewicht und Alltag tun kannst.
-    </p>
-    <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: 'Checkliste' }]} meta="Checkliste zum Abhaken, als Seite und als PDF" title="Die ersten 8 Wochen nach der letzten Dosis">
+    <p>Die Absetz-Studien zeigen immer denselben Verlauf: ein paar ruhige Wochen, dann ab etwa Woche 8 die Zunahme.<Fn n={fn('wu2025')} id="wu2025" /> Diese Checkliste ordnet die acht Wochen davor. Sie sagt nicht, ob oder wann du absetzt; das legst du mit deiner Ärztin oder deinem Arzt fest. Sie sagt, was du in dieser Zeit für Muskeln, Gewicht und Alltag tun kannst.</p>
+  </SeitenKopf>
 
-    <div id="pdf" class="no-print mt-8 scroll-mt-24 rounded-xl2 border border-amber/50 bg-amber-light/40 p-5">
-      <p class="eyebrow text-amber-dark">Als PDF zum Abhaken</p>
-      {form.live ? (
-        <div class="mt-3">
-          <p class="text-sm text-ink-2">Trag deine E-Mail-Adresse ein, dann bekommst du die Checkliste als PDF. Kein Newsletter, außer du kreuzt ihn an.</p>
-          <iframe data-tally-src={embedSrc} loading="lazy" width="100%" height="360" style="border:0;margin:0" title="Checkliste als PDF anfordern"></iframe>
-          <script is:inline>
-            (function () {
-              var d = document, w = "https://tally.so/widgets/embed.js";
-              var v = function () {
-                if (typeof Tally !== "undefined") { Tally.loadEmbeds(); return; }
-                d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function (e) { e.src = e.dataset.tallySrc; });
-              };
-              if (typeof Tally !== "undefined") { v(); return; }
-              if (d.querySelector('script[src="' + w + '"]') === null) {
-                var s = d.createElement("script"); s.src = w; s.onload = v; s.onerror = v; d.body.appendChild(s);
-              }
-            })();
-          </script>
+  <div class="container-wide k-end">
+    <nav class="cl-bar no-print" aria-label="Wochen der Checkliste" data-draw>
+      {leiste.map((w, i) => (
+        <a href={w.href} style={`grid-column: span ${w.span}; --i:${i}`}><span class="k-bar"></span><span class="cl-bar-l"><span class="sr-only">{w.label}</span><span aria-hidden="true">{w.kurz}</span></span></a>
+      ))}
+      <span class="cl-bar-8" style="--i:5"><span class="k-bar"></span><span class="cl-bar-l">ab Woche 8: Zunahme messbar</span></span>
+    </nav>
+
+    <div class="cl-grid">
+      <div class="cl-main">
+        <section id="pdf" class="cl-pdf no-print scroll-mt-24" aria-labelledby="pdf-h" data-rv>
+          <h2 id="pdf-h" class="cl-pdf-h">Als PDF zum Abhaken</h2>
+          {form.live ? (
+            <>
+              <p class="cl-pdf-t">Trag deine E-Mail-Adresse ein, dann bekommst du die Checkliste als PDF. Kein Newsletter, außer du kreuzt ihn an.</p>
+              <ChecklisteForm />
+            </>
+          ) : (
+            <p class="cl-pdf-t">Die PDF-Version schicken wir dir per E-Mail: eine kurze Mail an <a href={`mailto:${site.owner.email}?subject=Checkliste`} class="k-a">{site.owner.email}</a> mit dem Betreff „Checkliste“ genügt. Bis dahin: Diese Seite lässt sich auch drucken.</p>
+          )}
+        </section>
+
+        <div class="prose-site cl-prose">
+          <h2>So nutzt du die Liste</h2>
+          <p>
+            Woche 0 ist die Woche der letzten Dosis. Die Wochen danach zählen ab diesem Datum. Nicht alles muss auf einmal passieren; die Reihenfolge ist Absicht: erst messen und Protein, dann Training, dann Steigerung. Wer die Liste vor der letzten Dosis anfängt, hat es leichter, weil der Appetit noch klein ist.
+          </p>
+          <p class="cl-tip no-print">Die Kästchen lassen sich hier auf der Seite abhaken. Gespeichert wird nichts; zum Aufheben das PDF nehmen.</p>
         </div>
-      ) : (
-        <p class="mt-3 text-sm text-ink-2">Die PDF-Version schicken wir dir per E-Mail: eine kurze Mail an <a href={`mailto:${site.owner.email}?subject=Checkliste`} class="font-semibold text-moss underline underline-offset-4">{site.owner.email}</a> mit dem Betreff „Checkliste“ genügt. Bis dahin: Diese Seite lässt sich auch drucken.</p>
-      )}
+
+        <section class="cl-w" aria-labelledby="w0-h" data-rv>
+          <p class="cl-n" aria-hidden="true">0</p>
+          <div>
+            <h2 id="w0-h" class="cl-h">Woche 0: die letzte Dosis</h2>
+            <ul class="cl-list">
+              <li><label><input type="checkbox" class="cl-cb" /><span>Datum der letzten Dosis notieren. Ab hier zählen die Wochen.</span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Wissen, wie lange der Wirkstoff bleibt: Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche, die Wirkung klingt über fünf bis sieben Wochen aus; Tirzepatid etwa vier Wochen, Liraglutid wenige Tage.<Fn n={fn('fachinfoWegovy')} id="fachinfoWegovy" /></span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Ausgangswerte messen und aufschreiben: Gewicht (morgens, nüchtern), Taillenumfang, Griffkraft oder die Zeit für fünfmal Aufstehen vom Stuhl.</span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Kontrolltermin in acht bis zwölf Wochen bei der Ärztin oder dem Arzt vereinbaren, bei Typ-2-Diabetes früher und mit Blutzuckerkontrolle.</span></label></li>
+            </ul>
+            <p class="cl-count no-print" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="cl-w" aria-labelledby="w12-h" data-rv>
+          <p class="cl-n" aria-hidden="true">1–2</p>
+          <div>
+            <h2 id="w12-h" class="cl-h">Woche 1 bis 2: die Auswaschphase</h2>
+            <p class="cl-sub">Der Wirkstoff ist noch da, der Appetit klein. Das ist das Fenster, um Gewohnheiten zu bauen, bevor der Hunger zurück ist.</p>
+            <ul class="cl-list">
+              <li><label><input type="checkbox" class="cl-cb" /><span>Drei Mahlzeiten mit je 25 bis 30 g Protein planen. Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag;<Fn n={fn('leidy2015')} id="leidy2015" /> pro Mahlzeit brauchen Ältere mehr als Jüngere.<Fn n={fn('moore2015')} id="moore2015" /></span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Zwei Krafteinheiten in dieser Woche, je 30 Minuten, sechs Übungen für den ganzen Körper. Die WHO empfiehlt mindestens zwei Tage pro Woche.<Fn n={fn('who2020')} id="who2020" /> Einsteiger: 8 bis 12 Wiederholungen, zwei Sätze.<Fn n={fn('acsm2009')} id="acsm2009" /></span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Wiegetag festlegen: einmal pro Woche, morgens, gleiche Bedingungen. Nicht täglich.</span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Ballaststoffe Richtung 30 g pro Tag (DGE-Richtwert),<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> mit reichlich Wasser.</span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Schlaf schützen: Schon zwei Nächte mit vier Stunden Schlaf erhöhen das Hungerhormon Ghrelin messbar.<Fn n={fn('spiegel2004')} id="spiegel2004" /></span></label></li>
+            </ul>
+            <p class="cl-count no-print" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="cl-w" aria-labelledby="w34-h" data-rv>
+          <p class="cl-n" aria-hidden="true">3–4</p>
+          <div>
+            <h2 id="w34-h" class="cl-h">Woche 3 bis 4: der Appetit kommt zurück</h2>
+            <ul class="cl-list">
+              <li><label><input type="checkbox" class="cl-cb" /><span>Mahlzeitenstruktur beibehalten, auch wenn der Hunger zwischendurch kommt: Nach Gewichtsverlust bleiben Hungerhormone über Monate erhöht, das ist Biologie, kein Willensproblem.<Fn n={fn('sumithran2011')} id="sumithran2011" /></span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Umgebung aufräumen: Was nicht in Sichtweite steht, zieht weniger. Vorräte für die Proteinmahlzeiten anlegen.</span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Training: bei zwei Sätzen bleiben und die Wiederholungen Richtung 12 steigern. Der dritte Satz kommt erst ab Woche 5, wie im <a href="/wissen/krafttraining-nach-abnehmspritze/" class="k-a">12-Wochen-Plan</a>.<Fn n={fn('acsm2009')} id="acsm2009" /></span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Optional Kreatin-Monohydrat, 3 g täglich, nur zusammen mit dem Training: Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver körperlicher Betätigung.<Fn n={fn('euClaims')} id="euClaims" /> Bei Nierenerkrankungen vorher fragen.<Fn n={fn('kreider2017')} id="kreider2017" /></span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Taillenumfang messen, neben dem Gewicht notieren.</span></label></li>
+            </ul>
+            <p class="cl-count no-print" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="cl-w" aria-labelledby="w56-h" data-rv>
+          <p class="cl-n" aria-hidden="true">5–6</p>
+          <div>
+            <h2 id="w56-h" class="cl-h">Woche 5 bis 6: steigern</h2>
+            <ul class="cl-list">
+              <li><label><input type="checkbox" class="cl-cb" /><span>Dritter Satz dazu, sobald zwei Sätze mit 12 sauberen Wiederholungen gelingen; dann zurück auf 8 Wiederholungen. Belastung erhöhen: stärkeres Band, mehr Gewicht oder die schwerere Variante der Übung. Das ACSM empfiehlt Schritte von etwa 2 bis 10 %.<Fn n={fn('acsm2009')} id="acsm2009" /></span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Alltagsbewegung zählen: Schritte, Treppen, Wege zu Fuß. Die WHO empfiehlt zusätzlich 150 bis 300 Minuten moderate Bewegung pro Woche.<Fn n={fn('who2020')} id="who2020" /></span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Zweite Messung: Griffkraft oder Aufsteh-Test. Steigt der Wert, wirkt das Training, egal was die Waage sagt.</span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Protein prüfen: Kommen an Trainingstagen wirklich drei Portionen zusammen?</span></label></li>
+            </ul>
+            <p class="cl-count no-print" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="cl-w cl-w8" aria-labelledby="w78-h" data-rv>
+          <p class="cl-n" aria-hidden="true">7–8</p>
+          <div>
+            <h2 id="w78-h" class="cl-h">Woche 7 bis 8: die Absetzkurve beginnt</h2>
+            <p class="cl-sub">Ab etwa Woche 8 wird die Zunahme in Studien messbar und ist bis Woche 20 am steilsten.<Fn n={fn('wu2025')} id="wu2025" /> Jetzt zählt der Wochentrend.</p>
+            <ul class="cl-list">
+              <li><label><input type="checkbox" class="cl-cb" /><span>Nur den Wochentrend lesen, nicht den Tageswert. Ein bis zwei Kilo Schwankung sind Wasser und Speicher, kein Fett.</span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Regel für den Anstieg: Liegt das Wochenmittel mehr als 1,4 kg über dem Ausgangswert, zwei Wochen lang zuerst Protein und Bewegung prüfen, nicht hungern; ab 2,3 kg Ursachen klären.<Fn n={fn('wing2006')} id="wing2006" /> Hungern kostet Muskeln.</span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Kontrolltermin wahrnehmen. Mitbringen: Gewichtsverlauf, Taillenumfang, Trainingsheft, Fragen.</span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Bilanz nach acht Wochen: Was hat funktioniert, was fällt aus? In der S-LiTE-Studie hielten Menschen, die trainierten, Gewicht und Körperzusammensetzung ein Jahr nach dem Ende aller Behandlungen.<Fn n={fn('jensen2024')} id="jensen2024" /></span></label></li>
+            </ul>
+            <p class="cl-count no-print" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <div class="prose-site cl-prose">
+          <h2>Und danach</h2>
+          <p>
+            Die Haltephase dauert länger als acht Wochen. Ein Jahr nach dem Absetzen von Semaglutid waren in der STEP-1-Verlängerung im Mittel zwei Drittel des verlorenen Gewichts wieder da,<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> bei denen, die nichts geändert hatten. Was in Studien den Unterschied macht, steht unter <a href="/wissen/gewicht-halten-nach-abnehmspritze/">Gewicht halten nach der Abnehmspritze</a>; ein Trainingsplan für zwölf Wochen unter <a href="/wissen/krafttraining-nach-abnehmspritze/">Krafttraining nach der Abnehmspritze</a>.
+          </p>
+          <h2>Wann du zur Ärztin oder zum Arzt gehst</h2>
+          <ul>
+            <li>Bei Typ-2-Diabetes: sobald Blutzuckerwerte steigen, nicht erst zum Kontrolltermin.</li>
+            <li>Sofort bei Atemnot, Herzrasen, starken Bauchschmerzen oder Anzeichen einer Unterzuckerung (Zittern, Schwitzen, Verwirrtheit).</li>
+            <li>Bei Übelkeit oder gedrückter Stimmung, die länger als zwei Wochen anhält.</li>
+            <li>Bei der Frage, ob und wie das Medikament abgesetzt oder wieder begonnen wird. Das entscheidet niemand allein.</li>
+          </ul>
+          <p class="cl-small">
+            Diese Checkliste ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm, kein Medikament, und verhindert den Jojo-Effekt nicht.
+          </p>
+        </div>
+
+        <ul class="k-inline cl-more no-print">
+          <li><a href="#pdf" class="k-q">Checkliste als PDF anfordern</a></li>
+          <li><a href="/ernaehrungsplan/" class="k-q">7-Tage-Ernährungsplan</a></li>
+          <li><a href="/glossar/" class="k-q">Begriffe im Glossar</a></li>
+        </ul>
+
+        <Footnotes ids={fnIds} />
+      </div>
     </div>
-
-    <div class="prose-site mt-10">
-      <h2>So nutzt du die Liste</h2>
-      <p>
-        Woche 0 ist die Woche der letzten Dosis. Die Wochen danach zählen ab diesem Datum. Nicht alles muss auf einmal passieren; die Reihenfolge ist Absicht: erst messen und Protein, dann Training, dann Steigerung. Wer die Liste vor der letzten Dosis anfängt, hat es leichter, weil der Appetit noch klein ist.
-      </p>
-    </div>
-
-    <section class={`mt-8 ${box}`} aria-labelledby="w0-h">
-      <h2 id="w0-h" class="text-xl font-bold text-ink">Woche 0: die letzte Dosis</h2>
-      <ul class="mt-3 space-y-2 text-ink-2">
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Datum der letzten Dosis notieren. Ab hier zählen die Wochen.</span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Wissen, wie lange der Wirkstoff bleibt: Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche, die Wirkung klingt über fünf bis sieben Wochen aus; Tirzepatid etwa vier Wochen, Liraglutid wenige Tage.<Fn n={fn('fachinfoWegovy')} id="fachinfoWegovy" /></span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Ausgangswerte messen und aufschreiben: Gewicht (morgens, nüchtern), Taillenumfang, Griffkraft oder die Zeit für fünfmal Aufstehen vom Stuhl.</span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Kontrolltermin in acht bis zwölf Wochen bei der Ärztin oder dem Arzt vereinbaren, bei Typ-2-Diabetes früher und mit Blutzuckerkontrolle.</span></li>
-      </ul>
-    </section>
-
-    <section class={`mt-6 ${box}`} aria-labelledby="w12-h">
-      <h2 id="w12-h" class="text-xl font-bold text-ink">Woche 1 bis 2: die Auswaschphase</h2>
-      <p class="mt-1 text-sm text-ink-3">Der Wirkstoff ist noch da, der Appetit klein. Das ist das Fenster, um Gewohnheiten zu bauen, bevor der Hunger zurück ist.</p>
-      <ul class="mt-3 space-y-2 text-ink-2">
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Drei Mahlzeiten mit je 25 bis 30 g Protein planen. Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag;<Fn n={fn('leidy2015')} id="leidy2015" /> pro Mahlzeit brauchen Ältere mehr als Jüngere.<Fn n={fn('moore2015')} id="moore2015" /></span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Zwei Krafteinheiten in dieser Woche, je 30 Minuten, sechs Übungen für den ganzen Körper. Die WHO empfiehlt mindestens zwei Tage pro Woche.<Fn n={fn('who2020')} id="who2020" /> Einsteiger: 8 bis 12 Wiederholungen, zwei Sätze.<Fn n={fn('acsm2009')} id="acsm2009" /></span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Wiegetag festlegen: einmal pro Woche, morgens, gleiche Bedingungen. Nicht täglich.</span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Ballaststoffe Richtung 30 g pro Tag (DGE-Richtwert),<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> mit reichlich Wasser.</span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Schlaf schützen: Schon zwei Nächte mit vier Stunden Schlaf erhöhen das Hungerhormon Ghrelin messbar.<Fn n={fn('spiegel2004')} id="spiegel2004" /></span></li>
-      </ul>
-    </section>
-
-    <section class={`mt-6 ${box}`} aria-labelledby="w34-h">
-      <h2 id="w34-h" class="text-xl font-bold text-ink">Woche 3 bis 4: der Appetit kommt zurück</h2>
-      <ul class="mt-3 space-y-2 text-ink-2">
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Mahlzeitenstruktur beibehalten, auch wenn der Hunger zwischendurch kommt: Nach Gewichtsverlust bleiben Hungerhormone über Monate erhöht, das ist Biologie, kein Willensproblem.<Fn n={fn('sumithran2011')} id="sumithran2011" /></span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Umgebung aufräumen: Was nicht in Sichtweite steht, zieht weniger. Vorräte für die Proteinmahlzeiten anlegen.</span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Training: bei zwei Sätzen bleiben und die Wiederholungen Richtung 12 steigern. Der dritte Satz kommt erst ab Woche 5, wie im <a href="/wissen/krafttraining-nach-abnehmspritze/" class="underline">12-Wochen-Plan</a>.<Fn n={fn('acsm2009')} id="acsm2009" /></span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Optional Kreatin-Monohydrat, 3 g täglich, nur zusammen mit dem Training: Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver körperlicher Betätigung.<Fn n={fn('euClaims')} id="euClaims" /> Bei Nierenerkrankungen vorher fragen.<Fn n={fn('kreider2017')} id="kreider2017" /></span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Taillenumfang messen, neben dem Gewicht notieren.</span></li>
-      </ul>
-    </section>
-
-    <section class={`mt-6 ${box}`} aria-labelledby="w56-h">
-      <h2 id="w56-h" class="text-xl font-bold text-ink">Woche 5 bis 6: steigern</h2>
-      <ul class="mt-3 space-y-2 text-ink-2">
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Dritter Satz dazu, sobald zwei Sätze mit 12 sauberen Wiederholungen gelingen; dann zurück auf 8 Wiederholungen. Belastung erhöhen: stärkeres Band, mehr Gewicht oder die schwerere Variante der Übung. Das ACSM empfiehlt Schritte von etwa 2 bis 10 %.<Fn n={fn('acsm2009')} id="acsm2009" /></span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Alltagsbewegung zählen: Schritte, Treppen, Wege zu Fuß. Die WHO empfiehlt zusätzlich 150 bis 300 Minuten moderate Bewegung pro Woche.<Fn n={fn('who2020')} id="who2020" /></span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Zweite Messung: Griffkraft oder Aufsteh-Test. Steigt der Wert, wirkt das Training, egal was die Waage sagt.</span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Protein prüfen: Kommen an Trainingstagen wirklich drei Portionen zusammen?</span></li>
-      </ul>
-    </section>
-
-    <section class={`mt-6 ${box}`} aria-labelledby="w78-h">
-      <h2 id="w78-h" class="text-xl font-bold text-ink">Woche 7 bis 8: die Absetzkurve beginnt</h2>
-      <p class="mt-1 text-sm text-ink-3">Ab etwa Woche 8 wird die Zunahme in Studien messbar und ist bis Woche 20 am steilsten.<Fn n={fn('wu2025')} id="wu2025" /> Jetzt zählt der Wochentrend.</p>
-      <ul class="mt-3 space-y-2 text-ink-2">
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Nur den Wochentrend lesen, nicht den Tageswert. Ein bis zwei Kilo Schwankung sind Wasser und Speicher, kein Fett.</span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Regel für den Anstieg: Liegt das Wochenmittel mehr als 1,4 kg über dem Ausgangswert, zwei Wochen lang zuerst Protein und Bewegung prüfen, nicht hungern; ab 2,3 kg Ursachen klären.<Fn n={fn('wing2006')} id="wing2006" /> Hungern kostet Muskeln.</span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Kontrolltermin wahrnehmen. Mitbringen: Gewichtsverlauf, Taillenumfang, Trainingsheft, Fragen.</span></li>
-        <li class={li}><span class={cb} aria-hidden="true"></span><span>Bilanz nach acht Wochen: Was hat funktioniert, was fällt aus? In der S-LiTE-Studie hielten Menschen, die trainierten, Gewicht und Körperzusammensetzung ein Jahr nach dem Ende aller Behandlungen.<Fn n={fn('jensen2024')} id="jensen2024" /></span></li>
-      </ul>
-    </section>
-
-    <div class="prose-site mt-10">
-      <h2>Und danach</h2>
-      <p>
-        Die Haltephase dauert länger als acht Wochen. Ein Jahr nach dem Absetzen von Semaglutid waren in der STEP-1-Verlängerung im Mittel zwei Drittel des verlorenen Gewichts wieder da,<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> bei denen, die nichts geändert hatten. Was in Studien den Unterschied macht, steht unter <a href="/wissen/gewicht-halten-nach-abnehmspritze/">Gewicht halten nach der Abnehmspritze</a>; ein Trainingsplan für zwölf Wochen unter <a href="/wissen/krafttraining-nach-abnehmspritze/">Krafttraining nach der Abnehmspritze</a>.
-      </p>
-      <h2>Wann du zur Ärztin oder zum Arzt gehst</h2>
-      <ul>
-        <li>Bei Typ-2-Diabetes: sobald Blutzuckerwerte steigen, nicht erst zum Kontrolltermin.</li>
-        <li>Sofort bei Atemnot, Herzrasen, starken Bauchschmerzen oder Anzeichen einer Unterzuckerung (Zittern, Schwitzen, Verwirrtheit).</li>
-        <li>Bei Übelkeit oder gedrückter Stimmung, die länger als zwei Wochen anhält.</li>
-        <li>Bei der Frage, ob und wie das Medikament abgesetzt oder wieder begonnen wird. Das entscheidet niemand allein.</li>
-      </ul>
-      <p class="text-sm text-ink-3">
-        Diese Checkliste ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Programm, kein Medikament, und verhindert den Jojo-Effekt nicht.
-      </p>
-    </div>
-
-    <p class="no-print mt-8 text-sm"><a href="#pdf" class="font-semibold text-moss underline underline-offset-4">Checkliste als PDF anfordern</a> · <a href="/ernaehrungsplan/" class="font-semibold text-moss underline underline-offset-4">7-Tage-Ernährungsplan</a> · <a href="/glossar/" class="font-semibold text-moss underline underline-offset-4">Begriffe im Glossar</a></p>
-
-    <Footnotes ids={fnIds} />
-  </article>
+  </div>
 </Base>
+
+<script>
+  // Abhaken auf der Seite: zählt je Abschnitt mit, speichert nichts
+  document.querySelectorAll<HTMLElement>('.cl-w').forEach((w) => {
+    const boxen = Array.from(w.querySelectorAll<HTMLInputElement>('.cl-cb'));
+    const zaehler = w.querySelector<HTMLElement>('.cl-count');
+    const neu = () => {
+      const n = boxen.filter((b) => b.checked).length;
+      if (zaehler) zaehler.textContent = n === 0 ? '' : n === boxen.length ? `Alle ${n} abgehakt.` : `${n} von ${boxen.length} abgehakt.`;
+      w.classList.toggle('cl-done', n === boxen.length);
+    };
+    boxen.forEach((b) => b.addEventListener('change', neu));
+  });
+</script>
+
+<style>
+  /* Wochenleiste: fünf Abschnitte, dann der Beginn der Zunahme in Braun */
+  .cl-bar {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr)) minmax(0, 2.2fr);
+    gap: 4px;
+    margin-top: clamp(2.5rem, 6vh, 3.5rem);
+    max-width: 62rem;
+  }
+  .cl-bar a, .cl-bar-8 {
+    display: grid;
+    grid-template-rows: 6px auto;
+    align-content: start;
+    gap: 0.5rem;
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+  .cl-bar .k-bar {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--color-ink);
+  }
+  .cl-bar-8 .k-bar {
+    background: var(--color-clay);
+  }
+  .cl-bar-l {
+    white-space: nowrap;
+    font-size: 0.875rem;
+    font-stretch: 112%;
+    font-weight: 520;
+  }
+  .cl-bar-8 .cl-bar-l {
+    white-space: normal;
+    font-stretch: 100%;
+    font-weight: 450;
+    font-size: 0.8125rem;
+    line-height: 1.35;
+    color: var(--color-clay);
+  }
+  .cl-bar a:hover .cl-bar-l {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .cl-main {
+    max-width: 52rem;
+  }
+  /* PDF-Formular: ruhige Fläche in Grund 2 */
+  .cl-pdf {
+    margin-top: clamp(2.5rem, 6vh, 4rem);
+    padding: clamp(1.25rem, 3.2vw, 2.25rem);
+    border-radius: 20px;
+    background: var(--color-paper-2);
+  }
+  .cl-pdf-h {
+    font-size: clamp(1.375rem, 2.4vw, 1.875rem);
+    line-height: 1.15;
+    color: var(--color-ink);
+  }
+  .cl-pdf-t {
+    margin: 0.6rem 0 1.25rem;
+    color: var(--color-ink-2);
+    max-width: 36em;
+  }
+  .cl-prose {
+    margin-top: 2.5rem;
+  }
+  .cl-tip {
+    font-size: 0.9375rem;
+    color: var(--color-ink-3);
+  }
+
+  /* Wochen */
+  .cl-w {
+    display: grid;
+    gap: 0.75rem 2.5rem;
+    margin-top: clamp(2.5rem, 6vh, 3.5rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-ink);
+  }
+  .cl-n {
+    font-stretch: 125%;
+    font-weight: 470;
+    letter-spacing: -0.035em;
+    line-height: 0.9;
+    font-size: clamp(3rem, 6vw, 4.75rem);
+    color: var(--color-ink);
+    white-space: nowrap;
+    transition: color 0.4s var(--ease);
+  }
+  .cl-w8 .cl-n {
+    color: var(--color-clay);
+  }
+  .cl-done .cl-n {
+    color: var(--color-moss);
+  }
+  .cl-h {
+    font-size: clamp(1.4rem, 2.4vw, 1.875rem);
+    line-height: 1.15;
+    color: var(--color-ink);
+  }
+  .cl-sub {
+    margin-top: 0.6rem;
+    color: var(--color-ink-3);
+    font-size: 0.975rem;
+  }
+  .cl-list {
+    list-style: none;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-line);
+  }
+  .cl-list li {
+    border-bottom: 1px solid var(--color-line);
+  }
+  .cl-list label {
+    display: flex;
+    gap: 0.9rem;
+    padding: 0.9rem 0;
+    color: var(--color-ink-2);
+    line-height: 1.55;
+    cursor: pointer;
+  }
+  .cl-list label > span {
+    transition: color 0.3s;
+  }
+  .cl-list label:has(.cl-cb:checked) > span {
+    color: var(--color-ink-3);
+  }
+  .cl-cb {
+    appearance: none;
+    -webkit-appearance: none;
+    flex: none;
+    display: grid;
+    place-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0.15rem 0 0;
+    border: 1.5px solid var(--color-ink-3);
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    transition: background-color 0.25s var(--ease), border-color 0.25s var(--ease);
+  }
+  .cl-cb::after {
+    content: "";
+    width: 0.6rem;
+    height: 0.32rem;
+    margin-top: -0.15rem;
+    border-left: 2px solid var(--color-paper);
+    border-bottom: 2px solid var(--color-paper);
+    transform: rotate(-45deg) scale(0);
+    transition: transform 0.3s var(--ease);
+  }
+  .cl-cb:checked {
+    background: var(--color-moss);
+    border-color: var(--color-moss);
+  }
+  .cl-cb:checked::after {
+    transform: rotate(-45deg) scale(1);
+  }
+  .cl-count {
+    min-height: 1.4rem;
+    margin-top: 0.6rem;
+    font-size: 0.875rem;
+    color: var(--color-moss);
+  }
+  .cl-small {
+    font-size: 0.9375rem;
+    color: var(--color-ink-3);
+  }
+  .cl-more {
+    margin-top: 2.5rem;
+    font-size: 0.9375rem;
+  }
+  @media (min-width: 900px) {
+    .cl-main {
+      max-width: none;
+    }
+    .cl-pdf, .cl-prose, .cl-more, .cl-main > :global(section#quellen) {
+      max-width: 52rem;
+      margin-left: calc(9rem + 2.5rem);
+    }
+    .cl-w {
+      grid-template-columns: 9rem minmax(0, 52rem);
+    }
+    .cl-n {
+      position: sticky;
+      top: 6rem;
+      align-self: start;
+    }
+  }
+  @media (max-width: 640px) {
+    .cl-bar {
+      grid-template-columns: repeat(9, minmax(0, 1fr));
+    }
+    .cl-bar-8 {
+      grid-column: 1 / -1;
+      margin-top: 0.5rem;
+    }
+  }
+  /* Druck und PDF: kein Raster, Kästchen sichtbar, Abschnitte nicht zerreißen */
+  @media print {
+    .cl-w {
+      display: block;
+      margin-top: 1.25rem;
+      padding-top: 0.75rem;
+      break-inside: avoid;
+    }
+    .cl-n {
+      display: none;
+    }
+    .cl-h {
+      font-size: 1.2rem;
+    }
+    .cl-list label {
+      padding: 0.45rem 0;
+      font-size: 0.95rem;
+    }
+    .cl-cb {
+      border-color: #6b6b6b;
+    }
+    .cl-pdf, .cl-prose, .cl-more {
+      margin-left: 0 !important;
+    }
+    .cl-main > :global(section#quellen) {
+      margin-left: 0 !important;
+    }
+  }
+</style>

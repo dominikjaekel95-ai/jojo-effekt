@@ -1,11 +1,13 @@
 ---
+/** Impressum (§ 5 DDG). noindex. Gestaltung „Kalk“ seit 06.10.2026, Text unverändert. */
 import Base from '../layouts/Base.astro';
+import SeitenKopf from '../components/SeitenKopf.astro';
 import { site } from '../data/site';
 ---
 <Base title="Impressum" description="Anbieterkennzeichnung nach § 5 DDG für Nach der Spritze." path="/impressum/" noindex>
-  <section class="container-narrow py-14">
-    <h1 class="h1 !text-4xl">Impressum</h1>
-    <div class="prose-site mt-6">
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: 'Impressum' }]} title="Impressum" size="m" doc={false} />
+  <div class="container-wide k-end">
+    <div class="prose-site imp">
       <h2>Angaben gemäß § 5 DDG</h2>
       <p>
         {site.owner.name}<br />
@@ -45,5 +47,12 @@ import { site } from '../data/site';
         teilzunehmen.
       </p>
     </div>
-  </section>
+  </div>
 </Base>
+
+<style>
+  .imp {
+    max-width: 44rem;
+    margin-top: 1rem;
+  }
+</style>

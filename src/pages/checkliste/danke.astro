@@ -1,25 +1,102 @@
 ---
-/** Ziel der Tally-Weiterleitung nach dem Anfordern der Checkliste. noindex, nicht in der Sitemap. */
+/**
+ * Ziel der Weiterleitung aus /api/anmeldung/ (quelle=checkliste, seit 06.10.2026 eigenes Formular statt Tally).
+ * noindex, nicht in der Sitemap. Das PDF steht sofort zum Download bereit; die Bestätigungs-Mail kommt von MailerLite.
+ * ?fehler=eingabe|technik blendet den passenden Text ein (bei „technik“ bleibt das PDF erreichbar).
+ */
 import Base from '../../layouts/Base.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
+import Pfeil from '../../components/Pfeil.astro';
 import { site } from '../../data/site';
+const weiter = [
+  { href: '/wissen/krafttraining-nach-abnehmspritze/', label: 'Der 30-Minuten-Plan fürs Krafttraining' },
+  { href: '/wissen/protein-abnehmspritze/', label: 'Wie viel Protein und wann' },
+  { href: '/glossar/absetzkurve/', label: 'Die Absetzkurve im Glossar' },
+  { href: '/marktradar/', label: 'Was sich im Markt gerade ändert' },
+];
 ---
 <Base title="Deine Checkliste" description="Die Checkliste für die ersten 8 Wochen nach der letzten Dosis als PDF." path="/checkliste/danke/" noindex>
-  <section class="container-narrow py-20 text-center">
-    <p class="eyebrow">Danke</p>
-    <h1 class="h1 mt-3">Hier ist deine Checkliste.</h1>
-    <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">Die ersten 8 Wochen nach der letzten Dosis, zum Ausdrucken und Abhaken.</p>
-    <p class="mt-8"><a href="/downloads/checkliste-8-wochen.pdf" download class="btn-primary plausible-event-name=Checkliste+Download">PDF herunterladen</a></p>
-    <p class="mt-4 text-sm text-ink-3">Falls der Download nicht startet: <a href="/checkliste/" class="underline">die Checkliste als Seite</a> lässt sich auch drucken.</p>
-    <div class="mx-auto mt-10 max-w-xl rounded-xl2 border border-line bg-white p-6 text-left text-sm text-ink-2">
-      <p class="font-semibold text-ink">Was dich außerdem weiterbringt</p>
-      <ul class="mt-2 space-y-1">
-        <li><a href="/wissen/krafttraining-nach-abnehmspritze/" class="text-moss underline underline-offset-4">Der 30-Minuten-Plan fürs Krafttraining</a></li>
-        <li><a href="/wissen/protein-abnehmspritze/" class="text-moss underline underline-offset-4">Wie viel Protein und wann</a></li>
-        <li><a href="/glossar/absetzkurve/" class="text-moss underline underline-offset-4">Die Absetzkurve im Glossar</a></li>
-        <li><a href="/marktradar/" class="text-moss underline underline-offset-4">Was sich im Markt gerade ändert</a></li>
-      </ul>
-      <p class="mt-4">Deine E-Mail-Adresse nutzen wir für die Checkliste. {site.newsletter.provider ? `Wenn du den Newsletter angekreuzt hast, kommt er ${site.newsletter.cadence}; vorher bestätigst du die Anmeldung per Link in einer Mail.` : 'Wenn du den Newsletter angekreuzt hast, startet er, sobald der Versand eingerichtet ist; vorher kommt eine Bestätigungs-Mail mit Link.'} Abmelden geht in jeder Mail. Keine Weitergabe.</p>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { href: '/checkliste/', label: 'Checkliste' }, { label: 'Danke' }]} meta="Danke" title="Hier ist deine Checkliste." doc={false}>
+    <p>Die ersten 8 Wochen nach der letzten Dosis, zum Ausdrucken und Abhaken.</p>
+  </SeitenKopf>
+
+  <div class="container-wide k-end">
+    <div class="cd">
+      <div id="cd-eingabe" class="cd-msg" hidden>
+        <p class="cd-msg-h">Das hat nicht geklappt: Bitte E-Mail-Adresse und Kästchen prüfen.</p>
+        <p>Für die Anmeldung brauchen wir eine gültige E-Mail-Adresse und dein Häkchen bei der Einwilligung. <a href="/checkliste/#pdf" class="k-a">Noch einmal versuchen</a>. Das PDF kannst du trotzdem gleich hier herunterladen.</p>
+      </div>
+      <div id="cd-technik" class="cd-msg" hidden>
+        <p class="cd-msg-h">Die Anmeldung ist technisch nicht durchgegangen.</p>
+        <p>Das PDF bekommst du trotzdem hier. Wenn du über neue Fassungen informiert werden willst, schreib uns kurz an <a href={`mailto:${site.owner.email}?subject=Checkliste`} class="k-a">{site.owner.email}</a>, dann tragen wir dich persönlich ein.</p>
+      </div>
+
+      <div class="cd-dl" data-rv>
+        <a href="/downloads/checkliste-8-wochen.pdf" download class="btn-primary plausible-event-name=Checkliste+Download">PDF herunterladen</a>
+        <p class="k-note">Falls der Download nicht startet: <a href="/checkliste/">die Checkliste als Seite</a> lässt sich auch drucken.</p>
+      </div>
+
+      <div class="cd-block" id="cd-ok" data-rv>
+        <h2 class="k-h3">Was jetzt passiert</h2>
+        <p>Wir haben dir über unseren Versanddienst MailerLite eine Mail mit einem Bestätigungslink geschickt. Nach dem Klick sagen wir dir Bescheid, wenn es eine wesentlich überarbeitete Fassung der Checkliste gibt. {site.newsletter.provider ? `Wenn du den Newsletter angekreuzt hast, kommt er ${site.newsletter.cadence}.` : 'Wenn du den Newsletter angekreuzt hast, startet er, sobald der Versand eingerichtet ist.'} Abmelden geht in jeder Mail. Keine Weitergabe.</p>
+      </div>
+
+      <div class="cd-block" data-rv>
+        <h2 class="k-h3">Was dich außerdem weiterbringt</h2>
+        <ul class="k-rows">
+          {weiter.map((w) => (<li><a href={w.href} class="k-row"><span class="k-row-t">{w.label}</span><Pfeil /></a></li>))}
+        </ul>
+      </div>
+
+      <p class="k-doc">{site.doctorSentence}</p>
     </div>
-    <p class="mt-6 text-sm font-medium text-ink">{site.doctorSentence}</p>
-  </section>
+  </div>
+
+  <script is:inline>
+    (function () {
+      var f = new URLSearchParams(location.search).get('fehler');
+      if (f !== 'eingabe' && f !== 'technik') return;
+      document.getElementById('cd-' + f).hidden = false;
+      document.getElementById('cd-ok').hidden = true;
+    })();
+  </script>
 </Base>
+
+<style>
+  .cd {
+    max-width: 46rem;
+  }
+  .cd-msg {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    background: var(--color-paper-2);
+    color: var(--color-ink-2);
+  }
+  .cd-msg-h {
+    font-weight: 560;
+    color: var(--color-ink);
+    margin-bottom: 0.4rem;
+  }
+  .cd-dl {
+    margin-top: 2.25rem;
+  }
+  .cd-block {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-ink);
+    color: var(--color-ink-2);
+  }
+  .cd-block > p {
+    margin-top: 0.6rem;
+  }
+  .cd-block .k-rows {
+    margin-top: 1rem;
+  }
+  .cd-block .k-row-t {
+    font-size: 1.125rem;
+  }
+  .cd .k-doc {
+    margin-top: 3rem;
+  }
+</style>

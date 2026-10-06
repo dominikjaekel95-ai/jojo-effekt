@@ -4,13 +4,20 @@
  * unter public/grafiken/ und werden mit `npm run grafiken` aus scripts/grafiken.mjs erzeugt; das Register steht in
  * src/data/grafiken.ts. Jede Grafik ist frei verwendbar mit Quellenangabe und Link (CC BY 4.0), damit sie zitiert und
  * verlinkt werden kann.
+ *
+ * Einstiegsseite: oben eine Galerie (Kontaktbogen), die sich beim Scrollen gestaffelt aufbaut, mit Filter nach Thema;
+ * darunter jede Grafik ausführlich. Das Thema ergibt sich aus den Artikeln, in denen die Grafik eingebunden ist
+ * (`used` → category des Artikels → Thema aus themen.json); Preisgrafiken laufen unter „Preise“.
  */
 import Base from '../../layouts/Base.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
 import GrafikDaten from '../../components/GrafikDaten.astro';
+import { getCollection } from 'astro:content';
 import { site } from '../../data/site';
 import { grafiken, hauptgrafiken, varianten } from '../../data/grafiken';
 import { getSources } from '../../data/sources';
 import { preise } from '../../data/markt';
+import { themen } from '../../data/themen';
 
 const title = 'Grafiken zur Abnehmspritze: Studien als Diagramm, zitierfähig';
 const description =
@@ -66,82 +73,393 @@ const jsonLd = [
 
 const einbetten = (g: (typeof grafiken)[number]) =>
   `<a href="${url}#${g.id}"><img src="${site.url}/grafiken/${g.id}.png" alt="${g.alt.replace(/"/g, '&quot;')}" width="1200" height="675"></a>\n<p>Grafik: <a href="${url}#${g.id}">nachderspritze.de</a>, CC BY 4.0</p>`;
+
+// Themen je Grafik aus den Artikeln, in denen sie steht
+const artikel = await getCollection('wissen');
+const kategorieVon = new Map(artikel.map((a) => [a.id, a.data.category] as const));
+const PREISE = { slug: 'preise', name: 'Preise' };
+const themenVon = (g: (typeof grafiken)[number]) => {
+  const slugs = new Set<string>();
+  for (const u of g.used) {
+    const m = u.href.match(/^\/wissen\/([a-z0-9-]+)\/$/);
+    const kat = m ? kategorieVon.get(m[1]) : undefined;
+    const t = kat ? themen.find((x) => x.category === kat) : undefined;
+    if (t) slugs.add(t.slug);
+    if (/marktradar|kosten/.test(u.href)) slugs.add(PREISE.slug);
+  }
+  return [...slugs];
+};
+const liste = hauptgrafiken.map((g, i) => ({ g, i, themen: themenVon(g), nr: String(i + 1).padStart(2, '0') }));
+const filter = [...themen.map((t) => ({ slug: t.slug, name: t.name })), PREISE]
+  .map((f) => ({ ...f, n: liste.filter((x) => x.themen.includes(f.slug)).length }))
+  .filter((f) => f.n > 0);
 ---
 <Base title={title} description={description} path={path} jsonLd={jsonLd} ogImage="/grafiken/absetzkurve-step-1.png">
-  <section class="container-wide py-12">
-    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › Grafiken</nav>
-    <p class="eyebrow mt-6">Grafiken · {hauptgrafiken.length} Diagramme</p>
-    <h1 class="h1 mt-3">Studien zur Abnehmspritze als Grafik, zitierfähig</h1>
-    <p class="mt-4 max-w-3xl text-lg text-ink-2">
-      Jede Grafik zeigt Zahlen aus einer Originalstudie, einer Fachinformation oder unserer monatlichen Preiserhebung. Titel, Quelle und
-      Domain stehen im Bild; der Alt-Text nennt jede Zahl. Alle Grafiken sind frei verwendbar, auch in Artikeln, Vorträgen und
-      Unterricht, solange Quelle und Link genannt werden.
-    </p>
-    <div id="nutzung" class="mt-6 max-w-3xl rounded-xl2 border border-line bg-white p-5 scroll-mt-24">
-      <h2 class="text-base font-semibold text-ink">Nutzung und Zitierweise</h2>
-      <p class="mt-2 text-sm text-ink-2">
-        Lizenz: <a href={lizenz} rel="license noopener" target="_blank" class="font-semibold text-moss underline underline-offset-4">CC BY 4.0</a>. Nennung als „Grafik: nachderspritze.de“ mit Link auf diese Seite oder den Artikel, aus dem die Grafik stammt. Die Studienquelle steht unter jeder Grafik und sollte mitgenannt werden. Veränderungen bitte kennzeichnen. Unter jeder Grafik steht ein fertiger Einbettungscode.
-      </p>
-      <p class="mt-2 text-sm text-ink-3">{site.doctorSentence}</p>
-    </div>
-    <ul class="mt-6 flex flex-wrap gap-2" aria-label="Sprungmarken">
-      {hauptgrafiken.map((g) => (<li><a href={`#${g.id}`} class="inline-block rounded-lg border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink no-underline hover:border-moss hover:text-moss">{g.title}</a></li>))}
-    </ul>
-  </section>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: 'Grafiken' }]} meta={`Grafiken, ${hauptgrafiken.length} Diagramme`} title="Studien zur Abnehmspritze als Grafik, zitierfähig" doc={false}>
+    <p>Jede Grafik zeigt Zahlen aus einer Originalstudie, einer Fachinformation oder unserer monatlichen Preiserhebung. Titel, Quelle und Domain stehen im Bild; der Alt-Text nennt jede Zahl. Alle Grafiken sind frei verwendbar, auch in Artikeln, Vorträgen und Unterricht, solange Quelle und Link genannt werden.</p>
+  </SeitenKopf>
 
-  <section class="container-wide pb-16">
-    <div class="space-y-14">
-      {hauptgrafiken.map((g, i) => {
+  <div class="container-wide k-end">
+    <section id="nutzung" class="gr-use scroll-mt-24" aria-labelledby="nutzung-h">
+      <h2 id="nutzung-h" class="k-h3">Nutzung und Zitierweise</h2>
+      <div>
+        <p>Lizenz: <a href={lizenz} rel="license noopener" target="_blank" class="k-a">CC BY 4.0</a>. Nennung als „Grafik: nachderspritze.de“ mit Link auf diese Seite oder den Artikel, aus dem die Grafik stammt. Die Studienquelle steht unter jeder Grafik und sollte mitgenannt werden. Veränderungen bitte kennzeichnen. Unter jeder Grafik steht ein fertiger Einbettungscode.</p>
+        <p class="gr-doc">{site.doctorSentence}</p>
+      </div>
+    </section>
+
+    <!-- Galerie: Kontaktbogen mit Filter -->
+    <section class="k-sec-s" aria-labelledby="galerie-h">
+      <div class="gr-gh">
+        <h2 id="galerie-h" class="k-h2">Alle Grafiken</h2>
+        <div class="k-filter gr-filter" role="group" aria-label="Grafiken nach Thema filtern" data-filter hidden>
+          <button type="button" aria-pressed="true" data-thema="alle">Alle <span class="n">{liste.length}</span></button>
+          {filter.map((f) => (<button type="button" aria-pressed="false" data-thema={f.slug}>{f.name} <span class="n">{f.n}</span></button>))}
+        </div>
+      </div>
+      <p class="sr-only" aria-live="polite" data-filter-status></p>
+      <ol class="gal">
+        {liste.map(({ g, i, themen: t, nr }) => (
+          <li data-themen={t.join(' ')} data-rv style={`--i:${i % 8}`}>
+            <a href={`#${g.id}`}>
+              <span class="gal-img"><img src={`/grafiken/${g.id}.svg`} alt="" width="1200" height="675" loading={i < 4 ? 'eager' : 'lazy'} decoding="async" /></span>
+              <span class="gal-n">{nr}</span>
+              <span class="gal-t">{g.title}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <!-- Jede Grafik ausführlich -->
+    <div class="gr-list">
+      {liste.map(({ g, i, themen: t, nr }) => {
         const quellen = getSources(g.sources);
         const alts = varianten(g.id);
         return (
-          <article id={g.id} class="scroll-mt-24" aria-labelledby={`${g.id}-h`}>
-            <p class="eyebrow">Grafik {i + 1}{g.monatlich ? ` · Stand ${stand}` : ''}</p>
-            <h2 id={`${g.id}-h`} class="h2 mt-2">{g.title}</h2>
-            <p class="mt-2 max-w-3xl text-ink-2">{g.subtitle}</p>
-            <figure class="mt-5">
-              <a href={`/grafiken/${g.id}.png`} class="block"><img src={`/grafiken/${g.id}.png`} alt={g.alt} width="1200" height="675" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" class="w-full rounded-xl2 border border-line bg-white" /></a>
-              <figcaption class="mt-2 text-sm text-ink-3">
-                Quellen: {quellen.map((q, j) => (<span>{j > 0 ? '; ' : ''}<a href={q.url} rel="noopener" target="_blank" class="underline underline-offset-4 hover:text-moss">{q.short}</a></span>))}. Grafik: Nach der Spritze, CC BY 4.0.
+          <article id={g.id} class="gr scroll-mt-24" data-themen={t.join(' ')} aria-labelledby={`${g.id}-h`}>
+            <div class="gr-text" data-rv>
+              <p class="gr-n" aria-hidden="true">{nr}</p>
+              <p class="gr-meta">Grafik {i + 1}{g.monatlich ? `, Stand ${stand}` : ''}</p>
+              <h2 id={`${g.id}-h`} class="gr-h">{g.title}</h2>
+              <p class="gr-sub">{g.subtitle}</p>
+              <dl class="gr-dl">
+                <div><dt>Download</dt><dd><a href={`/grafiken/${g.id}.svg`} download class="k-q">SVG (verlustfrei, 1200 × 675)</a> · <a href={`/grafiken/${g.id}.png`} download class="k-q">PNG (1800 × 1013)</a></dd></div>
+                {g.used.length > 0 && (<div><dt>Im Einsatz</dt><dd>{g.used.map((u, j) => (<span>{j > 0 ? ' · ' : ''}<a href={u.href} class="k-q">{u.label}</a></span>))}</dd></div>)}
+                {alts.length > 0 && (<div><dt>Varianten mit denselben Daten</dt><dd>{alts.map((a, j) => (<span>{j > 0 ? ' · ' : ''}<a href={`/grafiken/${a.id}.png`} class="k-q">{a.title}</a></span>))}</dd></div>)}
+              </dl>
+              <details class="gr-embed">
+                <summary>Einbetten (HTML mit Quellenlink)</summary>
+                <pre><code>{einbetten(g)}</code></pre>
+                <button type="button" class="btn-secondary gr-copy plausible-event-name=Grafik+einbinden" data-code-kopieren>HTML kopieren</button>
+              </details>
+            </div>
+            <figure class="gr-fig" data-rv style="--i:1">
+              <a href={`/grafiken/${g.id}.png`} class="gr-imgl"><img src={`/grafiken/${g.id}.png`} alt={g.alt} width="1200" height="675" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" /></a>
+              <figcaption>
+                Quellen: {quellen.map((q, j) => (<span>{j > 0 ? '; ' : ''}<a href={q.url} rel="noopener" target="_blank">{q.short}</a></span>))}. Grafik: Nach der Spritze, CC BY 4.0.
               </figcaption>
               <GrafikDaten id={g.id} class="mt-3" />
             </figure>
-            <div class="mt-4 grid gap-4 md:grid-cols-[1fr_1fr]">
-              <div class="rounded-xl2 border border-line bg-white p-4 text-sm">
-                <p class="font-semibold text-ink">Download</p>
-                <p class="mt-1 text-ink-2"><a href={`/grafiken/${g.id}.svg`} download class="font-semibold text-moss underline underline-offset-4">SVG (verlustfrei, 1200 × 675)</a> · <a href={`/grafiken/${g.id}.png`} download class="font-semibold text-moss underline underline-offset-4">PNG (1800 × 1013)</a></p>
-                {g.used.length > 0 && (<p class="mt-3 text-ink-2">Im Einsatz: {g.used.map((u, j) => (<span>{j > 0 ? ' · ' : ''}<a href={u.href} class="underline underline-offset-4 hover:text-moss">{u.label}</a></span>))}</p>)}
-                {alts.length > 0 && (<p class="mt-3 text-ink-2">Varianten mit denselben Daten: {alts.map((a, j) => (<span>{j > 0 ? ' · ' : ''}<a href={`/grafiken/${a.id}.png`} class="underline underline-offset-4 hover:text-moss">{a.title}</a></span>))}</p>)}
-              </div>
-              <details class="rounded-xl2 border border-line bg-white p-4 text-sm">
-                <summary class="cursor-pointer font-semibold text-ink">Einbetten (HTML mit Quellenlink)</summary>
-                <pre class="mt-3 overflow-x-auto whitespace-pre-wrap break-all rounded-lg bg-paper p-3 text-xs text-ink-2"><code>{einbetten(g)}</code></pre>
-                <button type="button" class="btn-secondary mt-3 text-sm plausible-event-name=Grafik+einbinden" data-code-kopieren>HTML kopieren</button>
-              </details>
-            </div>
           </article>
         );
       })}
     </div>
 
-    <div class="mt-14 max-w-3xl rounded-xl2 border border-line bg-paper p-5 text-sm text-ink-2">
+    <div class="gr-end" data-rv>
       <p>
         Die Grafiken entstehen aus den Zahlen im Quellenregister der Seite und werden neu erzeugt, wenn sich eine Zahl ändert; die
-        Preisgrafik mit jeder monatlichen Erhebung im <a href="/marktradar/#preise" class="font-semibold text-moss underline underline-offset-4">Marktradar</a>. Fehler oder Wünsche: <a href={`mailto:${site.owner.email}`} class="font-semibold text-moss underline underline-offset-4">{site.owner.email}</a>. Die Artikel dazu stehen im <a href="/wissen/" class="font-semibold text-moss underline underline-offset-4">Wissensbereich</a>, der Hauptartikel unter <a href="/wissen/abnehmspritze-absetzen/" class="font-semibold text-moss underline underline-offset-4">Abnehmspritze absetzen</a>.
+        Preisgrafik mit jeder monatlichen Erhebung im <a href="/marktradar/#preise" class="k-a">Marktradar</a>. Fehler oder Wünsche: <a href={`mailto:${site.owner.email}`} class="k-a">{site.owner.email}</a>. Die Artikel dazu stehen im <a href="/wissen/" class="k-a">Wissensbereich</a>, der Hauptartikel unter <a href="/wissen/abnehmspritze-absetzen/" class="k-a">Abnehmspritze absetzen</a>.
       </p>
     </div>
-  </section>
-
-  <script is:inline>
-    document.querySelectorAll('[data-code-kopieren]').forEach((knopf) => {
-      knopf.addEventListener('click', () => {
-        const code = knopf.parentElement.querySelector('code');
-        if (!code || !navigator.clipboard) return;
-        navigator.clipboard.writeText(code.textContent).then(
-          () => { knopf.textContent = 'Kopiert, Quellenlink bitte stehen lassen'; },
-          () => { knopf.textContent = 'Kopieren nicht möglich, bitte markieren'; }
-        );
-      });
-    });
-  </script>
+  </div>
 </Base>
+
+<script>
+  import { beobachte } from '../../lib/bewegung';
+  // Einbettungscode kopieren
+  document.querySelectorAll<HTMLButtonElement>('[data-code-kopieren]').forEach((knopf) => {
+    knopf.addEventListener('click', () => {
+      const code = knopf.parentElement?.querySelector('code');
+      if (!code || !navigator.clipboard) return;
+      navigator.clipboard.writeText(code.textContent ?? '').then(
+        () => { knopf.textContent = 'Kopiert, Quellenlink bitte stehen lassen'; },
+        () => { knopf.textContent = 'Kopieren nicht möglich, bitte markieren'; },
+      );
+    });
+  });
+  // Filter nach Thema: Galerie und ausführliche Liste
+  const box = document.querySelector<HTMLElement>('[data-filter]');
+  const status = document.querySelector<HTMLElement>('[data-filter-status]');
+  if (box) {
+    box.hidden = false;
+    const knoepfe = Array.from(box.querySelectorAll<HTMLButtonElement>('button'));
+    const teile = Array.from(document.querySelectorAll<HTMLElement>('.gal > li, .gr'));
+    knoepfe.forEach((b) =>
+      b.addEventListener('click', () => {
+        const thema = b.dataset.thema ?? 'alle';
+        knoepfe.forEach((k) => k.setAttribute('aria-pressed', String(k === b)));
+        let n = 0;
+        let stufe = 0;
+        teile.forEach((el) => {
+          const an = thema === 'alle' || (el.dataset.themen ?? '').split(' ').includes(thema);
+          if (an && el.matches('.gal > li')) {
+            n++;
+            el.style.setProperty('--i', String(stufe++ % 8));
+          }
+          if (an && el.hidden) {
+            el.hidden = false;
+            el.classList.remove('in');
+            el.querySelectorAll('[data-rv]').forEach((r) => r.classList.remove('in'));
+          }
+          if (!an) el.hidden = true;
+        });
+        if (status) status.textContent = `${n} ${n === 1 ? 'Grafik' : 'Grafiken'}`;
+        requestAnimationFrame(() => beobachte());
+      }),
+    );
+  }
+</script>
+
+<style>
+  .gr-use {
+    display: grid;
+    gap: 0.75rem 3rem;
+    margin-top: clamp(2.5rem, 6vh, 3.5rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-ink);
+    color: var(--color-ink-2);
+    font-size: 0.975rem;
+    line-height: 1.6;
+  }
+  .gr-use > div {
+    max-width: 46em;
+  }
+  .gr-doc {
+    margin-top: 0.75rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-ink);
+  }
+  @media (min-width: 900px) {
+    .gr-use {
+      grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+    }
+  }
+
+  /* ---------- Galerie ---------- */
+  .gr-gh {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.5rem 2rem;
+  }
+  .gr-filter {
+    margin-top: 0;
+  }
+  .gal {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem 1rem;
+  }
+  .gal a {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.6rem 0.6rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  .gal-img {
+    grid-column: 1 / -1;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--color-line);
+    background: #fff;
+    aspect-ratio: 16 / 9;
+  }
+  .gal-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s var(--ease);
+  }
+  .gal a:hover .gal-img img {
+    transform: scale(1.03);
+  }
+  .gal-n {
+    font-stretch: 125%;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 1.35;
+    color: var(--color-ink-3);
+  }
+  .gal-t {
+    font-size: 0.8125rem;
+    line-height: 1.35;
+    font-weight: 500;
+    color: var(--color-ink);
+  }
+  .gal a:hover .gal-t {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  @media (min-width: 640px) {
+    .gal {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2.25rem 1.5rem;
+    }
+  }
+  @media (min-width: 1000px) {
+    .gal {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  :global(html.js:not(.rm)) .gal > li {
+    transform: translateY(22px) scale(0.98);
+  }
+  :global(html.js:not(.rm)) .gal > li.in {
+    transform: none;
+  }
+
+  /* ---------- Ausführliche Liste ---------- */
+  .gr-list {
+    margin-top: clamp(4rem, 10vh, 7rem);
+  }
+  .gr {
+    display: grid;
+    gap: 1.75rem 3.5rem;
+    padding: clamp(2.5rem, 6vh, 4rem) 0;
+    border-top: 1px solid var(--color-ink);
+  }
+  .gr-n {
+    font-stretch: 125%;
+    font-weight: 470;
+    letter-spacing: -0.035em;
+    line-height: 0.9;
+    font-size: clamp(2.75rem, 5vw, 4.25rem);
+    color: var(--color-ink);
+  }
+  .gr-meta {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
+  .gr-h {
+    margin-top: 0.4rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.125rem);
+    line-height: 1.1;
+    color: var(--color-ink);
+  }
+  .gr-sub {
+    margin-top: 0.85rem;
+    color: var(--color-ink-2);
+    line-height: 1.55;
+    max-width: 34em;
+  }
+  .gr-dl {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--color-line);
+    font-size: 0.875rem;
+  }
+  .gr-dl > div {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .gr-dl dt {
+    color: var(--color-ink-3);
+  }
+  .gr-dl dd {
+    margin-top: 0.2rem;
+    color: var(--color-ink-2);
+  }
+  .gr-embed {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+  }
+  .gr-embed summary {
+    cursor: pointer;
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-underline-offset: 4px;
+  }
+  .gr-embed pre {
+    margin-top: 0.75rem;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    background: var(--color-paper-2);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--color-ink-2);
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-x: auto;
+  }
+  .gr-copy {
+    margin-top: 0.75rem;
+    min-height: 2.5rem;
+    padding: 0.4rem 1.1rem;
+    font-size: 0.875rem;
+  }
+  .gr-fig img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid var(--color-line);
+    background: #fff;
+  }
+  .gr-fig figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--color-ink-3);
+  }
+  .gr-fig figcaption a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .gr-fig :global(.grafik-daten) {
+    font-size: 0.875rem;
+  }
+  /* Handy: Bild direkt nach Titel und Untertitel, Download und Einbetten danach */
+  @media (max-width: 899px) {
+    .gr {
+      gap: 0;
+    }
+    .gr-text {
+      display: contents;
+    }
+    .gr-fig {
+      order: 1;
+      margin-top: 1.5rem;
+    }
+    .gr-dl, .gr-embed {
+      order: 2;
+    }
+  }
+  @media (min-width: 900px) {
+    .gr {
+      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+      align-items: start;
+    }
+    .gr-text {
+      position: sticky;
+      top: 6rem;
+    }
+  }
+  .gr-end {
+    max-width: 48em;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-ink);
+    color: var(--color-ink-2);
+    font-size: 0.975rem;
+  }
+</style>

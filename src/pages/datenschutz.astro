@@ -1,25 +1,51 @@
 ---
+/**
+ * Datenschutzerklärung. noindex. Gestaltung „Kalk“ seit 06.10.2026: Inhaltsverzeichnis links (Desktop), Text rechts.
+ * Inhaltlich geändert am 06.10.2026 nur Abschnitt 4b (Checkliste über eigenes Formular und MailerLite statt Tally) und der
+ * erste Absatz von 4c (welche Formulare das Newsletter-Kästchen tragen).
+ */
 import Base from '../layouts/Base.astro';
+import SeitenKopf from '../components/SeitenKopf.astro';
 import { site } from '../data/site';
+const inhalt = [
+  { id: 'verantwortlicher', label: '1. Verantwortlicher' },
+  { id: 'kurz', label: '2. Das Wichtigste in Kürze' },
+  { id: 'hosting', label: '3. Hosting' },
+  { id: 'warteliste', label: '4. Warteliste' },
+  { id: 'erfahrungen', label: '4a. Erfahrungsberichte' },
+  ...(site.checklistForm.live ? [{ id: 'checkliste', label: '4b. Checkliste als PDF' }] : []),
+  { id: 'newsletter', label: '4c. Newsletter' },
+  { id: 'ernaehrungsplan', label: '4d. Ernährungsplan' },
+  { id: 'plausible', label: '5. Reichweitenmessung' },
+  { id: 'schriften', label: '6. Schriftarten' },
+  { id: 'email', label: '7. E-Mail-Kontakt' },
+  { id: 'links', label: '8. Externe Links' },
+  { id: 'amazon', label: '9. Amazon-Partnerprogramm' },
+  { id: 'rechte', label: '10. Deine Rechte' },
+  { id: 'aenderungen', label: '11. Änderungen' },
+];
 ---
 <Base title="Datenschutzerklärung" description="Welche Daten Nach der Spritze verarbeitet: Hosting bei Vercel, Warteliste und Newsletter über MailerLite, Formulare bei Tally, Statistik mit Plausible, ohne Cookies." path="/datenschutz/" noindex>
-  <section class="container-narrow py-14">
-    <h1 class="h1 !text-4xl">Datenschutzerklärung</h1>
-    <p class="mt-3 text-sm text-ink-3">Stand: 6. Oktober 2026</p>
-    <div class="prose-site mt-6">
-      <h2>1. Verantwortlicher</h2>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: 'Datenschutz' }]} meta="Stand: 6. Oktober 2026" title="Datenschutzerklärung" size="m" doc={false} />
+  <div class="container-wide k-end legal">
+    <nav class="legal-toc" aria-label="Inhalt">
+      <p>Inhalt</p>
+      <ol>{inhalt.map((x) => (<li><a href={`#${x.id}`}>{x.label}</a></li>))}</ol>
+    </nav>
+    <div class="prose-site legal-body">
+      <h2 id="verantwortlicher">1. Verantwortlicher</h2>
       <p>
         {site.owner.name}, {site.owner.street}, {site.owner.zip} {site.owner.city}, E-Mail: <a href={`mailto:${site.email}`}>{site.email}</a> (siehe <a href="/impressum/">Impressum</a>).
       </p>
 
-      <h2>2. Das Wichtigste in Kürze</h2>
+      <h2 id="kurz">2. Das Wichtigste in Kürze</h2>
       <ul>
         <li>Diese Seite setzt <strong>keine Cookies</strong> und nutzt keine Tracking-Dienste mit Profilbildung. Deshalb gibt es kein Cookie-Banner.</li>
         <li>Wir verarbeiten deine E-Mail-Adresse nur, wenn du dich selbst auf die Warteliste setzt, uns einen Erfahrungsbericht schickst, die Checkliste oder den Ernährungsplan anforderst oder den Newsletter bestellst.</li>
         <li>Alle eingesetzten Dienstleister verarbeiten Daten in der EU oder unter EU-Standardvertragsklauseln.</li>
       </ul>
 
-      <h2>3. Hosting (Vercel)</h2>
+      <h2 id="hosting">3. Hosting (Vercel)</h2>
       <p>
         Die Seite wird bei Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA, gehostet; die Auslieferung erfolgt
         über Server in Frankfurt am Main. Beim Aufruf werden technisch notwendige Daten (IP-Adresse, Zeitpunkt, aufgerufene
@@ -29,12 +55,11 @@ import { site } from '../data/site';
         kurzer Zeit gelöscht.
       </p>
 
-      <h2>4. Warteliste für das 12-Wochen-Programm</h2>
+      <h2 id="warteliste">4. Warteliste für das 12-Wochen-Programm</h2>
       <p>
         Auf der Startseite kannst du dich mit deiner E-Mail-Adresse auf die Warteliste für das geplante 12-Wochen-Programm setzen.
         Unsere Website übermittelt deine E-Mail-Adresse, den Zeitpunkt, die Herkunft „Warteliste“ und, falls du das Kästchen
-        ankreuzt, dein Interesse an einem Starterpaket direkt an unseren Versanddienst {site.newsletter.provider?.name ?? 'für E-Mails'} (Abschnitt 4c). <strong>Double-Opt-in:</strong>
-        Du bekommst zuerst eine Bestätigungs-Mail; erst nach dem Klick auf den Link stehst du auf der
+        ankreuzt, dein Interesse an einem Starterpaket direkt an unseren Versanddienst {site.newsletter.provider?.name ?? 'für E-Mails'} (Abschnitt 4c). <strong>Double-Opt-in:</strong> Du bekommst zuerst eine Bestätigungs-Mail; erst nach dem Klick auf den Link stehst du auf der
         Liste.{site.waitlist.ownGroup ? ' Den Newsletter bekommst du nur, wenn du ihn im Formular zusätzlich ankreuzt.' : ' Mit derselben Einwilligung bestellst du auch den Newsletter (Abschnitt 4c); das Formular nennt beides ausdrücklich.'}
       </p>
       <p>
@@ -51,7 +76,7 @@ import { site } from '../data/site';
         Löschung jederzeit per E-Mail an {site.email}. Mit Tally besteht ein Auftragsverarbeitungsvertrag; Tally hostet in der EU.
       </p>
 
-      <h2>4a. Erfahrungsberichte (Tally)</h2>
+      <h2 id="erfahrungen">4a. Erfahrungsberichte (Tally)</h2>
       <p>
         Auf der Seite <a href="/erfahrungen/">Erfahrungen</a> kannst du uns freiwillig berichten, wie es dir nach dem Absetzen
         eines Medikaments ergangen ist. Das Formular wird ebenfalls von Tally bereitgestellt und eingebettet. Gespeichert
@@ -70,27 +95,34 @@ import { site } from '../data/site';
 
       {site.checklistForm.live && (
         <>
-          <h2>4b. Checkliste als PDF (Tally)</h2>
+          <h2 id="checkliste">4b. Checkliste als PDF</h2>
           <p>
-            Auf der Seite <a href="/checkliste/">Checkliste</a> kannst du die Checkliste als PDF anfordern. Das Formular wird von Tally
-            bereitgestellt und eingebettet; gespeichert werden deine E-Mail-Adresse, der Zeitpunkt und optional dein Kreuz beim
-            Newsletter (Abschnitt 4c). <strong>Zweck:</strong> Bereitstellung der Checkliste und, wenn wir sie wesentlich überarbeiten,
+            Auf der Seite <a href="/checkliste/">Checkliste</a> kannst du die Checkliste als PDF anfordern. Unsere Website übermittelt
+            deine E-Mail-Adresse, den Zeitpunkt, die Herkunft „Checkliste“ und, falls du das Kästchen ankreuzt, deine Einwilligung in den
+            Newsletter direkt an unseren Versanddienst {site.newsletter.provider?.name ?? 'für E-Mails'} (Abschnitt 4c); das PDF bekommst du
+            sofort auf der folgenden Seite. <strong>Double-Opt-in:</strong> Du bekommst zuerst eine Bestätigungs-Mail; erst nach dem Klick
+            auf den Link schreiben wir dir. <strong>Zweck:</strong> Bereitstellung der Checkliste und, wenn wir sie wesentlich überarbeiten,
             ein einmaliger Hinweis auf die neue Fassung. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Erfüllung deiner
             Anfrage); für den Hinweis auf eine neue Fassung Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, dir eine aktuelle
-            Fassung zu geben), Widerspruch jederzeit per E-Mail an {site.email}. <strong>Speicherdauer:</strong> bis zu zwölf Monate
-            nach der Anfrage, dann Löschung, sofern du nicht zusätzlich den Newsletter bestellt hast. Mit Tally besteht ein
-            Auftragsverarbeitungsvertrag; Tally hostet in der EU.
+            Fassung zu geben), Widerspruch jederzeit über den Abmeldelink oder per E-Mail an {site.email}. <strong>Speicherdauer:</strong> bis zu zwölf Monate nach der Anfrage, dann Löschung, sofern du nicht zusätzlich den Newsletter bestellt hast.
+          </p>
+          <p>
+            <strong>Frühere Anfragen (Tally):</strong> Bis Oktober 2026 lief die Anforderung über ein eingebettetes Formular von Tally BV
+            (Abschnitt 4). Gespeichert sind dort E-Mail-Adresse, Zeitpunkt und optional das Kreuz beim Newsletter. Für diese Einträge
+            gelten Zweck, Rechtsgrundlage und Speicherdauer wie oben. Mit Tally besteht ein Auftragsverarbeitungsvertrag; Tally hostet
+            in der EU.
           </p>
         </>
       )}
 
-      <h2>4c. Newsletter</h2>
+      <h2 id="newsletter">4c. Newsletter</h2>
       <p>
-        In den Tally-Formularen für Erfahrungsberichte und Checkliste (bis Oktober 2026 auch Vorbestellung) gibt es ein optionales
-        Kästchen „Newsletter“. Wenn du es ankreuzt, speichert Tally in unserem Auftrag deine E-Mail-Adresse, den Zeitpunkt und den
-        Wortlaut der Einwilligung. Außerdem gibt es im Kopf jeder Seite ein Newsletter-Formular und auf der Startseite das
-        Wartelisten-Formular (Abschnitt 4); dort eingetragene Adressen übermittelt unsere Website direkt an MailerLite, zusammen mit
-        dem Zeitpunkt und der Herkunft („Website“ bzw. „Warteliste“). Der
+        Im Tally-Formular für Erfahrungsberichte (bis Oktober 2026 auch in den Tally-Formularen für Vorbestellung und Checkliste) gibt
+        es ein optionales Kästchen „Newsletter“. Wenn du es ankreuzt, speichert Tally in unserem Auftrag deine E-Mail-Adresse, den
+        Zeitpunkt und den Wortlaut der Einwilligung. Außerdem gibt es im Kopf jeder Seite ein Newsletter-Formular, auf der Startseite
+        das Wartelisten-Formular (Abschnitt 4) und bei der Checkliste ein optionales Kästchen (Abschnitt 4b); dort eingetragene Adressen
+        übermittelt unsere Website direkt an MailerLite, zusammen mit dem Zeitpunkt und der Herkunft („Website“, „Warteliste“ bzw.
+        „Checkliste“). Der
         Newsletter erscheint {site.newsletter.cadence} und enthält neue Artikel, Studien und Entwicklungen zur Zeit nach der
         Abnehmspritze, gelegentlich auch Neuigkeiten zum Programm. <strong>Double-Opt-in:</strong> Vor der ersten Ausgabe bekommst du eine
         Bestätigungs-Mail mit einem Link; erst nach dem Klick bist du angemeldet. Zeitpunkt und IP-Adresse der Bestätigung werden
@@ -113,7 +145,7 @@ import { site } from '../data/site';
         </p>
       )}
 
-      <h2>4d. Ernährungsplan</h2>
+      <h2 id="ernaehrungsplan">4d. Ernährungsplan</h2>
       <p>
         Auf der Seite <a href="/ernaehrungsplan/">Ernährungsplan</a> wählst du Ernährungsform, Appetit und Gewichtsbereich
         und gibst deine E-Mail-Adresse an. Unsere Website ordnet deinen Antworten einen von 18 fertigen Plänen zu und übermittelt an
@@ -125,7 +157,7 @@ import { site } from '../data/site';
         Plannummer.
       </p>
 
-      <h2>5. Reichweitenmessung (Plausible Analytics)</h2>
+      <h2 id="plausible">5. Reichweitenmessung (Plausible Analytics)</h2>
       <p>
         Wir nutzen Plausible Analytics (Plausible Insights OÜ, Västriku tn 2, 50403 Tartu, Estland), gehostet in der EU.
         Plausible setzt keine Cookies und speichert keine personenbezogenen Daten. Die IP-Adresse wird nur flüchtig zur
@@ -135,23 +167,23 @@ import { site } from '../data/site';
         weil keine personenbezogenen Daten verarbeitet werden; Details unter <a href="https://plausible.io/data-policy" rel="noopener" target="_blank">plausible.io/data-policy</a>.
       </p>
 
-      <h2>6. Schriftarten</h2>
+      <h2 id="schriften">6. Schriftarten</h2>
       <p>Die verwendete Schriftart wird von unserem eigenen Server geladen. Es findet keine Verbindung zu Google Fonts oder anderen Anbietern statt.</p>
 
-      <h2>7. E-Mail-Kontakt</h2>
+      <h2 id="email">7. E-Mail-Kontakt</h2>
       <p>
         Wenn du uns per E-Mail schreibst, verarbeiten wir deine Angaben zur Beantwortung der Anfrage (Art. 6 Abs. 1 lit. b
         bzw. f DSGVO). Wir löschen die Korrespondenz, sobald die Anfrage erledigt ist und keine Aufbewahrungspflichten
         entgegenstehen.
       </p>
 
-      <h2>8. Externe Links</h2>
+      <h2 id="links">8. Externe Links</h2>
       <p>
         Die Seite verlinkt auf Studien und Fachquellen (z. B. JAMA, The Lancet, DGE, EUR-Lex). Beim Klick verlässt du unsere
         Seite; es gelten die Datenschutzbestimmungen des jeweiligen Anbieters.
       </p>
 
-      <h2>9. Amazon-Partnerprogramm</h2>
+      <h2 id="amazon">9. Amazon-Partnerprogramm</h2>
       <p>
         Diese Website nimmt am Partnerprogramm von Amazon EU S.à r.l. (38 avenue John F. Kennedy, L-1855 Luxemburg) teil.
         Links zu Amazon sind als „Werbung“ gekennzeichnet. Erst wenn du einen solchen Link anklickst, rufst du die
@@ -162,7 +194,7 @@ import { site } from '../data/site';
         bei Amazon: <a href="https://www.amazon.de/gp/help/customer/display.html?nodeId=201909010" rel="noopener" target="_blank">Datenschutzerklärung von Amazon.de</a>.
       </p>
 
-      <h2>10. Deine Rechte</h2>
+      <h2 id="rechte">10. Deine Rechte</h2>
       <p>
         Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der
         Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Eine erteilte Einwilligung kannst
@@ -170,8 +202,59 @@ import { site } from '../data/site';
         z. B. bei der Berliner Beauftragten für Datenschutz und Informationsfreiheit, Alt-Moabit 59–61, 10555 Berlin.
       </p>
 
-      <h2>11. Änderungen</h2>
+      <h2 id="aenderungen">11. Änderungen</h2>
       <p>Wir passen diese Erklärung an, wenn sich Dienste oder Rechtslage ändern. Es gilt die jeweils hier veröffentlichte Fassung.</p>
     </div>
-  </section>
+  </div>
 </Base>
+
+<style>
+  .legal {
+    display: grid;
+    gap: 2rem 4rem;
+    margin-top: 1rem;
+  }
+  .legal-toc {
+    display: none;
+  }
+  .legal-body {
+    max-width: 44rem;
+  }
+  .legal-body :global(h2) {
+    scroll-margin-top: 6rem;
+  }
+  @media (min-width: 1000px) {
+    .legal {
+      grid-template-columns: 15rem minmax(0, 44rem);
+    }
+    .legal-toc {
+      display: block;
+      position: sticky;
+      top: 6rem;
+      align-self: start;
+      margin-top: 3.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-ink);
+      font-size: 0.875rem;
+    }
+    .legal-toc p {
+      color: var(--color-ink-3);
+    }
+    .legal-toc ol {
+      list-style: none;
+      margin: 0.75rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 0.4rem;
+    }
+    .legal-toc a {
+      color: var(--color-ink-2);
+      text-decoration: none;
+    }
+    .legal-toc a:hover {
+      color: var(--color-ink);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+</style>

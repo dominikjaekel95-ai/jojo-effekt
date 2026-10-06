@@ -61,7 +61,7 @@ Die Schwellen stammen aus einer Studie ohne Medikament; die Übertragung auf die
 - **Morgens, nach der Toilette, vor dem Frühstück.** Ohne Kleidung oder immer in derselben. Gleiche Waage, gleicher Platz auf dem Boden; Teppich und Fliesenfugen verfälschen.
 - **Täglich wiegen heißt nicht täglich reagieren.** Notiere die Zahl und schau auf das Mittel der letzten sieben Tage. Erst wenn das Wochenmittel die Zone wechselt, gilt die Regel.
 - **Das Gewicht schwankt von Tag zu Tag durch Wasser.** Salz bindet Wasser, die Kohlenhydratspeicher (Glykogen) binden Wasser, der Darminhalt wechselt, bei Frauen kommt der Zyklus dazu. Ein großes Abendessen zeigt sich am nächsten Morgen vor allem als Wasser und Darminhalt, nicht als Fett.
-- **Kreatin verschiebt den Ausgangswert.** Wer Kreatin startet, sieht in den ersten Wochen zusätzlich Wasser auf der Waage; das ist der neue Ausgangswert, nicht Fett. Die Größenordnung steht unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
+- **Kreatin verschiebt den Ausgangswert.** Wer Kreatin startet, sieht in den ersten Wochen zusätzlich Wasser auf der Waage; das ist der neue Ausgangswert, nicht Fett. Mehr dazu unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
 - **Körperfettwaagen schwanken stärker als das Gewicht.** Die Bioimpedanzanalyse hängt am Wasserhaushalt; der angezeigte Fettanteil taugt für Trends über Monate, nicht für Tage. Der Taillenumfang, einmal im Monat am gleichen Punkt gemessen, ist die bessere zweite Zahl.
 
 ## Nach der Abnehmspritze: warum die ersten 20 Wochen zählen

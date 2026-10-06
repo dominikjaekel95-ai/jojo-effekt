@@ -14,7 +14,7 @@ faq:
   - q: "Wie oft sollte ich mich nach dem Absetzen wiegen?"
     a: "<p>Mindestens einmal pro Woche, besser täglich mit Wochenmittel, wenn dich die Zahl nicht aus der Bahn wirft. In der STOP-Regain-Studie wogen sich die Teilnehmenden täglich und hatten feste Zonen; nach 18 Monaten hatten 45,7 % der betreuten Gruppe 2,3 kg oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 %. Wichtiger als die Häufigkeit ist die Regel, was du bei welcher Zahl tust. Was die Studien im Einzelnen zeigen und wann die Waage schadet, steht unter <a href=\"/wissen/wie-oft-wiegen-nach-abnehmspritze/\">Wie oft wiegen nach der Abnehmspritze?</a></p>"
   - q: "Wie viel Zunahme nach dem Absetzen ist normal?"
-    a: "<p>Ein bis zwei Kilo in den ersten Wochen sind oft Wasser und Darminhalt, weil du wieder mehr isst – kein Fett. Wer Kreatin startet, sieht weitere 0,5 bis 2 kg Wasser. Ab 1,4 kg über dem Startgewicht der Haltephase lohnt sich ein Blick auf Ernährung und Training, ab 2,3 kg ein Termin bei der Ärztin: Das sind die Zonen eines Programms zum Gewichthalten, in dem 45,7 % der betreuten Teilnehmenden in 18 Monaten 2,3 kg oder mehr wieder zunahmen, in der Kontrollgruppe 72,4 % (Wing 2006).</p>"
+    a: "<p>Ein bis zwei Kilo in den ersten Wochen sind oft Wasser und Darminhalt, weil du wieder mehr isst – kein Fett. Wer Kreatin startet, sieht zusätzlich Wasser in der Muskulatur auf der Waage, ebenfalls kein Fett. Ab 1,4 kg über dem Startgewicht der Haltephase lohnt sich ein Blick auf Ernährung und Training, ab 2,3 kg ein Termin bei der Ärztin: Das sind die Zonen eines Programms zum Gewichthalten, in dem 45,7 % der betreuten Teilnehmenden in 18 Monaten 2,3 kg oder mehr wieder zunahmen, in der Kontrollgruppe 72,4 % (Wing 2006).</p>"
   - q: "Soll ich nach dem Absetzen Kalorien zählen?"
     a: "<p>Für die meisten ist eine Struktur wirksamer als Zählen: Protein zuerst, Gemüse bei jeder Mahlzeit, feste Essenszeiten, keine Flüssigkalorien. Wer gern zählt, kann das zwei Wochen lang tun, um ein Gefühl für Portionen ohne Spritze zu bekommen – dauerhaft hält es kaum jemand durch.</p>"
   - q: "Was, wenn das Gewicht trotz allem steigt?"
@@ -62,7 +62,7 @@ Der Wirkstoff ist noch im Körper, der Appetit noch klein. Das ist die einfachst
 
 - **Training:** Zwei feste Termine. In Woche 1 und 2 leicht, nur die Bewegungen lernen: Kniebeuge, Rudern, Drücken, Hüftstrecken, Rumpf. Ab Woche 3 die Belastung steigern.
 - **Protein:** Tagesmenge berechnen, auf Mahlzeiten verteilen, Frühstück umstellen (Skyr, Quark, Eier oder Shake). Eine Notreserve (Stick oder Shake) immer dabei.
-- **Wiegen:** Ausgangswert festhalten. Wer Kreatin startet, rechnet mit 0,5 bis 2 kg Wasser in den ersten zwei Wochen – das ist der neue Ausgangswert, nicht Fett.
+- **Wiegen:** Ausgangswert festhalten. Wer Kreatin startet: Es bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur. Das zeigt die Waage, ist aber kein Fett; der Wert danach ist der neue Ausgangswert.
 
 **Ziel am Ende von Phase 1:** Acht Trainingseinheiten absolviert, Protein an mindestens fünf von sieben Tagen erreicht, ein Wiege-Protokoll mit vier Einträgen.
 

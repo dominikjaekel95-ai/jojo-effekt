@@ -5,7 +5,7 @@
  * - Zahlen mit data-ia-zahl zählen beim Erscheinen und beim Umschalten (Endwert steht im HTML).
  * - Scroll-Fortschritt: [data-ia-scrub] bekommt --p (0…1), Kinder mit data-ia-ab werden ab ihrem Wert aktiv.
  * - Umschalter [data-ia-wahl] und Schalter [data-ia-schalter] ohne Code je Modul (siehe basis.ts).
- * - Rechner je Modul: protein, zonen, bedarf, teller, wirkstoffspiegel, kreatin, zusammensetzung.
+ * - Rechner je Modul: protein, zonen, bedarf, teller, wirkstoffspiegel, zusammensetzung.
  * Ohne dieses Skript und bei reduzierter Bewegung bleibt alles im Endzustand; html.ia-an steuert die Startzustände.
  */
 type W = Window & { __ia?: boolean };
@@ -243,11 +243,6 @@ const rechner: Record<string, (root: HTMLElement) => void> = {
     const tage = Number(root.dataset.tage ?? 56);
     qa(root, '[data-s-cursor]').forEach((c) => schiebe(c, tag / tage));
     qa(root, '[data-s-cpunkt]').forEach((p) => (p.style.transform = `translateY(${(100 - rest).toFixed(2)}%)`));
-  },
-  kreatin(root) {
-    const kg = wert(root, 'kg', 80);
-    setzeZahl(root, '[data-k-lo]', de(kg + 0.5, 1), false);
-    setzeZahl(root, '[data-k-hi]', de(kg + 2, 1), false);
   },
   zusammensetzung(root) {
     const kg = wert(root, 'kg', 15);

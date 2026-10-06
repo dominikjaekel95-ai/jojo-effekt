@@ -1831,10 +1831,6 @@ html.ia-an .ia-plan12:not(.ia-in) :is(.pl-e, .pl-wg) {
 .kr-buehne {
   margin-top: 1.5rem;
 }
-.kr-band {
-  fill: var(--color-amber-light);
-  transition: opacity 0.6s var(--ia-ease) 1.1s;
-}
 .ia-kreatin .kr-linie {
   stroke-dasharray: 1 1;
   stroke-dashoffset: 0;
@@ -1860,7 +1856,7 @@ html.ia-an .ia-kreatin:not(.ia-in) .kr-tag {
 html.ia-an .ia-kreatin:not(.ia-in) .kr-linie {
   stroke-dashoffset: 1;
 }
-html.ia-an .ia-kreatin:not(.ia-in) :is(.kr-band, .kr-t, .kr-t2) {
+html.ia-an .ia-kreatin:not(.ia-in) :is(.kr-t, .kr-t2) {
   opacity: 0;
 }
 

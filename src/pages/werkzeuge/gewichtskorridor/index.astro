@@ -16,7 +16,7 @@ import ProductTeaser from '../../../components/ProductTeaser.astro';
 import { faqJsonLd } from '../../../data/faq';
 import { site } from '../../../data/site';
 
-const fnIds = ['wing2006', 'wu2025', 'wilding2022ext', 'jensen2024', 'leidy2015', 'who2020', 'kreider2017'] as const;
+const fnIds = ['wing2006', 'wu2025', 'wilding2022ext', 'jensen2024', 'leidy2015', 'who2020'] as const;
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
 /* Ampelfarben aus dem Design „Kalk“ mit fester Bedeutung: Grün = halten, Gelb = Markierung, Braun = Wiederzunahme */
@@ -47,7 +47,7 @@ const faq = [
   },
   {
     q: 'Was, wenn ich gerade Kreatin angefangen habe?',
-    a: '<p>Kreatin bindet in den ersten Wochen 0,5 bis 2 kg Wasser in der Muskulatur. Das ist kein Fett und zählt nicht als Zunahme. Setze das Startgewicht erst nach zwei bis drei Wochen Einnahme, oder rechne die Wassereinlagerung gedanklich heraus.</p>',
+    a: '<p>Kreatin bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur. Das zeigt die Waage, ist aber kein Fett und zählt nicht als Zunahme. Setze das Startgewicht erst nach zwei bis drei Wochen Einnahme, oder rechne die Wassereinlagerung gedanklich heraus.</p>',
   },
   {
     q: 'Gilt der Korridor auch, wenn ich die Spritze noch nehme?',
@@ -167,7 +167,7 @@ const jsonLd = [
       <p>Warum Training in jeder Zone steht: In der dänischen S-LiTE-Studie nahmen Teilnehmende nach Liraglutid allein im Jahr nach Therapieende 6,0 kg mehr zu als nach einem betreuten Trainingsprogramm.<Fn n={fn('jensen2024')} id="jensen2024" /> Wie ein Einstieg aussieht, steht unter <a href="/wissen/krafttraining-nach-abnehmspritze/">Krafttraining nach der Abnehmspritze</a>.</p>
 
       <h2 id="wiegen">Die Wiegeregel</h2>
-      <p>Einmal pro Woche, gleicher Wochentag, morgens nach der Toilette, vor dem Frühstück. Wer Kreatin nimmt, rechnet in den ersten Wochen mit 0,5 bis 2 kg Wasser in der Muskulatur<Fn n={fn('kreider2017')} id="kreider2017" /> und setzt den Startwert danach. Der Wochenwert zählt, nicht der Tageswert; was dahintersteht, erklärt der Artikel <a href="/wissen/gewicht-halten-nach-abnehmspritze/">Gewicht halten nach der Abnehmspritze</a>. Was in den ersten Wochen nach der letzten Dosis sonst passiert, Woche für Woche, steht unter <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a>.</p>
+      <p>Einmal pro Woche, gleicher Wochentag, morgens nach der Toilette, vor dem Frühstück. Wer Kreatin nimmt: Es bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur. Das zeigt die Waage, ist aber kein Fett; den Startwert setzt du danach. Der Wochenwert zählt, nicht der Tageswert; was dahintersteht, erklärt der Artikel <a href="/wissen/gewicht-halten-nach-abnehmspritze/">Gewicht halten nach der Abnehmspritze</a>. Was in den ersten Wochen nach der letzten Dosis sonst passiert, Woche für Woche, steht unter <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a>.</p>
     </div>
 
     <div class="mt-14"><Faq items={faq} id="korridor-faq" title="Häufige Fragen zum Gewichtskorridor" /></div>

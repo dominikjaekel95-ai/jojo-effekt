@@ -3,7 +3,8 @@
  * Wartelisten-Formular: E-Mail, Pflicht-Einwilligung, optional Häkchen „Starterpaket“, Honigtopf `website`,
  * verstecktes `quelle`. POST an /api/anmeldung/ (MailerLite, Double-Opt-in), Weiterleitung auf /danke/.
  * Ohne eigene Wartelisten-Gruppe (site.waitlist.ownGroup = false) nennt die Einwilligung Warteliste UND Newsletter,
- * und das Formular schickt newsletter=ja mit. Mit eigener Gruppe ist der Newsletter ein freiwilliges Zusatz-Häkchen.
+ * und das Formular schickt newsletter=ja und liste=gemeinsam mit. Mit eigener Gruppe ist der Newsletter ein freiwilliges
+ * Zusatz-Häkchen; fehlt dann MAILERLITE_GROUP_WARTELISTE, lehnt api/anmeldung.js ab (?fehler=konfiguration).
  * Kein Arztbezug, keine Wirkaussagen, keine Health Claims (CLAIMS.md).
  */
 import { site } from '../data/site';
@@ -43,7 +44,7 @@ const cadence = site.newsletter.cadence;
   </div>
   <div class="hidden" aria-hidden="true"><label for={`${id}-website`}>Website</label><input id={`${id}-website`} name="website" type="text" tabindex="-1" autocomplete="off" /></div>
   <input type="hidden" name="quelle" value={quelle} />
-  {!own && <input type="hidden" name="newsletter" value="ja" />}
+  {!own && <><input type="hidden" name="newsletter" value="ja" /><input type="hidden" name="liste" value="gemeinsam" /></>}
   <div class="wl-checks">
     <label class="wl-check">
       <input type="checkbox" name="einwilligung" value="ja" required />
@@ -60,7 +61,7 @@ const cadence = site.newsletter.cadence;
     {starterpaket && (
       <label class="wl-check">
         <input type="checkbox" name="starterpaket" value="ja" />
-        <span>Ich hätte Interesse an einem Starterpaket mit Protein und Kreatin. Freiwillig, ohne Verpflichtung.</span>
+        <span>Ich hätte Interesse an einem Starterpaket mit Protein und Kreatin; sagt mir Bescheid, falls es kommt. Freiwillig, ohne Verpflichtung.</span>
       </label>
     )}
   </div>

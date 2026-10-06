@@ -1,7 +1,7 @@
 ---
 /**
  * Danke-Seite der Warteliste (Ziel der Weiterleitung aus /api/anmeldung/ mit quelle=warteliste). noindex, nicht in der
- * Sitemap. ?fehler=eingabe|technik blendet den passenden Text ein. Preisfrage per Plausible, Teilen, Affiliate-Beispiele.
+ * Sitemap. ?fehler=eingabe|technik|konfiguration blendet den passenden Text ein (konfiguration wie technik). Preisfrage per Plausible, Teilen, Affiliate-Beispiele.
  */
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
@@ -15,7 +15,7 @@ const preise = ['49', '79', '99', '129'];
     <div id="dk-ok">
       <p class="eyebrow">Fast geschafft</p>
       <h1 class="h1 mt-3">Bitte bestätige deine E-Mail-Adresse.</h1>
-      <p class="dk-lede">Wir haben dir über unseren Versanddienst MailerLite eine Mail mit einem Bestätigungslink geschickt. Erst nach dem Klick stehst du auf der Warteliste für das 12-Wochen-Programm. Nichts angekommen? Ein Blick in den Spam-Ordner hilft meistens.</p>
+      <p class="dk-lede">Wir haben dir über unseren Versanddienst MailerLite eine Mail mit einem Bestätigungslink geschickt. Erst nach dem Klick stehst du auf der Warteliste für das 12-Wochen-Programm. Nichts angekommen? Ein Blick in den Spam-Ordner hilft meistens. Warst du schon für den Newsletter angemeldet, kommt keine Bestätigungs-Mail; du stehst trotzdem auf der Liste. Nach einer halben Stunde nichts da: <a href={`mailto:${site.owner.email}?subject=${encodeURIComponent('Warteliste')}`}>Schreib uns</a>.</p>
     </div>
     <div id="dk-eingabe" class="hidden">
       <p class="eyebrow">Das hat nicht geklappt</p>
@@ -51,7 +51,8 @@ const preise = ['49', '79', '99', '129'];
     </div>
     <script is:inline>
       (() => {
-        const f = new URLSearchParams(location.search).get('fehler');
+        const p = new URLSearchParams(location.search).get('fehler');
+        const f = p === 'konfiguration' ? 'technik' : p;
         if (f === 'eingabe' || f === 'technik') {
           document.getElementById('dk-ok').classList.add('hidden');
           document.getElementById('dk-' + f).classList.remove('hidden');

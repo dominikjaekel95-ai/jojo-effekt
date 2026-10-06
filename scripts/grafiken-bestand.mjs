@@ -132,12 +132,12 @@ export function bestand({ preise, fmtDate, warn }) {
   {
     const px = (w) => 360 + (w / 20) * 730;
     let b = '';
-    b += gridX([0, 4, 8, 12, 16, 20], px, 158, 516, (w) => `Woche ${w}`, 146);
+    b += gridX([0, 4, 8, 12, 16, 20], px, 158, 552, (w) => `Woche ${w}`, 146);
     // Drei Zeilen; der Kontrolltermin (Vorschlag dieser Seite) ist seit 06.10.2026 entfernt.
     const rows = [
-      { y: 204, label: 'Wirkstoff im Körper', sub: 'am Beispiel Semaglutid', note: 'Semaglutid (Halbwertszeit etwa 1 Woche) nach etwa 5 Wochen weitgehend abgebaut, laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar (gepunktet); Tirzepatid (etwa 5 Tage) schon nach etwa 25 Tagen' },
-      { y: 324, label: 'Appetit kommt zurück', sub: 'aus dem Wirkstoffspiegel', note: 'Woche 2 bis 5, mit sinkendem Wirkstoffspiegel; bleibt danach (abgeleitet, nicht gemessen)' },
-      { y: 444, label: 'Zunahme messbar', sub: 'Meta-Analyse', note: 'ab etwa Woche 8 messbar, Anstieg bis etwa Woche 20 (Meta-Analyse randomisierter Studien)' },
+      { y: 212, label: 'Wirkstoff im Körper', sub: 'am Beispiel Semaglutid', note: 'Semaglutid (Halbwertszeit etwa 1 Woche) nach etwa 5 Wochen weitgehend abgebaut, laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar (gepunktet); Tirzepatid (etwa 5 Tage) schon nach etwa 25 Tagen' },
+      { y: 348, label: 'Appetit kommt zurück', sub: 'aus dem Wirkstoffspiegel', note: 'Woche 2 bis 5, mit sinkendem Wirkstoffspiegel; bleibt danach (abgeleitet, nicht gemessen)' },
+      { y: 484, label: 'Zunahme messbar', sub: 'Meta-Analyse', note: 'ab etwa Woche 8 messbar, Anstieg bis etwa Woche 20 (Meta-Analyse randomisierter Studien)' },
     ];
     for (const row of rows) {
       b += T(M, row.y + 6, row.label, { st: 'head', size: F.label });

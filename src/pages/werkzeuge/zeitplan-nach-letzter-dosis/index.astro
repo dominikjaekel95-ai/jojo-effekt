@@ -114,7 +114,7 @@ const jsonLd = [
       <p class="zp-orient">Allgemeine Orientierung aus Fachinformation und Studien, keine Vorhersage für dich.</p>
       <figure class="zp-vis" aria-hidden="true">
         <div class="zp-lanes" data-zeitplan-bild></div>
-        <div class="zp-axis"><span style="left:0%">0</span><span style="left:20%">4</span><span style="left:40%">8</span><span style="left:60%">12</span><span style="left:80%">16</span><span style="left:100%">20 Wochen</span></div>
+        <div class="zp-axis"><span style="left:0%">0</span><span style="left:20%">4</span><span style="left:40%">8</span><span style="left:60%">12</span><span style="left:80%">16</span><span style="left:100%">20<i class="zp-unit"> Wochen</i></span></div>
       </figure>
       <ol class="zp-list" data-zeitplan-liste></ol>
       <div class="zp-act zp-act2">
@@ -377,6 +377,9 @@ const jsonLd = [
   .zp-axis span:last-child {
     transform: translateX(-100%);
   }
+  .zp-unit {
+    font-style: normal;
+  }
   /* Liste: Datum links, Erklärung rechts */
   .zp-list {
     list-style: none;
@@ -428,6 +431,9 @@ const jsonLd = [
     }
     .zp-axis {
       margin-left: 4.75rem;
+    }
+    .zp-unit {
+      display: none;
     }
   }
   @media print {

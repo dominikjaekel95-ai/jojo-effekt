@@ -153,7 +153,8 @@ export function hoch({ preise, warn }, haupt) {
     const zeile = (c, y) => {
       const big = PH(M, y, c.big, { st: 'num', size: 42, fill: c.c, maxW: LW, lh: 48 });
       const ry = big.bottom + 18;
-      const src = PH(M, ry + 38, c.src, { size: FH.small, fill: C.ink3, maxW: LW, lh: 34 });
+      // Lange Bindestrich-Wörter (z. B. „STEP-1-DXA-Substudie“) dürfen in der schmalen Spalte nach dem Bindestrich umbrechen
+      const src = PH(M, ry + 38, c.src.replace(/(DXA-)(Substudie)/, '$1 $2'), { size: FH.small, fill: C.ink3, maxW: LW, lh: 34 });
       const txt = PM(xr, y, [{ s: `${c.h}.`, st: 'head' }, { s: c.d, fill: C.ink2 }], { size: FH.text, maxW: RW, lh: 40 });
       const svg = big.svg + L(M, ry, M + LW, ry, { c: c.c, w: 3, cap: 'butt' }) + src.svg + txt.svg;
       return { svg, bottom: Math.max(src.bottom, txt.bottom) };

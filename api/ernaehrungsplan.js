@@ -17,7 +17,8 @@
  *  Fehlt ein Feld im MailerLite-Konto (422), versucht die Funktion es ohne `quelle`, dann ohne `vorlieben` (mit und ohne
  *  `quelle`); ohne `plan` scheitert es, und das ist gewollt (ohne Feld kein Link).
  * Antwort: Weiterleitung (303) auf /ernaehrungsplan/danke/, bei Eingabefehlern ?fehler=eingabe, bei technischen
- * Fehlern ?fehler=technik. Es werden keine E-Mail-Adressen und keine Antworten geloggt, nur Plan-ID und Ergebnis.
+ * Fehlern ?fehler=technik; JSON, das kein Objekt ist (z. B. null), bekommt 400. Es werden keine E-Mail-Adressen, keine
+ * Antworten und keine Vorlieben geloggt, nur Plan-ID und Ergebnis.
  *
  * Umgebungsvariablen (Vercel, nie ins Repo): MAILERLITE_API_KEY, MAILERLITE_GROUP_NEWSLETTER (wie api/newsletter.js) und
  *   MAILERLITE_GROUP_ERNAEHRUNGSPLAN  Pflicht. ID der Gruppe „Ernährungsplan“. Fehlt sie, landet jede Anfrage bei ?fehler=technik.
@@ -42,10 +43,13 @@ async function mailerlite(path, init = {}) {
   });
 }
 
-/** Formular oder JSON lesen. Mehrfachfelder (v) kommen als Liste. */
+/** Formular oder JSON lesen. Mehrfachfelder (v) kommen als Liste. JSON muss ein Objekt sein, sonst null (→ 400). */
 async function lesen(request) {
   const type = request.headers.get('content-type') || '';
-  if (type.includes('application/json')) return request.json().catch(() => ({}));
+  if (type.includes('application/json')) {
+    const json = await request.json().catch(() => null);
+    return json && typeof json === 'object' && !Array.isArray(json) ? json : null;
+  }
   const params = new URLSearchParams(await request.text());
   return { ...Object.fromEntries(params), v: params.getAll('v') };
 }
@@ -88,6 +92,7 @@ export async function anfordern({ email, plan, vorlieben }, { newsletter, ernaeh
 
 export async function POST(request) {
   const f = await lesen(request);
+  if (!f) return new Response('Bad Request', { status: 400 });
   if (f.website) return redirect(DANKE);
   const email = String(f.email || '').trim().toLowerCase();
   const ernaehrung = String(f.ernaehrung || '');
@@ -104,7 +109,7 @@ export async function POST(request) {
   }
   try {
     const r = await anfordern({ email, plan, vorlieben }, { newsletter, ernaehrungsplan });
-    console.log(`ernaehrungsplan: ${plan}${vorlieben ? ` v=${vorlieben}` : ''} → ${r.outcome} (${r.status})`);
+    console.log(`ernaehrungsplan: ${plan} → ${r.outcome} (${r.status})`);
     return redirect(r.outcome === 'fehler' ? `${DANKE}?fehler=technik` : DANKE);
   } catch (err) {
     console.error('ernaehrungsplan: MailerLite nicht erreichbar', err instanceof Error ? err.message : err);

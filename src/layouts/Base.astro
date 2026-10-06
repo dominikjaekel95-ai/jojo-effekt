@@ -22,6 +22,8 @@ interface Props {
   modifiedTime?: string;
   /** Pfad zu einem seitenspezifischen OG-Bild, z. B. "/og-studien.png" */
   ogImage?: string;
+  /** Arztsatz im Footer zeigen (Standard); false auf den Danke-Seiten (CLAIMS.md Abschnitt H) */
+  footerArzt?: boolean;
 }
 
 const {
@@ -34,6 +36,7 @@ const {
   publishedTime,
   modifiedTime,
   ogImage: ogImagePath = '/og-default.png',
+  footerArzt = true,
 } = Astro.props;
 
 const canonical = new URL(path ?? Astro.url.pathname, Astro.site ?? site.url).toString();
@@ -114,6 +117,6 @@ const graph = [
     <main id="main" class="flex-1">
       <slot />
     </main>
-    <Footer />
+    <Footer arzt={footerArzt} />
   </body>
 </html>

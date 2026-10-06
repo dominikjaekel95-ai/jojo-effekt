@@ -39,11 +39,11 @@ export const site = {
   },
 
   // Warteliste: Formular WaitlistForm → api/anmeldung.js (quelle=warteliste) → MailerLite mit Double-Opt-in.
-  // ownGroup: false, solange es in MailerLite keine eigene Gruppe „Warteliste“ gibt (Env MAILERLITE_GROUP_WARTELISTE
-  // nicht gesetzt). Dann landet die Adresse in der Newsletter-Gruppe mit quelle=warteliste, und die Einwilligung nennt
-  // Warteliste UND Newsletter. Erst auf true setzen, wenn die Env-Variable in Vercel steht; dann wird der Newsletter
-  // ein eigenes, freiwilliges Häkchen.
-  waitlist: { ownGroup: false },
+  // ownGroup: true seit 06.10.2026 (Gruppe „Warteliste“, Env MAILERLITE_GROUP_WARTELISTE in Vercel gesetzt): Die
+  // Einwilligung gilt nur der Warteliste, der Newsletter ist ein freiwilliges Häkchen. Fehlt die Variable (z. B. in einer
+  // Preview), lehnt api/anmeldung.js die Anmeldung ab (?fehler=konfiguration), statt sie in den Newsletter zu legen.
+  // false nur, falls die Gruppe wegfällt: Dann nennt die Einwilligung Warteliste UND Newsletter (liste=gemeinsam).
+  waitlist: { ownGroup: true },
   // Erfahrungsformular „Deine Erfahrung nach der Abnehmspritze“ (Tally). `live` erst auf true setzen, wenn das
   // Formular in Tally veröffentlicht ist; vorher zeigt /erfahrungen/ nur die Regeln und die E-Mail-Adresse.
   experienceForm: { id: 'ODOJWR', live: true },
@@ -52,10 +52,10 @@ export const site = {
   // das Formular zeigt (sonst steht dort der Weg per E-Mail) und ob der Datenschutz-Abschnitt 4b erscheint.
   checklistForm: { live: true },
   // Newsletter: Das optionale Kästchen „Newsletter“ steht im Tally-Erfahrungsformular (Übergabe per Webhook an api/newsletter.js)
-  // und in den eigenen Formularen, die an api/anmeldung.js bzw. api/ernaehrungsplan.js posten: Header-Formular (NewsletterPanel;
-  // die Einwilligung dort ist die Newsletter-Einwilligung), ChecklisteForm (freiwilliges Häkchen), WaitlistForm (die Einwilligung
-  // nennt Warteliste UND Newsletter, solange waitlist.ownGroup false ist; sonst freiwilliges Zusatz-Häkchen) und das Formular des
-  // Ernährungsplans (Einwilligung „Plan plus Newsletter“). Versand über MailerLite mit Double-Opt-in (docs/NEWSLETTER.md,
+  // und in den eigenen Formularen, die an api/anmeldung.js bzw. api/ernaehrungsplan.js posten: ChecklisteForm (freiwilliges
+  // Häkchen), WaitlistForm (freiwilliges Zusatz-Häkchen, solange waitlist.ownGroup true ist) und das Formular des
+  // Ernährungsplans (Einwilligung „Plan plus Newsletter“). Ein eigenes Newsletter-Formular im Kopf gibt es seit 06.10.2026
+  // nicht mehr; dort steht nur „Schreib uns“. Versand über MailerLite mit Double-Opt-in (docs/NEWSLETTER.md,
   // docs/NEWSLETTER-SETUP.md). `provider` auf null setzen, falls der Versand pausiert; Datenschutz und Danke-Seiten folgen.
   newsletter: {
     provider: {

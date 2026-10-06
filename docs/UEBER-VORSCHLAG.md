@@ -1,7 +1,13 @@
 # Über diese Seite: Textvorschlag zur Freigabe
 
-Stand: 6. Oktober 2026, Redesign „Kalk“ (Stufe 2D). Die Seite `/ueber/` hat die neue Gestaltung, der Text dort ist
-**unverändert**. Dieser Vorschlag ersetzt ihn erst, wenn Dominik ihn freigibt.
+**Umgesetzt am 6. Oktober 2026** (von Dominik freigegeben, H1 Variante A, Meta-Description wie vorgeschlagen) mit drei
+Änderungen: (a) der Arztsatz steht am Ende von „Keine Medikamentenberatung“ statt hinter Programm und Warteliste; (b) statt
+„Angaben zu Protein und Kreatin beim Starterpaket …“ steht „Gesundheitsbezogene Angaben zu Lebensmitteln, etwa bei
+Partnerlinks, stehen hier nur im EU-zugelassenen Wortlaut.“; (c) Idee 6 als Satz zum Datenschutz. Maßgeblich ist jetzt
+`src/pages/ueber.astro`; dieses Dokument bleibt als Begründung.
+
+Ursprünglicher Stand: 6. Oktober 2026, Redesign „Kalk“ (Stufe 2D). Die Seite `/ueber/` hatte die neue Gestaltung, der Text
+dort war unverändert. Dieser Vorschlag sollte ihn erst ersetzen, wenn Dominik ihn freigibt.
 
 Was sich gegenüber dem jetzigen Text ändert und warum:
 

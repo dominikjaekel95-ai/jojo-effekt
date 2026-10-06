@@ -4,7 +4,9 @@
  * Bewusst als einfaches JavaScript-Modul, weil es drei Stellen gemeinsam nutzen:
  * src/data/ernaehrungsplan.ts (Generator, Planseiten, PDFs, Vorschau im Browser), api/ernaehrungsplan.js (Vercel-Funktion)
  * und scripts/ernaehrungsplan-pdf.mjs (indirekt über die gebauten Seiten).
- * Die ID ist absichtlich nichtssagend: In MailerLite steht nur „ek07“, nicht Gewichtsstufe oder Appetit.
+ * In MailerLite steht nur die ID (z. B. „ek07“), aber sie ist nicht anonym: Über diese Tabelle steht sie für Ernährungsform,
+ * Gewichtsbereich, Appetit und Laktose. Deshalb holt das Formular dafür eine ausdrückliche Einwilligung ein (Art. 9 Abs. 2
+ * lit. a DSGVO, Datenschutz Abschnitt 4d). Das genaue Gewicht wird nicht übertragen.
  * Reihenfolge der Listen nie ändern, nur hinten anhängen, sonst zeigen bestehende Links in Mails auf den falschen Plan.
  *
  * Grundkombinationen: 4 Ernährungsformen × 2 Appetit-Stufen × 4 Gewichtsstufen × laktosefrei ja/nein, vegan nur

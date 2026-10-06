@@ -1,8 +1,10 @@
 ---
 /**
  * Datenschutzerklärung. noindex. Gestaltung „Kalk“ seit 06.10.2026: Inhaltsverzeichnis links (Desktop), Text rechts.
- * Inhaltlich geändert am 06.10.2026 nur Abschnitt 4b (Checkliste über eigenes Formular und MailerLite statt Tally) und der
- * erste Absatz von 4c (welche Formulare das Newsletter-Kästchen tragen).
+ * Inhaltlich geändert am 06.10.2026: Abschnitt 4 (Zweck Starterpaket, frühere Vorbestell-Liste wird gelöscht), 4a (Tally
+ * als Anbieter des eingebetteten Rahmens, IP-Adresse), 4b (Checkliste über eigenes Formular und MailerLite, Rechtsgrundlage
+ * Einwilligung), erster Absatz von 4c (welche Formulare das Newsletter-Kästchen tragen; kein Formular mehr im Kopf) und
+ * 4d (Plannummer, ausdrückliche Einwilligung nach Art. 9 DSGVO).
  */
 import Base from '../layouts/Base.astro';
 import SeitenKopf from '../components/SeitenKopf.astro';
@@ -63,7 +65,8 @@ const inhalt = [
         Liste.{site.waitlist.ownGroup ? ' Den Newsletter bekommst du nur, wenn du ihn im Formular zusätzlich ankreuzt.' : ' Mit derselben Einwilligung bestellst du auch den Newsletter (Abschnitt 4c); das Formular nennt beides ausdrücklich.'}
       </p>
       <p>
-        <strong>Zweck:</strong> Information über Start, Preis und Ablauf des Programms. <strong>Rechtsgrundlage:</strong> deine
+        <strong>Zweck:</strong> Information über Start, Preis und Ablauf des Programms, außerdem, um abzuschätzen, ob wir ein
+        Starterpaket anbieten, und dir dazu Bescheid zu geben (nur mit Häkchen beim Starterpaket). <strong>Rechtsgrundlage:</strong> deine
         Einwilligung, Art. 6 Abs. 1 lit. a DSGVO. <strong>Widerruf:</strong> jederzeit über den Abmeldelink in jeder Mail oder per
         E-Mail an {site.email}; wir löschen deine Daten dann umgehend. <strong>Speicherdauer:</strong> bis zum Widerruf, spätestens
         12 Monate nach Abschluss des Projekts.
@@ -71,15 +74,17 @@ const inhalt = [
       <p>
         <strong>Frühere Vorbestell-Liste (Tally):</strong> Bis Oktober 2026 lief die Vorbestellung für ein geplantes Set über ein
         eingebettetes Formular von Tally BV, Sint-Baafsplein 2, 9000 Gent, Belgien. Dort gespeichert sind E-Mail-Adresse, Angaben
-        zum Therapiestatus und zur Zahlungsbereitschaft, optional Präparat, Freitext und das Kreuz beim Newsletter. Für diese
-        Einträge gelten Zweck, Rechtsgrundlage (Einwilligung) und Speicherdauer wie bei der Eintragung angegeben; Widerruf und
-        Löschung jederzeit per E-Mail an {site.email}. Mit Tally besteht ein Auftragsverarbeitungsvertrag; Tally hostet in der EU.
+        zum Therapiestatus und zur Zahlungsbereitschaft, optional Präparat, Freitext und das Kreuz beim Newsletter. Das Set kommt
+        nicht. Wir informieren diese Einträge einmalig, übernehmen sie nicht in die Warteliste und löschen sie bis zum 31.10.2026.
+        Widerruf und Löschung vorher jederzeit per E-Mail an {site.email}. Mit Tally besteht ein Auftragsverarbeitungsvertrag;
+        Tally hostet in der EU.
       </p>
 
       <h2 id="erfahrungen">4a. Erfahrungsberichte (Tally)</h2>
       <p>
         Auf der Seite <a href="/erfahrungen/">Erfahrungen</a> kannst du uns freiwillig berichten, wie es dir nach dem Absetzen
-        eines Medikaments ergangen ist. Das Formular wird ebenfalls von Tally bereitgestellt und eingebettet. Gespeichert
+        eines Medikaments ergangen ist. Das Formular stellt Tally BV, Sint-Baafsplein 2, 9000 Gent, Belgien, bereit. Es wird als
+        eingebetteter Rahmen geladen; dabei wird deine IP-Adresse an Tally übermittelt (Art. 6 Abs. 1 lit. f DSGVO). Gespeichert
         werden die Angaben, die du machst: Präparat, Einnahmedauer, Zeit seit der letzten Dosis, Gewichtsverlauf, dein
         Bericht, optional ein Vorname oder Pseudonym, deine Altersgruppe, eine E-Mail-Adresse für Rückfragen und optional dein
         Kreuz beim Newsletter (Abschnitt 4c). Die Angaben zu Präparat, Einnahme und Gewicht sind Gesundheitsdaten im Sinne von Art. 9 DSGVO.
@@ -102,9 +107,9 @@ const inhalt = [
             Newsletter direkt an unseren Versanddienst {site.newsletter.provider?.name ?? 'für E-Mails'} (Abschnitt 4c); das PDF bekommst du
             sofort auf der folgenden Seite. <strong>Double-Opt-in:</strong> Du bekommst zuerst eine Bestätigungs-Mail; erst nach dem Klick
             auf den Link schreiben wir dir. <strong>Zweck:</strong> Bereitstellung der Checkliste und, wenn wir sie wesentlich überarbeiten,
-            ein einmaliger Hinweis auf die neue Fassung. <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Erfüllung deiner
-            Anfrage); für den Hinweis auf eine neue Fassung Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, dir eine aktuelle
-            Fassung zu geben), Widerspruch jederzeit über den Abmeldelink oder per E-Mail an {site.email}. <strong>Speicherdauer:</strong> bis zu zwölf Monate nach der Anfrage, dann Löschung, sofern du nicht zusätzlich den Newsletter bestellt hast.
+            ein einmaliger Hinweis auf die neue Fassung. <strong>Rechtsgrundlage:</strong> deine Einwilligung, Art. 6 Abs. 1 lit. a
+            DSGVO. <strong>Widerruf:</strong> jederzeit über den Abmeldelink in jeder Mail oder per E-Mail an {site.email}; wir löschen
+            deine Daten dann umgehend. <strong>Speicherdauer:</strong> bis zu zwölf Monate nach der Anfrage, dann Löschung, sofern du nicht zusätzlich den Newsletter bestellt hast.
           </p>
           <p>
             <strong>Frühere Anfragen (Tally):</strong> Bis Oktober 2026 lief die Anforderung über ein eingebettetes Formular von Tally BV
@@ -119,10 +124,9 @@ const inhalt = [
       <p>
         Im Tally-Formular für Erfahrungsberichte (bis Oktober 2026 auch in den Tally-Formularen für Vorbestellung und Checkliste) gibt
         es ein optionales Kästchen „Newsletter“. Wenn du es ankreuzt, speichert Tally in unserem Auftrag deine E-Mail-Adresse, den
-        Zeitpunkt und den Wortlaut der Einwilligung. Außerdem gibt es im Kopf jeder Seite ein Newsletter-Formular, auf der Startseite
-        das Wartelisten-Formular (Abschnitt 4) und bei der Checkliste ein optionales Kästchen (Abschnitt 4b); dort eingetragene Adressen
-        übermittelt unsere Website direkt an MailerLite, zusammen mit dem Zeitpunkt und der Herkunft („Website“, „Warteliste“ bzw.
-        „Checkliste“). Der
+        Zeitpunkt und den Wortlaut der Einwilligung. Außerdem kannst du den Newsletter im Wartelisten-Formular (Abschnitt 4), bei
+        der Checkliste (Abschnitt 4b) und beim Ernährungsplan (Abschnitt 4d) bestellen; diese Adressen übermittelt unsere Website
+        direkt an MailerLite, zusammen mit dem Zeitpunkt und der Herkunft („Warteliste“, „Checkliste“ bzw. „Ernährungsplan“). Der
         Newsletter erscheint {site.newsletter.cadence} und enthält neue Artikel, Studien und Entwicklungen zur Zeit nach der
         Abnehmspritze, gelegentlich auch Neuigkeiten zum Programm. <strong>Double-Opt-in:</strong> Vor der ersten Ausgabe bekommst du eine
         Bestätigungs-Mail mit einem Link; erst nach dem Klick bist du angemeldet. Zeitpunkt und IP-Adresse der Bestätigung werden
@@ -150,12 +154,14 @@ const inhalt = [
         Auf der Seite <a href="/ernaehrungsplan/">Ernährungsplan</a> wählst du Ernährungsform, Laktose, Appetit, Gewichtsbereich und
         auf Wunsch Lebensmittel, die du gern isst, und gibst deine E-Mail-Adresse an. Unsere Website ordnet deinen Antworten einen von
         56 fertigen Plänen zu und übermittelt an MailerLite nur deine E-Mail-Adresse, die Nummer dieses Plans, die angekreuzten
-        Lebensmittel (zum Beispiel „Lachs, Quark“), den Zeitpunkt und die Herkunft „Ernährungsplan“. Dein Gewicht und deine übrigen
-        Antworten speichern wir nicht. Den Plan schicken wir zusammen mit der Anmeldung zum Newsletter (Abschnitt 4c): Nach der
+        Lebensmittel (zum Beispiel „Lachs, Quark“), den Zeitpunkt und die Herkunft „Ernährungsplan“. Gespeichert werden deine
+        E-Mail-Adresse, die Nummer deines Plans und die Lebensmittel, die du angekreuzt hast. Die Plannummer steht für deine Angaben
+        zu Ernährungsform, Gewichtsbereich, Appetit und Laktose. Dein genaues Gewicht speichern wir nicht. Den Plan schicken wir
+        zusammen mit der Anmeldung zum Newsletter (Abschnitt 4c): Nach der
         Bestätigung per Link kommt ein Link auf deine Planseite und das PDF, danach der Newsletter. Die Planseite rechnet Änderungen an
         Variante und Vorlieben nur in deinem Browser; dabei speichern oder übertragen wir nichts. Wer den Plan ohne Newsletter möchte,
-        schreibt uns eine Mail (Abschnitt 7) und bekommt ihn persönlich. <strong>Rechtsgrundlage:</strong> deine Einwilligung, Art. 6
-        Abs. 1 lit. a DSGVO. <strong>Widerruf und Speicherdauer:</strong> wie beim Newsletter (Abschnitt 4c); mit der Abmeldung löschen
+        schreibt uns eine Mail (Abschnitt 7) und bekommt ihn persönlich. <strong>Rechtsgrundlage:</strong> deine ausdrückliche
+        Einwilligung, Art. 6 Abs. 1 lit. a und Art. 9 Abs. 2 lit. a DSGVO. <strong>Widerruf und Speicherdauer:</strong> wie beim Newsletter (Abschnitt 4c); mit der Abmeldung löschen
         wir auch Plannummer und Vorlieben.
       </p>
 

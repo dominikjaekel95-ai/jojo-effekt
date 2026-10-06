@@ -2,7 +2,7 @@
 /**
  * Ziel der Weiterleitung aus /api/anmeldung/ (quelle=checkliste, seit 06.10.2026 eigenes Formular statt Tally).
  * noindex, nicht in der Sitemap. Das PDF steht sofort zum Download bereit; die Bestätigungs-Mail kommt von MailerLite.
- * ?fehler=eingabe|technik blendet den passenden Text ein (bei „technik“ bleibt das PDF erreichbar).
+ * ?fehler=eingabe|technik|konfiguration blendet den passenden Text ein (konfiguration wie technik; das PDF bleibt erreichbar).
  */
 import Base from '../../layouts/Base.astro';
 import SeitenKopf from '../../components/SeitenKopf.astro';
@@ -15,7 +15,7 @@ const weiter = [
   { href: '/marktradar/', label: 'Was sich im Markt gerade ändert' },
 ];
 ---
-<Base title="Deine Checkliste" description="Die Checkliste für die ersten 8 Wochen nach der letzten Dosis als PDF." path="/checkliste/danke/" noindex>
+<Base title="Deine Checkliste" description="Die Checkliste für die ersten 8 Wochen nach der letzten Dosis als PDF." path="/checkliste/danke/" noindex footerArzt={false}>
   <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { href: '/checkliste/', label: 'Checkliste' }, { label: 'Danke' }]} meta="Danke" title="Hier ist deine Checkliste." doc={false}>
     <p>Die ersten 8 Wochen nach der letzten Dosis, zum Ausdrucken und Abhaken.</p>
   </SeitenKopf>
@@ -55,6 +55,7 @@ const weiter = [
   <script is:inline>
     (function () {
       var f = new URLSearchParams(location.search).get('fehler');
+      if (f === 'konfiguration') f = 'technik';
       if (f !== 'eingabe' && f !== 'technik') return;
       document.getElementById('cd-' + f).hidden = false;
       document.getElementById('cd-ok').hidden = true;

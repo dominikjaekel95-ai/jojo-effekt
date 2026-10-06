@@ -1,7 +1,17 @@
 ---
+/**
+ * Fuß jeder Seite. Der Arztsatz (site.medicalTeamSentence) steht wörtlich als eigener Absatz, nie neben Programm oder
+ * Warteliste (CLAIMS.md Abschnitt H). Auf den Danke-Seiten (/danke/, /checkliste/danke/, /ernaehrungsplan/danke/,
+ * /newsletter/danke/) entfällt er: Base.astro reicht dort footerArzt={false} als arzt={false} durch.
+ */
 import Logo from './Logo.astro';
 import { site } from '../data/site';
 import { themen } from '../data/themen';
+interface Props {
+  /** Arztsatz zeigen (Standard). false auf Danke-Seiten. */
+  arzt?: boolean;
+}
+const { arzt = true } = Astro.props;
 const year = new Date().getFullYear();
 const kontakt = `mailto:${site.owner.email}?subject=${encodeURIComponent('Nach der Spritze: meine Frage')}`;
 ---
@@ -9,9 +19,10 @@ const kontakt = `mailto:${site.owner.email}?subject=${encodeURIComponent('Nach d
   <div class="container-wide ft-grid">
     <div>
       <Logo />
-      <p class="ft-t">Ein Projekt von {site.owner.name}, {site.owner.city}. Ein Ernährungs- und Trainingsprogramm, keine medizinische Beratung. {site.medicalTeamSentence}</p>
+      <p class="ft-t">Ein Projekt von {site.owner.name}, {site.owner.city}.</p>
+      {arzt && <p class="ft-t">{site.medicalTeamSentence}</p>}
       <p class="ft-t ft-doc">{site.doctorSentence}</p>
-      <p class="ft-t">Fragen, Hinweise, Kritik: <a href={kontakt} class="plausible-event-name=Kontakt+Klick plausible-event-kanal=footer">{site.owner.email}</a></p>
+      <p class="ft-t">Fragen, Hinweise, Kritik: <a href={kontakt} class="plausible-event-name=Kontakt+Klick plausible-event-kanal=footer">{site.owner.email}</a>. Wir antworten persönlich, ohne medizinische Beratung.</p>
     </div>
     <nav aria-label="Seiten">
       <p class="ft-h">Seite</p>

@@ -47,7 +47,7 @@ src/
   pages/ernaehrungsplan/            Formular, Danke-Seite, plan/[id].astro (Planseite, noindex, Vorlieben als ?v=)
   pages/grafiken/                   Grafiken mit Download und Einbettungscode; sitemap-grafiken.xml.ts
   pages/danke.astro                 Danke-Seite der Warteliste (noindex)
-  pages/newsletter/danke.astro      Danke-Seite des Newsletter-Formulars im Kopf (noindex)
+  pages/newsletter/danke.astro      Ziel für unbekannte Formular-Quellen, verweist auf die Formulare mit Newsletter-Häkchen (noindex)
   pages/erfahrungen.astro           Erfahrungsberichte einreichen (Tally ODOJWR, nur bei site.experienceForm.live)
   pages/ueber.astro, impressum.astro, datenschutz.astro, 404.astro
   pages/llms.txt.ts                 /llms.txt für KI-Suchsysteme, beim Build aus den Sammlungen erzeugt
@@ -64,14 +64,14 @@ src/
   lib/bewegung.ts                   Bewegung beim Scrollen (Einblenden, Hochzählen, Balken, Fortschritt)
   lib/glossar.ts, grafik-daten.ts   Begriffserkennung für die Glossar-Box; Datentabellen unter den Grafiken
   lib/ernaehrungsplan-ansicht.ts    HTML des Plans (Build und Browser)
-  components/                       Header, Footer, Logo, SeitenKopf, Cta, Pfeil · Formulare: WaitlistForm, ChecklisteForm, NewsletterPanel ·
+  components/                       Header, Footer, Logo, SeitenKopf, Cta, Pfeil · Formulare: WaitlistForm, ChecklisteForm ·
                                     Startseite und Grafik: Absetzkurve, PreisBalken, ProductTeaser (Programm-Hinweis), MarktradarTeaser, ErnaehrungsplanTeaser ·
                                     Artikel: ArticlePage, HubPage, AuthorBox, GlossarBox, ChecklistBox, Faq, Fn, Footnotes, AffiliateLinks, ShareButtons, GrafikDaten, GrafikEinbinden
   layouts/Base.astro                <head> mit SEO-Metadaten, JSON-LD, Plausible, Schriftvorladung
   styles/global.css                 Design „Kalk“: Tailwind-Theme (Farben mit fester Bedeutung, Mona Sans), Prose-Styles
   styles/seiten.css                 Bausteine der Unterseiten (Präfix k-), eingebunden über SeitenKopf.astro
 api/
-  anmeldung.js                      Formulare Warteliste, Kopf-Newsletter, Checkliste → MailerLite (Double-Opt-in)
+  anmeldung.js                      Formulare Warteliste und Checkliste → MailerLite (Double-Opt-in)
   ernaehrungsplan.js                Ernährungsplan anfordern → MailerLite (Felder plan, vorlieben)
   newsletter.js                     Tally-Webhook (Erfahrungsformular) → MailerLite; liefert auch die Gruppenlogik für anmeldung.js
 scripts/
@@ -106,15 +106,15 @@ Neuen Artikel anlegen: Markdown-Datei in `src/content/wissen/` mit dem Frontmatt
    |---|---|
    | `MAILERLITE_API_KEY` | Pflicht. API-Schlüssel |
    | `MAILERLITE_GROUP_NEWSLETTER` | Pflicht. ID der Gruppe „Newsletter“ (ersatzweise `MAILERLITE_GROUP_ID`) |
-   | `MAILERLITE_GROUP_WARTELISTE` | Optional. ID der Gruppe „Warteliste“. Ohne sie landet die Warteliste in der Newsletter-Gruppe mit `quelle=warteliste`, und die Einwilligung nennt Warteliste UND Newsletter. Sobald gesetzt: in `src/data/site.ts` `waitlist.ownGroup` auf `true`, dann ist der Newsletter ein freiwilliges Zusatz-Häkchen |
-   | `MAILERLITE_GROUP_CHECKLISTE` | Empfohlen. ID der Gruppe „Checkliste“. Ohne sie funktioniert das Checklisten-Formular nur mit gesetztem Newsletter-Häkchen (sonst Fehlermeldung, das PDF bleibt auf der Danke-Seite erreichbar) |
+   | `MAILERLITE_GROUP_WARTELISTE` | Pflicht (Production und Preview). ID der Gruppe „Warteliste“. `site.waitlist.ownGroup` ist `true`: Die Einwilligung gilt der Warteliste, der Newsletter ist ein freiwilliges Zusatz-Häkchen. Fehlt die Variable, legt `api/anmeldung.js` nichts an (`?fehler=konfiguration`), statt die Adresse in die Newsletter-Gruppe zu legen |
+   | `MAILERLITE_GROUP_CHECKLISTE` | Pflicht. ID der Gruppe „Checkliste“. Fehlt sie, legt das Checklisten-Formular nichts an (`?fehler=konfiguration`; das PDF bleibt auf der Danke-Seite erreichbar) |
    | `MAILERLITE_GROUP_ERNAEHRUNGSPLAN` | Pflicht für den Ernährungsplan. ID der Gruppe „Ernährungsplan“; die Automation dazu steht in `docs/ERNAEHRUNGSPLAN.md` |
-   | `TALLY_SIGNING_SECRET` | Empfohlen. Frei gewählte lange Zeichenkette für den Tally-Webhook des Erfahrungsformulars |
+   | `TALLY_SIGNING_SECRET` | Pflicht. Frei gewählte lange Zeichenkette für den Tally-Webhook des Erfahrungsformulars; ohne sie lehnt `api/newsletter.js` jeden POST mit 401 ab |
 
-   Die Formulare (`WaitlistForm`, `ChecklisteForm`, `NewsletterPanel` im Kopf) posten an `/api/anmeldung/` und leiten auf `/danke/`, `/checkliste/danke/` bzw. `/newsletter/danke/` weiter. Test: Wartelisten-Formular auf der Startseite mit eigener Adresse absenden → Weiterleitung auf `/danke/` → Bestätigungs-Mail von MailerLite → Adresse in der richtigen Gruppe, Feld `quelle=warteliste`. Zum Schluss `site.newsletter.provider` in `src/data/site.ts` prüfen; Datenschutz und Danke-Seiten folgen diesem Wert.
+   Die Formulare (`WaitlistForm`, `ChecklisteForm`) posten an `/api/anmeldung/` und leiten auf `/danke/` bzw. `/checkliste/danke/` weiter; unbekannte Quellen (auch das frühere Kopf-Formular) landen auf `/newsletter/danke/?fehler=eingabe`. Test: Wartelisten-Formular auf der Startseite mit eigener Adresse absenden → Weiterleitung auf `/danke/` → Bestätigungs-Mail von MailerLite → Adresse in der richtigen Gruppe, Feld `quelle=warteliste`. Zum Schluss `site.newsletter.provider` in `src/data/site.ts` prüfen; Datenschutz und Danke-Seiten folgen diesem Wert.
 5. **Tally** (nur noch das Erfahrungsformular `ODOJWR`; Vorbestell- und Checklisten-Formular sind abgelöst): Formular mit optionalem Newsletter-Kästchen (Wortlaut in `docs/NEWSLETTER.md`, Abschnitt 2a), Webhook auf `https://<domain>/api/newsletter/` mit dem Signing Secret aus `TALLY_SIGNING_SECRET`. Erst nach dem Veröffentlichen `site.experienceForm.live` auf `true` setzen; vorher zeigt `/erfahrungen/` nur die Regeln und die E-Mail-Adresse.
 6. **Plausible:** plausible.io → Site anlegen → *Settings → Site installation*: Skript-ID (`pa-…`) in `src/data/site.ts` bzw. `PUBLIC_PLAUSIBLE_SCRIPT_ID` eintragen. Unter *Settings → Tracking* Outbound links, Custom event tracking und Custom properties einschalten. Unter *Goals* anlegen:
-   - Pageview-Ziele: `/danke/` (Warteliste), `/checkliste/danke/`, `/newsletter/danke/`, `/ernaehrungsplan/danke/`
+   - Pageview-Ziele: `/danke/` (Warteliste), `/checkliste/danke/`, `/ernaehrungsplan/danke/`
    - Custom Events (Name im Code, Properties in Klammern): `Warteliste Klick` (`position`), `Warteliste Eintragen` (`position`), `Newsletter Klick`, `Newsletter Eintragen` (`position`), `Kontakt Klick` (`kanal`), `Preisfrage` (`preis`), `Affiliate Klick` (`asin`, `position`), `Teilen Klick` (`kanal`), `Checkliste Klick` (`position`), `Checkliste Anfordern`, `Checkliste Download`, `Ernaehrungsplan Teaser`, `Ernaehrungsplan Anfrage`, `Grafik einbinden`
 
    Prüfen: Seite aufrufen, in Plausible erscheint der Besuch in Echtzeit. Die Liste der Events entsteht aus den Klassen `plausible-event-name=…` im Quelltext (`grep -rn "plausible-event-name" src`).
@@ -135,7 +135,7 @@ Neuen Artikel anlegen: Markdown-Datei in `src/content/wissen/` mit dem Frontmatt
 - [ ] `SITE_URL` gesetzt; `public/robots.txt` Sitemap-Zeile auf die echte Domain geändert
 - [ ] MailerLite eingerichtet (Schritt 4): Double-Opt-in an, Gruppen und Felder angelegt, Umgebungsvariablen in Vercel gesetzt, neu deployt
 - [ ] Wartelisten-Formulare getestet (Startseite: Hero und unterer Block, dort mit Häkchen „Starterpaket“): Absenden → `/danke/` → Bestätigungs-Mail → Adresse in MailerLite mit `quelle=warteliste` (und `starterpaket=ja`)
-- [ ] Checklisten-Formular und Kopf-Newsletter getestet (`/checkliste/danke/` mit PDF, `/newsletter/danke/`)
+- [ ] Checklisten-Formular getestet (`/checkliste/danke/` mit PDF); Preview ohne Gruppen-Variable zeigt den Fehlertext statt einer Anmeldung
 - [ ] Plausible zählt: Besuch, Events `Warteliste Klick` und `Warteliste Eintragen`, Ziel `/danke/`
 - [ ] Keine Cookies: Browser-DevTools → Application → Cookies muss leer sein (auch auf `/erfahrungen/` mit geladenem Tally-Formular)
 - [ ] Seite auf dem Handy geprüft (Hero, Programm, Absetzkurve, Warteliste, FAQ, Artikel); Bewegung mit `prefers-reduced-motion` und ohne JavaScript geprüft (Endzustand sichtbar)

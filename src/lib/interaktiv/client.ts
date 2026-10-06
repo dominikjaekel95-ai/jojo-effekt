@@ -53,11 +53,7 @@ function zaehle(el: HTMLElement, ziel: string, von?: number, verz = 0) {
   const start = von ?? (z.v >= 0 ? 0 : 0);
   const alt = laufend.get(el);
   if (alt) cancelAnimationFrame(alt);
-  const dauer = 1100;
-  // Breite halten, damit nichts springt
-  el.style.minWidth = '';
-  el.textContent = ziel;
-  el.style.minWidth = `${el.getBoundingClientRect().width}px`;
+  const dauer = 1000;
   el.textContent = schreib(start, z);
   let t0 = 0;
   const schritt = (t: number) => {
@@ -65,10 +61,7 @@ function zaehle(el: HTMLElement, ziel: string, von?: number, verz = 0) {
     const k = clamp((t - t0) / dauer, 0, 1);
     el.textContent = k >= 1 ? ziel : schreib(start + (z.v - start) * EASE(k), z);
     if (k < 1) laufend.set(el, requestAnimationFrame(schritt));
-    else {
-      laufend.delete(el);
-      el.style.minWidth = '';
-    }
+    else laufend.delete(el);
   };
   laufend.set(el, requestAnimationFrame(schritt));
 }

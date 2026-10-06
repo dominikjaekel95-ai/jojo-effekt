@@ -119,7 +119,7 @@ export const sources: Record<string, Source> = {
     full:
       'Verordnung (EU) Nr. 432/2012 der Kommission zur Festlegung einer Liste zulässiger anderer gesundheitsbezogener Angaben über Lebensmittel; ergänzt u. a. durch Verordnung (EU) 2017/672 (Kreatin und Krafttraining ab 55 Jahren).',
     url: 'https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32012R0432',
-    note: 'Grundlage aller gesundheitsbezogenen Aussagen zum Set.',
+    note: 'Grundlage aller gesundheitsbezogenen Aussagen zu Lebensmitteln und Nahrungsergänzung auf dieser Seite.',
   },
   kreider2017: {
     id: 'kreider2017',

@@ -41,7 +41,7 @@ function training(ctx: Ctx): string {
       `<div class="pl-raster" data-ia-wahl="block" role="group" aria-label="Zwei-Wochen-Blöcke">${spalten}</div>` +
       `<div class="ia-legende"><span><i class="ia-lg ia-lg-punkt pl-lg-e"></i>Krafteinheit</span><span><i class="ia-lg pl-lg-schwer"></i>Woche 11 und 12: mehr Widerstand</span></div>` +
       `<p class="pl-ziel" aria-live="polite"${proWahl('x', 'block', ziele)}>${esc(ziele['1'])}</p>`,
-    fuss: `Tippe einen Block an. Regel für die ganze Zeit: Schaffst du in allen Sätzen 12 saubere Wiederholungen, wird die Übung beim nächsten Mal schwerer, nie länger.${hat(ctx, 'acsm2009') ? ` 8 bis 12 Wiederholungen in 2 bis 3 Sätzen empfiehlt das ACSM für Einsteiger.${fn(ctx, 'acsm2009')}` : ''}`,
+    fuss: `Tippe einen Block an. Regel für die ganze Zeit: Schaffst du in allen Sätzen 12 saubere Wiederholungen, wird die Übung beim nächsten Mal schwerer, nie länger.${hat(ctx, 'acsm2009') ? ` Das ACSM empfiehlt Einsteigern 8 bis 12 Wiederholungen in 1 bis 3 Sätzen;${fn(ctx, 'acsm2009')} der Plan nutzt 2 bis 3.` : ''}`,
   });
 }
 

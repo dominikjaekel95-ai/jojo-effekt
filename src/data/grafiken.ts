@@ -316,7 +316,7 @@ export const grafiken: Grafik[] = [
     subtitle: `Apothekenverkaufspreise für Selbstzahler als Größenordnung, Stand ${fmtDate(preise.stand)}, aus der monatlichen Erhebung im Marktradar`,
     alt: `Balkendiagramm der monatlichen Selbstzahlerpreise für Abnehmspritzen und die Abnehmtablette als Größenordnung, gerundet auf 5 Euro, Stand ${fmtDate(preise.stand)}: ${preise.zeilen.map((z) => `${z.praeparat} ${z.monat}`).join('; ')}.${kassenPraeparate.length ? ` ${kassenPraeparate.join(', ')} ist nur für Typ-2-Diabetes zugelassen und dort Kassenleistung.` : ''}`,
     sources: ['medipreis2026', 'tabletteApotheken2026'],
-    used: [{ href: '/marktradar/#preise', label: 'Marktradar: Preise' }],
+    used: [{ href: '/abnehmspritze-kosten/', label: 'Was Abnehmspritzen kosten' }, { href: '/marktradar/#preise', label: 'Marktradar: Preise' }],
     monatlich: true,
   },
 ];

@@ -58,11 +58,6 @@ Den Zeitplan für dein Datum rechnet das Werkzeug [Zeitplan nach der letzten Dos
 
 <div data-interaktiv="zeitachse" data-wirkstoffe="semaglutid,tirzepatid" data-weihnachten="ja"></div>
 
-<figure class="my-8">
-  <img src="/grafiken/zeitachse-nach-letzter-dosis.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Semaglutid (Halbwertszeit etwa eine Woche) ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar, Tirzepatid (Halbwertszeit etwa fünf Tage) nach etwa 25 Tagen. Der Appetit kehrt, abgeleitet aus dem sinkenden Wirkstoffspiegel, ab Woche 2 bis 5 zurück; die Gewichtszunahme ist ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Als Vorschlag dieser Seite ist ein ärztlicher Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis markiert." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Die ersten 20 Wochen nach der letzten Dosis: Halbwertszeiten laut Fachinformation, Zunahme laut Meta-Analyse.<sup><a href="#fn-wu2025">5</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
-
 ## Was in Studien gegen die Feiertagszunahme hilft
 
 Wiegen plus ein paar einfache Regeln verhindern die Feiertagszunahme. In einer randomisierten Studie mit 272 Erwachsenen über zwei Weihnachtsperioden wogen die Teilnehmenden, die sich mindestens zweimal pro Woche wogen, das Gewicht notierten und zehn Tipps zum Gewichtsmanagement bekamen, nach den Feiertagen 0,49 kg weniger als die Vergleichsgruppe mit einem Faltblatt: −0,13 kg gegenüber +0,37 kg.<sup><a href="#fn-mason2018">9</a></sup> Die Vergleichsgruppe nahm also genau die Feiertagszunahme zu, die auch die Beobachtungsstudien zeigen; die Wiegegruppe nicht.

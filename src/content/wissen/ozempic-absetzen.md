@@ -42,11 +42,6 @@ Hinzu kommt: Der Gewichtsverlust unter Ozempic verbessert bei Typ-2-Diabetes den
 
 Semaglutid hat eine Halbwertszeit von etwa einer Woche.<sup><a href="#fn-fachinfoOzempic">1</a></sup> Nach fünf Wochen ist der größte Teil abgebaut, nach etwa sieben Wochen fast alles. Der Appetit kommt meist in Woche 2 bis 5 zurück; bei Diabetes zeigen sich Blutzuckerveränderungen oft schon in den ersten zwei Wochen. Die Gewichtszunahme wird in Studien ab etwa Woche 8 nach dem Absetzen messbar.<sup><a href="#fn-wu2025">4</a></sup>
 
-<figure class="my-8">
-  <img src="/grafiken/wirkstoff-abbau-nach-letzter-dosis.png" alt="Drei Abbaukurven nach der letzten Dosis, gerechnet aus der Halbwertszeit laut Fachinformation: Liraglutid (Saxenda) hat eine Halbwertszeit von etwa 13 Stunden und ist nach etwa 3 Tagen weitgehend abgebaut; Tirzepatid (Mounjaro) etwa 5 Tage, weitgehend abgebaut nach etwa 25 Tagen; Semaglutid (Wegovy, Ozempic) etwa 1 Woche, weitgehend abgebaut nach etwa 5 Wochen und laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar. Faustregel: nach fünf Halbwertszeiten weitgehend abgebaut." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Rechnerischer Wirkstoffabbau nach der letzten Dosis: Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar; zum Vergleich Liraglutid und Tirzepatid.<sup><a href="#fn-fachinfoOzempic">1</a>, <a href="#fn-fachinfoWegovy">8</a>, <a href="#fn-fachinfoSaxenda">9</a>, <a href="#fn-fachinfoMounjaro">10</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
-
 ## Was mit dem Gewicht passiert
 
 Eigene Absetz-Studien zum Gewicht gibt es mit Ozempic-Dosen nicht; die Daten stammen aus den Wegovy-Studien mit 2,4 mg desselben Wirkstoffs. Dort waren ein Jahr nach dem Absetzen zwei Drittel des verlorenen Gewichts zurück.<sup><a href="#fn-wilding2022ext">3</a></sup> Für Ozempic ist die Ausgangslage etwas anders: Die Dosis ist niedriger, der Verlust kleiner. In STEP 2, einer Studie mit Menschen mit Typ-2-Diabetes, verloren Teilnehmende unter 1 mg Semaglutid in 68 Wochen im Mittel 7,0 %, unter 2,4 mg 9,6 %, unter Placebo 3,4 %.<sup><a href="#fn-davies2021step2">2</a></sup> Weniger Verlust bedeutet weniger, das zurückkommen kann; am Mechanismus ändert das nichts. Die hormonellen Anpassungen nach jedem Gewichtsverlust, mehr Ghrelin und weniger Leptin, waren in einer Studie noch ein Jahr nach der Diät messbar.<sup><a href="#fn-sumithran2011">5</a></sup>
@@ -55,8 +50,6 @@ Eigene Absetz-Studien zum Gewicht gibt es mit Ozempic-Dosen nicht; die Daten sta
   <img src="/grafiken/step-2-typ-2-diabetes.png" alt="Balkendiagramm aus der Studie STEP 2 mit Erwachsenen mit Übergewicht und Typ-2-Diabetes: Nach 68 Wochen lag das Gewicht unter Semaglutid 2,4 Milligramm im Mittel 9,6 Prozent niedriger, unter Semaglutid 1,0 Milligramm 7,0 Prozent und unter Placebo 3,4 Prozent. Weniger Verlust heißt weniger, was nach dem Absetzen zurückkommen kann." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">STEP 2 mit Menschen mit Typ-2-Diabetes: −9,6 % unter Semaglutid 2,4 mg, −7,0 % unter Semaglutid 1,0 mg, −3,4 % unter Placebo nach 68 Wochen.<sup><a href="#fn-davies2021step2">2</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
-
-<div data-interaktiv="absetzkurve" data-acht="ja"></div>
 
 ## Off-label zum Abnehmen: was beim Absetzen zu beachten ist
 

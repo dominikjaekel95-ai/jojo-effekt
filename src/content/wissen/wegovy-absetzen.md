@@ -62,11 +62,6 @@ Eine Meta-Analyse über verschiedene Adipositas-Medikamente zeigt, wann es losge
 
 <div data-interaktiv="absetzkurve" data-acht="ja"></div>
 
-<figure class="my-8">
-  <img src="/grafiken/weiter-oder-placebo.png" alt="Balkendiagramm: In STEP 4 nahmen Teilnehmende unter fortgeführtem Semaglutid in 48 Wochen weitere 7,9 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 6,9 Prozent zu. In SURMOUNT-4 nahmen Teilnehmende unter fortgeführtem Tirzepatid in 52 Wochen weitere 5,5 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 14 Prozent zu." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">STEP 4 im Vergleich mit SURMOUNT-4: Gewicht nach dem Wechsel auf Placebo gegenüber Fortführung.<sup><a href="#fn-rubino2021">4</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
-
 ## Ausschleichen: möglich, aber unbelegt
 
 Wegovy gibt es in fünf Dosisstufen. Deshalb liegt es nahe, statt abrupt aufzuhören die Dosis über Wochen zu reduzieren. Die Fachinformation sieht das nicht vor, und die Studien haben abrupt abgesetzt; ein Entzugssyndrom trat dabei nicht auf.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Ob langsames Reduzieren den Wiederanstieg abmildert, ist nicht durch randomisierte Studien belegt. Das mögliche Argument ist psychologisch: Man erlebt den zurückkehrenden Appetit in Etappen und kann Routinen anpassen. Die Entscheidung, ob und wie du absetzt, trifft deine Ärztin oder dein Arzt mit dir.

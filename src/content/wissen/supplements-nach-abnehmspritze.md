@@ -63,8 +63,6 @@ Grundregel der Verbraucherzentralen: Nahrungsergänzungsmittel sind Lebensmittel
 
 **Kreatin** ist das am besten untersuchte Supplement für Kraft und Muskelmasse in Verbindung mit Training.<sup><a href="#fn-kreider2017">4</a></sup> Ohne Training bringt es fast nichts; mit zwei Krafteinheiten pro Woche macht es jede Einheit ein Stück wirksamer. Krafttraining selbst ist der Faktor mit der besten Evidenz gegen den Verlust an fettfreier Masse.<sup><a href="#fn-sardeli2018">9</a></sup> In den ersten zwei Wochen steigt das Gewicht durch Wasser um 0,5 bis 2 kg; das ist kein Fett. Alles Weitere unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
 
-<div data-interaktiv="streifen" data-vorlage="kreatin-woche"></div>
-
 **Ballaststoffe** sind die Nebenrolle mit ehrlichem Status: Sie gehören zu jeder Mahlzeit, und die meisten Menschen erreichen die 30 g nicht. Ein Supplement ist nur die zweite Wahl nach Hülsenfrüchten, Vollkorn und Gemüse. Wichtig: langsam steigern und viel trinken.
 
 ## Einzelne Supplements im Detail

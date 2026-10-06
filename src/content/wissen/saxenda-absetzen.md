@@ -42,11 +42,6 @@ Semaglutid hat eine Halbwertszeit von etwa einer Woche, Tirzepatid von etwa fün
 - **Ab Woche 1:** Der Wirkstoff ist praktisch weg. Was jetzt zählt, ist ausschließlich Ernährung und Bewegung.
 - **Ab Woche 8:** In einer Meta-Analyse über verschiedene Adipositas-Medikamente wurde die Gewichtszunahme etwa ab Woche 8 nach dem Absetzen messbar.<sup><a href="#fn-wu2025">5</a></sup> Bei Liraglutid mit seiner kurzen Halbwertszeit ist ein früherer Beginn plausibel.
 
-<figure class="my-8">
-  <img src="/grafiken/wirkstoff-abbau-nach-letzter-dosis.png" alt="Drei Abbaukurven nach der letzten Dosis, gerechnet aus der Halbwertszeit laut Fachinformation: Liraglutid (Saxenda) hat eine Halbwertszeit von etwa 13 Stunden und ist nach etwa 3 Tagen weitgehend abgebaut; Tirzepatid (Mounjaro) etwa 5 Tage, weitgehend abgebaut nach etwa 25 Tagen; Semaglutid (Wegovy, Ozempic) etwa 1 Woche, weitgehend abgebaut nach etwa 5 Wochen und laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar. Faustregel: nach fünf Halbwertszeiten weitgehend abgebaut." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Rechnerischer Wirkstoffabbau nach der letzten Dosis: Liraglutid ist nach etwa drei Tagen weitgehend abgebaut, Tirzepatid nach etwa 25 Tagen, Semaglutid nach etwa fünf Wochen.<sup><a href="#fn-fachinfoSaxenda">1</a>, <a href="#fn-fachinfoWegovy">10</a>, <a href="#fn-fachinfoMounjaro">11</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
-
 Es gibt bei Saxenda also kein Übergangsfenster von mehreren Wochen, in dem die Wirkung langsam ausläuft. Die Routinen müssen stehen, bevor die letzte Spritze gesetzt ist.
 
 <div data-interaktiv="zeitachse" data-wirkstoffe="liraglutid,semaglutid"></div>

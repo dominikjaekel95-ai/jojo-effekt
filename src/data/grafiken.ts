@@ -35,7 +35,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Mittlere Gewichtsänderung gegenüber dem Start: 68 Wochen Semaglutid, danach 52 Wochen ohne Medikament (STEP-1-Verlängerung)',
     alt: 'Liniendiagramm: Unter Semaglutid 2,4 mg sinkt das Gewicht in 68 Wochen im Mittel um 17,3 Prozent, unter Placebo um 2,0 Prozent. In den 52 Wochen nach dem Absetzen steigt es wieder; nach insgesamt 120 Wochen liegt es bei minus 5,6 Prozent (Semaglutid) und minus 0,1 Prozent (Placebo). Zwei Drittel des Verlusts, 11,6 Prozentpunkte, sind nach einem Jahr ohne Medikament wieder da. Messpunkte Woche 0, 68 und 120, Verlauf dazwischen schematisch.',
     sources: ['wilding2022ext'],
-    used: [{ href: '/wissen/abnehmspritze-absetzen/', label: 'Abnehmspritze absetzen' }],
+    used: [],
   },
   {
     id: 'absetzkurve-step-1-saeulen',
@@ -43,7 +43,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Dieselben Daten als zwei Säulen: verloren, zurück, geblieben',
     alt: 'Zwei Säulen: Nach 68 Wochen Semaglutid sind im Mittel 17,3 Prozent des Gewichts verloren. Ein Jahr nach dem Absetzen sind 11,6 Prozentpunkte wieder zurück, 5,6 Prozent bleiben; das entspricht zwei Dritteln des Verlusts, die zurückkommen.',
     sources: ['wilding2022ext'],
-    used: [{ href: '/wissen/jojo-effekt-abnehmspritze/', label: 'Jojo-Effekt nach der Abnehmspritze' }],
+    used: [],
     variantOf: 'absetzkurve-step-1',
   },
   {
@@ -61,11 +61,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Wirkstoffabbau, Appetit, messbare Zunahme und Kontrolltermin auf einer Zeitachse',
     alt: 'Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Semaglutid (Halbwertszeit etwa eine Woche) ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar, Tirzepatid (Halbwertszeit etwa fünf Tage) nach etwa 25 Tagen. Der Appetit kehrt, abgeleitet aus dem sinkenden Wirkstoffspiegel, ab Woche 2 bis 5 zurück; die Gewichtszunahme ist ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Als Vorschlag dieser Seite ist ein ärztlicher Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis markiert.',
     sources: ['fachinfoWegovy', 'fachinfoMounjaro', 'wu2025'],
-    used: [
-      { href: '/wissen/abnehmspritze-absetzen/', label: 'Abnehmspritze absetzen' },
-      { href: '/wissen/', label: 'Wissensbereich' },
-      { href: '/wissen/feiertage-nach-abnehmspritze/', label: 'Feiertage nach der Abnehmspritze' },
-    ],
+    used: [{ href: '/wissen/', label: 'Wissensbereich' }],
   },
   {
     id: 'zeitachse-phasen',
@@ -82,7 +78,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Anteil von Fettmasse und fettfreier Masse am Gewichtsverlust, STEP-1-Substudie mit DXA-Messung',
     alt: 'Balken, der den Gewichtsverlust nach 68 Wochen Semaglutid in einer DXA-Substudie mit 140 Teilnehmenden aufteilt: rund 60 Prozent Fettmasse und rund 40 Prozent fettfreie Masse, also Muskeln, Organe, Knochen und Wasser; wie viel davon Muskel war, wurde nicht getrennt gemessen. In Diätstudien hielt Krafttraining den Verlust an fettfreier Masse klein; empfohlen sind Krafttraining an mindestens zwei Tagen pro Woche und 1,2 bis 1,6 Gramm Protein pro Kilogramm Körpergewicht am Tag.',
     sources: ['wilding2021dxa', 'sardeli2018', 'leidy2015', 'who2020'],
-    used: [{ href: '/wissen/muskelabbau-abnehmspritze/', label: 'Muskelabbau bei der Abnehmspritze' }],
+    used: [],
   },
   {
     id: 'training-s-lite',
@@ -90,10 +86,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'S-LiTE-Nachbeobachtung: Gewichtszunahme im Jahr ohne Behandlung, Liraglutid allein gegenüber den Trainingsgruppen',
     alt: 'Punktdiagramm mit 95-Prozent-Konfidenzintervallen aus der S-LiTE-Nachbeobachtung: Im Jahr ohne Behandlung (Woche 52 bis 104) nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein ohne Medikament (2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau ein Jahr nach Therapieende erhalten. Studienablauf: 8 Wochen kalorienarme Diät, 52 Wochen Placebo, Training, Liraglutid oder beides, danach 52 Wochen ohne Behandlung.',
     sources: ['jensen2024'],
-    used: [
-      { href: '/wissen/krafttraining-nach-abnehmspritze/', label: 'Krafttraining nach der Abnehmspritze' },
-      { href: '/wissen/gewicht-halten-nach-abnehmspritze/', label: 'Gewicht halten nach der Abnehmspritze' },
-    ],
+    used: [{ href: '/wissen/gewicht-halten-nach-abnehmspritze/', label: 'Gewicht halten nach der Abnehmspritze' }],
   },
   {
     id: 'wirksamkeit-zulassungsstudien',
@@ -101,7 +94,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Mittlere Änderung des Körpergewichts, Wirkstoff gegenüber Placebo; fünf große Studien, eine davon mit nicht zugelassener Dosis',
     alt: 'Balkendiagramm aus fünf großen Studien, mittlere Änderung des Körpergewichts: STEP 1 (Semaglutid 2,4 Milligramm Spritze, 68 Wochen) minus 14,9 Prozent gegenüber minus 2,4 Prozent unter Placebo; OASIS 4 (Semaglutid-Tablette 25 Milligramm, 64 Wochen) minus 13,6 gegenüber minus 2,2; OASIS 1 (Semaglutid-Tablette 50 Milligramm, nicht zugelassen, 68 Wochen) minus 15,1 gegenüber minus 2,4; SURMOUNT-1 (Tirzepatid 15 Milligramm, höchster Studienarm, 72 Wochen) minus 20,9 gegenüber minus 3,1; SCALE (Liraglutid 3 Milligramm, 56 Wochen) minus 8,0 gegenüber minus 2,6 Prozent. Kein direkter Vergleich zwischen den Studien.',
     sources: ['wilding2021step1', 'wharton2025oasis4', 'knop2023oasis1', 'jastreboff2022', 'pisunyer2015'],
-    used: [{ href: '/wissen/abnehmpille-oder-spritze/', label: 'Abnehmpille oder Spritze' }],
+    used: [],
   },
   {
     id: 'weiter-oder-placebo',
@@ -109,10 +102,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Gewicht nach dem Wechsel auf Placebo gegenüber Fortführung',
     alt: 'Balkendiagramm: In STEP 4 nahmen Teilnehmende unter fortgeführtem Semaglutid in 48 Wochen weitere 7,9 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 6,9 Prozent zu. In SURMOUNT-4 nahmen Teilnehmende unter fortgeführtem Tirzepatid in 52 Wochen weitere 5,5 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 14 Prozent zu.',
     sources: ['rubino2021', 'aronne2024'],
-    used: [
-      { href: '/wissen/jojo-effekt-abnehmspritze/', label: 'Jojo-Effekt nach der Abnehmspritze' },
-      { href: '/wissen/wegovy-absetzen/', label: 'Wegovy absetzen' },
-    ],
+    used: [{ href: '/wissen/jojo-effekt-abnehmspritze/', label: 'Jojo-Effekt nach der Abnehmspritze' }],
   },
   {
     id: 'halbwertszeiten-praeparate',
@@ -120,10 +110,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Halbwertszeit laut Fachinformation und die Zeit bis zum weitgehenden Abbau, drei Wirkstoffe',
     alt: 'Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten.',
     sources: ['fachinfoWegovy', 'fachinfoOzempic', 'fachinfoRybelsus', 'fachinfoMounjaro', 'fachinfoSaxenda'],
-    used: [
-      { href: '/wissen/abnehmpille-oder-spritze/', label: 'Abnehmpille oder Spritze' },
-      { href: '/wissen/mounjaro-absetzen/', label: 'Mounjaro absetzen' },
-    ],
+    used: [],
   },
   {
     id: 'warum-das-gewicht-zurueckkommt',
@@ -139,10 +126,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Tagesmenge nach Körpergewicht im Zielkorridor von 1,2 bis 1,6 g pro kg',
     alt: 'Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 Gramm pro Mahlzeit.',
     sources: ['leidy2015'],
-    used: [
-      { href: '/wissen/protein-abnehmspritze/', label: 'Protein bei der Abnehmspritze' },
-      { href: '/wissen/ernaehrung-nach-abnehmspritze/', label: 'Ernährung nach der Abnehmspritze' },
-    ],
+    used: [],
   },
   {
     id: 'haarausfall-zeitverlauf',
@@ -150,7 +134,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Telogenes Effluvium in Monaten nach dem Auslöser, mit dem, was sich beeinflussen lässt',
     alt: 'Zeitachse des telogenen Effluviums über zwölf Monate, schematisch: Nach schnellem Gewichtsverlust wechseln viele Haare in die Ruhephase, zwei bis drei Monate später beginnt diffuser Haarausfall, der meist innerhalb von etwa sechs Monaten nach Beginn abklingt, wenn der Auslöser weggefallen ist; danach wachsen die Haare nach. Beeinflussbar sind Protein (1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht am Tag), der Eisenwert sowie Zink und Biotin bei nachgewiesener Lücke; länger als sechs Monate, fleckig oder mit Müdigkeit und Frieren ärztlich abklären.',
     sources: ['malkud2015', 'leidy2015', 'almandoz2024'],
-    used: [{ href: '/wissen/haarausfall-abnehmspritze/', label: 'Haarausfall bei der Abnehmspritze' }],
+    used: [],
   },
   {
     id: 'abnehmpille-belegt-und-offen',
@@ -166,7 +150,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Gesamtkreatin im Muskel mit 3 g pro Tag und mit Ladephase, Studie mit 31 Männern',
     alt: 'Zwei Verläufe des Kreatinspeichers im Muskel aus einer Studie mit 31 Männern, zwischen den Messpunkten schematisch: Mit 3 Gramm Kreatin pro Tag stieg das Gesamtkreatin im Muskel allmählich und lag nach 28 Tagen etwa 20 Prozent über dem Ausgangswert. Mit einer Ladephase von 20 Gramm pro Tag über 6 Tage war derselbe Anstieg von etwa 20 Prozent nach 6 Tagen erreicht; ohne weitere Einnahme lag der Wert 30 Tage nach dem Ende wieder beim Ausgangswert. Mit dem Speicher steigt das Wasser in der Muskelzelle; das zeigt die Waage, Fett ist es nicht.',
     sources: ['hultman1996', 'kreider2017'],
-    used: [{ href: '/wissen/kreatin-abnehmspritze/', label: 'Kreatin und Abnehmspritze' }],
+    used: [],
   },
   {
     id: 'wirkstoff-abbau-nach-letzter-dosis',
@@ -174,10 +158,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Dieselben Halbwertszeiten als Abbaukurven: Liraglutid, Tirzepatid, Semaglutid',
     alt: 'Drei Abbaukurven nach der letzten Dosis, gerechnet aus der Halbwertszeit laut Fachinformation: Liraglutid (Saxenda) hat eine Halbwertszeit von etwa 13 Stunden und ist nach etwa 3 Tagen weitgehend abgebaut; Tirzepatid (Mounjaro) etwa 5 Tage, weitgehend abgebaut nach etwa 25 Tagen; Semaglutid (Wegovy, Ozempic) etwa 1 Woche, weitgehend abgebaut nach etwa 5 Wochen und laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar. Faustregel: nach fünf Halbwertszeiten weitgehend abgebaut.',
     sources: ['fachinfoSaxenda', 'fachinfoMounjaro', 'fachinfoWegovy', 'fachinfoOzempic'],
-    used: [
-      { href: '/wissen/saxenda-absetzen/', label: 'Saxenda absetzen' },
-      { href: '/wissen/ozempic-absetzen/', label: 'Ozempic absetzen' },
-    ],
+    used: [],
     ziel: [{ href: '/wissen/wegovy-absetzen/', label: 'Wegovy absetzen' }],
     variantOf: 'halbwertszeiten-praeparate',
   },
@@ -196,7 +177,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Die ersten 20 Wochen nach der letzten Dosis: Wirkstoff, Appetit, Hungerhormone, Gewicht',
     alt: 'Zeitachse über 20 Wochen nach der letzten Dosis: Semaglutid baut sich mit einer Halbwertszeit von etwa einer Woche ab und ist nach etwa 5 bis 7 Wochen weitgehend weg. Der Appetit kommt, abgeleitet aus dem sinkenden Wirkstoffspiegel, in Woche 2 bis 5 zurück und bleibt. Die Hungerhormone sind nach einer Diät verschoben, mehr Ghrelin und weniger Leptin, noch ein Jahr später messbar (Studie ohne Medikament). Die Gewichtszunahme ist erst ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Markiert ist das Fenster von Woche 2 bis 8, in dem der Hunger zurück ist, die Waage aber noch wenig zeigt.',
     sources: ['fachinfoWegovy', 'sumithran2011', 'wu2025'],
-    used: [{ href: '/wissen/heisshunger-nach-abnehmspritze/', label: 'Heißhunger nach der Abnehmspritze' }],
+    used: [],
   },
   {
     id: 'schlaf-und-hungerhormone',
@@ -204,7 +185,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Leptin, Ghrelin, Hunger und Appetit nach zwei Nächten mit 4 Stunden im Bett gegenüber 10 Stunden',
     alt: 'Balkendiagramm: Nach zwei Nächten mit 4 Stunden im Bett gegenüber zwei Nächten mit 10 Stunden sank das Sättigungshormon Leptin um 18 Prozent, das Hungerhormon Ghrelin stieg um 28 Prozent, der Hunger um 24 Prozent und der Appetit um 23 Prozent; der Appetit auf kalorienreiche Lebensmittel mit viel Kohlenhydraten stieg um 33 bis 45 Prozent. Kleine Studie mit 12 gesunden jungen Männern unter Laborbedingungen.',
     sources: ['spiegel2004'],
-    used: [{ href: '/wissen/heisshunger-nach-abnehmspritze/', label: 'Heißhunger nach der Abnehmspritze' }],
+    used: [],
   },
   {
     id: 'absetzen-im-ersten-jahr',
@@ -212,7 +193,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Anteil, der die Therapie innerhalb eines Jahres beendet hatte, als Punktraster; US-Versorgungsdaten',
     alt: 'Zwei Punktraster mit je 100 Punkten aus US-Versorgungsdaten von 125.474 Erwachsenen mit Übergewicht oder Adipositas: Von Menschen ohne Typ-2-Diabetes hatten 64,8 Prozent ihre GLP-1-Therapie innerhalb eines Jahres beendet, von Menschen mit Typ-2-Diabetes 46,5 Prozent.',
     sources: ['rodriguez2025'],
-    used: [{ href: '/wissen/abnehmspritze-absetzen/', label: 'Abnehmspritze absetzen' }],
+    used: [],
     ziel: [{ href: '/wissen/jojo-effekt-abnehmspritze/', label: 'Jojo-Effekt nach der Abnehmspritze' }],
   },
   {
@@ -305,7 +286,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Rechenbeispiel von 95 auf 80 kg: Formel für das neue Gewicht und Anpassung nach Gewichtsverlust',
     alt: 'Wasserfalldiagramm für eine Frau mit 45 Jahren und 170 Zentimetern: Vor dem Abnehmen mit 95 Kilogramm liegt der Tagesbedarf laut Formel bei 2.277 kcal. Der leichtere Körper senkt ihn um 210 kcal auf 2.067 kcal bei 80 Kilogramm. Die Anpassung nach Gewichtsverlust senkt den tatsächlichen Verbrauch in Messungen um weitere 300 bis 400 kcal, auf rund 1.700 bis 1.800 kcal; beim Ruheumsatz war die Anpassung in einer anderen Studie deutlich kleiner (92 kcal am Tag). Formel nach Mifflin-St-Jeor mal Aktivitätsfaktor 1,4, gerundet.',
     sources: ['mifflin1990', 'dgeEnergie', 'leibel1995', 'rosenbaum2010', 'martins2020'],
-    used: [{ href: '/wissen/kalorienbedarf-nach-abnehmspritze/', label: 'Kalorienbedarf nach der Abnehmspritze' }],
+    used: [],
   },
   {
     id: 'protein-tag-beispiel',

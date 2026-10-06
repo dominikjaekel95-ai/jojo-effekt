@@ -60,11 +60,6 @@ Die Studie zum Absetzen von Tirzepatid heißt SURMOUNT-4.<sup><a href="#fn-aronn
 
 Zwei Dinge daran sind wichtig. Erstens: Ein Jahr nach dem Absetzen lag das Gewicht im Mittel noch knapp 10 % unter dem Start. Der Jojo-Effekt ist real, aber er frisst nicht alles auf. Zweitens: Die Streuung war groß. Ein Teil der Placebo-Gruppe hielt den Verlust weitgehend, ein Teil nahm fast alles wieder zu. Eine Meta-Analyse über mehrere Adipositas-Medikamente zeigt, dass die Zunahme etwa ab Woche 8 messbar wird und bis etwa Woche 20 anhält.<sup><a href="#fn-wu2025">5</a></sup> Bei Tirzepatid mit seiner kürzeren Halbwertszeit ist ein früherer Beginn plausibel.
 
-<figure class="my-8">
-  <img src="/grafiken/halbwertszeiten-praeparate.png" alt="Balkendiagramm der Halbwertszeiten: Semaglutid etwa eine Woche, weitgehend abgebaut nach etwa fünf Wochen und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar; Tirzepatid etwa fünf Tage, abgebaut nach etwa 25 Tagen; Liraglutid etwa 13 Stunden, abgebaut nach etwa drei Tagen. Faustregel: fünf Halbwertszeiten." width="1200" height="675" loading="lazy" class="w-full" />
-  <figcaption class="mt-2 text-sm text-ink-3">Warum Tirzepatid schneller weg ist als Semaglutid: Halbwertszeiten laut Fachinformation und die Faustregel „fünf Halbwertszeiten“. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
-
 ## Ausschleichen: sechs Stufen, kein Beleg
 
 Mounjaro hat sechs Dosisstufen. Ein schrittweises Reduzieren ist deshalb technisch möglich. Die Fachinformation sieht es nicht vor, und SURMOUNT-4 hat abrupt gewechselt, ohne Entzugserscheinungen.<sup><a href="#fn-aronne2024">3</a></sup> Ob langsames Reduzieren den Wiederanstieg abmildert, ist nicht belegt. Manche Ärztinnen nutzen eine niedrige Erhaltungsdosis statt eines vollständigen Absetzens; auch das ist eine medizinische Entscheidung, die nur die Ärztin mit dir treffen kann.

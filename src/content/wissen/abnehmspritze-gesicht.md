@@ -61,8 +61,6 @@ Für die Haut sind in der EU unter anderem diese Angaben zugelassen:<sup><a href
 
 Werte aus dem Bundeslebensmittelschlüssel, gerundet.<sup><a href="#fn-bls">7</a></sup> Eine Paprika oder eine Portion Beeren am Tag deckt den Wert; ein Präparat braucht es dafür nicht.
 
-<div data-interaktiv="teller" data-vorlage="vitamin-c"></div>
-
 ### Kollagenpeptide: ein Hinweis, kein Beleg
 
 Kollagenpulver wird genau für diesen Fall beworben. Die Studienlage ist dünn: In einer Studie mit 69 Frauen zwischen 35 und 55 Jahren verbesserten 2,5 oder 5 g Kollagenpeptide täglich über acht Wochen die Hautelastizität gegenüber Placebo.<sup><a href="#fn-proksch2014">8</a></sup> Die Studie war klein und herstellerfinanziert, und in der EU ist für Kollagen keine gesundheitsbezogene Angabe zugelassen.<sup><a href="#fn-euClaims">5</a></sup> Wer es ausprobiert, tut das als Versuch über einige Wochen, nicht als Therapie, und deckt vorher das, was belegt ist: Protein, Vitamin C, Krafttraining.

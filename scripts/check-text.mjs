@@ -7,7 +7,7 @@
  * 4. Frontmatter-Längen der Artikel (metaTitle ≤ 65, description ≤ 165)
  * 7. Ärzte und Angebot (CLAIMS.md Abschnitt H, seit 06.10.2026): Bezüge auf eigene Ärzte oder Mediziner im Team, Abwandlungen
  *    des Arztsatzes, Prüf-Versprechen („ärztlich geprüft“, „gegengelesen“), Set-Reste und Wirkversprechen zu Programm oder
- *    Starterpaket, im Build-Output (ohne datenschutz/) und in den Markdown-Quellen von Wissen und Glossar (ohne Entwürfe).
+ *    Starterpaket, im Build-Output (ohne datenschutz/ und ueber/, dessen Text nur Dominik ändert) und in den Markdown-Quellen von Wissen und Glossar (ohne Entwürfe).
  *    Ortsprüfung: Der Arztsatz (site.medicalTeamSentence) steht nur im Footer, in der AuthorBox und auf der Über-Seite, nie
  *    auf einer Danke-Seite. Erlaubt bleiben der Pflichtsatz site.doctorSentence und normale Sätze über Ärztinnen und Ärzte.
  * Aufruf: npm run check:text   (nach npm run build)
@@ -158,7 +158,8 @@ for (const file of walk(dist)) {
     const m = text.match(rx);
     if (m) { const k = rel + label; if (!seen.has(k)) { seen.add(k); report(rel, label, m[0]); } }
   }
-  if (!rel.startsWith('datenschutz/')) pruefeAerzte(text, rel);
+  // Über-Seite: Den Text schreibt und gibt nur Dominik frei (CLAUDE.md), deshalb keine Arztbezug-Prüfung dort.
+  if (!rel.startsWith('datenschutz/') && !rel.startsWith('ueber/')) pruefeAerzte(text, rel);
   for (let line of text.split('\n')) {
     line = line.trim().replace(/[ \t]+/g, ' ');
     for (const [rx, label] of spacing) {

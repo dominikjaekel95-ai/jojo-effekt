@@ -78,8 +78,9 @@ function woche(plan: Plan, w: Woche) {
 </div>`;
 }
 
-function karte(k: KarteImPlan) {
+function karte(k: KarteImPlan, lf: boolean) {
   const r = rezeptKarten[k.mahlzeit.id];
+  const schritte = r ? (lf && r.schritteLaktosefrei) || r.schritte : [];
   const m = k.mahlzeit;
   const wann = k.anzahl > 1 ? `${k.anzahl}-mal im Plan, an Tag ${aufzaehlung(k.tage)}` : `an Tag ${k.tage[0]}`;
   return `<article class="ep-karte${m.bevorzugt ? ' ep-fav' : ''}">
@@ -87,7 +88,7 @@ function karte(k: KarteImPlan) {
 <p class="ep-karte-meta">${r ? `etwa ${r.zeit} Minuten · ` : ''}${wann} · rund ${m.protein} g Protein</p>
 <div class="ep-karte-spalten">
 <div><p class="ep-karte-h">Zutaten wie an Tag ${k.tage[0]}</p><ul>${m.positionen.map((p) => `<li>${esc(p.text)}</li>`).join('')}${m.dazu ? `<li class="ep-mz-dazu">dazu ${esc(m.dazu)}</li>` : ''}</ul></div>
-${r ? `<div><p class="ep-karte-h">So geht’s</p><ol>${r.schritte.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>${r.tipp ? `<p class="ep-karte-tipp">${esc(r.tipp)}</p>` : ''}</div>` : ''}
+${r ? `<div><p class="ep-karte-h">So geht’s</p><ol>${schritte.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>${r.tipp ? `<p class="ep-karte-tipp">${esc(r.tipp)}</p>` : ''}</div>` : ''}
 </div>
 </article>`;
 }
@@ -98,7 +99,7 @@ export function planHtml(plan: Plan, o: AnsichtOptionen): string {
 <div class="ep-rezepte" id="rezepte">
 <h2 class="ep-h2">Rezeptkarten</h2>
 <p class="ep-klein ep-rezepte-intro">Die ${plan.karten.length} Gerichte, die in deinem Plan am häufigsten vorkommen. Die Mengen gelten für den genannten Tag; an anderen Tagen weichen sie etwas ab.</p>
-<div class="ep-karten">${plan.karten.map(karte).join('')}</div>
+<div class="ep-karten">${plan.karten.map((k) => karte(k, plan.laktosefrei)).join('')}</div>
 </div>
 <div class="ep-grundlage" id="rechengrundlage">
 <h2 class="ep-h2">Rechengrundlage</h2>

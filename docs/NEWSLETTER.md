@@ -6,6 +6,8 @@ Stand: 30. September 2026. Zuständig: Dominik.
 
 ## 1. Regeln
 
+**Seit 06.10.2026:** Das Set kommt nicht. Die frühere Vorbestell-Liste (Tally `b5bO9o`) bekommt eine einmalige Information, wird nicht in die Warteliste übernommen und bis zum 31.10.2026 gelöscht (Datenschutz Abschnitt 4). Die Warteliste für das 12-Wochen-Programm hat eine eigene Gruppe; der Newsletter ist dort ein freiwilliges Häkchen. Die Regeln unten gelten sinngemäß für die Warteliste (Mails zu Start, Preis und Ablauf des Programms, Newsletter nur mit eigenem Häkchen).
+
 Die Vorbestell-Liste darf nur Neuigkeiten zum Set bekommen; so steht es im Formular und in der Datenschutzerklärung. Alles andere (neue Artikel, Studien, Marktradar) braucht eine eigene, ausdrückliche Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 7 Abs. 2 Nr. 2 UWG). Deshalb:
 
 - Ein optionales Kästchen „Newsletter“ in jedem Formular. Nicht vorangekreuzt, nicht Pflicht, nicht mit der Datenschutz-Einwilligung zusammengelegt.
@@ -24,6 +26,8 @@ Feld vom Typ Checkbox, Fragetitel „Newsletter“, optional, nach der Datenschu
 Exportspalte: `Newsletter`. Weiterleitung nach dem Absenden bleibt `https://nachderspritze.de/danke/`.
 
 ### 2b. Checklisten-Formular `WOxpjv` (Entwurf, noch zu veröffentlichen)
+
+**Seit 06.10.2026 ersetzt durch ein eigenes Formular** (`src/components/ChecklisteForm.astro`): POST an `/api/anmeldung/` mit `quelle=checkliste`, Pflicht-Einwilligung (Checkliste und einmaliger Hinweis auf eine neue Fassung), optionales Newsletter-Häkchen, Honigtopf. Gruppe „Checkliste“ (`MAILERLITE_GROUP_CHECKLISTE`), mit Häkchen zusätzlich „Newsletter“; Double-Opt-in über MailerLite. Weiterleitung auf `/checkliste/danke/` (auch bei Fehlern, dort mit `?fehler=eingabe|technik`; das PDF bleibt erreichbar). Der Schalter `site.checklistForm.live` blendet weiterhin Formular und Datenschutz-Abschnitt 4b ein; `checklistForm.id` wird nicht mehr gebraucht. Das Tally-Formular `WOxpjv` und sein Webhook können abgeschaltet werden. Die Beschreibung unten gilt nur noch für ältere Einträge.
 
 Felder in dieser Reihenfolge:
 
@@ -70,16 +74,16 @@ In jedem der drei Formulare unter Integrations → Webhooks:
 
 Test: Formular mit eigener Adresse und gesetztem Häkchen absenden. Erwartung: Bestätigungs-Mail von MailerLite innerhalb einer Minute; in Vercel → Logs eine Zeile `newsletter: <Formular-ID> (<quelle>) → angelegt (201)`. Ohne Häkchen: `… ohne Häkchen, übersprungen`. Bei `401` stimmt das Signing Secret nicht überein, bei `500` fehlt eine Umgebungsvariable.
 
-### 3d. Newsletter-Button im Header (seit 01.10.2026)
+### 3d. Kontakt „Schreib uns“ (der Newsletter-Button im Header ist seit 06.10.2026 entfernt)
 
-Oben rechts auf jeder Seite steht „Newsletter“; der Klick klappt ein Feld aus mit Anmeldung und Kontaktangebot (`src/components/NewsletterPanel.astro`). Das Formular postet ohne Skripte Dritter an `api/anmeldung.js`: E-Mail-Adresse, Einwilligungs-Kästchen (Pflicht, Wortlaut wie 2a), Honigtopf-Feld gegen Bots. Die Funktion legt die Adresse wie der Tally-Webhook mit Status `unconfirmed` in der Gruppe „Newsletter“ an (Feld `quelle` = `header`), MailerLite schickt die Bestätigungs-Mail, die Website leitet auf `/newsletter/danke/` weiter (noindex). Plausible: Ereignis „Newsletter Klick“ (Button), „Kontakt Klick“ (Mail-Link), Seitenaufruf-Ziel `/newsletter/danke/`.
+Den Button „Newsletter“ oben rechts mit eigenem Formular (`NewsletterPanel.astro`, `quelle=header`, 01. bis 06.10.2026) gibt es nicht mehr. Den Newsletter bestellt man als freiwilliges Häkchen bei der Checkliste, beim Ernährungsplan (dort Teil der Einwilligung „Plan plus Newsletter“) oder auf der Warteliste. `api/anmeldung.js` nimmt `quelle=header` nicht mehr an und leitet unbekannte Quellen auf `/newsletter/danke/?fehler=eingabe` (die Seite bleibt, noindex, und verweist auf die drei Formulare); nichts landet still in der Newsletter-Gruppe. Bestehende Abonnenten mit `quelle=header` bleiben, wie sie sind.
 
-Das Kontaktangebot („Du strauchelst gerade nach dem Absetzen? Schreib uns“) führt auf `dominik@nachderspritze.de` mit Betreff „Nach der Spritze: meine Frage“. Auf dem Desktop gibt es dafür zusätzlich den Header-Button „Schreib uns“, der die Mail direkt öffnet; auf dem Handy steht das Angebot nur im Newsletter-Feld. Wortlaut des Kontaktabsatzes hat Dominik am 01.10.2026 festgelegt, einschließlich „unter Beratung erfahrener Mediziner“ (statt „führende Medizinexperten“) und „Die ersten Nutzer können sie kostenlos testen“; beides ist eine bewusste Entscheidung des Betreibers und wird nicht ohne ihn geändert. Zweck: Gespräche in der Prototyp-Phase, um zu verstehen, was Menschen nach dem Absetzen brauchen. Regeln für die Antworten, weil sonst Heilmittelwerberecht und Heilkunde-Vorbehalt greifen:
+Im Kopf steht „Schreib uns“ (Desktop und Mobilmenü), im Footer „Fragen, Hinweise, Kritik: … Wir antworten persönlich, ohne medizinische Beratung.“ Beide führen auf `dominik@nachderspritze.de` mit Betreff „Nach der Spritze: meine Frage“. Plausible: Ereignis „Kontakt Klick“ mit `kanal` = header, menue oder footer. Kein Arztbezug im Kontaktangebot: Der frühere Wortlaut „unter Beratung erfahrener Mediziner“ ist gestrichen (`CLAIMS.md` Abschnitt H; der Arztsatz steht nur in Footer, AuthorBox und auf der Über-Seite). Zweck: Gespräche in der Prototyp-Phase, um zu verstehen, was Menschen nach dem Absetzen brauchen. Regeln für die Antworten, weil sonst Heilmittelwerberecht und Heilkunde-Vorbehalt greifen:
 
 - Zuhören, einordnen, auf Artikel und Checkliste verweisen, nach dem Bedarf fragen. Keine individuelle medizinische Beratung, keine Dosierungs- oder Absetzempfehlung, keine Diagnose.
-- Nie „unser Arzt sagt“ oder „laut unserem Ärztenetzwerk“. Fachlicher Rat aus dem Netzwerk fließt in Artikel ein, nicht in Einzelantworten.
+- Nie „unser Arzt sagt“ oder „laut unserem Ärztenetzwerk“, keine Empfehlung für Kontroll- oder Routinetermine bei Ärztin oder Arzt (Warnzeichen dürfen zum ärztlichen Gespräch raten; keine Arzt-Empfehlung, die eine Zone im Gewichtskorridor oder ein Werkzeug-Ergebnis auslöst, auch nicht im Check-in: Rot heißt „Plan prüfen“). Fachlicher Rat fließt in Artikel ein, nicht in Einzelantworten.
 - Jede Antwort endet mit dem Pflichtsatz, sobald es um das Medikament geht.
-- Antworten sind kostenlos und ohne Verkaufsabsicht; das Set wird nur erwähnt, wenn danach gefragt wird.
+- Antworten sind kostenlos und ohne Verkaufsabsicht; das 12-Wochen-Programm wird nur erwähnt, wenn danach gefragt wird, und nur beschreibend (was drin ist, wie es abläuft).
 - Erkenntnisse aus den Gesprächen (anonymisiert, ohne Zitat) kommen in die Themenliste in `docs/REDAKTION.md` als neue Artikelideen.
 
 ## 4. Nachweis und Abmeldung
@@ -95,10 +99,10 @@ Etwa alle zwei Wochen, immer gleicher Aufbau, 300 bis 500 Wörter, Betreff ohne 
 1. **Ein Artikel** der letzten zwei Wochen mit zwei Sätzen, warum er wichtig ist.
 2. **Eine Studie** aus dem Studien-Tracker oder den Radar-Kandidaten, in drei Sätzen: Was wurde gemessen, was kam heraus, was heißt das für die Zeit nach dem Absetzen.
 3. **Eine Marktmeldung** aus dem Marktradar (Zulassung, Preis, Kassenregel, Lieferbarkeit).
-4. **Ein Satz zum Set**: Stand der Vorbestellungen, nächster Schritt. Nur die Aussagen aus `CLAIMS.md`.
+4. **Ein Satz zum Programm**: Stand der Warteliste, nächster Schritt (Start, Preis, Ablauf). Nur beschreibend, keine Wirkaussage, kein Arztsatz; Health Claims nur aus `CLAIMS.md` A und nur für ein mögliches Starterpaket.
 5. Fußzeile: Arztsatz aus `site.doctorSentence`, Impressum, Abmeldelink.
 
-Regeln wie auf der Seite: keine Dosierungen, keine Absetz-Anleitung, keine Bewertung von Medikamenten, keine Erfahrungsberichte ohne Freigabe. Medikamentennamen sind im Newsletter erlaubt, wenn es um Studien oder Marktmeldungen geht; im Set-Absatz nicht.
+Regeln wie auf der Seite: keine Dosierungen, keine Absetz-Anleitung, keine Bewertung von Medikamenten, keine Erfahrungsberichte ohne Freigabe. Medikamentennamen sind im Newsletter erlaubt, wenn es um Studien oder Marktmeldungen geht; im Programm-Absatz nicht.
 
 Messung: Öffnungen und Klicks im Versanddienst; Klicks auf die Seite kommen mit `?utm_source=newsletter&utm_medium=email&utm_campaign=<datum>` bei Plausible an.
 

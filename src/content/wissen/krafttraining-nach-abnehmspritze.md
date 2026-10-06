@@ -6,9 +6,9 @@ category: "Muskeln"
 image: /grafiken/training-s-lite.png
 order: 13
 pubDate: 2026-10-01
-updatedDate: 2026-10-05
+updatedDate: 2026-10-06
 keywords: ["krafttraining nach abnehmspritze", "abnehmspritze absetzen sport", "abnehmspritze krafttraining", "training nach abnehmspritze", "krafttraining anfänger abnehmspritze", "abnehmspritze training zuhause", "sport nach absetzen abnehmspritze"]
-sources: ["jensen2024", "sardeli2018", "who2020", "schoenfeld2016", "acsm2009", "leidy2015", "euClaims", "wilding2021dxa"]
+sources: ["jensen2024", "sardeli2018", "who2020", "schoenfeld2016", "acsm2009", "leidy2015", "euClaims", "wilding2021dxa", "villareal2017"]
 related: ["muskelabbau-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
 affiliate: ["gripDynamometer"]
 affiliateTitle: "Beispiel für ein Griffkraft-Messgerät"
@@ -40,18 +40,18 @@ Drei Befunde, die den Unterschied ausmachen:
 
 Spazierengehen, Radfahren und Schwimmen sind gut für Herz und Kopf. Sie ersetzen aber nicht den Reiz, den Muskeln brauchen, um zu bleiben.
 
-<figure class="my-8">
-  <img src="/grafiken/training-s-lite.png" alt="Balkendiagramm aus der S-LiTE-Nachbeobachtung: Im Jahr nach Therapieende nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach dem Trainingsprogramm (95-Prozent-Konfidenzintervall 2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau erhalten." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
-  <figcaption class="mt-2 text-sm text-ink-3">Training vor dem Absetzen: In der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr nach Therapieende 6,0 kg mehr zu als nach dem Trainingsprogramm.<sup><a href="#fn-jensen2024">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
-
 Für Frauen in und nach den Wechseljahren gilt das doppelt: Zum Verlust aus der Therapie kommt der aus dem Alter, und Krafttraining ist die Trainingsform, die in Studien auch die Knochendichte beim Abnehmen schützt. Die Zahlen dazu stehen unter [Wechseljahre und Abnehmspritze](/wissen/wechseljahre-abnehmspritze/).
+
+<figure class="my-8">
+  <img src="/grafiken/training-art-fettfreie-masse.png" alt="Zwei Balkengruppen aus einer randomisierten Studie mit 160 Erwachsenen ab 65 Jahren mit Adipositas, 26 Wochen Diät und im Mittel 9 Prozent Gewichtsverlust: Verlust an fettfreier Masse mit Krafttraining 1,0 Kilogramm, mit Kraft plus Ausdauer 1,7 Kilogramm, mit Ausdauertraining 2,7 Kilogramm. Knochendichte der Hüfte: minus 2,6 Prozent mit Ausdauertraining, minus 1,1 Prozent mit Kraft plus Ausdauer, mit Krafttraining weniger als 1 Prozent und nicht signifikant." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Bei gleicher Diät verlor die Krafttrainingsgruppe am wenigsten fettfreie Masse; die Knochendichte der Hüfte sank mit Ausdauertraining um 2,6 %, mit Kraft plus Ausdauer um 1,1 %, mit Krafttraining um weniger als 1 %.<sup><a href="#fn-villareal2017">9</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Die drei Prinzipien
 
 **Ganzkörper.** Jede Einheit trainiert Beine, Rücken, Brust, Schultern und Rumpf. Das ist bei zwei Einheiten pro Woche effizienter als aufgeteilte Pläne.
 
-**8 bis 12 Wiederholungen, 2 bis 3 Sätze.** Das Positionspapier des American College of Sports Medicine empfiehlt Einsteigern genau diesen Bereich, mit 60 bis 90 Sekunden Pause zwischen den Sätzen.<sup><a href="#fn-acsm2009">5</a></sup> Die letzten zwei Wiederholungen eines Satzes sollen anstrengend sein, aber sauber.
+**8 bis 12 Wiederholungen, 2 bis 3 Sätze.** Das Positionspapier des American College of Sports Medicine empfiehlt Einsteigern 8 bis 12 Wiederholungen in 1 bis 3 Sätzen.<sup><a href="#fn-acsm2009">5</a></sup> Der Plan nutzt 2 bis 3 Sätze, mit 60 bis 90 Sekunden Pause dazwischen. Die letzten zwei Wiederholungen eines Satzes sollen anstrengend sein, aber sauber.
 
 **Steigerung.** Der Muskel bleibt nur, wenn die Belastung wächst: mehr Wiederholungen, stärkeres Band, mehr Gewicht, alle ein bis zwei Wochen ein kleiner Schritt. Ohne Steigerung wird Training zur Gewohnheit ohne Wirkung.
 
@@ -70,6 +70,8 @@ Jede Übung gibt es in einer Zuhause-Variante (Körpergewicht oder Band) und ein
 
 Ablauf einer Einheit: 3 Minuten Aufwärmen (zügig gehen, Arme kreisen, 10 Kniebeugen ohne Gewicht), dann die sechs Übungen mit je zwei Sätzen in Woche 1 bis 4 und drei Sätzen ab Woche 5, 60 bis 90 Sekunden Pause. Das dauert 25 bis 30 Minuten.
 
+<div data-interaktiv="zusammensetzung"></div>
+
 ## 12 Wochen mit Steigerung
 
 | Wochen | Sätze × Wiederholungen | Ziel |
@@ -82,6 +84,8 @@ Ablauf einer Einheit: 3 Minuten Aufwärmen (zügig gehen, Arme kreisen, 10 Knieb
 | 11–12 | 3 × 8, schwerer | Widerstand erhöhen, Wiederholungen zurück auf 8, das ist die eigentliche Steigerung |
 
 Eine Regel für die ganze Zeit: Wenn du in allen Sätzen 12 saubere Wiederholungen schaffst, wird die Übung beim nächsten Mal schwerer, nie länger.
+
+<div data-interaktiv="plan12" data-vorlage="training"></div>
 
 ## Was das Training braucht: Protein und, wenn du willst, Kreatin
 
@@ -104,4 +108,4 @@ Ja, und das ist der beste Zeitpunkt. Die Teilnehmenden der S-LiTE-Studie, die ei
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder sportmedizinische Beratung. Das 12-Wochen-Set von Nach der Spritze enthält genau diesen Plan als Programm mit wöchentlichem Check-in, dazu Protein-, Ballaststoff- und Kreatin-Sticks. Es ist ein Lebensmittel mit Programm, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder sportmedizinische Beratung. Das 12-Wochen-Programm von Nach der Spritze enthält diesen Plan: zwei Einheiten pro Woche à 30 Minuten, zuhause mit Bändern oder im Studio, und ein Check-in pro Woche per E-Mail. Es ist kein Medikament. Start und Preis erfährst du zuerst über die [Warteliste](/#warteliste).*

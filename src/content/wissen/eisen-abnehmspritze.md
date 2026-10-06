@@ -5,7 +5,7 @@ description: "Wenig Fleisch, kleine Portionen, Menstruation: Warum Eisen unter d
 category: "Ernährung"
 order: 21
 pubDate: 2026-10-01
-updatedDate: 2026-10-05
+updatedDate: 2026-10-06
 keywords: ["eisen abnehmspritze", "eisenmangel abnehmspritze", "eisen wegovy", "eisen ozempic", "müde abnehmspritze eisen", "ferritin abnehmspritze", "eisen abnehmen frauen"]
 sources: ["nvs2", "dgeReferenzwerte", "euClaims", "bls", "almandoz2024", "bfrHoechstmengen2021"]
 related: ["supplements-nach-abnehmspritze", "vitamin-b12-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
@@ -31,6 +31,8 @@ Müdigkeit ist eine der häufigsten Beschwerden unter der Abnehmspritze, und mei
 Eisen kommt in zwei Formen: Häm-Eisen aus Fleisch und Fisch, das der Körper gut aufnimmt, und Nicht-Häm-Eisen aus Pflanzen, von dem nur ein kleiner Teil ankommt. Unter der Spritze verschiebt sich beides: Fleisch fällt bei kleinen Portionen oft weg, und die pflanzlichen Lieferanten (Hülsenfrüchte, Haferflocken, Vollkorn) sind genau die sättigenden Lebensmittel, die bei kleinem Appetit zuerst gestrichen werden. Die Expertengruppe um Almandoz zählt Eisen deshalb zu den Mikronährstoffen, auf die bei sehr geringer Energiezufuhr unter Adipositas-Medikamenten geachtet werden sollte.<sup><a href="#fn-almandoz2024">5</a></sup>
 
 Der Bedarf ist dabei nicht gleich verteilt: Frauen vor den Wechseljahren brauchen wegen der Menstruation deutlich mehr als Männer; die genauen Referenzwerte je Alter und Geschlecht stehen bei der DGE.<sup><a href="#fn-dgeReferenzwerte">2</a></sup> Dass 58 % der Frauen schon in normalen Zeiten darunter lagen,<sup><a href="#fn-nvs2">1</a></sup> zeigt, wie eng es unter der Spritze wird. Was sich in und nach den Wechseljahren für Muskeln, Knochen und Gewicht ändert, steht unter [Wechseljahre und Abnehmspritze](/wissen/wechseljahre-abnehmspritze/).
+
+<div data-interaktiv="punktfeld" data-vorlage="eisen"></div>
 
 | Lebensmittel, Portion | Eisen, etwa | Aufnahme |
 |---|---|---|
@@ -74,4 +76,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Eisenpräparate sind Nahrungsergänzungsmittel oder Arzneimittel und gehören nach Blutwert in ärztliche Hand. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament; Eisen ist nicht enthalten.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Eisenpräparate sind Nahrungsergänzungsmittel oder Arzneimittel und gehören nach Blutwert in ärztliche Hand. Das 12-Wochen-Programm von Nach der Spritze plant Training, Protein und einen Gewichtskorridor für die Zeit danach; ein Eisenpräparat gehört nicht dazu. Start und Preis über die [Warteliste](/#warteliste).*

@@ -19,7 +19,7 @@ interface Props {
 const { products, title, intro, position, class: cls = '' } = Astro.props;
 const items = products.map((key) => ({ key, ...affiliate.products[key] }));
 ---
-<aside class={`rounded-xl2 border border-line bg-white p-6 text-left ${cls}`} aria-labelledby={`aff-${position}`}>
+<aside class={`rounded-xl2 border border-line p-6 text-left ${cls}`} aria-labelledby={`aff-${position}`}>
   <p class="eyebrow">Werbung</p>
   <h2 id={`aff-${position}`} class="mt-2 text-xl leading-snug text-ink">{title}</h2>
   {intro && <p class="mt-2 text-sm text-ink-2">{intro}</p>}
@@ -30,7 +30,7 @@ const items = products.map((key) => ({ key, ...affiliate.products[key] }));
           href={affiliateUrl(p.asin)}
           rel="sponsored nofollow noopener"
           target="_blank"
-          class={`font-semibold text-moss underline underline-offset-4 plausible-event-name=Affiliate+Klick plausible-event-asin=${p.asin} plausible-event-position=${position}`}
+          class={`font-medium text-moss underline decoration-moss/40 underline-offset-4 hover:decoration-moss plausible-event-name=Affiliate+Klick plausible-event-asin=${p.asin} plausible-event-position=${position}`}
         >{p.name} – bei Amazon ansehen (Werbung)</a>
         <p class="mt-1 text-sm text-ink-2">{p.hint}</p>
       </li>

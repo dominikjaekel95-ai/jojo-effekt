@@ -5,6 +5,7 @@ description: "30 % der Erwachsenen in Deutschland haben einen Vitamin-D-Mangel. 
 category: "Ernährung"
 order: 19
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["vitamin d abnehmspritze", "vitamin d wegovy", "vitamin d ozempic", "vitamin d mangel abnehmspritze", "vitamin d muskeln abnehmen", "vitamin d nach abnehmspritze", "vitamin d winter supplement"]
 sources: ["rabenberg2015", "dgeReferenzwerte", "euClaims", "almandoz2024", "bfrHoechstmengen2021", "who2020", "wilding2021dxa"]
 related: ["supplements-nach-abnehmspritze", "muskelabbau-abnehmspritze", "magnesium-abnehmspritze"]
@@ -34,6 +35,8 @@ Vitamin D ist das Supplement, das in Deutschland fast jeder irgendwann nimmt, of
 
 Vitamin D kommt nur zu einem kleinen Teil aus der Nahrung (fetter Fisch, Eier, Pilze); den Hauptteil bildet die Haut unter Sonnenlicht. In Deutschland reicht die Sonne dafür etwa von April bis September. Die DEGS1-Studie des Robert Koch-Instituts mit fast 7.000 Erwachsenen fand entsprechend: 30,2 % hatten Werte unter 30 nmol/l, also einen Mangel, 61,6 % lagen unter 50 nmol/l; im Winter waren es deutlich mehr als im Sommer.<sup><a href="#fn-rabenberg2015">1</a></sup>
 
+<div data-interaktiv="punktfeld" data-vorlage="vitamin-d"></div>
+
 Das hat mit der Spritze nichts zu tun, es ist der Normalzustand. Die Spritze ändert zwei Dinge: Die Nahrungsquellen werden bei kleinen Portionen noch unwichtiger, und wer wenig Energie hat, geht seltener raus. Beides macht einen Mangel wahrscheinlicher, aber nicht die Spritze selbst.
 
 ## Was die zugelassenen Angaben sagen
@@ -54,6 +57,8 @@ Für die Zeit nach der Spritze zählt die erste Angabe. Beim Abnehmen mit Semagl
 
 Das BfR schlägt für Nahrungsergänzungsmittel eine Tageshöchstmenge von 20 µg vor.<sup><a href="#fn-bfrHoechstmengen2021">5</a></sup> Präparate mit 50 µg und mehr pro Tag, wie sie im Handel üblich sind, gehören nicht in die Dauer-Eigentherapie: Vitamin D wird im Fettgewebe gespeichert, und sehr hohe Dosen über Monate können den Kalziumspiegel gefährlich anheben.
 
+<div data-interaktiv="streifen" data-vorlage="vitamin-d-jahr"></div>
+
 ## Der Blutwert: wann er sich lohnt
 
 Gemessen wird 25-OH-Vitamin-D im Blut. Der Test ist meist eine Selbstzahlerleistung. Er lohnt sich im Spätwinter, wenn der Wert am niedrigsten ist, und immer dann, wenn du eine höhere Dosis als 20 µg erwägst. Wer ihn einmal im Februar und einmal im September misst, kennt seinen Jahresverlauf und kann die Ergänzung danach einstellen. Ohne Blutwert bleibt die Winterdosis von 20 µg die vertretbare Standardlösung.
@@ -73,4 +78,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin D ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament; Vitamin D ist nicht enthalten.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin D ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*

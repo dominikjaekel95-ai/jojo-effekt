@@ -5,6 +5,7 @@ description: "Täglich, wöchentlich oder gar nicht? Was Studien zum Wiegen nach
 category: "Gewicht halten"
 order: 27
 pubDate: 2026-10-03
+updatedDate: 2026-10-06
 keywords: ["wie oft wiegen abnehmen", "wie oft sollte man sich wiegen", "täglich wiegen sinnvoll", "gewicht halten wie oft wiegen", "wie oft wiegen nach abnehmspritze", "morgens oder abends wiegen", "gewichtsschwankungen von tag zu tag", "abnehmspritze absetzen gewicht kontrollieren"]
 sources: ["wing2006", "butryn2007", "zheng2016", "vuorinen2021", "madigan2015", "daley2019", "wu2025", "steinberg2014", "benn2016", "pacanowski2023", "zheng2015"]
 related: ["gewicht-halten-nach-abnehmspritze", "jojo-effekt-abnehmspritze", "abnehmspritze-absetzen"]
@@ -20,7 +21,7 @@ faq:
   - q: "Wie oft wiegen nach der Abnehmspritze?"
     a: "<p>Mindestens wöchentlich, in den ersten 20 Wochen nach der letzten Dosis besser täglich mit Wochenmittel. In einer Meta-Analyse randomisierter Studien zu Adipositas-Medikamenten war die Zunahme nach dem Absetzen ab etwa Woche 8 messbar und stieg bis etwa Woche 20. Wer wöchentlich wiegt, sieht die Absetzkurve, bevor sie 2 kg erreicht; wer monatlich wiegt, sieht sie zu spät. Eine Studie zur Wiegehäufigkeit speziell nach dem Absetzen gibt es nicht; die Belege stammen aus der Haltephase nach Diäten.</p>"
   - q: "Ab wann sollte ich reagieren?"
-    a: "<p>Mit den Zonen aus der STOP-Regain-Studie, bezogen auf das Gewicht am Ende der Abnahme: bis +1,4 kg nichts tun; +1,4 bis +2,3 kg zwei Wochen gegensteuern mit Protein, zwei Krafteinheiten, ohne Flüssigkalorien; ab +2,3 kg Ursachen klären und das Gewicht in den Kontrolltermin mitnehmen. Die Schwellen stammen aus einer Studie ohne Medikament; die Übertragung auf die Zeit nach der Spritze ist plausibel, aber nicht geprüft.</p>"
+    a: "<p>Mit den Zonen aus der STOP-Regain-Studie, bezogen auf das Gewicht am Ende der Abnahme: bis +1,4 kg nichts tun; +1,4 bis +2,3 kg zwei Wochen gegensteuern mit Protein, zwei Krafteinheiten, ohne Flüssigkalorien; ab +2,3 kg den Plan prüfen: Protein, Training, Schlaf und Flüssigkalorien durchgehen, die Maßnahmen aus Gelb laufen weiter. Die Schwellen stammen aus einer Studie ohne Medikament; die Übertragung auf die Zeit nach der Spritze ist plausibel, aber nicht geprüft.</p>"
 ---
 
 Die Waage ist das einzige Messgerät, das jeder zu Hause hat, und das, über das am meisten gestritten wird: täglich, wöchentlich, gar nicht? Dieser Artikel sagt, was Studien zur Wiegehäufigkeit nach dem Abnehmen zeigen, warum die Regel wichtiger ist als die Häufigkeit, wie du wiegst, damit die Zahl etwas bedeutet, und wann die Waage mehr schadet als nützt. Was in den Wochen nach der letzten Dosis insgesamt passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
@@ -30,6 +31,8 @@ Die Waage ist das einzige Messgerät, das jeder zu Hause hat, und das, über das
 ## Wie oft sollte man sich wiegen?
 
 Mindestens einmal pro Woche; am besten belegt ist tägliches Wiegen, wenn es Teil eines Plans ist. In der STOP-Regain-Studie mit 314 Erwachsenen, die mindestens 10 % abgenommen hatten, wogen sich die Teilnehmenden der beiden Programme täglich und hatten feste Zonen mit festgelegter Reaktion; nach 18 Monaten hatten 45,7 % der persönlich betreuten Gruppe 2,3 kg oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 %.<sup><a href="#fn-wing2006">1</a></sup> Tägliches Wiegen war dabei mit einem geringeren Risiko verbunden, 2,3 kg oder mehr zuzunehmen.
+
+<div data-interaktiv="punktfeld" data-vorlage="stop-regain"></div>
 
 Beobachtungsdaten zeigen dasselbe Muster. Im National Weight Control Registry, 3003 Menschen, die mindestens 13,6 kg abgenommen und ein Jahr gehalten hatten, nahmen diejenigen, die im Folgejahr seltener auf die Waage stiegen als zuvor, im Mittel 4,0 kg zu; wer häufiger wog, 1,1 kg.<sup><a href="#fn-butryn2007">2</a></sup> In einem zwölfmonatigen Abnehmprogramm mit vernetzten Waagen lagen die Teilnehmenden, die konstant an mehr als sechs Tagen pro Woche wogen, nach einem Jahr bei −9,9 %; wer das Wiegen schleifen ließ, bei +0,65 %.<sup><a href="#fn-zheng2016">3</a></sup> Und in Alltagsdaten von 10 000 Nutzern vernetzter Waagen stieg das Gewicht in Wiegepausen von mindestens 30 Tagen bei Adipositas im Mittel um 1,37 kg.<sup><a href="#fn-vuorinen2021">4</a></sup>
 
@@ -47,7 +50,9 @@ Die Zonen aus STOP Regain, bezogen auf dein Gewicht am Ende der Abnahme:<sup><a 
 
 - **Grün, bis +1,4 kg: nichts tun.** Das ist der Bereich, in dem Wasser, Salz, Zyklus und Darminhalt schwanken.
 - **Gelb, +1,4 bis +2,3 kg: zwei Wochen gegensteuern.** Protein an jedem Tag prüfen, zwei Krafteinheiten, Flüssigkalorien streichen, Schlaf. Dann wieder wiegen.
-- **Rot, ab +2,3 kg: Ursachen klären.** Hat das Gegensteuern zwei Wochen lang nicht gewirkt, gehört das Gewicht in den Kontrolltermin; nach der letzten Dosis ist er ohnehin für Woche 8 bis 12 vorgesehen.
+- **Rot, ab +2,3 kg: Plan prüfen.** Hat das Gegensteuern zwei Wochen lang nicht gewirkt: Protein, Training, Schlaf und Flüssigkalorien durchgehen; die Maßnahmen aus Gelb laufen weiter.
+
+<div data-interaktiv="zonen"></div>
 
 Die Schwellen stammen aus einer Studie ohne Medikament; die Übertragung auf die Zeit nach der Spritze ist plausibel, aber nicht geprüft. Der [Gewichtskorridor](/werkzeuge/gewichtskorridor/) rechnet die Zonen für dein Startgewicht aus; der [12-Wochen-Plan](/wissen/gewicht-halten-nach-abnehmspritze/) legt fest, wann du die Regel aufschreibst.
 
@@ -56,7 +61,7 @@ Die Schwellen stammen aus einer Studie ohne Medikament; die Übertragung auf die
 - **Morgens, nach der Toilette, vor dem Frühstück.** Ohne Kleidung oder immer in derselben. Gleiche Waage, gleicher Platz auf dem Boden; Teppich und Fliesenfugen verfälschen.
 - **Täglich wiegen heißt nicht täglich reagieren.** Notiere die Zahl und schau auf das Mittel der letzten sieben Tage. Erst wenn das Wochenmittel die Zone wechselt, gilt die Regel.
 - **Das Gewicht schwankt von Tag zu Tag durch Wasser.** Salz bindet Wasser, die Kohlenhydratspeicher (Glykogen) binden Wasser, der Darminhalt wechselt, bei Frauen kommt der Zyklus dazu. Ein großes Abendessen zeigt sich am nächsten Morgen vor allem als Wasser und Darminhalt, nicht als Fett.
-- **Kreatin verschiebt den Ausgangswert.** Wer Kreatin startet, sieht in den ersten Wochen zusätzlich Wasser auf der Waage; das ist der neue Ausgangswert, nicht Fett. Die Größenordnung steht unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
+- **Kreatin verschiebt den Ausgangswert.** Wer Kreatin startet, sieht in den ersten Wochen zusätzlich Wasser auf der Waage; das ist der neue Ausgangswert, nicht Fett. Mehr dazu unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
 - **Körperfettwaagen schwanken stärker als das Gewicht.** Die Bioimpedanzanalyse hängt am Wasserhaushalt; der angezeigte Fettanteil taugt für Trends über Monate, nicht für Tage. Der Taillenumfang, einmal im Monat am gleichen Punkt gemessen, ist die bessere zweite Zahl.
 
 ## Nach der Abnehmspritze: warum die ersten 20 Wochen zählen
@@ -73,8 +78,8 @@ Daraus folgt: Wer eine Essstörung in der Vorgeschichte hat, wer merkt, dass die
 
 ## Was dieser Artikel nicht sagt
 
-Keine Zahl auf der Waage ist ein Grund, ein Medikament auf eigene Faust wieder anzufangen oder abzusetzen; das ist eine Therapieentscheidung für das Arztgespräch. Die rote Zone heißt „Ursachen klären“, nicht „Rezept holen“.
+Keine Zahl auf der Waage ist ein Grund, ein Medikament auf eigene Faust wieder anzufangen oder abzusetzen; das ist eine Therapieentscheidung für das Arztgespräch. Die rote Zone heißt „Plan prüfen“, nicht „Rezept holen“.
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder psychotherapeutische Beratung. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin für jeden Tag und begleitet dich durch zwei Krafteinheiten pro Woche und einen wöchentlichen Check-in – als Lebensmittel mit Programm, nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder psychotherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze arbeitet mit einem Gewichtskorridor und einem Check-in pro Woche per E-Mail, dazu mit Training und Proteinziel; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

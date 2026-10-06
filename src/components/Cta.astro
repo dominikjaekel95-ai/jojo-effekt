@@ -1,12 +1,11 @@
 ---
 /**
- * Primärer Call-to-Action. Scrollt zum Formular; Klick wird per Plausible-Klasse als Event gezählt.
+ * Primärer Call-to-Action: führt zur Warteliste auf der Startseite. Klick wird per Plausible-Klasse als Event gezählt.
  */
-import { site } from '../data/site';
 interface Props { position: string; label?: string; class?: string; secondary?: boolean }
-const { position, label = 'Vorbestellen – ohne Zahlung', class: cls = '', secondary = false } = Astro.props;
+const { position, label = 'Auf die Warteliste', class: cls = '', secondary = false } = Astro.props;
 ---
 <a
-  href="/#vorbestellen"
-  class={`${secondary ? 'btn-secondary' : 'btn-primary'} plausible-event-name=Vorbestellen+Klick plausible-event-position=${position} ${cls}`}
+  href="/#warteliste"
+  class={`${secondary ? 'btn-secondary' : 'btn-primary'} plausible-event-name=Warteliste+Klick plausible-event-position=${position} ${cls}`}
 >{label}</a>

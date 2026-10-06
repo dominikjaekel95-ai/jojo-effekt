@@ -1,12 +1,16 @@
 ---
+/**
+ * Startseite „Kalk“ (seit 06.10.2026): 12-Wochen-Programm, Ziel Warteliste. Keine Markennamen von Arzneimitteln
+ * (check:text), kein Arztbezug beim Programm, keine Health Claims. Jede Zahl mit Fußnote aus src/data/sources.ts.
+ * Die Absetzkurve zeichnet sich beim Scrollen (Skript unten); ohne Skript oder mit reduzierter Bewegung steht der
+ * Endzustand da.
+ */
 import Base from '../layouts/Base.astro';
-import GrafikDaten from '../components/GrafikDaten.astro';
-import Cta from '../components/Cta.astro';
 import Fn from '../components/Fn.astro';
 import Footnotes from '../components/Footnotes.astro';
 import Faq from '../components/Faq.astro';
-import PreorderForm from '../components/PreorderForm.astro';
-import SetIllustration from '../components/SetIllustration.astro';
+import WaitlistForm from '../components/WaitlistForm.astro';
+import Absetzkurve from '../components/Absetzkurve.astro';
 import MarktradarTeaser from '../components/MarktradarTeaser.astro';
 import ErnaehrungsplanTeaser from '../components/ErnaehrungsplanTeaser.astro';
 import { site } from '../data/site';
@@ -14,29 +18,39 @@ import { themen } from '../data/themen';
 import { landingFaq } from '../data/faq';
 import { getCollection } from 'astro:content';
 
-// Reihenfolge der Fußnoten auf dieser Seite (Nummer = Position + 1)
+// Reihenfolge der Fußnoten auf dieser Seite (Nummer = Position + 1), in der Reihenfolge der ersten Nennung
 const fnIds = [
-  'rodriguez2025',
-  'wilding2021dxa',
   'wilding2022ext',
   'wu2025',
-  'leidy2015',
-  'euClaims',
+  'wilding2021dxa',
+  'rodriguez2025',
   'sardeli2018',
-  'jensen2024',
   'who2020',
-  'kreider2017',
-  'dgeBallaststoffe',
+  'leidy2015',
+  'dgeProtein',
+  'jensen2024',
+  'bls',
 ] as const;
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
 const artikel = (await getCollection('wissen', (a) => !a.data.draft)).sort((a, b) => a.data.order - b.data.order).slice(0, 3);
+const werkzeuge = [
+  { href: '/werkzeuge/zeitplan-nach-letzter-dosis/', name: 'Zeitplan nach der letzten Dosis' },
+  { href: '/werkzeuge/proteinrechner/', name: 'Proteinrechner' },
+  { href: '/werkzeuge/gewichtskorridor/', name: 'Gewichtskorridor' },
+  { href: '/checkliste/', name: 'Checkliste für die ersten 8 Wochen' },
+  { href: '/werkzeuge/', name: 'Alle Werkzeuge' },
+];
 
-// Preis pro Tag: Set-Preis geteilt durch 12 Wochen × 7 Tage
-const setDays = 12 * 7;
-const perDay = (site.price.set / setDays).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-// Gerundet auf 10 Cent für die Kurzform „rund 1,50 € am Tag“ neben dem Set-Preis
-const perDayRound = (Math.round((site.price.set / setDays) * 10) / 10).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+// 100 Punkte, davon 65 hervorgehoben (rodriguez2025: 64,8 %, gerundet)
+const dots = Array.from({ length: 100 }, (_, i) => i < 65);
+// 12 Wochen × 7 Tage: Krafteinheit an Tag 2 und 5, Check-in an Tag 7
+const tagTyp = (d: number) => (d === 1 || d === 4 ? 'tr' : d === 6 ? 'ci' : '');
+const wochen = Array.from({ length: 12 }, () => Array.from({ length: 7 }, (_, d) => tagTyp(d)));
+
+const kurveLabel = 'Liniendiagramm, schematisch zwischen den Messpunkten: Unter Semaglutid sinkt das Gewicht in 68 Wochen im Mittel um 17,3 Prozent, unter Placebo um 2,0 Prozent. Nach der letzten Dosis in Woche 68 steigt es wieder; in Woche 120 liegt es bei minus 5,6 Prozent, unter Placebo bei minus 0,1 Prozent. Zwei Drittel des Verlusts sind zurück. Rund 40 Prozent des verlorenen Gewichts waren fettfreie Masse.';
+const kontakt = `mailto:${site.owner.email}?subject=${encodeURIComponent('Nach der Spritze: meine Frage')}`;
+const pfeil = 'M2 9h13M10 4l5 5-5 5';
 
 const title = 'Nach der Abnehmspritze: Muskeln behalten, Gewicht halten';
 const description = site.description;
@@ -45,298 +59,1272 @@ const jsonLd: Record<string, unknown>[] = [];
 
 <Base title={title} description={description} path="/" jsonLd={jsonLd}>
   <!-- ============ 1. HERO ============ -->
-  <section class="relative overflow-hidden">
-    <div class="container-wide grid items-center gap-10 py-14 sm:py-20 md:grid-cols-[1.1fr_0.9fr]">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="container-wide hero-grid">
+      <h1 id="hero-h" class="hero-h1"><span class="h1a">Nach der Spritze:</span> <span class="h1b">Muskeln behalten, Gewicht halten.</span></h1>
       <div>
-        <p class="eyebrow">Das 12-Wochen-Set für die Zeit nach der Abnehmspritze</p>
-        {/*
-          Überschriften-Varianten (A/B-Test später):
-          A (aktiv):  Nach der Spritze: Muskeln behalten, Gewicht halten.
-          B:          Absetzen ohne Absturz.
-          C:          Das 12-Wochen-Set für die Zeit nach der Abnehmspritze.
-        */}
-        <h1 class="h1 mt-4">
-          Nach der Spritze: <span class="text-moss">Muskeln behalten,</span> Gewicht halten.
-        </h1>
-        <p class="mt-5 max-w-xl text-lg text-ink-2">
-          Protein, Ballaststoffe, Kreatin und ein Programm mit zwei Krafteinheiten pro Woche. Für alle, die die
-          Abnehmspritze absetzen oder reduzieren und das Erreichte nicht wieder verlieren wollen.
-        </p>
-        <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <Cta position="hero" />
-          <a href="#set" class="btn-secondary">Was ist drin?</a>
+        <p class="lede" data-hv style="--i:2">Das 12-Wochen-Programm für die Zeit nach der Abnehmspritze. Krafttraining, genug Protein und ein klarer Plan für die Waage. Für alle, die das Erreichte halten wollen.</p>
+        <div class="hero-form" data-hv style="--i:3">
+          <WaitlistForm position="hero" />
         </div>
-        <p class="mt-4 text-sm text-ink-3">
-          {site.price.set} € für 12 Wochen, rund {perDayRound} € am Tag. Kein Geld jetzt. Erste Charge ab {site.preorderGoal} Vorbestellungen. Du erfährst es als Erstes.
-        </p>
-        <p class="mt-6 inline-block rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">
-          {site.doctorSentence}
-        </p>
+        <p class="doc" data-hv style="--i:4">{site.doctorSentence}</p>
       </div>
-      <div class="mx-auto w-full max-w-md md:max-w-none">
-        <SetIllustration class="h-auto w-full" />
+      <div class="hnum" data-hv style="--i:3">
+        <p class="frac num" role="img" aria-label="Zwei Drittel"><span aria-hidden="true">2</span><span class="sl" aria-hidden="true">/</span><span aria-hidden="true">3</span><span class="frac-hl" aria-hidden="true"></span></p>
+        <p class="hnum-t">des verlorenen Gewichts waren ein Jahr nach dem Absetzen im Mittel wieder da.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /></p>
+        <a class="go" href="#kurve">Wie es dazu kommt <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M2 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" /></svg></a>
       </div>
     </div>
   </section>
 
-  <!-- ============ 1a. ERNÄHRUNGSPLAN (Lead-Magnet, kostenlos gegen Newsletter-Anmeldung) ============ -->
-  <ErnaehrungsplanTeaser />
+  <!-- ============ 2. ABSETZKURVE (klebende Bühne) ============ -->
+  <section class="story" id="kurve" aria-labelledby="kurve-h" data-kurve>
+    <div class="stage">
+      <div class="caps">
+        <h2 id="kurve-h" class="sr-only">Was nach der letzten Dosis passiert</h2>
+        <div class="cap on" data-step="0"><p class="k num">1 / 4 · Unter der Spritze</p><h3>68 Wochen mit Semaglutid: im Mittel −17,3 %.</h3><p>So viel verloren die Teilnehmenden der STEP-1-Verlängerung bis zur letzten Dosis. Unter Placebo waren es −2,0 %.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /></p></div>
+        <div class="cap" data-step="1"><p class="k num">2 / 4 · Woche 68</p><h3>Dann die letzte Dosis.</h3><p>Der Wirkstoff baut sich ab, der Appetit kommt zurück. In Studien beginnt die Zunahme etwa acht Wochen nach der letzten Dosis.<Fn n={fn('wu2025')} id="wu2025" /></p></div>
+        <div class="cap" data-step="2"><p class="k num">3 / 4 · Ein Jahr später</p><h3>Zwei Drittel sind zurück.</h3><p>Nach einem Jahr ohne Medikament lag das Gewicht im Mittel bei −5,6 %, unter Placebo bei −0,1 %. Zwei Drittel des Verlusts waren wieder da.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /></p></div>
+        <div class="cap" data-step="3"><p class="k num">4 / 4 · Was verloren ging</p><h3>Und nicht alles davon war Fett.</h3><p>In einer Substudie waren rund 40 % des verlorenen Gewichts fettfreie Masse, darunter Muskeln.<Fn n={fn('wilding2021dxa')} id="wilding2021dxa" /> Deshalb setzt das Programm bei Krafttraining und Protein an.</p></div>
+        <div class="rail" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="chart" data-chart>
+        <div class="ctl"><button class="tgl" type="button" aria-pressed="true" data-placebo><i aria-hidden="true"></i>Placebo</button></div>
+        <div class="chart-box">
+          <Absetzkurve variant="d" label={kurveLabel} />
+          <Absetzkurve variant="m" label={kurveLabel} />
+        </div>
+      </div>
+      <p class="src">Messpunkte aus der STEP-1-Verlängerung,<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Linien dazwischen schematisch. Körperzusammensetzung aus der DXA-Substudie.<Fn n={fn('wilding2021dxa')} id="wilding2021dxa" /> Mehr dazu: <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a></p>
+    </div>
+  </section>
 
-  <!-- ============ 2. PROBLEM IN DREI ZAHLEN ============ -->
-  <section id="problem" class="band py-16 scroll-mt-20 sm:py-20" aria-labelledby="problem-h">
+  <!-- ============ 3. 65 VON 100 ============ -->
+  <section class="sec s-a" aria-labelledby="h-65">
+    <div class="container-wide people">
+      <div>
+        <h2 id="h-65" class="sr-only">Die meisten setzen ab</h2>
+        <p class="pbig num" data-rv>65<small>%</small></p>
+        <p class="intro" data-rv style="--i:1">der Menschen ohne Typ-2-Diabetes setzen die Abnehmspritze innerhalb eines Jahres wieder ab.<Fn n={fn('rodriguez2025')} id="rodriguez2025" /> Die Zeit danach ist für die meisten keine Ausnahme, sondern der Normalfall.</p>
+      </div>
+      <div>
+        <div class="dots" data-dots role="img" aria-label="65 von 100 Punkten sind hervorgehoben.">{dots.map((on, i) => (<i class={on ? 'on' : undefined} style={on ? `--d:${i * 16}ms` : undefined}></i>))}</div>
+        <p class="dots-cap">Ein Punkt steht für einen Menschen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. WAS HILFT ============ -->
+  <section class="sec" id="hebel" aria-labelledby="h-help">
     <div class="container-wide">
-      <p class="eyebrow">Das Problem</p>
-      <h2 id="problem-h" class="h2 mt-3 max-w-2xl">Die meisten setzen ab. Und dann kommt das Gewicht zurück – oft ohne die Muskeln.</h2>
-      <div class="mt-12 grid gap-10 md:grid-cols-3 md:gap-0">
-        <div class="md:pr-8">
-          <p class="stat stat-1">65 %</p>
-          <p class="mt-4 band-muted">
-            der Menschen ohne Typ-2-Diabetes setzen die Abnehmspritze innerhalb eines Jahres wieder ab.<Fn n={fn('rodriguez2025')} id="rodriguez2025" />
-          </p>
+      <h2 id="h-help" class="sec-h" data-rv>Was in Studien den Unterschied macht.</h2>
+      <p class="intro" data-rv style="--i:1">Kein Trick, kein Präparat. Drei Dinge, die sich in Studien immer wieder zeigen.</p>
+      <div class="help">
+        <div data-rv>
+          <p class="help-n num">2<small>× pro Woche</small></p>
+          <h3 class="help-t">Krafttraining</h3>
+          <p class="help-p">Krafttraining während einer Kalorienreduktion verhinderte in einer Meta-Analyse den Verlust an fettfreier Masse weitgehend.<Fn n={fn('sardeli2018')} id="sardeli2018" /> Die WHO empfiehlt muskelkräftigende Aktivität an mindestens zwei Tagen pro Woche.<Fn n={fn('who2020')} id="who2020" /></p>
+          <div class="week" data-week aria-hidden="true"><span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span><i></i><i class="tr"></i><i></i><i></i><i class="tr"></i><i></i><i></i></div>
+          <p class="help-f">Zwei Einheiten à 30 Minuten, zum Beispiel dienstags und freitags.</p>
         </div>
-        <div class="band-line md:border-l md:px-8">
-          <p class="stat stat-2">~40 %</p>
-          <p class="mt-4 band-muted">
-            des verlorenen Gewichts waren in einer Substudie von STEP 1 fettfreie Masse – darunter Muskeln, nicht Fett.<Fn n={fn('wilding2021dxa')} id="wilding2021dxa" />
-          </p>
+        <div data-rv style="--i:1">
+          <p class="help-n num">1,2<small>g pro kg</small></p>
+          <h3 class="help-t">Protein am Tag</h3>
+          <p class="help-p">Übersichtsarbeiten empfehlen während Abnahme und Erhalt 1,2 bis 1,6 g pro kg Körpergewicht,<Fn n={fn('leidy2015')} id="leidy2015" /> deutlich mehr als die 0,8 g, die die DGE für Erwachsene ansetzt.<Fn n={fn('dgeProtein')} id="dgeProtein" /></p>
+          <div class="calc">
+            <label for="kg"><span>Dein Gewicht</span><span class="num" data-kgv>80 kg</span></label>
+            <input id="kg" type="range" min="50" max="150" step="1" value="80" data-kg />
+            <p class="calc-out"><output for="kg" class="num" data-pg>96 g Protein am Tag</output></p>
+            <p class="help-f">Eigene Rechnung mit 1,2 g pro kg. Genauer mit dem <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>.</p>
+          </div>
         </div>
-        <div class="band-line md:border-l md:pl-8">
-          <p class="stat stat-3">⅔</p>
-          <p class="mt-4 band-muted">
-            des verlorenen Gewichts waren ein Jahr nach dem Absetzen von Semaglutid im Mittel wieder da.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Die Zunahme beginnt in Studien etwa acht Wochen nach der letzten Dosis.<Fn n={fn('wu2025')} id="wu2025" />
-          </p>
+        <div data-rv style="--i:2">
+          <p class="help-n num">6<small>kg</small></p>
+          <h3 class="help-t">Unterschied nach einem Jahr</h3>
+          <p class="help-p">In der S-LiTE-Studie hielten Teilnehmende, die während der Therapie trainiert hatten, ihr Gewicht ein Jahr nach Therapieende. Wer nur das Medikament bekommen hatte, nahm im Schnitt 6,0 kg mehr wieder zu als die Trainingsgruppe.<Fn n={fn('jensen2024')} id="jensen2024" /></p>
+          <figure class="diff" data-diff>
+            <svg viewBox="0 0 320 64" width="320" height="64" role="img" aria-label="Mehr Wiederzunahme nach dem Medikament allein als nach Training allein: 6,0 Kilogramm, 95-Prozent-Konfidenzintervall 2,1 bis 10,0 Kilogramm.">
+              <line class="diff-ax" x1="10" x2="310" y1="40" y2="40" />
+              {[0, 2, 4, 6, 8, 10].map((k) => (<g><line class="diff-ax" x1={10 + k * 30} x2={10 + k * 30} y1="40" y2="44" /><text x={10 + k * 30} y="58" text-anchor="middle">{k}</text></g>))}
+              <line class="diff-ci" x1={10 + 2.1 * 30} x2={10 + 10 * 30} y1="20" y2="20" />
+              <line class="diff-ci" x1={10 + 2.1 * 30} x2={10 + 2.1 * 30} y1="15" y2="25" />
+              <line class="diff-ci" x1={10 + 10 * 30} x2={10 + 10 * 30} y1="15" y2="25" />
+              <rect class="diff-bar" x="10" y="14" width={6 * 30} height="12" rx="2" />
+              <circle class="diff-dot" cx={10 + 6 * 30} cy="20" r="4" />
+            </svg>
+            <figcaption class="help-f">Mehr Wiederzunahme nach dem Medikament allein, verglichen mit Training allein, in kg. Linie: 95-%-Konfidenzintervall 2,1 bis 10,0 kg.</figcaption>
+          </figure>
         </div>
       </div>
-      <p class="band-muted band-line mt-10 max-w-2xl border-t pt-6 text-sm">
-        Regain nach dem Absetzen ist in den Studien die Regel, nicht die Ausnahme. Was in Studien den Unterschied macht:
-        genug Protein, Krafttraining, Dranbleiben. Das Set liefert Protein, Ballaststoffe und Kreatin und begleitet dich
-        durch zwei Krafteinheiten pro Woche.
-      </p>
     </div>
   </section>
 
-  <!-- ============ 3. DAS SET ============ -->
-  <section id="set" class="py-16 scroll-mt-20" aria-labelledby="set-h">
+  <!-- ============ 5. PROGRAMM ============ -->
+  <section class="sec s-a" id="programm" aria-labelledby="h-prog">
     <div class="container-wide">
-      <p class="eyebrow">Das Set</p>
-      <h2 id="set-h" class="h2 mt-2 max-w-2xl">Vier Bausteine, ein Ziel: das Erreichte halten.</h2>
-      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <article class="card border-t-4 border-t-moss">
-          <p class="text-sm font-medium text-ink-3">Täglich · 1 Stick</p>
-          <h3 class="mt-2 text-xl">Protein-Stick</h3>
-          <p class="mt-2 text-sm text-ink-2">
-            Mindestens 20 g Protein pro Stick. Protein trägt zur Erhaltung von Muskelmasse bei.<Fn n={fn('euClaims')} id="euClaims" /> Ziel im Programm: 1,2 g Protein pro kg Körpergewicht am Tag<Fn n={fn('leidy2015')} id="leidy2015" /> – mit kleinem Appetit
-            schafft das kaum jemand. Der Stick liefert 20 g davon: die, die bei kleinem Appetit am ehesten fehlen.
-          </p>
-          <p class="mt-3 text-xs text-ink-3">Molke oder pflanzlich – du wählst bei der Bestellung.</p>
-        </article>
-        <article class="card border-t-4 border-t-amber">
-          <p class="text-sm font-medium text-ink-3">Täglich · 1 Stick</p>
-          <h3 class="mt-2 text-xl">Ballaststoff-Stick</h3>
-          <p class="mt-2 text-sm text-ink-2">
-            5 g Ballaststoffe pro Stick, geschmacksneutral, zum Einrühren in Wasser, Joghurt oder Suppe. Die DGE
-            empfiehlt mindestens 30 g am Tag<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> – mit kleineren Portionen wird das schwer.
-          </p>
-          <p class="mt-3 text-xs text-ink-3">Immer mit einem großen Glas Wasser einnehmen.</p>
-        </article>
-        <article class="card border-t-4 border-t-clay">
-          <p class="text-sm font-medium text-ink-3">Täglich · 3 g</p>
-          <h3 class="mt-2 text-xl">Kreatin</h3>
-          <p class="mt-2 text-sm text-ink-2">
-            3 g Kreatin-Monohydrat am Tag. Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen
-            kurzzeitiger intensiver körperlicher Betätigung.<Fn n={fn('euClaims')} id="euClaims" /> Eines der am besten untersuchten
-            Supplemente überhaupt.<Fn n={fn('kreider2017')} id="kreider2017" />
-          </p>
-          <p class="mt-3 text-xs text-ink-3">Wirkt nur zusammen mit Krafttraining – deshalb gehört das Programm dazu.</p>
-        </article>
-        <article class="card border-t-4 border-t-ink">
-          <p class="text-sm font-medium text-ink-3">12 Wochen</p>
-          <h3 class="mt-2 text-xl">Das Programm</h3>
-          <p class="mt-2 text-sm text-ink-2">
-            Zwei Krafteinheiten pro Woche à 30 Minuten, zuhause mit Bändern oder im Studio. Wöchentlicher Check-in per
-            E-Mail. Rezepte für kleine Portionen mit viel Protein. Wiegeprotokoll statt Kalorienzählen.
-          </p>
-          <p class="mt-3 text-xs text-ink-3">Für Einsteiger gemacht. Kein Vorwissen nötig.</p>
-        </article>
+      <h2 id="h-prog" class="sec-h" data-rv>Zwölf Wochen. Ein Plan für die Zeit danach.</h2>
+      <p class="intro" data-rv style="--i:1">Das Programm übersetzt die Studienlage in einen Wochenplan. Eine eigene Studie zum Programm gibt es nicht.</p>
+      <div class="prog">
+        <div>
+          <div class="cal" data-cal role="img" aria-label="Zwölf Wochen mit je sieben Tagen, davon zwei Krafteinheiten und ein Check-in pro Woche.">
+            {wochen.map((w, wi) => (<div class="wk">{w.map((typ, di) => (<i class={typ || undefined} style={typ ? `--d:${wi * 110 + di * 40}ms` : undefined}></i>))}</div>))}
+          </div>
+          <div class="cal-l"><span>Woche 1</span><span>Woche 12</span></div>
+          <div class="legend"><span><i></i>Krafteinheit, 30 Minuten</span><span><i class="c"></i>Check-in</span><span><i class="d"></i>Alltag</span></div>
+        </div>
+        <div class="feat">
+          <div data-rv><h3>Krafttraining</h3><p>Zwei Einheiten pro Woche à 30 Minuten. Zuhause mit Bändern oder im Studio, für Einsteiger gemacht.</p></div>
+          <div data-rv style="--i:1"><h3>Protein</h3><p>Dein Tagesziel in Gramm und Rezepte für kleine Portionen mit viel Protein.</p></div>
+          <div data-rv style="--i:2"><h3>Die Waage</h3><p>Ein Gewichtskorridor statt Kalorienzählen, mit klaren Regeln, wann du gegensteuerst. Deinen Korridor kannst du schon jetzt <a href="/werkzeuge/gewichtskorridor/">berechnen</a>.</p></div>
+          <div data-rv style="--i:3"><h3>Begleitung</h3><p>Ein Check-in pro Woche per E-Mail, mit Antworten auf deine Fragen. Orientierung, keine medizinische Beratung.</p></div>
+        </div>
       </div>
-      <div class="mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-        <Cta position="set" />
-        <span class="text-sm text-ink-3">{site.price.set} € für 12 Wochen · entspricht {site.price.setPerMonth} € im Monat · rund {perDayRound} € am Tag</span>
-      </div>
+      <p class="note" data-rv>84 Tage, 24 Krafteinheiten, 12 Check-ins. Was wir nicht sagen: dass das Programm die Spritze ersetzt oder den Jojo-Effekt verhindert. Das kann kein Programm versprechen.</p>
     </div>
   </section>
 
-  <!-- ============ 4. WAS DIE FORSCHUNG SAGT ============ -->
-  <section id="forschung" class="bg-white py-16 scroll-mt-20" aria-labelledby="forschung-h">
-    <div class="container-narrow">
-      <p class="eyebrow">Was die Forschung sagt</p>
-      <h2 id="forschung-h" class="h2 mt-2">Warum Protein, Krafttraining und Kreatin</h2>
-      <div class="prose-site mt-6">
-        <h3>Protein: Muskeln brauchen Baustoff, gerade wenn du wenig isst</h3>
-        <p>
-          Beim Abnehmen verliert der Körper nicht nur Fett. In einer Substudie der STEP-1-Studie entfielen rund 40 % des
-          Gewichtsverlusts unter Semaglutid auf fettfreie Masse.<Fn n={fn('wilding2021dxa')} id="wilding2021dxa" /> Übersichtsarbeiten
-          empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag, deutlich
-          mehr als die 0,8 g, die die DGE für Erwachsene als Minimum ansetzt.<Fn n={fn('leidy2015')} id="leidy2015" /> Wer unter der
-          Spritze wenig Appetit hat, kommt oft nicht einmal auf das Minimum. Protein trägt zur Erhaltung von
-          Muskelmasse bei.<Fn n={fn('euClaims')} id="euClaims" />
-        </p>
-        <h3>Krafttraining: der stärkste Hebel gegen den Verlust von Muskelmasse – und gegen das Zurück</h3>
-        <p>
-          Eine Meta-Analyse zeigt: Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier
-          Masse weitgehend.<Fn n={fn('sardeli2018')} id="sardeli2018" /> Und in der dänischen S-LiTE-Studie hielten Teilnehmende, die
-          während der Therapie trainiert hatten, ihr Gewicht und ihre Körperzusammensetzung ein ganzes Jahr nach dem
-          Absetzen – wer nur das Medikament bekommen hatte, nahm im Schnitt 6 kg mehr wieder zu.<Fn n={fn('jensen2024')} id="jensen2024" /> Die WHO empfiehlt an mindestens zwei Tagen pro Woche muskelkräftigende Aktivitäten.<Fn n={fn('who2020')} id="who2020" /> Deshalb: zwei Einheiten, 30 Minuten, machbar.
-        </p>
-        <figure class="my-6">
-          <a href="/wissen/krafttraining-nach-abnehmspritze/" class="block"><img src="/grafiken/training-s-lite.png" alt="Balkendiagramm aus der S-LiTE-Nachbeobachtung: Im Jahr nach Therapieende nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach dem Trainingsprogramm (95-Prozent-Konfidenzintervall 2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau erhalten." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" /></a>
-          <figcaption class="text-sm text-ink-3">S-LiTE-Nachbeobachtung, ein Jahr nach Therapieende.<Fn n={fn('jensen2024')} id="jensen2024" /> Grafik: Nach der Spritze.</figcaption>
-          <GrafikDaten id="training-s-lite" class="mt-3" />
-        </figure>
-        <h3>Ballaststoffe: die Nebenrolle, ehrlich benannt</h3>
-        <p>
-          Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag; die meisten Erwachsenen in Deutschland liegen darunter.<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> Mit den kleinen Portionen unter der Spritze wird es noch weniger. Der Stick liefert 5 g als Ergänzung zu Gemüse, Hülsenfrüchten und Vollkorn – nicht als Ersatz. Für Gewicht oder Sättigung behaupten wir nichts. Welcher Ballaststoff genau, sagen wir, sobald die Rezeptur steht; was Ballaststoffe können und was nicht, steht im <a href="/wissen/supplements-nach-abnehmspritze/">Supplements-Artikel</a>.
-        </p>
-        <h3>Kreatin: gut untersucht, günstig, wirkt mit dem Training</h3>
-        <p>
-          Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver
-          körperlicher Betätigung.<Fn n={fn('euClaims')} id="euClaims" /> Kreatin-Monohydrat gilt in üblichen
-          Dosen bei gesunden Erwachsenen als sicher und gehört zu den am besten untersuchten
-          Nahrungsergänzungen.<Fn n={fn('kreider2017')} id="kreider2017" /> Ohne Training bringt es wenig – deshalb gibt es das Set
-          nur mit Programm.
-        </p>
-        <p class="text-sm text-ink-3">
-          Alle Aussagen zum Set entsprechen den in der EU zugelassenen gesundheitsbezogenen Angaben. Was wir nicht
-          sagen: dass das Set die Spritze ersetzt oder den Jojo-Effekt verhindert. Das kann kein Lebensmittel.
-        </p>
+  <!-- ============ 6. WARTELISTE ============ -->
+  <section class="sec band cta" id="warteliste" aria-labelledby="h-cta">
+    <div class="container-wide cta-grid">
+      <div>
+        <h2 id="h-cta" class="cta-h" data-rv>Sei dabei, wenn es losgeht.</h2>
+        <p class="intro band-muted" data-rv style="--i:1">Wir starten das Programm, sobald genug Menschen auf der Warteliste stehen. Bis dahin zahlst du nichts.</p>
       </div>
+      <div data-rv style="--i:2">
+        <WaitlistForm position="block" starterpaket dark micro="" />
+        <p class="price">Basis-Programm geplant unter <strong>{site.price.programUnder} €</strong> für alle zwölf Wochen. Wer auf der Liste steht, erfährt Termin und Preis zuerst.</p>
+      </div>
+      <ol class="steps">
+        <li><strong><span class="num">1</span> Eintragen</strong><span>Nur deine E-Mail-Adresse. Keine Zahlung.</span></li>
+        <li><strong><span class="num">2</span> Bescheid bekommen</strong><span>Termin, Preis und Ablauf, bevor es losgeht.</span></li>
+        <li><strong><span class="num">3</span> Entscheiden</strong><span>Erst dann meldest du dich an, oder du lässt es.</span></li>
+      </ol>
+      <p class="free">Fragen vorab? <a href={kontakt} class="plausible-event-name=Kontakt+Klick plausible-event-kanal=warteliste">Schreib uns an {site.owner.email}</a>. Wir antworten persönlich.</p>
     </div>
   </section>
 
-  <!-- ============ 5. FÜR WEN / FÜR WEN NICHT ============ -->
-  <section id="fuer-wen" class="py-16 scroll-mt-20" aria-labelledby="fuerwen-h">
+  <!-- ============ 7. ERNÄHRUNGSPLAN (kostenlos) ============ -->
+  <ErnaehrungsplanTeaser fnBls={fn('bls')} fnLeidy={fn('leidy2015')} />
+
+  <!-- ============ 8. FÜR WEN ============ -->
+  <section class="sec" id="fuer-wen" aria-labelledby="h-wen">
     <div class="container-wide">
-      <p class="eyebrow">Für wen</p>
-      <h2 id="fuerwen-h" class="h2 mt-2">Für wen das Set gedacht ist – und für wen nicht</h2>
-      <div class="mt-8 grid gap-6 md:grid-cols-2">
-        <div class="card border-moss/30">
-          <h3 class="text-lg font-bold text-moss">Für dich, wenn du …</h3>
-          <ul class="mt-4 space-y-3 text-ink-2">
-            <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> die Abnehmspritze absetzt, reduzierst oder das planst und dein Gewicht halten willst.</li>
-            <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> unter der Spritze wenig gegessen hast und merkst, dass Kraft und Muskeln nachgelassen haben.</li>
-            <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> einen einfachen Plan willst: zwei Einheiten pro Woche, drei Sticks am Tag, ein Check-in.</li>
-            <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> keine Wunder erwartest, sondern etwas, das du 12 Wochen durchhalten kannst.</li>
+      <h2 id="h-wen" class="sec-h" data-rv>Für wen das Programm gedacht ist.</h2>
+      <div class="two">
+        <div data-rv>
+          <h3>Für dich, wenn du …</h3>
+          <ul>
+            <li>die Abnehmspritze absetzt, reduzierst oder das planst und dein Gewicht halten willst.</li>
+            <li>unter der Spritze wenig gegessen hast und merkst, dass Kraft und Muskeln nachgelassen haben.</li>
+            <li>einen einfachen Plan willst: zwei Einheiten pro Woche, ein Proteinziel, ein Check-in.</li>
+            <li>keine Wunder erwartest, sondern etwas, das du zwölf Wochen durchhalten kannst.</li>
           </ul>
         </div>
-        <div class="card border-clay/30">
-          <h3 class="text-lg font-bold text-clay">Nicht für dich, wenn du …</h3>
-          <ul class="mt-4 space-y-3 text-ink-2">
-            <li class="flex gap-3"><span class="text-clay" aria-hidden="true">✕</span> schwanger bist oder stillst.</li>
-            <li class="flex gap-3"><span class="text-clay" aria-hidden="true">✕</span> unter 18 bist.</li>
-            <li class="flex gap-3"><span class="text-clay" aria-hidden="true">✕</span> eine Nierenerkrankung hast – dann nur nach Rücksprache mit deiner Ärztin oder deinem Arzt, vor allem wegen Kreatin und Protein.</li>
-            <li class="flex gap-3"><span class="text-clay" aria-hidden="true">✕</span> Schluckbeschwerden hast (Ballaststoff-Stick nur mit viel Flüssigkeit).</li>
-            <li class="flex gap-3"><span class="text-clay" aria-hidden="true">✕</span> eine Essstörung hast oder hattest – bitte sprich zuerst mit deiner Behandlerin.</li>
+        <div data-rv style="--i:1">
+          <h3>Nicht für dich, wenn du …</h3>
+          <ul>
+            <li>schwanger bist, stillst oder unter 18 bist.</li>
+            <li>eine Nierenerkrankung hast. Dann das Proteinziel nur nach Rücksprache mit deiner Ärztin oder deinem Arzt.</li>
+            <li>eine Essstörung hast oder hattest. Bitte sprich zuerst mit deiner Behandlerin oder deinem Behandler.</li>
           </ul>
         </div>
       </div>
-      <p class="mt-8 max-w-2xl rounded-xl2 border border-amber/50 bg-amber-light px-5 py-4 text-base font-medium text-ink">
-        Das Set ist kein Medikament und keine Absetz-Anleitung. Es ergänzt das Gespräch mit deiner Ärztin, es ersetzt es nicht.
-      </p>
+      <p class="says" data-rv>Das Programm ist keine Absetz-Anleitung und kein Ersatz für ärztliche Begleitung.</p>
     </div>
   </section>
 
-  <!-- ============ 6. PREIS + VORBESTELLUNG ============ -->
-  <section id="preis" class="bg-white py-16 scroll-mt-20" aria-labelledby="preis-h">
-    <div class="container-wide grid gap-10 md:grid-cols-2 md:items-start">
-      <div>
-        <p class="eyebrow">Preis</p>
-        <h2 id="preis-h" class="h2 mt-2">{site.price.set} € einmalig oder {site.price.perMonth} € im Monat.</h2>
-        <p class="mt-4 text-ink-2">
-          {site.price.set} € einmalig für 12 Wochen (entspricht {site.price.setPerMonth} € im Monat) oder {site.price.perMonth} € monatlich, jederzeit kündbar. Versand innerhalb Deutschlands inklusive.
-        </p>
-        <ul class="mt-6 space-y-2 text-ink-2">
-          <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> 84 Protein-Sticks (≥ 20 g Protein)</li>
-          <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> 84 Ballaststoff-Sticks (5 g Ballaststoffe)</li>
-          <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> 84 Portionen Kreatin-Monohydrat (3 g)</li>
-          <li class="flex gap-3"><span class="text-moss" aria-hidden="true">✓</span> 12-Wochen-Programm: Trainingspläne, Rezepte, wöchentlicher Check-in</li>
-        </ul>
-        <p class="mt-3 text-xs text-ink-3">Nicht im Set: Widerstandsbänder fürs Training zuhause. Molke oder pflanzlich wählst du bei der Bestellung.</p>
-        <div class="mt-8 rounded-xl2 border border-line bg-paper p-5">
-          <p class="text-sm font-semibold text-ink">Zum Vergleich</p>
-          <p class="mt-1 text-sm text-ink-2">
-            Die Abnehmspritze kostet Selbstzahler in Deutschland je nach Präparat und Dosis etwa {site.price.injectionMin} bis {site.price.injectionMax} € im Monat. Das Set kostet ab {site.price.setPerMonth} €.
-          </p>
-          <p class="mt-2 text-sm text-ink-2">
-            Auf den Tag gerechnet: {perDay} € für drei Portionen und das Programm. Die aktuellen Selbstzahlerpreise je Präparat stehen im <a href="/marktradar/#preise" class="font-semibold text-moss underline underline-offset-4">Marktradar</a>.
-          </p>
-        </div>
-        <div class="mt-6 rounded-xl2 border border-moss/30 bg-moss-light/40 p-5">
-          <p class="text-sm font-semibold text-ink">So läuft die Vorbestellung</p>
-          <ol class="mt-3 space-y-3 text-sm text-ink-2">
-            <li class="flex gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ink text-xs font-semibold text-white" aria-hidden="true">1</span><span><strong class="text-ink">Eintragen.</strong> E-Mail-Adresse und drei kurze Angaben. Keine Zahlung, keine Zahlungsdaten.</span></li>
-            <li class="flex gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ink text-xs font-semibold text-white" aria-hidden="true">2</span><span><strong class="text-ink">Bescheid bekommen.</strong> Sobald {site.preorderGoal} Vorbestellungen zusammen sind, schreiben wir dir: Sorten, Liefertermin, Bestellmöglichkeit. Realistisch 8 bis 12 Wochen nach Erreichen der Marke.</span></li>
-            <li class="flex gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ink text-xs font-semibold text-white" aria-hidden="true">3</span><span><strong class="text-ink">Entscheiden.</strong> Erst dann bestellst du, oder du lässt es. Austragen geht jederzeit mit einer E-Mail.</span></li>
-          </ol>
-        </div>
-        <p class="mt-6 text-sm text-ink-3">
-          Ehrlich gesagt: Wir sammeln gerade Vorbestellungen, um zu sehen, ob es das Set geben soll. Erst ab {site.preorderGoal} Vorbestellungen produzieren wir. Deshalb jetzt keine Zahlung, kein Countdown, keine
-          künstliche Knappheit.
-        </p>
-        <p class="mt-4 text-sm text-ink-2">
-          Noch nicht so weit? Die <a href="/checkliste/" class="font-semibold text-moss underline underline-offset-4">Checkliste für die ersten 8 Wochen nach der letzten Dosis</a> ordnet die Zeit nach der Spritze, kostenlos und mit Quellen.
-        </p>
-      </div>
-      <PreorderForm />
-    </div>
-  </section>
-
-  <!-- ============ 7. WISSEN (SEO-Hub-Teaser) ============ -->
-  <section id="wissen" class="py-16 scroll-mt-20" aria-labelledby="wissen-h">
+  <!-- ============ 9. WISSEN ============ -->
+  <section class="sec s-a" id="wissen" aria-labelledby="h-wissen">
     <div class="container-wide">
-      <p class="eyebrow">Wissen</p>
-      <h2 id="wissen-h" class="h2 mt-2">Absetzen, Jojo-Effekt, Muskeln: die Fakten, mit Quellen</h2>
-      <p class="mt-3 max-w-2xl text-ink-2">
-        Was in Studien passiert, wenn die Spritze wegfällt, und was nachweislich hilft. Nüchtern, ohne Verkaufston,
-        jede Zahl mit Link zur Originalstudie.
-      </p>
-      <ul class="mt-6 flex flex-wrap gap-2" aria-label="Themen">
-        {themen.map((t) => (<li><a href={`/wissen/${t.slug}/`} class="inline-block rounded-lg border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink no-underline hover:border-moss hover:text-moss">{t.name}</a></li>))}
-      </ul>
-      <figure class="mt-8">
-        <a href="/wissen/abnehmspritze-absetzen/" class="block"><img src="/grafiken/absetzkurve-step-1.png" alt="Liniendiagramm: Unter Semaglutid 2,4 mg sinkt das Gewicht in 68 Wochen im Mittel um 17,3 Prozent, unter Placebo um 2,0 Prozent. In den 52 Wochen nach dem Absetzen steigt es wieder; nach insgesamt 120 Wochen liegt es bei minus 5,6 Prozent (Semaglutid) und minus 0,1 Prozent (Placebo). Zwei Drittel des Verlusts sind nach einem Jahr ohne Medikament wieder da." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" /></a>
-        <figcaption class="mt-2 text-sm text-ink-3">Die Absetzkurve aus der STEP-1-Verlängerung: zwei Drittel des Verlusts sind ein Jahr ohne Medikament wieder da.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Was Woche für Woche passiert, steht unter <a href="/wissen/abnehmspritze-absetzen/" class="font-semibold text-moss underline underline-offset-4">Abnehmspritze absetzen</a>; alle Grafiken mit Quellen unter <a href="/grafiken/" class="font-semibold text-moss underline underline-offset-4">Grafiken</a>.</figcaption>
-        <GrafikDaten id="absetzkurve-step-1" class="mt-3" />
-      </figure>
-      <div class="mt-8 grid gap-6 md:grid-cols-3">
-        {artikel.map((a) => (
-          <a href={`/wissen/${a.id}/`} class="card group block no-underline hover:border-moss">
-            <p class="text-sm font-medium text-ink-3">{a.data.category}</p>
-            <h3 class="mt-2 text-xl leading-snug text-ink group-hover:text-moss">{a.data.title}</h3>
-            <p class="mt-2 text-sm text-ink-2">{a.data.description}</p>
-            <p class="mt-4 text-sm font-semibold text-moss">Lesen →</p>
-          </a>
+      <h2 id="h-wissen" class="sec-h" data-rv>Absetzen, Jojo-Effekt, Muskeln: die Fakten, mit Quellen.</h2>
+      <p class="intro" data-rv style="--i:1">Was in Studien passiert, wenn die Spritze wegfällt, und was nachweislich hilft. Jede Zahl mit Link zur Originalstudie.</p>
+      <div class="arts">
+        {artikel.map((a, i) => (
+          <a href={`/wissen/${a.id}/`} data-rv style={`--i:${i}`}><span class="c">{a.data.category}</span><span class="t">{a.data.title}</span><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d={pfeil} fill="none" stroke="currentColor" stroke-width="1.5" /></svg></a>
         ))}
       </div>
-      <p class="mt-6 text-sm text-ink-2">
-        Absetzen nach Präparat: <a href="/wissen/#praeparate" class="font-semibold text-moss underline underline-offset-4">Übersicht nach Wirkstoff und Präparat</a> · <a href="/wissen/studien/" class="font-semibold text-moss underline underline-offset-4">Studien-Tracker</a>
-      </p>
-      <p class="mt-3 text-sm text-ink-2">
-        <a href="/wissen/" class="font-semibold text-moss underline underline-offset-4">Alle Artikel im Wissensbereich</a> · <a href="/glossar/" class="font-semibold text-moss underline underline-offset-4">Glossar: Begriffe erklärt</a> · <a href="/marktradar/" class="font-semibold text-moss underline underline-offset-4">Marktradar: Zulassungen, Preise, Kassen</a> · <a href="/grafiken/" class="font-semibold text-moss underline underline-offset-4">Grafiken: Studien, zitierfähig</a>
-      </p>
+      <div class="more">
+        <nav aria-label="Themen">
+          <h3>Themen</h3>
+          <ul>{themen.map((t) => (<li><a href={`/wissen/${t.slug}/`}>{t.name}</a></li>))}</ul>
+        </nav>
+        <nav aria-label="Werkzeuge">
+          <h3>Werkzeuge</h3>
+          <ul>{werkzeuge.map((w) => (<li><a href={w.href}>{w.name}</a></li>))}</ul>
+        </nav>
+        <nav aria-label="Nachschlagen">
+          <h3>Nachschlagen</h3>
+          <ul>
+            <li><a href="/wissen/">Alle Artikel</a></li>
+            <li><a href="/wissen/#praeparate">Nach Wirkstoff und Präparat</a></li>
+            <li><a href="/wissen/studien/">Studien-Tracker</a></li>
+            <li><a href="/glossar/">Glossar</a></li>
+            <li><a href="/grafiken/">Grafiken</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </section>
 
-  <!-- ============ 7b. MARKTRADAR (Teaser ohne Markennamen, keine Affiliate-Links) ============ -->
+  <!-- ============ 10. MARKTRADAR (Teaser ohne Markennamen, keine Affiliate-Links) ============ -->
   <MarktradarTeaser />
 
-  <!-- ============ 8. FAQ ============ -->
-  <section class="bg-white py-16">
+  <!-- ============ 11. FAQ und Quellen ============ -->
+  <section class="sec faq-sec s-a" aria-label="Häufige Fragen und Quellen">
     <div class="container-narrow">
       <Faq items={landingFaq} />
-      <div class="mt-10 text-center">
-        <Cta position="faq" />
-      </div>
+      <p class="faq-k">Deine Frage ist nicht dabei? <a href={kontakt} class="plausible-event-name=Kontakt+Klick plausible-event-kanal=faq">Schreib uns</a>, wir antworten persönlich.</p>
       <Footnotes ids={fnIds} />
     </div>
   </section>
 </Base>
+
+<style>
+  /* ---------- Hero ---------- */
+  .hero-grid {
+    display: grid;
+    gap: 2.75rem;
+    padding-top: clamp(1.75rem, 7vh, 5.5rem);
+    padding-bottom: clamp(2.25rem, 6vh, 4.5rem);
+  }
+  .hero-h1 {
+    line-height: 0.98;
+  }
+  .h1a {
+    display: block;
+    font-size: clamp(1.375rem, 2.3vw, 2rem);
+    font-stretch: 112%;
+    font-weight: 480;
+    color: var(--color-ink-2);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.35em;
+  }
+  .h1b {
+    display: block;
+    font-size: clamp(2.6rem, 7vw, 6.5rem);
+    letter-spacing: -0.025em;
+  }
+  .lede {
+    font-size: clamp(1.0625rem, 1.5vw, 1.3125rem);
+    line-height: 1.5;
+    color: var(--color-ink-2);
+    max-width: 34em;
+  }
+  .hero-form {
+    margin-top: 2rem;
+  }
+  .doc {
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+    color: var(--color-ink-2);
+    max-width: 34em;
+  }
+  .hnum {
+    align-self: end;
+  }
+  .frac {
+    position: relative;
+    display: inline-block;
+    font-stretch: 125%;
+    font-weight: 460;
+    font-size: clamp(6.5rem, 11vw, 10.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    padding: 0 0.04em;
+  }
+  .frac span {
+    position: relative;
+    z-index: 1;
+  }
+  .frac .sl {
+    font-weight: 300;
+    color: var(--color-ink-2);
+  }
+  .frac .frac-hl {
+    position: absolute;
+    z-index: 0;
+    left: 0.04em;
+    right: 0.04em;
+    bottom: -0.1em;
+    height: 0.085em;
+    border-radius: 0.04em;
+    background: var(--color-amber);
+    transform-origin: left;
+  }
+  .hnum-t {
+    font-size: 1.0625rem;
+    color: var(--color-ink-2);
+    max-width: 19em;
+    margin-top: 2.25rem;
+  }
+  .go {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.1rem;
+    font-size: 0.9375rem;
+    font-weight: 540;
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+  .go svg {
+    transition: transform 0.4s var(--ease);
+  }
+  .go:hover svg {
+    transform: translateY(3px);
+  }
+  :global(html.js:not(.rm)) [data-hv] {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: hv 1.1s var(--ease) forwards;
+    animation-delay: calc(120ms + var(--i, 0) * 110ms);
+  }
+  :global(html.js:not(.rm)) .frac-hl {
+    transform: scaleX(0);
+    animation: hl 1s var(--ease) 0.9s forwards;
+  }
+  @keyframes hv {
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes hl {
+    to { transform: scaleX(1); }
+  }
+
+  /* ---------- Kurve: klebende Bühne ---------- */
+  .story {
+    position: relative;
+    height: 400vh;
+  }
+  .stage {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 0.62fr) minmax(0, 1.38fr);
+    gap: 3rem;
+    align-items: center;
+    max-width: calc(75rem + 2 * var(--pad));
+    margin: 0 auto;
+    padding: 5.5rem var(--pad) 2.5rem;
+  }
+  .caps {
+    position: relative;
+    display: grid;
+  }
+  .cap {
+    grid-area: 1 / 1;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.5s var(--ease), transform 0.6s var(--ease);
+    pointer-events: none;
+  }
+  .cap.on {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+  .cap .k {
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
+  .cap h3 {
+    margin-top: 0.75rem;
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    line-height: 1.04;
+    font-stretch: 118%;
+    font-weight: 520;
+    letter-spacing: -0.018em;
+  }
+  .cap h3 + p {
+    margin-top: 1rem;
+    font-size: 1.0625rem;
+    color: var(--color-ink-2);
+    max-width: 24em;
+  }
+  .rail {
+    grid-area: 2 / 1;
+    display: flex;
+    gap: 6px;
+    margin-top: 2rem;
+  }
+  .rail i {
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--color-line);
+    transition: background 0.4s var(--ease);
+  }
+  .rail i.on {
+    background: var(--color-ink);
+  }
+  .chart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .chart-box {
+    height: min(62vh, 580px);
+    min-height: 320px;
+  }
+  .chart-box :global(svg.kv-m) {
+    display: none;
+  }
+  .ctl {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .tgl {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 2.25rem;
+    padding: 0 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-line);
+    background: transparent;
+    color: var(--color-ink-2);
+    font: inherit;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  .tgl i {
+    width: 22px;
+    height: 0;
+    border-top: 2px dotted var(--color-placebo);
+  }
+  .tgl[aria-pressed="false"] {
+    opacity: 0.6;
+  }
+  .src {
+    position: absolute;
+    left: var(--pad);
+    bottom: 1rem;
+    font-size: 0.75rem;
+    color: var(--color-ink-3);
+    max-width: 62ch;
+  }
+  .src a {
+    color: inherit;
+    text-underline-offset: 3px;
+  }
+  /* Ohne Skript oder mit reduzierter Bewegung: keine klebende Bühne, alle Schritte untereinander, Kurve im Endzustand */
+  :global(html.rm) .story, :global(html:not(.js)) .story {
+    height: auto;
+  }
+  :global(html.rm) .stage, :global(html:not(.js)) .stage {
+    position: relative;
+    height: auto;
+    overflow: visible;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+  :global(html.rm) .caps, :global(html:not(.js)) .caps {
+    display: block;
+  }
+  :global(html.rm) .cap, :global(html:not(.js)) .cap {
+    opacity: 1;
+    transform: none;
+    margin-bottom: 1.75rem;
+  }
+  :global(html.rm) .rail, :global(html:not(.js)) .rail {
+    display: none;
+  }
+  :global(html.rm) .src, :global(html:not(.js)) .src {
+    position: static;
+    grid-column: 1 / -1;
+  }
+  @media (min-width: 901px) {
+    :global(html.rm) .chart, :global(html:not(.js)) .chart {
+      position: sticky;
+      top: 5.5rem;
+      align-self: start;
+    }
+  }
+
+  /* ---------- Abschnitte ---------- */
+  .sec {
+    padding: clamp(5rem, 13vh, 10rem) 0;
+  }
+  .s-a {
+    background: var(--color-paper-2);
+  }
+  .sec-h {
+    font-size: clamp(2.125rem, 4.4vw, 4.25rem);
+    line-height: 1.02;
+    max-width: 18em;
+  }
+  .intro {
+    margin-top: 1.5rem;
+    font-size: clamp(1.0625rem, 1.5vw, 1.3125rem);
+    line-height: 1.5;
+    color: var(--color-ink-2);
+    max-width: 36em;
+  }
+  .intro :global(sup a) {
+    color: inherit;
+  }
+
+  /* 65 von 100 */
+  .people {
+    display: grid;
+    gap: 3rem 6rem;
+    align-items: center;
+  }
+  .pbig {
+    font-size: clamp(6rem, 13vw, 12.5rem);
+    font-stretch: 125%;
+    font-weight: 480;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+  }
+  .pbig small {
+    font-size: 0.32em;
+    font-stretch: 118%;
+    letter-spacing: -0.01em;
+    margin-left: 0.08em;
+  }
+  .dots {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: clamp(8px, 1.4vw, 16px);
+    max-width: 440px;
+    width: 100%;
+  }
+  .dots i {
+    display: block;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #c9cac2;
+    transition: background 0.5s var(--ease), transform 0.5s var(--ease);
+    transition-delay: var(--d, 0ms);
+  }
+  .dots i.on {
+    background: var(--color-ink);
+  }
+  :global(html.js:not(.rm)) .dots:not(.in) i.on {
+    background: #c9cac2;
+    transform: scale(0.6);
+  }
+  .dots-cap {
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+    margin-top: 1.1rem;
+  }
+
+  /* Was hilft */
+  .help {
+    display: grid;
+    gap: 3.5rem;
+    margin-top: 4rem;
+  }
+  .help-n {
+    font-size: clamp(3.5rem, 6vw, 5.75rem);
+    font-stretch: 125%;
+    font-weight: 480;
+    letter-spacing: -0.035em;
+    line-height: 0.9;
+  }
+  .help-n small {
+    font-size: 0.36em;
+    letter-spacing: -0.01em;
+    font-stretch: 115%;
+    margin-left: 0.1em;
+  }
+  .help-t {
+    margin-top: 1.4rem;
+    font-size: 1.1875rem;
+    font-weight: 540;
+    font-stretch: 108%;
+  }
+  .help-p {
+    margin-top: 0.6rem;
+    color: var(--color-ink-2);
+  }
+  .help-f {
+    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+  }
+  .help-f a {
+    color: inherit;
+    text-underline-offset: 3px;
+  }
+  .week {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px 8px;
+    max-width: 16rem;
+    margin-top: 1.4rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--color-line);
+    font-size: 0.75rem;
+    color: var(--color-ink-3);
+    text-align: center;
+  }
+  .week i {
+    display: block;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #c9cac2;
+    transition: background 0.5s var(--ease), transform 0.5s var(--ease);
+  }
+  .week i.tr {
+    background: var(--color-moss);
+  }
+  .week i.tr + i + i + i.tr {
+    transition-delay: 0.25s;
+  }
+  :global(html.js:not(.rm)) .week:not(.in) i.tr {
+    background: #c9cac2;
+    transform: scale(0.6);
+  }
+  .calc {
+    margin-top: 1.4rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--color-line);
+  }
+  .calc label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: var(--color-ink-2);
+  }
+  .calc input {
+    width: 100%;
+    height: 28px;
+    margin: 0.75rem 0 0.25rem;
+  }
+  .calc-out {
+    margin: 0;
+  }
+  .calc output {
+    display: block;
+    font-size: 1.875rem;
+    font-stretch: 118%;
+    font-weight: 520;
+    letter-spacing: -0.01em;
+    margin-top: 0.3rem;
+  }
+  .diff {
+    margin: 1.4rem 0 0;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--color-line);
+  }
+  .diff svg {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    overflow: visible;
+  }
+  .diff text {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    fill: var(--color-ink-3);
+  }
+  .diff-ax {
+    stroke: var(--color-ink-3);
+    stroke-width: 1;
+  }
+  .diff-ci {
+    stroke: var(--color-ink);
+    stroke-width: 1.25;
+  }
+  .diff-bar {
+    fill: var(--color-clay);
+    transform-origin: 10px 20px;
+    transition: transform 1.2s var(--ease);
+  }
+  .diff-dot {
+    fill: var(--color-ink);
+    transition: opacity 0.4s var(--ease) 1s;
+  }
+  :global(html.js:not(.rm)) .diff:not(.in) .diff-bar {
+    transform: scaleX(0);
+  }
+  :global(html.js:not(.rm)) .diff:not(.in) .diff-dot {
+    opacity: 0;
+  }
+
+  /* Programm */
+  .prog {
+    display: grid;
+    gap: 4rem 6rem;
+    margin-top: 4.5rem;
+    align-items: start;
+  }
+  .cal {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: clamp(6px, 1vw, 12px);
+  }
+  .wk {
+    display: grid;
+    gap: clamp(6px, 1vw, 12px);
+  }
+  .wk i {
+    display: block;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #c9cac2;
+    transition: background 0.4s var(--ease), transform 0.5s var(--ease), box-shadow 0.4s var(--ease);
+    transition-delay: var(--d, 0ms);
+  }
+  .wk i.tr {
+    background: var(--color-moss);
+  }
+  .wk i.ci {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px var(--color-ink);
+  }
+  :global(html.js:not(.rm)) .cal:not(.in) i.tr {
+    background: #c9cac2;
+    transform: scale(0.6);
+  }
+  :global(html.js:not(.rm)) .cal:not(.in) i.ci {
+    box-shadow: inset 0 0 0 2px #c9cac2;
+  }
+  .cal-l {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+    margin-top: 0.75rem;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.4rem;
+    font-size: 0.875rem;
+    color: var(--color-ink-2);
+    margin-top: 1.4rem;
+  }
+  .legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .legend i {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-moss);
+  }
+  .legend i.c {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px var(--color-ink);
+  }
+  .legend i.d {
+    background: #c9cac2;
+  }
+  .feat > div {
+    display: grid;
+    gap: 0.25rem 1rem;
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--color-line);
+  }
+  .feat > div:last-child {
+    border-bottom: 1px solid var(--color-line);
+  }
+  .feat h3 {
+    font-size: 1.0625rem;
+    font-weight: 560;
+    font-stretch: 110%;
+    letter-spacing: -0.005em;
+  }
+  .feat p {
+    color: var(--color-ink-2);
+  }
+  .feat a, .note a {
+    color: var(--color-moss);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .note {
+    font-size: 0.9375rem;
+    color: var(--color-ink-2);
+    margin-top: 2.5rem;
+    max-width: 40em;
+  }
+
+  /* Warteliste (dunkel) */
+  .cta-grid {
+    display: grid;
+    gap: 3rem 6rem;
+    align-items: end;
+  }
+  .cta-h {
+    font-size: clamp(2.5rem, 5vw, 4.75rem);
+    line-height: 1;
+  }
+  .price {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--dark-line);
+    font-size: 0.9375rem;
+    color: var(--dark-muted);
+  }
+  .price strong {
+    color: var(--dark-fg);
+    font-weight: 560;
+  }
+  .steps {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 1.75rem 0 0;
+    display: grid;
+    gap: 1.25rem 1.5rem;
+    border-top: 1px solid var(--dark-line);
+  }
+  .steps strong {
+    display: block;
+    font-stretch: 112%;
+    font-weight: 560;
+    font-size: 1.0625rem;
+  }
+  .steps strong span {
+    color: var(--dark-muted);
+    margin-right: 0.5rem;
+    font-weight: 400;
+  }
+  .steps li > span {
+    display: block;
+    color: var(--dark-muted);
+    font-size: 0.9375rem;
+    margin-top: 0.35rem;
+  }
+  .free {
+    font-size: 0.9375rem;
+    color: var(--dark-muted);
+  }
+  .cta .intro {
+    color: var(--dark-muted);
+  }
+  .free a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* Für wen */
+  .two {
+    display: grid;
+    gap: 3.5rem 6rem;
+    margin-top: 3.5rem;
+  }
+  .two h3 {
+    font-size: 1.375rem;
+    font-stretch: 112%;
+    font-weight: 540;
+  }
+  .two ul {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+  .two li {
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--color-line);
+    color: var(--color-ink-2);
+  }
+  .two li:last-child {
+    border-bottom: 1px solid var(--color-line);
+  }
+  .says {
+    margin-top: 3rem;
+    font-size: 1.1875rem;
+    font-stretch: 106%;
+    max-width: 38em;
+  }
+
+  /* Wissen */
+  .arts {
+    margin-top: 3.5rem;
+    border-top: 1px solid var(--color-line);
+  }
+  .arts a {
+    display: grid;
+    grid-template-columns: 11em 1fr auto;
+    gap: 1.5rem;
+    align-items: baseline;
+    padding: 1.6rem 0;
+    border-bottom: 1px solid var(--color-line);
+    text-decoration: none;
+    color: var(--color-ink);
+  }
+  .arts .c {
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
+  .arts .t {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-stretch: 112%;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .arts svg {
+    transition: transform 0.4s var(--ease);
+  }
+  .arts a:hover svg {
+    transform: translateX(4px);
+  }
+  .arts a:hover .t {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+  }
+  .more {
+    display: grid;
+    gap: 2rem 3rem;
+    margin-top: 3rem;
+  }
+  .more h3 {
+    font-size: 0.875rem;
+    font-weight: 450;
+    font-stretch: 100%;
+    letter-spacing: 0;
+    color: var(--color-ink-3);
+  }
+  .more ul {
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.45rem;
+  }
+  .more a {
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-underline-offset: 4px;
+  }
+  .more a:hover {
+    text-decoration-color: var(--color-ink);
+  }
+
+  /* FAQ */
+  .faq-k {
+    margin-top: 1.5rem;
+    font-size: 0.9375rem;
+    color: var(--color-ink-2);
+  }
+  .faq-k a {
+    color: var(--color-moss);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* Einblenden beim Scrollen */
+  :global(html.js:not(.rm)) [data-rv] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.9s var(--ease), transform 1s var(--ease);
+    transition-delay: calc(var(--i, 0) * 90ms);
+  }
+  :global(html.js:not(.rm)) [data-rv].in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ---------- Breiten ---------- */
+  @media (min-width: 901px) {
+    .hero-grid {
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+      gap: 2.75rem 4.5rem;
+      align-items: end;
+    }
+    .hero-h1 {
+      grid-column: 1 / -1;
+    }
+    .people, .prog, .two, .cta-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+    .cta-grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    }
+    .dots {
+      justify-self: end;
+    }
+    .dots-cap {
+      text-align: right;
+    }
+    .help {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 4.5rem;
+    }
+    .feat > div {
+      grid-template-columns: 9em 1fr;
+    }
+    .steps {
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 2.5rem;
+    }
+    .free {
+      grid-column: 1 / -1;
+    }
+    .more {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 900px) {
+    .story {
+      height: 440vh;
+    }
+    .stage {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      align-content: start;
+      gap: 0.75rem;
+      padding: 4.5rem var(--pad) 1rem;
+    }
+    .chart {
+      order: 1;
+    }
+    .caps {
+      order: 2;
+    }
+    .chart-box {
+      height: clamp(240px, 44svh, 420px);
+      min-height: 0;
+    }
+    .chart-box :global(svg.kv-d) {
+      display: none;
+    }
+    .chart-box :global(svg.kv-m) {
+      display: block;
+    }
+    .ctl {
+      justify-content: flex-start;
+    }
+    .cap h3 {
+      font-size: 1.5rem;
+      margin-top: 0.4rem;
+    }
+    .cap h3 + p {
+      font-size: 0.9375rem;
+      margin-top: 0.6rem;
+    }
+    .rail {
+      margin-top: 1rem;
+    }
+    .src {
+      display: none;
+    }
+    .frac {
+      font-size: clamp(6.5rem, 32vw, 9rem);
+    }
+    .hnum-t {
+      margin-top: 2.25rem;
+    }
+    .arts a {
+      grid-template-columns: 1fr auto;
+      gap: 0.4rem 1rem;
+    }
+    .arts .c {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (max-width: 900px) and (max-height: 700px) {
+    .cap h3 {
+      font-size: 1.3rem;
+    }
+    .cap .k {
+      font-size: 0.8125rem;
+    }
+  }
+</style>
+
+<script>
+  const html = document.documentElement;
+  const RM = html.classList.contains('rm');
+  const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
+  const smooth = (t: number) => {
+    t = clamp(t, 0, 1);
+    return t * t * (3 - 2 * t);
+  };
+  const seg = (t: number, a: number, b: number) => smooth((t - a) / (b - a));
+
+  /* ---------------- Absetzkurve ---------------- */
+  type El = SVGGraphicsElement & { style: CSSStyleDeclaration };
+  interface Kurve {
+    svg: SVGSVGElement;
+    k: (name: string) => El | null;
+    sema1: SVGPathElement;
+    sema2: SVGPathElement;
+    L1: number;
+    L2: number;
+    x68: number;
+    x0: number;
+    x120: number;
+  }
+  const story = document.querySelector<HTMLElement>('[data-kurve]');
+  if (story) {
+    const caps = story.querySelectorAll<HTMLElement>('.cap');
+    const rail = story.querySelectorAll<HTMLElement>('.rail i');
+    const svgs = story.querySelectorAll<SVGSVGElement>('svg[data-kv]');
+    const chart = story.querySelector<HTMLElement>('[data-chart]');
+    let K: Kurve | null = null;
+    let lastT = -1;
+
+    const op = (e: El | null, v: number) => {
+      if (e) e.style.opacity = String(v);
+    };
+    const draw = (p: SVGPathElement, s: number) => {
+      p.style.strokeDasharray = '1 1';
+      p.style.strokeDashoffset = String(1 - s);
+      p.style.opacity = s > 0.002 ? '1' : '0';
+    };
+
+    const pick = () => {
+      const svg = Array.from(svgs).find((s) => s.getBoundingClientRect().width > 0);
+      if (!svg) return;
+      const k = (name: string) => svg.querySelector<El>(`[data-k="${name}"]`);
+      const sema1 = k('sema1') as unknown as SVGPathElement;
+      const sema2 = k('sema2') as unknown as SVGPathElement;
+      const doseL = k('doseL') as unknown as SVGLineElement;
+      const p0 = sema1.getPointAtLength(0);
+      const pEnd = sema2.getPointAtLength(sema2.getTotalLength());
+      K = { svg, k, sema1, sema2, L1: sema1.getTotalLength(), L2: sema2.getTotalLength(), x68: doseL.x1.baseVal.value, x0: p0.x, x120: pEnd.x };
+      lastT = -1;
+      update(true);
+    };
+
+    const progress = () => {
+      const r = story.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const e = clamp((vh - r.top) / vh, 0, 1); // Bühne fährt ein: die Kurve beginnt schon hier
+      const q = clamp(-r.top / Math.max(1, r.height - vh), 0, 1); // Bühne klebt
+      return 0.22 * e + 0.78 * q;
+    };
+
+    const update = (force = false) => {
+      if (!K || RM) return;
+      const t = progress();
+      if (!force && Math.abs(t - lastT) < 0.0005) return;
+      lastT = t;
+      const { k } = K;
+      const c = seg(t, 0.81, 0.92);
+      const dim = 1 - 0.75 * c;
+      const a = seg(t, 0.03, 0.34);
+      const b = seg(t, 0.47, 0.68);
+      op(k('grid'), 0.25 + 0.75 * seg(t, 0, 0.06));
+      draw(K.sema1, a);
+      K.sema1.style.opacity = String(a > 0.002 ? dim : 0);
+      op(k('semaT'), seg(t, 0.1, 0.16) * dim);
+      draw(K.sema2, b);
+      K.sema2.style.opacity = String(b > 0.002 ? dim : 0);
+      op(k('pla1'), (0.15 + 0.85 * a) * dim);
+      op(k('pla2'), b * dim);
+      op(k('plLab'), seg(t, 0.62, 0.7) * dim);
+      op(k('p1'), seg(t, 0.31, 0.36));
+      const ds = seg(t, 0.35, 0.42);
+      op(k('dose'), ds);
+      const doseL = k('doseL');
+      if (doseL) {
+        doseL.style.transformOrigin = `${K.x68}px 0px`;
+        doseL.style.transform = `scaleY(${ds})`;
+      }
+      op(k('eight'), seg(t, 0.41, 0.47) * dim);
+      op(k('p2'), seg(t, 0.66, 0.71) * dim);
+      const brace = k('brace') as unknown as SVGPathElement | null;
+      if (brace) {
+        brace.style.strokeDasharray = '1 1';
+        brace.style.strokeDashoffset = String(1 - seg(t, 0.68, 0.76));
+      }
+      op(k('braceG'), seg(t, 0.68, 0.72) * dim);
+      // Schritt 4: der Verlust wird zum Balken und teilt sich in Fett und fettfreie Masse
+      op(k('comp'), c);
+      const fat = k('fat');
+      const lean = k('lean');
+      if (fat && lean) {
+        fat.style.transformOrigin = `${K.x68}px ${fat.getAttribute('y')}px`;
+        fat.style.transform = `scaleY(${c})`;
+        lean.style.transformOrigin = `${K.x68}px ${Number(lean.getAttribute('y')) + Number(lean.getAttribute('height'))}px`;
+        lean.style.transform = `scaleY(${c})`;
+      }
+      // Laufender Punkt: zeigt nur die Zeit, keine erfundenen Zwischenwerte
+      const on = (a > 0.01 && a < 0.999) || (b > 0.01 && b < 0.999);
+      const mover = k('mover');
+      op(mover, on ? 1 : 0);
+      if (on) {
+        const first = a < 0.999;
+        const p = first ? K.sema1 : K.sema2;
+        const pt = p.getPointAtLength((first ? K.L1 : K.L2) * (first ? a : b));
+        const md = k('md');
+        const mt = k('mt');
+        if (md && mt) {
+          md.setAttribute('cx', String(pt.x));
+          md.setAttribute('cy', String(pt.y));
+          md.style.fill = first ? 'var(--color-ink)' : 'var(--color-clay)';
+          mt.setAttribute('x', String(pt.x));
+          mt.setAttribute('y', String(pt.y - 16));
+          mt.textContent = `Woche ${Math.round(((pt.x - K.x0) / (K.x120 - K.x0)) * 120)}`;
+          // Beschriftung blendet vor dem Endpunkt aus, damit sie nicht auf −17,3 % oder −5,6 % liegt
+          op(mt, 1 - seg(first ? a : b, 0.86, 0.96));
+        }
+      }
+      // Text folgt der Kurve: „Ein Jahr später“ erst, wenn der Wiederanstieg größtenteils gezeichnet ist
+      const step = t < 0.35 ? 0 : t < 0.63 ? 1 : t < 0.8 ? 2 : 3;
+      caps.forEach((cap, i) => cap.classList.toggle('on', i === step));
+      rail.forEach((r, i) => r.classList.toggle('on', i <= step));
+    };
+
+    const tg = story.querySelector<HTMLButtonElement>('[data-placebo]');
+    tg?.addEventListener('click', () => {
+      const on = tg.getAttribute('aria-pressed') !== 'true';
+      tg.setAttribute('aria-pressed', on ? 'true' : 'false');
+      chart?.classList.toggle('pl-off', !on);
+    });
+
+    if (!RM) {
+      let ticking = false;
+      const onScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          ticking = false;
+          update();
+        });
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      let rw: number | undefined;
+      window.addEventListener('resize', () => {
+        window.clearTimeout(rw);
+        rw = window.setTimeout(pick, 150);
+      });
+      pick();
+    }
+  }
+
+  /* ---------------- Einblenden, Punktfelder, Balken ---------------- */
+  const targets = document.querySelectorAll<HTMLElement>('[data-rv], [data-dots], [data-cal], [data-week], [data-diff], [data-ep]');
+  if (!RM && 'IntersectionObserver' in window) {
+    const seen = (es: IntersectionObserverEntry[]) => {
+      es.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    };
+    const io = new IntersectionObserver(seen, { rootMargin: '0px 0px -12% 0px', threshold: 0.15 });
+    targets.forEach((t) => io.observe(t));
+  } else {
+    targets.forEach((t) => t.classList.add('in'));
+  }
+
+  /* ---------------- Proteinregler ---------------- */
+  const kg = document.querySelector<HTMLInputElement>('[data-kg]');
+  const kgv = document.querySelector<HTMLElement>('[data-kgv]');
+  const pg = document.querySelector<HTMLOutputElement>('[data-pg]');
+  kg?.addEventListener('input', () => {
+    const v = Number(kg.value);
+    if (kgv) kgv.textContent = `${v} kg`;
+    if (pg) pg.textContent = `${Math.round(v * 1.2)} g Protein am Tag`;
+  });
+</script>

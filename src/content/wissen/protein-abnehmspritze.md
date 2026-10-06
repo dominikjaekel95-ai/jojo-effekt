@@ -6,9 +6,9 @@ category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 4
 pubDate: 2026-09-30
-updatedDate: 2026-10-05
+updatedDate: 2026-10-06
 keywords: ["abnehmspritze protein", "abnehmspritze protein wie viel", "eiweiß abnehmspritze", "wegovy protein", "ozempic eiweiß wie viel", "proteinshake abnehmspritze", "abnehmspritze ernährung eiweiß"]
-sources: ["dgeProtein", "leidy2015", "wilding2021dxa", "euClaims", "sardeli2018", "dgeBallaststoffe"]
+sources: ["dgeProtein", "leidy2015", "wilding2021dxa", "euClaims", "sardeli2018", "dgeBallaststoffe", "bls", "mamerow2014"]
 related: ["ernaehrung-nach-abnehmspritze", "supplements-nach-abnehmspritze", "muskelabbau-abnehmspritze"]
 faq:
   - q: "Wie viel Protein pro Tag brauche ich unter der Abnehmspritze?"
@@ -34,6 +34,8 @@ Unter der Abnehmspritze essen viele so wenig, dass sie nicht einmal das Minimum 
 
 Die DGE setzt für gesunde Erwachsene 0,8 g Protein pro kg Körpergewicht und Tag an, ab 65 Jahren 1,0 g.<sup><a href="#fn-dgeProtein">1</a></sup> Das ist ein Wert für Menschen, die ihr Gewicht halten und keinen Muskelabbau riskieren. Beim Abnehmen ist die Lage anders: Der Körper ist im Defizit und baut auch Muskelprotein ab. Übersichtsarbeiten empfehlen deshalb während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g pro kg.<sup><a href="#fn-leidy2015">2</a></sup> Protein trägt zur Erhaltung von Muskelmasse bei.<sup><a href="#fn-euClaims">4</a></sup> Warum Frauen in und nach den Wechseljahren eher am oberen Rand liegen sollten, steht unter [Wechseljahre und Abnehmspritze](/wissen/wechseljahre-abnehmspritze/).
 
+<div data-interaktiv="protein" data-dge="ja"></div>
+
 Unter der Abnehmspritze ist das besonders relevant: In einer Substudie der STEP-1-Studie entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">3</a></sup> Ein Grund dafür ist die niedrige Proteinzufuhr bei gedämpftem Appetit.
 
 ### Tabelle: Proteinbedarf nach Körpergewicht
@@ -51,11 +53,6 @@ Bei starkem Übergewicht (BMI über 35) rechnen viele Fachleute mit dem Zielgewi
 
 **Ausnahme Nierenerkrankung:** Dann legt die Ärztin oder der Arzt die Proteinmenge fest. Bei gesunden Nieren gibt es für diese Mengen keine Hinweise auf Schäden.
 
-<figure class="my-8">
-  <img src="/grafiken/proteinbedarf-nach-abnehmspritze.png" alt="Balkendiagramm des Proteinbedarfs von 1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht: bei 60 Kilogramm 72 bis 96 Gramm am Tag, bei 70 Kilogramm 84 bis 112, bei 80 Kilogramm 96 bis 128, bei 90 Kilogramm 108 bis 144, bei 100 Kilogramm 120 bis 160 Gramm. Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 Gramm pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
-  <figcaption class="mt-2 text-sm text-ink-3">Tagesmenge nach Körpergewicht im Zielkorridor von 1,2 bis 1,6 g pro kg.<sup><a href="#fn-leidy2015">2</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
-
 Dein eigenes Tagesziel und die Menge pro Mahlzeit rechnet der [Proteinrechner](/werkzeuge/proteinrechner/) aus.
 
 ## Wo Protein drinsteckt
@@ -72,10 +69,11 @@ Ungefähre Werte pro Portion:
 | Linsen, gekocht | 200 g | 18 g |
 | Hüttenkäse | 150 g | 17 g |
 | Molkenprotein-Pulver | 30 g | 22–25 g |
-| Protein-Stick (Nach der Spritze) | 1 Stick | ≥ 20 g |
 | Milch | 250 ml | 8 g |
 
 Was auffällt: Um auf 100 g zu kommen, braucht es bei jeder Mahlzeit eine echte Proteinquelle. Ein Brötchen mit Marmelade und ein Salat bringen zusammen unter 10 g.
+
+<div data-interaktiv="teller" data-vorlage="protein-lebensmittel"></div>
 
 ## Wie du die Menge mit wenig Appetit schaffst
 
@@ -88,6 +86,11 @@ Das eigentliche Problem unter der Spritze ist nicht das Wissen, sondern der Hung
 5. **Immer eine Notreserve.** Ein Stick oder ein Shake in der Tasche für Tage, an denen keine Mahlzeit klappt.
 6. **Kalt und mild bei Übelkeit.** Skyr, Hüttenkäse, kalter Fisch, Tofu – warme, fettige Gerichte verstärken die Übelkeit oft.
 7. **Ballaststoffe dazu, aber mit Wasser.** Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<sup><a href="#fn-dgeBallaststoffe">6</a></sup> Bei kleinen Portionen ist das schwer, deshalb Gemüse, Hülsenfrüchte, Haferflocken oder ein Ballaststoff-Stick – immer mit einem großen Glas Wasser. Was [Glucomannan](/wissen/glucomannan-abnehmspritze/), der einzige Ballaststoff mit zugelassener Angabe, kann und was nicht, steht in einem eigenen Artikel.
+
+<figure class="my-8">
+  <img src="/grafiken/protein-verteilung.png" alt="Zwei Balkengruppen: gleichmäßige Verteilung mit etwa 30 Gramm Protein zu Frühstück, Mittag und Abend gegenüber abendlastiger Verteilung mit etwa 10, 15 und 65 Gramm bei gleicher Tagesmenge. Bei gleichmäßiger Verteilung lag die Muskelproteinsynthese über 24 Stunden um 25 Prozent höher. Kleine Studie, gemessen wurde die Muskelproteinsynthese, nicht die Muskelmasse. Empfehlung für Gewichtsabnahme und -erhalt: mindestens etwa 25 bis 30 Gramm Protein pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Gleiche Tagesmenge, anders verteilt: Mit etwa 30 g zu jeder Mahlzeit lag die Muskelproteinsynthese über 24 Stunden 25 % höher als abendlastig.<sup><a href="#fn-leidy2015">2</a>, <a href="#fn-mamerow2014">8</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 Zwei Folgen zu geringer Zufuhr zeigen sich mit Verzögerung: [Haarausfall](/wissen/haarausfall-abnehmspritze/) einige Monate nach schnellem Gewichtsverlust, und ein [eingefallenes Gesicht](/wissen/abnehmspritze-gesicht/), wenn zum Fett auch Muskeln verschwinden. Beides spricht für Protein bei jeder Mahlzeit, nicht für ein Haar- oder Hautpräparat.
 
@@ -104,4 +107,4 @@ Protein ist Baustoff. Der Reiz, ihn zu verbauen, kommt vom Training. Krafttraini
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Bei Nierenerkrankungen die Proteinmenge mit der Ärztin abstimmen. Der Protein-Stick im 12-Wochen-Set von Nach der Spritze liefert mindestens 20 g Protein pro Portion; Protein trägt zur Erhaltung von Muskelmasse bei.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Bei Nierenerkrankungen die Proteinmenge mit der Ärztin abstimmen. Im 12-Wochen-Programm von Nach der Spritze bekommst du dein Tagesziel in Gramm und Rezepte für kleine Portionen. Start und Preis über die [Warteliste](/#warteliste).*

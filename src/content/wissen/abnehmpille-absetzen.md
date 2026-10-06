@@ -6,7 +6,7 @@ category: "Abnehmpille"
 image: /grafiken/abnehmpille-belegt-und-offen.png
 order: 16
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["abnehmpille absetzen", "wegovy tablette absetzen", "wegovy pille absetzen", "abnehmtablette absetzen", "semaglutid tablette absetzen", "abnehmpille jojo effekt", "abnehmpille muskelabbau", "wegovy tabletten absetzen"]
 sources: ["tabletteApotheken2026", "fachinfoRybelsus", "wilding2022ext", "wu2025", "ecWegovyTablette2026", "fdaOrforglipron2026", "fachinfoWegovy", "wharton2025oasis4", "wilding2021step1", "rubino2021", "knop2023oasis1", "wharton2025attain1", "rodriguez2025", "sumithran2011", "wilding2021dxa", "leidy2015", "who2020", "jensen2024"]
 related: ["abnehmpille-oder-spritze", "wegovy-absetzen", "abnehmspritze-absetzen"]
@@ -49,6 +49,8 @@ In der Zulassungsstudie OASIS 4 verloren 307 Erwachsene ohne Diabetes mit der 25
 
 Für die Zeit danach zählt vor allem eines: Die Halbwertszeit ist bei Tablette und Spritze gleich, etwa eine Woche.<sup><a href="#fn-fachinfoRybelsus">2</a></sup> Nach der letzten Tablette ist nach einer Woche noch die Hälfte im Körper, nach zwei Wochen ein Viertel, nach fünf Wochen etwa 3 %. Die Auswaschphase dauert also fünf bis sieben Wochen, genau wie nach der letzten Spritze. Dass die Tablette täglich genommen wird, ändert daran nichts. Entscheidend ist, wie lange der Körper den Wirkstoff abbaut, nicht wie oft er hineinkommt.
 
+<div data-interaktiv="wirkstoffspiegel" data-wirkstoffe="semaglutid"></div>
+
 ## Was nach dem Absetzen passiert: die Datenlücke
 
 OASIS 4 hat untersucht, was die Tablette während der Einnahme bewirkt. Was nach dem Ende der Einnahme mit dem Gewicht passiert, berichtet die Studie nicht.<sup><a href="#fn-wharton2025oasis4">8</a></sup> Auch OASIS 1 mit der 50-mg-Tablette, die nie auf den Markt kam, liefert dazu nichts.<sup><a href="#fn-knop2023oasis1">11</a></sup> Für Orforglipron gilt dasselbe.<sup><a href="#fn-wharton2025attain1">12</a></sup> Anders bei der Spritze: Dort haben die Zulassungsstudien Absetz-Phasen eingebaut.
@@ -65,7 +67,7 @@ OASIS 4 hat untersucht, was die Tablette während der Einnahme bewirkt. Was nach
 **Was sich nicht übertragen lässt:** Wie viele Menschen die Tablette absetzen und wann, ist nicht untersucht. Für die Spritzen zeigen US-Versorgungsdaten, dass fast zwei Drittel der Menschen ohne Diabetes innerhalb eines Jahres aufhören.<sup><a href="#fn-rodriguez2025">13</a></sup> Ob eine tägliche Tablette häufiger vergessen, häufiger pausiert oder länger genommen wird, weiß niemand. Auch ob die Zunahme nach der Tablette im Mittel genauso groß ausfällt, ist eine Annahme, keine Messung.
 
 <figure class="my-8">
-  <img src="/grafiken/abnehmpille-belegt-und-offen.png" alt="Zwei Felder: Links die Zulassungsstudie OASIS 4 der Semaglutid-Tablette mit minus 13,6 Prozent Gewicht gegenüber minus 2,2 Prozent unter Placebo nach 64 Wochen, bei durchgehender Einnahme minus 16,6 Prozent. Rechts der offene Punkt: Es gibt noch keine Studie zur Wiederzunahme nach dem Absetzen der Tablette (Stand Oktober 2026); übertragbar mit Vorbehalt sind die Halbwertszeit von etwa einer Woche und die Spritzen-Daten, nach denen zwei Drittel des Verlusts nach einem Jahr zurück sind." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/abnehmpille-belegt-und-offen.png" alt="Zwei Felder: Links die Zulassungsstudie OASIS 4 der Semaglutid-Tablette 25 Milligramm mit 307 Teilnehmenden ohne Diabetes: minus 13,6 Prozent Gewicht gegenüber minus 2,2 Prozent unter Placebo nach 64 Wochen, bei durchgehender Einnahme minus 16,6 Prozent. Rechts der offene Punkt: Es gibt noch keine Studie zur Wiederzunahme nach dem Absetzen der Tablette (Stand Oktober 2026). Übertragbar mit Vorbehalt: gleicher Wirkstoff mit einer Halbwertszeit von etwa einer Woche; nach dem Absetzen der Spritze waren in der STEP-1-Verlängerung zwei Drittel des Verlusts nach einem Jahr zurück (von minus 17,3 auf minus 5,6 Prozent); in Studien zu Adipositas-Medikamenten ist die Zunahme ab Woche 8 messbar." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Was für die Tablette belegt ist und was fehlt, Stand Oktober 2026. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
@@ -86,7 +88,7 @@ Die Zeit, in der der Wirkstoff noch wirkt, ist die beste Zeit für Vorbereitung:
 1. **Krafttraining anfangen**, zwei Einheiten pro Woche, 30 Minuten, zuhause oder im Studio.<sup><a href="#fn-who2020">17</a></sup>
 2. **Protein auf Zielmenge**, verteilt auf drei bis vier Mahlzeiten.<sup><a href="#fn-leidy2015">16</a></sup>
 3. **Wiegetag festlegen**, einmal pro Woche, und vorher entscheiden, ab welcher Zunahme du reagierst.
-4. **Arzttermin für Woche 8 bis 12** nach der letzten Tablette, wenn in Studien die Zunahme beginnt.<sup><a href="#fn-wu2025">4</a></sup>
+4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen. In Studien beginnt die Zunahme etwa ab Woche 8.<sup><a href="#fn-wu2025">4</a></sup>
 
 Die Wochen im Einzelnen stehen in der [Checkliste für die ersten 8 Wochen](/checkliste/); den Plan für die Haltephase danach beschreibt [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
 
@@ -99,4 +101,4 @@ Die Wochen im Einzelnen stehen in der [Checkliste für die ersten 8 Wochen](/che
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Wegovy und Rybelsus sind Marken von Novo Nordisk, Foundayo ist eine Marke von Eli Lilly. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Wegovy und Rybelsus sind Marken von Novo Nordisk, Foundayo ist eine Marke von Eli Lilly. Für die Wochen nach der letzten Dosis, ob Tablette oder Spritze, plant Nach der Spritze ein 12-Wochen-Programm mit Krafttraining, Proteinziel und Gewichtskorridor; es ist kein Medikament. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

@@ -1,0 +1,15 @@
+---
+/**
+ * Gestaltung und Skript der interaktiven Elemente in Artikeln (Platzhalter <div data-interaktiv="…">, ersetzt in
+ * src/lib/interaktiv/index.ts). Einmal pro Artikelseite eingebunden, vor dem Artikeltext.
+ *
+ * Das kleine Inline-Skript setzt html.ia-an, bevor die Elemente gezeichnet werden: Nur dann gelten die Startzustände
+ * für die Bewegung. Bei reduzierter Bewegung (html.rm) bleibt es weg, und lädt das Modulskript nicht innerhalb von
+ * sechs Sekunden, nimmt es die Klasse wieder weg. Ohne JavaScript zeigt alles den Endzustand.
+ */
+import './interaktiv.css';
+---
+<script is:inline>(function(){var h=document.documentElement;if(h.classList.contains('rm'))return;h.classList.add('ia-an');setTimeout(function(){if(!window.__ia)h.classList.remove('ia-an')},6000)})();</script>
+<script>
+  import '../../lib/interaktiv/client';
+</script>

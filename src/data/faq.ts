@@ -1,4 +1,5 @@
 import type { FaqItem } from '../components/Faq.astro';
+import { site } from './site';
 
 /** FAQPage-Schema aus einer FAQ-Liste (HTML in den Antworten wird für Schema zu Text reduziert). */
 export function faqJsonLd(items: FaqItem[]) {
@@ -12,37 +13,47 @@ export function faqJsonLd(items: FaqItem[]) {
   };
 }
 
+// Programm-FAQ der Startseite (seit 06.10.2026: Programm und Warteliste statt Set und Vorbestellung).
+// Kein Arztbezug beim Programm, keine Wirkversprechen, keine Health Claims; Preis nur als Rahmen.
+const mailText = site.waitlist.ownGroup
+  ? 'Wir nutzen sie nur für die Warteliste: Start, Preis und Ablauf des Programms. Den Newsletter bekommst du nur, wenn du ihn zusätzlich ankreuzt.'
+  : `Wir nutzen sie für die Warteliste (Start, Preis und Ablauf des Programms) und für den Newsletter, ${site.newsletter.cadence}. Beides nennt das Kästchen im Formular.`;
+
 export const landingFaq: FaqItem[] = [
   {
-    q: 'Schmeckt das?',
-    a: '<p>Geplant sind zwei Sorten Protein-Stick (Vanille und neutral); der Ballaststoff-Stick ist geschmacksneutral und löst sich in Wasser, Joghurt oder Suppe. Kreatin-Monohydrat ist geschmacklos. Bei der Bestellung fragen wir dich, ob du Molke oder eine pflanzliche Variante möchtest. Die erste Charge geht als Probierpaket an die ersten Vorbestellerinnen und Vorbesteller, bevor wir größer produzieren.</p>',
+    q: 'Was ist das Programm genau?',
+    a: '<p>Zwölf Wochen Begleitung für die Zeit nach der Abnehmspritze: zwei Krafteinheiten pro Woche à 30 Minuten, zuhause mit Bändern oder im Studio, ein persönliches Proteinziel mit Rezepten für kleine Portionen, ein <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> statt Kalorienzählen und ein Check-in pro Woche per E-Mail.</p>',
   },
   {
-    q: 'Wann kommt das Set?',
-    a: '<p>Wir produzieren die erste Charge, sobald 100 Vorbestellungen zusammen sind. Realistisch sind das 8 bis 12 Wochen ab Erreichen der Marke. Du bekommst als Erste Bescheid und entscheidest dann, ob du wirklich bestellst. Bis dahin zahlst du nichts.</p>',
-  },
-  {
-    q: 'Was passiert mit meiner E-Mail-Adresse?',
-    a: '<p>Sie landet in einer Warteliste bei Tally (Belgien, EU). Wir nutzen sie, um dich über das Set zu informieren: Produktionsstart, Preis, Bestellmöglichkeit. Den Newsletter bekommst du nur, wenn du ihn im Formular ankreuzt. Kein Weitergeben. Löschung jederzeit per E-Mail an uns. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>',
-  },
-  {
-    q: 'Ist das ein Medikament?',
-    a: '<p>Nein. Das Set besteht aus Lebensmitteln (Protein, Ballaststoffe, Kreatin-Monohydrat) und einem Ernährungs- und Trainingsprogramm. Es ersetzt weder die Abnehmspritze noch das Gespräch mit deiner Ärztin oder deinem Arzt.</p>',
-  },
-  {
-    q: 'Kann ich das Set nehmen, während ich noch spritze?',
-    a: '<p>Protein und Ballaststoffe sind normale Lebensmittelbestandteile und auch während der Therapie sinnvoll, denn gerade dann isst man wenig. Wegen der kleinen Portionen und möglicher Magen-Darm-Beschwerden unter der Spritze solltest du das Programm aber mit deiner Ärztin oder deinem Arzt abstimmen. Bei Nierenerkrankungen sprich vor Kreatin unbedingt mit deiner Ärztin.</p>',
-  },
-  {
-    q: 'Ersetzt das Set die Spritze oder verhindert es den Jojo-Effekt?',
-    a: '<p>Nein, und das behaupten wir auch nicht. Das Set liefert Protein (trägt zur Erhaltung von Muskelmasse bei), Kreatin (erhöht die körperliche Leistung bei Schnellkrafttraining) und Ballaststoffe, dazu ein Programm mit zwei Krafteinheiten pro Woche. Was die Forschung zu Protein, Krafttraining und Gewichtserhalt sagt, erklären wir mit Quellen im <a href="/wissen/">Wissensbereich</a>. Ob es bei dir funktioniert, hängt vor allem davon ab, ob du dranbleibst.</p>',
-  },
-  {
-    q: 'Was kostet das, und was ist im Preis drin?',
-    a: '<p>129 € für 12 Wochen (entspricht 43 € pro Monat) oder 49 € pro Monat. Enthalten: 84 Protein-Sticks, 84 Ballaststoff-Sticks, 84 Portionen Kreatin, das 12-Wochen-Programm mit Trainingsplänen, Rezepten und wöchentlichem Check-in per E-Mail. Versand innerhalb Deutschlands inklusive.</p>',
+    q: 'Wann geht es los, und was kostet es?',
+    a: `<p>Wir starten, sobald genug Menschen auf der Warteliste stehen. Das Basis-Programm ist geplant unter ${site.price.programUnder} € für alle zwölf Wochen. Wer auf der Liste steht, erfährt Termin und Preis zuerst und entscheidet dann. Bis dahin zahlst du nichts.</p>`,
   },
   {
     q: 'Brauche ich ein Fitnessstudio?',
-    a: '<p>Nein. Das Programm hat zwei Krafteinheiten pro Woche à etwa 30 Minuten, wahlweise zuhause mit Widerstandsbändern oder im Studio. Beide Varianten sind im Plan enthalten.</p>',
+    a: '<p>Nein. Jede Einheit gibt es für zuhause mit Widerstandsbändern und für das Studio. Für Einsteiger gemacht, kein Vorwissen nötig.</p>',
+  },
+  {
+    q: 'Brauche ich Nahrungsergänzungsmittel?',
+    a: '<p>Nein. Dein Proteinziel lässt sich mit normalen Lebensmitteln erreichen, das Programm zeigt wie. Wann ein Proteinpulver oder Kreatin praktisch sein kann, erklären wir mit Quellen im <a href="/wissen/supplements-nach-abnehmspritze/">Wissensbereich</a>.</p>',
+  },
+  {
+    q: 'Gibt es ein Starterpaket?',
+    a: '<p>Vielleicht. Wenn genug Interesse besteht, bieten wir das Programm zusätzlich mit einem Starterpaket aus Protein und Kreatin an. Auf der Warteliste kannst du ankreuzen, ob dich das interessiert. Das Programm geht auch ohne.</p>',
+  },
+  {
+    q: 'Ist das eine medizinische Beratung?',
+    a: '<p>Nein. Das Programm ist Training, Ernährung und Gewohnheiten. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.</p>',
+  },
+  {
+    q: 'Kann ich anfangen, während ich noch spritze?',
+    a: '<p>Krafttraining und genug Protein sind auch während der Therapie sinnvoll, gerade weil man dann wenig isst. Stimm das Programm aber mit deiner Ärztin oder deinem Arzt ab, besonders bei Magen-Darm-Beschwerden oder einer Nierenerkrankung.</p>',
+  },
+  {
+    q: 'Verhindert das Programm den Jojo-Effekt?',
+    a: '<p>Das kann kein Programm versprechen, und wir behaupten es nicht. Es ersetzt auch nicht die Spritze. Was die Forschung zu Krafttraining, Protein und Gewichtserhalt zeigt, steht mit Quellen im <a href="/wissen/jojo-effekt-abnehmspritze/">Artikel zum Jojo-Effekt</a>. Eine eigene Studie zum Programm gibt es nicht; es setzt die Studienlage zu Krafttraining und Protein in einen Wochenplan um.</p>',
+  },
+  {
+    q: 'Was passiert mit meiner E-Mail-Adresse?',
+    a: `<p>Sie liegt bei unserem Versanddienst MailerLite (EU). ${mailText} Erst nach dem Klick auf den Link in der Bestätigungs-Mail bist du eingetragen. Abmelden geht jederzeit mit einem Klick, keine Weitergabe. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>`,
   },
 ];

@@ -67,7 +67,7 @@ Studien beschreiben Mittelwerte. Die Menschen, die uns geschrieben haben, beschr
 
 ## Deine Erfahrung
 
-Wenn du die Abnehmspritze abgesetzt hast oder gerade dabei bist, hilft dein Bericht anderen mehr als jede Statistik. Trag dich in die [Vorbestell-Liste](/#vorbestellen) ein und nutze das Freitextfeld, oder schreib uns eine E-Mail. Wir melden uns, bevor etwas veröffentlicht wird, und du entscheidest, was stehen bleibt.
+Wenn du die Abnehmspritze abgesetzt hast oder gerade dabei bist, hilft dein Bericht anderen mehr als jede Statistik. Trag dich in die [Warteliste](/#warteliste) ein und nutze das Freitextfeld, oder schreib uns eine E-Mail. Wir melden uns, bevor etwas veröffentlicht wird, und du entscheidest, was stehen bleibt.
 
 ---
 

@@ -3,10 +3,16 @@
  * Themenseite (Hub) unter /wissen/<slug>/: Einordnung mit Quellen, „Welche Frage, welcher Artikel“, alle Artikel des
  * Themas, Glossar-Begriffe, Werkzeuge, weitere Themen. Gerendert aus src/pages/wissen/[slug].astro für jeden Eintrag in
  * src/data/themen.json. Zielt auf den Überbegriff; die Artikel decken die Long-Tail-Anfragen.
+ * Gestaltung „Kalk“, ruhige Fassung wie die Artikel (PR #45, B10): Schrift auf der Skala --fs-1 bis --fs-6, drei
+ * Textfarben (ink, ink-2, ink-3), Abstände im 8-px-Raster; Einstieg als ruhige Fläche statt dunklem Block; Linien nur
+ * in den Listen (Fragen, Artikel, Begriffe, Werkzeuge), sonst Weißraum. Einblenden beim Scrollen; am Ende der Hinweis
+ * auf das 12-Wochen-Programm (ProductTeaser).
  */
 import Base from '../layouts/Base.astro';
+import SeitenKopf from './SeitenKopf.astro';
+import Pfeil from './Pfeil.astro';
+import ProductTeaser from './ProductTeaser.astro';
 import Footnotes from './Footnotes.astro';
-import Cta from './Cta.astro';
 import { getCollection } from 'astro:content';
 import { site } from '../data/site';
 import { themen, gehoertZu, type Thema } from '../data/themen';
@@ -58,99 +64,291 @@ const jsonLd = [
     ],
   },
 ];
-const chip = 'inline-block rounded-lg border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink no-underline hover:border-moss hover:text-moss';
 ---
 <Base title={thema.metaTitle} description={thema.description} path={path} jsonLd={jsonLd} modifiedTime={lastmod}>
-  <section class="container-wide py-12">
-    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › <a href="/wissen/" class="hover:text-moss">Wissen</a> › {thema.name}</nav>
-    <p class="eyebrow mt-6">Thema · {artikel.length} Artikel</p>
-    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">{thema.title}</h1>
-    <div class="prose-site mt-6 max-w-3xl">
-      {thema.intro.map((p) => <p set:html={p} />)}
-    </div>
-    <p class="mt-4 max-w-3xl rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { href: '/wissen/', label: 'Wissen' }, { label: thema.name }]} meta={`Thema, ${artikel.length} Artikel`} title={thema.title} size="m" class="hb-kopf">
+    {thema.intro.map((p) => <p set:html={p} />)}
+  </SeitenKopf>
 
+  <div class="container-wide k-end hb">
     {einstieg && (
-      <a href={`/wissen/${einstieg.id}/`} class="card mt-8 block border-moss/30 bg-moss-light/40 no-underline hover:border-moss">
-        <p class="eyebrow">Einstieg</p>
-        <h2 class="mt-2 text-2xl leading-snug text-ink">{einstieg.data.title}</h2>
-        <p class="mt-2 text-ink-2">{einstieg.data.description}</p>
-        <p class="mt-4 text-sm font-semibold text-moss">Lesen →</p>
+      <a href={`/wissen/${einstieg.id}/`} class="hb-ein" data-rv>
+        <span class="hb-ein-k">Einstieg</span>
+        <span class="hb-ein-t">{einstieg.data.title}</span>
+        <span class="hb-ein-d">{einstieg.data.description}</span>
+        <span class="btn-primary hb-ein-b">Lesen</span>
       </a>
     )}
 
-    <section class="mt-10" aria-labelledby="fragen-h">
-      <h2 id="fragen-h" class="text-xl font-bold text-ink">Welche Frage, welcher Artikel</h2>
-      <ul class="mt-4 divide-y divide-line rounded-xl2 border border-line bg-white">
-        {fragen.map((f) => (
-          <li class="px-5 py-3">
-            <p class="font-semibold text-ink">{f.q}</p>
-            <p class="mt-1 text-sm"><a href={f.href} class="text-moss underline underline-offset-4">{f.label}</a></p>
+    <section class="k-sec" aria-labelledby="fragen-h">
+      <h2 id="fragen-h" class="k-h2" data-rv>Welche Frage, welcher Artikel</h2>
+      <ul class="hb-fragen">
+        {fragen.map((f, i) => (
+          <li data-rv style={`--i:${i % 4}`}>
+            <p class="hb-q">{f.q}</p>
+            <p class="hb-a"><a href={f.href} class="k-a">{f.label}</a></p>
           </li>
         ))}
       </ul>
     </section>
 
-    <section class="mt-10" aria-labelledby="artikel-h">
-      <h2 id="artikel-h" class="text-xl font-bold text-ink">Alle Artikel zum Thema</h2>
-      <div class="mt-4 grid gap-6 md:grid-cols-2">
-        {artikel.map((a) => (
-          <a href={`/wissen/${a.id}/`} class="card group block no-underline hover:border-moss">
-            <p class="text-sm font-medium text-ink-3">{a.data.category}</p>
-            <h3 class="mt-2 text-xl leading-snug text-ink group-hover:text-moss">{a.data.title}</h3>
-            <p class="mt-2 text-sm text-ink-2">{a.data.description}</p>
-            <p class="mt-4 text-sm font-semibold text-moss">Lesen →</p>
-          </a>
+    <section class="k-sec" aria-labelledby="artikel-h">
+      <h2 id="artikel-h" class="k-h2" data-rv>Alle Artikel zum Thema</h2>
+      <ul class="k-rows hb-arts">
+        {artikel.map((a, i) => (
+          <li data-rv style={`--i:${i % 4}`}>
+            <a href={`/wissen/${a.id}/`} class="k-row">
+              {a.data.category !== thema.category && <span class="k-row-k">{a.data.category}</span>}
+              <span class="k-row-t">{a.data.title}</span>
+              <span class="k-row-d">{a.data.description}</span>
+              <Pfeil />
+            </a>
+          </li>
         ))}
-      </div>
-    </section>
-
-    {glossar.length > 0 && (
-      <section class="mt-10" aria-labelledby="glossar-h">
-        <h2 id="glossar-h" class="text-xl font-bold text-ink">Begriffe zum Thema</h2>
-        <ul class="mt-4 grid gap-3 sm:grid-cols-2">
-          {glossar.map((g) => (
-            <li>
-              <a href={`/glossar/${g.id}/`} class="block h-full rounded-lg border border-line bg-white px-4 py-3 no-underline hover:border-moss">
-                <p class="font-semibold text-ink">{g.data.term}</p>
-                <p class="mt-1 text-sm text-ink-2">{g.data.short}</p>
-              </a>
-            </li>
-          ))}
-        </ul>
-        <p class="mt-3 text-sm"><a href="/glossar/" class="font-semibold text-moss underline underline-offset-4">Alle Begriffe im Glossar</a></p>
-      </section>
-    )}
-
-    {thema.tools.length > 0 && (
-      <section class="mt-10" aria-labelledby="tools-h">
-        <h2 id="tools-h" class="text-xl font-bold text-ink">Werkzeuge</h2>
-        <ul class="mt-4 grid gap-3 sm:grid-cols-2">
-          {thema.tools.map((t) => (
-            <li>
-              <a href={t.href} class="block h-full rounded-lg border border-amber/50 bg-amber-light/40 px-4 py-3 no-underline hover:border-amber">
-                <p class="font-semibold text-ink">{t.label}</p>
-                <p class="mt-1 text-sm text-ink-2">{t.note}</p>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    )}
-
-    <section class="mt-10" aria-labelledby="themen-h">
-      <h2 id="themen-h" class="eyebrow">Weitere Themen</h2>
-      <ul class="mt-3 flex flex-wrap gap-2">
-        {andere.map((t) => (<li><a href={`/wissen/${t.slug}/`} class={chip}>{t.name}</a></li>))}
-        <li><a href="/wissen/" class={chip}>Alle Artikel</a></li>
       </ul>
     </section>
 
-    <div class="mt-12 rounded-xl2 border border-line bg-white p-6">
-      <p class="max-w-2xl text-sm text-ink-2">Wir entwickeln ein 12-Wochen-Set für die Zeit nach der Abnehmspritze: Protein, Ballaststoffe, Kreatin und ein Programm. Es ist ein Lebensmittel mit Programm, kein Medikament, und es verhindert den Jojo-Effekt nicht.</p>
-      <div class="mt-4"><Cta position={`thema-${thema.slug}`} label="Zum 12-Wochen-Set" secondary /></div>
+    <div class="hb-two">
+      {glossar.length > 0 && (
+        <section class="k-sec" aria-labelledby="glossar-h">
+          <h2 id="glossar-h" class="k-h3" data-rv>Begriffe zum Thema</h2>
+          <ul class="k-rows hb-gl">
+            {glossar.map((g, i) => (
+              <li data-rv style={`--i:${i % 4}`}><a href={`/glossar/${g.id}/`} class="k-row"><span class="k-row-t">{g.data.term}</span><span class="k-row-d">{g.data.short}</span><Pfeil /></a></li>
+            ))}
+          </ul>
+          <p class="hb-more"><a href="/glossar/" class="k-q">Alle Begriffe im Glossar</a></p>
+        </section>
+      )}
+
+      {thema.tools.length > 0 && (
+        <section class="k-sec" aria-labelledby="tools-h">
+          <h2 id="tools-h" class="k-h3" data-rv>Werkzeuge</h2>
+          <ul class="k-rows hb-gl">
+            {thema.tools.map((t, i) => (
+              <li data-rv style={`--i:${i}`}><a href={t.href} class="k-row"><span class="k-row-t">{t.label}</span><span class="k-row-d">{t.note}</span><Pfeil /></a></li>
+            ))}
+          </ul>
+        </section>
+      )}
     </div>
 
-    {thema.sources.length > 0 && <Footnotes ids={thema.sources} />}
-  </section>
+    <section class="k-sec-s hb-andere" aria-labelledby="themen-h">
+      <h2 id="themen-h" class="hb-andere-h">Weitere Themen</h2>
+      <ul class="k-inline">
+        {andere.map((t) => (<li><a href={`/wissen/${t.slug}/`} class="k-q">{t.name}</a></li>))}
+        <li><a href="/wissen/" class="k-q">Alle Artikel</a></li>
+      </ul>
+    </section>
+
+    <div class="hb-narrow">
+      <ProductTeaser position={`thema-${thema.slug}`} />
+      {thema.sources.length > 0 && <Footnotes ids={thema.sources} />}
+    </div>
+  </div>
 </Base>
+
+<style>
+  /* Kopf (SeitenKopf): Schrift auf der Skala der Wissensseiten */
+  :global(.hb-kopf .k-meta) {
+    font-size: var(--fs-1);
+  }
+  :global(.hb-kopf .k-h1) {
+    font-size: var(--fs-6);
+    line-height: 1.06;
+  }
+  :global(.hb-kopf .k-lede) {
+    max-width: 42rem;
+    font-size: var(--fs-3);
+    line-height: 1.65;
+  }
+  :global(.hb-kopf .k-lede p + p) {
+    margin-top: 1rem;
+  }
+  :global(.hb-kopf .k-lede a) {
+    color: var(--color-ink);
+    text-decoration-color: color-mix(in srgb, var(--color-moss) 55%, transparent);
+  }
+  :global(.hb-kopf .k-doc) {
+    margin-top: 1rem;
+    font-size: var(--fs-1);
+    font-weight: 400;
+    color: var(--color-ink-2);
+  }
+
+  /* Abschnitte: 64 px, ab 768 px 96 px Abstand; Überschriften 32 und 22 px */
+  .hb :global(.k-sec) {
+    margin-top: 4rem;
+  }
+  @media (min-width: 768px) {
+    .hb :global(.k-sec) {
+      margin-top: 6rem;
+    }
+  }
+  .hb :global(.k-h2) {
+    font-size: var(--fs-5);
+    line-height: 1.15;
+  }
+  .hb :global(.k-h3) {
+    font-size: var(--fs-4);
+  }
+  .hb :global(.k-rows) {
+    margin-top: 1.5rem;
+  }
+  .hb :global(.k-row) {
+    padding: 1.5rem 0;
+    gap: 0.5rem 2rem;
+  }
+  .hb :global(.k-row-k) {
+    font-size: var(--fs-1);
+  }
+  .hb :global(.k-row-t) {
+    font-size: var(--fs-4);
+  }
+  .hb :global(.k-row-d) {
+    font-size: var(--fs-2);
+  }
+  .hb :global(.k-a) {
+    color: var(--color-ink);
+    text-decoration-color: color-mix(in srgb, var(--color-moss) 55%, transparent);
+  }
+
+  /* Einstieg: ruhige Fläche statt dunklem Block */
+  .hb-ein {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 4rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background: var(--color-paper-2);
+    text-decoration: none;
+    max-width: 62rem;
+  }
+  @media (min-width: 768px) {
+    .hb-ein {
+      padding: 2.5rem;
+    }
+  }
+  .hb-ein-k {
+    font-size: var(--fs-1);
+    color: var(--color-ink-3);
+  }
+  .hb-ein-t {
+    font-stretch: 118%;
+    font-weight: 520;
+    letter-spacing: -0.018em;
+    font-size: var(--fs-5);
+    line-height: 1.15;
+    color: var(--color-ink);
+    max-width: 22em;
+  }
+  .hb-ein-d {
+    font-size: var(--fs-3);
+    line-height: 1.55;
+    color: var(--color-ink-2);
+    max-width: 40em;
+  }
+  .hb-ein-b {
+    justify-self: start;
+    margin-top: 1rem;
+  }
+  .hb-ein:hover .hb-ein-b {
+    background: #33352f;
+    border-color: #33352f;
+  }
+  /* Fragen: Frage links, Artikel rechts, wie eine zweispaltige Tabelle */
+  .hb-fragen {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-line);
+  }
+  .hb-fragen li {
+    display: grid;
+    gap: 0.5rem 3rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .hb-q {
+    font-stretch: 112%;
+    font-weight: 520;
+    font-size: var(--fs-3);
+    line-height: 1.35;
+    color: var(--color-ink);
+  }
+  .hb-a {
+    font-size: var(--fs-2);
+    line-height: 1.5;
+  }
+  @media (min-width: 900px) {
+    .hb-fragen li {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+  .hb-gl .k-row-t {
+    font-size: var(--fs-3);
+  }
+  .hb-more {
+    margin-top: 1rem;
+    font-size: var(--fs-1);
+  }
+  @media (min-width: 900px) {
+    .hb-two {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap: 0 4rem;
+      align-items: start;
+    }
+  }
+  /* Weitere Themen: leise Zeile ohne Linie */
+  .hb-andere {
+    margin-top: 4rem;
+    font-size: var(--fs-1);
+  }
+  .hb-andere-h {
+    margin-bottom: 0.5rem;
+    font-size: var(--fs-1);
+    font-stretch: 100%;
+    font-weight: 450;
+    letter-spacing: 0;
+    color: var(--color-ink-3);
+  }
+  /* Programm-Hinweis und Quellen wie in den Artikeln: ohne Linien, Abstand 64 */
+  .hb-narrow {
+    max-width: 42rem;
+  }
+  .hb .hb-narrow > :global(*) {
+    margin-top: 4rem;
+  }
+  .hb-narrow :global(.pt) {
+    margin-bottom: 0;
+    padding: 0;
+    border: 0;
+  }
+  .hb-narrow :global(.eyebrow) {
+    font-size: var(--fs-1);
+  }
+  .hb-narrow :global(.pt-h),
+  .hb-narrow :global(#quellen-h) {
+    font-size: var(--fs-4);
+    line-height: 1.25;
+    font-weight: 530;
+    font-stretch: 112%;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+  }
+  .hb-narrow :global(:is(.pt-t, .pt-l)) {
+    font-size: var(--fs-2);
+  }
+  .hb-narrow :global(#quellen) {
+    padding-top: 0;
+    border-top: 0;
+  }
+  .hb-narrow :global(#quellen ol) {
+    margin-top: 1rem;
+  }
+  .hb-narrow :global(#quellen a) {
+    color: var(--color-ink-2);
+    text-decoration-color: var(--color-line);
+  }
+</style>

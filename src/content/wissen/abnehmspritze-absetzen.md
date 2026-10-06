@@ -5,7 +5,7 @@ description: "Appetit, Gewicht, Blutwerte: Was nach der letzten Dosis in welcher
 category: "Absetzen"
 order: 2
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 toc: true
 image: /grafiken/absetzkurve-step-1.png
 keywords: ["abnehmspritze absetzen", "abnehmspritze absetzen was passiert", "wegovy absetzen", "ozempic absetzen", "mounjaro absetzen", "abnehmspritze ausschleichen", "abnehmspritze absetzen nebenwirkungen", "abnehmspritze absetzen gewicht halten", "abnehmspritze absetzen gewichtskurve"]
@@ -26,6 +26,8 @@ faq:
 
 Die meisten Menschen, die mit einer Abnehmspritze anfangen, hören innerhalb eines Jahres wieder auf: In einer großen US-Auswertung waren es 64,8 % der Menschen ohne Typ-2-Diabetes.<sup><a href="#fn-rodriguez2025">1</a></sup> Trotzdem gibt es kaum verlässliche Informationen darüber, was danach passiert. Dieser Artikel fasst zusammen, was die Studien zeigen – Woche für Woche – und wie du die Zeit nach der letzten Dosis vorbereitest.
 
+<div data-interaktiv="punktfeld" data-vorlage="absetzrate"></div>
+
 > **Kurz gesagt:** Der Wirkstoff ist nach fünf bis sieben Wochen abgebaut. Der Appetit kommt früher zurück. Die Gewichtszunahme ist in Studien ab etwa Woche 8 messbar.<sup><a href="#fn-wu2025">2</a></sup> Wer vorbereitet ist, hat einen Vorsprung, den die Studien mit rund 6 kg beziffern.<sup><a href="#fn-jensen2024">6</a></sup>
 
 ## Was passiert, wenn man die Abnehmspritze absetzt?
@@ -35,6 +37,8 @@ Der Wirkstoff wird über Wochen abgebaut, der Appetit kommt zurück, und ohne Ge
 ## Wie schnell nimmt man nach dem Absetzen zu?
 
 Messbar ab etwa Woche 8: In einer Meta-Analyse randomisierter Studien war der Gewichtsunterschied zur Kontrollgruppe ab etwa acht Wochen nach dem Absetzen signifikant und stieg bis etwa Woche 20 weiter.<sup><a href="#fn-wu2025">2</a></sup> Nach einem Jahr ohne Medikament lag das Gewicht in der STEP-1-Verlängerung bei minus 5,6 % statt minus 17,3 % gegenüber dem Start; zwei Drittel des Verlusts waren zurück.<sup><a href="#fn-wilding2022ext">3</a></sup> Die ersten ein bis zwei Kilo in den ersten Wochen sind meist Wasser und Darminhalt, weil du wieder mehr isst; die Fettzunahme kommt langsamer und bleibt, wenn nichts dagegen steht.
+
+<div data-interaktiv="absetzkurve" data-acht="ja"></div>
 
 ## Wie lange wirkt die Abnehmspritze nach dem Absetzen?
 
@@ -56,10 +60,7 @@ Was auch immer der Grund ist: Ob und wie du dein Medikament absetzt, besprichst 
 
 Die folgende Übersicht fasst zusammen, was aus Pharmakologie und Studien ableitbar ist. Individuell weicht der Verlauf ab. Wer die Punkte als Kalenderdaten für die eigene letzte Dosis sehen will, nutzt den [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/).
 
-<figure class="my-8">
-  <img src="/grafiken/zeitachse-nach-letzter-dosis.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Der Wirkstoff ist nach etwa fünf bis sieben Wochen weitgehend abgebaut, der Appetit kehrt ab Woche 2 bis 5 zurück, die Gewichtszunahme ist ab Woche 8 messbar und steigt bis etwa Woche 20. Ein Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis ist markiert." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
-  <figcaption class="mt-2 text-sm text-ink-3">Die ersten 20 Wochen nach der letzten Dosis: Halbwertszeiten laut Fachinformation, Zunahme laut Meta-Analyse.<sup><a href="#fn-wu2025">2</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
+<div data-interaktiv="zeitachse" data-wirkstoffe="semaglutid,tirzepatid"></div>
 
 **Woche 1 bis 2: Noch wenig Veränderung.** Semaglutid hat eine Halbwertszeit von etwa einer Woche, Tirzepatid von etwa fünf Tagen. In den ersten Tagen ist noch genug Wirkstoff im Körper; viele merken keinen Unterschied.
 
@@ -70,11 +71,6 @@ Die folgende Übersicht fasst zusammen, was aus Pharmakologie und Studien ableit
 **Ab Woche 8: Die Zunahme wird messbar.** In einer Meta-Analyse randomisierter Studien war der Gewichtsunterschied zur Kontrollgruppe ab etwa Woche 8 nach dem Absetzen signifikant und wuchs bis etwa Woche 20 weiter.<sup><a href="#fn-wu2025">2</a></sup>
 
 **Nach einem Jahr:** In der STEP-1-Verlängerung waren im Mittel zwei Drittel des verlorenen Gewichts zurück, und die Verbesserungen bei Blutzucker, Blutdruck und Blutfetten hatten sich den Ausgangswerten wieder angenähert.<sup><a href="#fn-wilding2022ext">3</a></sup> Nach Tirzepatid lag die Zunahme in 52 Wochen bei etwa 14 % des Körpergewichts.<sup><a href="#fn-aronne2024">4</a></sup> Ein systematischer Review von 2026 bestätigt diese Verlaufskurve über verschiedene Studien hinweg.<sup><a href="#fn-eclinmed2026">10</a></sup>
-
-<figure class="my-8">
-  <img src="/grafiken/absetzkurve-step-1.png" alt="Liniendiagramm: Unter Semaglutid 2,4 mg sinkt das Gewicht in 68 Wochen im Mittel um 17,3 Prozent, unter Placebo um 2,0 Prozent. In den 52 Wochen nach dem Absetzen steigt es wieder; nach insgesamt 120 Wochen liegt es bei minus 5,6 Prozent (Semaglutid) und minus 0,1 Prozent (Placebo). Zwei Drittel des Verlusts sind nach einem Jahr ohne Medikament wieder da." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
-  <figcaption class="mt-2 text-sm text-ink-3">Die Absetzkurve aus der STEP-1-Verlängerung: 68 Wochen Semaglutid, danach 52 Wochen ohne Medikament. Messpunkte Woche 0, 68 und 120; Verbindungslinien schematisch.<sup><a href="#fn-wilding2022ext">3</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
 
 ## Ausschleichen oder abrupt absetzen?
 
@@ -92,11 +88,13 @@ Der beste Zeitpunkt, die Zeit nach der Spritze vorzubereiten, ist die Zeit mit d
 
 **1. Krafttraining zur Gewohnheit machen.** Das ist der Faktor mit der besten Evidenz. In der dänischen S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach dem Ende der Behandlung; nach Liraglutid allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup> Fang während der Therapie an, damit die Routine steht, wenn der Hunger kommt.
 
+<div data-interaktiv="slite"></div>
+
 **2. Protein auf Zielmenge bringen.** Übersichtsarbeiten empfehlen 1,2 bis 1,6 g pro kg Körpergewicht und Tag, verteilt auf die Mahlzeiten.<sup><a href="#fn-leidy2015">7</a></sup> Unter der Spritze essen viele deutlich weniger. Wer die Menge schon vor dem Absetzen erreicht, hat die Muskeln besser geschützt und eine Ernährungsstruktur, die auch mit Appetit funktioniert.
 
 **3. Wiegen mit Regel.** Einmal pro Woche, morgens, gleiche Bedingungen. Lege vorher fest, ab welcher Zunahme du reagierst – zum Beispiel plus 3 kg über dem Absetz-Gewicht – und wie: Ernährung prüfen, Training prüfen, Termin bei der Ärztin.
 
-**4. Den nächsten Arzttermin schon ausmachen.** Etwa 8 bis 12 Wochen nach der letzten Dosis, also genau dann, wenn die Zunahme in Studien beginnt. Blutwerte kontrollieren, Gewicht besprechen, Optionen offenhalten. Leitlinien sehen Medikamente als Teil einer langfristigen Behandlung – ein Wiedereinstieg ist eine Option, keine Niederlage.<sup><a href="#fn-dagLeitlinie">9</a></sup>
+**4. Den Gewichtsverlauf notieren und mit der Ärztin oder dem Arzt besprechen.** Optionen offenhalten: Leitlinien sehen Medikamente als Teil einer langfristigen Behandlung – ein Wiedereinstieg ist eine Option, keine Niederlage.<sup><a href="#fn-dagLeitlinie">9</a></sup>
 
 ## Was beim Absetzen körperlich passiert – und was nicht
 
@@ -124,4 +122,4 @@ Absetzen ist selten endgültig. In der US-Auswertung von Versorgungsdaten begann
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und kein Ersatz für ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit nach der Abnehmspritze – kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und kein Ersatz für ärztliche Beratung. Für genau diese Wochen plant Nach der Spritze ein 12-Wochen-Programm: zwei Krafteinheiten pro Woche, ein persönliches Proteinziel, ein Gewichtskorridor statt Kalorienzählen und ein Check-in pro Woche per E-Mail. Es ist kein Medikament. Start und Preis erfährst du zuerst über die [Warteliste](/#warteliste).*

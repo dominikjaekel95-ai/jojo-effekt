@@ -1,6 +1,12 @@
 ---
 import type { GetStaticPaths } from 'astro';
+/**
+ * Glossar-Eintrag /glossar/<slug>/: Definition, Text, vertiefende Artikel, verwandte Begriffe. Gestaltung „Kalk“ seit
+ * 06.10.2026 (Definition zwischen Haarlinien, Listen als Zeilen bzw. Textliste statt Chips).
+ */
 import Base from '../../layouts/Base.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
+import Pfeil from '../../components/Pfeil.astro';
 import Footnotes from '../../components/Footnotes.astro';
 import AuthorBox from '../../components/AuthorBox.astro';
 import { getCollection, render } from 'astro:content';
@@ -67,16 +73,14 @@ const jsonLd = [
 ];
 ---
 <Base title={entry.data.metaTitle ?? `${entry.data.term}: Bedeutung nach der Abnehmspritze`} description={entry.data.description} path={path} jsonLd={jsonLd} publishedTime={entry.data.pubDate.toISOString()} modifiedTime={modified.toISOString()}>
-  <article class="container-narrow py-12">
-    <nav aria-label="Brotkrumen" class="text-sm text-ink-3">
-      <a href="/" class="hover:text-moss">Start</a> › <a href="/glossar/" class="hover:text-moss">Glossar</a> › {entry.data.term}
-    </nav>
-    <p class="eyebrow mt-6">Glossar{entry.data.own && (<> <span class="ml-3 rounded-md bg-amber-light px-2 py-0.5 text-xs font-semibold normal-case tracking-normal text-amber-dark">Begriff von Nach der Spritze</span></>)}</p>
-    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">{entry.data.term}</h1>
-    {entry.data.synonyms.length > 0 && (<p class="mt-2 text-sm text-ink-3">Auch: {entry.data.synonyms.join(', ')}</p>)}
-    <div class="mt-6 rounded-xl2 border-l-[3px] border-amber bg-amber-light/50 px-5 py-4">
-      <p class="eyebrow text-amber-dark">Definition</p>
-      <p class="mt-2 text-[1.1rem] leading-snug text-ink">{entry.data.short}</p>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { href: '/glossar/', label: 'Glossar' }, { label: entry.data.term }]} meta={entry.data.own ? 'Glossar, Begriff von Nach der Spritze' : 'Glossar'} title={entry.data.term} size="m" width="narrow" doc={false}>
+    {entry.data.synonyms.length > 0 && (<p class="gs-syn">Auch: {entry.data.synonyms.join(', ')}</p>)}
+  </SeitenKopf>
+
+  <article class="container-narrow k-end">
+    <div class="gs-def" data-rv>
+      <p class="gs-def-k">Definition</p>
+      <p class="gs-def-t">{entry.data.short}</p>
     </div>
 
     <div class="prose-site mt-8">
@@ -84,38 +88,77 @@ const jsonLd = [
     </div>
 
     {articles.length > 0 && (
-      <section class="mt-10" aria-labelledby="vertiefung-h">
-        <h2 id="vertiefung-h" class="text-base font-semibold text-ink">Vertiefende Artikel</h2>
-        <ul class="mt-3 grid gap-3 sm:grid-cols-2">
-          {articles.map((a) => (
-            <li>
-              <a href={`/wissen/${a.id}/`} class="card block h-full no-underline hover:border-moss">
-                <p class="text-sm text-ink-3">{a.data.category}</p>
-                <p class="mt-1 font-semibold text-ink">{a.data.title}</p>
-              </a>
-            </li>
+      <section class="k-sec-s" aria-labelledby="vertiefung-h">
+        <h2 id="vertiefung-h" class="k-h3">Vertiefende Artikel</h2>
+        <ul class="k-rows gs-rows">
+          {articles.map((a, i) => (
+            <li data-rv style={`--i:${i}`}><a href={`/wissen/${a.id}/`} class="k-row"><span class="k-row-k">{a.data.category}</span><span class="k-row-t">{a.data.title}</span><Pfeil /></a></li>
           ))}
         </ul>
       </section>
     )}
 
     {related.length > 0 && (
-      <section class="mt-10" aria-labelledby="verwandt-h">
-        <h2 id="verwandt-h" class="text-base font-semibold text-ink">Verwandte Begriffe</h2>
-        <ul class="mt-3 flex flex-wrap gap-2">
-          {related.map((g) => (
-            <li><a href={`/glossar/${g.id}/`} class="inline-block rounded-lg border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink no-underline hover:border-moss hover:text-moss">{g.data.term}</a></li>
-          ))}
+      <section class="gs-rel" aria-labelledby="verwandt-h">
+        <h2 id="verwandt-h" class="gs-rel-h">Verwandte Begriffe</h2>
+        <ul class="k-inline">
+          {related.map((g) => (<li><a href={`/glossar/${g.id}/`} class="k-q">{g.data.term}</a></li>))}
         </ul>
       </section>
     )}
 
-    <p class="mt-8 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
+    <p class="k-doc gs-doc">{site.doctorSentence}</p>
 
     <AuthorBox pubDate={entry.data.pubDate} updatedDate={entry.data.updatedDate} />
 
     <Footnotes ids={entry.data.sources} />
 
-    <p class="mt-8 text-sm"><a href="/glossar/" class="font-semibold text-moss underline underline-offset-4">Zurück zum Glossar</a></p>
+    <p class="gs-back"><a href="/glossar/" class="k-q">Zurück zum Glossar</a></p>
   </article>
 </Base>
+
+<style>
+  .gs-syn {
+    font-size: 0.975rem;
+    color: var(--color-ink-3);
+  }
+  .gs-def {
+    margin-top: clamp(2rem, 5vh, 3rem);
+    padding: 1.25rem 0 1.5rem;
+    border-top: 1px solid var(--color-ink);
+    border-bottom: 1px solid var(--color-line);
+  }
+  .gs-def-k {
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
+  .gs-def-t {
+    margin-top: 0.6rem;
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    font-stretch: 106%;
+    line-height: 1.4;
+    color: var(--color-ink);
+  }
+  .gs-rows .k-row-t {
+    font-size: 1.125rem;
+  }
+  .gs-rel {
+    margin-top: 2.5rem;
+    font-size: 0.975rem;
+  }
+  .gs-rel-h {
+    margin-bottom: 0.6rem;
+    font-size: 0.9375rem;
+    font-stretch: 100%;
+    font-weight: 450;
+    letter-spacing: 0;
+    color: var(--color-ink-3);
+  }
+  .gs-doc {
+    margin-top: 2.5rem;
+  }
+  .gs-back {
+    margin-top: 2rem;
+    font-size: 0.9375rem;
+  }
+</style>

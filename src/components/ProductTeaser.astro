@@ -1,20 +1,62 @@
 ---
-/** Dezente Produkt-Box in Artikeln. Nur zugelassene Angaben, keine Wirkversprechen. */
+/**
+ * Ruhiger Hinweis auf das 12-Wochen-Programm in Artikeln und Werkzeugen, mit Link zur Warteliste.
+ * Kein Set, kein Arztbezug, keine Health Claims, keine Wirkversprechen (CLAIMS.md).
+ */
 import { site } from '../data/site';
 import Cta from './Cta.astro';
 interface Props { position: string }
 const { position } = Astro.props;
 ---
-<aside class="my-10 rounded-xl2 border border-moss/30 bg-moss-light/40 p-6" aria-label="Das 12-Wochen-Set">
-  <p class="eyebrow">Das 12-Wochen-Set</p>
-  <h3 class="mt-2 text-2xl leading-snug text-ink">Protein, Ballaststoffe, Kreatin und zwei Krafteinheiten pro Woche</h3>
-  <p class="mt-2 text-sm text-ink-2">
-    Für die Zeit nach der Abnehmspritze: 84 Protein-Sticks (≥ 20 g), 84 Ballaststoff-Sticks (5 g), 84 Portionen Kreatin
-    (3 g) und ein 12-Wochen-Programm mit Trainingsplänen und wöchentlichem Check-in. {site.price.set} € für 12 Wochen,
-    Vorbestellung ohne Zahlung.
-  </p>
-  <div class="mt-4 flex flex-wrap items-center gap-3">
-    <Cta position={position} label="Zum Set und zur Vorbestellung" />
-    <span class="text-xs text-ink-3">Lebensmittel mit Programm, kein Medikament.</span>
+<aside class="pt" aria-labelledby={`pt-${position}`}>
+  <p class="eyebrow">Das 12-Wochen-Programm</p>
+  <h3 id={`pt-${position}`} class="pt-h">Zwei Krafteinheiten pro Woche, ein Proteinziel, ein Plan für die Waage.</h3>
+  <p class="pt-t">Für die Zeit nach der Abnehmspritze: zwölf Wochen mit Krafttraining à 30 Minuten, zuhause oder im Studio, Rezepten für kleine Portionen und einem Check-in pro Woche per E-Mail. Das Basis-Programm ist geplant unter {site.price.programUnder} €. Auf der Warteliste erfährst du Start und Preis zuerst.</p>
+  <div class="pt-a">
+    <Cta position={position} />
+    <a href="/#programm" class="pt-l">So ist das Programm aufgebaut</a>
   </div>
 </aside>
+
+<style>
+  .pt {
+    margin: 3rem 0;
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--color-ink);
+    border-bottom: 1px solid var(--color-line);
+  }
+  .pt-h {
+    margin-top: 0.5rem;
+    font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+    line-height: 1.2;
+    font-stretch: 115%;
+    font-weight: 520;
+    letter-spacing: -0.015em;
+    color: var(--color-ink);
+    max-width: 30em;
+  }
+  .pt-t {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-ink-2);
+    max-width: 38em;
+  }
+  .pt-a {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.5rem;
+  }
+  .pt-l {
+    font-size: 0.9375rem;
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-underline-offset: 4px;
+  }
+  .pt-l:hover {
+    text-decoration-color: var(--color-ink);
+  }
+</style>

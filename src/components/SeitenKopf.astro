@@ -1,0 +1,43 @@
+---
+/**
+ * Kopf der Unterseiten im Design „Kalk“: Brotkrumen, optional ein leiser Satz über der Überschrift (keine Versalien),
+ * H1, Einleitung (Slot) und der Arztsatz. Bindet die Bausteine aus src/styles/seiten.css und die Bewegung aus
+ * src/lib/bewegung.ts ein (Einblenden, Hochzählen, Balken, Scroll-Fortschritt). Bewusst <div>, nicht <header>:
+ * Die Druckregeln in global.css blenden <header> aus, die Überschrift muss im Druck und im PDF stehen bleiben.
+ */
+import '../styles/seiten.css';
+import { site } from '../data/site';
+
+interface Crumb { href?: string; label: string }
+interface Props {
+  crumbs: Crumb[];
+  title: string;
+  /** Leiser Satz über der H1, z. B. „Stand 30. September 2026“ */
+  meta?: string;
+  /** l = groß (Einstiegsseiten), m = für lange Überschriften und schmale Seiten */
+  size?: 'l' | 'm';
+  width?: 'wide' | 'narrow';
+  /** Arztsatz anzeigen (true), weglassen (false) oder mit einem Zusatzsatz (string) */
+  doc?: boolean | string;
+  class?: string;
+}
+const { crumbs, title, meta, size = 'l', width = 'wide', doc = true, class: cls = '' } = Astro.props;
+const docText = doc === false ? '' : typeof doc === 'string' ? `${site.doctorSentence} ${doc}` : site.doctorSentence;
+const hasLede = Astro.slots.has('default');
+---
+<div class:list={['k-head', width === 'wide' ? 'container-wide' : 'container-narrow', cls]}>
+  <nav aria-label="Brotkrumen" class="k-crumbs no-print">
+    {crumbs.map((c, i) => (<>{i > 0 && <span aria-hidden="true">/</span>}{c.href ? <a href={c.href}>{c.label}</a> : <span aria-current="page">{c.label}</span>}</>))}
+  </nav>
+  {meta && <p class="k-meta" data-hv>{meta}</p>}
+  <h1 class:list={['k-h1', size === 'm' && 'k-h1-m']} data-hv style="--i:1">{title}</h1>
+  {hasLede && <div class="k-lede" data-hv style="--i:2"><slot /></div>}
+  {docText && <p class="k-doc" data-hv style="--i:3">{docText}</p>}
+  <slot name="nach" />
+</div>
+
+<script>
+  import { beobachte, fortschritt } from '../lib/bewegung';
+  beobachte();
+  fortschritt();
+</script>

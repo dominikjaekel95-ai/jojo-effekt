@@ -3,8 +3,13 @@
  * Werkzeug: Zeitplan nach der letzten Dosis. Rechnet aus Datum und Wirkstoff die Orientierungspunkte aus Fachinformation
  * (Halbwertszeit, Faustregel fünf Halbwertszeiten) und Studien (Zunahme ab Woche 8, Wu 2025; Ein-Jahres-Daten) in Daten um.
  * Kein Absetz-Plan, keine Dosierung: Das Werkzeug beginnt nach der letzten Dosis. Rechnet nur im Browser, speichert nichts.
+ * Seit 06.10.2026 ohne Kontrolltermin und ohne Handlungsempfehlungen: Jeder Zeitpunkt steht als Woche nach der letzten Dosis
+ * mit Herkunft (Fachinformation, Studien), als allgemeine Orientierung, nicht als Vorhersage.
+ * Gestaltung „Kalk“ seit 06.10.2026: Ergebnis zusätzlich als Bild über 20 Wochen (dieselben Daten, Bahnen zeichnen sich),
+ * rechnet neu, sobald Datum oder Wirkstoff sich ändern.
  */
 import Base from '../../../layouts/Base.astro';
+import SeitenKopf from '../../../components/SeitenKopf.astro';
 import Fn from '../../../components/Fn.astro';
 import Footnotes from '../../../components/Footnotes.astro';
 import ProductTeaser from '../../../components/ProductTeaser.astro';
@@ -21,7 +26,7 @@ const faq = [
   },
   {
     q: 'Ab wann nimmt man nach dem Absetzen wieder zu?',
-    a: '<p>In einer Meta-Analyse randomisierter Studien war die Gewichtszunahme ab etwa Woche 8 nach dem Absetzen messbar und setzte sich bis etwa Woche 20 fort. Ein Jahr nach dem Absetzen von Semaglutid waren in der STEP-1-Verlängerung im Mittel zwei Drittel des verlorenen Gewichts zurück. Der Zeitplan setzt deshalb den Kontrolltermin in Woche 8 bis 12 und markiert die Wiegetage.</p>',
+    a: '<p>In einer Meta-Analyse randomisierter Studien war die Gewichtszunahme ab etwa Woche 8 nach dem Absetzen messbar und setzte sich bis etwa Woche 20 fort. Ein Jahr nach dem Absetzen von Semaglutid waren in der STEP-1-Verlängerung im Mittel zwei Drittel des verlorenen Gewichts zurück. Der Zeitplan zeigt diese Wochen als Kalenderdaten und markiert die Wiegetage; das ist allgemeine Orientierung aus Studien, keine Vorhersage für dich.</p>',
   },
   {
     q: 'Ist der Zeitplan ein Absetz-Plan oder ein Ausschleich-Schema?',
@@ -29,14 +34,14 @@ const faq = [
   },
   {
     q: 'Was steht in der Kalenderdatei?',
-    a: '<p>Die Orientierungspunkte als Termine: Wirkstoff weitgehend abgebaut, Appetit kommt zurück, Zunahme messbar, Kontrolltermin, Wiegetage in Woche 1, 2, 4, 8 und 12 sowie der Ein-Jahres-Punkt. Die Datei entsteht im Browser und lässt sich in jeden Kalender importieren; nichts wird übertragen.</p>',
+    a: '<p>Die Orientierungspunkte als Termine: Wirkstoff weitgehend abgebaut, Appetit kommt zurück, Zunahme in Studien messbar, Wiegetage in Woche 1, 2, 4, 8 und 12 sowie der Ein-Jahres-Punkt. Die Datei entsteht im Browser und lässt sich in jeden Kalender importieren; nichts wird übertragen.</p>',
   },
 ];
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
 const title = 'Zeitplan nach der letzten Dosis: Was wann passiert (Rechner)';
 const description =
-  'Letzte Dosis und Wirkstoff eingeben: wann der Wirkstoff abgebaut ist, wann der Appetit zurückkommt, ab wann die Zunahme messbar ist und wann der Kontrolltermin passt.';
+  'Letzte Dosis und Wirkstoff eingeben: wann der Wirkstoff abgebaut ist, wann der Appetit meist zurückkommt und ab welcher Woche Studien eine Zunahme messen.';
 const path = '/werkzeuge/zeitplan-nach-letzter-dosis/';
 const url = `${site.url}${path}`;
 
@@ -78,53 +83,53 @@ const jsonLd = [
 ];
 ---
 <Base title={title} description={description} path={path} jsonLd={jsonLd}>
-  <article class="container-narrow py-12">
-    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › <a href="/werkzeuge/" class="hover:text-moss">Werkzeuge</a> › Zeitplan</nav>
-    <p class="eyebrow mt-6">Werkzeug · rechnet nur in deinem Browser</p>
-    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">Zeitplan nach der letzten Dosis</h1>
-    <p class="mt-4 text-lg text-ink-2">
-      Datum der letzten Dosis und Wirkstoff eingeben. Das Werkzeug rechnet die Orientierungspunkte aus Fachinformation und Studien in Kalenderdaten um: wann der Wirkstoff weitgehend abgebaut ist, wann der Appetit meist zurückkommt, ab wann die Zunahme in Studien messbar wird und wann ein Kontrolltermin passt.
-    </p>
-    <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence} Dieses Werkzeug ist kein Absetz-Plan und keine Dosierhilfe; es beginnt nach der letzten Dosis.</p>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { href: '/werkzeuge/', label: 'Werkzeuge' }, { label: 'Zeitplan' }]} meta="Werkzeug, rechnet nur in deinem Browser" title="Zeitplan nach der letzten Dosis" size="m" width="narrow" doc="Dieses Werkzeug ist kein Absetz-Plan und keine Dosierhilfe; es beginnt nach der letzten Dosis.">
+    <p>Datum der letzten Dosis und Wirkstoff eingeben. Das Werkzeug rechnet die Orientierungspunkte aus Fachinformation und Studien in Kalenderdaten um: wann der Wirkstoff weitgehend abgebaut ist, wann der Appetit meist zurückkommt und ab wann die Zunahme in Studien messbar wird. Allgemeine Orientierung aus Studien, keine Vorhersage für dich.</p>
+  </SeitenKopf>
 
-    <form id="zeitplan-form" class="mt-8 grid gap-4 rounded-xl2 border border-line bg-white p-5 sm:grid-cols-2" novalidate>
-      <div>
-        <label for="datum" class="block text-sm font-semibold text-ink">Datum der letzten Dosis</label>
-        <input id="datum" name="datum" type="date" required class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink" />
+  <article class="container-narrow k-end">
+    <form id="zeitplan-form" class="k-panel zp-form" novalidate>
+      <div class="k-field">
+        <label for="datum" class="k-label">Datum der letzten Dosis</label>
+        <input id="datum" name="datum" type="date" required class="k-input" />
       </div>
-      <div>
-        <label for="wirkstoff" class="block text-sm font-semibold text-ink">Wirkstoff</label>
-        <select id="wirkstoff" name="wirkstoff" class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink">
+      <div class="k-field">
+        <label for="wirkstoff" class="k-label">Wirkstoff</label>
+        <select id="wirkstoff" name="wirkstoff" class="k-input">
           <option value="sema-spritze">Semaglutid, wöchentliche Spritze (Wegovy, Ozempic)</option>
           <option value="sema-tablette">Semaglutid, Tablette (Wegovy-Tablette, Rybelsus)</option>
           <option value="tirzepatid">Tirzepatid (Mounjaro)</option>
           <option value="liraglutid">Liraglutid (Saxenda)</option>
         </select>
       </div>
-      <div class="sm:col-span-2 flex flex-wrap items-center gap-3">
+      <div class="zp-act">
         <button type="submit" class="btn-primary">Zeitplan berechnen</button>
-        <span class="text-xs text-ink-3">Nichts wird gespeichert oder übertragen.</span>
+        <span class="k-hint">Nichts wird gespeichert oder übertragen.</span>
       </div>
     </form>
 
-    <section id="zeitplan-ergebnis" class="mt-8 hidden" aria-live="polite">
-      <h2 class="h2">Dein Zeitplan</h2>
-      <p class="mt-2 text-sm text-ink-3" data-zeitplan-kopf></p>
-      <ol class="mt-4 space-y-3" data-zeitplan-liste></ol>
-      <div class="mt-5 flex flex-wrap items-center gap-3">
+    <section id="zeitplan-ergebnis" class="zp-res hidden" aria-live="polite">
+      <h2 class="k-h2">Dein Zeitplan</h2>
+      <p class="k-note" data-zeitplan-kopf></p>
+      <p class="zp-orient">Allgemeine Orientierung aus Fachinformation und Studien, keine Vorhersage für dich.</p>
+      <figure class="zp-vis" aria-hidden="true">
+        <div class="zp-lanes" data-zeitplan-bild></div>
+        <div class="zp-axis"><span style="left:0%">0</span><span style="left:20%">4</span><span style="left:40%">8</span><span style="left:60%">12</span><span style="left:80%">16</span><span style="left:100%">20<i class="zp-unit"> Wochen</i></span></div>
+      </figure>
+      <ol class="zp-list" data-zeitplan-liste></ol>
+      <div class="zp-act zp-act2">
         <button type="button" class="btn-secondary" data-zeitplan-ics>In den Kalender (ICS-Datei)</button>
         <button type="button" class="btn-secondary" data-zeitplan-drucken>Drucken</button>
       </div>
-      <p class="mt-4 text-sm text-ink-3">Alle Angaben sind Mittelwerte aus Fachinformation und Studien; dein Verlauf weicht ab. Was in jeder Phase zu tun ist, steht unter <a href="/wissen/abnehmspritze-absetzen/" class="font-semibold text-moss underline underline-offset-4">Abnehmspritze absetzen</a> und in der <a href="/checkliste/" class="font-semibold text-moss underline underline-offset-4">Checkliste für die ersten 8 Wochen</a>.</p>
+      <p class="k-note">Alle Angaben sind Mittelwerte aus Fachinformation und Studien. Was in jeder Phase zu tun ist, steht unter <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a> und in der <a href="/checkliste/">Checkliste für die ersten 8 Wochen</a>.</p>
     </section>
 
-    <div class="prose-site mt-10">
+    <div class="prose-site mt-12">
       <h2 id="so-gerechnet">So wird gerechnet</h2>
       <ul>
         <li><strong>Wirkstoff weitgehend abgebaut:</strong> nach etwa fünf Halbwertszeiten. Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche, als Spritze<Fn n={fn('fachinfoWegovy')} id="fachinfoWegovy" /><Fn n={fn('fachinfoOzempic')} id="fachinfoOzempic" /> wie als Tablette<Fn n={fn('fachinfoRybelsus')} id="fachinfoRybelsus" />, Tirzepatid etwa fünf Tage<Fn n={fn('fachinfoMounjaro')} id="fachinfoMounjaro" />, Liraglutid etwa 13 Stunden.<Fn n={fn('fachinfoSaxenda')} id="fachinfoSaxenda" /> Die Wirkung auf den Appetit lässt schon vorher spürbar nach.</li>
         <li><strong>Appetit kommt zurück:</strong> Orientierung aus dem Wirkstoffabbau, etwa zwischen der zweiten und der fünften Halbwertszeit. Bei Semaglutid sind das Woche 2 bis 5, bei Tirzepatid Tag 10 bis 25, bei Liraglutid die ersten Tage.</li>
         <li><strong>Zunahme messbar:</strong> In einer Meta-Analyse randomisierter Studien war der Gewichtsunterschied zur Kontrollgruppe ab etwa Woche 8 nach dem Absetzen signifikant und stieg bis etwa Woche 20.<Fn n={fn('wu2025')} id="wu2025" /></li>
-        <li><strong>Kontrolltermin:</strong> Woche 8 bis 12, also wenn die Zunahme beginnt; das ist die Empfehlung aus unserem Hauptartikel, keine Studienvorgabe.</li>
         <li><strong>Ein Jahr danach:</strong> Nach Semaglutid waren in der STEP-1-Verlängerung im Mittel zwei Drittel des Verlusts zurück.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Nach Tirzepatid lag die Zunahme in SURMOUNT-4 bei etwa 14 % in 52 Wochen.<Fn n={fn('aronne2024')} id="aronne2024" /> Nach Liraglutid allein lag die Zunahme in der S-LiTE-Nachbeobachtung 6 kg höher als nach Training.<Fn n={fn('jensen2024')} id="jensen2024" /></li>
       </ul>
       <p>Was das Werkzeug nicht tut: Es sagt nicht, ob oder wie du absetzen sollst, und es rechnet keine Dosen. Beides gehört in das Gespräch mit deiner Ärztin oder deinem Arzt.</p>
@@ -132,11 +137,11 @@ const jsonLd = [
 
     <div class="prose-site mt-10">
       <h2 id="warum">Warum ein Datum mehr hilft als eine Wochenzahl</h2>
-      <p>„Nach fünf bis sieben Wochen ist Semaglutid weitgehend abgebaut“ bleibt abstrakt. Ein Datum im Kalender nicht: Es sagt, ab wann der Appetit voraussichtlich wieder da ist, und legt die Wiegetage und den Kontrolltermin dorthin, wo die Zunahme in Studien beginnt.<Fn n={fn('wu2025')} id="wu2025" /> Wer die Haltephase mit festen Terminen beginnt, merkt die Drift früher; ab welcher Zahl du dann reagierst, legt der <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> fest, und wie viel Protein in diese Wochen gehört, der <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>.</p>
+      <p>„Nach fünf bis sieben Wochen ist Semaglutid weitgehend abgebaut“ bleibt abstrakt. Ein Datum im Kalender nicht: Es zeigt, in welche Wochen deines Kalenders die Zeitpunkte aus Fachinformation und Studien fallen, und legt die Wiegetage dorthin, wo die Zunahme in Studien beginnt.<Fn n={fn('wu2025')} id="wu2025" /> Wer die Haltephase mit festen Terminen beginnt, merkt die Drift früher; ab welcher Zahl du dann reagierst, legt der <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> fest, und wie viel Protein in diese Wochen gehört, der <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>.</p>
       <p>Die Mittelwerte sagen nichts über dich allein: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen im Mittel zwei Drittel des Verlusts zurück,<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> hinter dem Mittel stehen Menschen mit fast vollständiger Zunahme und Menschen, die fast nichts zugenommen haben. Was den Unterschied gemacht hat, zeigt die S-LiTE-Nachbeobachtung: Nach Liraglutid allein lag die Zunahme im Jahr nach Therapieende 6,0 kg höher als nach einem Trainingsprogramm.<Fn n={fn('jensen2024')} id="jensen2024" /></p>
     </div>
 
-    <Faq items={faq} id="zeitplan-faq" title="Häufige Fragen zum Zeitplan" />
+    <div class="mt-14"><Faq items={faq} id="zeitplan-faq" title="Häufige Fragen zum Zeitplan" /></div>
 
     <ProductTeaser position="werkzeug-zeitplan" />
 
@@ -154,66 +159,103 @@ const jsonLd = [
     const ergebnis = document.getElementById('zeitplan-ergebnis');
     const liste = document.querySelector('[data-zeitplan-liste]');
     const kopf = document.querySelector('[data-zeitplan-kopf]');
+    const bild = document.querySelector('[data-zeitplan-bild]');
+    const RM = document.documentElement.classList.contains('rm');
     let aktuelleEvents = [];
 
     const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
     const fmt = (d) => d.toLocaleDateString('de-DE', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' });
+    // Zeitpunkt als Tag (unter vier Wochen) oder Woche nach der letzten Dosis
+    const wann = (tage) => (tage < 28 ? `Tag ${tage}` : `Woche ${Math.round(tage / 7)}`);
+    const spanne = (von, bis) => (bis < 28 ? `Tag ${von} bis ${bis}` : `Woche ${Math.round(von / 7)} bis ${Math.round(bis / 7)}`);
     const ics = (d) => `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
 
-    const eintrag = (titel, zeit, text) => {
+    const eintrag = (titel, zeit, text, art) => {
       const li = document.createElement('li');
-      li.className = 'rounded-xl2 border border-line bg-white p-4';
-      const h = document.createElement('p'); h.className = 'font-semibold text-ink'; h.textContent = titel;
-      const z = document.createElement('p'); z.className = 'mt-1 text-sm font-medium text-moss'; z.textContent = zeit;
-      const t = document.createElement('p'); t.className = 'mt-1 text-sm text-ink-2'; t.textContent = text;
-      li.append(h, z, t);
+      li.className = 'zp-e';
+      if (art) li.dataset.art = art;
+      const z = document.createElement('p'); z.className = 'zp-d'; z.textContent = zeit;
+      const b = document.createElement('div');
+      const h = document.createElement('p'); h.className = 'zp-t'; h.textContent = titel;
+      const t = document.createElement('p'); t.className = 'zp-x'; t.textContent = text;
+      b.append(h, t);
+      li.append(z, b);
       return li;
     };
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+    // Bild: Wochen 0 bis 20 als Bahnen; Lage in Prozent aus Tagen
+    const pct = (tage) => Math.max(0, Math.min(100, (tage / 140) * 100));
+    const bahn = (label, teile, i) => {
+      const row = document.createElement('div');
+      row.className = 'zp-lane';
+      row.style.setProperty('--i', String(i));
+      const l = document.createElement('span'); l.className = 'zp-l'; l.textContent = label;
+      const track = document.createElement('span'); track.className = 'zp-track';
+      teile.forEach((t) => {
+        const s = document.createElement('span');
+        s.className = 'zp-b ' + (t.cls || '');
+        s.style.left = `${pct(t.von)}%`;
+        s.style.width = t.punkt ? '' : `max(3px, ${pct(t.bis) - pct(t.von)}%)`;
+        track.append(s);
+      });
+      row.append(l, track);
+      return row;
+    };
+
+    const rechne = (springen) => {
       const datumWert = form.datum.value;
-      if (!datumWert) { form.datum.focus(); return; }
+      if (!datumWert) { if (springen) form.datum.focus(); return; }
       const start = new Date(datumWert + 'T12:00:00');
       if (Number.isNaN(start.getTime())) return;
       const p = PROFILE[form.wirkstoff.value] || PROFILE['sema-spritze'];
-      const abgebaut = addDays(start, Math.max(1, Math.round(p.hwzTage * 5)));
-      const appetitVon = addDays(start, Math.max(1, Math.round(p.hwzTage * 2)));
+      const tAbgebaut = Math.max(1, Math.round(p.hwzTage * 5));
+      const tAppetit = Math.max(1, Math.round(p.hwzTage * 2));
+      const abgebaut = addDays(start, tAbgebaut);
+      const appetitVon = addDays(start, tAppetit);
       const appetitBis = abgebaut;
       const zunahme = addDays(start, 56);
-      const zunahmeBis = addDays(start, 140);
-      const kontrolleVon = addDays(start, 56);
-      const kontrolleBis = addDays(start, 84);
       const jahr = addDays(start, 365);
-      const wiegetage = [1, 2, 4, 8, 12].map((w) => addDays(start, w * 7));
+      const wochen = [1, 2, 4, 8, 12];
+      const wiegetage = wochen.map((w) => addDays(start, w * 7));
 
       liste.replaceChildren(
-        eintrag('Wirkstoff weitgehend abgebaut', `um den ${fmt(abgebaut)}`, `Etwa fünf Halbwertszeiten nach der letzten Dosis (${p.name}). Die Wirkung auf den Appetit lässt schon vorher nach.`),
-        eintrag('Appetit kommt meist zurück', `${fmt(appetitVon)} bis ${fmt(appetitBis)}`, 'Mit sinkendem Wirkstoffspiegel arbeitet der Magen wieder schneller, das Sättigungssignal kommt später. Jetzt zählen Protein zuerst, feste Mahlzeiten und das Training, das schon läuft.'),
-        eintrag('Zunahme in Studien ab hier messbar', `ab ${fmt(zunahme)}, Anstieg bis etwa ${fmt(zunahmeBis)}`, 'Woche 8 bis 20 nach dem Absetzen (Meta-Analyse randomisierter Studien). Wer bis hierher Routinen hat, hat den Vorsprung.'),
-        eintrag('Kontrolltermin sinnvoll', `${fmt(kontrolleVon)} bis ${fmt(kontrolleBis)}`, 'Woche 8 bis 12: Gewicht, Blutwerte, Optionen besprechen. Termin jetzt ausmachen, nicht erst, wenn die Waage es sagt.'),
-        eintrag('Wiegetage', `jede Woche am ${start.toLocaleDateString('de-DE', { weekday: 'long' })}, zum Beispiel ${wiegetage.map((d) => d.toLocaleDateString('de-DE', { day: 'numeric', month: 'numeric' })).join(', ')}`, 'Einmal pro Woche, morgens, gleiche Bedingungen. Vorher festlegen, ab welcher Zunahme du reagierst.'),
-        eintrag('Ein Jahr danach', fmt(jahr), p.jahr + ' Was in Studien den Unterschied macht: Krafttraining, Protein, feste Mahlzeiten.'),
+        eintrag('Wirkstoff weitgehend abgebaut', `Laut Fachinformation: ${wann(tAbgebaut)} nach der letzten Dosis, im Kalender um den ${fmt(abgebaut)}`, `Etwa fünf Halbwertszeiten (${p.name}). Die Wirkung auf den Appetit lässt schon vorher nach.`, 'stoff'),
+        eintrag('Appetit kommt meist zurück', `Aus der Halbwertszeit abgeleitet: ${spanne(tAppetit, tAbgebaut)} nach der letzten Dosis, im Kalender ${fmt(appetitVon)} bis ${fmt(appetitBis)}`, 'Mit sinkendem Wirkstoffspiegel arbeitet der Magen wieder schneller, das Sättigungssignal kommt später.', 'appetit'),
+        eintrag('Zunahme in Studien messbar', `In Studien: ab Woche 8 nach der letzten Dosis, Anstieg bis etwa Woche 20; im Kalender ab ${fmt(zunahme)}`, 'Meta-Analyse randomisierter Studien: Der Unterschied zur Kontrollgruppe war ab etwa Woche 8 messbar und stieg bis etwa Woche 20. Mittelwerte, keine Vorhersage für dich.', 'zunahme'),
+        eintrag('Wiegetage', `jede Woche am ${start.toLocaleDateString('de-DE', { weekday: 'long' })}, zum Beispiel ${wiegetage.map((d) => d.toLocaleDateString('de-DE', { day: 'numeric', month: 'numeric' })).join(', ')}`, 'Einmal pro Woche, morgens, unter gleichen Bedingungen.', 'wiegen'),
+        eintrag('Ein Jahr danach', `In Studien: Woche 52 nach der letzten Dosis, im Kalender ${fmt(jahr)}`, p.jahr),
       );
-      kopf.textContent = `Letzte Dosis ${fmt(start)}, ${p.name}. Orientierungswerte, keine Vorhersage.`;
+      bild.replaceChildren(
+        bahn('Wirkstoff', [{ von: 0, bis: tAbgebaut, cls: 'zp-stoff' }], 0),
+        bahn('Appetit', [{ von: tAppetit, bis: tAbgebaut, cls: 'zp-appetit' }], 1),
+        bahn('Zunahme', [{ von: 56, bis: 140, cls: 'zp-zunahme' }], 2),
+        bahn('Wiegen', wochen.map((w) => ({ von: w * 7, punkt: true, cls: 'zp-punkt' })), 3),
+      );
+      kopf.textContent = `Letzte Dosis ${fmt(start)}, ${p.name}. Woche 0 beginnt am ${start.toLocaleDateString('de-DE', { day: 'numeric', month: 'long' })}.`;
       ergebnis.classList.remove('hidden');
-      ergebnis.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      ergebnis.classList.remove('zp-in');
+      if (RM) ergebnis.classList.add('zp-in');
+      else requestAnimationFrame(() => requestAnimationFrame(() => ergebnis.classList.add('zp-in')));
+      if (springen) ergebnis.scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' });
 
       aktuelleEvents = [];
-      aktuelleEvents.push({ d: abgebaut, s: 'Nach der Spritze: Wirkstoff weitgehend abgebaut' });
+      aktuelleEvents.push({ d: abgebaut, s: `Nach der Spritze: laut Fachinformation Wirkstoff weitgehend abgebaut (${wann(tAbgebaut)})` });
       aktuelleEvents.push({ d: appetitVon, s: 'Nach der Spritze: Appetit kommt meist zurück (bis ' + fmt(appetitBis) + ')' });
-      aktuelleEvents.push({ d: zunahme, s: 'Nach der Spritze: ab jetzt Zunahme in Studien messbar' });
-      aktuelleEvents.push({ d: kontrolleVon, s: 'Nach der Spritze: Kontrolltermin ausmachen (Woche 8 bis 12)' });
+      aktuelleEvents.push({ d: zunahme, s: 'Nach der Spritze: in Studien ab Woche 8 Zunahme messbar' });
       wiegetage.forEach((d) => aktuelleEvents.push({ d, s: 'Nach der Spritze: Wiegetag' }));
-      aktuelleEvents.push({ d: jahr, s: 'Nach der Spritze: ein Jahr nach der letzten Dosis' });
-    });
+      aktuelleEvents.push({ d: jahr, s: 'Nach der Spritze: Woche 52, ein Jahr nach der letzten Dosis' });
+    };
+
+    form.addEventListener('submit', (e) => { e.preventDefault(); rechne(true); });
+    form.wirkstoff.addEventListener('change', () => { if (form.datum.value) rechne(false); });
+    form.datum.addEventListener('change', () => { if (form.datum.value) rechne(false); });
 
     document.querySelector('[data-zeitplan-ics]').addEventListener('click', () => {
       if (!aktuelleEvents.length) return;
       const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
       const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//nachderspritze.de//Zeitplan//DE', 'CALSCALE:GREGORIAN'];
       aktuelleEvents.forEach((ev, i) => {
-        lines.push('BEGIN:VEVENT', `UID:zeitplan-${ics(ev.d)}-${i}@nachderspritze.de`, `DTSTAMP:${stamp}`, `DTSTART;VALUE=DATE:${ics(ev.d)}`, `DTEND;VALUE=DATE:${ics(addDays(ev.d, 1))}`, `SUMMARY:${ev.s}`, 'DESCRIPTION:Orientierung aus Fachinformation und Studien\\, kein ärztlicher Plan. nachderspritze.de/werkzeuge/zeitplan-nach-letzter-dosis/', 'END:VEVENT');
+        lines.push('BEGIN:VEVENT', `UID:zeitplan-${ics(ev.d)}-${i}@nachderspritze.de`, `DTSTAMP:${stamp}`, `DTSTART;VALUE=DATE:${ics(ev.d)}`, `DTEND;VALUE=DATE:${ics(addDays(ev.d, 1))}`, `SUMMARY:${ev.s}`, 'DESCRIPTION:Allgemeine Orientierung aus Fachinformation und Studien\\, keine Vorhersage für dich. nachderspritze.de/werkzeuge/zeitplan-nach-letzter-dosis/', 'END:VEVENT');
       });
       lines.push('END:VCALENDAR');
       const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
@@ -228,3 +270,175 @@ const jsonLd = [
     document.querySelector('[data-zeitplan-drucken]').addEventListener('click', () => window.print());
   </script>
 </Base>
+
+<style>
+  .zp-form {
+    display: grid;
+    gap: 1.5rem 2rem;
+  }
+  .zp-act {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .zp-form {
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    }
+    .zp-act {
+      grid-column: 1 / -1;
+    }
+  }
+  .zp-res {
+    margin-top: 3rem;
+  }
+  .zp-res .k-note a {
+    color: var(--color-moss);
+  }
+  .zp-orient {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.55;
+    font-weight: 500;
+    color: var(--color-ink);
+  }
+  /* Bild: vier Bahnen über 20 Wochen */
+  .zp-vis {
+    margin-top: 2rem;
+  }
+  .zp-vis :global(.zp-lane) {
+    display: grid;
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    align-items: center;
+    gap: 0.75rem;
+    height: 2rem;
+  }
+  .zp-vis :global(.zp-l) {
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+  }
+  .zp-vis :global(.zp-track) {
+    position: relative;
+    height: 100%;
+    border-left: 1px solid var(--color-line);
+    background: repeating-linear-gradient(to right, transparent 0, transparent calc(20% - 1px), var(--color-line) calc(20% - 1px), var(--color-line) 20%);
+  }
+  .zp-vis :global(.zp-b) {
+    position: absolute;
+    top: 0.55rem;
+    height: 0.9rem;
+    border-radius: 3px;
+    transform-origin: left center;
+    transition: transform 0.9s var(--ease), opacity 0.6s var(--ease);
+    transition-delay: calc(var(--i, 0) * 120ms);
+  }
+  .zp-vis :global(.zp-stoff) {
+    background: var(--color-ink-3);
+  }
+  .zp-vis :global(.zp-appetit) {
+    background: transparent;
+    box-shadow: inset 0 0 0 1.5px var(--color-ink);
+  }
+  .zp-vis :global(.zp-zunahme) {
+    background: var(--color-clay);
+  }
+  .zp-vis :global(.zp-punkt) {
+    top: 0.65rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-left: -0.35rem;
+    border-radius: 50%;
+    background: var(--color-moss);
+  }
+  :global(html.js:not(.rm)) .zp-res:not(.zp-in) :global(.zp-b) {
+    transform: scaleX(0);
+  }
+  :global(html.js:not(.rm)) .zp-res:not(.zp-in) :global(.zp-punkt) {
+    transform: scale(0);
+    opacity: 0;
+  }
+  .zp-axis {
+    position: relative;
+    height: 1.25rem;
+    margin: 0.4rem 0 0 6.25rem;
+    font-size: 0.75rem;
+    color: var(--color-ink-3);
+  }
+  .zp-axis span {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .zp-axis span:first-child {
+    transform: none;
+  }
+  .zp-axis span:last-child {
+    transform: translateX(-100%);
+  }
+  .zp-unit {
+    font-style: normal;
+  }
+  /* Liste: Datum links, Erklärung rechts */
+  .zp-list {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-ink);
+  }
+  .zp-list :global(.zp-e) {
+    display: grid;
+    gap: 0.35rem 2rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .zp-list :global(.zp-d) {
+    font-stretch: 112%;
+    font-weight: 540;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    color: var(--color-ink);
+  }
+  .zp-list :global(.zp-e[data-art="zunahme"] .zp-d) {
+    color: var(--color-clay);
+  }
+  .zp-list :global(.zp-e[data-art="wiegen"] .zp-d) {
+    color: var(--color-moss);
+  }
+  .zp-list :global(.zp-t) {
+    font-weight: 560;
+    color: var(--color-ink);
+  }
+  .zp-list :global(.zp-x) {
+    margin-top: 0.25rem;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--color-ink-2);
+  }
+  @media (min-width: 640px) {
+    .zp-list :global(.zp-e) {
+      grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+    }
+  }
+  .zp-act2 {
+    margin-top: 1.75rem;
+  }
+  @media (max-width: 480px) {
+    .zp-vis :global(.zp-lane) {
+      grid-template-columns: 4.25rem minmax(0, 1fr);
+      gap: 0.5rem;
+    }
+    .zp-axis {
+      margin-left: 4.75rem;
+    }
+    .zp-unit {
+      display: none;
+    }
+  }
+  @media print {
+    .zp-form, .zp-act2 {
+      display: none;
+    }
+  }
+</style>

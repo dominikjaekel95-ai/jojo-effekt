@@ -1,0 +1,184 @@
+---
+/**
+ * Wartelisten-Formular: E-Mail, Pflicht-Einwilligung, optional Häkchen „Starterpaket“, Honigtopf `website`,
+ * verstecktes `quelle`. POST an /api/anmeldung/ (MailerLite, Double-Opt-in), Weiterleitung auf /danke/.
+ * Ohne eigene Wartelisten-Gruppe (site.waitlist.ownGroup = false) nennt die Einwilligung Warteliste UND Newsletter,
+ * und das Formular schickt newsletter=ja und liste=gemeinsam mit. Mit eigener Gruppe ist der Newsletter ein freiwilliges
+ * Zusatz-Häkchen; fehlt dann MAILERLITE_GROUP_WARTELISTE, lehnt api/anmeldung.js ab (?fehler=konfiguration).
+ * Kein Arztbezug, keine Wirkaussagen, keine Health Claims (CLAIMS.md).
+ */
+import { site } from '../data/site';
+interface Props {
+  /** Kennung für Plausible und eindeutige IDs, z. B. "hero" oder "block" */
+  position: string;
+  /** Wert für das MailerLite-Feld `quelle` (Whitelist in api/anmeldung.js) */
+  quelle?: 'warteliste' | 'checkliste';
+  /** Häkchen „Starterpaket mit Protein und Kreatin“ anzeigen */
+  starterpaket?: boolean;
+  /** Auf dunklem Grund */
+  dark?: boolean;
+  /** Text des Buttons */
+  label?: string;
+  /** Kleiner Satz unter dem Formular */
+  micro?: string;
+  class?: string;
+}
+const {
+  position,
+  quelle = 'warteliste',
+  starterpaket = false,
+  dark = false,
+  label = 'Auf die Warteliste',
+  micro = 'Kostenlos und unverbindlich. Start und Preis erfährst du zuerst.',
+  class: cls = '',
+} = Astro.props;
+const own = site.waitlist.ownGroup;
+const id = `wl-${position}`;
+const cadence = site.newsletter.cadence;
+---
+<form method="post" action="/api/anmeldung/" class={`wl ${dark ? 'wl-dark' : ''} plausible-event-name=Warteliste+Eintragen plausible-event-position=${position} ${cls}`}>
+  <div class="wl-row">
+    <label class="sr-only" for={`${id}-email`}>E-Mail-Adresse</label>
+    <input id={`${id}-email`} type="email" name="email" placeholder="Deine E-Mail-Adresse" autocomplete="email" required />
+    <button class="wl-btn" type="submit">{label}</button>
+  </div>
+  <div class="hidden" aria-hidden="true"><label for={`${id}-website`}>Website</label><input id={`${id}-website`} name="website" type="text" tabindex="-1" autocomplete="off" /></div>
+  <input type="hidden" name="quelle" value={quelle} />
+  {!own && <><input type="hidden" name="newsletter" value="ja" /><input type="hidden" name="liste" value="gemeinsam" /></>}
+  <div class="wl-checks">
+    <label class="wl-check">
+      <input type="checkbox" name="einwilligung" value="ja" required />
+      {own
+        ? <span>Ja, setzt mich auf die Warteliste für das 12-Wochen-Programm und schreibt mir zu Start, Preis und Ablauf. Abmelden geht in jeder Mail. <a href="/datenschutz/">Datenschutz</a></span>
+        : <span>Ja, setzt mich auf die Warteliste für das 12-Wochen-Programm und schickt mir {cadence} den Newsletter von Nach der Spritze. Abmelden geht in jeder Mail. <a href="/datenschutz/">Datenschutz</a></span>}
+    </label>
+    {own && (
+      <label class="wl-check">
+        <input type="checkbox" name="newsletter" value="ja" />
+        <span>Zusätzlich den Newsletter, {cadence}. Freiwillig.</span>
+      </label>
+    )}
+    {starterpaket && (
+      <label class="wl-check">
+        <input type="checkbox" name="starterpaket" value="ja" />
+        <span>Ich hätte Interesse an einem Starterpaket mit Protein und Kreatin; sagt mir Bescheid, falls es kommt. Freiwillig, ohne Verpflichtung.</span>
+      </label>
+    )}
+  </div>
+  {micro && <p class="wl-micro">{micro}</p>}
+</form>
+
+<style>
+  .wl {
+    max-width: 34rem;
+  }
+  .wl-row {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .wl input[type="email"] {
+    flex: 1;
+    min-width: 0;
+    height: 3.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-line);
+    background: #fff;
+    color: var(--color-ink);
+    font: inherit;
+    font-size: 1rem;
+    padding: 0 1.375rem;
+  }
+  .wl input[type="email"]::placeholder {
+    color: var(--color-ink-3);
+  }
+  .wl-btn {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.25rem;
+    padding: 0 1.625rem;
+    border-radius: 999px;
+    border: 0;
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 560;
+    font-stretch: 108%;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.3s var(--ease);
+  }
+  .wl-btn:hover {
+    background: #33352f;
+  }
+  .wl-btn:active {
+    transform: scale(0.98);
+  }
+  .wl-checks {
+    display: grid;
+    gap: 0.6rem;
+    margin-top: 0.9rem;
+  }
+  .wl-check {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--color-ink-2);
+    cursor: pointer;
+  }
+  .wl-check input {
+    flex: none;
+    width: 1.05rem;
+    height: 1.05rem;
+    margin-top: 0.12rem;
+    cursor: pointer;
+  }
+  .wl-check a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .wl-micro {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
+  /* Auf Tinte: dunkles Feld, Gelb-Button mit Tinte */
+  .wl-dark input[type="email"] {
+    background: var(--dark-field);
+    border-color: transparent;
+    color: #fff;
+  }
+  .wl-dark input[type="email"]::placeholder {
+    color: #b4b6af;
+  }
+  .wl-dark .wl-btn {
+    background: var(--color-amber);
+    color: var(--color-ink);
+  }
+  .wl-dark .wl-btn:hover {
+    background: #f0da70;
+  }
+  .wl-dark .wl-check, .wl-dark .wl-micro {
+    color: var(--dark-muted);
+  }
+  .wl-dark .wl-check input {
+    accent-color: var(--color-amber);
+  }
+  .wl-dark :focus-visible {
+    outline-color: var(--color-amber);
+  }
+  @media (max-width: 560px) {
+    .wl-row {
+      flex-direction: column;
+    }
+    .wl input[type="email"], .wl-btn {
+      flex: none;
+      width: 100%;
+    }
+  }
+</style>

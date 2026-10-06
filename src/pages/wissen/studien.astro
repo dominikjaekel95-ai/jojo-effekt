@@ -1,7 +1,13 @@
 ---
+/**
+ * Studien-Tracker /wissen/studien/: eine Zeile pro Studie (src/data/studien.ts), Dataset-JSON-LD, CSV unter
+ * /wissen/studien.csv. Gestaltung „Kalk“ seit 06.10.2026: Tabellen mit Haarlinien, mobil gestapelt, Hinweis auf das
+ * Programm (ProductTeaser) statt „Zum 12-Wochen-Set“.
+ */
 import Base from '../../layouts/Base.astro';
+import SeitenKopf from '../../components/SeitenKopf.astro';
+import ProductTeaser from '../../components/ProductTeaser.astro';
 import Footnotes from '../../components/Footnotes.astro';
-import Cta from '../../components/Cta.astro';
 import { studien, studienUpdated, studienLog } from '../../data/studien';
 import { sources } from '../../data/sources';
 import { site } from '../../data/site';
@@ -44,55 +50,51 @@ const jsonLd = [
 ];
 ---
 <Base title={metaTitle} description={description} path="/wissen/studien/" jsonLd={jsonLd} ogType="article" modifiedTime={studienUpdated} ogImage="/og-studien.png">
-  <article class="container-wide py-12">
-    <nav aria-label="Brotkrumen" class="text-sm text-ink-3">
-      <a href="/" class="hover:text-moss">Start</a> › <a href="/wissen/" class="hover:text-moss">Wissen</a> › Studien-Tracker
-    </nav>
-    <p class="eyebrow mt-6">Studien-Tracker · Stand {updated}</p>
-    <h1 class="h1 mt-3 max-w-3xl !text-[2.1rem] sm:!text-[2.8rem]">{title}</h1>
-    <p class="mt-4 max-w-3xl text-lg text-ink-2">
-      {studien.length} Studien, je eine Kernzahl, je ein Link zum Original. Wir ergänzen die Tabelle, sobald neue Absetz-Daten
-      erscheinen, und vermerken das Datum oben. Fehlt eine Studie? Schreib an <a href={`mailto:${site.owner.email}`} class="text-moss underline underline-offset-4">{site.owner.email}</a>.
-    </p>
-    <p class="mt-4 max-w-3xl rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence}</p>
-    <p class="mt-4 max-w-3xl text-sm text-ink-2">
-      <strong class="text-ink">Für Presse und Fachpublikum:</strong> Die Tabelle ist frei nutzbar mit Quellenangabe (CC BY 4.0). <a href="/wissen/studien.csv" class="font-semibold text-moss underline underline-offset-4" download>Als CSV herunterladen</a> · <a href="#neu" class="font-semibold text-moss underline underline-offset-4">Was neu ist</a>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { href: '/wissen/', label: 'Wissen' }, { label: 'Studien-Tracker' }]} meta={`Studien-Tracker, Stand ${updated}`} title={title} size="m">
+    <p>{studien.length} Studien, je eine Kernzahl, je ein Link zum Original. Wir ergänzen die Tabelle, sobald neue Absetz-Daten erscheinen, und vermerken das Datum oben. Fehlt eine Studie? Schreib an <a href={`mailto:${site.owner.email}`}>{site.owner.email}</a>.</p>
+  </SeitenKopf>
+
+  <article class="container-wide k-end">
+    <p class="st-press" data-rv>
+      <strong>Für Presse und Fachpublikum:</strong> Die Tabelle ist frei nutzbar mit Quellenangabe (CC BY 4.0). <a href="/wissen/studien.csv" class="k-a" download>Als CSV herunterladen</a> · <a href="#neu" class="k-a">Was neu ist</a>
     </p>
 
-    <div class="mt-8 flex flex-wrap gap-2 text-sm">
+    <nav class="k-jump st-jump" aria-label="Gruppen">
       {gruppen.map((g) => (
-        <a href={`#${g.toLowerCase()}`} class="rounded-full border border-line bg-white px-3 py-1 text-ink-2 hover:border-moss hover:text-moss">{g} ({studien.filter((s) => s.gruppe === g).length})</a>
+        <a href={`#${g.toLowerCase()}`}>{g} <span class="n">{studien.filter((s) => s.gruppe === g).length}</span></a>
       ))}
-    </div>
+    </nav>
 
     {gruppen.map((g) => (
-      <section id={g.toLowerCase()} class="mt-12 scroll-mt-24" aria-labelledby={`h-${g}`}>
-        <h2 id={`h-${g}`} class="h2">{g}</h2>
-        <p class="mt-2 max-w-3xl text-ink-2">{beschreibung[g]}</p>
-        <div class="studien-tabelle mt-5 rounded-xl2 border border-line bg-white sm:overflow-x-auto">
-          <table class="w-full border-collapse text-sm sm:min-w-[720px]">
+      <section id={g.toLowerCase()} class="k-sec scroll-mt-24" aria-labelledby={`h-${g}`}>
+        <div class="st-head" data-rv>
+          <h2 id={`h-${g}`} class="k-h2">{g}</h2>
+          <p class="k-intro">{beschreibung[g]}</p>
+        </div>
+        <div class="mt-8" data-rv>
+          <table class="k-table k-stack st-table">
             <thead>
-              <tr class="bg-paper-2 text-left text-xs uppercase tracking-wider text-ink-2">
-                <th class="px-3 py-2 font-semibold">Studie</th>
-                <th class="px-3 py-2 font-semibold">Wirkstoff</th>
-                <th class="px-3 py-2 font-semibold">Design · n</th>
-                <th class="px-3 py-2 font-semibold">Kernzahl</th>
-                <th class="px-3 py-2 font-semibold">Was das heißt</th>
+              <tr>
+                <th scope="col">Studie</th>
+                <th scope="col">Wirkstoff</th>
+                <th scope="col">Design · n</th>
+                <th scope="col">Kernzahl</th>
+                <th scope="col">Was das heißt</th>
               </tr>
             </thead>
             <tbody>
               {studien.filter((s) => s.gruppe === g).map((s) => (
-                <tr class="border-t border-line align-top">
-                  <td class="px-3 py-3" data-label="Studie">
-                    <span class="font-semibold text-ink">{s.name}</span>
-                    <span class="block text-ink-3">{s.jahr} · <a href={`#fn-${s.sourceId}`} class="text-moss">[{fn(s.sourceId)}]</a>
-                      {sources[s.sourceId]?.url && (<> · <a href={sources[s.sourceId].url} rel="noopener nofollow" target="_blank" class="text-moss underline underline-offset-2">Original</a></>)}
+                <tr>
+                  <th scope="row">
+                    <span class="st-name">{s.name}</span>
+                    <span class="k-sub">{s.jahr} · <a href={`#fn-${s.sourceId}`} class="st-fn">[{fn(s.sourceId)}]</a>
+                      {sources[s.sourceId]?.url && (<> · <a href={sources[s.sourceId].url} rel="noopener nofollow" target="_blank" class="st-fn">Original</a></>)}
                     </span>
-                  </td>
-                  <td class="px-3 py-3 text-ink-2" data-label="Wirkstoff">{s.wirkstoff}</td>
-                  <td class="px-3 py-3 text-ink-2" data-label="Design · n">{s.design}<span class="block text-ink-3">n = {s.n}</span></td>
-                  <td class="px-3 py-3 font-medium text-ink" data-label="Kernzahl">{s.kernzahl}</td>
-                  <td class="px-3 py-3 text-ink-2" data-label="Was das heißt">{s.bedeutung}</td>
+                  </th>
+                  <td data-label="Wirkstoff">{s.wirkstoff}</td>
+                  <td data-label="Design · n">{s.design}<span class="k-sub">n = {s.n}</span></td>
+                  <td data-label="Kernzahl" class="st-kz">{s.kernzahl}</td>
+                  <td data-label="Was das heißt">{s.bedeutung}</td>
                 </tr>
               ))}
             </tbody>
@@ -101,64 +103,194 @@ const jsonLd = [
       </section>
     ))}
 
-    <section id="neu" class="mt-12 max-w-3xl scroll-mt-24" aria-labelledby="neu-h">
-      <h2 id="neu-h" class="h2">Was neu ist</h2>
-      <ul class="mt-4 divide-y divide-line rounded-xl2 border border-line bg-white">
-        {studienLog.map((e) => (
-          <li class="flex gap-4 px-5 py-3 text-[0.95rem] text-ink-2">
-            <time datetime={e.date} class="w-24 shrink-0 font-semibold text-ink">{new Date(e.date).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' })}</time>
-            <span>{e.text}</span>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <div class="st-narrow">
+      <section id="neu" class="k-sec scroll-mt-24" aria-labelledby="neu-h">
+        <h2 id="neu-h" class="k-h2" data-rv>Was neu ist</h2>
+        <ul class="st-log">
+          {studienLog.map((e, i) => (
+            <li data-rv style={`--i:${i}`}>
+              <time datetime={e.date}>{new Date(e.date).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' })}</time>
+              <span>{e.text}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
 
-    <section class="mt-12 max-w-3xl" aria-labelledby="offen-h">
-      <h2 id="offen-h" class="h2">Was die Studien noch nicht beantworten</h2>
-      <ul class="prose-site mt-4 list-disc pl-6">
-        <li><strong>Ausschleichen.</strong> Ob ein schrittweises Reduzieren der Dosis den Wiederanstieg abmildert, ist nicht durch randomisierte Studien belegt. Die Zulassungsstudien haben abrupt abgesetzt.</li>
-        <li><strong>Protein und Kreatin speziell nach GLP-1.</strong> Die Evidenz für Protein und Krafttraining stammt aus Studien zu Kalorienreduktion allgemein, nicht aus GLP-1-Kohorten. Für Kreatin nach GLP-1-Therapie gibt es keine eigenen Daten.</li>
-        <li><strong>Langzeitverlauf über 1 Jahr hinaus.</strong> Die Nachbeobachtungen enden meist nach 52 Wochen.</li>
-        <li><strong>Wer hält, wer nicht.</strong> Prädiktoren für erfolgreichen Gewichtserhalt nach dem Absetzen sind kaum untersucht; die Streuung in den Studien ist groß.</li>
-      </ul>
-    </section>
+      <section class="k-sec" aria-labelledby="offen-h">
+        <h2 id="offen-h" class="k-h2" data-rv>Was die Studien noch nicht beantworten</h2>
+        <ul class="st-open">
+          <li data-rv><strong>Ausschleichen.</strong> Ob ein schrittweises Reduzieren der Dosis den Wiederanstieg abmildert, ist nicht durch randomisierte Studien belegt. Die Zulassungsstudien haben abrupt abgesetzt.</li>
+          <li data-rv style="--i:1"><strong>Protein und Kreatin speziell nach GLP-1.</strong> Die Evidenz für Protein und Krafttraining stammt aus Studien zu Kalorienreduktion allgemein, nicht aus GLP-1-Kohorten. Für Kreatin nach GLP-1-Therapie gibt es keine eigenen Daten.</li>
+          <li data-rv style="--i:2"><strong>Langzeitverlauf über 1 Jahr hinaus.</strong> Die Nachbeobachtungen enden meist nach 52 Wochen.</li>
+          <li data-rv style="--i:3"><strong>Wer hält, wer nicht.</strong> Prädiktoren für erfolgreichen Gewichtserhalt nach dem Absetzen sind kaum untersucht; die Streuung in den Studien ist groß.</li>
+        </ul>
+      </section>
 
-    <section class="mt-12 max-w-3xl rounded-xl2 border border-line bg-white p-6" aria-labelledby="nutzung-h">
-      <h2 id="nutzung-h" class="text-base font-semibold text-ink">Nutzung und Zitat</h2>
-      <p class="mt-2 text-sm text-ink-2">
-        Die Tabelle darf mit Quellenangabe frei verwendet werden (CC BY 4.0). Zitiervorschlag: Nach der Spritze, Studien-Tracker
-        „Gewicht nach dem Absetzen der Abnehmspritze“, Stand {updated}, {site.url}/wissen/studien/. Die Kernzahlen sind aus den
-        Originalarbeiten übernommen; bei Abweichungen gilt das Original.
-      </p>
-    </section>
+      <section class="k-sec st-use" aria-labelledby="nutzung-h" data-rv>
+        <h2 id="nutzung-h" class="k-h3">Nutzung und Zitat</h2>
+        <p>
+          Die Tabelle darf mit Quellenangabe frei verwendet werden (CC BY 4.0). Zitiervorschlag: Nach der Spritze, Studien-Tracker
+          „Gewicht nach dem Absetzen der Abnehmspritze“, Stand {updated}, {site.url}/wissen/studien/. Die Kernzahlen sind aus den
+          Originalarbeiten übernommen; bei Abweichungen gilt das Original.
+        </p>
+      </section>
 
-    <div class="mt-10 flex flex-wrap items-center gap-4">
-      <Cta position="studien" label="Zum 12-Wochen-Set" secondary />
-      <a href="/wissen/jojo-effekt-abnehmspritze/" class="text-sm font-semibold text-moss underline underline-offset-4">Was die Zahlen für dich bedeuten: Jojo-Effekt nach der Abnehmspritze</a>
-    </div>
+      <div class="st-cta">
+        <a href="/wissen/jojo-effekt-abnehmspritze/" class="k-a">Was die Zahlen für dich bedeuten: Jojo-Effekt nach der Abnehmspritze</a>
+      </div>
 
-    <div class="max-w-3xl">
+      <ProductTeaser position="studien" />
+
       <Footnotes ids={fnIds} />
     </div>
   </article>
 </Base>
 
 <style>
-  @media (max-width: 639px) {
-    .studien-tabelle thead { display: none; }
-    .studien-tabelle table, .studien-tabelle tbody, .studien-tabelle tr, .studien-tabelle td { display: block; width: 100%; }
-    .studien-tabelle tr { padding: 0.75rem 0.25rem; border-top: 1px solid var(--color-line); }
-    .studien-tabelle tr:first-child { border-top: 0; }
-    .studien-tabelle td { padding: 0.25rem 0.75rem; border: 0; }
-    .studien-tabelle td::before {
+  .st-press {
+    max-width: 48em;
+    margin-top: clamp(2rem, 5vh, 3rem);
+    color: var(--color-ink-2);
+    font-size: 0.975rem;
+  }
+  .st-press strong {
+    color: var(--color-ink);
+    font-weight: 560;
+  }
+  .st-head {
+    display: grid;
+    gap: 0.5rem 3rem;
+  }
+  .st-head .k-intro {
+    margin-top: 0;
+  }
+  @media (min-width: 900px) {
+    .st-head {
+      grid-template-columns: minmax(0, 0.5fr) minmax(0, 1fr);
+      align-items: end;
+    }
+  }
+  .st-name {
+    font-stretch: 112%;
+    font-weight: 540;
+  }
+  .st-fn {
+    color: var(--color-moss);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-moss) 40%, transparent);
+    text-underline-offset: 3px;
+  }
+  .st-kz {
+    color: var(--color-ink) !important;
+    font-weight: 520;
+  }
+  @media (min-width: 700px) {
+    .st-table th:first-child {
+      width: 16%;
+    }
+    .st-table td:nth-child(2) {
+      width: 13%;
+    }
+    .st-table td:nth-child(3) {
+      width: 17%;
+    }
+    .st-table td:nth-child(4) {
+      width: 22%;
+    }
+  }
+  /* Tablet: sechs Spalten passen nicht, deshalb wie auf dem Handy gestapelt (Regeln wie .k-stack in seiten.css) */
+  @media (min-width: 700px) and (max-width: 1023px) {
+    .st-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    .st-table,
+    .st-table tbody,
+    .st-table tr,
+    .st-table td,
+    .st-table tbody th {
+      display: block;
+      width: 100% !important;
+    }
+    .st-table tr {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--color-line);
+    }
+    .st-table tbody tr:first-child {
+      border-top: 1px solid var(--color-ink);
+    }
+    .st-table td,
+    .st-table tbody th {
+      padding: 0.2rem 0;
+      border: 0;
+    }
+    .st-table td[data-label]::before {
       content: attr(data-label);
       display: block;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      font-size: 0.8125rem;
       color: var(--color-ink-3);
-      margin-bottom: 0.1rem;
     }
-    .studien-tabelle td[data-label="Studie"]::before { display: none; }
+  }
+  .st-narrow {
+    max-width: 45rem;
+  }
+  .st-log {
+    list-style: none;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-ink);
+  }
+  .st-log li {
+    display: grid;
+    gap: 0.25rem 1.5rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--color-line);
+    font-size: 0.975rem;
+    color: var(--color-ink-2);
+  }
+  .st-log time {
+    font-weight: 540;
+    color: var(--color-ink);
+  }
+  @media (min-width: 640px) {
+    .st-log li {
+      grid-template-columns: 7rem minmax(0, 1fr);
+    }
+  }
+  .st-open {
+    list-style: none;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-ink);
+  }
+  .st-open li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-line);
+    color: var(--color-ink-2);
+    line-height: 1.6;
+  }
+  .st-open strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-stretch: 112%;
+    font-weight: 540;
+    color: var(--color-ink);
+  }
+  .st-use {
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-ink);
+    color: var(--color-ink-2);
+    font-size: 0.975rem;
+  }
+  .st-use p {
+    margin-top: 0.6rem;
+    overflow-wrap: anywhere;
+  }
+  .st-cta {
+    margin-top: 2.5rem;
   }
 </style>

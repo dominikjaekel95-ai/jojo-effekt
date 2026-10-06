@@ -1,0 +1,112 @@
+---
+/**
+ * Formular „Checkliste als PDF“ (ersetzt seit 06.10.2026 das Tally-Formular WOxpjv): E-Mail, Pflicht-Einwilligung,
+ * optional Newsletter, Honigtopf `website`, verstecktes `quelle=checkliste`. POST an /api/anmeldung/ → MailerLite
+ * (Gruppe „Checkliste“, MAILERLITE_GROUP_CHECKLISTE; mit Häkchen zusätzlich Newsletter), Double-Opt-in, Weiterleitung auf
+ * /checkliste/danke/ mit dem PDF. Einwilligungstext wie bisher in Tally (Zweck: Checkliste und Hinweis auf eine neue
+ * Fassung), Datenschutz-Abschnitt 4b. Kein Arztbezug, keine Wirkaussagen.
+ */
+import { site } from '../data/site';
+const cadence = site.newsletter.cadence;
+---
+<form method="post" action="/api/anmeldung/" class="clf plausible-event-name=Checkliste+Anfordern">
+  <div class="clf-row">
+    <label class="sr-only" for="clf-email">E-Mail-Adresse</label>
+    <input id="clf-email" type="email" name="email" placeholder="Deine E-Mail-Adresse" autocomplete="email" required />
+    <button class="clf-btn" type="submit">PDF anfordern</button>
+  </div>
+  <div class="hidden" aria-hidden="true"><label for="clf-website">Website</label><input id="clf-website" name="website" type="text" tabindex="-1" autocomplete="off" /></div>
+  <input type="hidden" name="quelle" value="checkliste" />
+  <div class="clf-checks">
+    <label class="clf-check">
+      <input type="checkbox" name="einwilligung" value="ja" required />
+      <span>Ja, ich möchte die Checkliste als PDF. Dafür speichert ihr meine E-Mail-Adresse und gebt mir einmal Bescheid, wenn es eine wesentlich überarbeitete Fassung gibt. Widerruf jederzeit. <a href="/datenschutz/#checkliste">Datenschutz</a></span>
+    </label>
+    <label class="clf-check">
+      <input type="checkbox" name="newsletter" value="ja" />
+      <span>Zusätzlich den Newsletter von Nach der Spritze, {cadence}. Freiwillig, abmelden geht in jeder Mail.</span>
+    </label>
+  </div>
+</form>
+
+<style>
+  .clf {
+    max-width: 36rem;
+  }
+  .clf-row {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .clf input[type="email"] {
+    flex: 1;
+    min-width: 0;
+    height: 3.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-line);
+    background: #fff;
+    color: var(--color-ink);
+    font: inherit;
+    font-size: 1rem;
+    padding: 0 1.375rem;
+  }
+  .clf input[type="email"]::placeholder {
+    color: var(--color-ink-3);
+  }
+  .clf-btn {
+    flex: none;
+    height: 3.25rem;
+    padding: 0 1.625rem;
+    border: 0;
+    border-radius: 999px;
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 560;
+    font-stretch: 108%;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.3s var(--ease);
+  }
+  .clf-btn:hover {
+    background: #33352f;
+  }
+  .clf-btn:active {
+    transform: scale(0.98);
+  }
+  .clf-checks {
+    display: grid;
+    gap: 0.6rem;
+    margin-top: 0.9rem;
+  }
+  .clf-check {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--color-ink-2);
+    cursor: pointer;
+  }
+  .clf-check input {
+    flex: none;
+    width: 1.05rem;
+    height: 1.05rem;
+    margin-top: 0.12rem;
+    cursor: pointer;
+  }
+  .clf-check a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  @media (max-width: 560px) {
+    .clf-row {
+      flex-direction: column;
+    }
+    .clf input[type="email"], .clf-btn {
+      flex: none;
+      width: 100%;
+    }
+  }
+</style>

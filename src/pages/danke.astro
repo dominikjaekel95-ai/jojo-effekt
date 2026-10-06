@@ -1,60 +1,195 @@
 ---
+/**
+ * Danke-Seite der Warteliste (Ziel der Weiterleitung aus /api/anmeldung/ mit quelle=warteliste). noindex, nicht in der
+ * Sitemap. ?fehler=eingabe|technik|konfiguration blendet den passenden Text ein (konfiguration wie technik). Preisfrage per Plausible, Teilen, Affiliate-Beispiele.
+ */
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
 import AffiliateLinks from '../components/AffiliateLinks.astro';
 import ShareButtons from '../components/ShareButtons.astro';
+const own = site.waitlist.ownGroup;
+const preise = ['49', '79', '99', '129'];
 ---
-<Base title="Danke – du stehst auf der Liste" description="Vorbestellung eingetragen. Kein Geld, keine Verpflichtung. Wir melden uns, sobald die erste Charge in Produktion geht." path="/danke/" noindex>
-  <section class="container-narrow py-20 text-center">
-    <p class="eyebrow">Danke</p>
-    <h1 class="h1 mt-3">Du stehst auf der Liste.</h1>
-    <p class="mx-auto mt-5 max-w-xl text-lg text-ink-2">
-      Ehrlich gesagt: Es gibt das Set noch nicht. Wir produzieren die erste Charge, sobald {site.preorderGoal} Menschen sagen,
-      dass sie es wollen. Du hast nichts bezahlt und bist zu nichts verpflichtet. Sobald es losgeht, bekommst du als Erste
-      eine E-Mail mit Preis und Bestellmöglichkeit – und entscheidest dann.
-    </p>
-    <div class="mx-auto mt-8 max-w-xl rounded-xl2 border border-line bg-white p-6 text-left text-sm text-ink-2">
-      <p class="font-semibold text-ink">Was jetzt passiert</p>
-      <ol class="mt-2 list-decimal space-y-1 pl-5">
-        <li>Wir melden uns per E-Mail, sobald die erste Charge steht – frühestens, wenn {site.preorderGoal} Vorbestellungen zusammen sind.</li>
-        <li>Den Newsletter ({site.newsletter.cadence}) bekommst du nur, wenn du ihn im Formular angekreuzt hast. {site.newsletter.provider ? 'Vor der ersten Ausgabe bestätigst du die Anmeldung per Link in einer Mail.' : 'Er startet, sobald der Versand eingerichtet ist; vorher kommt eine Bestätigungs-Mail mit Link.'} Abmelden geht in jeder Mail. Keine Weitergabe.</li>
-        <li>Du kannst dich jederzeit per E-Mail austragen lassen.</li>
-      </ol>
+<Base title="Danke: Bitte bestätige deine E-Mail-Adresse" description="Du bist fast auf der Warteliste für das 12-Wochen-Programm. Bestätige deine Adresse über den Link in der Mail." path="/danke/" noindex footerArzt={false}>
+  <section class="container-narrow pt-16 pb-8 sm:pt-24">
+    <div id="dk-ok">
+      <p class="eyebrow">Fast geschafft</p>
+      <h1 class="h1 mt-3">Bitte bestätige deine E-Mail-Adresse.</h1>
+      <p class="dk-lede">Wir haben dir über unseren Versanddienst MailerLite eine Mail mit einem Bestätigungslink geschickt. Erst nach dem Klick stehst du auf der Warteliste für das 12-Wochen-Programm. Nichts angekommen? Ein Blick in den Spam-Ordner hilft meistens. Warst du schon für den Newsletter angemeldet, kommt keine Bestätigungs-Mail; du stehst trotzdem auf der Liste. Nach einer halben Stunde nichts da: <a href={`mailto:${site.owner.email}?subject=${encodeURIComponent('Warteliste')}`}>Schreib uns</a>.</p>
     </div>
-    <div class="mx-auto mt-8 max-w-xl rounded-xl2 border border-line bg-white p-6 text-left" data-preisfrage>
-      <p class="font-semibold text-ink">Eine Frage, ein Klick: Welcher Preis wäre für dich für das 12-Wochen-Set in Ordnung?</p>
-      <p class="mt-1 text-sm text-ink-3">Freiwillig und anonym; wir zählen nur die Klicks. Das hilft uns, den Preis zu setzen.</p>
-      <div class="mt-3 flex flex-wrap gap-2" role="group" aria-label="Preis, der für dich in Ordnung wäre">
-        {['49', '79', '99', '129'].map((p) => (<button type="button" data-preis={p} class={`btn-secondary !px-3 !py-2 text-sm plausible-event-name=Preisfrage plausible-event-preis=${p}`}>{p} €</button>))}
-        <button type="button" data-preis="mehr" class="btn-secondary !px-3 !py-2 text-sm plausible-event-name=Preisfrage plausible-event-preis=mehr">mehr als 129 €</button>
+    <div id="dk-eingabe" class="hidden">
+      <p class="eyebrow">Das hat nicht geklappt</p>
+      <h1 class="h1 mt-3">Bitte E-Mail-Adresse und Kästchen prüfen.</h1>
+      <p class="dk-lede">Für die Warteliste brauchen wir eine gültige E-Mail-Adresse und dein Häkchen bei der Einwilligung. <a href="/#warteliste">Noch einmal versuchen</a></p>
+    </div>
+    <div id="dk-technik" class="hidden">
+      <p class="eyebrow">Das hat gerade nicht geklappt</p>
+      <h1 class="h1 mt-3">Wir tragen dich von Hand ein.</h1>
+      <p class="dk-lede">Die Anmeldung ist technisch nicht durchgegangen. Schreib uns kurz an <a href={`mailto:${site.owner.email}?subject=${encodeURIComponent('Warteliste')}`}>{site.owner.email}</a>, dann erledigen wir das persönlich.</p>
+    </div>
+
+    <div class="dk-block">
+      <h2 class="dk-h">Was jetzt passiert</h2>
+      <ol class="dk-steps">
+        <li><span class="num">1</span><span><strong>Bestätigen.</strong> Ein Klick auf den Link in der Mail, dann stehst du auf der Liste.</span></li>
+        <li><span class="num">2</span><span><strong>Bescheid bekommen.</strong> Bevor das Programm startet, schreiben wir dir Termin, Preis und Ablauf. Das Basis-Programm ist geplant unter {site.price.programUnder} €.</span></li>
+        <li><span class="num">3</span><span><strong>Entscheiden.</strong> Erst dann meldest du dich an, oder du lässt es. Bis dahin zahlst du nichts.</span></li>
+      </ol>
+      <p class="dk-note">{own
+        ? `Den Newsletter (${site.newsletter.cadence}) bekommst du nur, wenn du ihn im Formular zusätzlich angekreuzt hast.`
+        : `Mit der Bestätigung bekommst du auch den Newsletter (${site.newsletter.cadence}).`} Abmelden geht in jeder Mail. Keine Weitergabe an Dritte.</p>
+    </div>
+
+    <div class="dk-block" data-preisfrage>
+      <h2 class="dk-h">Eine Frage, ein Klick: Welcher Preis wäre für dich für das 12-Wochen-Programm in Ordnung?</h2>
+      <p class="dk-note">Freiwillig und anonym; wir zählen nur die Klicks. Das hilft uns, den Preis zu setzen.</p>
+      <div class="dk-preise" role="group" aria-label="Preis, der für dich in Ordnung wäre">
+        {preise.map((p) => (<button type="button" data-preis={p} class={`dk-preis num plausible-event-name=Preisfrage plausible-event-preis=${p}`}>{p} €</button>))}
+        <button type="button" data-preis="mehr" class="dk-preis plausible-event-name=Preisfrage plausible-event-preis=mehr">mehr als 129 €</button>
       </div>
-      <p class="mt-3 hidden text-sm font-medium text-moss" data-preisfrage-danke aria-live="polite">Danke, notiert.</p>
+      <p class="dk-danke hidden" data-preisfrage-danke aria-live="polite">Danke, notiert.</p>
     </div>
     <script is:inline>
       (() => {
+        const p = new URLSearchParams(location.search).get('fehler');
+        const f = p === 'konfiguration' ? 'technik' : p;
+        if (f === 'eingabe' || f === 'technik') {
+          document.getElementById('dk-ok').classList.add('hidden');
+          document.getElementById('dk-' + f).classList.remove('hidden');
+        }
         const box = document.querySelector('[data-preisfrage]');
         if (!box) return;
         const buttons = box.querySelectorAll('button[data-preis]');
         buttons.forEach((b) => b.addEventListener('click', () => {
-          buttons.forEach((x) => { x.disabled = true; if (x !== b) x.classList.add('opacity-50'); });
+          buttons.forEach((x) => { x.disabled = true; if (x !== b) x.classList.add('dk-aus'); else x.classList.add('dk-an'); });
           const danke = box.querySelector('[data-preisfrage-danke]');
           if (danke) danke.classList.remove('hidden');
         }));
       })();
     </script>
-    <div class="mx-auto mt-8 max-w-xl rounded-xl2 border border-moss/30 bg-moss-light/40 p-6 text-left">
-      <p class="eyebrow">Kennst du jemanden, der gerade absetzt?</p>
-      <p class="mt-2 text-sm text-ink-2">Die erste Charge kommt, sobald {site.preorderGoal} Menschen sie wollen. Jede Empfehlung bringt sie näher. Der Text ist vorgeschrieben, du kannst ihn ändern.</p>
+
+    <div class="dk-block">
+      <h2 class="dk-h">Kennst du jemanden, der gerade absetzt?</h2>
+      <p class="dk-note">Wir starten, sobald genug Menschen auf der Warteliste stehen. Jede Empfehlung hilft. Der Text ist vorgeschrieben, du kannst ihn ändern.</p>
       <ShareButtons position="danke" class="mt-4" />
     </div>
-    <p class="mt-8 text-ink-2">Bis dahin: <a href="/wissen/" class="font-semibold text-moss underline underline-offset-4">Was nach der Abnehmspritze passiert – mit Quellen</a> · <a href="/checkliste/" class="font-semibold text-moss underline underline-offset-4">Checkliste für die ersten 8 Wochen</a></p>
+
+    <div class="dk-block">
+      <h2 class="dk-h">Bis es losgeht</h2>
+      <ul class="dk-links">
+        <li><a href="/ernaehrungsplan/">Kostenloser Ernährungsplan für 14 Tage</a></li>
+        <li><a href="/checkliste/">Checkliste für die ersten 8 Wochen nach der letzten Dosis</a></li>
+        <li><a href="/werkzeuge/proteinrechner/">Proteinrechner: dein Tagesziel in Gramm</a></li>
+        <li><a href="/wissen/">Was nach der Abnehmspritze passiert, mit Quellen</a></li>
+      </ul>
+      <p class="dk-doc">{site.doctorSentence}</p>
+    </div>
+
     <AffiliateLinks
-      class="mx-auto mt-8 max-w-xl"
+      class="mt-12"
       products={['wheyNeutral', 'creatineNe', 'psyllium']}
-      title="Bis das Set da ist: Die Bausteine gibt es einzeln"
-      intro="Das Set gibt es noch nicht. Protein, Kreatin und Ballaststoffe gibt es aber heute schon – drei Beispiele, keine Empfehlung einer Marke."
+      title="Protein, Kreatin und Ballaststoffe gibt es heute schon"
+      intro="Das Programm geht auch ohne. Wer Pulver praktischer findet: drei Beispiele, keine Empfehlung einer Marke."
       position="danke"
     />
-    <p class="mt-6 text-sm font-medium text-ink">{site.doctorSentence}</p>
   </section>
 </Base>
+
+<style>
+  .dk-lede {
+    margin-top: 1.25rem;
+    font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+    line-height: 1.55;
+    color: var(--color-ink-2);
+    max-width: 36em;
+  }
+  .dk-lede a, .dk-links a {
+    color: var(--color-moss);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .dk-block {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-line);
+  }
+  .dk-h {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-stretch: 112%;
+    font-weight: 520;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+  }
+  .dk-steps {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+    color: var(--color-ink-2);
+  }
+  .dk-steps li {
+    display: grid;
+    grid-template-columns: 1.75rem 1fr;
+    gap: 0.5rem;
+  }
+  .dk-steps li > span:first-child {
+    color: var(--color-ink-3);
+  }
+  .dk-steps strong {
+    color: var(--color-ink);
+    font-weight: 560;
+  }
+  .dk-note {
+    margin-top: 0.75rem;
+    font-size: 0.9375rem;
+    color: var(--color-ink-2);
+  }
+  .dk-preise {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .dk-preis {
+    min-height: 2.75rem;
+    padding: 0 1.125rem;
+    border-radius: 999px;
+    border: 1px solid #b4b6af;
+    background: transparent;
+    color: var(--color-ink);
+    font: inherit;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s, opacity 0.2s;
+  }
+  .dk-preis:hover:not(:disabled) {
+    border-color: var(--color-ink);
+  }
+  .dk-preis.dk-an {
+    background: var(--color-ink);
+    border-color: var(--color-ink);
+    color: var(--color-paper);
+  }
+  .dk-preis.dk-aus {
+    opacity: 0.45;
+  }
+  .dk-danke {
+    margin-top: 0.75rem;
+    font-size: 0.9375rem;
+    color: var(--color-moss);
+  }
+  .dk-links {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .dk-doc {
+    margin-top: 1.5rem;
+    font-size: 0.9375rem;
+    color: var(--color-ink);
+  }
+</style>

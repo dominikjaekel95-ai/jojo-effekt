@@ -3,9 +3,35 @@
 interface Props { position: string; class?: string }
 const { position, class: cls = '' } = Astro.props;
 ---
-<aside class={`rounded-xl2 border border-amber/50 bg-amber-light/40 p-5 ${cls}`} aria-label="Checkliste">
-  <p class="eyebrow text-amber-dark">Checkliste</p>
-  <p class="mt-2 text-lg font-bold leading-snug text-ink">Die ersten 8 Wochen nach der letzten Dosis</p>
-  <p class="mt-1 text-sm text-ink-2">Woche für Woche, was in Studien den Unterschied macht: Messwerte, Protein, Training, Schlaf. Als Seite und als PDF.</p>
-  <p class="mt-3"><a href="/checkliste/" class={`inline-block rounded-lg bg-ink px-4 py-2 text-sm font-semibold text-white no-underline hover:bg-moss plausible-event-name=Checkliste+Klick plausible-event-position=${position}`}>Zur Checkliste</a></p>
+<aside class={`cb ${cls}`} aria-label="Checkliste">
+  <p class="cb-k">Checkliste, kostenlos</p>
+  <p class="cb-t">Die ersten 8 Wochen nach der letzten Dosis</p>
+  <p class="cb-d">Woche für Woche, was in Studien den Unterschied macht: Messwerte, Protein, Training, Schlaf. Als Seite und als PDF.</p>
+  <p class="cb-a"><a href="/checkliste/" class={`btn-secondary !min-h-10 !px-4 !py-2 text-sm plausible-event-name=Checkliste+Klick plausible-event-position=${position}`}>Zur Checkliste</a></p>
 </aside>
+
+<style>
+  /* Design „Kalk“, ruhige Fassung: ohne Linie, Schrift auf der Skala der Wissensseiten (--fs-*) */
+  .cb-k {
+    font-size: var(--fs-1);
+    color: var(--color-ink-3);
+  }
+  .cb-t {
+    margin-top: 0.5rem;
+    font-size: var(--fs-4);
+    line-height: 1.25;
+    font-weight: 530;
+    font-stretch: 112%;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+  }
+  .cb-d {
+    margin-top: 0.5rem;
+    font-size: var(--fs-2);
+    line-height: 1.55;
+    color: var(--color-ink-2);
+  }
+  .cb-a {
+    margin-top: 1rem;
+  }
+</style>

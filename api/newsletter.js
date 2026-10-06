@@ -1,9 +1,11 @@
 /**
  * Tally-Webhook → MailerLite (Vercel-Funktion, Node-Laufzeit, Web-API-Signatur).
  *
- * Ablauf: Tally schickt nach jedem Absenden eines Formulars (Vorbestellung b5bO9o, Erfahrungen ODOJWR,
- * Checkliste WOxpjv) den Datensatz an POST https://nachderspritze.de/api/newsletter/. Die Funktion
- *  1. prüft die Signatur (Header `tally-signature`, HMAC-SHA256 über den Rohtext, Base64) gegen TALLY_SIGNING_SECRET,
+ * Ablauf: Tally schickt nach jedem Absenden eines Formulars den Datensatz an POST https://nachderspritze.de/api/newsletter/.
+ * Eingebettet ist seit 06.10.2026 nur noch das Erfahrungsformular ODOJWR; Vorbestellung b5bO9o und Checkliste WOxpjv
+ * bleiben zugeordnet, falls Tally noch Einträge nachliefert. Die Funktion
+ *  1. prüft die Signatur (Header `tally-signature`, HMAC-SHA256 über den Rohtext, Base64) gegen TALLY_SIGNING_SECRET;
+ *     ohne Secret lehnt sie jeden POST mit 401 ab (fail closed),
  *  2. nimmt nur Einträge, bei denen das Kästchen „Newsletter“ gesetzt ist; alles andere wird mit 200 quittiert und ignoriert,
  *  3. legt die Adresse bei MailerLite mit Status `unconfirmed` in der Gruppe „Newsletter“ an, aus dem Checklisten-Formular
  *     zusätzlich in der Gruppe „Checkliste“. Double-Opt-in ist im MailerLite-Konto aktiv; die Bestätigungs-Mail verschickt
@@ -13,9 +15,10 @@
  * Umgebungsvariablen (Vercel → Project → Settings → Environment Variables, nie ins Repo; Werte in docs/NEWSLETTER-SETUP.md):
  *   MAILERLITE_API_KEY            Pflicht. MailerLite → Integrations → API.
  *   MAILERLITE_GROUP_NEWSLETTER   Pflicht. ID der Gruppe „Newsletter“ (ersatzweise MAILERLITE_GROUP_ID).
- *   MAILERLITE_GROUP_CHECKLISTE   Optional. ID der Gruppe „Checkliste“; nur Einträge aus WOxpjv kommen zusätzlich hinein.
- *   TALLY_SIGNING_SECRET          Dringend empfohlen. Derselbe Wert in allen drei Tally-Webhooks („Signing secret“). Ohne ihn
- *                                 nimmt die Funktion jeden POST an.
+ *   MAILERLITE_GROUP_CHECKLISTE   Pflicht (für api/anmeldung.js, quelle=checkliste). ID der Gruppe „Checkliste“; hier kommen
+ *                                 nur nachgelieferte Einträge aus WOxpjv zusätzlich hinein.
+ *   TALLY_SIGNING_SECRET          Pflicht. Derselbe Wert im Tally-Webhook („Signing secret“). Ohne ihn lehnt die Funktion
+ *                                 jeden POST mit 401 ab.
  *
  * Es werden keine E-Mail-Adressen geloggt, nur Formular-ID und Ergebnis. Spezifikation: docs/NEWSLETTER.md.
  */
@@ -26,9 +29,9 @@ const MAILERLITE = 'https://connect.mailerlite.com/api';
 /** Tally-Formular-ID → Wert für das MailerLite-Feld `quelle` */
 const FORMS = { b5bO9o: 'vorbestellung', ODOJWR: 'erfahrungen', WOxpjv: 'checkliste' };
 
-/** Signatur prüfen. Ohne Secret (leer) wird nicht geprüft. */
+/** Signatur prüfen. Ohne Secret (leer) ist nichts gültig (fail closed). */
 export function verifySignature(rawBody, header, secret) {
-  if (!secret) return true;
+  if (!secret) return false;
   if (!header) return false;
   const expected = Buffer.from(createHmac('sha256', secret).update(rawBody).digest('base64'));
   const given = Buffer.from(String(header));
@@ -82,8 +85,24 @@ export function groupsFor(formId) {
   return groups;
 }
 
-/** Adresse anlegen oder den Gruppen hinzufügen. Gibt ein Ergebnisobjekt für das Log zurück. */
-export async function subscribe({ email, source }, groups) {
+/**
+ * Feldsätze für den 422-Rückfall (ein Feld fehlt im MailerLite-Konto), vom vollständigen bis zum leeren: erst ohne `quelle`
+ * (Zusatzfelder wie `starterpaket` bleiben), dann ohne Zusatzfelder (mit `quelle`), zuletzt ohne Felder, damit die
+ * Anmeldung nicht verloren geht. Doppelte Sätze fallen weg.
+ */
+export function feldsaetze(source, extra = {}) {
+  const q = source ? { quelle: source } : {};
+  const saetze = [{ ...q, ...extra }, { ...extra }, { ...q }, {}];
+  return saetze.filter((s, i) => saetze.findIndex((x) => JSON.stringify(x) === JSON.stringify(s)) === i);
+}
+
+/**
+ * Adresse anlegen oder den Gruppen hinzufügen. Gibt ein Ergebnisobjekt für das Log zurück.
+ * `fields` (optional) sind zusätzliche MailerLite-Felder, z. B. { starterpaket: 'ja' } aus dem Wartelisten-Formular
+ * (api/anmeldung.js); bei bestehenden Adressen werden sie ergänzt, ein Fehler dabei hält die Anmeldung nicht auf.
+ */
+export async function subscribe({ email, source, fields = {} }, groups) {
+  const extra = fields && typeof fields === 'object' ? fields : {};
   const lookup = await mailerlite(`/subscribers/${encodeURIComponent(email)}`);
   if (lookup.status === 200) {
     const { data } = await lookup.json();
@@ -94,6 +113,9 @@ export async function subscribe({ email, source }, groups) {
         if (!add.ok) return { outcome: 'fehler', status: add.status };
         status = add.status;
       }
+      if (Object.keys(extra).length) {
+        await mailerlite(`/subscribers/${data.id}`, { method: 'PUT', body: JSON.stringify({ fields: extra }) }).catch(() => null);
+      }
       return { outcome: 'gruppe', status };
     }
     // unsubscribed, bounced, junk: nicht automatisch reaktivieren
@@ -101,18 +123,21 @@ export async function subscribe({ email, source }, groups) {
   }
   if (lookup.status !== 404) return { outcome: 'fehler', status: lookup.status };
 
-  const body = { email, status: 'unconfirmed', groups, fields: { quelle: source } };
-  let create = await mailerlite('/subscribers', { method: 'POST', body: JSON.stringify(body) });
-  if (create.status === 422) {
-    // Feld `quelle` existiert im Konto nicht: ohne Feld anlegen, damit die Anmeldung nicht verloren geht
-    delete body.fields;
+  let create;
+  for (const fields of feldsaetze(source, extra)) {
+    const body = { email, status: 'unconfirmed', groups, ...(Object.keys(fields).length ? { fields } : {}) };
     create = await mailerlite('/subscribers', { method: 'POST', body: JSON.stringify(body) });
+    if (create.status !== 422) break;
   }
   return { outcome: create.ok ? 'angelegt' : 'fehler', status: create.status };
 }
 
 export async function POST(request) {
   const raw = await request.text();
+  if (!process.env.TALLY_SIGNING_SECRET) {
+    console.error('newsletter: TALLY_SIGNING_SECRET fehlt, POST abgelehnt');
+    return Response.json({ ok: false, error: 'signature' }, { status: 401 });
+  }
   if (!verifySignature(raw, request.headers.get('tally-signature'), process.env.TALLY_SIGNING_SECRET)) {
     return Response.json({ ok: false, error: 'signature' }, { status: 401 });
   }

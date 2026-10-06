@@ -3,7 +3,9 @@
  * Fügt unter jeder eingebundenen Studien-Grafik (img unter /grafiken/) einen Knopf ein, der den HTML-Einbettungscode mit
  * Quellenlink in die Zwischenablage kopiert. Die CC-BY-Lizenz verlangt die Quellenangabe ohnehin; der Knopf macht sie bequem,
  * und der Link zurück auf die Seite ist die Gegenleistung. Reines Inline-Skript ohne Abhängigkeiten; ohne Clipboard-API
- * bleibt die Seite unverändert.
+ * bleibt die Seite unverändert. Der Knopf steht im aufgeklappten Datenfeld „Daten als Tabelle“ (Zeile .gd-aktionen,
+ * neben „Download und Quellen“), damit unter der Grafik nur Bildunterschrift und diese eine Zeile stehen. Grafiken ohne
+ * Datenfeld bekommen wie bisher eine leise Zeile unter der Bildunterschrift.
  */
 import { site } from '../data/site';
 ---
@@ -20,12 +22,10 @@ import { site } from '../data/site';
       var id = src.split('/').pop().replace(/\.(png|svg)$/, '');
       var alt = (img.getAttribute('alt') || '').replace(/"/g, '&quot;');
       var code = '<figure>\n  <a href="' + pageUrl + '"><img src="' + siteUrl + src + '" alt="' + alt + '" width="1200" height="675" loading="lazy"></a>\n  <figcaption>Grafik: <a href="' + pageUrl + '">nachderspritze.de</a>, CC BY 4.0; Studienquellen auf der verlinkten Seite</figcaption>\n</figure>';
-      var zeile = document.createElement('p');
-      zeile.className = 'mt-1 text-xs text-ink-3';
       var knopf = document.createElement('button');
       knopf.type = 'button';
       knopf.setAttribute('data-einbinden', '');
-      knopf.className = 'font-semibold text-moss underline underline-offset-4 plausible-event-name=Grafik+einbinden';
+      knopf.className = 'plausible-event-name=Grafik+einbinden';
       knopf.textContent = 'Grafik einbinden: HTML mit Quellenlink kopieren';
       knopf.addEventListener('click', function () {
         navigator.clipboard.writeText(code).then(
@@ -33,14 +33,26 @@ import { site } from '../data/site';
           function () { knopf.textContent = 'Kopieren nicht möglich; der Code steht unter /grafiken/.'; }
         );
       });
-      var link = document.createElement('a');
-      link.href = '/grafiken/#' + id;
-      link.className = 'underline underline-offset-4 hover:text-moss';
-      link.textContent = 'Download und Quellen';
-      zeile.appendChild(knopf);
-      zeile.appendChild(document.createTextNode(' · '));
-      zeile.appendChild(link);
-      figure.appendChild(zeile);
+      var daten = figure.querySelector('details.grafik-daten');
+      var zeile = daten ? daten.querySelector('.gd-aktionen') : null;
+      if (!zeile) {
+        zeile = document.createElement('p');
+        var link = document.createElement('a');
+        link.href = '/grafiken/#' + id;
+        link.textContent = 'Download und Quellen';
+        zeile.appendChild(link);
+        if (daten) {
+          zeile.className = 'gd-aktionen';
+          daten.appendChild(zeile);
+        } else {
+          zeile.className = 'mt-2 text-sm text-ink-3';
+          knopf.className += ' cursor-pointer text-ink underline decoration-line underline-offset-4 hover:decoration-ink';
+          link.className = 'underline underline-offset-4 hover:text-ink';
+          figure.appendChild(zeile);
+        }
+      }
+      zeile.insertBefore(document.createTextNode(' · '), zeile.firstChild);
+      zeile.insertBefore(knopf, zeile.firstChild);
     });
   })();
 </script>

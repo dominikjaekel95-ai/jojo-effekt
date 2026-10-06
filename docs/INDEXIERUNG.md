@@ -106,5 +106,17 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/glossar/sarkopenie/ | neu in Sitemap | 2026-10-01 | offen |
 | https://nachderspritze.de/glossar/taillenumfang/ | neu in Sitemap | 2026-10-01 | offen |
 | https://nachderspritze.de/glossar/telogenes-effluvium/ | neu in Sitemap | 2026-10-01 | offen |
+| https://nachderspritze.de/ | Redesign „Kalk“: Programm und Warteliste statt Set, neue Meta-Description | 2026-10-06 | offen |
+| https://nachderspritze.de/ernaehrungsplan/ | Redesign „Kalk“: 14 Tage, 56 Pläne, Vorlieben; Titel und Description neu | 2026-10-06 | offen |
+| https://nachderspritze.de/wissen/kreatin-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
+| https://nachderspritze.de/wissen/saxenda-absetzen/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
+| https://nachderspritze.de/wissen/jojo-effekt-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
+| https://nachderspritze.de/wissen/abnehmspritze-absetzen/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
+| https://nachderspritze.de/wissen/heisshunger-nach-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
+| https://nachderspritze.de/wissen/ozempic-absetzen/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
+| https://nachderspritze.de/wissen/supplements-nach-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
+| https://nachderspritze.de/grafiken/ | Redesign „Kalk“: alle Grafiken neu gezeichnet, 18 neue | 2026-10-06 | offen |
+| https://nachderspritze.de/marktradar/ | Redesign „Kalk“: neue Struktur | 2026-10-06 | offen |
+| https://nachderspritze.de/wissen/ | Redesign „Kalk“: neue Struktur | 2026-10-06 | offen |
 
 Die übrigen 18 Glossar-Einträge stehen in der Sitemap und brauchen keine einzelne Anmeldung; wer Tageskontingent übrig hat, nimmt zuerst `set-point-theorie`, `adaptive-thermogenese`, `sarkopene-adipositas`, `auswaschphase` und `halbwertszeit`.

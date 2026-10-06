@@ -6,7 +6,7 @@ category: "Präparate"
 image: /grafiken/weiter-oder-placebo.png
 order: 7
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["wegovy absetzen", "wegovy absetzen gewicht", "wegovy absetzen jojo", "wegovy absetzen was passiert", "wegovy ausschleichen", "wegovy halbwertszeit", "wegovy absetzen erfahrungen"]
 sources: ["fachinfoWegovy", "wilding2021step1", "wilding2022ext", "rubino2021", "wu2025", "jensen2024", "leidy2015", "who2020", "tabletteApotheken2026", "wharton2025oasis4"]
 related: ["abnehmspritze-absetzen", "abnehmpille-absetzen", "gewicht-halten-nach-abnehmspritze"]
@@ -45,6 +45,8 @@ Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche.<sup
 - **Woche 2 bis 5:** Der Appetit kommt zurück, die Magenentleerung normalisiert sich, das Sättigungsgefühl kommt später.
 - **Ab Woche 5 bis 7:** Der Wirkstoff ist praktisch weg. Ab jetzt zählt nur noch, was du isst und wie du dich bewegst.
 
+<div data-interaktiv="wirkstoffspiegel" data-wirkstoffe="semaglutid" data-tag="14"></div>
+
 Diese lange Halbwertszeit ist auch der Grund für eine Vorgabe der Fachinformation: Bei geplanter Schwangerschaft soll Wegovy mindestens zwei Monate vorher abgesetzt werden.<sup><a href="#fn-fachinfoWegovy">1</a></sup>
 
 ## Was mit dem Gewicht passiert: die Zahlen zu Wegovy
@@ -58,10 +60,7 @@ Für Semaglutid 2,4 mg gibt es zwei Studien, die das Absetzen direkt untersucht 
 
 Eine Meta-Analyse über verschiedene Adipositas-Medikamente zeigt, wann es losgeht: Die Zunahme wird etwa ab Woche 8 nach dem Absetzen messbar und setzt sich bis etwa Woche 20 fort.<sup><a href="#fn-wu2025">5</a></sup> Für Wegovy passt das zur Halbwertszeit: Woche 5 bis 7 ist der Wirkstoff weg, ab Woche 8 zeigt es die Waage.
 
-<figure class="my-8">
-  <img src="/grafiken/weiter-oder-placebo.png" alt="Balkendiagramm: In STEP 4 nahmen Teilnehmende unter fortgeführtem Semaglutid in 48 Wochen weitere 7,9 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 6,9 Prozent zu. In SURMOUNT-4 nahmen Teilnehmende unter fortgeführtem Tirzepatid in 52 Wochen weitere 5,5 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 14 Prozent zu." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
-  <figcaption class="mt-2 text-sm text-ink-3">STEP 4 im Vergleich mit SURMOUNT-4: Gewicht nach dem Wechsel auf Placebo gegenüber Fortführung.<sup><a href="#fn-rubino2021">4</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
+<div data-interaktiv="absetzkurve" data-acht="ja"></div>
 
 ## Ausschleichen: möglich, aber unbelegt
 
@@ -74,7 +73,7 @@ Der beste Zeitpunkt, die Zeit danach vorzubereiten, ist, solange der Appetit noc
 1. **Krafttraining anfangen.** In der dänischen S-LiTE-Studie hielten Teilnehmende, die während der Medikamententherapie trainiert hatten, ihr Gewicht ein Jahr nach dem Absetzen; nach dem Medikament allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup>
 2. **Protein auf Zielmenge.** 1,2 bis 1,6 g pro kg Körpergewicht und Tag,<sup><a href="#fn-leidy2015">7</a></sup> verteilt auf drei bis vier Mahlzeiten. Unter Wegovy essen viele weit weniger.
 3. **Wiegen mit Regel.** Einmal pro Woche, und vorher festgelegt, ab welcher Zunahme du reagierst.
-4. **Arzttermin für Woche 8 bis 12** nach der letzten Dosis. Dann beginnt in Studien die Zunahme, und dann lohnt sich der Blick auf Gewicht und Blutwerte.
+4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen. In Studien beginnt die Zunahme etwa ab Woche 8 nach der letzten Dosis.
 
 Der ausführliche Plan steht unter [Gewicht halten nach der Abnehmspritze: der 12-Wochen-Plan](/wissen/gewicht-halten-nach-abnehmspritze/).
 
@@ -86,4 +85,4 @@ Der ausführliche Plan steht unter [Gewicht halten nach der Abnehmspritze: der 1
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Wegovy ist eine Marke von Novo Nordisk. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Wegovy ist eine Marke von Novo Nordisk. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Wochen nach der letzten Dosis, kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

@@ -1,6 +1,6 @@
 ---
-/** Fußnoten-Verweis: <Fn n={1} id="rodriguez2025" /> */
+/** Fußnoten-Verweis als hochgestellte Zahl: <Fn n={1} id="rodriguez2025" />. <sup> ohne Attribute (check:text erkennt es so). */
 interface Props { n: number; id: string }
 const { n, id } = Astro.props;
 ---
-<a href={`#fn-${id}`} class="fn" aria-label={`Quelle ${n}`}>[{n}]</a>
+<sup><a href={`#fn-${id}`} class="fn" aria-label={`Quelle ${n}`}>{n}</a></sup>

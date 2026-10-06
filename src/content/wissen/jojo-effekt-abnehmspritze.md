@@ -6,7 +6,7 @@ category: "Gewicht halten"
 image: /grafiken/warum-das-gewicht-zurueckkommt.png
 order: 1
 pubDate: 2026-09-30
-updatedDate: 2026-10-04
+updatedDate: 2026-10-06
 keywords: ["jojo effekt abnehmspritze", "abnehmspritze jojo effekt", "wegovy jojo effekt", "ozempic jojo effekt", "mounjaro jojo effekt", "abnehmspritze zunehmen danach", "jojo effekt abnehmspritze vermeiden"]
 sources: ["wilding2022ext", "rubino2021", "aronne2024", "wu2025", "eclinmed2026", "sumithran2011", "fothergill2016", "wilding2021dxa", "rodriguez2025", "jensen2024", "leidy2015", "sardeli2018", "who2020", "dagLeitlinie"]
 related: ["abnehmspritze-absetzen", "muskelabbau-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -26,6 +26,8 @@ faq:
 ---
 
 Wer die Abnehmspritze absetzt, hört oft denselben Satz: „Dann kommt eh alles zurück.“ Das stimmt so pauschal nicht. Aber es stimmt öfter, als vielen lieb ist. Hier steht, was die Studien zeigen, warum der Körper nach dem Absetzen gegen dich arbeitet, und welche drei Dinge den Unterschied machen. Was in den Wochen nach der letzten Dosis konkret passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+
+<div data-interaktiv="absetzkurve" data-acht="ja" data-komposition="ja"></div>
 
 > **Kurz gesagt:** Ein Jahr nach dem Absetzen von Semaglutid waren im Mittel zwei Drittel des verlorenen Gewichts zurück.<sup><a href="#fn-wilding2022ext">1</a></sup> Die Zunahme beginnt etwa ab Woche 8.<sup><a href="#fn-wu2025">4</a></sup> Wer in der Therapiezeit trainiert hat, hielt sein Gewicht in einer Studie auch ein Jahr ohne Medikament.<sup><a href="#fn-jensen2024">10</a></sup>
 
@@ -50,20 +52,15 @@ Alle Studien mit Kernzahl und Link stehen im [Studien-Tracker](/wissen/studien/)
 Wichtig für die Einordnung: Auch nach dem Regain lagen die Teilnehmenden im Mittel noch unter ihrem Startgewicht. Und hinter jedem Mittelwert stecken Menschen, die fast alles wieder zugenommen haben, und Menschen, die fast nichts zugenommen haben.
 
 <figure class="my-8">
-  <img src="/grafiken/absetzkurve-step-1-saeulen.png" alt="Zwei Säulen: Nach 68 Wochen Semaglutid sind im Mittel 17,3 Prozent des Gewichts verloren. Ein Jahr nach dem Absetzen sind 11,6 Prozentpunkte wieder zurück, 5,6 Prozent bleiben; das entspricht zwei Dritteln des Verlusts, die zurückkommen." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
-  <figcaption class="mt-2 text-sm text-ink-3">Was nach dem Absetzen bleibt: ein Drittel. Semaglutid-Gruppe der STEP-1-Verlängerung, Mittelwerte.<sup><a href="#fn-wilding2022ext">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
-</figure>
-
-<figure class="my-8">
-  <img src="/grafiken/weiter-oder-placebo.png" alt="Balkendiagramm: In STEP 4 nahmen Teilnehmende unter fortgeführtem Semaglutid in 48 Wochen weitere 7,9 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 6,9 Prozent zu. In SURMOUNT-4 nahmen Teilnehmende unter fortgeführtem Tirzepatid in 52 Wochen weitere 5,5 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 14 Prozent zu." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/weiter-oder-placebo.png" alt="Balkendiagramm: In STEP 4 nahmen Teilnehmende unter fortgeführtem Semaglutid in 48 Wochen weitere 7,9 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 6,9 Prozent zu. In SURMOUNT-4 nahmen Teilnehmende unter fortgeführtem Tirzepatid in 52 Wochen weitere 5,5 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 14 Prozent zu." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Weiter behandeln oder absetzen: Gewicht nach dem Wechsel auf Placebo in STEP 4 und SURMOUNT-4. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
 ## Warum der Körper nach dem Absetzen gegen dich arbeitet
 
 <figure class="my-8">
-  <img src="/grafiken/warum-das-gewicht-zurueckkommt.png" alt="Vier Karten mit den Mechanismen des Jojo-Effekts nach der Abnehmspritze: Die Appetitbremse fällt weg, sobald der Wirkstoff abgebaut ist (Semaglutid nach etwa fünf bis sieben Wochen, Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. Dagegen belegt: Krafttraining und Protein." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
-  <figcaption class="mt-2 text-sm text-ink-3">Vier belegte Mechanismen hinter dem Jojo-Effekt; die Quellen stehen in den Abschnitten darunter. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/warum-das-gewicht-zurueckkommt.png" alt="Vier Spalten mit den Mechanismen des Jojo-Effekts, nach Gewichtsverlust belegt und auf die Zeit nach der Abnehmspritze übertragen: Die Appetitbremse fällt weg, sobald der Wirkstoff weitgehend abgebaut ist (Semaglutid nach etwa 5 Wochen weitgehend abgebaut, bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer kleinen Studie mit 14 Teilnehmenden, einem Extremfall, noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. In Studien halfen beim Halten: Krafttraining und Protein." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Vier Mechanismen, nach Gewichtsverlust belegt und auf die Zeit nach der Spritze übertragen; die Quellen stehen in den Abschnitten darunter. Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
 Vier Mechanismen greifen ineinander. Der erste ist offensichtlich: Die Appetitbremse fällt weg, sobald der Wirkstoff abgebaut ist; wie lange das je nach Präparat dauert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/). Die drei anderen sind weniger bekannt:
@@ -78,6 +75,8 @@ Vier Mechanismen greifen ineinander. Der erste ist offensichtlich: Die Appetitbr
 
 Die Frage „absetzen oder nicht“ stellt sich für die meisten früher als geplant. In einer US-Auswertung von Versorgungsdaten hatten 64,8 % der Menschen ohne Typ-2-Diabetes ihre GLP-1-Therapie innerhalb eines Jahres beendet.<sup><a href="#fn-rodriguez2025">9</a></sup> Gründe sind Kosten, Nebenwirkungen, Lieferengpässe, ein erreichtes Ziel oder ein Kinderwunsch. Adipositas-Leitlinien betrachten Medikamente als Teil einer langfristigen Therapie,<sup><a href="#fn-dagLeitlinie">14</a></sup> aber die Realität sieht anders aus. Umso wichtiger ist, was in der Zeit danach passiert.
 
+<div data-interaktiv="punktfeld" data-vorlage="absetzrate"></div>
+
 ## Wie vermeide ich den Jojo-Effekt nach der Abnehmspritze?
 
 Mit drei Dingen, die in Studien den Unterschied machen: Krafttraining an mindestens zwei Tagen pro Woche (nach Liraglutid allein lag die Zunahme im Jahr nach Therapieende 6,0 kg höher als nach einem Trainingsprogramm, S-LiTE),<sup><a href="#fn-jensen2024">10</a></sup> 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag (Übersichtsarbeit Leidy 2015)<sup><a href="#fn-leidy2015">11</a></sup> und Dranbleiben an einer Struktur, die mit normalem Appetit funktioniert, mit festem Wiegetag und vorher festgelegter Reaktionsschwelle. Ganz verhindern lässt sich die Zunahme damit nicht; ohne solche Maßnahmen waren in der STEP-1-Verlängerung nach einem Jahr zwei Drittel zurück.<sup><a href="#fn-wilding2022ext">1</a></sup> Die Einzelheiten:
@@ -85,6 +84,8 @@ Mit drei Dingen, die in Studien den Unterschied machen: Krafttraining an mindest
 ### Krafttraining: der stärkste Hebel
 
 Die klarste Evidenz kommt aus Dänemark. In der S-LiTE-Studie nahmen Erwachsene mit Adipositas zuerst mit einer Diät ab und wurden dann ein Jahr lang entweder mit Liraglutid, einem betreuten Trainingsprogramm, beidem oder Placebo behandelt. Ein Jahr nach dem Ende aller Behandlungen hatten die Gruppen mit Training ihr Gewicht und ihre Körperzusammensetzung gehalten. Die Gruppe, die nur das Medikament bekommen hatte, hatte im Schnitt 6 kg mehr zugenommen als die Trainingsgruppe.<sup><a href="#fn-jensen2024">10</a></sup> Krafttraining während einer Kalorienreduktion verhindert außerdem den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">12</a></sup> Die WHO empfiehlt an mindestens zwei Tagen pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">13</a></sup> Zwei Einheiten à 30 Minuten reichen für den Einstieg.
+
+<div data-interaktiv="slite"></div>
 
 ### Protein: genug, verteilt, zuerst
 
@@ -104,4 +105,4 @@ Ob und wie du das Medikament absetzt, entscheidest du mit deiner Ärztin oder de
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Programm, kein Medikament, und verhindert den Jojo-Effekt nicht. Es liefert Protein, Ballaststoffe und Kreatin und begleitet dich durch zwei Krafteinheiten pro Woche.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze ist kein Medikament und verhindert den Jojo-Effekt nicht. Es baut auf die drei Dinge, die in Studien den Unterschied machen: Krafttraining, genug Protein und einen Plan für die Waage. Start und Preis über die [Warteliste](/#warteliste).*

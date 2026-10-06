@@ -6,6 +6,8 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../data/site';
+// Hauptschrift (lateinischer Satz) früh laden, damit der Wechsel von der Ersatzschrift kaum Verschiebung erzeugt
+import monaLatin from '@fontsource-variable/mona-sans/files/mona-sans-latin-standard-normal.woff2?url';
 
 interface Props {
   title: string;
@@ -20,6 +22,8 @@ interface Props {
   modifiedTime?: string;
   /** Pfad zu einem seitenspezifischen OG-Bild, z. B. "/og-studien.png" */
   ogImage?: string;
+  /** Arztsatz im Footer zeigen (Standard); false auf den Danke-Seiten (CLAIMS.md Abschnitt H) */
+  footerArzt?: boolean;
 }
 
 const {
@@ -32,6 +36,7 @@ const {
   publishedTime,
   modifiedTime,
   ogImage: ogImagePath = '/og-default.png',
+  footerArzt = true,
 } = Astro.props;
 
 const canonical = new URL(path ?? Astro.url.pathname, Astro.site ?? site.url).toString();
@@ -63,18 +68,21 @@ const graph = [
 ---
 
 <!doctype html>
-<html lang={site.lang} data-theme={site.theme}>
+<html lang={site.lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {/* Klassen für Bewegung: „js“ = Skripte laufen (sonst Endzustand), „rm“ = reduzierte Bewegung (Endzustand sofort) */}
+    <script is:inline>document.documentElement.classList.add('js');if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm');</script>
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {noindex ? <meta name="robots" content="noindex, follow" /> : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />}
+    <link rel="preload" href={monaLatin} as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="theme-color" content="#faf7f2" />
+    <meta name="theme-color" content="#efefeb" />
 
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={site.name} />
@@ -109,6 +117,6 @@ const graph = [
     <main id="main" class="flex-1">
       <slot />
     </main>
-    <Footer />
+    <Footer arzt={footerArzt} />
   </body>
 </html>

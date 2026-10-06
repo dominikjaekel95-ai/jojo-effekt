@@ -3,8 +3,11 @@
  * Werkzeug: Proteinrechner. Körpergewicht und Mahlzeiten pro Tag ergeben das Tagesziel von 1,2 bis 1,6 g pro kg (Leidy 2015)
  * und die Menge pro Mahlzeit; zum Vergleich das DGE-Minimum von 0,8 g pro kg. Lebensmittelwerte wie im Protein-Artikel
  * (gerundet nach Bundeslebensmittelschlüssel). Rechnet nur im Browser, speichert nichts.
+ * Gestaltung „Kalk“ seit 06.10.2026: Zahlenfeld und Regler gekoppelt, das Ergebnis rechnet beim Tippen mit (gleiche Formeln),
+ * Werte zählen hoch, die Skala zeigt Ziel (1,2 bis 1,6 g pro kg) und DGE-Minimum (0,8 g pro kg) in Gramm.
  */
 import Base from '../../../layouts/Base.astro';
+import SeitenKopf from '../../../components/SeitenKopf.astro';
 import Fn from '../../../components/Fn.astro';
 import Footnotes from '../../../components/Footnotes.astro';
 import ProductTeaser from '../../../components/ProductTeaser.astro';
@@ -29,11 +32,12 @@ const faq = [
   },
   {
     q: 'Reicht Proteinpulver?',
-    a: '<p>Lebensmittel zuerst: Skyr, Quark, Eier, Fisch, Hülsenfrüchte, Tofu bringen neben Protein auch Eisen, B12 oder Ballaststoffe mit. Pulver oder ein Protein-Stick schließen die Lücke an Tagen, an denen der Appetit die Portionen bestimmt. Was sonst sinnvoll ist, steht unter Supplements nach der Abnehmspritze.</p>',
+    a: '<p>Lebensmittel zuerst: Skyr, Quark, Eier, Fisch, Hülsenfrüchte, Tofu bringen neben Protein auch Eisen, B12 oder Ballaststoffe mit. Pulver oder ein Proteinriegel schließen die Lücke an Tagen, an denen der Appetit die Portionen bestimmt. Was sonst sinnvoll ist, steht unter Supplements nach der Abnehmspritze.</p>',
   },
 ];
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
+const maxG = 30;
 const lebensmittel = [
   { name: 'Skyr oder Magerquark', portion: '200 g', g: 23 },
   { name: 'Hähnchenbrust', portion: '100 g', g: 23 },
@@ -90,61 +94,75 @@ const jsonLd = [
 ];
 ---
 <Base title={title} description={description} path={path} jsonLd={jsonLd}>
-  <article class="container-narrow py-12">
-    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › <a href="/werkzeuge/" class="hover:text-moss">Werkzeuge</a> › Proteinrechner</nav>
-    <p class="eyebrow mt-6">Werkzeug · rechnet nur in deinem Browser</p>
-    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">Proteinrechner: dein Tagesziel nach der Abnehmspritze</h1>
-    <p class="mt-4 text-lg text-ink-2">
-      Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<Fn n={fn('leidy2015')} id="leidy2015" /> Der Rechner macht daraus dein Tagesziel, die Menge pro Mahlzeit und zeigt, wie viel das in Lebensmitteln ist.
-    </p>
-    <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence} Bei Nierenerkrankungen gehört die Proteinmenge vorher in die ärztliche Sprechstunde.</p>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { href: '/werkzeuge/', label: 'Werkzeuge' }, { label: 'Proteinrechner' }]} meta="Werkzeug, rechnet nur in deinem Browser" title="Proteinrechner: dein Tagesziel nach der Abnehmspritze" size="m" width="narrow" doc="Bei Nierenerkrankungen gehört die Proteinmenge vorher in die ärztliche Sprechstunde.">
+    <p>Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<Fn n={fn('leidy2015')} id="leidy2015" /> Der Rechner macht daraus dein Tagesziel, die Menge pro Mahlzeit und zeigt, wie viel das in Lebensmitteln ist.</p>
+  </SeitenKopf>
 
-    <form id="protein-form" class="mt-8 grid gap-4 rounded-xl2 border border-line bg-white p-5 sm:grid-cols-2" novalidate>
-      <div>
-        <label for="gewicht" class="block text-sm font-semibold text-ink">Körpergewicht in kg</label>
-        <input id="gewicht" name="gewicht" type="number" inputmode="decimal" min="35" max="250" step="0.5" placeholder="z. B. 82" required class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink" />
+  <article class="container-narrow k-end">
+    <form id="protein-form" class="k-panel pr-form" novalidate>
+      <div class="k-field">
+        <label for="gewicht" class="k-label">Körpergewicht in kg</label>
+        <div class="pr-kg">
+          <input id="gewicht" name="gewicht" type="number" inputmode="decimal" min="35" max="250" step="0.5" placeholder="z. B. 82" required class="k-input" />
+          <input type="range" class="k-range" min="40" max="160" step="1" value="80" aria-label="Körpergewicht in kg einstellen" data-regler />
+        </div>
       </div>
-      <fieldset>
-        <legend class="block text-sm font-semibold text-ink">Mahlzeiten pro Tag</legend>
-        <div class="mt-1 flex gap-4 text-sm text-ink-2">
-          <label class="flex items-center gap-2"><input type="radio" name="mahlzeiten" value="3" checked /> drei</label>
-          <label class="flex items-center gap-2"><input type="radio" name="mahlzeiten" value="4" /> vier</label>
+      <fieldset class="k-field">
+        <legend class="k-label">Mahlzeiten pro Tag</legend>
+        <div class="k-seg">
+          <label><input type="radio" name="mahlzeiten" value="3" checked /><span>drei</span></label>
+          <label><input type="radio" name="mahlzeiten" value="4" /><span>vier</span></label>
         </div>
       </fieldset>
-      <div class="sm:col-span-2 flex flex-wrap items-center gap-3">
+      <div class="pr-act">
         <button type="submit" class="btn-primary">Tagesziel berechnen</button>
-        <span class="text-xs text-ink-3">Nichts wird gespeichert oder übertragen.</span>
+        <span class="k-hint">Nichts wird gespeichert oder übertragen.</span>
       </div>
     </form>
 
-    <section id="protein-ergebnis" class="mt-8 hidden" aria-live="polite">
-      <h2 class="h2">Dein Ziel</h2>
-      <div class="mt-4 grid gap-4 sm:grid-cols-3">
-        <div class="rounded-xl2 border border-line bg-white p-4"><p class="text-sm text-ink-3">Pro Tag</p><p class="mt-1 text-2xl font-bold text-moss" data-tag></p><p class="mt-1 text-xs text-ink-3">1,2 bis 1,6 g pro kg</p></div>
-        <div class="rounded-xl2 border border-line bg-white p-4"><p class="text-sm text-ink-3">Pro Mahlzeit</p><p class="mt-1 text-2xl font-bold text-moss" data-mahlzeit></p><p class="mt-1 text-xs text-ink-3" data-mahlzeit-hinweis></p></div>
-        <div class="rounded-xl2 border border-line bg-white p-4"><p class="text-sm text-ink-3">Minimum laut DGE</p><p class="mt-1 text-2xl font-bold text-ink" data-minimum></p><p class="mt-1 text-xs text-ink-3">0,8 g pro kg für gesunde Erwachsene, kein Ziel beim Abnehmen</p></div>
+    <section id="protein-ergebnis" class="pr-res hidden" aria-live="polite">
+      <h2 class="k-h2">Dein Ziel</h2>
+      <div class="k-stats rows">
+        <div class="k-stat"><p class="k-stat-l">Pro Tag</p><p class="k-stat-v moss" data-tag></p><p class="k-stat-n">1,2 bis 1,6 g pro kg</p></div>
+        <div class="k-stat"><p class="k-stat-l">Pro Mahlzeit</p><p class="k-stat-v moss" data-mahlzeit></p><p class="k-stat-n" data-mahlzeit-hinweis></p></div>
+        <div class="k-stat"><p class="k-stat-l">Minimum laut DGE</p><p class="k-stat-v" data-minimum></p><p class="k-stat-n">0,8 g pro kg für gesunde Erwachsene, kein Ziel beim Abnehmen</p></div>
       </div>
-      <p class="mt-4 text-sm text-ink-2" data-beispiel></p>
-      <p class="mt-3 text-sm text-ink-3">Bei starkem Übergewicht rechnen Fachleute teils mit dem Zielgewicht statt mit dem aktuellen Gewicht; dann liegt das Ziel niedriger. Besprich das mit deiner Ärztin oder einer Ernährungsberatung.</p>
+      <figure class="pr-scale" aria-hidden="true">
+        <div class="pr-track">
+          <span class="pr-band" data-band></span>
+          <span class="pr-min" data-min><i></i><b data-min-l></b></span>
+        </div>
+        <div class="pr-axis"><span>0 g</span><span data-achse-mitte></span><span data-achse-max></span></div>
+        <div class="pr-meals" data-meals></div>
+        <figcaption class="k-hint">Grün: dein Ziel am Tag, aufgeteilt auf die Mahlzeiten. Grau gepunktet: das Minimum laut DGE.</figcaption>
+      </figure>
+      <p class="pr-p" data-beispiel></p>
+      <p class="k-note">Bei starkem Übergewicht rechnen Fachleute teils mit dem Zielgewicht statt mit dem aktuellen Gewicht; dann liegt das Ziel niedriger. Besprich das mit deiner Ärztin oder einer Ernährungsberatung.</p>
     </section>
 
-    <div class="prose-site mt-10">
+    <div class="prose-site mt-12">
       <h2 id="lebensmittel">Wie viel Protein in einer Portion steckt</h2>
       <p>Ungefähre Werte pro Portion, gerundet.<Fn n={fn('bls')} id="bls" /> Die Spalte rechts zeigt, wie viele dieser Portionen eine Mahlzeit mit 30 g Protein braucht.</p>
     </div>
-    <div class="mt-4 overflow-x-auto rounded-xl2 border border-line bg-white">
-      <table class="w-full min-w-[480px] text-left text-sm">
-        <thead class="bg-paper-2 text-xs font-semibold uppercase tracking-wide text-ink-3">
-          <tr><th class="px-4 py-3">Lebensmittel</th><th class="px-4 py-3">Portion</th><th class="px-4 py-3">Protein</th><th class="px-4 py-3">für 30 g</th></tr>
+    <div class="mt-6" data-draw>
+      <table class="k-table k-stack pr-table">
+        <thead>
+          <tr><th scope="col">Lebensmittel</th><th scope="col">Portion</th><th scope="col">Protein</th><th scope="col">für 30 g</th></tr>
         </thead>
-        <tbody class="divide-y divide-line">
-          {lebensmittel.map((l) => (<tr><td class="px-4 py-3 font-semibold text-ink">{l.name}</td><td class="px-4 py-3 text-ink-2">{l.portion}</td><td class="px-4 py-3 text-ink-2">ca. {l.g} g</td><td class="px-4 py-3 text-ink-2">{(30 / l.g).toLocaleString('de-DE', { maximumFractionDigits: 1 })} Portionen</td></tr>))}
-          <tr><td class="px-4 py-3 font-semibold text-ink">Protein-Stick (Nach der Spritze)</td><td class="px-4 py-3 text-ink-2">1 Stick</td><td class="px-4 py-3 text-ink-2">≥ 20 g</td><td class="px-4 py-3 text-ink-2">1,5 Sticks</td></tr>
+        <tbody>
+          {lebensmittel.map((l, i) => (
+            <tr style={`--i:${i}`}>
+              <th scope="row">{l.name}</th>
+              <td data-label="Portion">{l.portion}</td>
+              <td data-label="Protein" class="pr-g"><span class="pr-gb" aria-hidden="true"><span class="k-bar" style={`width:${Math.round((l.g / maxG) * 100)}%`}></span></span> ca. {l.g} g</td>
+              <td data-label="für 30 g">{(30 / l.g).toLocaleString('de-DE', { maximumFractionDigits: 1 })} Portionen</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
 
-    <div class="prose-site mt-10">
+    <div class="prose-site mt-12">
       <h2 id="so-gerechnet">So wird gerechnet, und was dahintersteht</h2>
       <ul>
         <li><strong>Zielkorridor:</strong> 1,2 bis 1,6 g pro kg Körpergewicht und Tag für Gewichtsabnahme und -erhalt.<Fn n={fn('leidy2015')} id="leidy2015" /> Der untere Wert ist das Ziel für die meisten; der obere, wenn du Krafttraining machst oder sehr wenig isst.</li>
@@ -160,31 +178,236 @@ const jsonLd = [
       <p>Unter der Spritze bestimmt der Appetit die Portionen, und Protein bleibt oft als Erstes auf der Strecke. Nach der letzten Dosis kommt der Appetit zurück, der Bedarf an Protein bleibt: Es trägt zur Erhaltung von Muskelmasse bei<Fn n={fn('euClaims')} id="euClaims" /> und sättigt stärker als Kohlenhydrate oder Fett. Wer sein Tagesziel kennt und auf die Mahlzeiten verteilt, hat den einfachsten Hebel der Haltephase in der Hand. Ab welcher Zahl auf der Waage du zusätzlich reagierst, legt der <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> fest; wann der Appetit voraussichtlich zurückkommt, der <a href="/werkzeuge/zeitplan-nach-letzter-dosis/">Zeitplan nach der letzten Dosis</a>.</p>
     </div>
 
-    <Faq items={faq} id="protein-faq" title="Häufige Fragen zum Proteinbedarf" />
+    <div class="mt-14"><Faq items={faq} id="protein-faq" title="Häufige Fragen zum Proteinbedarf" /></div>
 
     <ProductTeaser position="werkzeug-protein" />
 
     <Footnotes ids={fnIds} />
   </article>
-
-  <script is:inline>
-    const form = document.getElementById('protein-form');
-    const ergebnis = document.getElementById('protein-ergebnis');
-    const g = (n) => `${Math.round(n)} g`;
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const kg = parseFloat(String(form.gewicht.value).replace(',', '.'));
-      if (!(kg >= 35 && kg <= 250)) { form.gewicht.focus(); return; }
-      const mahlzeiten = Number(form.mahlzeiten.value) || 3;
-      const lo = kg * 1.2, hi = kg * 1.6;
-      document.querySelector('[data-tag]').textContent = `${g(lo)} bis ${g(hi)}`;
-      document.querySelector('[data-mahlzeit]').textContent = `${g(lo / mahlzeiten)} bis ${g(hi / mahlzeiten)}`;
-      document.querySelector('[data-mahlzeit-hinweis]').textContent = `bei ${mahlzeiten} Mahlzeiten; mindestens 20 g pro Mahlzeit`;
-      document.querySelector('[data-minimum]').textContent = g(kg * 0.8);
-      const ziel = Math.round(lo / mahlzeiten);
-      document.querySelector('[data-beispiel]').textContent = `Beispiel für ${ziel} g in einer Mahlzeit: 200 g Skyr (ca. 23 g) plus ein Ei (ca. 7 g) kommen auf rund 30 g; 100 g Hähnchenbrust mit 200 g Linsen auf rund 41 g. Bei kleinem Appetit zählt die Reihenfolge: Protein zuerst, dann Gemüse, dann der Rest.`;
-      ergebnis.classList.remove('hidden');
-      ergebnis.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  </script>
 </Base>
+
+<script>
+  import { zaehle, reduziert } from '../../../lib/bewegung';
+  const form = document.getElementById('protein-form') as HTMLFormElement;
+  const ergebnis = document.getElementById('protein-ergebnis') as HTMLElement;
+  const feld = form.elements.namedItem('gewicht') as HTMLInputElement;
+  const regler = form.querySelector<HTMLInputElement>('[data-regler]')!;
+  const q = (sel: string) => document.querySelector<HTMLElement>(sel)!;
+  const g = (n: number) => `${Math.round(n)} g`;
+  const spanne = (a: number, b: number) => `${Math.round(a)} bis ${Math.round(b)} g`;
+  let alt = { lo: 0, mlo: 0, min: 0 };
+
+  const fuellung = () => regler.style.setProperty('--f', `${((Number(regler.value) - Number(regler.min)) / (Number(regler.max) - Number(regler.min))) * 100}%`);
+  fuellung();
+
+  const rechne = (springen: boolean) => {
+    const kg = parseFloat(String(feld.value).replace(',', '.'));
+    if (!(kg >= 35 && kg <= 250)) {
+      if (springen) feld.focus();
+      return;
+    }
+    const mahlzeiten = Number((form.elements.namedItem('mahlzeiten') as RadioNodeList).value) || 3;
+    const lo = kg * 1.2;
+    const hi = kg * 1.6;
+    const min = kg * 0.8;
+    const mlo = lo / mahlzeiten;
+    const mhi = hi / mahlzeiten;
+    const zuerst = ergebnis.classList.contains('hidden');
+    ergebnis.classList.remove('hidden');
+    // Obergrenze ist immer 4/3 der Untergrenze (1,6 zu 1,2 g pro kg); so zählen beide Werte gemeinsam
+    zaehle(q('[data-tag]'), zuerst ? 0 : alt.lo, lo, (n) => spanne(n, (n * 4) / 3));
+    zaehle(q('[data-mahlzeit]'), zuerst ? 0 : alt.mlo, mlo, (n) => spanne(n, (n * 4) / 3));
+    zaehle(q('[data-minimum]'), zuerst ? 0 : alt.min, min, g);
+    q('[data-mahlzeit-hinweis]').textContent = `bei ${mahlzeiten} Mahlzeiten; mindestens 20 g pro Mahlzeit`;
+    // Skala von 0 bis 1,8 g pro kg
+    const max = kg * 1.8;
+    const band = q('[data-band]');
+    band.style.setProperty('--l', String(lo / max));
+    band.style.setProperty('--w', String((hi - lo) / max));
+    q('[data-min]').style.setProperty('--x', String(min / max));
+    q('[data-min-l]').textContent = `Minimum ${g(min)}`;
+    q('[data-achse-mitte]').textContent = `Ziel ${spanne(lo, hi)}`;
+    q('[data-achse-max]').textContent = g(max);
+    q('[data-meals]').replaceChildren(
+      ...Array.from({ length: mahlzeiten }, (_, i) => {
+        const s = document.createElement('span');
+        s.style.setProperty('--i', String(i));
+        s.textContent = spanne(mlo, mhi);
+        return s;
+      }),
+    );
+    q('[data-beispiel]').textContent = `Beispiel für ${Math.round(mlo)} g in einer Mahlzeit: 200 g Skyr (ca. 23 g) plus ein Ei (ca. 7 g) kommen auf rund 30 g; 100 g Hähnchenbrust mit 200 g Linsen auf rund 41 g. Bei kleinem Appetit zählt die Reihenfolge: Protein zuerst, dann Gemüse, dann der Rest.`;
+    if (zuerst && !reduziert()) {
+      requestAnimationFrame(() => requestAnimationFrame(() => ergebnis.classList.add('pr-in')));
+    } else ergebnis.classList.add('pr-in');
+    alt = { lo, mlo, min };
+    if (springen) ergebnis.scrollIntoView({ behavior: reduziert() ? 'auto' : 'smooth', block: 'start' });
+  };
+
+  feld.addEventListener('input', () => {
+    const kg = parseFloat(String(feld.value).replace(',', '.'));
+    if (kg >= 40 && kg <= 160) {
+      regler.value = String(Math.round(kg));
+      fuellung();
+    }
+    rechne(false);
+  });
+  regler.addEventListener('input', () => {
+    feld.value = regler.value;
+    fuellung();
+    rechne(false);
+  });
+  form.addEventListener('change', (e) => {
+    if ((e.target as HTMLInputElement).name === 'mahlzeiten') rechne(false);
+  });
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    rechne(true);
+  });
+</script>
+
+<style>
+  .pr-form {
+    display: grid;
+    gap: 1.5rem 2rem;
+  }
+  .pr-form fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .pr-form legend {
+    margin-bottom: 0.5rem;
+  }
+  .pr-kg {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .pr-act {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+  }
+  .pr-res {
+    margin-top: 3rem;
+  }
+  /* Skala: Band für das Ziel, gepunktete Marke für das Minimum */
+  .pr-scale {
+    margin-top: 2.5rem;
+  }
+  .pr-track {
+    position: relative;
+    height: 3rem;
+    border-bottom: 1px solid var(--color-ink);
+  }
+  .pr-band {
+    position: absolute;
+    bottom: 0;
+    left: calc(var(--l, 0.4) * 100%);
+    width: calc(var(--w, 0.2) * 100%);
+    height: 1.25rem;
+    border-radius: 3px 3px 0 0;
+    background: var(--color-moss);
+    transform-origin: left bottom;
+  }
+  .pr-min {
+    position: absolute;
+    bottom: 0;
+    left: calc(var(--x, 0.3) * 100%);
+    height: 3rem;
+  }
+  .pr-min i {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    border-left: 2px dotted var(--color-placebo);
+  }
+  .pr-min b {
+    position: absolute;
+    top: -0.1rem;
+    right: 0.45rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-ink-3);
+    white-space: nowrap;
+  }
+  .pr-axis {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.4rem;
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+  }
+  .pr-axis span:nth-child(2) {
+    color: var(--color-moss);
+    font-weight: 540;
+  }
+  .pr-meals {
+    display: flex;
+    gap: 4px;
+    margin: 1.5rem 0 0.75rem;
+  }
+  .pr-meals :global(span) {
+    flex: 1;
+    min-width: 0;
+    padding-top: 0.6rem;
+    border-top: 6px solid var(--color-moss);
+    font-size: 0.8125rem;
+    color: var(--color-ink-2);
+    transform-origin: left;
+  }
+  .pr-band, .pr-meals :global(span) {
+    transition: transform 0.9s var(--ease);
+  }
+  .pr-meals :global(span) {
+    transition-delay: calc(300ms + var(--i, 0) * 90ms);
+  }
+  .pr-min {
+    transition: opacity 0.6s var(--ease) 0.5s;
+  }
+  :global(html.js:not(.rm)) .pr-res:not(.pr-in) .pr-band,
+  :global(html.js:not(.rm)) .pr-res:not(.pr-in) .pr-meals :global(span) {
+    transform: scaleX(0);
+  }
+  :global(html.js:not(.rm)) .pr-res:not(.pr-in) .pr-min {
+    opacity: 0;
+  }
+  .pr-p {
+    margin-top: 1.75rem;
+    color: var(--color-ink-2);
+    font-size: 0.975rem;
+    line-height: 1.6;
+  }
+  /* Tabelle: kleine Balken für Protein pro Portion */
+  .pr-g {
+    white-space: nowrap;
+  }
+  .pr-gb {
+    display: inline-block;
+    width: 3.5rem;
+    height: 6px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    background: var(--color-line);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .pr-gb :global(.k-bar) {
+    height: 100%;
+    background: var(--color-moss);
+  }
+  @media (max-width: 560px) {
+    .pr-kg {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    .pr-meals :global(span) {
+      font-size: 0.75rem;
+    }
+  }
+</style>

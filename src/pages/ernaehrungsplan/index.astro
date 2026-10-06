@@ -180,7 +180,7 @@ const jsonLd = [
             <ol class="epf-stufen" aria-hidden="true">
               {stufen.map((s) => (<li data-stufe={s.g} class={s.g === '70bis85' ? 'an' : ''} style={`width:${breite(s)}`}><span>{s.text}</span></li>))}
             </ol>
-            <p id="ep-gewicht-hinweis" class="epf-hinweis">Der Plan rechnet mit vier Gewichtsstufen. Gespeichert wird nur die Nummer des passenden Plans, nicht dein Gewicht.</p>
+            <p id="ep-gewicht-hinweis" class="epf-hinweis">Der Plan rechnet mit vier Gewichtsstufen. Gespeichert werden Adresse, Plannummer (steht für Ernährungsform, Gewichtsbereich, Appetit und Laktose) und deine Vorlieben, nicht dein genaues Gewicht.</p>
           </div>
 
           <fieldset class="epf-frage">
@@ -244,12 +244,12 @@ const jsonLd = [
             </label>
             <label class="epf-check">
               <input type="checkbox" name="einwilligung" value="ja" required />
-              <span>Schickt mir den Plan per Mail und meldet mich für den Newsletter von Nach der Spritze an ({site.newsletter.cadence}: neue Artikel und Studien zur Zeit nach der Abnehmspritze, gelegentlich Neuigkeiten zum Programm). Der Plan kommt, sobald ich die Anmeldung per Link bestätigt habe. Abmelden geht in jeder Mail. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</span>
+              <span>Schickt mir den Plan per Mail und meldet mich für den Newsletter von Nach der Spritze an ({site.newsletter.cadence}: neue Artikel und Studien zur Zeit nach der Abnehmspritze, gelegentlich Neuigkeiten zum Programm). Ich willige ausdrücklich ein, dass ihr dafür meine Plannummer speichert; sie steht für meine Angaben zu Ernährungsform, Gewichtsbereich, Appetit und Laktose. Der Plan kommt, sobald ich die Anmeldung per Link bestätigt habe. Abmelden geht in jeder Mail. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</span>
             </label>
             <div class="hidden" aria-hidden="true">
               <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
             </div>
-            <p class="epf-mikro band-muted">Kostenlos. Keine Weitergabe deiner Adresse. Gespeichert werden Adresse, Plannummer und Vorlieben, nicht dein Gewicht.</p>
+            <p class="epf-mikro band-muted">Kostenlos. Keine Weitergabe deiner Adresse. Gespeichert werden Adresse, Plannummer (steht für Ernährungsform, Gewichtsbereich, Appetit und Laktose) und deine Vorlieben, nicht dein genaues Gewicht.</p>
             <p class="epf-ohne">Lieber ohne Newsletter? Schreib mir eine Mail mit deinen Antworten an <a id="ep-mail" href={mailHref}>{site.owner.email}</a>, dann schicke ich dir den Plan persönlich. Dominik</p>
           </div>
         </div>

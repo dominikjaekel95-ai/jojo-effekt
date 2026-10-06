@@ -1,7 +1,8 @@
 ---
 /**
- * Ziel der Weiterleitung aus /api/anmeldung/ (quelle=header). noindex, nicht in der Sitemap. ?fehler=eingabe|technik
- * blendet den passenden Text ein. Gestaltung „Kalk“ seit 06.10.2026.
+ * Früher Ziel des Newsletter-Formulars im Seitenkopf (quelle=header, seit 06.10.2026 entfernt). Bleibt als Seite (noindex,
+ * nicht in der Sitemap): api/anmeldung.js leitet unbekannte Quellen, auch alte Kopf-Formulare aus dem Browser-Cache, mit
+ * ?fehler=eingabe hierher. ?fehler=eingabe|technik blendet den passenden Text ein. Gestaltung „Kalk“ seit 06.10.2026.
  */
 import Base from '../../layouts/Base.astro';
 import SeitenKopf from '../../components/SeitenKopf.astro';
@@ -14,7 +15,7 @@ const weiter = [
   { href: '/marktradar/', label: 'Marktradar: was sich gerade ändert' },
 ];
 ---
-<Base title="Newsletter: Bestätigung" description="Bestätige deine Anmeldung zum Newsletter von Nach der Spritze über den Link in der Mail." path="/newsletter/danke/" noindex>
+<Base title="Newsletter: Bestätigung" description="Bestätige deine Anmeldung zum Newsletter von Nach der Spritze über den Link in der Mail." path="/newsletter/danke/" noindex footerArzt={false}>
   <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: 'Newsletter' }]} meta="Newsletter" title="Bitte bestätige deine Anmeldung." doc={false} class="nd-ok">
     <p>Wir haben dir über unseren Versanddienst MailerLite eine Mail mit einem Bestätigungslink geschickt. Erst nach dem Klick bist du angemeldet. Nichts angekommen? Ein Blick in den Spam-Ordner hilft meistens.</p>
   </SeitenKopf>
@@ -23,7 +24,7 @@ const weiter = [
     <div class="nd">
       <div id="nl-eingabe" class="nd-msg" hidden>
         <p class="nd-msg-h">Das hat nicht geklappt: Bitte E-Mail-Adresse und Kästchen prüfen.</p>
-        <p>Für die Anmeldung brauchen wir eine gültige E-Mail-Adresse und dein Häkchen bei der Einwilligung. Oben rechts unter „Newsletter“ kannst du es noch einmal versuchen.</p>
+        <p>Für die Anmeldung brauchen wir eine gültige E-Mail-Adresse und dein Häkchen bei der Einwilligung. Den Newsletter kannst du bei der <a href="/checkliste/" class="k-a">Checkliste</a>, beim <a href="/ernaehrungsplan/" class="k-a">Ernährungsplan</a> oder auf der <a href="/#warteliste" class="k-a">Warteliste</a> dazubestellen.</p>
       </div>
       <div id="nl-technik" class="nd-msg" hidden>
         <p class="nd-msg-h">Das hat gerade nicht geklappt. Wir tragen dich von Hand ein.</p>

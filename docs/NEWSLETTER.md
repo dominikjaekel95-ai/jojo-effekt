@@ -25,6 +25,8 @@ Exportspalte: `Newsletter`. Weiterleitung nach dem Absenden bleibt `https://nach
 
 ### 2b. Checklisten-Formular `WOxpjv` (Entwurf, noch zu veröffentlichen)
 
+**Seit 06.10.2026 ersetzt durch ein eigenes Formular** (`src/components/ChecklisteForm.astro`): POST an `/api/anmeldung/` mit `quelle=checkliste`, Pflicht-Einwilligung (Checkliste und einmaliger Hinweis auf eine neue Fassung), optionales Newsletter-Häkchen, Honigtopf. Gruppe „Checkliste“ (`MAILERLITE_GROUP_CHECKLISTE`), mit Häkchen zusätzlich „Newsletter“; Double-Opt-in über MailerLite. Weiterleitung auf `/checkliste/danke/` (auch bei Fehlern, dort mit `?fehler=eingabe|technik`; das PDF bleibt erreichbar). Der Schalter `site.checklistForm.live` blendet weiterhin Formular und Datenschutz-Abschnitt 4b ein; `checklistForm.id` wird nicht mehr gebraucht. Das Tally-Formular `WOxpjv` und sein Webhook können abgeschaltet werden. Die Beschreibung unten gilt nur noch für ältere Einträge.
+
 Felder in dieser Reihenfolge:
 
 1. **E-Mail-Adresse**, Typ E-Mail, Pflicht.

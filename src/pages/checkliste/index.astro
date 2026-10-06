@@ -45,7 +45,7 @@ const jsonLd = [
 ];
 // Wochenleiste: Spannen in Wochen, Anker der Abschnitte
 const leiste = [
-  { href: '#w0-h', label: 'Woche 0', kurz: 'Woche 0', span: 1 },
+  { href: '#w0-h', label: 'Woche 0', kurz: '0', span: 1 },
   { href: '#w12-h', label: 'Woche 1 bis 2', kurz: '1–2', span: 2 },
   { href: '#w34-h', label: 'Woche 3 bis 4', kurz: '3–4', span: 2 },
   { href: '#w56-h', label: 'Woche 5 bis 6', kurz: '5–6', span: 2 },
@@ -58,6 +58,7 @@ const leiste = [
   </SeitenKopf>
 
   <div class="container-wide k-end">
+    <p class="cl-bar-k no-print" aria-hidden="true">Wochen nach der letzten Dosis</p>
     <nav class="cl-bar no-print" aria-label="Wochen der Checkliste" data-draw>
       {leiste.map((w, i) => (
         <a href={w.href} style={`grid-column: span ${w.span}; --i:${i}`}><span class="k-bar"></span><span class="cl-bar-l"><span class="sr-only">{w.label}</span><span aria-hidden="true">{w.kurz}</span></span></a>
@@ -206,11 +207,16 @@ const leiste = [
 
 <style>
   /* Wochenleiste: fünf Abschnitte, dann der Beginn der Zunahme in Braun */
+  .cl-bar-k {
+    margin-top: clamp(2.5rem, 6vh, 3.5rem);
+    font-size: 0.875rem;
+    color: var(--color-ink-3);
+  }
   .cl-bar {
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr)) minmax(0, 2.2fr);
     gap: 4px;
-    margin-top: clamp(2.5rem, 6vh, 3.5rem);
+    margin-top: 0.75rem;
     max-width: 62rem;
   }
   .cl-bar a, .cl-bar-8 {

@@ -730,4 +730,13 @@ html.js:not(.rm) [data-draw].in .k-bar {
     background: none;
     padding: 0;
   }
+  .k-head {
+    padding-top: 0;
+  }
+  .k-meta {
+    margin-top: 0;
+  }
+  .k-lede {
+    font-size: 1.05rem;
+  }
 }

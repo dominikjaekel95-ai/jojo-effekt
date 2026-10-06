@@ -39,6 +39,8 @@ Für dich heißt das: Die Waage ist in dieser Phase ein schlechter Messwert für
 
 Nach den vorliegenden Daten nicht schlechter. In einer nachträglichen Auswertung von 2542 Frauen aus den Studien SURMOUNT-1, -3 und -4 war die Gewichtsabnahme unter Tirzepatid vor, während und nach den Wechseljahren ähnlich: In SURMOUNT-1 nach 72 Wochen 26 % bei prämenopausalen, 23 % bei perimenopausalen und 23 % bei postmenopausalen Frauen, gegenüber 2 bis 3 % unter Placebo.<sup><a href="#fn-tchang2025">4</a></sup> Für Semaglutid gibt es keine veröffentlichte Auswertung nach Menopausenstatus, nur nach Geschlecht: In einer Meta-Analyse von 14 Studien verloren Frauen unter GLP-1-Rezeptoragonisten im Mittel 1,0 kg beziehungsweise 1,7 Prozentpunkte mehr als Männer.<sup><a href="#fn-yang2025">5</a></sup>
 
+<div data-interaktiv="vergleich" data-vorlage="tchang"></div>
+
 Was die Studien nicht zeigen: ob Frauen in den Wechseljahren unter der Spritze anders viel Muskel verlieren, und wie das Gewicht nach dem Absetzen bei ihnen verläuft. Beides wurde nicht getrennt ausgewertet.
 
 ## Absetzen in den Wechseljahren: zwei Verluste treffen aufeinander
@@ -52,6 +54,8 @@ Der Verlauf nach dem Absetzen ist für gemischte Gruppen gut belegt: Die Zunahme
 Gewichtsverlust kostet Knochendichte, vor allem an der Hüfte. In einer Meta-Analyse klinischer Studien sank die Knochendichte der Gesamthüfte nach diätbedingtem Gewichtsverlust um 0,010 bis 0,015 g/cm² über 6 bis 24 Monate; an der Lendenwirbelsäule war kein Effekt messbar.<sup><a href="#fn-zibellini2015">9</a></sup> Nach den Wechseljahren sinkt die Knochendichte ohnehin; die beiden Effekte addieren sich.
 
 Zwei Studien zeigen, was den Unterschied macht. In einer randomisierten Studie mit 160 adipösen Erwachsenen ab 65 Jahren, die mit Diät 9 % abnahmen, verlor die Gruppe mit Ausdauertraining 2,7 kg fettfreie Masse und 3 % Knochendichte an der Hüfte, die Gruppe mit Krafttraining 1,0 kg fettfreie Masse und unter 1 % Knochendichte, nicht signifikant.<sup><a href="#fn-villareal2017">10</a></sup> Und in einer Sekundäranalyse der S-LiTE-Studie mit 195 Erwachsenen senkte Liraglutid allein die Knochendichte an Hüfte und Wirbelsäule gegenüber Training allein, während die Kombination aus Training und Medikament die Knochendichte an Hüfte, Wirbelsäule und Unterarm trotz des größten Gewichtsverlusts von 16,9 kg stabil hielt.<sup><a href="#fn-jensen2024bone">11</a></sup>
+
+<div data-interaktiv="vergleich" data-vorlage="villareal"></div>
 
 Daraus folgt kein Rat zum Medikament, aber einer zum Training: Wer unter der Spritze oder danach abnimmt, schützt die Knochen am besten mit Krafttraining. Ob eine Knochendichtemessung sinnvoll ist, und ob Calcium und Vitamin D ausreichen, klärst du mit deiner Ärztin; was zu Vitamin D unter der Spritze bekannt ist, steht unter [Vitamin D bei der Abnehmspritze](/wissen/vitamin-d-abnehmspritze/).
 

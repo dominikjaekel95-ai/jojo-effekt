@@ -32,6 +32,8 @@ Eisen kommt in zwei Formen: Häm-Eisen aus Fleisch und Fisch, das der Körper gu
 
 Der Bedarf ist dabei nicht gleich verteilt: Frauen vor den Wechseljahren brauchen wegen der Menstruation deutlich mehr als Männer; die genauen Referenzwerte je Alter und Geschlecht stehen bei der DGE.<sup><a href="#fn-dgeReferenzwerte">2</a></sup> Dass 58 % der Frauen schon in normalen Zeiten darunter lagen,<sup><a href="#fn-nvs2">1</a></sup> zeigt, wie eng es unter der Spritze wird. Was sich in und nach den Wechseljahren für Muskeln, Knochen und Gewicht ändert, steht unter [Wechseljahre und Abnehmspritze](/wissen/wechseljahre-abnehmspritze/).
 
+<div data-interaktiv="punktfeld" data-vorlage="eisen"></div>
+
 | Lebensmittel, Portion | Eisen, etwa | Aufnahme |
 |---|---|---|
 | Rindfleisch, 125 g | 3 mg | gut (Häm-Eisen) |

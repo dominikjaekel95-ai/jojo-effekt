@@ -60,6 +60,8 @@ Direkte Vergleichsstudien zwischen Tablette und Spritze gibt es nicht. Was es gi
 | ATTAIN-1<sup><a href="#fn-wharton2025attain1">13</a></sup> | Orforglipron-Tablette 36 mg (in der EU nicht zugelassen) | 72 Wochen | −12,4 % gegenüber Placebo |
 | SCALE<sup><a href="#fn-pisunyer2015">14</a></sup> | Liraglutid-Spritze 3 mg | 56 Wochen | −8,0 % gegenüber −2,6 % |
 
+<div data-interaktiv="zulassung" data-filter="ja"></div>
+
 Lesart: Bei gleichem Wirkstoff liegen Tablette und Spritze nahe beieinander. Die größeren Unterschiede laufen nicht zwischen Tablette und Spritze, sondern zwischen den Wirkstoffen. Alle Studien mit Kernzahl und Link stehen im [Studien-Tracker](/wissen/studien/).
 
 <figure class="my-8">
@@ -74,6 +76,8 @@ Lesart: Bei gleichem Wirkstoff liegen Tablette und Spritze nahe beieinander. Die
 | Semaglutid, Tablette und Spritze | etwa eine Woche<sup><a href="#fn-fachinfoWegovy">4</a></sup><sup><a href="#fn-fachinfoRybelsus">6</a></sup> | fünf bis sieben Wochen |
 | Tirzepatid | etwa fünf Tage<sup><a href="#fn-fachinfoMounjaro">8</a></sup> | etwa vier Wochen |
 | Liraglutid | etwa 13 Stunden<sup><a href="#fn-fachinfoSaxenda">9</a></sup> | wenige Tage |
+
+<div data-interaktiv="wirkstoffspiegel"></div>
 
 Für die Zeit danach ist das der wichtigste Punkt: Tablette und Spritze mit Semaglutid haben dieselbe Auswaschphase. Dass die Tablette täglich genommen wird, verkürzt sie nicht. Wer die Tablette absetzt, hat also denselben Zeitplan wie nach der Spritze: zwei ruhige Wochen, dann kehrt der Appetit zurück, und ab etwa Woche 8 wird die Zunahme in Studien messbar.<sup><a href="#fn-wu2025">15</a></sup>
 

@@ -24,6 +24,8 @@ faq:
 
 Ozempic ist zur Behandlung des Typ-2-Diabetes zugelassen, wird aber in Deutschland auch off-label zum Abnehmen genutzt. Das Absetzen ist deshalb für zwei Gruppen ein Thema, und für beide gilt etwas anderes. Die Grundlagen für alle Abnehmspritzen stehen im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/); hier geht es nur um das, was für Ozempic spezifisch ist.
 
+<div data-interaktiv="wirkstoffspiegel" data-wirkstoffe="semaglutid" data-tag="35"></div>
+
 > **Kurz gesagt:** Bei Typ-2-Diabetes nie ohne Ärztin absetzen, weil der Blutzucker wieder steigt.<sup><a href="#fn-fachinfoOzempic">1</a></sup> Halbwertszeit etwa eine Woche. Zum Gewicht nach dem Absetzen gibt es für den Wirkstoff Semaglutid klare Daten: Zwei Drittel des Verlusts waren nach einem Jahr zurück.<sup><a href="#fn-wilding2022ext">3</a></sup>
 
 ## Ozempic in drei Sätzen
@@ -44,6 +46,8 @@ Semaglutid hat eine Halbwertszeit von etwa einer Woche.<sup><a href="#fn-fachinf
 
 Eigene Absetz-Studien zum Gewicht gibt es mit Ozempic-Dosen nicht; die Daten stammen aus den Wegovy-Studien mit 2,4 mg desselben Wirkstoffs. Dort waren ein Jahr nach dem Absetzen zwei Drittel des verlorenen Gewichts zurück.<sup><a href="#fn-wilding2022ext">3</a></sup> Für Ozempic ist die Ausgangslage etwas anders: Die Dosis ist niedriger, der Verlust kleiner. In STEP 2, einer Studie mit Menschen mit Typ-2-Diabetes, verloren Teilnehmende unter 1 mg Semaglutid in 68 Wochen im Mittel 7,0 %, unter 2,4 mg 9,6 %, unter Placebo 3,4 %.<sup><a href="#fn-davies2021step2">2</a></sup> Weniger Verlust bedeutet weniger, das zurückkommen kann; am Mechanismus ändert das nichts. Die hormonellen Anpassungen nach jedem Gewichtsverlust, mehr Ghrelin und weniger Leptin, waren in einer Studie noch ein Jahr nach der Diät messbar.<sup><a href="#fn-sumithran2011">5</a></sup>
 
+<div data-interaktiv="absetzkurve" data-acht="ja"></div>
+
 ## Off-label zum Abnehmen: was beim Absetzen zu beachten ist
 
 Wer Ozempic ohne Diabetes zum Abnehmen genommen hat, setzt meist aus Kostengründen, wegen Nebenwirkungen oder wegen eines Engpasses ab. Drei Punkte:
@@ -51,6 +55,8 @@ Wer Ozempic ohne Diabetes zum Abnehmen genommen hat, setzt meist aus Kostengrün
 - **Der Verlauf entspricht dem von Wegovy**, nur mit niedrigerer Ausgangsdosis: Appetit zurück in Woche 2 bis 5, Zunahme ab Woche 8.
 - **Ob ein anderes Präparat oder eine andere Therapie in Frage kommt,** beurteilt allein die Ärztin oder der Arzt.
 - **Die Vorbereitung ist dieselbe wie bei jeder Abnehmspritze**: Krafttraining während der Therapie beginnen (in der S-LiTE-Studie hielten Trainierende ihr Gewicht ein Jahr nach dem Absetzen, nach dem Medikament allein lag die Zunahme 6 kg höher<sup><a href="#fn-jensen2024">6</a></sup>), Protein auf 1,2 bis 1,6 g pro kg Körpergewicht bringen,<sup><a href="#fn-leidy2015">7</a></sup> wöchentlich wiegen, Arzttermin für Woche 8 bis 12. Der Plan dazu: [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
+
+<div data-interaktiv="slite"></div>
 
 ## Ausschleichen bei Ozempic
 

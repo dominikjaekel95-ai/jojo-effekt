@@ -32,6 +32,8 @@ Nach der letzten Dosis läuft eine Uhr. In Studien wird die Gewichtszunahme etwa
 
 > **Kurz gesagt:** Wochen 1–4 Routinen bauen (Training, Protein, Wiegen), Wochen 5–8 den zurückkehrenden Appetit auffangen (Volumen, Struktur), Wochen 9–12 stabilisieren und Regeln für danach festlegen. Ob und wie du das Medikament absetzt, entscheidest du mit deiner Ärztin.
 
+<div data-interaktiv="plan12" data-vorlage="halten"></div>
+
 ## Vorher: Was der Plan kann und was nicht
 
 Der Plan verhindert den Jojo-Effekt nicht. Das kann kein Plan und kein Produkt. Er sorgt dafür, dass die Dinge, die in Studien den Unterschied machen, zur Gewohnheit werden, bevor der Hunger da ist. In der dänischen S-LiTE-Studie hielten Teilnehmende, die während der Medikamententherapie trainiert hatten, ihr Gewicht ein Jahr nach Behandlungsende; nach dem Medikament allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">2</a></sup> Das ist die Größenordnung, um die es geht.
@@ -85,6 +87,8 @@ Die Zunahme wird in Studien ab jetzt messbar.<sup><a href="#fn-wu2025">1</a></su
 - **Die Wiege-Regel festschreiben.** Die Zonen aus der STOP-Regain-Studie:<sup><a href="#fn-wing2006">8</a></sup> bis +1,4 kg nichts tun; ab +1,4 kg zwei Wochen lang Protein und Training protokollieren; ab +2,3 kg Ursachen klären und den Kontrolltermin vorziehen. Aufschreiben, an den Kühlschrank.
 - **Training verstetigen.** Zwei Einheiten bleiben. Wer mag, nimmt eine dritte dazu oder ergänzt Ausdauer. Was nicht geht: pausieren, „weil das Gewicht jetzt stabil ist“.
 - **Die Woche danach planen.** Was passiert im Urlaub, bei Krankheit, in stressigen Wochen? Eine Minimalversion festlegen: ein Training, Protein zum Frühstück, einmal wiegen. Für Weihnachten und andere Feiertage, die oft genau in diese Wochen fallen, steht ein eigener Plan unter [Feiertage nach der Abnehmspritze](/wissen/feiertage-nach-abnehmspritze/).
+
+<div data-interaktiv="zonen"></div>
 
 **Ziel am Ende von Phase 3:** Gewicht stabil, Training seit 12 Wochen regelmäßig, eine schriftliche Regel für die Zeit danach, ein Arzttermin hinter dir.
 

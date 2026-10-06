@@ -31,6 +31,8 @@ Die Waage ist das einzige Messgerät, das jeder zu Hause hat, und das, über das
 
 Mindestens einmal pro Woche; am besten belegt ist tägliches Wiegen, wenn es Teil eines Plans ist. In der STOP-Regain-Studie mit 314 Erwachsenen, die mindestens 10 % abgenommen hatten, wogen sich die Teilnehmenden der beiden Programme täglich und hatten feste Zonen mit festgelegter Reaktion; nach 18 Monaten hatten 45,7 % der persönlich betreuten Gruppe 2,3 kg oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 %.<sup><a href="#fn-wing2006">1</a></sup> Tägliches Wiegen war dabei mit einem geringeren Risiko verbunden, 2,3 kg oder mehr zuzunehmen.
 
+<div data-interaktiv="punktfeld" data-vorlage="stop-regain"></div>
+
 Beobachtungsdaten zeigen dasselbe Muster. Im National Weight Control Registry, 3003 Menschen, die mindestens 13,6 kg abgenommen und ein Jahr gehalten hatten, nahmen diejenigen, die im Folgejahr seltener auf die Waage stiegen als zuvor, im Mittel 4,0 kg zu; wer häufiger wog, 1,1 kg.<sup><a href="#fn-butryn2007">2</a></sup> In einem zwölfmonatigen Abnehmprogramm mit vernetzten Waagen lagen die Teilnehmenden, die konstant an mehr als sechs Tagen pro Woche wogen, nach einem Jahr bei −9,9 %; wer das Wiegen schleifen ließ, bei +0,65 %.<sup><a href="#fn-zheng2016">3</a></sup> Und in Alltagsdaten von 10 000 Nutzern vernetzter Waagen stieg das Gewicht in Wiegepausen von mindestens 30 Tagen bei Adipositas im Mittel um 1,37 kg.<sup><a href="#fn-vuorinen2021">4</a></sup>
 
 Das sind Zusammenhänge, keine Beweise: Wer sich wiegt, tut oft auch sonst mehr. Deshalb die nächste Frage.
@@ -48,6 +50,8 @@ Die Zonen aus STOP Regain, bezogen auf dein Gewicht am Ende der Abnahme:<sup><a 
 - **Grün, bis +1,4 kg: nichts tun.** Das ist der Bereich, in dem Wasser, Salz, Zyklus und Darminhalt schwanken.
 - **Gelb, +1,4 bis +2,3 kg: zwei Wochen gegensteuern.** Protein an jedem Tag prüfen, zwei Krafteinheiten, Flüssigkalorien streichen, Schlaf. Dann wieder wiegen.
 - **Rot, ab +2,3 kg: Ursachen klären.** Hat das Gegensteuern zwei Wochen lang nicht gewirkt, gehört das Gewicht in den Kontrolltermin; nach der letzten Dosis ist er ohnehin für Woche 8 bis 12 vorgesehen.
+
+<div data-interaktiv="zonen"></div>
 
 Die Schwellen stammen aus einer Studie ohne Medikament; die Übertragung auf die Zeit nach der Spritze ist plausibel, aber nicht geprüft. Der [Gewichtskorridor](/werkzeuge/gewichtskorridor/) rechnet die Zonen für dein Startgewicht aus; der [12-Wochen-Plan](/wissen/gewicht-halten-nach-abnehmspritze/) legt fest, wann du die Regel aufschreibst.
 

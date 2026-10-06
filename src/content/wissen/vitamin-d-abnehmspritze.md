@@ -34,6 +34,8 @@ Vitamin D ist das Supplement, das in Deutschland fast jeder irgendwann nimmt, of
 
 Vitamin D kommt nur zu einem kleinen Teil aus der Nahrung (fetter Fisch, Eier, Pilze); den Hauptteil bildet die Haut unter Sonnenlicht. In Deutschland reicht die Sonne dafür etwa von April bis September. Die DEGS1-Studie des Robert Koch-Instituts mit fast 7.000 Erwachsenen fand entsprechend: 30,2 % hatten Werte unter 30 nmol/l, also einen Mangel, 61,6 % lagen unter 50 nmol/l; im Winter waren es deutlich mehr als im Sommer.<sup><a href="#fn-rabenberg2015">1</a></sup>
 
+<div data-interaktiv="punktfeld" data-vorlage="vitamin-d"></div>
+
 Das hat mit der Spritze nichts zu tun, es ist der Normalzustand. Die Spritze ändert zwei Dinge: Die Nahrungsquellen werden bei kleinen Portionen noch unwichtiger, und wer wenig Energie hat, geht seltener raus. Beides macht einen Mangel wahrscheinlicher, aber nicht die Spritze selbst.
 
 ## Was die zugelassenen Angaben sagen
@@ -53,6 +55,8 @@ Für die Zeit nach der Spritze zählt die erste Angabe. Beim Abnehmen mit Semagl
 | Sehr geringe Energiezufuhr unter der Spritze | Ergänzung von Mikronährstoffen insgesamt sinnvoll<sup><a href="#fn-almandoz2024">4</a></sup> |
 
 Das BfR schlägt für Nahrungsergänzungsmittel eine Tageshöchstmenge von 20 µg vor.<sup><a href="#fn-bfrHoechstmengen2021">5</a></sup> Präparate mit 50 µg und mehr pro Tag, wie sie im Handel üblich sind, gehören nicht in die Dauer-Eigentherapie: Vitamin D wird im Fettgewebe gespeichert, und sehr hohe Dosen über Monate können den Kalziumspiegel gefährlich anheben.
+
+<div data-interaktiv="streifen" data-vorlage="vitamin-d-jahr"></div>
 
 ## Der Blutwert: wann er sich lohnt
 

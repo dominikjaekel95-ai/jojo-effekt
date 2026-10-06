@@ -27,6 +27,8 @@ faq:
 
 Wer die Abnehmspritze absetzt, hört oft denselben Satz: „Dann kommt eh alles zurück.“ Das stimmt so pauschal nicht. Aber es stimmt öfter, als vielen lieb ist. Hier steht, was die Studien zeigen, warum der Körper nach dem Absetzen gegen dich arbeitet, und welche drei Dinge den Unterschied machen. Was in den Wochen nach der letzten Dosis konkret passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
+<div data-interaktiv="absetzkurve" data-acht="ja" data-komposition="ja"></div>
+
 > **Kurz gesagt:** Ein Jahr nach dem Absetzen von Semaglutid waren im Mittel zwei Drittel des verlorenen Gewichts zurück.<sup><a href="#fn-wilding2022ext">1</a></sup> Die Zunahme beginnt etwa ab Woche 8.<sup><a href="#fn-wu2025">4</a></sup> Wer in der Therapiezeit trainiert hat, hielt sein Gewicht in einer Studie auch ein Jahr ohne Medikament.<sup><a href="#fn-jensen2024">10</a></sup>
 
 ## Was der Jojo-Effekt nach der Abnehmspritze ist
@@ -78,6 +80,8 @@ Vier Mechanismen greifen ineinander. Der erste ist offensichtlich: Die Appetitbr
 
 Die Frage „absetzen oder nicht“ stellt sich für die meisten früher als geplant. In einer US-Auswertung von Versorgungsdaten hatten 64,8 % der Menschen ohne Typ-2-Diabetes ihre GLP-1-Therapie innerhalb eines Jahres beendet.<sup><a href="#fn-rodriguez2025">9</a></sup> Gründe sind Kosten, Nebenwirkungen, Lieferengpässe, ein erreichtes Ziel oder ein Kinderwunsch. Adipositas-Leitlinien betrachten Medikamente als Teil einer langfristigen Therapie,<sup><a href="#fn-dagLeitlinie">14</a></sup> aber die Realität sieht anders aus. Umso wichtiger ist, was in der Zeit danach passiert.
 
+<div data-interaktiv="punktfeld" data-vorlage="absetzrate"></div>
+
 ## Wie vermeide ich den Jojo-Effekt nach der Abnehmspritze?
 
 Mit drei Dingen, die in Studien den Unterschied machen: Krafttraining an mindestens zwei Tagen pro Woche (nach Liraglutid allein lag die Zunahme im Jahr nach Therapieende 6,0 kg höher als nach einem Trainingsprogramm, S-LiTE),<sup><a href="#fn-jensen2024">10</a></sup> 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag (Übersichtsarbeit Leidy 2015)<sup><a href="#fn-leidy2015">11</a></sup> und Dranbleiben an einer Struktur, die mit normalem Appetit funktioniert, mit festem Wiegetag und vorher festgelegter Reaktionsschwelle. Ganz verhindern lässt sich die Zunahme damit nicht; ohne solche Maßnahmen waren in der STEP-1-Verlängerung nach einem Jahr zwei Drittel zurück.<sup><a href="#fn-wilding2022ext">1</a></sup> Die Einzelheiten:
@@ -86,9 +90,13 @@ Mit drei Dingen, die in Studien den Unterschied machen: Krafttraining an mindest
 
 Die klarste Evidenz kommt aus Dänemark. In der S-LiTE-Studie nahmen Erwachsene mit Adipositas zuerst mit einer Diät ab und wurden dann ein Jahr lang entweder mit Liraglutid, einem betreuten Trainingsprogramm, beidem oder Placebo behandelt. Ein Jahr nach dem Ende aller Behandlungen hatten die Gruppen mit Training ihr Gewicht und ihre Körperzusammensetzung gehalten. Die Gruppe, die nur das Medikament bekommen hatte, hatte im Schnitt 6 kg mehr zugenommen als die Trainingsgruppe.<sup><a href="#fn-jensen2024">10</a></sup> Krafttraining während einer Kalorienreduktion verhindert außerdem den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">12</a></sup> Die WHO empfiehlt an mindestens zwei Tagen pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">13</a></sup> Zwei Einheiten à 30 Minuten reichen für den Einstieg.
 
+<div data-interaktiv="slite"></div>
+
 ### Protein: genug, verteilt, zuerst
 
 Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">11</a></sup> Für eine Person mit 80 kg sind das 96 bis 128 g – etwa das Doppelte dessen, was viele unter der Spritze essen. Praktisch heißt das: mindestens etwa 25 bis 30 g Protein pro Mahlzeit, und bei jeder Mahlzeit das Protein zuerst. Wie das geht, steht im Artikel [Protein bei der Abnehmspritze: Wie viel?](/wissen/protein-abnehmspritze/).
+
+<div data-interaktiv="protein"></div>
 
 ### Struktur statt Willenskraft
 

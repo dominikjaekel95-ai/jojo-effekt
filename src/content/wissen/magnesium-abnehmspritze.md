@@ -34,6 +34,8 @@ Magnesium ist nach Kreatin das Supplement, nach dem Menschen unter der Abnehmspr
 
 Magnesium steckt vor allem in Lebensmitteln mit Volumen: Vollkorn, Hülsenfrüchte, grünes Gemüse, Nüsse und Kerne. Genau diese Lebensmittel fallen bei kleinem Appetit als Erstes weg, weil sie sättigen, bevor der Teller leer ist. Wer unter der Spritze auf 1.000 bis 1.200 Kalorien am Tag kommt, isst oft Joghurt, Eier, etwas Fleisch oder Fisch und wenig davon, was Magnesium liefert. Die Expertengruppe um Almandoz empfiehlt deshalb bei sehr geringer Energiezufuhr unter Adipositas-Medikamenten eine Ergänzung von Mikronährstoffen.<sup><a href="#fn-almandoz2024">3</a></sup>
 
+<div data-interaktiv="punktfeld" data-vorlage="magnesium"></div>
+
 Wie viel die typischen Lieferanten bringen, zeigt die Tabelle. Die Werte sind aus dem Bundeslebensmittelschlüssel gerundet.<sup><a href="#fn-bls">4</a></sup>
 
 | Lebensmittel, Portion | Magnesium, etwa |
@@ -48,6 +50,8 @@ Wie viel die typischen Lieferanten bringen, zeigt die Tabelle. Die Werte sind au
 | Mineralwasser, 1 Liter | 20 bis 110 mg, je nach Sorte |
 
 Lesart: Mit Haferflocken zum Frühstück, einer Handvoll Kerne und einem magnesiumreichen Mineralwasser kommen auch bei kleinen Portionen rund 300 mg zusammen. Ohne diese drei wird es eng.
+
+<div data-interaktiv="teller" data-vorlage="magnesium"></div>
 
 ## Was die zugelassenen Angaben sagen
 

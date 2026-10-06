@@ -6,7 +6,7 @@ category: "Präparate"
 order: 15
 pubDate: 2026-10-01
 keywords: ["saxenda absetzen", "saxenda absetzen gewicht", "saxenda absetzen was passiert", "liraglutid absetzen", "saxenda jojo effekt", "saxenda halbwertszeit", "saxenda ausschleichen"]
-sources: ["fachinfoSaxenda", "pisunyer2015", "jensen2024", "lundgren2021", "wu2025", "sumithran2011", "leidy2015", "who2020", "wilding2022ext"]
+sources: ["fachinfoSaxenda", "pisunyer2015", "jensen2024", "lundgren2021", "wu2025", "sumithran2011", "leidy2015", "who2020", "wilding2022ext", "fachinfoWegovy", "fachinfoMounjaro"]
 related: ["abnehmspritze-absetzen", "wegovy-absetzen", "gewicht-halten-nach-abnehmspritze"]
 faq:
   - q: "Wie lange bleibt Saxenda nach der letzten Spritze im Körper?"
@@ -22,6 +22,8 @@ faq:
 ---
 
 Saxenda ist die Abnehmspritze, die täglich gespritzt wird, und das ändert beim Absetzen mehr, als viele erwarten. Hier steht, was für Liraglutid spezifisch ist. Die Grundlagen für alle Abnehmspritzen stehen im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+
+<div data-interaktiv="wirkstoffspiegel" data-wirkstoffe="liraglutid,semaglutid,tirzepatid" data-tag="3"></div>
 
 > **Kurz gesagt:** Liraglutid ist nach zwei bis drei Tagen abgebaut, der Appetit kommt innerhalb von Tagen zurück.<sup><a href="#fn-fachinfoSaxenda">1</a></sup> Die beste Absetz-Studie zu diesem Wirkstoff zeigt: Wer während der Therapie trainiert hatte, hielt das Gewicht ein Jahr nach dem Absetzen; ohne Training kam es zurück.<sup><a href="#fn-jensen2024">3</a></sup> Ob und wie du absetzt, entscheidest du mit deiner Ärztin.
 
@@ -41,6 +43,8 @@ Semaglutid hat eine Halbwertszeit von etwa einer Woche, Tirzepatid von etwa fün
 
 Es gibt bei Saxenda also kein Übergangsfenster von mehreren Wochen, in dem die Wirkung langsam ausläuft. Die Routinen müssen stehen, bevor die letzte Spritze gesetzt ist.
 
+<div data-interaktiv="zeitachse" data-wirkstoffe="liraglutid,semaglutid"></div>
+
 ## Was mit dem Gewicht passiert: die S-LiTE-Studie
 
 Für Liraglutid gibt es die aussagekräftigste Absetz-Studie überhaupt, weil sie Medikament und Training direkt verglichen hat. In der dänischen S-LiTE-Studie nahmen Erwachsene mit Adipositas zunächst acht Wochen mit einer Diät ab und wurden dann ein Jahr lang entweder mit Liraglutid 3 mg, einem betreuten Trainingsprogramm, beidem oder Placebo behandelt.<sup><a href="#fn-lundgren2021">4</a></sup> Danach wurde alles beendet und ein weiteres Jahr beobachtet:<sup><a href="#fn-jensen2024">3</a></sup>
@@ -52,6 +56,8 @@ Für Liraglutid gibt es die aussagekräftigste Absetz-Studie überhaupt, weil si
 | Liraglutid plus Training | Gewicht gehalten; gegenüber Liraglutid allein 5,1 kg weniger Gewicht und 2,3 Prozentpunkte weniger Körperfett |
 
 Die Botschaft ist für Saxenda-Nutzer besonders direkt: Das Medikament allein hinterlässt nach dem Absetzen nichts, was hält. Training während der Therapie schon. Der Mechanismus dahinter ist bei allen Abnehmspritzen gleich: Nach jedem Gewichtsverlust steigt das Hungerhormon Ghrelin und sinkt Leptin, noch ein Jahr nach der Diät messbar.<sup><a href="#fn-sumithran2011">6</a></sup>
+
+<div data-interaktiv="slite"></div>
 
 ## Ausschleichen: möglich, aber unbelegt
 

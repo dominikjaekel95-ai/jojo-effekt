@@ -44,9 +44,13 @@ B12 wird von Mikroorganismen gebildet und reichert sich in tierischen Lebensmitt
 
 Die Expertengruppe um Almandoz nennt B12 ausdrücklich unter den Mikronährstoffen, die bei sehr geringer Energiezufuhr unter Adipositas-Medikamenten ergänzt werden sollten.<sup><a href="#fn-almandoz2024">6</a></sup>
 
+<div data-interaktiv="teller" data-vorlage="b12"></div>
+
 ## Metformin: der belegte Risikofaktor
 
 Viele Menschen mit Typ-2-Diabetes nehmen Semaglutid oder Tirzepatid zusammen mit Metformin. Metformin verringert die Aufnahme von B12 im Darm. Die Diabetes Prevention Program Outcomes Study verfolgte das über Jahre: Nach fünf Jahren hatten 4,3 % der Teilnehmenden unter Metformin einen B12-Mangel, unter Placebo 2,3 %, und das Risiko stieg mit jedem weiteren Jahr der Einnahme.<sup><a href="#fn-aroda2016">2</a></sup> Die amerikanische Diabetes-Gesellschaft empfiehlt deshalb regelmäßige Kontrollen des Spiegels bei Metformin-Therapie, besonders bei Nervenbeschwerden oder Blutarmut.<sup><a href="#fn-adaSoc2024">3</a></sup>
+
+<div data-interaktiv="punktfeld" data-vorlage="b12"></div>
 
 Wer also Metformin nimmt und zusätzlich unter der Spritze weniger tierische Lebensmittel isst, hat zwei Gründe für einen niedrigen Wert. Das ist der Fall, in dem der Blutwert nicht optional ist. Mehr zum Absetzen bei Typ-2-Diabetes steht unter [Ozempic absetzen](/wissen/ozempic-absetzen/).
 

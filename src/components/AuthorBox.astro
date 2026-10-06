@@ -1,35 +1,68 @@
 ---
-/** Autoren-/Prüfbox für E-E-A-T. Platzhalter für Michis Name/Qualifikation in src/data/site.ts. */
+/**
+ * Absender unter Artikeln und Glossar-Einträgen (E-E-A-T): „Ein Projekt von Dominik Jäkel, Berlin“, ohne Foto, dazu
+ * wörtlich der abgestimmte Arztsatz (site.medicalTeamSentence, CLAIMS.md Abschnitt H). Sonst nichts Ärztliches.
+ * „Fachlich geprüft“ erscheint nur, wenn in src/data/site.ts ein reviewer eingetragen ist.
+ */
 import { site } from '../data/site';
 interface Props { pubDate: Date; updatedDate?: Date }
 const { pubDate, updatedDate } = Astro.props;
-const fmt = (d: Date) => d.toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+const fmt = (d: Date) => d.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Berlin' });
 ---
-<aside class="mt-10 rounded-xl2 border border-line bg-paper-2 p-5 text-sm text-ink-2" aria-label="Autor und Quellen">
-  <div class="grid gap-4 sm:grid-cols-2">
-    <div>
-      <p class="eyebrow">Autor</p>
-      <p class="mt-1 font-semibold text-ink">{site.owner.name}</p>
-      <p>Gründer von {site.name}, {site.owner.city}. Recherchiert und schreibt die Artikel auf Basis der verlinkten Studien.</p>
-    </div>
-    <div>
-      {site.reviewer ? (
-        <>
-          <p class="eyebrow">Fachliche Prüfung</p>
-          <p class="mt-1 font-semibold text-ink">{site.reviewer.name}</p>
-          <p>{site.reviewer.title}. Prüft alle Aussagen zu Ernährung, Training und gesundheitsbezogenen Angaben.</p>
-        </>
-      ) : (
-        <>
-          <p class="eyebrow">Quellen</p>
-          <p class="mt-1 font-semibold text-ink">Jede Zahl mit Link zur Originalstudie</p>
-          <p>Die Quellen stehen unter dem Artikel. Eine fachliche Gegenprüfung durch eine Ernährungswissenschaftlerin oder einen Ernährungswissenschaftler ist noch nicht erfolgt; wir vermerken sie hier, sobald sie stattgefunden hat.</p>
-        </>
-      )}
-    </div>
-  </div>
-  <p class="mt-4 text-xs text-ink-3">
-    Veröffentlicht am {fmt(pubDate)}{updatedDate && <> · Aktualisiert am {fmt(updatedDate)}</>}. Wir aktualisieren Artikel, wenn neue Studien erscheinen.
-    Mehr zur Arbeitsweise unter <a href="/ueber/" class="underline">Über diese Seite</a>. Du hast selbst abgesetzt? <a href="/erfahrungen/" class="underline">Erzähl uns, wie es dir ergangen ist</a>.
+<aside class="ab" aria-label="Autor und Quellen">
+  <p class="ab-name">Ein Projekt von {site.owner.name}, {site.owner.city}</p>
+  <p class="ab-text">Recherchiert und geschrieben auf Basis der verlinkten Studien. Jede Zahl führt per Fußnote zur Originalquelle unter dem Artikel.</p>
+  {site.reviewer && (
+    <p class="ab-text">Fachliche Prüfung: {site.reviewer.name}, {site.reviewer.title}.</p>
+  )}
+  <p class="ab-arzt">{site.medicalTeamSentence}</p>
+  <p class="ab-fuss">
+    Veröffentlicht am {fmt(pubDate)}{updatedDate && <span>, aktualisiert am {fmt(updatedDate)}</span>}. Wir aktualisieren Artikel, wenn neue Studien erscheinen. Mehr zur Arbeitsweise unter <a href="/ueber/">Über diese Seite</a>. Du hast selbst abgesetzt? <a href="/erfahrungen/">Erzähl uns, wie es dir ergangen ist</a>.
   </p>
 </aside>
+
+<style>
+  .ab {
+    margin-top: 3.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-ink);
+    color: var(--color-ink-2);
+  }
+  .ab-name {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: 540;
+    font-stretch: 112%;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+  }
+  .ab-text {
+    margin-top: 0.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    max-width: 40em;
+  }
+  .ab-arzt {
+    margin-top: 0.9rem;
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--color-ink);
+  }
+  .ab-fuss {
+    margin-top: 0.9rem;
+    font-size: 0.8125rem;
+    line-height: 1.55;
+    color: var(--color-ink-3);
+  }
+  .ab-fuss a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .ab-fuss a:hover {
+    color: var(--color-ink);
+  }
+</style>

@@ -26,6 +26,8 @@ faq:
 
 Die meisten Menschen, die mit einer Abnehmspritze anfangen, hören innerhalb eines Jahres wieder auf: In einer großen US-Auswertung waren es 64,8 % der Menschen ohne Typ-2-Diabetes.<sup><a href="#fn-rodriguez2025">1</a></sup> Trotzdem gibt es kaum verlässliche Informationen darüber, was danach passiert. Dieser Artikel fasst zusammen, was die Studien zeigen – Woche für Woche – und wie du die Zeit nach der letzten Dosis vorbereitest.
 
+<div data-interaktiv="punktfeld" data-vorlage="absetzrate"></div>
+
 > **Kurz gesagt:** Der Wirkstoff ist nach fünf bis sieben Wochen abgebaut. Der Appetit kommt früher zurück. Die Gewichtszunahme ist in Studien ab etwa Woche 8 messbar.<sup><a href="#fn-wu2025">2</a></sup> Wer vorbereitet ist, hat einen Vorsprung, den die Studien mit rund 6 kg beziffern.<sup><a href="#fn-jensen2024">6</a></sup>
 
 ## Was passiert, wenn man die Abnehmspritze absetzt?
@@ -35,6 +37,8 @@ Der Wirkstoff wird über Wochen abgebaut, der Appetit kommt zurück, und ohne Ge
 ## Wie schnell nimmt man nach dem Absetzen zu?
 
 Messbar ab etwa Woche 8: In einer Meta-Analyse randomisierter Studien war der Gewichtsunterschied zur Kontrollgruppe ab etwa acht Wochen nach dem Absetzen signifikant und stieg bis etwa Woche 20 weiter.<sup><a href="#fn-wu2025">2</a></sup> Nach einem Jahr ohne Medikament lag das Gewicht in der STEP-1-Verlängerung bei minus 5,6 % statt minus 17,3 % gegenüber dem Start; zwei Drittel des Verlusts waren zurück.<sup><a href="#fn-wilding2022ext">3</a></sup> Die ersten ein bis zwei Kilo in den ersten Wochen sind meist Wasser und Darminhalt, weil du wieder mehr isst; die Fettzunahme kommt langsamer und bleibt, wenn nichts dagegen steht.
+
+<div data-interaktiv="absetzkurve" data-acht="ja"></div>
 
 ## Wie lange wirkt die Abnehmspritze nach dem Absetzen?
 
@@ -55,6 +59,8 @@ Was auch immer der Grund ist: Ob und wie du dein Medikament absetzt, besprichst 
 ## Was nach der letzten Dosis passiert – Woche für Woche
 
 Die folgende Übersicht fasst zusammen, was aus Pharmakologie und Studien ableitbar ist. Individuell weicht der Verlauf ab. Wer die Punkte als Kalenderdaten für die eigene letzte Dosis sehen will, nutzt den [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/).
+
+<div data-interaktiv="zeitachse" data-wirkstoffe="semaglutid,tirzepatid"></div>
 
 <figure class="my-8">
   <img src="/grafiken/zeitachse-nach-letzter-dosis.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Der Wirkstoff ist nach etwa fünf bis sieben Wochen weitgehend abgebaut, der Appetit kehrt ab Woche 2 bis 5 zurück, die Gewichtszunahme ist ab Woche 8 messbar und steigt bis etwa Woche 20. Ein Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis ist markiert." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
@@ -91,6 +97,8 @@ Die Entscheidung trifft deine Ärztin oder dein Arzt mit dir. Was du selbst beei
 Der beste Zeitpunkt, die Zeit nach der Spritze vorzubereiten, ist die Zeit mit der Spritze. Die Studien geben dafür eine klare Reihenfolge:
 
 **1. Krafttraining zur Gewohnheit machen.** Das ist der Faktor mit der besten Evidenz. In der dänischen S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach dem Ende der Behandlung; nach Liraglutid allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup> Fang während der Therapie an, damit die Routine steht, wenn der Hunger kommt.
+
+<div data-interaktiv="slite"></div>
 
 **2. Protein auf Zielmenge bringen.** Übersichtsarbeiten empfehlen 1,2 bis 1,6 g pro kg Körpergewicht und Tag, verteilt auf die Mahlzeiten.<sup><a href="#fn-leidy2015">7</a></sup> Unter der Spritze essen viele deutlich weniger. Wer die Menge schon vor dem Absetzen erreicht, hat die Muskeln besser geschützt und eine Ernährungsstruktur, die auch mit Appetit funktioniert.
 

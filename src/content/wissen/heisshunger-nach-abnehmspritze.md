@@ -26,6 +26,8 @@ faq:
 
 Unter der Spritze war Essen eine Nebensache. Ein paar Wochen nach der letzten Dosis ist es plötzlich das Hauptthema: Gedanken ans Essen, Lust auf Süßes und Salziges, ein Hunger, der sich anders anfühlt als vor der Therapie. Das ist kein Charakterfehler, sondern Biologie, und man kann damit umgehen. Hier steht, was passiert und was hilft. Der Gesamtverlauf nach der letzten Dosis steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
+<div data-interaktiv="zeitachse" data-wirkstoffe="semaglutid"></div>
+
 > **Kurz gesagt:** Heißhunger nach dem Absetzen hat zwei Ursachen: Die Appetitbremse fällt weg, und die Hormone stehen nach Gewichtsverlust auf „Nachfüllen“. Was hilft: Protein zuerst, Volumen, feste Mahlzeiten, Schlaf, keine Flüssigkalorien, Trigger kennen, Krafttraining. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
 
 ## Was im Körper passiert
@@ -45,6 +47,8 @@ Hunger ist ein Körpersignal: Er kommt langsam, ist unspezifisch und verschwinde
 ### 1. Protein zuerst, bei jeder Mahlzeit
 
 Protein sättigt pro Kalorie stärker als Kohlenhydrate oder Fett. Übersichtsarbeiten empfehlen beim Abnehmen und Gewichthalten 1,2 bis 1,6 g pro kg Körpergewicht und Tag, verteilt auf drei bis vier Mahlzeiten.<sup><a href="#fn-leidy2015">3</a></sup> Wer Heißhunger am Nachmittag oder Abend hat, prüft zuerst das Frühstück: Ein Brötchen mit Marmelade hat unter 5 g Protein, 200 g Skyr 22 g. Der Unterschied zeigt sich um 16 Uhr.
+
+<div data-interaktiv="protein"></div>
 
 ### 2. Volumen und Ballaststoffe
 
@@ -71,6 +75,8 @@ Eine Woche lang notieren: Wann kam der Heißhunger, was ging voraus, was hast du
 ### 7. Krafttraining
 
 Nicht gegen den Heißhunger direkt, aber gegen das, was er anrichtet. In der S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach Therapieende, nach dem Medikament allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">7</a></sup> Wer trainiert, kann sich außerdem mehr Protein leisten, und das schließt den Kreis zu Punkt 1. Der Plan steht unter [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/).
+
+<div data-interaktiv="slite"></div>
 
 ## Was nicht hilft
 

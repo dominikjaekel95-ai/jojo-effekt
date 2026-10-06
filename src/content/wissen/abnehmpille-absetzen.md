@@ -47,7 +47,11 @@ Semaglutid ist Semaglutid. Der Wirkstoff bindet an denselben Rezeptor, dämpft d
 
 In der Zulassungsstudie OASIS 4 verloren 307 Erwachsene ohne Diabetes mit der 25-mg-Tablette in 64 Wochen im Mittel 13,6 % ihres Gewichts, unter Placebo 2,2 %; wer die Tablette durchgehend nahm, 16,6 %.<sup><a href="#fn-wharton2025oasis4">8</a></sup> Für die Spritze mit 2,4 mg lag der Wert in STEP 1 nach 68 Wochen bei 14,9 % gegenüber 2,4 %.<sup><a href="#fn-wilding2021step1">9</a></sup> Die beiden Studien sind nicht direkt vergleichbar, aber die Größenordnung ist dieselbe. Ein Vergleich beider Formen im Einzelnen steht unter [Abnehmpille oder Spritze](/wissen/abnehmpille-oder-spritze/).
 
+<div data-interaktiv="zulassung" data-zeilen="oasis4,step1"></div>
+
 Für die Zeit danach zählt vor allem eines: Die Halbwertszeit ist bei Tablette und Spritze gleich, etwa eine Woche.<sup><a href="#fn-fachinfoRybelsus">2</a></sup> Nach der letzten Tablette ist nach einer Woche noch die Hälfte im Körper, nach zwei Wochen ein Viertel, nach fünf Wochen etwa 3 %. Die Auswaschphase dauert also fünf bis sieben Wochen, genau wie nach der letzten Spritze. Dass die Tablette täglich genommen wird, ändert daran nichts. Entscheidend ist, wie lange der Körper den Wirkstoff abbaut, nicht wie oft er hineinkommt.
+
+<div data-interaktiv="wirkstoffspiegel" data-wirkstoffe="semaglutid"></div>
 
 ## Was nach dem Absetzen passiert: die Datenlücke
 

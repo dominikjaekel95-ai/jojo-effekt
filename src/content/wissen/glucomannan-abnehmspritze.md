@@ -64,6 +64,8 @@ Werte aus dem Bundeslebensmittelschlüssel, gerundet.<sup><a href="#fn-bls">7</a
 
 Lesart: Die 3 g der Angabe sind ein Zehntel des DGE-Richtwerts. Glucomannan ist kein Weg zu 30 g, sondern ein Werkzeug mit einer eng gefassten Angabe. Die 30 g kommen aus Hülsenfrüchten, Vollkorn, Gemüse und Beeren; wie ein Tag damit aussieht, steht unter [Ernährung nach der Abnehmspritze](/wissen/ernaehrung-nach-abnehmspritze/).
 
+<div data-interaktiv="teller" data-vorlage="ballaststoffe"></div>
+
 ## Sicherheit: Wasser, Abstand, Ausnahmen
 
 - **Wasser.** Glucomannan quillt stark. Jede Portion mit ein bis zwei Gläsern Wasser, nie trocken, nie „auf dem Weg“. Ohne Flüssigkeit kann es in der Speiseröhre quellen; darauf weist der Pflichthinweis hin.<sup><a href="#fn-euClaims">1</a></sup>

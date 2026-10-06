@@ -40,6 +40,8 @@ Drei Befunde, die den Unterschied ausmachen:
 
 Spazierengehen, Radfahren und Schwimmen sind gut für Herz und Kopf. Sie ersetzen aber nicht den Reiz, den Muskeln brauchen, um zu bleiben.
 
+<div data-interaktiv="zusammensetzung"></div>
+
 <figure class="my-8">
   <img src="/grafiken/training-s-lite.png" alt="Balkendiagramm aus der S-LiTE-Nachbeobachtung: Im Jahr nach Therapieende nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach dem Trainingsprogramm (95-Prozent-Konfidenzintervall 2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau erhalten." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
   <figcaption class="mt-2 text-sm text-ink-3">Training vor dem Absetzen: In der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr nach Therapieende 6,0 kg mehr zu als nach dem Trainingsprogramm.<sup><a href="#fn-jensen2024">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
@@ -82,6 +84,8 @@ Ablauf einer Einheit: 3 Minuten Aufwärmen (zügig gehen, Arme kreisen, 10 Knieb
 | 11–12 | 3 × 8, schwerer | Widerstand erhöhen, Wiederholungen zurück auf 8, das ist die eigentliche Steigerung |
 
 Eine Regel für die ganze Zeit: Wenn du in allen Sätzen 12 saubere Wiederholungen schaffst, wird die Übung beim nächsten Mal schwerer, nie länger.
+
+<div data-interaktiv="plan12" data-vorlage="training"></div>
 
 ## Was das Training braucht: Protein und, wenn du willst, Kreatin
 

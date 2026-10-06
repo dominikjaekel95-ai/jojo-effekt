@@ -42,7 +42,7 @@ export function protein(a: Attr, ctx: Ctx): string {
         (m, i) =>
           `<div class="p-schale${i === 2 && mz === 3 ? ' aus' : ''}"${i === 2 ? proWahl('k', 'mahlzeiten', { '3': 'aus', '4': '' }) : ''} style="--i:${i}">` +
           `<span class="p-sch"><i data-p-schale style="transform:scaleY(${Math.min(1, hi / mz / 60).toFixed(3)})"></i></span>` +
-          `<span class="p-sch-l">${m}<b><span data-p-mlo>${Math.round(lo / mz)}</span>–<span data-p-mhi>${Math.round(hi / mz)}</span> g</b></span></div>`,
+          `<span class="p-sch-l">${m} <b><span data-p-mlo>${Math.round(lo / mz)}</span>–<span data-p-mhi>${Math.round(hi / mz)}</span> g</b></span></div>`,
       )
       .join('') +
     `</div>`;

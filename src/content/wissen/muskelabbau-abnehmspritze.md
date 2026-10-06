@@ -6,7 +6,7 @@ category: "Muskeln"
 image: /grafiken/koerperzusammensetzung-step-1.png
 order: 3
 pubDate: 2026-09-30
-updatedDate: 2026-10-06
+updatedDate: 2026-10-07
 keywords: ["abnehmspritze muskelabbau", "abnehmspritze muskelverlust", "muskelabbau abnehmspritze vermeiden", "wegovy muskelabbau", "ozempic muskelabbau", "mounjaro muskelverlust", "abnehmspritze krafttraining"]
 sources: ["wilding2021dxa", "sardeli2018", "leidy2015", "who2020", "jensen2024", "euClaims", "kreider2017", "dgeProtein", "fothergill2016", "look2025surmount1dxa"]
 related: ["protein-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -91,7 +91,7 @@ Wer unter der Spritze mehr als 1 % des Körpergewichts pro Woche verliert, sollt
 
 ## Ein Tag mit wenig Appetit, aber genug Protein
 
-Beispiel für eine Person mit 80 kg und Ziel 100 g Protein:
+Beispiel für eine Person mit 80 kg und Ziel 96 g Protein (1,2 g pro kg):
 
 | Zeit | Was | Protein |
 |---|---|---|

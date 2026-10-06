@@ -52,8 +52,8 @@ Die Verzögerung erklärt, warum der Haarausfall oft erst auffällt, wenn die Ab
 <div data-interaktiv="zeitachse" data-variante="haar"></div>
 
 <figure class="my-8">
-  <img src="/grafiken/haarausfall-zeitverlauf.png" alt="Zeitachse des telogenen Effluviums über zwölf Monate: Nach schnellem Gewichtsverlust wechseln viele Haare in die Ruhephase, zwei bis drei Monate später beginnt diffuser Haarausfall, der meist innerhalb von etwa sechs Monaten nach Beginn abklingt, wenn der Auslöser weggefallen ist; danach wachsen die Haare nach. Beeinflussbar sind Protein, Eisenwert, Zink und Biotin bei Lücke; länger als sechs Monate, fleckig oder mit Müdigkeit und Frieren ärztlich abklären." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
-  <figcaption class="mt-2 text-sm text-ink-3">Der typische Verlauf des telogenen Effluviums in Monaten nach dem Auslöser.<sup><a href="#fn-malkud2015">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+  <img src="/grafiken/haarausfall-zeitverlauf.png" alt="Zeitachse des telogenen Effluviums über zwölf Monate, schematisch: Nach schnellem Gewichtsverlust wechseln viele Haare in die Ruhephase, zwei bis drei Monate später beginnt diffuser Haarausfall, der meist innerhalb von etwa sechs Monaten nach Beginn abklingt, wenn der Auslöser weggefallen ist; danach wachsen die Haare nach. Beeinflussbar sind Protein (1,2 bis 1,6 Gramm pro Kilogramm Körpergewicht am Tag), der Eisenwert sowie Zink und Biotin bei nachgewiesener Lücke; länger als sechs Monate, fleckig oder mit Müdigkeit und Frieren ärztlich abklären." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Der Verlauf des telogenen Effluviums in Monaten nach dem Auslöser, schematisch.<sup><a href="#fn-malkud2015">1</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
 ## Was sich beeinflussen lässt

@@ -37,6 +37,11 @@ Das klingt nach wenig. Es ist aber die eine Zunahme im Jahr, die bleibt. In eine
 
 Für die Zeit nach dem Abnehmen gibt es eigene Daten: In einer europäischen Studie mit 1062 Erwachsenen in der Haltephase nach mindestens 5 % Gewichtsverlust stieg das Gewicht über Weihnachten im Mittel um 1,35 % und wurde in den Folgemonaten nicht vollständig ausgeglichen.<sup><a href="#fn-turicchi2020">4</a></sup> Wer gerade abgenommen hat, nimmt über die Feiertage also eher mehr zu als der Durchschnitt, nicht weniger.
 
+<figure class="my-8">
+  <img src="/grafiken/feiertage-gewicht.png" alt="Zwei Balkengruppen: Zehn Tage nach Weihnachten lag das Gewicht in Deutschland im Mittel 0,6 Prozent höher als zehn Tage davor, zu Ostern 0,2 Prozent. In einer europäischen Studie mit Menschen in der Haltephase nach mindestens 5 Prozent Gewichtsverlust stieg es über Weihnachten um 1,35 Prozent. In einer randomisierten Studie wog die Gruppe, die sich mindestens zweimal pro Woche wog, notierte und zehn Tipps bekam, nach den Feiertagen 0,13 Kilogramm weniger, die Vergleichsgruppe 0,37 Kilogramm mehr; Unterschied 0,49 Kilogramm." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Gewicht über die Feiertage: +0,6 % nach Weihnachten in Deutschland, +1,35 % in der Haltephase; mit regelmäßigem Wiegen 0,49 kg weniger als ohne.<sup><a href="#fn-helander2016">1</a>, <a href="#fn-turicchi2020">4</a>, <a href="#fn-mason2018">9</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
+
 ## Warum die Feiertage nach der Abnehmspritze anders sind
 
 Nach der letzten Dosis läuft eine Uhr. Semaglutid hat eine Halbwertszeit von etwa einer Woche,<sup><a href="#fn-fachinfoWegovy">6</a></sup> Tirzepatid von etwa fünf Tagen;<sup><a href="#fn-fachinfoMounjaro">7</a></sup> nach etwa fünf Halbwertszeiten ist der Wirkstoff weitgehend abgebaut. In dieser Auswaschphase kommt der Appetit ab Woche 2 bis 5 zurück, und die Gewichtszunahme ist in Studien ab Woche 8 messbar.<sup><a href="#fn-wu2025">5</a></sup> Dazu kommt, was nach jedem größeren Gewichtsverlust passiert: mehr Ghrelin, weniger Leptin, mehr Hunger, noch ein Jahr nach dem Abnehmen messbar.<sup><a href="#fn-sumithran2011">8</a></sup> Das Festessen trifft also nicht auf den alten Appetit, sondern auf einen gesteigerten. Hedonischer Hunger, das Essen aus Lust statt aus Bedarf, hat an Weihnachten ohnehin Hochsaison.
@@ -54,7 +59,7 @@ Den Zeitplan für dein Datum rechnet das Werkzeug [Zeitplan nach der letzten Dos
 <div data-interaktiv="zeitachse" data-wirkstoffe="semaglutid,tirzepatid" data-weihnachten="ja"></div>
 
 <figure class="my-8">
-  <img src="/grafiken/zeitachse-nach-letzter-dosis.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Der Wirkstoff ist nach etwa fünf bis sieben Wochen weitgehend abgebaut, der Appetit kehrt ab Woche 2 bis 5 zurück, die Gewichtszunahme ist ab Woche 8 messbar und steigt bis etwa Woche 20. Ein Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis ist markiert." width="1200" height="675" loading="lazy" class="w-full rounded-xl2 border border-line bg-white" />
+  <img src="/grafiken/zeitachse-nach-letzter-dosis.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Semaglutid (Halbwertszeit etwa eine Woche) ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar, Tirzepatid (Halbwertszeit etwa fünf Tage) nach etwa 25 Tagen. Der Appetit kehrt, abgeleitet aus dem sinkenden Wirkstoffspiegel, ab Woche 2 bis 5 zurück; die Gewichtszunahme ist ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Als Vorschlag dieser Seite ist ein ärztlicher Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis markiert." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Die ersten 20 Wochen nach der letzten Dosis: Halbwertszeiten laut Fachinformation, Zunahme laut Meta-Analyse.<sup><a href="#fn-wu2025">5</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 

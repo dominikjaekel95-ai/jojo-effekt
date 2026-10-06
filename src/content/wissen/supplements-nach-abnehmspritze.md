@@ -7,7 +7,7 @@ order: 12
 pubDate: 2026-09-30
 updatedDate: 2026-10-06
 keywords: ["nach der abnehmspritze supplements", "abnehmspritze supplements", "abnehmspritze nahrungsergänzung", "nahrungsergänzungsmittel nach abnehmspritze", "abnehmspritze vitamine", "abnehmspritze welche supplements", "supplements nach wegovy"]
-sources: ["almandoz2024", "leidy2015", "euClaims", "kreider2017", "dgeBallaststoffe", "klartextNem", "adaSoc2024", "wilding2021dxa", "sardeli2018", "who2020"]
+sources: ["almandoz2024", "leidy2015", "euClaims", "kreider2017", "dgeBallaststoffe", "klartextNem", "adaSoc2024", "wilding2021dxa", "sardeli2018", "who2020", "nvs2", "rabenberg2015"]
 related: ["kreatin-abnehmspritze", "protein-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
 faq:
   - q: "Brauche ich nach der Abnehmspritze ein Multivitamin?"
@@ -79,6 +79,11 @@ Für die Vitamine und Mineralstoffe, nach denen unter der Spritze am häufigsten
 - [Glucomannan](/wissen/glucomannan-abnehmspritze/): der einzige Ballaststoff mit zugelassener Angabe zum Gewichtsverlust, und ihre Grenzen.
 
 Zwei Folgen schnellen Gewichtsverlusts, die oft als Supplement-Frage ankommen, haben ebenfalls eigene Seiten: [Haarausfall](/wissen/haarausfall-abnehmspritze/) und [eingefallenes Gesicht](/wissen/abnehmspritze-gesicht/). In beiden Fällen ist Versorgung der Hebel, nicht ein Präparat.
+
+<figure class="my-8">
+  <img src="/grafiken/versorgung-in-deutschland.png" alt="Balkendiagramm zur Versorgung Erwachsener in Deutschland: Unter der Zufuhrempfehlung lagen bei Magnesium 26 Prozent der Männer und 29 Prozent der Frauen, bei Eisen 14 Prozent der Männer und 58 Prozent der Frauen (Nationale Verzehrsstudie II). Beim Vitamin-D-Wert im Blut lagen 30,2 Prozent unter 30 Nanomol pro Liter (Mangel) und 61,6 Prozent unter 50 Nanomol pro Liter (DEGS1). Erhoben vor der Zeit der GLP-1-Medikamente." width="1200" height="675" loading="lazy" class="w-full" />
+  <figcaption class="mt-2 text-sm text-ink-3">Wo die Versorgung in Deutschland ohnehin knapp ist: Magnesium und Eisen unter der Zufuhrempfehlung, Vitamin D im Blut.<sup><a href="#fn-nvs2">11</a>, <a href="#fn-rabenberg2015">12</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
+</figure>
 
 ## Was du nicht brauchst
 

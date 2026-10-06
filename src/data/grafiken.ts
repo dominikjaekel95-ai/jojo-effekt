@@ -166,8 +166,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Gesamtkreatin im Muskel mit 3 g pro Tag und mit Ladephase, Studie mit 31 Männern',
     alt: 'Zwei Verläufe des Kreatinspeichers im Muskel aus einer Studie mit 31 Männern, zwischen den Messpunkten schematisch: Mit 3 Gramm Kreatin pro Tag stieg das Gesamtkreatin im Muskel allmählich und lag nach 28 Tagen etwa 20 Prozent über dem Ausgangswert. Mit einer Ladephase von 20 Gramm pro Tag über 6 Tage war derselbe Anstieg von etwa 20 Prozent nach 6 Tagen erreicht; ohne weitere Einnahme lag der Wert 30 Tage nach dem Ende wieder beim Ausgangswert. Mit dem Speicher steigt das Wasser in der Muskelzelle; das zeigt die Waage, Fett ist es nicht.',
     sources: ['hultman1996', 'kreider2017'],
-    used: [],
-    ziel: [{ href: '/wissen/kreatin-abnehmspritze/', label: 'Kreatin und Abnehmspritze' }],
+    used: [{ href: '/wissen/kreatin-abnehmspritze/', label: 'Kreatin und Abnehmspritze' }],
   },
   {
     id: 'wirkstoff-abbau-nach-letzter-dosis',
@@ -175,12 +174,11 @@ export const grafiken: Grafik[] = [
     subtitle: 'Dieselben Halbwertszeiten als Abbaukurven: Liraglutid, Tirzepatid, Semaglutid',
     alt: 'Drei Abbaukurven nach der letzten Dosis, gerechnet aus der Halbwertszeit laut Fachinformation: Liraglutid (Saxenda) hat eine Halbwertszeit von etwa 13 Stunden und ist nach etwa 3 Tagen weitgehend abgebaut; Tirzepatid (Mounjaro) etwa 5 Tage, weitgehend abgebaut nach etwa 25 Tagen; Semaglutid (Wegovy, Ozempic) etwa 1 Woche, weitgehend abgebaut nach etwa 5 Wochen und laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar. Faustregel: nach fünf Halbwertszeiten weitgehend abgebaut.',
     sources: ['fachinfoSaxenda', 'fachinfoMounjaro', 'fachinfoWegovy', 'fachinfoOzempic'],
-    used: [],
-    ziel: [
+    used: [
       { href: '/wissen/saxenda-absetzen/', label: 'Saxenda absetzen' },
       { href: '/wissen/ozempic-absetzen/', label: 'Ozempic absetzen' },
-      { href: '/wissen/wegovy-absetzen/', label: 'Wegovy absetzen' },
     ],
+    ziel: [{ href: '/wissen/wegovy-absetzen/', label: 'Wegovy absetzen' }],
     variantOf: 'halbwertszeiten-praeparate',
   },
   {
@@ -198,8 +196,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Die ersten 20 Wochen nach der letzten Dosis: Wirkstoff, Appetit, Hungerhormone, Gewicht',
     alt: 'Zeitachse über 20 Wochen nach der letzten Dosis: Semaglutid baut sich mit einer Halbwertszeit von etwa einer Woche ab und ist nach etwa 5 bis 7 Wochen weitgehend weg. Der Appetit kommt, abgeleitet aus dem sinkenden Wirkstoffspiegel, in Woche 2 bis 5 zurück und bleibt. Die Hungerhormone sind nach einer Diät verschoben, mehr Ghrelin und weniger Leptin, noch ein Jahr später messbar (Studie ohne Medikament). Die Gewichtszunahme ist erst ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Markiert ist das Fenster von Woche 2 bis 8, in dem der Hunger zurück ist, die Waage aber noch wenig zeigt.',
     sources: ['fachinfoWegovy', 'sumithran2011', 'wu2025'],
-    used: [],
-    ziel: [{ href: '/wissen/heisshunger-nach-abnehmspritze/', label: 'Heißhunger nach der Abnehmspritze' }],
+    used: [{ href: '/wissen/heisshunger-nach-abnehmspritze/', label: 'Heißhunger nach der Abnehmspritze' }],
   },
   {
     id: 'schlaf-und-hungerhormone',
@@ -207,8 +204,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Leptin, Ghrelin, Hunger und Appetit nach zwei Nächten mit 4 Stunden im Bett gegenüber 10 Stunden',
     alt: 'Balkendiagramm: Nach zwei Nächten mit 4 Stunden im Bett gegenüber zwei Nächten mit 10 Stunden sank das Sättigungshormon Leptin um 18 Prozent, das Hungerhormon Ghrelin stieg um 28 Prozent, der Hunger um 24 Prozent und der Appetit um 23 Prozent; der Appetit auf kalorienreiche Lebensmittel mit viel Kohlenhydraten stieg um 33 bis 45 Prozent. Kleine Studie mit 12 gesunden jungen Männern unter Laborbedingungen.',
     sources: ['spiegel2004'],
-    used: [],
-    ziel: [{ href: '/wissen/heisshunger-nach-abnehmspritze/', label: 'Heißhunger nach der Abnehmspritze' }],
+    used: [{ href: '/wissen/heisshunger-nach-abnehmspritze/', label: 'Heißhunger nach der Abnehmspritze' }],
   },
   {
     id: 'absetzen-im-ersten-jahr',
@@ -216,11 +212,8 @@ export const grafiken: Grafik[] = [
     subtitle: 'Anteil, der die Therapie innerhalb eines Jahres beendet hatte, als Punktraster; US-Versorgungsdaten',
     alt: 'Zwei Punktraster mit je 100 Punkten aus US-Versorgungsdaten von 125.474 Erwachsenen mit Übergewicht oder Adipositas: Von Menschen ohne Typ-2-Diabetes hatten 64,8 Prozent ihre GLP-1-Therapie innerhalb eines Jahres beendet, von Menschen mit Typ-2-Diabetes 46,5 Prozent.',
     sources: ['rodriguez2025'],
-    used: [],
-    ziel: [
-      { href: '/wissen/jojo-effekt-abnehmspritze/', label: 'Jojo-Effekt nach der Abnehmspritze' },
-      { href: '/wissen/abnehmspritze-absetzen/', label: 'Abnehmspritze absetzen' },
-    ],
+    used: [{ href: '/wissen/abnehmspritze-absetzen/', label: 'Abnehmspritze absetzen' }],
+    ziel: [{ href: '/wissen/jojo-effekt-abnehmspritze/', label: 'Jojo-Effekt nach der Abnehmspritze' }],
   },
   {
     id: 'step-2-typ-2-diabetes',
@@ -228,8 +221,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Mittlere Änderung des Körpergewichts nach 68 Wochen, Erwachsene mit Übergewicht und Typ-2-Diabetes',
     alt: 'Balkendiagramm aus der Studie STEP 2 mit Erwachsenen mit Übergewicht und Typ-2-Diabetes: Nach 68 Wochen lag das Gewicht unter Semaglutid 2,4 Milligramm im Mittel 9,6 Prozent niedriger, unter Semaglutid 1,0 Milligramm 7,0 Prozent und unter Placebo 3,4 Prozent. Weniger Verlust heißt weniger, was nach dem Absetzen zurückkommen kann.',
     sources: ['davies2021step2'],
-    used: [],
-    ziel: [{ href: '/wissen/ozempic-absetzen/', label: 'Ozempic absetzen' }],
+    used: [{ href: '/wissen/ozempic-absetzen/', label: 'Ozempic absetzen' }],
   },
   {
     id: 'supplements-was-belegt-ist',
@@ -246,9 +238,8 @@ export const grafiken: Grafik[] = [
     subtitle: 'Magnesium und Eisen unter der Zufuhrempfehlung, Vitamin D im Blut, Erwachsene in Deutschland',
     alt: 'Balkendiagramm zur Versorgung Erwachsener in Deutschland: Unter der Zufuhrempfehlung lagen bei Magnesium 26 Prozent der Männer und 29 Prozent der Frauen, bei Eisen 14 Prozent der Männer und 58 Prozent der Frauen (Nationale Verzehrsstudie II). Beim Vitamin-D-Wert im Blut lagen 30,2 Prozent unter 30 Nanomol pro Liter (Mangel) und 61,6 Prozent unter 50 Nanomol pro Liter (DEGS1). Erhoben vor der Zeit der GLP-1-Medikamente.',
     sources: ['nvs2', 'rabenberg2015'],
-    used: [],
+    used: [{ href: '/wissen/supplements-nach-abnehmspritze/', label: 'Supplements nach der Abnehmspritze' }],
     ziel: [
-      { href: '/wissen/supplements-nach-abnehmspritze/', label: 'Supplements nach der Abnehmspritze' },
       { href: '/wissen/magnesium-abnehmspritze/', label: 'Magnesium bei der Abnehmspritze' },
       { href: '/wissen/eisen-abnehmspritze/', label: 'Eisen bei der Abnehmspritze' },
       { href: '/wissen/vitamin-d-abnehmspritze/', label: 'Vitamin D bei der Abnehmspritze' },
@@ -260,11 +251,8 @@ export const grafiken: Grafik[] = [
     subtitle: 'Fettmasse und fettfreie Masse am Gewichtsverlust: STEP 1 (Semaglutid) und SURMOUNT-1 (Tirzepatid)',
     alt: 'Zwei Balken, die den Gewichtsverlust aufteilen: In der STEP-1-Substudie mit Semaglutid (140 Teilnehmende, 68 Wochen) entfielen rund 60 Prozent auf Fettmasse und rund 40 Prozent auf fettfreie Masse, in der SURMOUNT-1-Substudie mit Tirzepatid (160 Teilnehmende, 72 Wochen) rund 75 Prozent auf Fettmasse und rund 25 Prozent auf fettfreie Masse. Unter Tirzepatid sanken Körpergewicht um 21,3 Prozent, Fettmasse um 33,9 Prozent und fettfreie Masse um 10,9 Prozent (Placebo 5,3, 8,2 und 2,6 Prozent). Zwei verschiedene Studien, kein direkter Vergleich.',
     sources: ['wilding2021dxa', 'look2025surmount1dxa'],
-    used: [],
-    ziel: [
-      { href: '/wissen/muskelabbau-abnehmspritze/', label: 'Muskelabbau bei der Abnehmspritze' },
-      { href: '/wissen/kalorienbedarf-nach-abnehmspritze/', label: 'Kalorienbedarf nach der Abnehmspritze' },
-    ],
+    used: [{ href: '/wissen/kalorienbedarf-nach-abnehmspritze/', label: 'Kalorienbedarf nach der Abnehmspritze' }],
+    ziel: [{ href: '/wissen/muskelabbau-abnehmspritze/', label: 'Muskelabbau bei der Abnehmspritze' }],
   },
   {
     id: 'training-art-fettfreie-masse',
@@ -272,11 +260,8 @@ export const grafiken: Grafik[] = [
     subtitle: 'Randomisierte Studie: 160 Erwachsene ab 65 Jahren mit Adipositas, 26 Wochen Diät, Gewicht im Mittel −9 %',
     alt: 'Zwei Balkengruppen aus einer randomisierten Studie mit 160 Erwachsenen ab 65 Jahren mit Adipositas, 26 Wochen Diät und im Mittel 9 Prozent Gewichtsverlust: Verlust an fettfreier Masse mit Krafttraining 1,0 Kilogramm, mit Kraft plus Ausdauer 1,7 Kilogramm, mit Ausdauertraining 2,7 Kilogramm. Knochendichte der Hüfte: minus 2,6 Prozent mit Ausdauertraining, minus 1,1 Prozent mit Kraft plus Ausdauer, mit Krafttraining weniger als 1 Prozent und nicht signifikant.',
     sources: ['villareal2017'],
-    used: [],
-    ziel: [
-      { href: '/wissen/krafttraining-nach-abnehmspritze/', label: 'Krafttraining nach der Abnehmspritze' },
-      { href: '/wissen/wechseljahre-abnehmspritze/', label: 'Wechseljahre und Abnehmspritze' },
-    ],
+    used: [{ href: '/wissen/krafttraining-nach-abnehmspritze/', label: 'Krafttraining nach der Abnehmspritze' }],
+    ziel: [{ href: '/wissen/wechseljahre-abnehmspritze/', label: 'Wechseljahre und Abnehmspritze' }],
   },
   {
     id: 'wiegen-zonen-stop-regain',
@@ -296,8 +281,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Gewichtsänderung über die Feiertage in Deutschland, in der Haltephase und mit Wiegen',
     alt: 'Zwei Balkengruppen: Zehn Tage nach Weihnachten lag das Gewicht in Deutschland im Mittel 0,6 Prozent höher als zehn Tage davor, zu Ostern 0,2 Prozent. In einer europäischen Studie mit Menschen in der Haltephase nach mindestens 5 Prozent Gewichtsverlust stieg es über Weihnachten um 1,35 Prozent. In einer randomisierten Studie wog die Gruppe, die sich mindestens zweimal pro Woche wog, notierte und zehn Tipps bekam, nach den Feiertagen 0,13 Kilogramm weniger, die Vergleichsgruppe 0,37 Kilogramm mehr; Unterschied 0,49 Kilogramm.',
     sources: ['helander2016', 'turicchi2020', 'mason2018'],
-    used: [],
-    ziel: [{ href: '/wissen/feiertage-nach-abnehmspritze/', label: 'Feiertage nach der Abnehmspritze' }],
+    used: [{ href: '/wissen/feiertage-nach-abnehmspritze/', label: 'Feiertage nach der Abnehmspritze' }],
   },
   {
     id: 'wechseljahre-koerperzusammensetzung',
@@ -305,8 +289,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Fettmasse und fettfreie Masse pro Jahr vor dem Übergang und im Übergang, SWAN-Studie',
     alt: 'Zwei Balkengruppen aus der SWAN-Studie mit 1.246 Frauen: Der jährliche Zuwachs an Fettmasse stieg von 0,25 Kilogramm vor dem Übergang auf 0,45 Kilogramm im Übergang. Die fettfreie Masse nahm vor dem Übergang um 0,2 Prozent pro Jahr zu und sank im Übergang um 0,2 Prozent pro Jahr. Beides lief bis etwa zwei Jahre nach der letzten Regelblutung weiter; das Gewicht selbst stieg nicht schneller als vorher.',
     sources: ['greendale2019'],
-    used: [],
-    ziel: [{ href: '/wissen/wechseljahre-abnehmspritze/', label: 'Wechseljahre und Abnehmspritze' }],
+    used: [{ href: '/wissen/wechseljahre-abnehmspritze/', label: 'Wechseljahre und Abnehmspritze' }],
   },
   {
     id: 'protein-verteilung',
@@ -314,8 +297,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Gleiche Tagesmenge, gleichmäßig oder abendlastig verteilt: Muskelproteinsynthese über 24 Stunden',
     alt: 'Zwei Balkengruppen: gleichmäßige Verteilung mit etwa 30 Gramm Protein zu Frühstück, Mittag und Abend gegenüber abendlastiger Verteilung mit etwa 10, 15 und 65 Gramm bei gleicher Tagesmenge. Bei gleichmäßiger Verteilung lag die Muskelproteinsynthese über 24 Stunden um 25 Prozent höher. Kleine Studie, gemessen wurde die Muskelproteinsynthese, nicht die Muskelmasse. Empfehlung für Gewichtsabnahme und -erhalt: mindestens etwa 25 bis 30 Gramm Protein pro Mahlzeit.',
     sources: ['mamerow2014', 'leidy2015'],
-    used: [],
-    ziel: [{ href: '/wissen/protein-abnehmspritze/', label: 'Protein bei der Abnehmspritze' }],
+    used: [{ href: '/wissen/protein-abnehmspritze/', label: 'Protein bei der Abnehmspritze' }],
   },
   {
     id: 'kalorienbedarf-zwei-effekte',
@@ -323,8 +305,7 @@ export const grafiken: Grafik[] = [
     subtitle: 'Rechenbeispiel von 95 auf 80 kg: Formel für das neue Gewicht und Anpassung nach Gewichtsverlust',
     alt: 'Wasserfalldiagramm für eine Frau mit 45 Jahren und 170 Zentimetern: Vor dem Abnehmen mit 95 Kilogramm liegt der Tagesbedarf laut Formel bei 2.277 kcal. Der leichtere Körper senkt ihn um 210 kcal auf 2.067 kcal bei 80 Kilogramm. Die Anpassung nach Gewichtsverlust senkt den tatsächlichen Verbrauch in Messungen um weitere 300 bis 400 kcal, auf rund 1.700 bis 1.800 kcal; beim Ruheumsatz war die Anpassung in einer anderen Studie deutlich kleiner (92 kcal am Tag). Formel nach Mifflin-St-Jeor mal Aktivitätsfaktor 1,4, gerundet.',
     sources: ['mifflin1990', 'dgeEnergie', 'leibel1995', 'rosenbaum2010', 'martins2020'],
-    used: [],
-    ziel: [{ href: '/wissen/kalorienbedarf-nach-abnehmspritze/', label: 'Kalorienbedarf nach der Abnehmspritze' }],
+    used: [{ href: '/wissen/kalorienbedarf-nach-abnehmspritze/', label: 'Kalorienbedarf nach der Abnehmspritze' }],
   },
   {
     id: 'protein-tag-beispiel',

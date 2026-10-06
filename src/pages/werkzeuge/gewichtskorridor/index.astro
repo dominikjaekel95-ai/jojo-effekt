@@ -4,8 +4,11 @@
  * Selbstregulations-Programm von Wing et al. 2006 (grün bis +1,4 kg, gelb +1,4 bis +2,3 kg, rot ab +2,3 kg), jede mit
  * einer vorher festgelegten Reaktion: nichts tun, selbst gegensteuern, Ursachen klären (spätestens jetzt mit der Ärztin).
  * Keine Medikamentenempfehlung, kein Wiedereinstiegsschema. Rechnet nur im Browser, speichert nichts.
+ * Gestaltung „Kalk“ seit 06.10.2026: Ergebnis rechnet beim Tippen mit (gleiche Formeln), Zonen zeichnen sich, die Marke
+ * für heute gleitet an ihre Stelle.
  */
 import Base from '../../../layouts/Base.astro';
+import SeitenKopf from '../../../components/SeitenKopf.astro';
 import Fn from '../../../components/Fn.astro';
 import Footnotes from '../../../components/Footnotes.astro';
 import Faq from '../../../components/Faq.astro';
@@ -16,8 +19,8 @@ import { site } from '../../../data/site';
 const fnIds = ['wing2006', 'wu2025', 'wilding2022ext', 'jensen2024', 'leidy2015', 'who2020', 'kreider2017'] as const;
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
-/* Ampelfarben für die Zonen, bewusst eindeutig statt Theme-Töne */
-const AMPEL = { gruen: '#2f7a4d', gelb: '#c48a12', rot: '#b23a3a' };
+/* Ampelfarben aus dem Design „Kalk“ mit fester Bedeutung: Grün = halten, Gelb = Markierung, Braun = Wiederzunahme */
+const AMPEL = { gruen: 'var(--color-moss)', gelb: 'var(--color-amber)', rot: 'var(--color-clay)' };
 
 const title = 'Gewichtskorridor nach der Abnehmspritze: Ampel fürs Gewicht halten';
 const description =
@@ -90,73 +93,67 @@ const jsonLd = [
 ];
 ---
 <Base title={title} description={description} path={path} jsonLd={jsonLd}>
-  <article class="container-narrow py-12">
-    <nav aria-label="Brotkrumen" class="text-sm text-ink-3"><a href="/" class="hover:text-moss">Start</a> › <a href="/werkzeuge/" class="hover:text-moss">Werkzeuge</a> › Gewichtskorridor</nav>
-    <p class="eyebrow mt-6">Werkzeug · rechnet nur in deinem Browser</p>
-    <h1 class="h1 mt-3 !text-[2.1rem] sm:!text-[2.8rem]">Gewichtskorridor: eine Ampel für die Waage nach der Abnehmspritze</h1>
-    <p class="mt-4 text-lg text-ink-2">
-      Nach dem Absetzen kommt das Gewicht nicht an einem Tag zurück, sondern in kleinen Schritten, jeder einzeln erklärbar. In Studien ist die Zunahme ab etwa Woche 8 messbar.<Fn n={fn('wu2025')} id="wu2025" /> Der Korridor nimmt dir die Entscheidung ab, ob eine Zahl auf der Waage „noch normal“ ist: Du legst einmal ein Startgewicht fest, und ab dann sagt die Ampel, ob du nichts tun, selbst gegensteuern oder Ursachen klären solltest.
-    </p>
-    <p class="mt-4 rounded-lg border border-line bg-white px-4 py-3 text-sm font-medium text-ink">{site.doctorSentence} Der Korridor ist keine Empfehlung für oder gegen ein Medikament.</p>
+  <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { href: '/werkzeuge/', label: 'Werkzeuge' }, { label: 'Gewichtskorridor' }]} meta="Werkzeug, rechnet nur in deinem Browser" title="Gewichtskorridor: eine Ampel für die Waage nach der Abnehmspritze" size="m" width="narrow" doc="Der Korridor ist keine Empfehlung für oder gegen ein Medikament.">
+    <p>Nach dem Absetzen kommt das Gewicht nicht an einem Tag zurück, sondern in kleinen Schritten, jeder einzeln erklärbar. In Studien ist die Zunahme ab etwa Woche 8 messbar.<Fn n={fn('wu2025')} id="wu2025" /> Der Korridor nimmt dir die Entscheidung ab, ob eine Zahl auf der Waage „noch normal“ ist: Du legst einmal ein Startgewicht fest, und ab dann sagt die Ampel, ob du nichts tun, selbst gegensteuern oder Ursachen klären solltest.</p>
+  </SeitenKopf>
 
-    <section class="mt-8 rounded-xl2 border border-line bg-white p-5" aria-labelledby="lesen-h">
-      <h2 id="lesen-h" class="text-base font-semibold text-ink">So funktioniert die Ampel</h2>
-      <ol class="mt-3 space-y-3 text-sm text-ink-2">
-        <li class="flex gap-3"><span class="mt-1 h-3 w-3 shrink-0 rounded-full" style={`background:${AMPEL.gruen}`} aria-hidden="true"></span><span><strong class="text-ink">Grün, bis 1,4 kg über dem Start: nichts tun.</strong> So viel schwankt das Gewicht durch Wasser, Salz, Darminhalt oder Zyklus ohnehin. Routinen halten, nächste Woche wieder wiegen.</span></li>
-        <li class="flex gap-3"><span class="mt-1 h-3 w-3 shrink-0 rounded-full" style={`background:${AMPEL.gelb}`} aria-hidden="true"></span><span><strong class="text-ink">Gelb, 1,4 bis 2,3 kg über dem Start: zwei Wochen gegensteuern.</strong> Das ist kein Zufall mehr, sondern ein Trend. Protein, Training und Mahlzeitenstruktur in Ordnung bringen, dann wieder wiegen. Keine Diät.</span></li>
-        <li class="flex gap-3"><span class="mt-1 h-3 w-3 shrink-0 rounded-full" style={`background:${AMPEL.rot}`} aria-hidden="true"></span><span><strong class="text-ink">Rot, mehr als 2,3 kg über dem Start: Ursachen klären.</strong> Entweder hat das Gegensteuern nicht gereicht, oder etwas anderes spielt mit. Vier Punkte selbst prüfen (unten), und spätestens jetzt ein Termin bei der Ärztin oder dem Arzt.</span></li>
+  <article class="container-narrow k-end">
+    <section class="kr-how" aria-labelledby="lesen-h" data-rv>
+      <h2 id="lesen-h" class="k-h3">So funktioniert die Ampel</h2>
+      <ol class="kr-zonen">
+        <li><span class="kr-dot" style={`background:${AMPEL.gruen}`} aria-hidden="true"></span><span><strong>Grün, bis 1,4 kg über dem Start: nichts tun.</strong> So viel schwankt das Gewicht durch Wasser, Salz, Darminhalt oder Zyklus ohnehin. Routinen halten, nächste Woche wieder wiegen.</span></li>
+        <li><span class="kr-dot" style={`background:${AMPEL.gelb}`} aria-hidden="true"></span><span><strong>Gelb, 1,4 bis 2,3 kg über dem Start: zwei Wochen gegensteuern.</strong> Das ist kein Zufall mehr, sondern ein Trend. Protein, Training und Mahlzeitenstruktur in Ordnung bringen, dann wieder wiegen. Keine Diät.</span></li>
+        <li><span class="kr-dot" style={`background:${AMPEL.rot}`} aria-hidden="true"></span><span><strong>Rot, mehr als 2,3 kg über dem Start: Ursachen klären.</strong> Entweder hat das Gegensteuern nicht gereicht, oder etwas anderes spielt mit. Vier Punkte selbst prüfen (unten), und spätestens jetzt ein Termin bei der Ärztin oder dem Arzt.</span></li>
       </ol>
-      <p class="mt-3 text-sm text-ink-3">Beispiel: Startgewicht 82,4 kg. Grün bis 83,8 kg, gelb bis 84,7 kg, rot ab 84,7 kg. Die Grenzen stammen aus einem Programm, das in einer randomisierten Studie die Wiederzunahme deutlich senkte.<Fn n={fn('wing2006')} id="wing2006" /></p>
+      <p class="k-note">Beispiel: Startgewicht 82,4 kg. Grün bis 83,8 kg, gelb bis 84,7 kg, rot ab 84,7 kg. Die Grenzen stammen aus einem Programm, das in einer randomisierten Studie die Wiederzunahme deutlich senkte.<Fn n={fn('wing2006')} id="wing2006" /></p>
     </section>
 
-    <form id="korridor-form" class="mt-6 grid gap-4 rounded-xl2 border border-line bg-white p-5 sm:grid-cols-2" novalidate>
-      <div>
-        <label for="start" class="block text-sm font-semibold text-ink">Startgewicht in kg</label>
-        <input id="start" name="start" type="number" inputmode="decimal" min="35" max="300" step="0.1" placeholder="z. B. 82,4" required class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink" />
-        <p class="mt-1 text-xs text-ink-3">Das Gewicht am ersten Wiegetag deiner Haltephase, morgens, nüchtern. Nicht der Tiefstwert eines guten Tages.</p>
+    <form id="korridor-form" class="k-panel kr-form" novalidate>
+      <div class="k-field">
+        <label for="start" class="k-label">Startgewicht in kg</label>
+        <input id="start" name="start" type="number" inputmode="decimal" min="35" max="300" step="0.1" placeholder="z. B. 82,4" required class="k-input" />
+        <p class="k-hint">Das Gewicht am ersten Wiegetag deiner Haltephase, morgens, nüchtern. Nicht der Tiefstwert eines guten Tages.</p>
       </div>
-      <div>
-        <label for="aktuell" class="block text-sm font-semibold text-ink">Heutiges Gewicht in kg (optional)</label>
-        <input id="aktuell" name="aktuell" type="number" inputmode="decimal" min="35" max="300" step="0.1" placeholder="z. B. 83,9" class="mt-1 w-full rounded-lg border border-line bg-paper px-3 py-2 text-ink" />
-        <p class="mt-1 text-xs text-ink-3">Zeigt, in welcher Zone du heute stehst.</p>
+      <div class="k-field">
+        <label for="aktuell" class="k-label">Heutiges Gewicht in kg (optional)</label>
+        <input id="aktuell" name="aktuell" type="number" inputmode="decimal" min="35" max="300" step="0.1" placeholder="z. B. 83,9" class="k-input" />
+        <p class="k-hint">Zeigt, in welcher Zone du heute stehst.</p>
       </div>
-      <div class="sm:col-span-2 flex flex-wrap items-center gap-3">
+      <div class="kr-act">
         <button type="submit" class="btn-primary">Ampel berechnen</button>
-        <span class="text-xs text-ink-3">Nichts wird gespeichert oder übertragen.</span>
+        <span class="k-hint">Nichts wird gespeichert oder übertragen.</span>
       </div>
     </form>
 
-    <section id="korridor-ergebnis" class="mt-8 hidden" aria-live="polite">
-      <h2 class="h2">Deine Ampel</h2>
-      <p class="mt-2 hidden rounded-lg border border-line bg-white px-4 py-3 text-base font-semibold text-ink" data-zone-heute></p>
-
-      <div class="relative mt-6 pt-7" aria-hidden="true">
-        <div class="absolute top-0 hidden -translate-x-1/2 text-xs font-semibold text-ink" data-marker><span class="block whitespace-nowrap text-center" data-marker-text>heute</span><span class="mx-auto block h-0 w-0 border-x-[7px] border-t-[9px] border-x-transparent border-t-ink"></span></div>
-        <div class="flex h-6 w-full overflow-hidden rounded-full">
-          <div style={`width:40%;background:${AMPEL.gruen}`}></div>
-          <div style={`width:25%;background:${AMPEL.gelb}`}></div>
-          <div style={`width:35%;background:${AMPEL.rot}`}></div>
+    <section id="korridor-ergebnis" class="kr-res hidden" aria-live="polite">
+      <h2 class="k-h2">Deine Ampel</h2>
+      <p class="kr-heute hidden" data-zone-heute></p>
+      <div class="kr-bar" aria-hidden="true">
+        <div class="kr-mk hidden" data-marker><span class="kr-mk-in"><span class="kr-mk-t" data-marker-text>heute</span><span class="kr-mk-p"></span></span></div>
+        <div class="kr-seg">
+          <span style={`width:40%;background:${AMPEL.gruen};--i:0`}></span>
+          <span style={`width:25%;background:${AMPEL.gelb};--i:1`}></span>
+          <span style={`width:35%;background:${AMPEL.rot};--i:2`}></span>
         </div>
-        <div class="relative mt-1 h-5 text-xs text-ink-3">
-          <span class="absolute left-0" data-skala-start></span>
-          <span class="absolute -translate-x-1/2" style="left:40%" data-skala-gelb></span>
-          <span class="absolute -translate-x-1/2" style="left:65%" data-skala-rot></span>
+        <div class="kr-skala">
+          <span style="left:0" data-skala-start></span>
+          <span style="left:40%" data-skala-gelb></span>
+          <span style="left:65%" data-skala-rot></span>
         </div>
       </div>
-
-      <div class="mt-5 grid gap-4 sm:grid-cols-3">
-        <div class="rounded-xl2 border border-line bg-white p-4" style={`border-top:5px solid ${AMPEL.gruen}`}><p class="text-sm font-semibold" style={`color:${AMPEL.gruen}`}>Grün: nichts tun</p><p class="mt-1 text-2xl font-bold text-ink" data-gruen></p><p class="mt-2 text-sm text-ink-2">Normale Schwankung. Routinen halten: Protein, zwei Krafteinheiten, fester Wiegetag.</p></div>
-        <div class="rounded-xl2 border border-line bg-white p-4" style={`border-top:5px solid ${AMPEL.gelb}`}><p class="text-sm font-semibold" style={`color:${AMPEL.gelb}`}>Gelb: zwei Wochen gegensteuern</p><p class="mt-1 text-2xl font-bold text-ink" data-gelb></p><p class="mt-2 text-sm text-ink-2">Ein Trend, kein Zufall. Protein zuerst, Gemüse für Volumen, keine Flüssigkalorien, kein Training ausfallen lassen. Dann wieder wiegen.</p></div>
-        <div class="rounded-xl2 border border-line bg-white p-4" style={`border-top:5px solid ${AMPEL.rot}`}><p class="text-sm font-semibold" style={`color:${AMPEL.rot}`}>Rot: Ursachen klären</p><p class="mt-1 text-2xl font-bold text-ink" data-rot></p><p class="mt-2 text-sm text-ink-2">Gegensteuern hat nicht gereicht. Vier Punkte selbst prüfen, spätestens jetzt ein Termin bei der Ärztin oder dem Arzt. Gelb läuft weiter.</p></div>
+      <div class="k-stats kr-stats">
+        <div class="k-stat"><p class="k-stat-l"><i style={`background:${AMPEL.gruen}`}></i>Grün: nichts tun</p><p class="k-stat-v" data-gruen></p><p class="kr-t">Normale Schwankung. Routinen halten: Protein, zwei Krafteinheiten, fester Wiegetag.</p></div>
+        <div class="k-stat"><p class="k-stat-l"><i style={`background:${AMPEL.gelb}`}></i>Gelb: zwei Wochen gegensteuern</p><p class="k-stat-v" data-gelb></p><p class="kr-t">Ein Trend, kein Zufall. Protein zuerst, Gemüse für Volumen, keine Flüssigkalorien, kein Training ausfallen lassen. Dann wieder wiegen.</p></div>
+        <div class="k-stat"><p class="k-stat-l"><i style={`background:${AMPEL.rot}`}></i>Rot: Ursachen klären</p><p class="k-stat-v" data-rot></p><p class="kr-t">Gegensteuern hat nicht gereicht. Vier Punkte selbst prüfen, spätestens jetzt ein Termin bei der Ärztin oder dem Arzt. Gelb läuft weiter.</p></div>
       </div>
-      <p class="mt-4 text-sm text-ink-3">Nach unten gibt es keine Zone: Weiter sinkendes Gewicht ist kein Alarm, solange es gewollt ist und du dich gut fühlst. Ungewollter, schneller Verlust gehört ebenfalls in die Sprechstunde.</p>
-      <div class="mt-5 flex flex-wrap items-center gap-3">
+      <p class="k-note">Nach unten gibt es keine Zone: Weiter sinkendes Gewicht ist kein Alarm, solange es gewollt ist und du dich gut fühlst. Ungewollter, schneller Verlust gehört ebenfalls in die Sprechstunde.</p>
+      <div class="kr-act kr-act2">
         <button type="button" class="btn-secondary" data-korridor-drucken>Drucken</button>
-        <a href="/werkzeuge/zeitplan-nach-letzter-dosis/" class="text-sm font-semibold text-moss underline underline-offset-4">Wiegetage in den Kalender: Zeitplan nach der letzten Dosis</a>
+        <a href="/werkzeuge/zeitplan-nach-letzter-dosis/" class="k-a">Wiegetage in den Kalender: Zeitplan nach der letzten Dosis</a>
       </div>
     </section>
 
-    <div class="prose-site mt-10">
+    <div class="prose-site mt-12">
       <h2 id="warum">Warum eine Ampel und nicht einfach „aufpassen“</h2>
       <p>Wer nach der Abnehmspritze das Gewicht halten will, verliert den Überblick selten an einem Tag, sondern über Wochen: ein halbes Kilo hier, ein Kilo dort, jedes einzeln erklärbar. In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen im Mittel zwei Drittel des verlorenen Gewichts zurück.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Die Ampel legt die Entscheidung in einen Moment, in dem sie leicht ist: bevor die Zahl auf der Waage steht.</p>
       <p>Die drei Zonen stammen aus dem Selbstregulations-Programm von Wing und Kollegen: 314 Erwachsene, die zuvor mindestens 10 % abgenommen hatten, wurden 18 Monate begleitet. Sie wogen sich täglich, verglichen den Wert mit ihrem Korridor und reagierten nach Zone. In der Gruppe mit persönlicher Betreuung nahmen 45,7 % wieder 2,3 kg oder mehr zu, in der Kontrollgruppe 72,4 %.<Fn n={fn('wing2006')} id="wing2006" /> Die Teilnehmenden hatten ohne Medikament abgenommen; die Zonen übertragen wir, die Mechanik aus Wiegen und festgelegter Reaktion ist dieselbe.</p>
@@ -173,56 +170,295 @@ const jsonLd = [
       <p>Einmal pro Woche, gleicher Wochentag, morgens nach der Toilette, vor dem Frühstück. Wer Kreatin nimmt, rechnet in den ersten Wochen mit 0,5 bis 2 kg Wasser in der Muskulatur<Fn n={fn('kreider2017')} id="kreider2017" /> und setzt den Startwert danach. Der Wochenwert zählt, nicht der Tageswert; was dahintersteht, erklärt der Artikel <a href="/wissen/gewicht-halten-nach-abnehmspritze/">Gewicht halten nach der Abnehmspritze</a>. Was in den ersten Wochen nach der letzten Dosis sonst passiert, Woche für Woche, steht unter <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a>.</p>
     </div>
 
-    <Faq items={faq} id="korridor-faq" title="Häufige Fragen zum Gewichtskorridor" />
+    <div class="mt-14"><Faq items={faq} id="korridor-faq" title="Häufige Fragen zum Gewichtskorridor" /></div>
 
     <ProductTeaser position="werkzeug-korridor" />
 
     <Footnotes ids={fnIds} />
   </article>
-
-  <script is:inline>
-    const form = document.getElementById('korridor-form');
-    const ergebnis = document.getElementById('korridor-ergebnis');
-    const kg = (n) => `${n.toLocaleString('de-DE', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} kg`;
-    const lesen = (feld) => parseFloat(String(feld.value).replace(',', '.'));
-    const q = (sel) => document.querySelector(sel);
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const start = lesen(form.start);
-      if (!(start >= 35 && start <= 300)) { form.start.focus(); return; }
-      const gelbAb = start + 1.4;
-      const rotAb = start + 2.3;
-      q('[data-gruen]').textContent = `bis ${kg(gelbAb)}`;
-      q('[data-gelb]').textContent = `${kg(gelbAb)} bis ${kg(rotAb)}`;
-      q('[data-rot]').textContent = `ab ${kg(rotAb)}`;
-      q('[data-skala-start]').textContent = `Start ${kg(start)}`;
-      q('[data-skala-gelb]').textContent = kg(gelbAb);
-      q('[data-skala-rot]').textContent = kg(rotAb);
-      const heute = q('[data-zone-heute]');
-      const marker = q('[data-marker]');
-      const aktuell = lesen(form.aktuell);
-      if (aktuell >= 35 && aktuell <= 300) {
-        const diff = aktuell - start;
-        // Position auf der Leiste: Grün 0 bis 40 %, Gelb 40 bis 65 %, Rot 65 bis 100 % (bis +4,6 kg, darüber am Rand)
-        let pos = 0;
-        if (diff <= 0) pos = 0;
-        else if (diff < 1.4) pos = (diff / 1.4) * 40;
-        else if (diff < 2.3) pos = 40 + ((diff - 1.4) / 0.9) * 25;
-        else pos = Math.min(100, 65 + ((diff - 2.3) / 2.3) * 35);
-        marker.style.left = `${pos}%`;
-        q('[data-marker-text]').textContent = `heute ${kg(aktuell)}`;
-        marker.classList.remove('hidden');
-        const zone = diff >= 2.3 ? 'Rot: vier Punkte prüfen, dann Termin bei der Ärztin oder dem Arzt; Gelb läuft weiter.' : diff >= 1.4 ? 'Gelb: zwei Wochen gegensteuern, dann wieder wiegen.' : diff < 0 ? 'Grün, unter dem Startgewicht: nichts tun.' : 'Grün: nichts tun, nächste Woche wieder wiegen.';
-        const vorzeichen = diff > 0 ? '+' : '';
-        heute.textContent = `Heute ${kg(aktuell)}, das sind ${vorzeichen}${kg(diff)} gegenüber dem Start. ${zone}`;
-        heute.classList.remove('hidden');
-      } else {
-        heute.classList.add('hidden');
-        marker.classList.add('hidden');
-      }
-      ergebnis.classList.remove('hidden');
-      ergebnis.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-    q('[data-korridor-drucken]').addEventListener('click', () => window.print());
-  </script>
 </Base>
+
+<script>
+  import { zaehle, reduziert } from '../../../lib/bewegung';
+  const form = document.getElementById('korridor-form') as HTMLFormElement;
+  const ergebnis = document.getElementById('korridor-ergebnis') as HTMLElement;
+  const feldStart = form.elements.namedItem('start') as HTMLInputElement;
+  const feldHeute = form.elements.namedItem('aktuell') as HTMLInputElement;
+  const q = (sel: string) => document.querySelector<HTMLElement>(sel)!;
+  const kg = (n: number) => `${n.toLocaleString('de-DE', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} kg`;
+  const lesen = (feld: HTMLInputElement) => parseFloat(String(feld.value).replace(',', '.'));
+  let altStart = 0;
+
+  const rechne = (springen: boolean) => {
+    const start = lesen(feldStart);
+    if (!(start >= 35 && start <= 300)) {
+      if (springen) feldStart.focus();
+      return;
+    }
+    const gelbAb = start + 1.4;
+    const rotAb = start + 2.3;
+    const zuerst = ergebnis.classList.contains('hidden');
+    ergebnis.classList.remove('hidden');
+    const von = zuerst || !altStart ? start * 0.9 : altStart;
+    // Die Grenzen hängen fest am Startgewicht (+1,4 und +2,3 kg); gezählt wird das Startgewicht, die Grenzen laufen mit
+    zaehle(q('[data-gruen]'), von, start, (s) => `bis ${kg(s + 1.4)}`);
+    zaehle(q('[data-gelb]'), von, start, (s) => `${kg(s + 1.4)} bis ${kg(s + 2.3)}`);
+    zaehle(q('[data-rot]'), von, start, (s) => `ab ${kg(s + 2.3)}`);
+    q('[data-skala-start]').textContent = `Start ${kg(start)}`;
+    q('[data-skala-gelb]').textContent = kg(gelbAb);
+    q('[data-skala-rot]').textContent = kg(rotAb);
+    altStart = start;
+
+    const heute = q('[data-zone-heute]');
+    const marker = q('[data-marker]');
+    const aktuell = lesen(feldHeute);
+    if (aktuell >= 35 && aktuell <= 300) {
+      const diff = aktuell - start;
+      // Position auf der Leiste: Grün 0 bis 40 %, Gelb 40 bis 65 %, Rot 65 bis 100 % (bis +4,6 kg, darüber am Rand)
+      let pos = 0;
+      if (diff <= 0) pos = 0;
+      else if (diff < 1.4) pos = (diff / 1.4) * 40;
+      else if (diff < 2.3) pos = 40 + ((diff - 1.4) / 0.9) * 25;
+      else pos = Math.min(100, 65 + ((diff - 2.3) / 2.3) * 35);
+      marker.style.setProperty('--pos', `${pos}%`);
+      marker.dataset.seite = pos > 75 ? 'rechts' : pos < 15 ? 'links' : '';
+      q('[data-marker-text]').textContent = `heute ${kg(aktuell)}`;
+      marker.classList.remove('hidden');
+      const zone = diff >= 2.3 ? 'Rot: vier Punkte prüfen, dann Termin bei der Ärztin oder dem Arzt; Gelb läuft weiter.' : diff >= 1.4 ? 'Gelb: zwei Wochen gegensteuern, dann wieder wiegen.' : diff < 0 ? 'Grün, unter dem Startgewicht: nichts tun.' : 'Grün: nichts tun, nächste Woche wieder wiegen.';
+      heute.dataset.zone = diff >= 2.3 ? 'rot' : diff >= 1.4 ? 'gelb' : 'gruen';
+      const vorzeichen = diff > 0 ? '+' : '';
+      heute.textContent = `Heute ${kg(aktuell)}, das sind ${vorzeichen}${kg(diff)} gegenüber dem Start. ${zone}`;
+      heute.classList.remove('hidden');
+    } else {
+      heute.classList.add('hidden');
+      marker.classList.add('hidden');
+    }
+    if (zuerst && !reduziert()) requestAnimationFrame(() => requestAnimationFrame(() => ergebnis.classList.add('kr-in')));
+    else ergebnis.classList.add('kr-in');
+    if (springen) ergebnis.scrollIntoView({ behavior: reduziert() ? 'auto' : 'smooth', block: 'start' });
+  };
+
+  feldStart.addEventListener('input', () => rechne(false));
+  feldHeute.addEventListener('input', () => {
+    if (!ergebnis.classList.contains('hidden')) rechne(false);
+  });
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    rechne(true);
+  });
+  q('[data-korridor-drucken]').addEventListener('click', () => window.print());
+</script>
+
+<style>
+  .kr-how {
+    margin-top: clamp(2.5rem, 6vh, 3.5rem);
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-ink);
+  }
+  .kr-zonen {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+  .kr-zonen li {
+    display: flex;
+    gap: 0.9rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--color-line);
+    color: var(--color-ink-2);
+    font-size: 0.975rem;
+    line-height: 1.55;
+  }
+  .kr-zonen strong {
+    color: var(--color-ink);
+    font-weight: 560;
+  }
+  .kr-dot {
+    flex: none;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-top: 0.4rem;
+    border-radius: 50%;
+  }
+  .kr-form {
+    display: grid;
+    gap: 1.5rem 2rem;
+  }
+  .kr-act {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .kr-form {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .kr-act {
+      grid-column: 1 / -1;
+    }
+  }
+  .kr-res {
+    margin-top: 3rem;
+  }
+  .kr-heute {
+    margin-top: 1.25rem;
+    padding: 1rem 1.25rem;
+    border-radius: 14px;
+    background: var(--color-paper-2);
+    font-size: 1.0625rem;
+    font-weight: 520;
+    line-height: 1.5;
+    color: var(--color-ink);
+  }
+  /* Leiste mit drei Zonen und Marke für heute */
+  .kr-bar {
+    position: relative;
+    margin-top: 2rem;
+    padding-top: 2.75rem;
+  }
+  .kr-seg {
+    display: flex;
+    gap: 3px;
+    height: 1.5rem;
+  }
+  .kr-seg span {
+    display: block;
+    height: 100%;
+    transform-origin: left;
+    transition: transform 0.9s var(--ease);
+    transition-delay: calc(var(--i, 0) * 140ms);
+  }
+  .kr-seg span:first-child {
+    border-radius: 999px 0 0 999px;
+  }
+  .kr-seg span:last-child {
+    border-radius: 0 999px 999px 0;
+  }
+  .kr-mk {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.6rem;
+    transform: translateX(var(--pos, 0%));
+    transition: transform 0.8s var(--ease);
+    pointer-events: none;
+  }
+  .kr-mk-in {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    justify-items: center;
+    gap: 0.15rem;
+    transform: translateX(-50%);
+  }
+  .kr-mk[data-seite="rechts"] .kr-mk-in {
+    justify-items: end;
+    transform: translateX(calc(-100% + 7px));
+  }
+  .kr-mk[data-seite="links"] .kr-mk-in {
+    justify-items: start;
+    transform: translateX(-7px);
+  }
+  .kr-mk-t {
+    font-size: 0.8125rem;
+    font-weight: 560;
+    color: var(--color-ink);
+    white-space: nowrap;
+  }
+  .kr-mk-p {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid var(--color-ink);
+  }
+  .kr-skala {
+    position: relative;
+    height: 1.5rem;
+    margin-top: 0.4rem;
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+  }
+  .kr-skala span {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  .kr-skala span + span {
+    transform: translateX(-50%);
+  }
+  .kr-stats {
+    margin-top: 2rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .kr-stats .k-stat {
+    padding: 1rem 0 1.15rem;
+    border-top-color: var(--color-line);
+  }
+  .kr-stats .k-stat:first-child {
+    border-top-color: var(--color-ink);
+  }
+  @media (min-width: 640px) {
+    .kr-stats .k-stat {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      column-gap: 2rem;
+    }
+    .kr-stats .k-stat-l, .kr-stats .k-stat-v {
+      grid-column: 1;
+    }
+    .kr-stats .kr-t {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      margin-top: 0;
+    }
+  }
+  .kr-stats .k-stat-l {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-ink);
+    font-weight: 520;
+  }
+  .kr-stats .k-stat-l i {
+    flex: none;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+  }
+  .kr-stats .k-stat-v {
+    font-size: clamp(1.375rem, 2.6vw, 1.75rem);
+    white-space: nowrap;
+  }
+  .kr-t {
+    margin-top: 0.75rem;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--color-ink-2);
+  }
+  .kr-act2 {
+    margin-top: 1.75rem;
+  }
+  :global(html.js:not(.rm)) .kr-res:not(.kr-in) .kr-seg span {
+    transform: scaleX(0);
+  }
+  @media (max-width: 560px) {
+    .kr-skala span:first-child {
+      max-width: 38%;
+      white-space: normal;
+    }
+  }
+  @media print {
+    .kr-form, .kr-act2 {
+      display: none;
+    }
+    .kr-seg span {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>

@@ -626,6 +626,51 @@ input[type="date"].k-input {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+/* Ergebnisse als Zeilen: Beschriftung links, Wert rechts (für schmale Seiten mit langen Werten) */
+.k-stats.rows {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+.k-stats.rows .k-stat {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 2rem;
+  align-items: baseline;
+  padding: 1rem 0 1.1rem;
+  border-top: 1px solid var(--color-line);
+}
+.k-stats.rows .k-stat:first-child {
+  border-top-color: var(--color-ink);
+}
+.k-stats.rows .k-stat-l {
+  grid-column: 1;
+  grid-row: 1;
+  color: var(--color-ink);
+  font-weight: 520;
+}
+.k-stats.rows .k-stat-v {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin-top: 0;
+  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+  text-align: right;
+  white-space: nowrap;
+}
+.k-stats.rows .k-stat-n {
+  grid-column: 1;
+  margin-top: 0.3rem;
+}
+@media (max-width: 520px) {
+  .k-stats.rows .k-stat {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .k-stats.rows .k-stat-v {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+}
 
 /* ---------- Balken (zeichnen sich beim Einblenden) ---------- */
 .k-bar {

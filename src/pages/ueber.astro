@@ -1,13 +1,16 @@
 ---
 /**
- * Über diese Seite. Gestaltung „Kalk“ seit 06.10.2026; der TEXT ist unverändert (Dominik, Briefing Punkt 8).
- * Textvorschläge stehen in docs/UEBER-VORSCHLAG.md und warten auf Freigabe.
+ * Über diese Seite. Gestaltung „Kalk“ seit 06.10.2026. Text seit 06.10.2026 aus docs/UEBER-VORSCHLAG.md, von Dominik
+ * freigegeben (H1 Variante A, Meta-Description wie vorgeschlagen), mit drei Änderungen: Arztsatz am Ende von „Keine
+ * Medikamentenberatung“ statt beim Programm, EU-Angaben nur noch zu Lebensmitteln bei Partnerlinks, ein Satz zum
+ * Datenschutz (Idee 6). Kein „Mediziner“, kein „Set“. Arztsatz nur wörtlich site.medicalTeamSentence (CLAIMS.md H).
  */
 import Base from '../layouts/Base.astro';
 import SeitenKopf from '../components/SeitenKopf.astro';
 import { site } from '../data/site';
 const title = 'Über diese Seite';
-const description = 'Nach der Spritze ist ein Prototyp im Umfeld eines Longevity-Projekts im Medtech-Bereich. Wie die Seite arbeitet, welche Quellen sie nutzt und was sie nicht behauptet.';
+// Meta-Description geändert am 06.10.2026 (freigegebene Ausnahme): Die alte nannte das Longevity-Projekt, der Text nicht mehr.
+const description = 'Ein Projekt von Dominik Jäkel, Berlin: Wissen zur Zeit nach der Abnehmspritze, mit Quellen. Wie die Seite arbeitet, wie sie sich finanziert, was sie nicht behauptet.';
 const jsonLd = [
   { '@type': 'AboutPage', name: title, url: `${site.url}/ueber/`, isPartOf: { '@id': `${site.url}/#website` } },
   { '@type': 'Person', '@id': `${site.url}/ueber/#dominik`, name: site.owner.name, jobTitle: 'Gründer', worksFor: { '@id': `${site.url}/#organization` } },
@@ -20,47 +23,39 @@ const jsonLd = [
   <div class="container-wide k-end">
     <div class="ub-intro">
       <p class="ub-lead" data-rv>
-        Nach der Spritze ist ein Prototyp: ein Wissensbereich zur Zeit nach der Abnehmspritze und zu allgemeinen
-        Gesundheitsthemen. Er entsteht im Umfeld eines größeren Longevity-Projekts im Medtech-Bereich, das ich gemeinsam mit
-        ehemaligen Kommilitonen vom Hasso-Plattner-Institut und einigen studierten Medizinern vorbereite.
-        Alles Weitere ist noch Skizze; die Interaktionen der Nutzer mit dieser Website sollen uns helfen, bessere Produkte in
-        diesem Bereich zu planen. Diese Seite ist der Teil, der bereits öffentlich ist, weil sich Ideen am besten an echten
-        Fragen prüfen lassen.
+        Nach der Spritze ist ein Projekt von {site.owner.name} aus {site.owner.city}. Es beginnt mit einer Frage, die viele erst
+        nach der letzten Dosis stellen: Wie halte ich, was ich erreicht habe? Die Antworten stehen in Studien, verstreut über
+        Fachzeitschriften, Fachinformationen und Nachrichten. Diese Seite ordnet sie, mit Quelle zu jeder Zahl.
       </p>
       <div class="ub-side" data-rv style="--i:1">
         <p>
-          Die Mediziner im Team beraten uns bei der Auswahl der Studien und bei der Frage, welche Produkte
-          für die Zeit nach der Spritze überhaupt sinnvoll sind. Sie prüfen nicht jeden Artikel einzeln; deshalb behauptet keine
-          Seite eine fachliche Prüfung, bis es eine gibt. Was hier steht, ist mit Originalstudien belegt und wird korrigiert,
-          sobald jemand einen Fehler findet.
+          Daraus entsteht ein 12-Wochen-Programm für die Zeit nach der Abnehmspritze: zwei Krafteinheiten pro Woche, ein
+          Proteinziel, ein Plan für die Waage. Wer sich auf die Warteliste setzt, erfährt Start und Preis zuerst.
         </p>
-        <p>
-          Falls du meinen Namen gesucht hast und hier gelandet bist: Das Marketing funktioniert offenbar besser als geplant.
-          Willkommen trotzdem.
-        </p>
+        <p>Keine Cookies. E-Mail-Adressen für Warteliste und Newsletter liegen bei unserem Versanddienst; was du über das Erfahrungsformular schickst, liegt bei Tally. <a href="/datenschutz/" class="k-a">Mehr in der Datenschutzerklärung</a>.</p>
       </div>
     </div>
 
     <section class="k-sec" aria-labelledby="arbeit-h">
       <h2 id="arbeit-h" class="k-h2" data-rv>Wie diese Website arbeitet</h2>
       <ul class="ub-list">
-        <li data-rv><strong>Jede Zahl hat eine Quelle.</strong> Zitiert werden Originalstudien (STEP, SURMOUNT, S-LiTE, Meta-Analysen), keine Pressemeldungen über Studien. Die Quellen stehen mit Link unter jedem Artikel.</li>
+        <li data-rv><strong>Jede Zahl hat eine Quelle.</strong> <span>Zitiert werden Originalstudien (STEP, SURMOUNT, S-LiTE, Meta-Analysen), keine Pressemeldungen über Studien. Die Quellen stehen mit Link unter jedem Artikel; alle Absetz-Studien sammelt der <a href="/wissen/studien/" class="k-a">Studien-Tracker</a>.</span></li>
         {site.reviewer ? (
-          <li data-rv><strong>Fachliche Prüfung.</strong> Alle Aussagen zu Ernährung, Training und gesundheitsbezogenen Angaben prüft {site.reviewer.name} ({site.reviewer.title}).</li>
+          <li data-rv><strong>Fachliche Prüfung.</strong> <span>Alle Aussagen zu Ernährung, Training und gesundheitsbezogenen Angaben prüft {site.reviewer.name} ({site.reviewer.title}).</span></li>
         ) : (
-          <li data-rv><strong>Noch keine fachliche Gegenprüfung.</strong> Die Artikel sind bisher nicht von einer Ernährungswissenschaftlerin oder einem Ernährungswissenschaftler geprüft. Bis dahin steht nichts auf der Seite, was nicht in der zitierten Quelle steht.</li>
+          <li data-rv><strong>Noch keine fachliche Gegenprüfung.</strong> <span>Die Artikel sind bisher nicht von einer Ernährungswissenschaftlerin oder einem Ernährungswissenschaftler geprüft. Bis dahin steht nichts auf der Seite, was nicht in der zitierten Quelle steht.</span></li>
         )}
-        <li data-rv><strong>Nur zugelassene Angaben zum Set.</strong> Was über Protein, Kreatin und Ballaststoffe gesagt wird, entspricht den in der EU zugelassenen gesundheitsbezogenen Angaben. Das Set ersetzt weder die Spritze noch verhindert es den Jojo-Effekt, und beides wird hier auch nicht behauptet.</li>
-        <li data-rv><strong>Keine Medikamentenberatung.</strong> Ob und wie jemand ein Medikament absetzt, ist Sache der behandelnden Ärztin oder des Arztes. Diese Seite gibt keine Dosierungen und keine Absetz-Anleitungen.</li>
-        <li data-rv><strong>Unabhängig.</strong> Kein Hersteller von Medikamenten oder Nahrungsergänzungen finanziert diese Seite. Wenn das Set produziert wird, wird es hier direkt verkauft.</li>
-        <li data-rv><strong>Aktuell.</strong> Erscheinen neue Studien, werden die Artikel aktualisiert und das Datum vermerkt.</li>
+        <li data-rv><strong>Keine Medikamentenberatung.</strong> <span>Ob und wie jemand ein Medikament absetzt, ist Sache der behandelnden Ärztin oder des Arztes. Diese Seite gibt keine Dosierungen und keine Absetz-Anleitungen. {site.medicalTeamSentence}</span></li>
+        <li data-rv><strong>Was wir nicht versprechen.</strong> <span>Das Programm ersetzt keine Therapie und verhindert den Jojo-Effekt nicht. Gesundheitsbezogene Angaben zu Lebensmitteln, etwa bei Partnerlinks, stehen hier nur im EU-zugelassenen Wortlaut.</span></li>
+        <li data-rv><strong>Wie sich die Seite finanziert.</strong> <span>Kein Hersteller von Medikamenten oder Nahrungsergänzungen finanziert diese Seite. Geplant ist das 12-Wochen-Programm; einige Links zu Produkten sind Partnerlinks und als Werbung gekennzeichnet.</span></li>
+        <li data-rv><strong>Aktuell.</strong> <span>Erscheinen neue Studien, werden die Artikel aktualisiert und das Datum vermerkt. Fehler korrigieren wir, sobald jemand sie meldet.</span></li>
       </ul>
     </section>
 
     <div class="ub-two">
       <section class="ub-block" aria-labelledby="wer-h" data-rv>
         <h2 id="wer-h" class="k-h3">Wer schreibt</h2>
-        <p><strong>{site.owner.name}</strong>, Gründer. Studium am Hasso-Plattner-Institut, erfahrener Marketingprofi. Beantwortet E-Mails persönlich.</p>
+        <p><strong>{site.owner.name}</strong>, {site.owner.city}. Studium am Hasso-Plattner-Institut, arbeitet seit Jahren im Marketing. Beantwortet E-Mails persönlich.</p>
         {site.reviewer && (<p><strong>{site.reviewer.name}</strong>, {site.reviewer.title}. Fachliche Prüfung aller Inhalte und Festlegung der Mengen.</p>)}
       </section>
       <section class="ub-block" aria-labelledby="kontakt-h" data-rv style="--i:1">

@@ -19,7 +19,7 @@ import {
   ernaehrungOptionen,
   appetitOptionen,
   gewichtLabel,
-  vorliebenText,
+  vorliebeLabel,
   erlaubteVorlieben,
   G_PRO_KG,
   type Plan,
@@ -124,7 +124,7 @@ const muster =
               <legend>Vorlieben <span class="ep-klein">Gerichte damit kommen öfter vor</span></legend>
               <div class="ep-vorlieben-raster">
                 {VORLIEBEN.filter((v) => erlaubt.has(v.key)).map((v) => (
-                  <label><input type="checkbox" value={v.key} /><span>{vorliebenText[v.key].label}</span></label>
+                  <label><input type="checkbox" value={v.key} /><span>{vorliebeLabel(v.key, plan.laktosefrei)}</span></label>
                 ))}
               </div>
             </fieldset>
@@ -179,7 +179,7 @@ const muster =
 )}
 
 <script>
-  import { erstellePlan, kombination, leseVorlieben, planId, vorliebenText, type Vorliebe } from '../../../data/ernaehrungsplan';
+  import { erstellePlan, kombination, leseVorlieben, planId, vorliebeLabel, type Vorliebe } from '../../../data/ernaehrungsplan';
   import { planHtml, blickHtml } from '../../../lib/ernaehrungsplan-ansicht';
 
   const root = document.querySelector<HTMLElement>('[data-ep-plan]');
@@ -201,7 +201,7 @@ const muster =
     const beobachte = () => root.querySelectorAll('[data-ep-blick]').forEach((el) => (io ? io.observe(el) : el.classList.add('in')));
 
     function zeigeVorlieben() {
-      if (vText) vText.textContent = v.length ? v.map((x) => vorliebenText[x].label).join(', ') : 'keine angegeben';
+      if (vText) vText.textContent = v.length ? v.map((x) => vorliebeLabel(x, k!.laktosefrei)).join(', ') : 'keine angegeben';
       boxen.forEach((b) => (b.checked = v.includes(b.value as Vorliebe)));
       if (pdfHinweis) pdfHinweis.hidden = !v.length;
     }

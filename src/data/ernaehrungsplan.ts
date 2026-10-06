@@ -70,6 +70,9 @@ export const vorliebenText: Record<Vorliebe, { label: string; hinweis: string }>
   edamame: { label: 'Edamame', hinweis: '11 g je 100 g' },
 };
 
+/** Anzeige-Name einer Vorliebe; im laktosefreien Plan ohne Skyr. */
+export const vorliebeLabel = (key: Vorliebe, laktosefrei: boolean) => (key === 'quark' && laktosefrei ? 'Quark' : vorliebenText[key].label);
+
 export const TAGE = 14;
 const KORRIDOR = { unten: 5, oben: 12 };
 const FAKTOR: Record<Appetit, { min: number; max: number; mitte: number; snacks: number[] }> = {

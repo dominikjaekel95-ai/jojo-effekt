@@ -279,7 +279,7 @@ const jsonLd = [
 </Base>
 
 <script>
-  import { erstellePlan, planId, erlaubteVorlieben, gewichtLabel, referenzKg, vorliebenText, type Ernaehrung, type Appetit, type Vorliebe } from '../../data/ernaehrungsplan';
+  import { erstellePlan, planId, erlaubteVorlieben, gewichtLabel, referenzKg, vorliebeLabel, type Ernaehrung, type Appetit, type Vorliebe } from '../../data/ernaehrungsplan';
   import { gewichtsstufe } from '../../data/ernaehrungsplan-id.mjs';
 
   const form = document.getElementById('ep-form') as HTMLFormElement | null;
@@ -309,6 +309,10 @@ const jsonLd = [
     const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] as string);
     const label: Record<string, string> = { mischkost: 'Mischkost', pescetarisch: 'Pescetarisch', vegetarisch: 'Vegetarisch', vegan: 'Vegan', klein: 'Appetit noch klein', normal: 'Appetit wieder normal' };
     let letzteListe = '';
+    let lfWahl = lfBox.checked; // eigene Wahl merken, damit „vegan“ und zurück sie nicht überschreibt
+    lfBox.addEventListener('change', () => {
+      if (!lfBox.disabled) lfWahl = lfBox.checked;
+    });
     let erstesMal = true; // beim ersten Rechnen steht schon dasselbe da: ohne Überblendung austauschen
     let zielJetzt = Number(zielEl.textContent) || 0;
     let summeJetzt = Number.parseInt(summeEl.textContent ?? '0', 10) || 0;
@@ -336,7 +340,7 @@ const jsonLd = [
       const g = gewichtsstufe(kg) ?? '70bis85';
       const vegan = e === 'vegan';
       lfBox.disabled = vegan;
-      if (vegan) lfBox.checked = true;
+      lfBox.checked = vegan || lfWahl;
       lfText.textContent = vegan ? 'vegan ist immer laktosefrei' : 'laktosefreie Milch, Joghurt und Quark; ohne Skyr, Hüttenkäse und Feta';
       const lf = vegan || lfBox.checked;
       kgWert.textContent = kg >= 160 ? '160+ kg' : `${kg} kg`;
@@ -348,6 +352,8 @@ const jsonLd = [
         const input = l.querySelector('input')!;
         l.hidden = !ok;
         input.disabled = !ok;
+        const name = l.querySelector('.epf-v-name');
+        if (name) name.textContent = vorliebeLabel(l.dataset.v as Vorliebe, lf);
       });
       const v = vBoxen.filter((l) => !l.hidden && l.querySelector('input')!.checked).map((l) => l.dataset.v as Vorliebe);
 
@@ -395,7 +401,7 @@ const jsonLd = [
       erstesMal = false;
 
       if (mail) {
-        const text = `Hallo Dominik,\n\nich hätte gern den Ernährungsplan, aber ohne Newsletter.\n\nErnährungsform: ${label[e]}\nLaktosefrei: ${lf ? 'ja' : 'nein'}\nAppetit: ${label[a].replace('Appetit ', '')}\nGewicht: ${gewichtLabel[g]}\nVorlieben: ${v.length ? v.map((x) => vorliebenText[x].label).join(', ') : 'keine'}\n\n(Plan ${planId(e, a, g, lf)}${v.length ? `, v=${v.join(',')}` : ''})\n`;
+        const text = `Hallo Dominik,\n\nich hätte gern den Ernährungsplan, aber ohne Newsletter.\n\nErnährungsform: ${label[e]}\nLaktosefrei: ${lf ? 'ja' : 'nein'}\nAppetit: ${label[a].replace('Appetit ', '')}\nGewicht: ${gewichtLabel[g]}\nVorlieben: ${v.length ? v.map((x) => vorliebeLabel(x, lf)).join(', ') : 'keine'}\n\n(Plan ${planId(e, a, g, lf)}${v.length ? `, v=${v.join(',')}` : ''})\n`;
         mail.href = `mailto:${mail.textContent?.trim()}?subject=${encodeURIComponent('Ernährungsplan ohne Newsletter')}&body=${encodeURIComponent(text)}`;
       }
     }

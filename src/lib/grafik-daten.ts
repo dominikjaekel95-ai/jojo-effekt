@@ -24,7 +24,7 @@ export function grafikDaten(id: string): GrafikTabelle | undefined {
     return {
       spalten: ['Präparat', 'Preis im Monat', 'Hinweis'],
       zeilen: preise.zeilen.map((z) => [z.praeparat, z.monat, z.hinweis]),
-      hinweis: `Apothekenverkaufspreise für Selbstzahler als Größenordnung, gerundet auf 5 €, niedrigster Versandpreis; Stand ${fmtDate(preise.stand)}.`,
+      hinweis: `Apothekenverkaufspreise für Selbstzahler als Größenordnung, gerundet auf 5 €, niedrigster Preis im Preisvergleich; Stand ${fmtDate(preise.stand)}.`,
       quelle: preise.quelle,
     };
   }

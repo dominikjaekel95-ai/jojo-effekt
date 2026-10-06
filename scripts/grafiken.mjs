@@ -123,14 +123,30 @@ async function pruefen(file) {
       const shrink = (b, fs) => ({ x: b.x + 0.5, y: b.y + fs * 0.16, w: b.width - 1, h: b.height - fs * 0.3 });
       const texts = [...svg.querySelectorAll('text')].map((t) => {
         const fs = parseFloat(t.getAttribute('font-size'));
-        return { s: t.textContent, fs, inside: t.classList.contains('in'), b: shrink(t.getBBox(), fs) };
+        return { s: t.textContent, fs, inside: t.classList.contains('in'), foot: t.classList.contains('ft'), b: shrink(t.getBBox(), fs) };
       });
       const marks = [...svg.querySelectorAll('.mk')].map((e) => e.getBBox());
+      const fyEl = svg.querySelector('line.fy');
+      const FY = fyEl ? parseFloat(fyEl.getAttribute('y1')) : H;
+      const M = 64;
       const hit = (a, b, pad = 0) => a.x < b.x + b.width - pad && a.x + a.w > b.x + pad && a.y < b.y + b.height - pad && a.y + a.h > b.y + pad;
       for (const t of texts) {
         if (t.fs < 13) issues.push(`Schrift ${t.fs}px: „${t.s}“`);
-        if (t.b.x < 24 || t.b.x + t.b.w > W - 24 || t.b.y < 8 || t.b.y + t.b.h > H - 4) issues.push(`am Rand: „${t.s}“`);
+        if (t.b.x < M - 2 || t.b.x + t.b.w > W - M + 2 || t.b.y < 8 || t.b.y + t.b.h > H - 4) issues.push(`über den Rand (64 px): „${t.s}“`);
+        if (!t.foot && t.b.y + t.b.h > FY - 20) issues.push(`zu nah an der Fußlinie: „${t.s}“`);
         if (!t.inside) for (const m of marks) if (hit(t.b, m, 1)) issues.push(`Text über Fläche: „${t.s}“`);
+      }
+      for (const m of marks) if (m.y + m.height > FY - 20) issues.push(`Fläche zu nah an der Fußlinie (y ${Math.round(m.y + m.height)})`);
+      // Text gegen Linie: keine Linie (Gitter, Achse, Trenner) darf durch eine Beschriftung laufen
+      const lines = [...svg.querySelectorAll('line')].filter((l) => !l.classList.contains('fy')).map((l) => ['x1', 'y1', 'x2', 'y2'].map((k) => parseFloat(l.getAttribute(k))));
+      for (const t of texts) {
+        if (t.foot || t.inside) continue; // Text in Flächen: Linien liegen hinter der Fläche
+        const b = t.b;
+        for (const [x1, y1, x2, y2] of lines) {
+          const horiz = Math.abs(y1 - y2) < 0.5, vert = Math.abs(x1 - x2) < 0.5;
+          if (horiz && y1 > b.y + 1 && y1 < b.y + b.h - 1 && Math.min(Math.max(x1, x2), b.x + b.w) - Math.max(Math.min(x1, x2), b.x) > 2) { issues.push(`Linie durch Text: „${t.s}“`); break; }
+          if (vert && x1 > b.x + 1 && x1 < b.x + b.w - 1 && Math.min(Math.max(y1, y2), b.y + b.h) - Math.max(Math.min(y1, y2), b.y) > 2) { issues.push(`Linie durch Text: „${t.s}“`); break; }
+        }
       }
       for (let i = 0; i < texts.length; i++)
         for (let j = i + 1; j < texts.length; j++) {

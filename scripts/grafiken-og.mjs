@@ -7,14 +7,15 @@
  */
 import { writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { C, FONT, T, P, L, HL, PATH, DOT, DOTTED, tw, fit, esc } from './grafiken-lib.mjs';
+import { C, FONT, T, P, L, HL, PATH, DOT, DOTTED, tw, fit, esc, clearBoxes } from './grafiken-lib.mjs';
 
 /** Bildzeichen: Absetzkurve auf Tinte (viewBox 64 × 64) */
 export function iconSvg({ rounded = true } = {}) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64"${rounded ? ' rx="14"' : ''} fill="${C.ink}"/><path d="M13 17 C18 37 24 46 31 46 C38 46 43 38 50 31" fill="none" stroke="${C.bg}" stroke-width="5.5" stroke-linecap="round"/><circle cx="50.5" cy="30.5" r="5.5" fill="${C.hl}"/></svg>\n`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64"${rounded ? ' rx="14"' : ''} fill="${C.ink}"/><path d="M13 17 C18 37 24 46 31 46 C38 46 43 38 50 31" fill="none" stroke="${C.bg}" stroke-width="7" stroke-linecap="round"/><circle cx="50.5" cy="30.5" r="5.5" fill="${C.hl}"/></svg>\n`;
 }
 
 function ogFrame(body, w = 1200, h = 630) {
+  clearBoxes();
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" font-family="${esc(FONT)}"><rect width="${w}" height="${h}" fill="${C.bg}"/>${body}</svg>`;
 }
 
@@ -58,11 +59,11 @@ export async function ogBilder({ page, fontCss, studienAnzahl, warn }) {
     let b = '';
     b += T(X, 92, 'Nach der Spritze', { st: 'brand', size: 26 });
     b += T(X + tw('Nach der Spritze', 'brand', 26) + 18, 92, 'Studien-Tracker', { size: 22, fill: C.ink3 });
-    const head = P(X, 196, 'Was nach dem Absetzen der Abnehmspritze passiert: alle Studien in einer Tabelle', { st: 'title', size: 54, maxW: 1056, lh: 62 });
+    const head = P(X, 196, 'Was nach dem Absetzen der Abnehmspritze passiert: alle Ergebnisse in einer Tabelle', { st: 'title', size: 54, maxW: 1056, lh: 62 });
     b += head.svg;
     const cols = [
-      { big: '2/3', d: ['des Verlusts nach 1 Jahr', 'zurück (STEP 1 Ext.)'], fill: C.ink, hl: true },
-      { big: '+14 %', d: ['in 52 Wochen nach', 'Tirzepatid (SURMOUNT-4)'], fill: C.regain },
+      { big: '2/3', d: ['des Verlusts nach einem Jahr', 'zurück (STEP-1-Verlängerung)'], fill: C.ink, hl: true },
+      { big: '+14 %', d: ['in 52 Wochen nach Wechsel', 'auf Placebo (SURMOUNT-4)'], fill: C.regain },
       { big: 'Woche 8', d: ['Beginn der messbaren', 'Zunahme (Meta-Analyse 2025)'], fill: C.ink },
     ];
     const by = head.bottom + 128;
@@ -74,7 +75,7 @@ export async function ogBilder({ page, fontCss, studienAnzahl, warn }) {
     });
     if (by + 42 + 28 > 540) warn(`og-studien.png: Kernzahlen zu tief (${by})`);
     b += L(X, 562, 1200 - X, 562);
-    b += T(X, 596, `${studienAnzahl} Studien · Kernzahl · Link zum Original · CC BY 4.0 · nachderspritze.de/wissen/studien`, { size: 20, fill: C.ink2 });
+    b += T(X, 596, `${studienAnzahl} Studien · Kernzahl · Link zum Original · CC BY 4.0 · nachderspritze.de/wissen/studien/`, { size: 20, fill: C.ink2 });
     await shot(ogFrame(b), 'og-studien.png', 1200, 630);
   }
 

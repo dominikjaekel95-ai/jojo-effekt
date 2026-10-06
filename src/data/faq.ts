@@ -38,7 +38,7 @@ export const landingFaq: FaqItem[] = [
   },
   {
     q: 'Gibt es ein Starterpaket?',
-    a: '<p>Vielleicht. Wenn genug Interesse besteht, bieten wir das Programm zusätzlich mit einem Starterpaket aus Protein und Kreatin an. Auf der Warteliste kannst du ankreuzen, ob dich das interessiert. Das Programm funktioniert ohne.</p>',
+    a: '<p>Vielleicht. Wenn genug Interesse besteht, bieten wir das Programm zusätzlich mit einem Starterpaket aus Protein und Kreatin an. Auf der Warteliste kannst du ankreuzen, ob dich das interessiert. Das Programm geht auch ohne.</p>',
   },
   {
     q: 'Ist das eine medizinische Beratung?',
@@ -50,7 +50,7 @@ export const landingFaq: FaqItem[] = [
   },
   {
     q: 'Verhindert das Programm den Jojo-Effekt?',
-    a: '<p>Das kann kein Programm versprechen, und wir behaupten es nicht. Es ersetzt auch nicht die Spritze. Was die Forschung zu Krafttraining, Protein und Gewichtserhalt zeigt, steht mit Quellen im <a href="/wissen/jojo-effekt-abnehmspritze/">Artikel zum Jojo-Effekt</a>. Ob es bei dir funktioniert, hängt vor allem davon ab, ob du dranbleibst.</p>',
+    a: '<p>Das kann kein Programm versprechen, und wir behaupten es nicht. Es ersetzt auch nicht die Spritze. Was die Forschung zu Krafttraining, Protein und Gewichtserhalt zeigt, steht mit Quellen im <a href="/wissen/jojo-effekt-abnehmspritze/">Artikel zum Jojo-Effekt</a>. Eine eigene Studie zum Programm gibt es nicht; es setzt die Studienlage zu Krafttraining und Protein in einen Wochenplan um.</p>',
   },
   {
     q: 'Was passiert mit meiner E-Mail-Adresse?',

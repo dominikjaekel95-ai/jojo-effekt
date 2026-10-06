@@ -48,7 +48,7 @@ function training(ctx: Ctx): string {
 const PHASEN = [
   { n: 1, titel: 'Routinen bauen', wochen: [1, 2, 3, 4], ziel: 'Ziel am Ende von Phase 1: acht Trainingseinheiten absolviert, Protein an mindestens fünf von sieben Tagen erreicht, ein Wiege-Protokoll mit vier Einträgen.' },
   { n: 2, titel: 'Den Appetit auffangen', wochen: [5, 6, 7, 8], ziel: 'Ziel am Ende von Phase 2: Gewicht innerhalb von 2 kg um den Ausgangswert, Kreatin-Wasser eingerechnet. Wenn nicht: Protein und Training ehrlich prüfen.' },
-  { n: 3, titel: 'Stabilisieren, Regeln für danach', wochen: [9, 10, 11, 12], ziel: 'Ziel am Ende von Phase 3: Gewicht stabil, Training seit zwölf Wochen regelmäßig, eine schriftliche Regel für die Zeit danach, ein Arzttermin hinter dir.' },
+  { n: 3, titel: 'Stabilisieren, Regeln für danach', wochen: [9, 10, 11, 12], ziel: 'Ziel am Ende von Phase 3: Gewicht stabil, Training seit zwölf Wochen regelmäßig, eine schriftliche Regel für die Zeit danach.' },
 ];
 
 function halten(ctx: Ctx): string {
@@ -63,9 +63,8 @@ function halten(ctx: Ctx): string {
       p.wochen
         .map((w) => {
           const marke = w === wu2025.abWoche ? ' pl-acht' : '';
-          const termin = w >= 8 ? ' pl-termin' : '';
           const e = `<i class="pl-e" style="--d:${d++ * 40}ms"></i><i class="pl-e" style="--d:${d++ * 40}ms"></i><i class="pl-wg" style="--d:${d++ * 40}ms"></i>`;
-          return `<span class="pl-woche${marke}${termin}"><span class="pl-wn">${w}</span>${e}</span>`;
+          return `<span class="pl-woche${marke}"><span class="pl-wn">${w}</span>${e}</span>`;
         })
         .join('') +
       `</span></button>`,
@@ -79,7 +78,7 @@ function halten(ctx: Ctx): string {
     attrs: { 'data-phase': '1' },
     inhalt:
       `<div class="pl-phasen" data-ia-wahl="phase" role="group" aria-label="Phasen">${phasen}</div>` +
-      `<div class="ia-legende"><span><i class="ia-lg ia-lg-punkt pl-lg-e"></i>Krafteinheit</span><span><i class="ia-lg ia-lg-punkt pl-lg-wg"></i>Wiegetag</span><span><i class="ia-lg ia-lg-clay"></i>ab Woche 8: Zunahme in Studien messbar${fnWu}</span><span><i class="ia-lg pl-lg-termin"></i>Kontrolltermin Woche 8 bis 12</span></div>` +
+      `<div class="ia-legende"><span><i class="ia-lg ia-lg-punkt pl-lg-e"></i>Krafteinheit</span><span><i class="ia-lg ia-lg-punkt pl-lg-wg"></i>Wiegetag</span><span><i class="ia-lg ia-lg-clay"></i>ab Woche 8: Zunahme in Studien messbar${fnWu}</span></div>` +
       `<p class="pl-ziel" aria-live="polite"${proWahl('x', 'phase', ziele)}>${esc(ziele['1'])}</p>`,
     fuss: `Tippe eine Phase an.${hat(ctx, 'who2020') ? ` Zwei Krafteinheiten pro Woche entsprechen der WHO-Empfehlung.${fn(ctx, 'who2020')}` : ''}`,
   });

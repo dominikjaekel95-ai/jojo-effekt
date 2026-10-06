@@ -76,7 +76,7 @@ Wegen des kurzen Nachlaufs gilt bei Saxenda strenger als bei Wegovy oder Mounjar
 1. **Krafttraining seit mindestens vier Wochen.** Das ist bei Liraglutid keine Empfehlung aus anderen Studien, sondern der direkte Befund aus S-LiTE.<sup><a href="#fn-jensen2024">3</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup> Der Plan: [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/).
 2. **Protein auf 1,2 bis 1,6 g pro kg Körpergewicht**,<sup><a href="#fn-leidy2015">7</a></sup> verteilt auf drei bis vier Mahlzeiten, und eine Ernährungsstruktur, die mit Appetit funktioniert: Protein zuerst, Volumen, feste Mahlzeiten.
 3. **Wiegen einmal pro Woche mit fester Reaktionsschwelle**, ab dem Tag der letzten Spritze.
-4. **Arzttermin für Woche 6 bis 8** nach dem Absetzen, früher als bei den wöchentlichen Präparaten.
+4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen.
 
 Der ausführliche Plan: [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
 

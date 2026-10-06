@@ -109,7 +109,7 @@ Der beste Zeitpunkt, die Zeit nach der Spritze vorzubereiten, ist die Zeit mit d
 
 **3. Wiegen mit Regel.** Einmal pro Woche, morgens, gleiche Bedingungen. Lege vorher fest, ab welcher Zunahme du reagierst – zum Beispiel plus 3 kg über dem Absetz-Gewicht – und wie: Ernährung prüfen, Training prüfen, Termin bei der Ärztin.
 
-**4. Den nächsten Arzttermin schon ausmachen.** Etwa 8 bis 12 Wochen nach der letzten Dosis, also genau dann, wenn die Zunahme in Studien beginnt. Blutwerte kontrollieren, Gewicht besprechen, Optionen offenhalten. Leitlinien sehen Medikamente als Teil einer langfristigen Behandlung – ein Wiedereinstieg ist eine Option, keine Niederlage.<sup><a href="#fn-dagLeitlinie">9</a></sup>
+**4. Den Gewichtsverlauf notieren und mit der Ärztin oder dem Arzt besprechen.** Optionen offenhalten: Leitlinien sehen Medikamente als Teil einer langfristigen Behandlung – ein Wiedereinstieg ist eine Option, keine Niederlage.<sup><a href="#fn-dagLeitlinie">9</a></sup>
 
 ## Was beim Absetzen körperlich passiert – und was nicht
 

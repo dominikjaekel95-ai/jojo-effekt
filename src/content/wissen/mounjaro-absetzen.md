@@ -76,7 +76,7 @@ Wegen der kurzen Halbwertszeit gilt bei Mounjaro besonders: früh anfangen.
 1. **Krafttraining, zwei Einheiten pro Woche**, mindestens vier Wochen vor der letzten Dosis beginnen. In der S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach dem Absetzen; nach dem Medikament allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup>
 2. **Protein auf 1,2 bis 1,6 g pro kg Körpergewicht**,<sup><a href="#fn-leidy2015">7</a></sup> verteilt auf drei bis vier Mahlzeiten. Bei einem Verlust von 20 % sind auch viele Muskeln gegangen; Protein ist der Baustoff, um sie zu halten.
 3. **Wiegen einmal pro Woche mit einer festen Reaktionsschwelle.**
-4. **Arzttermin für Woche 6 bis 10** nach der letzten Dosis, früher als bei Semaglutid.
+4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen.
 
 Der ausführliche Plan: [Gewicht halten nach der Abnehmspritze: der 12-Wochen-Plan](/wissen/gewicht-halten-nach-abnehmspritze/).
 

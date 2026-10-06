@@ -64,7 +64,7 @@ Wer Ozempic ohne Diabetes zum Abnehmen genommen hat, setzt meist aus Kostengrün
 
 - **Der Verlauf entspricht dem von Wegovy**, nur mit niedrigerer Ausgangsdosis: Appetit zurück in Woche 2 bis 5, Zunahme ab Woche 8.
 - **Ob ein anderes Präparat oder eine andere Therapie in Frage kommt,** beurteilt allein die Ärztin oder der Arzt.
-- **Die Vorbereitung ist dieselbe wie bei jeder Abnehmspritze**: Krafttraining während der Therapie beginnen (in der S-LiTE-Studie hielten Trainierende ihr Gewicht ein Jahr nach dem Absetzen, nach dem Medikament allein lag die Zunahme 6 kg höher<sup><a href="#fn-jensen2024">6</a></sup>), Protein auf 1,2 bis 1,6 g pro kg Körpergewicht bringen,<sup><a href="#fn-leidy2015">7</a></sup> wöchentlich wiegen, Arzttermin für Woche 8 bis 12. Der Plan dazu: [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
+- **Die Vorbereitung ist dieselbe wie bei jeder Abnehmspritze**: Krafttraining während der Therapie beginnen (in der S-LiTE-Studie hielten Trainierende ihr Gewicht ein Jahr nach dem Absetzen, nach dem Medikament allein lag die Zunahme 6 kg höher<sup><a href="#fn-jensen2024">6</a></sup>), Protein auf 1,2 bis 1,6 g pro kg Körpergewicht bringen,<sup><a href="#fn-leidy2015">7</a></sup> wöchentlich wiegen, den Gewichtsverlauf mit der Ärztin oder dem Arzt besprechen. Der Plan dazu: [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
 
 <div data-interaktiv="slite"></div>
 

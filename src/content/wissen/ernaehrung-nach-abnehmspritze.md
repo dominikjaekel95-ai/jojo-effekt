@@ -66,7 +66,7 @@ Drei bis vier Mahlzeiten zu festen Zeiten, dazwischen nichts aus der Hand. Der H
 
 ### 5. Wiegen mit Regel, nicht mit Gefühl
 
-Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du reagierst und wie. Die Zonen aus der STOP-Regain-Studie: bis plus 1,4 kg nichts tun, ab plus 1,4 kg zwei Wochen lang Protein und Training prüfen, ab plus 2,3 kg Ursachen klären und den Kontrolltermin vorziehen.<sup><a href="#fn-wing2006">10</a></sup> Der Plan dazu steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/); wie oft die Waage sinnvoll ist und wann sie schadet, unter [Wie oft wiegen nach der Abnehmspritze?](/wissen/wie-oft-wiegen-nach-abnehmspritze/).
+Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du reagierst und wie. Die Zonen aus der STOP-Regain-Studie: bis plus 1,4 kg nichts tun, ab plus 1,4 kg zwei Wochen lang Protein und Training prüfen, ab plus 2,3 kg Ursachen klären und mit der Ärztin oder dem Arzt besprechen.<sup><a href="#fn-wing2006">10</a></sup> Der Plan dazu steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/); wie oft die Waage sinnvoll ist und wann sie schadet, unter [Wie oft wiegen nach der Abnehmspritze?](/wissen/wie-oft-wiegen-nach-abnehmspritze/).
 
 <div data-interaktiv="zonen"></div>
 

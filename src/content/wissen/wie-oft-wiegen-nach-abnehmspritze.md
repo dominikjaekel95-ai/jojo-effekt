@@ -21,7 +21,7 @@ faq:
   - q: "Wie oft wiegen nach der Abnehmspritze?"
     a: "<p>Mindestens wöchentlich, in den ersten 20 Wochen nach der letzten Dosis besser täglich mit Wochenmittel. In einer Meta-Analyse randomisierter Studien zu Adipositas-Medikamenten war die Zunahme nach dem Absetzen ab etwa Woche 8 messbar und stieg bis etwa Woche 20. Wer wöchentlich wiegt, sieht die Absetzkurve, bevor sie 2 kg erreicht; wer monatlich wiegt, sieht sie zu spät. Eine Studie zur Wiegehäufigkeit speziell nach dem Absetzen gibt es nicht; die Belege stammen aus der Haltephase nach Diäten.</p>"
   - q: "Ab wann sollte ich reagieren?"
-    a: "<p>Mit den Zonen aus der STOP-Regain-Studie, bezogen auf das Gewicht am Ende der Abnahme: bis +1,4 kg nichts tun; +1,4 bis +2,3 kg zwei Wochen gegensteuern mit Protein, zwei Krafteinheiten, ohne Flüssigkalorien; ab +2,3 kg Ursachen klären und das Gewicht in den Kontrolltermin mitnehmen. Die Schwellen stammen aus einer Studie ohne Medikament; die Übertragung auf die Zeit nach der Spritze ist plausibel, aber nicht geprüft.</p>"
+    a: "<p>Mit den Zonen aus der STOP-Regain-Studie, bezogen auf das Gewicht am Ende der Abnahme: bis +1,4 kg nichts tun; +1,4 bis +2,3 kg zwei Wochen gegensteuern mit Protein, zwei Krafteinheiten, ohne Flüssigkalorien; ab +2,3 kg Ursachen klären und das Gewicht mit der Ärztin oder dem Arzt besprechen. Die Schwellen stammen aus einer Studie ohne Medikament; die Übertragung auf die Zeit nach der Spritze ist plausibel, aber nicht geprüft.</p>"
 ---
 
 Die Waage ist das einzige Messgerät, das jeder zu Hause hat, und das, über das am meisten gestritten wird: täglich, wöchentlich, gar nicht? Dieser Artikel sagt, was Studien zur Wiegehäufigkeit nach dem Abnehmen zeigen, warum die Regel wichtiger ist als die Häufigkeit, wie du wiegst, damit die Zahl etwas bedeutet, und wann die Waage mehr schadet als nützt. Was in den Wochen nach der letzten Dosis insgesamt passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
@@ -50,7 +50,7 @@ Die Zonen aus STOP Regain, bezogen auf dein Gewicht am Ende der Abnahme:<sup><a 
 
 - **Grün, bis +1,4 kg: nichts tun.** Das ist der Bereich, in dem Wasser, Salz, Zyklus und Darminhalt schwanken.
 - **Gelb, +1,4 bis +2,3 kg: zwei Wochen gegensteuern.** Protein an jedem Tag prüfen, zwei Krafteinheiten, Flüssigkalorien streichen, Schlaf. Dann wieder wiegen.
-- **Rot, ab +2,3 kg: Ursachen klären.** Hat das Gegensteuern zwei Wochen lang nicht gewirkt, gehört das Gewicht in den Kontrolltermin; nach der letzten Dosis ist er ohnehin für Woche 8 bis 12 vorgesehen.
+- **Rot, ab +2,3 kg: Ursachen klären.** Hat das Gegensteuern zwei Wochen lang nicht gewirkt, gehört der Gewichtsverlauf ins Gespräch mit der Ärztin oder dem Arzt.
 
 <div data-interaktiv="zonen"></div>
 

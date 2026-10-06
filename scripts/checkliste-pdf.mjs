@@ -9,6 +9,10 @@
  * Voraussetzungen: Playwright (im Projekt, global oder über PLAYWRIGHT_PATH) und ein Chromium (Playwright findet es
  * über PLAYWRIGHT_BROWSERS_PATH; sonst CHROMIUM_PATH setzen). Lädt keine externen Ressourcen: Tally- und
  * Plausible-Requests werden abgebrochen, die Seite ist ohne sie vollständig.
+ *
+ * Schrift: Chromium bettet variable Schriften als Type-3-Glyphen ein. Deshalb ersetzt das Skript Mona Sans beim Drucken
+ * durch die statischen Schnitte „NDS Druck“ aus scripts/fonts/ (gleicher Mechanismus wie scripts/ernaehrungsplan-pdf.mjs,
+ * Lizenz OFL in scripts/fonts/OFL.txt).
  */
 import fs from 'node:fs';
 import http from 'node:http';
@@ -77,6 +81,19 @@ function serve() {
   });
 }
 
+// Statische Druckschnitte als @font-face; die Auswahl nach font-stretch und font-weight übernimmt der Browser.
+const fontDir = path.resolve('scripts/fonts');
+const druckCss =
+  fs
+    .readdirSync(fontDir)
+    .filter((f) => /^nds-druck-w\d+-g\d+\.woff2$/.test(f))
+    .map((f) => {
+      const [, w, g] = f.match(/w(\d+)-g(\d+)/);
+      const b64 = fs.readFileSync(path.join(fontDir, f)).toString('base64');
+      return `@font-face{font-family:"NDS Druck";src:url(data:font/woff2;base64,${b64}) format("woff2");font-weight:${g};font-stretch:${w}%;font-style:normal}`;
+    })
+    .join('\n') + '\n*{font-family:"NDS Druck",Helvetica,Arial,sans-serif !important;font-synthesis:none !important}';
+
 const { chromium } = await loadPlaywright();
 const { server, port } = await serve();
 const url = `http://127.0.0.1:${port}${pagePath}`;
@@ -91,7 +108,9 @@ try {
   await page.route('**/*', (route) => (route.request().url().startsWith(`http://127.0.0.1:${port}/`) ? route.continue() : route.abort()));
   await page.goto(url, { waitUntil: 'networkidle' });
   await page.emulateMedia({ media: 'print' });
+  await page.addStyleTag({ content: druckCss });
   await page.evaluate(() => document.fonts.ready);
+  await page.waitForTimeout(150);
   fs.mkdirSync(path.dirname(out), { recursive: true });
   await page.pdf({
     path: out,

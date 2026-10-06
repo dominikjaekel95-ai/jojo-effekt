@@ -213,6 +213,7 @@ const inhalt = [
 <style>
   .legal {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2rem 4rem;
     margin-top: 1rem;
   }
@@ -221,6 +222,7 @@ const inhalt = [
   }
   .legal-body {
     max-width: 44rem;
+    overflow-wrap: break-word;
   }
   .legal-body :global(h2) {
     scroll-margin-top: 6rem;

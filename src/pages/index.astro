@@ -1264,9 +1264,12 @@ const jsonLd: Record<string, unknown>[] = [];
           mt.setAttribute('x', String(pt.x));
           mt.setAttribute('y', String(pt.y - 16));
           mt.textContent = `Woche ${Math.round(((pt.x - K.x0) / (K.x120 - K.x0)) * 120)}`;
+          // Beschriftung blendet vor dem Endpunkt aus, damit sie nicht auf −17,3 % oder −5,6 % liegt
+          op(mt, 1 - seg(first ? a : b, 0.86, 0.96));
         }
       }
-      const step = t < 0.35 ? 0 : t < 0.47 ? 1 : t < 0.8 ? 2 : 3;
+      // Text folgt der Kurve: „Ein Jahr später“ erst, wenn der Wiederanstieg größtenteils gezeichnet ist
+      const step = t < 0.35 ? 0 : t < 0.63 ? 1 : t < 0.8 ? 2 : 3;
       caps.forEach((cap, i) => cap.classList.toggle('on', i === step));
       rail.forEach((r, i) => r.classList.toggle('on', i <= step));
     };

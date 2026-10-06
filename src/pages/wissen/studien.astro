@@ -198,6 +198,43 @@ const jsonLd = [
       width: 22%;
     }
   }
+  /* Tablet: sechs Spalten passen nicht, deshalb wie auf dem Handy gestapelt (Regeln wie .k-stack in seiten.css) */
+  @media (min-width: 700px) and (max-width: 1023px) {
+    .st-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    .st-table,
+    .st-table tbody,
+    .st-table tr,
+    .st-table td,
+    .st-table tbody th {
+      display: block;
+      width: 100% !important;
+    }
+    .st-table tr {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--color-line);
+    }
+    .st-table tbody tr:first-child {
+      border-top: 1px solid var(--color-ink);
+    }
+    .st-table td,
+    .st-table tbody th {
+      padding: 0.2rem 0;
+      border: 0;
+    }
+    .st-table td[data-label]::before {
+      content: attr(data-label);
+      display: block;
+      font-size: 0.8125rem;
+      color: var(--color-ink-3);
+    }
+  }
   .st-narrow {
     max-width: 45rem;
   }
@@ -251,6 +288,7 @@ const jsonLd = [
   }
   .st-use p {
     margin-top: 0.6rem;
+    overflow-wrap: anywhere;
   }
   .st-cta {
     margin-top: 2.5rem;

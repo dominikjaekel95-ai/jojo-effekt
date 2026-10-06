@@ -153,6 +153,14 @@ const kontakt = `mailto:${site.owner.email}?subject=${encodeURIComponent('Nach d
     .hd-in { height: 3.75rem; gap: 0.5rem; }
     .hd-cta { padding: 0.5rem 1rem; min-height: 2.5rem; }
   }
+  /* Sehr schmale Geräte (320–374 px): Wortmarke, Button und Abstände etwas kleiner, damit nichts über den Rand ragt */
+  @media (max-width: 374px) {
+    .hd-in { gap: 0.25rem; }
+    .hd-brand :global(.brand) { font-size: 0.9375rem; }
+    .hd-r { gap: 0.125rem; }
+    .hd-cta { padding: 0.5rem 0.8rem; font-size: 0.875rem; }
+    .hd-menu summary { width: 2.5rem; }
+  }
   @media (min-width: 1024px) {
     .hd-nav { display: flex; }
     .hd-desk { display: inline-flex; }

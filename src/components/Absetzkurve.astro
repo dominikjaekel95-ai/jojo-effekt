@@ -196,6 +196,11 @@ const leanH = r1(bot - top - fatH);
   .kv-comp, .kv-mover {
     opacity: 0;
   }
+  /* Endzustand ohne Skript oder mit reduzierter Bewegung: Zusammensetzung des Verlusts sichtbar (Schritt 4 steht im Text
+     darunter); der laufende Punkt bleibt weg, er zeigt nur die Zeit während der Bewegung. */
+  :global(html.rm) .kv-comp, :global(html:not(.js)) .kv-comp {
+    opacity: 1;
+  }
   .kv .kv-mlab {
     fill: var(--color-ink);
     font-size: 13px;

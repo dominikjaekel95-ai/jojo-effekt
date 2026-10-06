@@ -716,6 +716,22 @@ html.js:not(.rm) [data-draw] .k-bar {
 html.js:not(.rm) [data-draw].in .k-bar {
   transform: scaleX(1);
 }
+/* Rückfall wie bei den Modulen: Läuft bewegung.ts nicht (Skript blockiert, Fehler), fehlt html.bw, und nach etwa 3 s
+   steht alles im Endzustand. Läuft das Skript, übernimmt der IntersectionObserver (.in). Ohne JavaScript (kein html.js)
+   und bei html.rm greifen die Startzustände oben gar nicht erst. */
+html.js:not(.rm):not(.bw) [data-rv],
+html.js:not(.rm):not(.bw) [data-count] {
+  animation: k-rueckfall 0.6s var(--ease) 3s forwards;
+}
+html.js:not(.rm):not(.bw) [data-draw] .k-bar {
+  animation: k-rueckfall 0.6s var(--ease) 3s forwards;
+}
+@keyframes k-rueckfall {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 @media print {
   [data-hv],

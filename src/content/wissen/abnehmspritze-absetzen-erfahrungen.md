@@ -1,7 +1,7 @@
 ---
 title: "Abnehmspritze absetzen: Erfahrungen aus den ersten Wochen danach"
 metaTitle: "Abnehmspritze absetzen: Erfahrungen, was schwer war, was half"
-description: "Echte Erfahrungen nach dem Absetzen der Abnehmspritze: Appetit, Gewicht, Muskeln, Alltag. Aus unserer Vorbestell-Liste, anonymisiert, mit Einwilligung."
+description: "Echte Erfahrungen nach dem Absetzen der Abnehmspritze: Appetit, Gewicht, Muskeln, Alltag. Aus unserem Erfahrungsformular, anonymisiert, mit Einwilligung."
 category: "Erfahrungen"
 order: 10
 pubDate: 2026-11-15
@@ -11,11 +11,11 @@ related: ["abnehmspritze-absetzen", "jojo-effekt-abnehmspritze", "gewicht-halten
 draft: true
 faq:
   - q: "Woher stammen die Erfahrungsberichte?"
-    a: "<p>Aus dem Freitextfeld unserer Vorbestell-Liste und aus Gesprächen mit Menschen, die sich dort eingetragen haben. Jede Person hat der anonymisierten Veröffentlichung schriftlich zugestimmt. Alter, Präparat und Dauer sind so angegeben, wie die Person sie genannt hat; wir prüfen sie nicht.</p>"
+    a: "<p>Aus unserem Erfahrungsformular, aus E-Mails und aus Gesprächen mit Menschen, die sich in die Warteliste für das 12-Wochen-Programm eingetragen haben. Jede Person hat der anonymisierten Veröffentlichung schriftlich zugestimmt. Alter, Präparat und Dauer sind so angegeben, wie die Person sie genannt hat; wir prüfen sie nicht.</p>"
   - q: "Sind das typische Verläufe?"
     a: "<p>Nein, es sind Einzelfälle. Was typisch ist, zeigen die Studien: Im Mittel kommen zwei Drittel des verlorenen Gewichts innerhalb eines Jahres zurück. Die Berichte hier zeigen die Bandbreite dahinter.</p>"
   - q: "Kann ich meine Erfahrung beitragen?"
-    a: "<p>Ja. Trag dich in die Vorbestell-Liste ein und schreib ins Freitextfeld, was bei dir nach dem Absetzen passiert ist, oder schreib uns eine E-Mail. Wir melden uns, bevor etwas veröffentlicht wird.</p>"
+    a: "<p>Ja. Schreib uns über das Formular auf der Seite <a href=\"/erfahrungen/\">Erfahrungen</a> oder per E-Mail, was bei dir nach dem Absetzen passiert ist. Wir melden uns, bevor etwas veröffentlicht wird.</p>"
 ---
 
 <!--
@@ -24,7 +24,7 @@ Regeln, bevor diese Seite live geht:
 1. Nur echte Berichte aus Tally-Freitext oder Gesprächen. Keine erfundenen, keine zusammengesetzten Personen.
 2. Schriftliche Einwilligung je Person (E-Mail reicht), Formulierung: „Ich bin einverstanden, dass meine Angaben anonymisiert auf nachderspritze.de veröffentlicht werden. Ich kann die Einwilligung jederzeit widerrufen.“ Ablage: Ordner /einwilligungen (nicht im Repo).
 3. Anonymisierung: Vorname geändert oder nur Initiale, kein Ort unter Großstadtebene, kein Foto.
-4. Keine gesundheitsbezogenen Aussagen über das Set in Berichten („seit dem Set nehme ich nicht mehr zu“ ist ein Health Claim und darf nicht stehen, auch nicht als Zitat). Erlaubt: was die Person gegessen, trainiert, gewogen hat, wie es ihr ging.
+4. Keine Wirkaussagen über das 12-Wochen-Programm oder ein mögliches Starterpaket in Berichten („seit dem Programm nehme ich nicht mehr zu“ ist ein Wirkversprechen, beim Starterpaket ein Health Claim, und darf nicht stehen, auch nicht als Zitat). Erlaubt: was die Person gegessen, trainiert, gewogen hat, wie es ihr ging.
 5. Keine Empfehlungen zu Dosierung oder Absetz-Schema. Wenn ein Bericht so etwas enthält, kürzen und den Pflichtsatz daneben stehen lassen.
 6. Mindestens fünf Berichte, sonst bleibt die Seite Entwurf. Dann draft: true entfernen, pubDate auf das Veröffentlichungsdatum setzen, Michi liest gegen.
 -->
@@ -67,8 +67,8 @@ Studien beschreiben Mittelwerte. Die Menschen, die uns geschrieben haben, beschr
 
 ## Deine Erfahrung
 
-Wenn du die Abnehmspritze abgesetzt hast oder gerade dabei bist, hilft dein Bericht anderen mehr als jede Statistik. Trag dich in die [Warteliste](/#warteliste) ein und nutze das Freitextfeld, oder schreib uns eine E-Mail. Wir melden uns, bevor etwas veröffentlicht wird, und du entscheidest, was stehen bleibt.
+Wenn du die Abnehmspritze abgesetzt hast oder gerade dabei bist, hilft dein Bericht anderen mehr als jede Statistik. Nutze das Formular auf der Seite [Erfahrungen](/erfahrungen/) oder schreib uns eine E-Mail. Wir melden uns, bevor etwas veröffentlicht wird, und du entscheidest, was stehen bleibt.
 
 ---
 
-*Die Berichte sind persönliche Erfahrungen und keine medizinische Information. Sie ersetzen kein Gespräch mit deiner Ärztin oder deinem Arzt. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Programm, kein Medikament.*
+*Die Berichte sind persönliche Erfahrungen und keine medizinische Information. Sie ersetzen kein Gespräch mit deiner Ärztin oder deinem Arzt. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament.*

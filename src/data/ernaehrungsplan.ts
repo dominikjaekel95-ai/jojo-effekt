@@ -78,7 +78,7 @@ const FAKTOR: Record<Appetit, { min: number; max: number; mitte: number; snacks:
 };
 const TITEL: Record<Exclude<Slot, 'snack'>, string> = { fruehstueck: 'Frühstück', mittag: 'Mittag', abend: 'Abend' };
 const SNACK_TITEL: Record<Appetit, string[]> = {
-  klein: ['Vormittag', 'Nachmittag', 'Später am Abend', 'Zwischendurch'],
+  klein: ['Vormittag', 'Nachmittag', 'Später am Abend', 'Vor dem Abendessen'],
   normal: ['Nachmittag', 'Später am Abend'],
 };
 /** Hauptgerichte je Woche (Mo bis So, [Mittag, Abend]): F Fleisch, S Fisch, V ohne Fleisch und Fisch,
@@ -285,7 +285,7 @@ export function erstellePlan(a: Antworten): Plan {
     gestern = new Set([...haupt, ...ids].map((i) => i.g.id));
     gesternFam = new Set(haupt.map((i) => i.familie));
     const [mf, mm, ma] = mahl;
-    const folge = a.appetit === 'klein' ? [mf, snacks[0], mm, snacks[1], ma, snacks[2], snacks[3]] : [mf, mm, snacks[0], ma, snacks[1]];
+    const folge = a.appetit === 'klein' ? [mf, snacks[0], mm, snacks[1], snacks[3], ma, snacks[2]] : [mf, mm, snacks[0], ma, snacks[1]];
     tage.push({ nr: d + 1, mahlzeiten: folge.filter(Boolean) as GeplanteMahlzeit[], protein: summe, faktor });
   }
 

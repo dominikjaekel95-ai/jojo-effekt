@@ -103,7 +103,7 @@ export interface Gericht {
   zutaten: [ZutatKey, number][];
   /** Gemüse, Obst, Kräuter, Gewürze ohne feste Menge */
   dazu?: string;
-  /** Snacks einer Gruppe kommen höchstens einmal am Tag vor (z. B. Proteinshakes) */
+  /** Snacks einer Gruppe kommen höchstens einmal am Tag vor (Proteinshakes; Gläser Milch, Sojadrink, Bananenmilch) */
   gruppe?: string;
   /** pflanzliche Fassung eines Milch-Gerichts: nur in veganen und laktosefreien Plänen */
   ersatz?: boolean;
@@ -166,7 +166,7 @@ export const gerichte: Gericht[] = [
   { id: 'v07', slots: HAUPT, name: 'Bulgursalat mit Feta und Kichererbsen', zutaten: [['bulgur', 50], ['kichererbsen', 120], ['feta', 50]], dazu: 'Tomaten, Gurke, Petersilie, Zitrone' },
   { id: 'v08', slots: HAUPT, name: 'Ofenkartoffel mit Hüttenkäse und Bohnen', zutaten: [['kartoffeln', 250], ['huettenkaese', 150], ['kidney', 80]], dazu: 'Frühlingszwiebel, Paprika' },
   // ---- Hauptgerichte, vegan
-  { id: 'g01', slots: HAUPT, name: 'Kichererbsen-Curry mit Tofu und Reis', zutaten: [['kichererbsen', 150], ['tofu', 100], ['vollkornreis', 50]], dazu: 'Spinat, Tomaten, Currypaste' },
+  { id: 'g01', slots: HAUPT, name: 'Kichererbsen-Curry mit Tofu und Reis', zutaten: [['kichererbsen', 150], ['tofu', 100], ['vollkornreis', 50]], dazu: 'Spinat, Tomaten, Currypulver' },
   { id: 'g02', slots: HAUPT, name: 'Vollkornnudeln mit Linsen-Bolognese', zutaten: [['vollkornnudeln', 80], ['roteLinsen', 70]], dazu: 'passierte Tomaten, Zucchini, Oregano' },
   { id: 'g03', slots: HAUPT, name: 'Tempeh-Bowl mit Quinoa und Edamame', zutaten: [['tempeh', 120], ['quinoa', 50], ['edamame', 50]], dazu: 'Rotkohl, Möhren, Sojasauce' },
   { id: 'g04', slots: HAUPT, name: 'Linsensalat mit Räuchertofu', zutaten: [['linsenGekocht', 200], ['raeuchertofu', 80]], dazu: 'Paprika, Gurke, Petersilie, Senf' },
@@ -195,14 +195,14 @@ export const gerichte: Gericht[] = [
   { id: 's10', slots: S, ersatz: true, name: 'Proteinshake mit Erbsenprotein', zutaten: [['erbsenprotein', 30]], dazu: 'Wasser', gruppe: 'shake' },
   { id: 's11', slots: S, name: 'Geröstete Kichererbsen', zutaten: [['kichererbsen', 100]], dazu: 'Paprikapulver' },
   { id: 's12', slots: S, name: 'Räuchertofu-Würfel mit Gurke', zutaten: [['raeuchertofu', 100]], dazu: 'Gurke' },
-  { id: 's13', slots: S, name: 'Ein Glas Milch oder Kakao', zutaten: [['milch', 300]], dazu: 'Kakaopulver nach Wunsch' },
+  { id: 's13', slots: S, name: 'Ein Glas Milch oder Kakao', zutaten: [['milch', 300]], dazu: 'Kakaopulver nach Wunsch', gruppe: 'glas' },
   { id: 's14', slots: S, name: 'Käsewürfel mit Trauben', zutaten: [['kaese', 30]], dazu: 'Trauben' },
   { id: 's15', slots: S, name: 'Thunfisch auf Knäckebrot', zutaten: [['thunfisch', 60], ['knaeckebrot', 20]], dazu: 'Tomaten' },
-  { id: 's16', slots: S, ersatz: true, name: 'Ein Glas Sojadrink oder Kakao', zutaten: [['sojadrink', 300]], dazu: 'Kakaopulver nach Wunsch' },
+  { id: 's16', slots: S, ersatz: true, name: 'Ein Glas Sojadrink oder Kakao', zutaten: [['sojadrink', 300]], dazu: 'Kakaopulver nach Wunsch', gruppe: 'glas' },
   { id: 's17', slots: S, name: 'Knäckebrot mit Erdnussmus', zutaten: [['knaeckebrot', 20], ['erdnussmus', 15]], dazu: 'Apfel' },
   { id: 's18', slots: S, ersatz: true, name: 'Sojajoghurt-Proteincreme', zutaten: [['sojajoghurt', 150], ['erbsenprotein', 15]], dazu: 'Beeren' },
   { id: 's19', slots: S, name: 'Gebratene Tempeh-Würfel', zutaten: [['tempeh', 60]], dazu: 'Sojasauce' },
   { id: 's20', slots: S, name: 'Weißer Bohnendip mit Gemüsesticks', zutaten: [['weisseBohnen', 100], ['tahin', 10]], dazu: 'Möhren, Gurke, Zitrone' },
-  { id: 's21', slots: S, name: 'Bananenmilch mit Quark', zutaten: [['milch', 200], ['magerquark', 100]], dazu: 'Banane' },
-  { id: 's22', slots: S, ersatz: true, name: 'Bananen-Sojashake mit Erdnussmus', zutaten: [['sojadrink', 250], ['erdnussmus', 15]], dazu: 'Banane' },
+  { id: 's21', slots: S, name: 'Bananenmilch mit Quark', zutaten: [['milch', 200], ['magerquark', 100]], dazu: 'Banane', gruppe: 'glas' },
+  { id: 's22', slots: S, ersatz: true, name: 'Bananen-Sojashake mit Erdnussmus', zutaten: [['sojadrink', 250], ['erdnussmus', 15]], dazu: 'Banane', gruppe: 'glas' },
 ];

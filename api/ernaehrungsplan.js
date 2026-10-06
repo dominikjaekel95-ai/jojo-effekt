@@ -14,8 +14,8 @@
  *     verschickt den Link https://nachderspritze.de/ernaehrungsplan/plan/{$plan}/?v={$vorlieben} (und das PDF).
  *  3. Bereits aktive oder unbestätigte Adresse: Felder `plan` und `vorlieben` aktualisieren, Gruppe „Ernährungsplan“
  *     entfernen und neu zuweisen, Gruppe „Newsletter“ hinzufügen. Abgemeldete Adressen bleiben abgemeldet.
- *  Fehlt ein Feld im MailerLite-Konto (422), versucht die Funktion es ohne `quelle`, dann ohne `vorlieben`; ohne `plan`
- *  scheitert es, und das ist gewollt (ohne Feld kein Link).
+ *  Fehlt ein Feld im MailerLite-Konto (422), versucht die Funktion es ohne `quelle`, dann ohne `vorlieben` (mit und ohne
+ *  `quelle`); ohne `plan` scheitert es, und das ist gewollt (ohne Feld kein Link).
  * Antwort: Weiterleitung (303) auf /ernaehrungsplan/danke/, bei Eingabefehlern ?fehler=eingabe, bei technischen
  * Fehlern ?fehler=technik. Es werden keine E-Mail-Adressen und keine Antworten geloggt, nur Plan-ID und Ergebnis.
  *
@@ -53,7 +53,7 @@ async function lesen(request) {
 /** Feldsätze vom vollständigen bis zum kleinsten; der erste, den MailerLite annimmt, gilt. */
 function feldsaetze(plan, vorlieben, mitQuelle) {
   const voll = { plan, vorlieben, ...(mitQuelle ? { quelle: 'ernaehrungsplan' } : {}) };
-  const saetze = [voll, { plan, vorlieben }, { plan }];
+  const saetze = [voll, { plan, vorlieben }, ...(mitQuelle ? [{ plan, quelle: 'ernaehrungsplan' }] : []), { plan }];
   return saetze.filter((s, i) => saetze.findIndex((x) => JSON.stringify(x) === JSON.stringify(s)) === i);
 }
 

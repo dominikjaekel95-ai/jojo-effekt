@@ -199,7 +199,7 @@ const jsonLd = [
 
         <aside class="epf-vorschau" aria-label="Vorschau auf deinen Plan">
           <div class="epf-pv" data-pv>
-            <p class="epf-pv-kopf"><span>Dein Plan</span><span data-pv-profil>Mischkost · Appetit wieder normal · 70 bis 85 kg</span></p>
+            <p class="epf-pv-kopf" aria-live="polite"><span>Dein Plan</span><span data-pv-profil>Mischkost · Appetit wieder normal · 70 bis 85 kg</span></p>
             <p class="epf-pv-ziel"><span class="epf-pv-zahl" data-pv-ziel>{start.ziel}</span><span class="epf-pv-einheit">g Protein am Tag</span></p>
             <p class="epf-pv-rechnung" data-pv-rechnung>1,2 g × {referenzKg['70bis85']} kg, die Mitte deiner Gewichtsstufe<Fn n={fn('leidy2015')} id="leidy2015" /></p>
 
@@ -309,6 +309,7 @@ const jsonLd = [
     const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] as string);
     const label: Record<string, string> = { mischkost: 'Mischkost', pescetarisch: 'Pescetarisch', vegetarisch: 'Vegetarisch', vegan: 'Vegan', klein: 'Appetit noch klein', normal: 'Appetit wieder normal' };
     let letzteListe = '';
+    let erstesMal = true; // beim ersten Rechnen steht schon dasselbe da: ohne Überblendung austauschen
     let zielJetzt = Number(zielEl.textContent) || 0;
     let summeJetzt = Number.parseInt(summeEl.textContent ?? '0', 10) || 0;
 
@@ -381,7 +382,7 @@ const jsonLd = [
         .join('');
       if (html !== letzteListe) {
         letzteListe = html;
-        if (rm) liste.innerHTML = html;
+        if (rm || erstesMal) liste.innerHTML = html;
         else {
           liste.classList.add('wechsel');
           window.setTimeout(() => {
@@ -390,6 +391,8 @@ const jsonLd = [
           }, 180);
         }
       }
+
+      erstesMal = false;
 
       if (mail) {
         const text = `Hallo Dominik,\n\nich hätte gern den Ernährungsplan, aber ohne Newsletter.\n\nErnährungsform: ${label[e]}\nLaktosefrei: ${lf ? 'ja' : 'nein'}\nAppetit: ${label[a].replace('Appetit ', '')}\nGewicht: ${gewichtLabel[g]}\nVorlieben: ${v.length ? v.map((x) => vorliebenText[x].label).join(', ') : 'keine'}\n\n(Plan ${planId(e, a, g, lf)}${v.length ? `, v=${v.join(',')}` : ''})\n`;

@@ -17,7 +17,7 @@ const jsonLd = [
   ...(site.reviewer ? [{ '@type': 'Person', '@id': `${site.url}/ueber/#reviewer`, name: site.reviewer.name, jobTitle: site.reviewer.title }] : []),
 ];
 ---
-<Base title={title} description={description} path="/ueber/" jsonLd={jsonLd}>
+<Base title={title} description={description} path="/ueber/" jsonLd={jsonLd} footerArzt={false}>
   <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: 'Über diese Seite' }]} meta="Über diese Seite" title="Ein Prototyp, öffentlich getestet" doc={false} />
 
   <div class="container-wide k-end">

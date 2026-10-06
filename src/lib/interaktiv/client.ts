@@ -355,6 +355,15 @@ if (!RM && 'IntersectionObserver' in window) {
   wurzeln.forEach((w) => w.classList.add('ia-in', 'ia-fertig'));
 }
 
+/* ---------------- Drucken: alles im Endzustand ---------------- */
+window.addEventListener('beforeprint', () => {
+  wurzeln.forEach((w) => w.classList.add('ia-in', 'ia-fertig'));
+  document.querySelectorAll<HTMLElement>('[data-ia-scrub]').forEach((s) => {
+    s.style.setProperty('--p', '1');
+    qa(s, '[data-ia-ab]').forEach((el) => el.classList.add('ia-an'));
+  });
+});
+
 /* ---------------- Scroll-Fortschritt ---------------- */
 const scrubs = Array.from(document.querySelectorAll<HTMLElement>('[data-ia-scrub]'));
 if (!RM && scrubs.length) {

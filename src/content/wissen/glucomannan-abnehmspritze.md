@@ -5,6 +5,7 @@ description: "Glucomannan ist der einzige Ballaststoff mit zugelassener EU-Angab
 category: "Ernährung"
 order: 23
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["glucomannan abnehmspritze", "konjak abnehmspritze", "glucomannan statt abnehmspritze", "glucomannan nach abnehmspritze", "glucomannan wegovy", "konjak kapseln abnehmen", "glucomannan erfahrung abnehmen"]
 sources: ["euClaims", "efsa2010glucomannan", "dgeBallaststoffe", "almandoz2024", "wilding2021step1", "wilding2022ext", "bls", "leidy2015"]
 related: ["supplements-nach-abnehmspritze", "heisshunger-nach-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
@@ -20,8 +21,8 @@ faq:
     a: "<p>Die Angabe sagt nichts über Sättigung oder Appetit, und für die Zeit nach GLP-1-Medikamenten gibt es keine Studie. Ballaststoffe insgesamt geben Mahlzeiten Volumen, das ist belegt; gegen hedonischen Hunger, also Essen aus Lust statt aus Hunger, hilft kein Ballaststoff. Dafür braucht es Struktur, Schlaf und Protein.</p>"
   - q: "Wie wirkt Glucomannan beim Abnehmen?"
     a: "<p>Es quillt im Magen mit Wasser zu einem Gel auf, verzögert die Magenentleerung und sättigt. Die zugelassene Angabe lautet: Glucomannan trägt im Rahmen einer kalorienarmen Ernährung zur Gewichtsabnahme bei, bei 3 g am Tag in drei Portionen von 1 g mit ein bis zwei Gläsern Wasser vor den Mahlzeiten. Die EFSA bewertete die Unterschiede zu Placebo in den Studien als klein. Es ersetzt weder die Spritze noch die Ernährungsumstellung.</p>"
-  - q: "Ist Glucomannan im 12-Wochen-Set?"
-    a: "<p>Welcher Ballaststoff im Stick steckt, sagen wir, sobald die Rezeptur steht. Bis dahin steht hier nur, was die Zulassung erlaubt, und der Warnhinweis gilt für jedes Glucomannan-Produkt: viel Wasser, und bei Schluckbeschwerden gar nicht.</p>"
+  - q: "Gehört Glucomannan zum 12-Wochen-Programm?"
+    a: "<p>Nein. Das Programm besteht aus Training, einem Proteinziel mit Rezepten, einem Gewichtskorridor und einem Check-in pro Woche; ein Ballaststoff-Präparat gehört nicht dazu. Für jedes Glucomannan-Produkt gilt der Warnhinweis: viel Wasser, und bei Schluckbeschwerden gar nicht.</p>"
   - q: "Wie lange dauert es, bis Glucomannan wirkt?"
     a: "<p>Die Sättigung kommt innerhalb von Minuten, sobald das Pulver im Magen aufquillt. Ein Effekt auf das Gewicht wurde in den Studien, die der Angabe zugrunde liegen, über Wochen bis wenige Monate gemessen, und er ist klein; die EFSA spricht von kleinen Unterschieden zu Placebo. Wer nach vier Wochen keinen Unterschied bei Hunger und Portionsgröße merkt, braucht es nicht.</p>"
 ---
@@ -74,9 +75,9 @@ Lesart: Die 3 g der Angabe sind ein Zehntel des DGE-Richtwerts. Glucomannan ist 
 - **Medikamente.** Quellende Ballaststoffe können die Aufnahme von Tabletten verzögern. Wer regelmäßig Medikamente nimmt, fragt in der Apotheke nach dem richtigen Abstand. Das gilt auch für die Abnehmpille: Was die Fachinformation zur Einnahme sagt, bleibt maßgeblich; die Unterschiede zwischen Tablette und Spritze stehen unter [Abnehmpille oder Spritze](/wissen/abnehmpille-oder-spritze/).
 - **Diabetes.** Ballaststoffe können die Aufnahme von Zucker aus der Mahlzeit verändern. Wer Medikamente gegen Diabetes nimmt, spricht vorher mit der Ärztin.
 
-## Was das für das Set bedeutet
+## Was das für das Programm bedeutet
 
-Welcher Ballaststoff im Stick steckt, sagen wir, sobald die Rezeptur steht. Bis dahin steht hier nur, was die Zulassung erlaubt, und der Warnhinweis gilt für jedes Glucomannan-Produkt: viel Wasser, und bei Schluckbeschwerden gar nicht. Was wir für das Set sagen, steht in der [Supplement-Übersicht](/wissen/supplements-nach-abnehmspritze/); was wir nicht sagen, steht dort auch.
+Das 12-Wochen-Programm von Nach der Spritze enthält kein Glucomannan und kein anderes Ballaststoff-Präparat. Es setzt auf das, was belegt ist: Ballaststoffe aus Hülsenfrüchten, Vollkorn und Gemüse, Protein zuerst und zwei Krafteinheiten pro Woche. Wer Glucomannan trotzdem nimmt, hält sich an die Bedingungen der Angabe, und der Warnhinweis gilt für jedes Glucomannan-Produkt: viel Wasser, und bei Schluckbeschwerden gar nicht. Was wir zu Supplements sagen und was nicht, steht in der [Supplement-Übersicht](/wissen/supplements-nach-abnehmspritze/).
 
 ## Wann du zur Ärztin oder zum Arzt gehst
 
@@ -89,4 +90,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Glucomannan ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament; welcher Ballaststoff enthalten ist, sagen wir, sobald die Rezeptur steht.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Glucomannan ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze enthält kein Ballaststoff-Präparat; es setzt auf Training, Protein und Mahlzeiten mit Volumen. Start und Preis über die [Warteliste](/#warteliste).*

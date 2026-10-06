@@ -6,7 +6,7 @@ category: "Gewicht halten"
 image: /grafiken/warum-das-gewicht-zurueckkommt.png
 order: 1
 pubDate: 2026-09-30
-updatedDate: 2026-10-04
+updatedDate: 2026-10-06
 keywords: ["jojo effekt abnehmspritze", "abnehmspritze jojo effekt", "wegovy jojo effekt", "ozempic jojo effekt", "mounjaro jojo effekt", "abnehmspritze zunehmen danach", "jojo effekt abnehmspritze vermeiden"]
 sources: ["wilding2022ext", "rubino2021", "aronne2024", "wu2025", "eclinmed2026", "sumithran2011", "fothergill2016", "wilding2021dxa", "rodriguez2025", "jensen2024", "leidy2015", "sardeli2018", "who2020", "dagLeitlinie"]
 related: ["abnehmspritze-absetzen", "muskelabbau-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -112,4 +112,4 @@ Ob und wie du das Medikament absetzt, entscheidest du mit deiner Ärztin oder de
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Programm, kein Medikament, und verhindert den Jojo-Effekt nicht. Es liefert Protein, Ballaststoffe und Kreatin und begleitet dich durch zwei Krafteinheiten pro Woche.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze ist kein Medikament und verhindert den Jojo-Effekt nicht. Es baut auf die drei Dinge, die in Studien den Unterschied machen: Krafttraining, genug Protein und einen Plan für die Waage. Start und Preis über die [Warteliste](/#warteliste).*

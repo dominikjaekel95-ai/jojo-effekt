@@ -5,6 +5,7 @@ description: "30 % der Erwachsenen in Deutschland haben einen Vitamin-D-Mangel. 
 category: "Ernährung"
 order: 19
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["vitamin d abnehmspritze", "vitamin d wegovy", "vitamin d ozempic", "vitamin d mangel abnehmspritze", "vitamin d muskeln abnehmen", "vitamin d nach abnehmspritze", "vitamin d winter supplement"]
 sources: ["rabenberg2015", "dgeReferenzwerte", "euClaims", "almandoz2024", "bfrHoechstmengen2021", "who2020", "wilding2021dxa"]
 related: ["supplements-nach-abnehmspritze", "muskelabbau-abnehmspritze", "magnesium-abnehmspritze"]
@@ -77,4 +78,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin D ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament; Vitamin D ist nicht enthalten.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin D ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*

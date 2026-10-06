@@ -5,6 +5,7 @@ description: "Eingefallene Wangen nach der Spritze: kein Krankheitsbild, sondern
 category: "Ernährung"
 order: 24
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["abnehmspritze gesicht", "ozempic face", "ozempic gesicht", "abnehmspritze eingefallenes gesicht", "wegovy gesicht eingefallen", "abnehmspritze haut hängt", "abnehmspritze falten", "schnell abnehmen gesicht eingefallen"]
 sources: ["wilding2021step1", "wilding2021dxa", "leidy2015", "who2020", "euClaims", "dgeReferenzwerte", "bls", "proksch2014", "wilding2022ext"]
 related: ["muskelabbau-abnehmspritze", "protein-abnehmspritze", "haarausfall-abnehmspritze"]
@@ -87,4 +88,4 @@ In der STEP-1-Verlängerung waren ein Jahr nach der letzten Dosis im Mittel zwei
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Mittel für die Haut; es enthält Protein, Ballaststoffe und Kreatin, kein Kollagen und kein Vitamin C.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Mittel für die Haut. Wer vom Start erfahren will, trägt sich auf die [Warteliste](/#warteliste) ein.*

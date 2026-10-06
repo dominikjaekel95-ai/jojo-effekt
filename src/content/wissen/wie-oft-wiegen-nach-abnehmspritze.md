@@ -5,6 +5,7 @@ description: "Täglich, wöchentlich oder gar nicht? Was Studien zum Wiegen nach
 category: "Gewicht halten"
 order: 27
 pubDate: 2026-10-03
+updatedDate: 2026-10-06
 keywords: ["wie oft wiegen abnehmen", "wie oft sollte man sich wiegen", "täglich wiegen sinnvoll", "gewicht halten wie oft wiegen", "wie oft wiegen nach abnehmspritze", "morgens oder abends wiegen", "gewichtsschwankungen von tag zu tag", "abnehmspritze absetzen gewicht kontrollieren"]
 sources: ["wing2006", "butryn2007", "zheng2016", "vuorinen2021", "madigan2015", "daley2019", "wu2025", "steinberg2014", "benn2016", "pacanowski2023", "zheng2015"]
 related: ["gewicht-halten-nach-abnehmspritze", "jojo-effekt-abnehmspritze", "abnehmspritze-absetzen"]
@@ -81,4 +82,4 @@ Keine Zahl auf der Waage ist ein Grund, ein Medikament auf eigene Faust wieder a
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder psychotherapeutische Beratung. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin für jeden Tag und begleitet dich durch zwei Krafteinheiten pro Woche und einen wöchentlichen Check-in – als Lebensmittel mit Programm, nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder psychotherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze arbeitet mit einem Gewichtskorridor und einem Check-in pro Woche per E-Mail, dazu mit Training und Proteinziel; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

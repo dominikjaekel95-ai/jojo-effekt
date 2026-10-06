@@ -5,6 +5,7 @@ description: "Nach Weihnachten wiegen Erwachsene in Deutschland im Mittel 0,6 % 
 category: "Gewicht halten"
 order: 26
 pubDate: 2026-10-02
+updatedDate: 2026-10-06
 keywords: ["abnehmspritze weihnachten", "feiertage nach abnehmspritze", "feiertage zunehmen vermeiden", "wie viel nimmt man über weihnachten zu", "an weihnachten nicht zunehmen studie", "weihnachten abnehmspritze absetzen", "weihnachtsspeck nach abnehmspritze"]
 sources: ["helander2016", "yanovski2000", "diazzavala2017", "turicchi2020", "wu2025", "fachinfoWegovy", "fachinfoMounjaro", "sumithran2011", "mason2018", "wing2006", "leidy2015", "who2020", "kwok2019", "jensen2024"]
 related: ["gewicht-halten-nach-abnehmspritze", "heisshunger-nach-abnehmspritze", "abnehmspritze-absetzen"]
@@ -80,8 +81,8 @@ Ein bis zwei Kilo mehr nach Neujahr sind zum Teil Wasser, das der Körper mit Sa
 
 ## Was dieser Artikel nicht sagt
 
-Ob du über die Feiertage weiterspritzt, pausierst oder absetzt, ist eine Therapieentscheidung für das Arztgespräch; wir sagen nichts zu Dosierungen, Pausen oder Wiedereinstieg. Und wir behaupten nicht, dass irgendein Produkt die Feiertagszunahme verhindert. Das 12-Wochen-Set liefert Protein, Ballaststoffe, Kreatin und zwei Krafteinheiten pro Woche; die Regeln oben musst du trotzdem selbst einhalten.
+Ob du über die Feiertage weiterspritzt, pausierst oder absetzt, ist eine Therapieentscheidung für das Arztgespräch; wir sagen nichts zu Dosierungen, Pausen oder Wiedereinstieg. Und wir behaupten nicht, dass irgendein Produkt die Feiertagszunahme verhindert. Auch unser 12-Wochen-Programm nimmt dir die Regeln oben nicht ab; es gibt ihnen nur einen Rahmen.
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin für jeden Tag und begleitet dich durch zwei Krafteinheiten pro Woche – als Lebensmittel mit Programm, nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze begleitet die Wochen nach der letzten Dosis mit zwei Krafteinheiten pro Woche, einem Proteinziel und einem Check-in pro Woche; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

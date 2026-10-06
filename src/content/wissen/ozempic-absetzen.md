@@ -5,7 +5,7 @@ description: "Warum das bei Typ-2-Diabetes nie ohne Ärztin geht, wie lange Sema
 category: "Präparate"
 order: 8
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["ozempic absetzen", "ozempic absetzen gewicht", "ozempic absetzen jojo", "ozempic absetzen diabetes", "ozempic absetzen was passiert", "ozempic halbwertszeit", "ozempic ausschleichen"]
 sources: ["fachinfoOzempic", "davies2021step2", "wilding2022ext", "wu2025", "sumithran2011", "jensen2024", "leidy2015"]
 related: ["abnehmspritze-absetzen", "wegovy-absetzen", "jojo-effekt-abnehmspritze"]
@@ -64,4 +64,4 @@ Ozempic hat vier Dosisstufen, ein schrittweises Reduzieren ist also möglich. Di
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Ozempic ist eine Marke von Novo Nordisk. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Programm für die Zeit danach, kein Medikament und nicht zur Behandlung von Diabetes geeignet.*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Ozempic ist eine Marke von Novo Nordisk. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und nicht zur Behandlung von Diabetes geeignet. Start und Preis über die [Warteliste](/#warteliste).*

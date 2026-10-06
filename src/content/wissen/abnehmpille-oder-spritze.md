@@ -6,7 +6,7 @@ category: "Abnehmpille"
 image: /grafiken/wirksamkeit-zulassungsstudien.png
 order: 17
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["abnehmpille oder spritze", "abnehmtablette oder spritze", "wegovy tablette oder spritze", "tablette statt abnehmspritze", "semaglutid tablette oder injektion", "abnehmpille wirksamkeit", "abnehmpille vergleich"]
 sources: ["tabletteApotheken2026", "wharton2025oasis4", "wilding2021step1", "fachinfoWegovy", "ecWegovyTablette2026", "fachinfoRybelsus", "fachinfoOzempic", "fachinfoMounjaro", "fachinfoSaxenda", "fdaOrforglipron2026", "knop2023oasis1", "jastreboff2022", "wharton2025attain1", "pisunyer2015", "wu2025", "rodriguez2025", "wilding2022ext", "aronne2024", "medipreis2026"]
 related: ["abnehmpille-absetzen", "wegovy-absetzen", "mounjaro-absetzen"]
@@ -107,4 +107,4 @@ Stand September 2026: Die Wegovy-Tablette kostet Selbstzahler etwa 175 bis 280 �
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Bewertung und keine Werbung für ein Arzneimittel. Wegovy, Ozempic, Rybelsus und Saxenda sind Marken von Novo Nordisk, Mounjaro und Foundayo Marken von Eli Lilly. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information, keine Bewertung und keine Werbung für ein Arzneimittel. Wegovy, Ozempic, Rybelsus und Saxenda sind Marken von Novo Nordisk, Mounjaro und Foundayo Marken von Eli Lilly. Nach der Spritze vergleicht Präparate, empfiehlt aber keines. Unser 12-Wochen-Programm setzt nach der letzten Dosis an, mit Training, Protein und einem Plan für die Waage, und ist kein Medikament. Wer vom Start erfahren will, trägt sich auf die [Warteliste](/#warteliste) ein.*

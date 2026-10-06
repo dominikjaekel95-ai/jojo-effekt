@@ -5,7 +5,7 @@ description: "Wenig Fleisch, kleine Portionen, Menstruation: Warum Eisen unter d
 category: "Ernährung"
 order: 21
 pubDate: 2026-10-01
-updatedDate: 2026-10-05
+updatedDate: 2026-10-06
 keywords: ["eisen abnehmspritze", "eisenmangel abnehmspritze", "eisen wegovy", "eisen ozempic", "müde abnehmspritze eisen", "ferritin abnehmspritze", "eisen abnehmen frauen"]
 sources: ["nvs2", "dgeReferenzwerte", "euClaims", "bls", "almandoz2024", "bfrHoechstmengen2021"]
 related: ["supplements-nach-abnehmspritze", "vitamin-b12-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
@@ -76,4 +76,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Eisenpräparate sind Nahrungsergänzungsmittel oder Arzneimittel und gehören nach Blutwert in ärztliche Hand. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament; Eisen ist nicht enthalten.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Eisenpräparate sind Nahrungsergänzungsmittel oder Arzneimittel und gehören nach Blutwert in ärztliche Hand. Das 12-Wochen-Programm von Nach der Spritze plant Training, Protein und einen Gewichtskorridor für die Zeit danach; ein Eisenpräparat gehört nicht dazu. Start und Preis über die [Warteliste](/#warteliste).*

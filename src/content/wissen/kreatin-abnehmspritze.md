@@ -5,7 +5,7 @@ description: "Was Kreatin unter und nach der Abnehmspritze bringt, welche Dosis 
 category: "Muskeln"
 order: 5
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["kreatin abnehmspritze", "kreatin wegovy", "kreatin mounjaro", "kreatin ozempic", "kreatin glp-1", "kreatin und abnehmspritze wechselwirkung", "kreatin nach abnehmspritze"]
 sources: ["kreider2017", "euClaims", "sardeli2018", "who2020", "wilding2021dxa", "fachinfoWegovy", "fachinfoMounjaro"]
 related: ["muskelabbau-abnehmspritze", "protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -101,4 +101,4 @@ Der wichtigste Satz zum Schluss: Kreatin macht Training wirksamer. Ohne Training
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Im 12-Wochen-Set von Nach der Spritze sind 3 g Kreatin-Monohydrat pro Tag enthalten – zusammen mit einem Programm mit zwei Krafteinheiten pro Woche, weil Kreatin nur so Sinn ergibt.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Im 12-Wochen-Programm von Nach der Spritze sind zwei Krafteinheiten pro Woche fest eingeplant, weil Kreatin nur mit Training Sinn ergibt; das Programm selbst ist kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*

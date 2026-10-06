@@ -6,7 +6,7 @@ category: "Muskeln"
 image: /grafiken/koerperzusammensetzung-step-1.png
 order: 3
 pubDate: 2026-09-30
-updatedDate: 2026-10-04
+updatedDate: 2026-10-06
 keywords: ["abnehmspritze muskelabbau", "abnehmspritze muskelverlust", "muskelabbau abnehmspritze vermeiden", "wegovy muskelabbau", "ozempic muskelabbau", "mounjaro muskelverlust", "abnehmspritze krafttraining"]
 sources: ["wilding2021dxa", "sardeli2018", "leidy2015", "who2020", "jensen2024", "euClaims", "kreider2017", "dgeProtein", "fothergill2016", "look2025surmount1dxa"]
 related: ["protein-abnehmspritze", "kreatin-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -111,4 +111,4 @@ Zusammen: rund 80 bis 105 g. Das ist mit kleinen Portionen machbar, wenn Protein
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Bei Nierenerkrankungen sprich vor einer Erhöhung der Proteinzufuhr oder Kreatin-Einnahme mit deiner Ärztin. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin und begleitet dich durch zwei Krafteinheiten pro Woche – als Lebensmittel mit Programm, nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Bei Nierenerkrankungen sprich vor einer Erhöhung der Proteinzufuhr oder Kreatin-Einnahme mit deiner Ärztin. Das 12-Wochen-Programm von Nach der Spritze plant zwei Krafteinheiten pro Woche und ein persönliches Proteinziel; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

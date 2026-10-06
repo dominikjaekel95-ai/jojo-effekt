@@ -6,6 +6,7 @@ category: "Ernährung"
 image: /grafiken/haarausfall-zeitverlauf.png
 order: 25
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["haarausfall abnehmspritze", "haarausfall ozempic", "haarausfall wegovy", "haarausfall mounjaro", "abnehmspritze haare", "haarausfall nach abnehmspritze", "haarausfall schnell abnehmen", "haarausfall abnehmen was tun"]
 sources: ["malkud2015", "leidy2015", "euClaims", "dgeReferenzwerte", "almandoz2024", "nvs2", "bfrHoechstmengen2021", "bls"]
 related: ["protein-abnehmspritze", "eisen-abnehmspritze", "abnehmspritze-gesicht"]
@@ -101,4 +102,4 @@ Mit dem Appetit kommen Fleisch, Fisch, Eier und Hülsenfrüchte zurück, und dam
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Mittel gegen Haarausfall; es enthält Protein, Ballaststoffe und Kreatin, keine Haarvitamine.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Mittel gegen Haarausfall. Wer vom Start erfahren will, trägt sich auf die [Warteliste](/#warteliste) ein.*

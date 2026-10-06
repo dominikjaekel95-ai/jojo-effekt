@@ -5,6 +5,7 @@ description: "Vitamin B12 steckt fast nur in tierischen Lebensmitteln, Metformin
 category: "Ernährung"
 order: 20
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["vitamin b12 abnehmspritze", "vitamin b12 ozempic", "b12 metformin abnehmspritze", "vitamin b12 mangel abnehmspritze", "b12 wegovy", "müdigkeit abnehmspritze vitamin b12", "vitamin b12 vegan abnehmen"]
 sources: ["dgeReferenzwerte", "aroda2016", "adaSoc2024", "euClaims", "bls", "almandoz2024", "bfrHoechstmengen2021"]
 related: ["supplements-nach-abnehmspritze", "ozempic-absetzen", "eisen-abnehmspritze"]
@@ -89,4 +90,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin B12 ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament; Vitamin B12 ist nicht enthalten.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin B12 ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*

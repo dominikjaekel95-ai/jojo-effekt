@@ -5,6 +5,7 @@ description: "Omega-3 hält weder Gewicht noch Muskeln, Belege fehlen. Was EPA u
 category: "Ernährung"
 order: 22
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["omega 3 abnehmspritze", "omega 3 wegovy", "omega 3 ozempic", "fischöl abnehmspritze", "omega 3 nach abnehmspritze", "omega 3 kapseln abnehmen", "epa dha abnehmspritze"]
 sources: ["efsa2010fats", "euClaims", "dgeEmpfehlungen", "bls", "wilding2022ext", "almandoz2024", "wilding2021dxa", "who2020", "leidy2015"]
 related: ["supplements-nach-abnehmspritze", "vitamin-d-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
@@ -89,4 +90,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Omega-3-Kapseln sind Nahrungsergänzungsmittel; sie ersetzen weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament; Omega-3 ist nicht enthalten.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Omega-3-Kapseln sind Nahrungsergänzungsmittel; sie ersetzen weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*

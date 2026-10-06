@@ -5,6 +5,7 @@ description: "Wechseljahre: Der Fettzuwachs verdoppelt sich, die Magermasse sink
 category: "Muskeln"
 order: 29
 pubDate: 2026-10-05
+updatedDate: 2026-10-06
 keywords: ["abnehmspritze wechseljahre", "abnehmspritze absetzen wechseljahre", "abnehmen wechseljahre muskeln erhalten", "muskelabbau wechseljahre abnehmen", "gewichtszunahme wechseljahre bauchfett", "krafttraining wechseljahre abnehmen", "protein wechseljahre muskeln", "wechseljahre knochendichte abnehmen"]
 sources: ["greendale2019", "lovejoy2008", "davis2012", "tchang2025", "yang2025", "wilding2021dxa", "look2025surmount1dxa", "jensen2024", "zibellini2015", "villareal2017", "jensen2024bone", "khalafi2023", "mojtahedi2011", "moore2015", "dgeProtein", "leidy2015", "who2020", "euClaims", "gibson2023", "wu2025"]
 related: ["muskelabbau-abnehmspritze", "krafttraining-nach-abnehmspritze", "protein-abnehmspritze"]
@@ -70,8 +71,8 @@ Daraus folgt kein Rat zum Medikament, aber einer zum Training: Wer unter der Spr
 
 ## Was dieser Artikel nicht sagt
 
-Wir bewerten keine Hormontherapie, weder für noch gegen; ob sie in Frage kommt, hängt von Beschwerden, Vorerkrankungen und Risiken ab und ist ein Gespräch mit deiner Gynäkologin oder deinem Gynäkologen. Wir nennen keine Dosierungen und geben keine Empfehlung, die Spritze wegen der Wechseljahre länger zu nehmen oder früher abzusetzen; das ist eine Therapieentscheidung. Und wir behaupten nicht, dass irgendein Produkt den Muskel- oder Knochenverlust verhindert. Das 12-Wochen-Set liefert Protein, Ballaststoffe und Kreatin und zwei Krafteinheiten pro Woche; das Training musst du machen.
+Wir bewerten keine Hormontherapie, weder für noch gegen; ob sie in Frage kommt, hängt von Beschwerden, Vorerkrankungen und Risiken ab und ist ein Gespräch mit deiner Gynäkologin oder deinem Gynäkologen. Wir nennen keine Dosierungen und geben keine Empfehlung, die Spritze wegen der Wechseljahre länger zu nehmen oder früher abzusetzen; das ist eine Therapieentscheidung. Und wir behaupten nicht, dass irgendein Produkt den Muskel- oder Knochenverlust verhindert. Auch unser 12-Wochen-Programm plant das Training nur; machen musst du es selbst.
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder gynäkologische Beratung. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin für jeden Tag und begleitet dich durch zwei Krafteinheiten pro Woche – als Lebensmittel mit Programm, nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder gynäkologische Beratung. Das 12-Wochen-Programm von Nach der Spritze plant zwei Krafteinheiten pro Woche und ein persönliches Proteinziel für die Zeit danach; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

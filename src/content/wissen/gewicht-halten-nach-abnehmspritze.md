@@ -6,7 +6,7 @@ category: "Gewicht halten"
 image: /grafiken/training-s-lite.png
 order: 6
 pubDate: 2026-09-30
-updatedDate: 2026-10-03
+updatedDate: 2026-10-06
 keywords: ["nach abnehmspritze gewicht halten", "abnehmspritze absetzen gewicht halten", "abnehmspritze danach", "gewicht halten nach wegovy", "nach ozempic gewicht halten", "abnehmspritze absetzen plan"]
 sources: ["wu2025", "jensen2024", "leidy2015", "who2020", "sumithran2011", "dgeBallaststoffe", "wilding2022ext", "wing2006", "rodriguez2025", "fachinfoWegovy", "fachinfoMounjaro"]
 related: ["abnehmspritze-absetzen", "jojo-effekt-abnehmspritze", "protein-abnehmspritze"]
@@ -105,4 +105,4 @@ Die Zunahme wird in Studien ab jetzt messbar.<sup><a href="#fn-wu2025">1</a></su
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze folgt genau diesem Aufbau: Protein-, Ballaststoff- und Kreatin-Sticks für jeden Tag, Trainingspläne für zwei Einheiten pro Woche, ein wöchentlicher Check-in. Es ist ein Lebensmittel mit Programm, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze folgt diesem Aufbau: zwei Krafteinheiten pro Woche, ein persönliches Proteinziel mit Rezepten, ein Gewichtskorridor statt Kalorienzählen und ein Check-in pro Woche per E-Mail. Es ist kein Medikament und verhindert den Jojo-Effekt nicht. Start und Preis erfährst du zuerst über die [Warteliste](/#warteliste).*

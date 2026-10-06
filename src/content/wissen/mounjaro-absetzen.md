@@ -6,7 +6,7 @@ category: "Präparate"
 image: /grafiken/halbwertszeiten-praeparate.png
 order: 9
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["mounjaro absetzen", "mounjaro absetzen gewicht", "mounjaro absetzen jojo", "mounjaro absetzen was passiert", "tirzepatid absetzen", "mounjaro halbwertszeit", "mounjaro ausschleichen"]
 sources: ["fachinfoMounjaro", "jastreboff2022", "aronne2024", "aronne2025surmount5", "wu2025", "jensen2024", "leidy2015", "who2020", "fachinfoWegovy", "rubino2021"]
 related: ["abnehmspritze-absetzen", "wegovy-absetzen", "gewicht-halten-nach-abnehmspritze"]
@@ -88,4 +88,4 @@ Der ausführliche Plan: [Gewicht halten nach der Abnehmspritze: der 12-Wochen-Pl
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Mounjaro ist eine Marke von Eli Lilly. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Programm für die Zeit danach, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Mounjaro ist eine Marke von Eli Lilly. Das 12-Wochen-Programm von Nach der Spritze setzt nach der letzten Dosis an, mit Krafttraining, Proteinziel und Gewichtskorridor; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

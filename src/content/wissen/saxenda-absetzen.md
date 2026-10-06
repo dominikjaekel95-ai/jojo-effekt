@@ -5,6 +5,7 @@ description: "Saxenda wirkt nur Tage nach, nicht Wochen. Was das für den Appeti
 category: "Präparate"
 order: 15
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["saxenda absetzen", "saxenda absetzen gewicht", "saxenda absetzen was passiert", "liraglutid absetzen", "saxenda jojo effekt", "saxenda halbwertszeit", "saxenda ausschleichen"]
 sources: ["fachinfoSaxenda", "pisunyer2015", "jensen2024", "lundgren2021", "wu2025", "sumithran2011", "leidy2015", "who2020", "wilding2022ext", "fachinfoWegovy", "fachinfoMounjaro"]
 related: ["abnehmspritze-absetzen", "wegovy-absetzen", "gewicht-halten-nach-abnehmspritze"]
@@ -82,4 +83,4 @@ Der ausführliche Plan: [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Saxenda ist eine Marke von Novo Nordisk. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Programm für die Zeit danach, kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Saxenda ist eine Marke von Novo Nordisk. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

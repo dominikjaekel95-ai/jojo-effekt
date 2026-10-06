@@ -6,7 +6,7 @@ category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 4
 pubDate: 2026-09-30
-updatedDate: 2026-10-05
+updatedDate: 2026-10-06
 keywords: ["abnehmspritze protein", "abnehmspritze protein wie viel", "eiweiß abnehmspritze", "wegovy protein", "ozempic eiweiß wie viel", "proteinshake abnehmspritze", "abnehmspritze ernährung eiweiß"]
 sources: ["dgeProtein", "leidy2015", "wilding2021dxa", "euClaims", "sardeli2018", "dgeBallaststoffe", "bls"]
 related: ["ernaehrung-nach-abnehmspritze", "supplements-nach-abnehmspritze", "muskelabbau-abnehmspritze"]
@@ -74,7 +74,6 @@ Ungefähre Werte pro Portion:
 | Linsen, gekocht | 200 g | 18 g |
 | Hüttenkäse | 150 g | 17 g |
 | Molkenprotein-Pulver | 30 g | 22–25 g |
-| Protein-Stick (Nach der Spritze) | 1 Stick | ≥ 20 g |
 | Milch | 250 ml | 8 g |
 
 Was auffällt: Um auf 100 g zu kommen, braucht es bei jeder Mahlzeit eine echte Proteinquelle. Ein Brötchen mit Marmelade und ein Salat bringen zusammen unter 10 g.
@@ -108,4 +107,4 @@ Protein ist Baustoff. Der Reiz, ihn zu verbauen, kommt vom Training. Krafttraini
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Bei Nierenerkrankungen die Proteinmenge mit der Ärztin abstimmen. Der Protein-Stick im 12-Wochen-Set von Nach der Spritze liefert mindestens 20 g Protein pro Portion; Protein trägt zur Erhaltung von Muskelmasse bei.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Bei Nierenerkrankungen die Proteinmenge mit der Ärztin abstimmen. Im 12-Wochen-Programm von Nach der Spritze bekommst du dein Tagesziel in Gramm und Rezepte für kleine Portionen. Start und Preis über die [Warteliste](/#warteliste).*

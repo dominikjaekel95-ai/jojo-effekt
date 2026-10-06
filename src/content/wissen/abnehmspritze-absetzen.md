@@ -5,7 +5,7 @@ description: "Appetit, Gewicht, Blutwerte: Was nach der letzten Dosis in welcher
 category: "Absetzen"
 order: 2
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 toc: true
 image: /grafiken/absetzkurve-step-1.png
 keywords: ["abnehmspritze absetzen", "abnehmspritze absetzen was passiert", "wegovy absetzen", "ozempic absetzen", "mounjaro absetzen", "abnehmspritze ausschleichen", "abnehmspritze absetzen nebenwirkungen", "abnehmspritze absetzen gewicht halten", "abnehmspritze absetzen gewichtskurve"]
@@ -132,4 +132,4 @@ Absetzen ist selten endgültig. In der US-Auswertung von Versorgungsdaten begann
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und kein Ersatz für ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit nach der Abnehmspritze – kein Medikament.*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und kein Ersatz für ärztliche Beratung. Für genau diese Wochen plant Nach der Spritze ein 12-Wochen-Programm: zwei Krafteinheiten pro Woche, ein persönliches Proteinziel, ein Gewichtskorridor statt Kalorienzählen und ein Check-in pro Woche per E-Mail. Es ist kein Medikament. Start und Preis erfährst du zuerst über die [Warteliste](/#warteliste).*

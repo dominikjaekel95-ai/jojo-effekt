@@ -5,7 +5,7 @@ description: "Protein, Kreatin, Ballaststoffe: dafür gibt es Belege. Vitamine n
 category: "Ernährung"
 order: 12
 pubDate: 2026-09-30
-updatedDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["nach der abnehmspritze supplements", "abnehmspritze supplements", "abnehmspritze nahrungsergänzung", "nahrungsergänzungsmittel nach abnehmspritze", "abnehmspritze vitamine", "abnehmspritze welche supplements", "supplements nach wegovy"]
 sources: ["almandoz2024", "leidy2015", "euClaims", "kreider2017", "dgeBallaststoffe", "klartextNem", "adaSoc2024", "wilding2021dxa", "sardeli2018", "who2020"]
 related: ["kreatin-abnehmspritze", "protein-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
@@ -92,4 +92,4 @@ Alles, was mit „Stoffwechsel ankurbeln“, „Fett verbrennen“, „entgiften
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Set von Nach der Spritze enthält genau die drei Bausteine mit Belegen, Protein, Ballaststoffe und Kreatin, zusammen mit einem Trainingsprogramm. Es ist ein Lebensmittel mit Programm, kein Medikament, und es ersetzt keine Vitamine bei einem Mangel.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze setzt auf das, was hier belegt ist: Protein über Mahlzeiten, Krafttraining und Ballaststoffe aus Lebensmitteln. Es ist kein Medikament und ersetzt keine Vitamine bei einem Mangel. Start und Preis über die [Warteliste](/#warteliste).*

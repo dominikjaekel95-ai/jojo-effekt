@@ -5,7 +5,7 @@ description: "Nach der letzten Dosis kommt der Hunger zurück, oft als Heißhung
 category: "Absetzen"
 order: 14
 pubDate: 2026-10-01
-updatedDate: 2026-10-02
+updatedDate: 2026-10-06
 keywords: ["heißhunger nach abnehmspritze", "abnehmspritze absetzen hunger", "abnehmspritze appetit zurück", "hunger nach abnehmspritze", "heißhunger nach absetzen abnehmspritze", "appetit nach absetzen wegovy", "abnehmspritze abgesetzt ständig hunger"]
 sources: ["sumithran2011", "wu2025", "leidy2015", "dgeBallaststoffe", "spiegel2004", "almandoz2024", "jensen2024", "fachinfoWegovy"]
 related: ["abnehmspritze-absetzen", "ernaehrung-nach-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -91,4 +91,4 @@ Hungern, um den Heißhunger zu „bestrafen“: Es verstärkt ihn am nächsten T
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder psychotherapeutische Beratung. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin und begleitet dich durch zwei Krafteinheiten pro Woche – als Lebensmittel mit Programm, nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder psychotherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze gibt diesen Wochen einen Rahmen: feste Mahlzeiten mit Proteinziel, zwei Krafteinheiten pro Woche und ein Check-in pro Woche per E-Mail. Es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

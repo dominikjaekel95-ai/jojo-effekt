@@ -6,7 +6,7 @@ category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 11
 pubDate: 2026-09-30
-updatedDate: 2026-10-03
+updatedDate: 2026-10-06
 keywords: ["nach der abnehmspritze ernährung", "ernährung nach abnehmspritze", "abnehmspritze ernährung danach", "was essen nach abnehmspritze", "ernährungsplan nach abnehmspritze", "ernährungsplan nach abnehmspritze pdf", "ernährung nach wegovy", "abnehmspritze ernährung umstellen"]
 sources: ["wu2025", "sumithran2011", "leidy2015", "almandoz2024", "dgeBallaststoffe", "dgeEmpfehlungen", "wilding2022ext", "jensen2024", "bls", "wing2006"]
 related: ["protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze", "supplements-nach-abnehmspritze"]
@@ -109,4 +109,4 @@ Wenn das Gewicht trotz Struktur steigt, wenn Essanfälle auftreten oder wenn Typ
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin als Ergänzung zu genau dieser Ernährung – als Lebensmittel mit Programm, nicht als Ersatz für Mahlzeiten und nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze baut auf dieser Ernährung auf: ein persönliches Proteinziel, Rezepte für kleine Portionen und zwei Krafteinheiten pro Woche. Es ersetzt keine Mahlzeiten und ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*

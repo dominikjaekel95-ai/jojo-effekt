@@ -5,6 +5,7 @@ description: "Nach 10 % Gewichtsverlust verbraucht der Körper 300 bis 400 kcal 
 category: "Ernährung"
 order: 28
 pubDate: 2026-10-04
+updatedDate: 2026-10-06
 keywords: ["kalorienbedarf nach abnehmspritze", "grundumsatz nach abnehmspritze", "grundumsatz nach dem abnehmen berechnen", "abnehmspritze absetzen wie viel essen", "kalorienbedarf berechnen nach gewichtsverlust", "stoffwechsel nach abnehmspritze absetzen", "mifflin st jeor formel"]
 sources: ["mifflin1990", "dgeEnergie", "leibel1995", "rosenbaum2010", "rosenbaum2008", "fothergill2016", "martins2020", "blundell2017", "ravussin2025", "wilding2021dxa", "look2025surmount1dxa", "levine2002", "leidy2015", "who2020", "wu2025"]
 related: ["jojo-effekt-abnehmspritze", "ernaehrung-nach-abnehmspritze", "muskelabbau-abnehmspritze"]
@@ -86,4 +87,4 @@ Die Zahlen oben sind Mittelwerte aus kleinen Messreihen; dein Verbrauch kann dar
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Set von Nach der Spritze liefert Protein, Ballaststoffe und Kreatin für jeden Tag und begleitet dich durch zwei Krafteinheiten pro Woche – als Lebensmittel mit Programm, nicht als Medikament.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze arbeitet mit einem Gewichtskorridor statt mit Kalorienzählen, dazu mit Proteinziel und zwei Krafteinheiten pro Woche; es ist kein Medikament und kein Diätplan. Start und Preis über die [Warteliste](/#warteliste).*

@@ -5,6 +5,7 @@ description: "Wer unter der Abnehmspritze wenig isst, kommt selten auf 300 bis 3
 category: "Ernährung"
 order: 18
 pubDate: 2026-10-01
+updatedDate: 2026-10-06
 keywords: ["magnesium abnehmspritze", "magnesium wegovy", "magnesium ozempic", "magnesium mounjaro", "magnesiummangel abnehmspritze", "wadenkrämpfe abnehmspritze magnesium", "magnesium nach abnehmspritze"]
 sources: ["dgeReferenzwerte", "nvs2", "almandoz2024", "bls", "euClaims", "garrison2020", "bfrHoechstmengen2021", "who2020", "leidy2015"]
 related: ["supplements-nach-abnehmspritze", "ernaehrung-nach-abnehmspritze", "kreatin-abnehmspritze"]
@@ -92,4 +93,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Magnesium ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Set von Nach der Spritze ist ein Lebensmittel mit Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament; Magnesium ist nicht enthalten.*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Magnesium ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*

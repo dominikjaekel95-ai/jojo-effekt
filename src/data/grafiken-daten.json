@@ -36,8 +36,7 @@
     "zeilen": [
       ["Wirkstoff im Körper", "Semaglutid nach etwa 5 Wochen weitgehend abgebaut, laut Fachinformation Wegovy bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen", "Halbwertszeit laut Fachinformation: Semaglutid etwa 1 Woche, Tirzepatid etwa 5 Tage; Faustregel fünf Halbwertszeiten"],
       ["Appetit kommt zurück", "Woche 2 bis 5, bleibt danach", "abgeleitet aus dem sinkenden Wirkstoffspiegel, nicht gemessen"],
-      ["Zunahme messbar", "ab Woche 8 signifikant, Anstieg bis etwa Woche 20", "Meta-Analyse randomisierter Studien (Wu et al. 2025)"],
-      ["Ärztlicher Kontrolltermin", "Woche 8 bis 12", "Vorschlag dieser Seite: dann zeigt sich, ob die Zunahme beginnt"]
+      ["Zunahme messbar", "ab Woche 8 signifikant, Anstieg bis etwa Woche 20", "Meta-Analyse randomisierter Studien (Wu et al. 2025)"]
     ],
     "hinweis": "Was aus Pharmakologie und Studien ableitbar ist; der individuelle Verlauf weicht ab.",
     "quelle": "Fachinformationen Wegovy und Mounjaro (EMA); Wu et al., Meta-Analyse, BMC Medicine 2025"

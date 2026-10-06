@@ -424,7 +424,7 @@ export const teller: Record<string, Teller> = {
       { name: 'Morgens', menge: '200 g Skyr mit Beeren', min: 22 },
       { name: 'Mittags', menge: 'Linsensuppe mit 100 g Hähnchen oder Tofu', min: 25, max: 30 },
       { name: 'Nachmittags', menge: 'Protein-Shake oder -Stick', min: 20, max: 25 },
-      { name: 'Abends', menge: '2 Eier mit Gemüse oder 150 g Fisch', min: 14, max: 30 },
+      { name: 'Abends', menge: '150 g Fisch oder 2 Eier mit 150 g Hüttenkäse', min: 30 },
     ],
     start: [0, 1, 2, 3],
     tag: true,
@@ -520,7 +520,7 @@ export const vergleiche: Record<string, Vergleich> = {
       {
         titel: 'Verlust an Knochendichte der Hüfte, %',
         balken: [
-          { label: 'Mit Ausdauertraining', wert: 3, text: '3 %', farbe: 'clay' },
+          { label: 'Mit Ausdauertraining', wert: 2.6, text: '2,6 %', farbe: 'clay' },
           { label: 'Mit Krafttraining', wert: 1, text: 'unter 1 %, nicht signifikant', farbe: 'moss', blass: true },
         ],
       },

@@ -90,7 +90,7 @@ Die Zeit, in der der Wirkstoff noch wirkt, ist die beste Zeit für Vorbereitung:
 1. **Krafttraining anfangen**, zwei Einheiten pro Woche, 30 Minuten, zuhause oder im Studio.<sup><a href="#fn-who2020">17</a></sup>
 2. **Protein auf Zielmenge**, verteilt auf drei bis vier Mahlzeiten.<sup><a href="#fn-leidy2015">16</a></sup>
 3. **Wiegetag festlegen**, einmal pro Woche, und vorher entscheiden, ab welcher Zunahme du reagierst.
-4. **Arzttermin für Woche 8 bis 12** nach der letzten Tablette, wenn in Studien die Zunahme beginnt.<sup><a href="#fn-wu2025">4</a></sup>
+4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen. In Studien beginnt die Zunahme etwa ab Woche 8.<sup><a href="#fn-wu2025">4</a></sup>
 
 Die Wochen im Einzelnen stehen in der [Checkliste für die ersten 8 Wochen](/checkliste/); den Plan für die Haltephase danach beschreibt [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
 

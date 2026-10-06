@@ -1,7 +1,8 @@
 /**
- * Kreatin und die Waage: 3 g am Tag (euClaims), der Speicher im Muskel ist nach etwa vier Wochen voll, in den ersten
- * ein bis zwei Wochen zeigt die Waage 0,5 bis 2 kg mehr, Wasser im Muskel (kreider2017). Regler: eigenes Gewicht.
- * Der Verlauf ist schematisch.
+ * Kreatin und die Waage: 3 g am Tag (euClaims), der Speicher im Muskel ist ohne Ladephase nach etwa vier Wochen voll;
+ * verteilt über diese Wochen zeigt die Waage 0,5 bis 2 kg mehr, Wasser im Muskel (Spanne ohne Beleg in sources.ts,
+ * deshalb ohne Fußnote; kreider2017 nur für die Sicherheit im Fuß). Regler: eigenes Gewicht.
+ * Der Verlauf ist schematisch, Plateau ab Woche 4.
  */
 import { type Attr, type Ctx, de, fn, num, r1, rahmen, regler, zahl } from '../basis';
 
@@ -11,11 +12,11 @@ function waage(mob: boolean): string {
   const m = mob ? { l: 44, r: 14, t: 16, b: 32 } : { l: 52, r: 20, t: 18, b: 36 };
   const x = (w: number) => r1(m.l + (w / 6) * (W - m.l - m.r));
   const y = (kg: number) => r1(m.t + ((2.6 - kg) / 2.6) * (H - m.t - m.b));
-  const linie = `M${x(0)} ${y(0)} L${x(0.4)} ${y(0)} C${x(0.9)} ${y(0.1)} ${x(1.3)} ${y(1.2)} ${x(2)} ${y(1.25)} L${x(6)} ${y(1.25)}`;
+  const linie = `M${x(0)} ${y(0)} L${x(0.4)} ${y(0)} C${x(1.4)} ${y(0.55)} ${x(2.8)} ${y(1.22)} ${x(4)} ${y(1.25)} L${x(6)} ${y(1.25)}`;
   const wochen = [0, 1, 2, 3, 4, 5, 6];
   return (
     `<svg class="ia-svg ia-svg-${mob ? 'm' : 'd'}" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true" focusable="false">` +
-    `<rect class="kr-band" x="${x(1)}" y="${y(2)}" width="${r1(x(6) - x(1))}" height="${r1(y(0.5) - y(2))}"/>` +
+    `<rect class="kr-band" x="${x(4)}" y="${y(2)}" width="${r1(x(6) - x(4))}" height="${r1(y(0.5) - y(2))}"/>` +
     [0, 1, 2].map((v) => `<line class="ia-gl" x1="${m.l}" x2="${W - m.r}" y1="${y(v)}" y2="${y(v)}"/>`).join('') +
     [0, 1, 2].map((v) => `<text class="ia-ax" x="${m.l - 9}" y="${y(v) + 4}" text-anchor="end">${v === 0 ? 'Start' : `+${v} kg`}</text>`).join('') +
     wochen
@@ -41,14 +42,14 @@ export function kreatin(a: Attr, ctx: Ctx): string {
     inhalt:
       `<div class="ia-stats">` +
       `<div class="ia-stat"><p class="ia-gross">${zahl('3')}<small> g am Tag</small></p><p class="ia-klein">die Menge der zugelassenen Angaben, jeden Tag, auch ohne Training an diesem Tag.${qE}</p></div>` +
-      `<div class="ia-stat"><p class="ia-gross"><span class="ia-mark">${zahl('0,5')}<small> bis </small>${zahl('2', '', 'data-ia-verz="300"')}</span><small> kg</small></p><p class="ia-klein">mehr auf der Waage in den ersten ein bis zwei Wochen: Wasser in der Muskulatur, kein Fett.${qK}</p></div>` +
+      `<div class="ia-stat"><p class="ia-gross"><span class="ia-mark">${zahl('0,5')}<small> bis </small>${zahl('2', '', 'data-ia-verz="300"')}</span><small> kg</small></p><p class="ia-klein">mehr auf der Waage in den ersten Wochen, verteilt über etwa vier Wochen: Wasser in der Muskulatur, kein Fett.</p></div>` +
       `</div>` +
       `<div class="kr-speicher"><p class="kr-st">Der Speicher im Muskel füllt sich ohne Ladephase über etwa vier Wochen.</p>` +
       `<div class="kr-tage" aria-hidden="true">${tage}</div>` +
       `<div class="kr-wochen" aria-hidden="true"><span>Woche 1</span><span>Woche 2</span><span>Woche 3</span><span>Woche 4: voll</span></div></div>` +
       `<div class="ia-buehne kr-buehne">${waage(false)}${waage(true)}</div>` +
       regler(ctx, 'kg', 'Dein Gewicht vor dem Start', { min: 50, max: 150, step: 1, wert: kg, einheit: 'kg' }) +
-      `<p class="kr-satz">In Woche 2 zeigt die Waage dann eher <strong><span data-k-lo>${de(kg + 0.5, 1)}</span> bis <span data-k-hi>${de(kg + 2, 1)}</span> kg</strong>. Das ist der neue Ausgangswert, von dem aus du misst.</p>`,
+      `<p class="kr-satz">Nach etwa vier Wochen zeigt die Waage dann eher <strong><span data-k-lo>${de(kg + 0.5, 1)}</span> bis <span data-k-hi>${de(kg + 2, 1)}</span> kg</strong>. Das ist der neue Ausgangswert, von dem aus du misst.</p>`,
     fuss: `Verlauf schematisch; Kreatin-Monohydrat ist bei gesunden Erwachsenen in üblichen Dosen gut untersucht.${qK} Bei Nierenerkrankungen nur nach ärztlicher Rücksprache, und vor Blutabnahmen Bescheid sagen, weil der Kreatinin-Wert steigt.`,
   });
 }

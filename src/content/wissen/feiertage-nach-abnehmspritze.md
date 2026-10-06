@@ -20,7 +20,7 @@ faq:
   - q: "Ist ein einzelnes Festessen ein Problem?"
     a: "<p>Nein. Ein Essen macht keine Zunahme, die bleibt; die Studien messen Wochen, nicht Abende. Das Gewicht steigt durch vier Wochen Plätzchen neben dem Laptop, Alkohol an mehreren Abenden und ausgefallenes Training. Beim Festessen zuerst Protein und Gemüse, danach die Beilagen, und am nächsten Morgen die normale Routine.</p>"
   - q: "Was tue ich, wenn ich nach Neujahr zwei Kilo mehr wiege?"
-    a: "<p>Keine Crash-Diät. Ein Teil davon ist Wasser, das der Körper mit Salz und Kohlenhydraten speichert; was nach zwei Wochen normaler Ernährung noch da ist, ist die echte Zunahme. Dann gilt die gelbe Zone: zwei Wochen Protein und Training protokollieren, danach wieder wiegen. Bleibt das Gewicht über der Schwelle, die du dir gesetzt hast, ist der Arzttermin dran.</p>"
+    a: "<p>Keine Crash-Diät. Ein Teil davon ist Wasser, das der Körper mit Salz und Kohlenhydraten speichert; was nach zwei Wochen normaler Ernährung noch da ist, ist die echte Zunahme. Dann gilt die gelbe Zone: zwei Wochen Protein und Training protokollieren, danach wieder wiegen. Bleibt das Gewicht über der Schwelle, die du dir gesetzt hast, gehört der Gewichtsverlauf ins Gespräch mit der Ärztin oder dem Arzt.</p>"
   - q: "Gilt das auch, wenn ich die Spritze über die Feiertage noch nehme?"
     a: "<p>Ja, nur weniger dringend, weil der Appetit noch gebremst ist. Die Feiertage sind dann eine gute Übung für die Zeit danach: wiegen, Protein zuerst, zwei Krafteinheiten. Alles, was das Medikament betrifft, also auch die Frage, ob du über die Feiertage weiterspritzt, besprichst du mit deiner Ärztin oder deinem Arzt.</p>"
 ---
@@ -54,12 +54,12 @@ Wo Weihnachten auf der Absetzkurve liegt, hängt vom Datum der letzten Dosis ab:
 | 1. November | Woche 7 bis 8 | Wirkstoff weitgehend abgebaut, Zunahme beginnt messbar zu werden |
 | 1. Dezember | Woche 3 | Auswaschphase: Wirkstoff noch teilweise da, Appetit kommt zurück |
 
-Den Zeitplan für dein Datum rechnet das Werkzeug [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/), mit Kalendereintrag für den Kontrolltermin.
+Den Zeitplan für dein Datum rechnet das Werkzeug [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/), mit Kalenderdatei für die Wiegetage.
 
 <div data-interaktiv="zeitachse" data-wirkstoffe="semaglutid,tirzepatid" data-weihnachten="ja"></div>
 
 <figure class="my-8">
-  <img src="/grafiken/zeitachse-nach-letzter-dosis.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Semaglutid (Halbwertszeit etwa eine Woche) ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar, Tirzepatid (Halbwertszeit etwa fünf Tage) nach etwa 25 Tagen. Der Appetit kehrt, abgeleitet aus dem sinkenden Wirkstoffspiegel, ab Woche 2 bis 5 zurück; die Gewichtszunahme ist ab etwa Woche 8 messbar und steigt bis etwa Woche 20. Als Vorschlag dieser Seite ist ein ärztlicher Kontrolltermin 8 bis 12 Wochen nach der letzten Dosis markiert." width="1200" height="675" loading="lazy" class="w-full" />
+  <img src="/grafiken/zeitachse-nach-letzter-dosis.png" alt="Zeitachse über 20 Wochen nach der letzten Dosis einer Abnehmspritze: Semaglutid (Halbwertszeit etwa eine Woche) ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation Wegovy bis etwa sieben Wochen nachweisbar, Tirzepatid (Halbwertszeit etwa fünf Tage) nach etwa 25 Tagen. Der Appetit kehrt, abgeleitet aus dem sinkenden Wirkstoffspiegel, ab Woche 2 bis 5 zurück; die Gewichtszunahme ist ab etwa Woche 8 messbar und steigt bis etwa Woche 20." width="1200" height="675" loading="lazy" class="w-full" />
   <figcaption class="mt-2 text-sm text-ink-3">Die ersten 20 Wochen nach der letzten Dosis: Halbwertszeiten laut Fachinformation, Zunahme laut Meta-Analyse.<sup><a href="#fn-wu2025">5</a></sup> Grafik: Nach der Spritze, frei verwendbar mit Quellenangabe.</figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ Das passt zu dem, was aus der Haltephase nach Diäten bekannt ist. In der STOP-R
 
 ## Der Plan für die Festtage
 
-1. **Die Waage bleibt im Spiel.** Zweimal pro Woche, morgens, gleiche Bedingungen, Zahl notieren. Zwischen den Jahren nicht aussetzen; genau dann zählt es. Die Regel steht vorher fest: bis +1,4 kg nichts tun, darüber zwei Wochen Protein und Training prüfen, ab +2,3 kg ehrlich hinschauen und den Kontrolltermin vorziehen.
+1. **Die Waage bleibt im Spiel.** Zweimal pro Woche, morgens, gleiche Bedingungen, Zahl notieren. Zwischen den Jahren nicht aussetzen; genau dann zählt es. Die Regel steht vorher fest: bis +1,4 kg nichts tun, darüber zwei Wochen Protein und Training prüfen, ab +2,3 kg ehrlich hinschauen und mit der Ärztin oder dem Arzt sprechen.
 2. **Protein zuerst, auch am Festtag.** Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag, verteilt auf Mahlzeiten mit mindestens etwa 25 bis 30 g.<sup><a href="#fn-leidy2015">11</a></sup> Beim Festessen heißt das: zuerst Braten, Fisch oder Hülsenfrüchte und Gemüse, dann Knödel und Soße, dann der Rest. Das Frühstück mit Protein fällt an den Feiertagen nicht aus; Plätzchen kommen nach einer Mahlzeit, nicht statt einer.
 3. **Alkohol bewusst.** Alkohol wird nicht durch weniger Essen ausgeglichen: In einer Meta-Analyse von zwölf Experimentalstudien wurde mit Alkohol bei der Mahlzeit rund 343 kJ, etwa 82 kcal, mehr gegessen und insgesamt rund 1072 kJ, etwa 256 kcal, mehr aufgenommen als mit einem alkoholfreien Getränk.<sup><a href="#fn-kwok2019">13</a></sup> Praktisch: vorher festlegen, wie viele Gläser, dazwischen Wasser, an mindestens vier von sieben Abenden gar nichts.
 4. **Zwei Krafteinheiten bleiben.** Die WHO empfiehlt Muskelkräftigung an mindestens zwei Tagen pro Woche,<sup><a href="#fn-who2020">12</a></sup> und in der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr nach Therapieende 6,0 kg mehr zu als nach dem Trainingsprogramm.<sup><a href="#fn-jensen2024">14</a></sup> Die Weihnachtswoche hat sieben Tage; zwei davon reichen für je 30 Minuten zu Hause. Das Programm steht unter [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/).
@@ -82,7 +82,7 @@ Das passt zu dem, was aus der Haltephase nach Diäten bekannt ist. In der STOP-R
 
 ## Wenn es trotzdem passiert ist
 
-Ein bis zwei Kilo mehr nach Neujahr sind zum Teil Wasser, das der Körper mit Salz und Kohlenhydraten speichert. Was nach zwei Wochen normaler Ernährung noch auf der Waage steht, ist die echte Zunahme. Dann gilt die gelbe Zone: zwei Wochen Protein und Training protokollieren, nicht hungern, danach wieder wiegen. Bleibt das Gewicht über der Schwelle, die du dir gesetzt hast, gehört es in den Kontrolltermin, der 8 bis 12 Wochen nach der letzten Dosis ohnehin ansteht. Die passende Liste für diese Wochen ist die [Checkliste: Die ersten 8 Wochen](/checkliste/).
+Ein bis zwei Kilo mehr nach Neujahr sind zum Teil Wasser, das der Körper mit Salz und Kohlenhydraten speichert. Was nach zwei Wochen normaler Ernährung noch auf der Waage steht, ist die echte Zunahme. Dann gilt die gelbe Zone: zwei Wochen Protein und Training protokollieren, nicht hungern, danach wieder wiegen. Bleibt das Gewicht über der Schwelle, die du dir gesetzt hast, gehört der Gewichtsverlauf ins Gespräch mit der Ärztin oder dem Arzt. Die passende Liste für diese Wochen ist die [Checkliste: Die ersten 8 Wochen](/checkliste/).
 
 ## Was dieser Artikel nicht sagt
 

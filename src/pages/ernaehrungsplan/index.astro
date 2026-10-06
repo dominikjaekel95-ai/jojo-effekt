@@ -73,7 +73,7 @@ const faq = [
   },
   {
     q: 'Was bewirken die Vorlieben?',
-    a: '<p>Gerichte mit den Lebensmitteln, die du ankreuzt, kommen im Plan öfter vor; der Rest bleibt abwechslungsreich, und kein Gericht steht an zwei Tagen hintereinander. Die Mengen rechnet der Plan danach neu, damit jeder Tag dein Proteinziel erreicht. Auf deiner Planseite kannst du Vorlieben jederzeit ändern.</p>',
+    a: '<p>Gerichte mit den Lebensmitteln, die du ankreuzt, kommen im Plan öfter vor; der Rest bleibt abwechslungsreich, und kein Gericht steht an zwei Tagen hintereinander. Die Mengen rechnet der Plan danach neu, damit jeder Tag im Zielbereich liegt (höchstens 5 g unter deinem Proteinziel). Auf deiner Planseite kannst du Vorlieben jederzeit ändern.</p>',
   },
   {
     q: 'Muss ich mich an die Reihenfolge halten?',
@@ -180,7 +180,7 @@ const jsonLd = [
             <ol class="epf-stufen" aria-hidden="true">
               {stufen.map((s) => (<li data-stufe={s.g} class={s.g === '70bis85' ? 'an' : ''} style={`width:${breite(s)}`}><span>{s.text}</span></li>))}
             </ol>
-            <p id="ep-gewicht-hinweis" class="epf-hinweis">Der Plan rechnet mit vier Gewichtsstufen. Gespeichert wird nur die Nummer des passenden Plans, nicht dein Gewicht.</p>
+            <p id="ep-gewicht-hinweis" class="epf-hinweis">Der Plan rechnet mit vier Gewichtsstufen. Gespeichert werden Adresse, Plannummer (steht für Ernährungsform, Gewichtsbereich, Appetit und Laktose) und deine Vorlieben, nicht dein genaues Gewicht.</p>
           </div>
 
           <fieldset class="epf-frage">
@@ -203,13 +203,13 @@ const jsonLd = [
             <p class="epf-pv-ziel"><span class="epf-pv-zahl" data-pv-ziel>{start.ziel}</span><span class="epf-pv-einheit">g Protein am Tag</span></p>
             <p class="epf-pv-rechnung" data-pv-rechnung>1,2 g × {referenzKg['70bis85']} kg, die Mitte deiner Gewichtsstufe<Fn n={fn('leidy2015')} id="leidy2015" /></p>
 
-            <div class="epf-pv-14" role="img" aria-label="Protein an allen 14 Tagen im Zielbereich" data-pv-14>
+            <div class="epf-pv-14" role="img" aria-label="Protein an allen 14 Tagen im Zielbereich, höchstens 5 g unter dem Ziel" data-pv-14>
               <span class="epf-pv-zielwrap" style={`transform:translateY(${(100 - (start.ziel / SKALA) * 100).toFixed(2)}%)`} data-pv-ziellinie><span>Ziel</span></span>
               <ol>
                 {start.tage.map((t, i) => (<li style={`--i:${i}`}><b style={`transform:scaleY(${(t.protein / SKALA).toFixed(3)})`}></b></li>))}
               </ol>
             </div>
-            <p class="epf-pv-unter"><span>Tag 1</span><span>14 Tage, jeder Tag im Ziel</span></p>
+            <p class="epf-pv-unter"><span>Tag 1</span><span>14 Tage, jeder Tag im Zielbereich (höchstens 5 g darunter)</span></p>
 
             <div class="epf-pv-tag">
               <div class="epf-pv-balken" aria-hidden="true" data-pv-balken>
@@ -244,12 +244,12 @@ const jsonLd = [
             </label>
             <label class="epf-check">
               <input type="checkbox" name="einwilligung" value="ja" required />
-              <span>Schickt mir den Plan per Mail und meldet mich für den Newsletter von Nach der Spritze an ({site.newsletter.cadence}: neue Artikel und Studien zur Zeit nach der Abnehmspritze, gelegentlich Neuigkeiten zum Programm). Der Plan kommt, sobald ich die Anmeldung per Link bestätigt habe. Abmelden geht in jeder Mail. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</span>
+              <span>Schickt mir den Plan per Mail und meldet mich für den Newsletter von Nach der Spritze an ({site.newsletter.cadence}: neue Artikel und Studien zur Zeit nach der Abnehmspritze, gelegentlich Neuigkeiten zum Programm). Ich willige ausdrücklich ein, dass ihr dafür meine Plannummer speichert; sie steht für meine Angaben zu Ernährungsform, Gewichtsbereich, Appetit und Laktose. Der Plan kommt, sobald ich die Anmeldung per Link bestätigt habe. Abmelden geht in jeder Mail. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</span>
             </label>
             <div class="hidden" aria-hidden="true">
               <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
             </div>
-            <p class="epf-mikro band-muted">Kostenlos. Keine Weitergabe deiner Adresse. Gespeichert werden Adresse, Plannummer und Vorlieben, nicht dein Gewicht.</p>
+            <p class="epf-mikro band-muted">Kostenlos. Keine Weitergabe deiner Adresse. Gespeichert werden Adresse, Plannummer (steht für Ernährungsform, Gewichtsbereich, Appetit und Laktose) und deine Vorlieben, nicht dein genaues Gewicht.</p>
             <p class="epf-ohne">Lieber ohne Newsletter? Schreib mir eine Mail mit deinen Antworten an <a id="ep-mail" href={mailHref}>{site.owner.email}</a>, dann schicke ich dir den Plan persönlich. Dominik</p>
           </div>
         </div>
@@ -260,9 +260,9 @@ const jsonLd = [
           <h2 id="so-entsteht-der-plan">So entsteht dein Plan</h2>
           <ul>
             <li><strong>Protein nach Gewichtsbereich.</strong> Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<Fn n={fn('leidy2015')} id="leidy2015" /> Die Pläne rechnen mit dem unteren Wert und der Mitte der Gewichtsstufe: rund {proteinZiel.bis70} g bei {gewichtLabel.bis70}, {proteinZiel['70bis85']} g bei {gewichtLabel['70bis85']}, {proteinZiel['85bis100']} g bei {gewichtLabel['85bis100']} und {proteinZiel.ueber100} g bei {gewichtLabel.ueber100} (gerechnet mit {referenzKg.ueber100} kg; wer deutlich mehr wiegt, findet sein Ziel im <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>).</li>
-            <li><strong>Mengen, die aufgehen.</strong> Jedes Gericht hat ein Grundrezept für eine normale Portion. Ein Faktor je Tag passt die Mengen an, bis der Tag das Ziel erreicht; jede Zutat zählt mit ihrem Proteingehalt aus dem Bundeslebensmittelschlüssel.<Fn n={fn('bls')} id="bls" /> Der Rechenweg steht im Plan.</li>
+            <li><strong>Mengen, die aufgehen.</strong> Jedes Gericht hat ein Grundrezept für eine normale Portion. Ein Faktor je Tag passt die Mengen an, bis der Tag im Zielbereich liegt (höchstens 5 g unter dem Ziel); jede Zutat zählt mit ihrem Proteingehalt aus dem Bundeslebensmittelschlüssel.<Fn n={fn('bls')} id="bls" /> Der Rechenweg steht im Plan.</li>
             <li><strong>Portionen nach Appetit.</strong> Ist der Appetit noch klein, sind Frühstück, Mittag und Abend kleiner, und es gibt zwei bis vier proteinreiche Zwischenmahlzeiten. Ist er wieder normal, reichen drei Mahlzeiten und bis zu zwei kleine dazwischen.</li>
-            <li><strong>Abwechslung.</strong> {anzahlGerichte} Gerichte, kein Gericht an zwei Tagen hintereinander. Bei Mischkost gibt es Fleisch an drei und Fisch an zwei Tagen pro Woche, sonst Eier, Milchprodukte und Hülsenfrüchte. Deine Vorlieben verschieben die Auswahl, nicht das Ziel.</li>
+            <li><strong>Abwechslung.</strong> {anzahlGerichte} Gerichte, kein Gericht an zwei Tagen hintereinander. Bei Mischkost gibt es Fleisch an drei und Fisch an zwei Tagen pro Woche als Hauptgericht, sonst Eier, Milchprodukte und Hülsenfrüchte. Deine Vorlieben verschieben die Auswahl, nicht das Ziel.</li>
             <li><strong>Ballaststoffe und Trinken.</strong> Hülsenfrüchte, Haferflocken und Vollkorn bringen dich in Richtung der 30 g Ballaststoffe, die die DGE empfiehlt.<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> Für Flüssigkeit nennen Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten zwei bis drei Liter am Tag.<Fn n={fn('almandoz2024')} id="almandoz2024" /></li>
             <li><strong>Keine Kalorienvorgabe.</strong> Der Plan steuert Protein, Ballaststoffe und Portionsgröße.</li>
           </ul>

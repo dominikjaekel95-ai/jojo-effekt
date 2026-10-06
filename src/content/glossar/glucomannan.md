@@ -8,6 +8,7 @@ sources: ["euClaims", "dgeBallaststoffe", "almandoz2024"]
 related: ["kreatin-monohydrat", "fettfreie-masse"]
 articles: ["supplements-nach-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
 pubDate: 2026-09-30
+updatedDate: 2026-10-06
 ---
 
 Die meisten Aussagen über Ballaststoffe und Gewicht sind in der EU verboten, weil sie nicht belegt sind. Glucomannan ist die Ausnahme: Für diesen Ballaststoff aus der Wurzel der Konjakpflanze hat die EU eine gesundheitsbezogene Angabe zugelassen, mit genauem Wortlaut und genauen Bedingungen.
@@ -20,6 +21,6 @@ Die meisten Aussagen über Ballaststoffe und Gewicht sind in der EU verboten, we
 
 Sie verspricht keine Sättigung, keine Appetitzügelung und keine Wirkung ohne Kalorienreduktion. Sie sagt: ein Beitrag, unter Bedingungen. Ballaststoffe insgesamt sind für die meisten Erwachsenen in Deutschland eher zu wenig als zu viel; die DGE empfiehlt mindestens 30 g am Tag.<sup><a href="#fn-dgeBallaststoffe">2</a></sup> Eine Expertengruppe hält Ballaststoffe unter Adipositas-Medikamenten für einen der Punkte, auf die geachtet werden sollte, weil kleine Portionen wenig davon liefern.<sup><a href="#fn-almandoz2024">3</a></sup>
 
-## Was das für unser Set bedeutet
+## Was das praktisch heißt
 
-Welcher Ballaststoff im Stick steckt, sagen wir, sobald die Rezeptur steht. Bis dahin steht auf dieser Seite nur, was die Zulassung erlaubt, und der Warnhinweis gilt für jedes Glucomannan-Produkt: viel Wasser, und bei Schluckbeschwerden gar nicht. Mehr zu Ballaststoffen und anderen Supplementen unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
+Nach der Abnehmspritze kommen Ballaststoffe am einfachsten aus Hülsenfrüchten, Vollkorn und Gemüse. Wer Glucomannan nimmt, hält sich an die Bedingungen der Angabe; der Warnhinweis gilt für jedes Glucomannan-Produkt: viel Wasser, und bei Schluckbeschwerden gar nicht. Mehr zu Ballaststoffen und anderen Supplementen unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).

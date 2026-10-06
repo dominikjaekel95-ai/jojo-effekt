@@ -10,7 +10,7 @@ const pc = (kg: number) => ((Math.min(MAX, Math.max(0, kg)) / MAX) * 100).toFixe
 const ZONEN = {
   gruen: { name: 'Grün: nichts tun.', text: 'Das ist der Bereich, in dem Wasser, Salz, Zyklus und Darminhalt schwanken.' },
   gelb: { name: 'Gelb: zwei Wochen gegensteuern.', text: 'Protein an jedem Tag prüfen, zwei Krafteinheiten, Flüssigkalorien streichen, auf Schlaf achten. Dann wieder wiegen.' },
-  rot: { name: 'Rot: Ursachen klären.', text: 'Hat das Gegensteuern zwei Wochen lang nicht gewirkt, gehört das Gewicht in den Kontrolltermin.' },
+  rot: { name: 'Rot: Ursachen klären.', text: 'Hat das Gegensteuern zwei Wochen lang nicht gewirkt, gehört der Gewichtsverlauf ins Gespräch mit der Ärztin oder dem Arzt.' },
 } as const;
 type Zone = keyof typeof ZONEN;
 

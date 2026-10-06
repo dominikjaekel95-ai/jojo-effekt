@@ -58,7 +58,7 @@ Für Frauen in und nach den Wechseljahren gilt das doppelt: Zum Verlust aus der 
 
 **Ganzkörper.** Jede Einheit trainiert Beine, Rücken, Brust, Schultern und Rumpf. Das ist bei zwei Einheiten pro Woche effizienter als aufgeteilte Pläne.
 
-**8 bis 12 Wiederholungen, 2 bis 3 Sätze.** Das Positionspapier des American College of Sports Medicine empfiehlt Einsteigern genau diesen Bereich, mit 60 bis 90 Sekunden Pause zwischen den Sätzen.<sup><a href="#fn-acsm2009">5</a></sup> Die letzten zwei Wiederholungen eines Satzes sollen anstrengend sein, aber sauber.
+**8 bis 12 Wiederholungen, 2 bis 3 Sätze.** Das Positionspapier des American College of Sports Medicine empfiehlt Einsteigern 8 bis 12 Wiederholungen in 1 bis 3 Sätzen.<sup><a href="#fn-acsm2009">5</a></sup> Der Plan nutzt 2 bis 3 Sätze, mit 60 bis 90 Sekunden Pause dazwischen. Die letzten zwei Wiederholungen eines Satzes sollen anstrengend sein, aber sauber.
 
 **Steigerung.** Der Muskel bleibt nur, wenn die Belastung wächst: mehr Wiederholungen, stärkeres Band, mehr Gewicht, alle ein bis zwei Wochen ein kleiner Schritt. Ohne Steigerung wird Training zur Gewohnheit ohne Wirkung.
 

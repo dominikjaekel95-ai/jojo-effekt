@@ -8,11 +8,14 @@
  * Rechenweg (steht so auch im Plan):
  *  1. Proteinziel = 1,2 g × Referenzgewicht der Gewichtsstufe (Quelle `leidy2015`), auf 5 g gerundet.
  *  2. Jeder Tag bekommt drei Hauptmahlzeiten und je nach Appetit Zwischenmahlzeiten mit fester Portion.
- *  3. Ein Tagesfaktor skaliert die Grundrezepte von Frühstück, Mittag und Abend, bis der Tag das Ziel trifft
+ *  3. Ein Tagesfaktor skaliert die Grundrezepte von Frühstück, Mittag und Abend, bis der Tag im Zielbereich liegt
  *     (Appetit klein: 0,4 bis 1,0, meist um 0,65, also kleine Teller und mehr Zwischenmahlzeiten; normal: 0,7 bis 1,5).
  *  4. Protein je Zutat = Menge × Proteingehalt je 100 g aus dem Bundeslebensmittelschlüssel (Quelle `bls`).
  * Keine Kalorienvorgaben: Der Plan steuert Protein, Ballaststoffe und Portionsgröße, nicht Energie.
- * `pruefePlaene()` läuft im Build der Planseiten und bricht ab, wenn ein Tag aus dem Korridor fällt.
+ * Zielbereich je Tag: höchstens 5 g unter und höchstens 12 g über dem Ziel. Fällt ein Tag heraus (kommt nur mit
+ * bestimmten Vorlieben vor), wählt der Generator für diesen Tag Zwischenmahlzeiten und Hauptgerichte neu (Rückfall in planeTage).
+ * `pruefePlaene()` läuft im Build der Planseiten und bricht ab, wenn ein Tag aus dem Zielbereich fällt: geprüft werden
+ * alle 56 Grundpläne, jede Vorliebe einzeln, alle Paare, alle Dreier und alle Vorlieben zusammen (rund 18.600 Pläne, etwa 3 s).
  */
 import { alleKombinationen, kombination, erlaubteVorlieben, leseVorlieben, planId, RANG, VORLIEBEN } from './ernaehrungsplan-id.mjs';
 import type { ERNAEHRUNG, APPETIT, GEWICHT } from './ernaehrungsplan-id.mjs';
@@ -34,7 +37,7 @@ export interface Antworten {
 }
 
 export const ernaehrungOptionen: { value: Ernaehrung; label: string; text: string }[] = [
-  { value: 'mischkost', label: 'Mischkost', text: 'Fleisch an drei, Fisch an zwei Tagen pro Woche' },
+  { value: 'mischkost', label: 'Mischkost', text: 'Fleisch an drei, Fisch an zwei Tagen pro Woche als Hauptgericht' },
   { value: 'pescetarisch', label: 'Pescetarisch', text: 'Fisch statt Fleisch, dazu Milch und Eier' },
   { value: 'vegetarisch', label: 'Vegetarisch', text: 'mit Milchprodukten und Eiern' },
   { value: 'vegan', label: 'Vegan', text: 'rein pflanzlich' },
@@ -95,7 +98,7 @@ const MUSTER: Partial<Record<Ernaehrung, [string, string][]>> = {
 // Gerichte vorbereiten
 
 type Art = 'fleisch' | 'fisch' | 'veg';
-interface Info { g: Gericht; idx: number; form: Ernaehrung; laktose: 'enthalten' | 'ersetzbar' | null; art: Art; familie: string; tags: Set<string>; basis: number }
+interface Info { g: Gericht; idx: number; form: Ernaehrung; laktose: 'enthalten' | 'ersetzbar' | null; art: Art; familie: string; tags: string[]; basis: number }
 
 const z = (k: ZutatKey): Zutat => zutaten[k];
 const proteinVon = (k: ZutatKey, menge: number) => (z(k).einheit === 'Stück' ? menge * z(k).protein : (menge / 100) * z(k).protein);
@@ -107,10 +110,17 @@ const INFOS: Info[] = gerichte.map((g, idx) => {
   const laktosen = g.zutaten.map(([k]) => z(k).laktose);
   const laktose = laktosen.includes('enthalten') ? 'enthalten' : laktosen.includes('ersetzbar') ? 'ersetzbar' : null;
   const art: Art = g.zutaten.some(([k]) => z(k).form === 'mischkost') ? 'fleisch' : g.zutaten.some(([k]) => z(k).form === 'pescetarisch') ? 'fisch' : 'veg';
-  const tags = new Set(teile.filter((t) => z(t.k).vorliebe && t.p >= 0.2 * basis).map((t) => z(t.k).vorliebe as string));
+  const tags = [...new Set(teile.filter((t) => z(t.k).vorliebe && t.p >= 0.2 * basis).map((t) => z(t.k).vorliebe as string))];
   const haupt = teile.reduce((a, b) => (b.p > a.p ? b : a));
   return { g, idx, form, laktose, art, familie: z(haupt.k).vorliebe ?? haupt.k, tags, basis };
 });
+/** Familien und Gruppen als Nummern je Gericht (Index = Info.idx); Gerichte derselben Gruppe nie am selben Tag. */
+const FAMILIEN = [...new Set(INFOS.map((i) => i.familie))];
+const GRUPPEN = [...new Set(INFOS.flatMap((i) => (i.g.gruppe ? [i.g.gruppe] : [])))];
+const FAM = INFOS.map((i) => FAMILIEN.indexOf(i.familie));
+const GR = INFOS.map((i) => (i.g.gruppe ? GRUPPEN.indexOf(i.g.gruppe) : -1));
+/** Zutaten je Gericht mit Einheit und Protein, für proteinBei(). */
+const TEILE = INFOS.map((i) => i.g.zutaten.map(([k, m]) => ({ m, einheit: z(k).einheit, protein: z(k).protein })));
 
 const passt = (i: Info, e: Ernaehrung, lf: boolean) => RANG[i.form] >= RANG[e] && !(lf && i.laktose === 'enthalten') && !(i.g.ersatz && !lf);
 
@@ -148,7 +158,13 @@ export interface Plan {
 // ---------------------------------------------------------------------------------------------------------------
 // Hilfen
 
-export const zahl = (n: number, stellen = 1) => n.toLocaleString('de-DE', { maximumFractionDigits: stellen });
+const ZAHLFORMAT = new Map<number, Intl.NumberFormat>();
+/** Zahl deutsch formatiert, wie toLocaleString('de-DE'), aber mit wiederverwendetem Format (schneller in der Prüfung). */
+export const zahl = (n: number, stellen = 1) => {
+  let f = ZAHLFORMAT.get(stellen);
+  if (!f) ZAHLFORMAT.set(stellen, (f = new Intl.NumberFormat('de-DE', { maximumFractionDigits: stellen })));
+  return f.format(n);
+};
 
 /** Name der Zutat, im laktosefreien Plan mit Zusatz. */
 export function zutatName(k: ZutatKey, lf: boolean, mehrzahl = false) {
@@ -169,6 +185,16 @@ function position(k: ZutatKey, menge: number, lf: boolean): Position {
   return { key: k, menge, einheit: x.einheit, text, protein: proteinVon(k, menge) };
 }
 
+/** Protein eines Gerichts bei einem Tagesfaktor, gerechnet wie in plane() (gerundete Mengen), ohne Texte. */
+function proteinBei(i: Info, faktor: number) {
+  let s = 0;
+  for (const t of TEILE[i.idx]) {
+    const menge = faktor === 1 ? t.m : runde(t.m * faktor, t.einheit);
+    s += t.einheit === 'Stück' ? menge * t.protein : (menge / 100) * t.protein;
+  }
+  return Math.round(s);
+}
+
 function plane(i: Info, slot: Slot, faktor: number, titel: string, lf: boolean, vorlieben: Set<string>): GeplanteMahlzeit {
   const positionen = i.g.zutaten.map(([k, m]) => position(k, faktor === 1 ? m : runde(m * faktor, z(k).einheit), lf));
   return {
@@ -179,15 +205,15 @@ function plane(i: Info, slot: Slot, faktor: number, titel: string, lf: boolean, 
     positionen,
     dazu: i.g.dazu,
     protein: Math.round(positionen.reduce((s, p) => s + p.protein, 0)),
-    bevorzugt: [...i.tags].some((t) => vorlieben.has(t)),
+    bevorzugt: i.tags.some((t) => vorlieben.has(t)),
   };
 }
 
 // ---------------------------------------------------------------------------------------------------------------
 // Generator
 
-/** Erzeugt den Plan. Vorlieben, die nicht zur Ernährungsform passen, werden ignoriert. */
-export function erstellePlan(a: Antworten): Plan {
+/** Die 14 Tage eines Plans (ohne Einkaufslisten, Karten und Tabellen): Kern von erstellePlan und der Prüfung. */
+function planeTage(a: Antworten, mitTexten = true) {
   const lf = a.ernaehrung === 'vegan' ? true : !!a.laktosefrei;
   const vorlieben = leseVorlieben(a.vorlieben ?? [], a.ernaehrung, lf) as Vorliebe[];
   const vSet = new Set<string>(vorlieben);
@@ -197,7 +223,13 @@ export function erstellePlan(a: Antworten): Plan {
   const pool = INFOS.filter((i) => passt(i, a.ernaehrung, lf));
   const fr = pool.filter((i) => i.g.slots.includes('fruehstueck'));
   const sn = pool.filter((i) => i.g.slots.includes('snack'));
-  const hauptFuer = (slot: 'mittag' | 'abend', art: Art | null) => pool.filter((i) => i.g.slots.includes(slot) && (art === null || i.art === art));
+  const hauptCache = new Map<string, Info[]>();
+  const hauptFuer = (slot: 'mittag' | 'abend', art: Art | null) => {
+    const key = `${slot}:${art}`;
+    let liste = hauptCache.get(key);
+    if (!liste) hauptCache.set(key, (liste = pool.filter((i) => i.g.slots.includes(slot) && (art === null || i.art === art))));
+    return liste;
+  };
   const hatFleisch = vorlieben.some((v) => ['haehnchen', 'pute', 'rind'].includes(v));
   const hatFisch = vorlieben.some((v) => ['lachs', 'thunfisch', 'garnelen'].includes(v));
   const artFuer = (code: string): Art | null => {
@@ -206,91 +238,140 @@ export function erstellePlan(a: Antworten): Plan {
     return MUSTER[a.ernaehrung] ? 'veg' : null;
   };
 
-  const benutzt = new Map<string, number>();
-  const zuletzt = new Map<string, number>();
-  let gestern = new Set<string>();
-  let gesternFam = new Set<string>();
+  // Zustand als Listen je Gericht (Index = Info.idx) statt Maps: Die Prüfung rechnet rund 18.600 Pläne.
+  const benutzt: number[] = INFOS.map(() => 0);
+  const zuletzt: number[] = INFOS.map(() => -100);
+  const bevorzugt: boolean[] = INFOS.map((i) => i.tags.some((t) => vSet.has(t)));
+  // Markierungen für waehle(): gestern (je Gericht, je Familie) und heute (wird je Aufruf gesetzt und wieder gelöscht).
+  const gestern: number[] = INFOS.map(() => 0);
+  const gesternFam: number[] = FAMILIEN.map(() => 0);
+  const heuteMark: number[] = INFOS.map(() => 0);
+  const heuteFam: number[] = FAMILIEN.map(() => 0);
+  const heuteGr: number[] = GRUPPEN.map(() => 0);
   const { min, max, mitte, snacks: snackFolge } = FAKTOR[a.appetit];
   // Bei kleinem Appetit nur Zwischenmahlzeiten, die nennenswert Protein liefern.
   const snPool = a.appetit === 'klein' ? sn.filter((i) => i.basis >= 8) : sn;
+  /** Wie weit eine Tagessumme außerhalb des Korridors liegt (0 = im Korridor). */
+  const abstandVon = (summe: number) => (summe < ziel - KORRIDOR.unten ? ziel - KORRIDOR.unten - summe : summe > ziel + KORRIDOR.oben ? summe - ziel - KORRIDOR.oben : 0);
 
-  function waehle(kandidaten: Info[], d: number, slotNr: number, heute: Set<string>, heuteFam: Map<string, number>, extra?: (i: Info) => number): Info {
+  /** Was an einem Tag schon gewählt ist (Gericht-Indizes, höchstens sieben); waehle() markiert sie für die Dauer des Aufrufs. */
+  type Heute = number[];
+  const nimm = (h: Heute, i: Info) => {
+    h.push(i.idx);
+    return i;
+  };
+
+  function markiere(h: Heute, an: number) {
+    for (const y of h) {
+      heuteMark[y] += an;
+      heuteFam[FAM[y]] += an;
+      if (GR[y] >= 0) heuteGr[GR[y]] += an;
+    }
+  }
+
+  function waehle(kandidaten: Info[], d: number, slotNr: number, h: Heute, extra?: (i: Info) => number): Info {
     let best: Info | null = null;
     let bestWert = Infinity;
+    markiere(h, 1);
     for (const durchgang of [0, 1]) {
       for (const i of kandidaten) {
-        if (heute.has(i.g.id) || (durchgang === 0 && gestern.has(i.g.id))) continue;
-        if (i.g.gruppe && [...heute].some((h) => INFOS.find((x) => x.g.id === h)?.g.gruppe === i.g.gruppe)) continue;
-        let w = (benutzt.get(i.g.id) ?? 0) * 4;
-        const l = zuletzt.get(i.g.id);
-        if (l !== undefined && d - l <= 3) w += 2;
-        w += (heuteFam.get(i.familie) ?? 0) * 4;
-        if (gesternFam.has(i.familie)) w += 1;
-        if ([...i.tags].some((t) => vSet.has(t))) w -= 6;
+        const x = i.idx;
+        if (heuteMark[x] || (durchgang === 0 && gestern[x]) || (GR[x] >= 0 && heuteGr[GR[x]])) continue;
+        let w = benutzt[x] * 4;
+        if (d - zuletzt[x] <= 3) w += 2;
+        w += heuteFam[FAM[x]] * 4;
+        if (gesternFam[FAM[x]]) w += 1;
+        if (bevorzugt[x]) w -= 6;
         if (extra) w += extra(i);
-        w += ((i.idx * 7 + d * 5 + slotNr * 3) % 17) / 100;
+        w += ((x * 7 + d * 5 + slotNr * 3) % 17) / 100;
         if (w < bestWert) {
           bestWert = w;
           best = i;
         }
       }
-      if (best) return best;
+      if (best) break;
     }
-    return kandidaten[0];
+    markiere(h, -1);
+    return best ?? kandidaten[0];
+  }
+
+  interface Variante { haupt: Info[]; ids: Info[]; summe: number; faktor: number; abstand: number; wert: number }
+
+  /** Frühstück, Mittag, Abend. `richtung` +1 bevorzugt proteinreichere, −1 proteinärmere Gerichte (nur im Rückfall). */
+  function hauptmahlzeiten(d: number, richtung: number): { haupt: Info[]; heute: Heute } {
+    const heute: Heute = [];
+    const extra = richtung ? (i: Info) => (-richtung * i.basis) / 2 : undefined;
+    const muster = MUSTER[a.ernaehrung]?.[d % 7] ?? ['V', 'V'];
+    const f = nimm(heute, waehle(fr, d, 0, heute, extra));
+    const mKand = hauptFuer('mittag', artFuer(muster[0]));
+    const m = nimm(heute, waehle(mKand.length ? mKand : hauptFuer('mittag', null), d, 1, heute, extra));
+    const aKand = hauptFuer('abend', artFuer(muster[1]));
+    const ab = nimm(heute, waehle(aKand.length ? aKand : hauptFuer('abend', null), d, 2, heute, extra));
+    return { haupt: [f, m, ab], heute };
+  }
+
+  /** Zwischenmahlzeiten: Anzahl und Auswahl so, dass der Tagesfaktor nahe der Mitte des erlaubten Bereichs liegt
+   *  (kleiner Appetit: kleine Teller plus mehrere proteinreiche Zwischenmahlzeiten). `gezielt` wählt streng nach
+   *  der fehlenden Proteinmenge statt nach Vorlieben und Abwechslung (nur im Rückfall). */
+  function mitSnacks({ haupt, heute }: { haupt: Info[]; heute: Heute }, d: number, gezielt: boolean): Variante {
+    const basis = haupt.reduce((s, i) => s + i.basis, 0);
+    let bester: Variante | null = null;
+    for (const [rang, n] of snackFolge.entries()) {
+      const sHeute = heute.slice();
+      const ids: Info[] = [];
+      const je = n ? (ziel + 2 - mitte * basis) / n : 0;
+      for (let k = 0; k < n; k++) ids.push(nimm(sHeute, waehle(snPool, d, 3 + k, sHeute, (i) => (gezielt ? Math.abs(i.basis - je) * 3 : Math.abs(i.basis - je) / 3))));
+      // Zwischenmahlzeiten haben eine feste Portion: ihr Protein ist die gerundete Grundmenge.
+      const sProtein = ids.reduce((s, i) => s + Math.round(i.basis), 0);
+      const faktor = Math.min(max, Math.max(min, (ziel + 2 - sProtein) / basis));
+      const summe = haupt.reduce((s, i) => s + proteinBei(i, faktor), 0) + sProtein;
+      const abstand = abstandVon(summe);
+      const wert = abstand * 100 + Math.abs(faktor - mitte) * 10 + rang * 0.5;
+      if (!bester || wert < bester.wert) bester = { haupt, ids, summe, faktor, abstand, wert };
+    }
+    return bester!;
   }
 
   const tage: Tag[] = [];
   for (let d = 0; d < TAGE; d++) {
-    const heute = new Set<string>();
-    const heuteFam = new Map<string, number>();
-    const nimm = (i: Info) => {
-      heute.add(i.g.id);
-      heuteFam.set(i.familie, (heuteFam.get(i.familie) ?? 0) + 1);
-      return i;
-    };
-    const muster = MUSTER[a.ernaehrung]?.[d % 7] ?? ['V', 'V'];
-    const f = nimm(waehle(fr, d, 0, heute, heuteFam));
-    const mKand = hauptFuer('mittag', artFuer(muster[0]));
-    const m = nimm(waehle(mKand.length ? mKand : hauptFuer('mittag', null), d, 1, heute, heuteFam));
-    const aKand = hauptFuer('abend', artFuer(muster[1]));
-    const ab = nimm(waehle(aKand.length ? aKand : hauptFuer('abend', null), d, 2, heute, heuteFam));
-    const haupt = [f, m, ab];
-    const basis = haupt.reduce((s, i) => s + i.basis, 0);
-
-    // Zwischenmahlzeiten: Anzahl und Auswahl so, dass der Tagesfaktor nahe der Mitte des erlaubten Bereichs liegt
-    // (kleiner Appetit: kleine Teller plus mehrere proteinreiche Zwischenmahlzeiten).
-    let bester: { snacks: GeplanteMahlzeit[]; ids: Info[]; mahl: GeplanteMahlzeit[]; summe: number; faktor: number; wert: number } | null = null;
-    for (const [rang, n] of snackFolge.entries()) {
-      const sHeute = new Set(heute);
-      const sFam = new Map(heuteFam);
-      const ids: Info[] = [];
-      const je = n ? (ziel + 2 - mitte * basis) / n : 0;
-      for (let k = 0; k < n; k++) {
-        const s = waehle(snPool, d, 3 + k, sHeute, sFam, (i) => Math.abs(i.basis - je) / 3);
-        sHeute.add(s.g.id);
-        sFam.set(s.familie, (sFam.get(s.familie) ?? 0) + 1);
-        ids.push(s);
+    const erste = hauptmahlzeiten(d, 0);
+    let tag = mitSnacks(erste, d, false);
+    // Rückfall, wenn der Tag aus dem Korridor fällt (kommt nur mit bestimmten Vorlieben vor): erst die
+    // Zwischenmahlzeiten streng nach Proteinbedarf wählen, dann Hauptgerichte mit mehr oder weniger Protein.
+    if (tag.abstand > 0) {
+      const x = mitSnacks(erste, d, true);
+      if (x.abstand < tag.abstand) tag = x;
+    }
+    if (tag.abstand > 0) {
+      const zweite = hauptmahlzeiten(d, tag.summe < ziel ? 1 : -1);
+      for (const gezielt of [false, true]) {
+        const x = mitSnacks(zweite, d, gezielt);
+        if (x.abstand < tag.abstand) tag = x;
       }
-      const snacks = ids.map((i, k) => plane(i, 'snack', 1, SNACK_TITEL[a.appetit][k], lf, vSet));
-      const sProtein = snacks.reduce((s, x) => s + x.protein, 0);
-      const faktor = Math.min(max, Math.max(min, (ziel + 2 - sProtein) / basis));
-      const mahl = haupt.map((i, k) => { const slot = (['fruehstueck', 'mittag', 'abend'] as const)[k]; return plane(i, slot, faktor, TITEL[slot], lf, vSet); });
-      const summe = mahl.reduce((s, x) => s + x.protein, 0) + sProtein;
-      const abstand = summe < ziel - KORRIDOR.unten ? ziel - KORRIDOR.unten - summe : summe > ziel + KORRIDOR.oben ? summe - ziel - KORRIDOR.oben : 0;
-      const wert = abstand * 100 + Math.abs(faktor - mitte) * 10 + rang * 0.5;
-      if (!bester || wert < bester.wert) bester = { snacks, ids, mahl, summe, faktor, wert };
     }
-    const { snacks, ids, mahl, summe, faktor } = bester!;
+    const { haupt, ids, summe, faktor } = tag;
     for (const i of [...haupt, ...ids]) {
-      benutzt.set(i.g.id, (benutzt.get(i.g.id) ?? 0) + 1);
-      zuletzt.set(i.g.id, d);
+      benutzt[i.idx]++;
+      zuletzt[i.idx] = d;
     }
-    gestern = new Set([...haupt, ...ids].map((i) => i.g.id));
-    gesternFam = new Set(haupt.map((i) => i.familie));
-    const [mf, mm, ma] = mahl;
+    gestern.fill(0);
+    for (const i of [...haupt, ...ids]) gestern[i.idx] = 1;
+    gesternFam.fill(0);
+    for (const i of haupt) gesternFam[FAM[i.idx]] = 1;
+    // Für die Prüfung reichen ID, Slot und Protein; Mengen und Texte baut plane() nur für echte Pläne.
+    const fertig = (i: Info, slot: Slot, f: number, titel: string): GeplanteMahlzeit =>
+      mitTexten ? plane(i, slot, f, titel, lf, vSet) : { id: i.g.id, slot, titel, name: i.g.name, positionen: [], protein: proteinBei(i, f), bevorzugt: false };
+    const snacks = ids.map((i, k) => fertig(i, 'snack', 1, SNACK_TITEL[a.appetit][k]));
+    const [mf, mm, ma] = haupt.map((i, k) => { const slot = (['fruehstueck', 'mittag', 'abend'] as const)[k]; return fertig(i, slot, faktor, TITEL[slot]); });
     const folge = a.appetit === 'klein' ? [mf, snacks[0], mm, snacks[1], snacks[3], ma, snacks[2]] : [mf, mm, snacks[0], ma, snacks[1]];
     tage.push({ nr: d + 1, mahlzeiten: folge.filter(Boolean) as GeplanteMahlzeit[], protein: summe, faktor });
   }
+  return { id, ziel, lf, vorlieben, tage };
+}
+
+/** Erzeugt den Plan. Vorlieben, die nicht zur Ernährungsform passen, werden ignoriert. */
+export function erstellePlan(a: Antworten): Plan {
+  const { id, ziel, lf, vorlieben, tage } = planeTage(a);
 
   const wochen: Woche[] = [0, 1].map((w) => {
     const wt = tage.slice(w * 7, w * 7 + 7);
@@ -398,8 +479,12 @@ export function allePlaene(): Plan[] {
   return alleKombinationen().map((k) => erstellePlan(k as Antworten));
 }
 
-/** Prüft einen Plan: jeder Tag im Korridor, drei Hauptmahlzeiten, kein Gericht an zwei Tagen hintereinander. */
-export function pruefePlan(p: Plan): string[] {
+/** Was die Prüfung von einem Plan braucht (erstellePlan liefert mehr). */
+type PlanKern = Pick<Plan, 'id' | 'ziel' | 'tage' | 'vorlieben'> & Pick<Antworten, 'ernaehrung' | 'appetit' | 'gewicht' | 'laktosefrei'>;
+
+/** Prüft einen Plan: jeder Tag im Zielbereich (höchstens 5 g unter, höchstens 12 g über dem Ziel),
+ *  drei Hauptmahlzeiten, kein Gericht an zwei Tagen hintereinander. */
+export function pruefePlan(p: PlanKern): string[] {
   const fehler: string[] = [];
   const name = `${p.id} (${p.ernaehrung}, ${p.appetit}, ${p.gewicht}${p.laktosefrei ? ', laktosefrei' : ''}${p.vorlieben.length ? `, v=${p.vorlieben.join('+')}` : ''})`;
   p.tage.forEach((t, i) => {
@@ -414,12 +499,30 @@ export function pruefePlan(p: Plan): string[] {
   return fehler;
 }
 
-/** Prüft alle Grundpläne, jeden mit jeder einzelnen Vorliebe und mit allen Vorlieben zusammen. */
+/** Alle Vorlieben-Auswahlen, die die Prüfung abdeckt: keine, jede einzelne, alle Paare, alle Dreier, alle zusammen. */
+function vorliebenAuswahlen(erlaubt: readonly string[]): string[][] {
+  const out: string[][] = [[]];
+  for (let i = 0; i < erlaubt.length; i++) {
+    out.push([erlaubt[i]]);
+    for (let j = i + 1; j < erlaubt.length; j++) {
+      out.push([erlaubt[i], erlaubt[j]]);
+      for (let k = j + 1; k < erlaubt.length; k++) out.push([erlaubt[i], erlaubt[j], erlaubt[k]]);
+    }
+  }
+  if (erlaubt.length > 3) out.push([...erlaubt]);
+  return out;
+}
+
+/** Prüft alle 56 Grundpläne, jeden mit jeder einzelnen Vorliebe, allen Paaren, allen Dreiern und allen Vorlieben
+ *  zusammen (rund 18.600 Pläne; rechnet nur die Tage, ohne Einkaufslisten und Karten). */
 export function pruefePlaene(): string[] {
   const fehler: string[] = [];
   for (const k of alleKombinationen()) {
-    const erlaubt = erlaubteVorlieben(k.ernaehrung, k.laktosefrei);
-    for (const v of [[], ...erlaubt.map((x) => [x]), erlaubt]) fehler.push(...pruefePlan(erstellePlan({ ...(k as Antworten), vorlieben: v })));
+    for (const v of vorliebenAuswahlen(erlaubteVorlieben(k.ernaehrung, k.laktosefrei))) {
+      const a = { ...(k as Antworten), vorlieben: v };
+      const { id, ziel, lf, vorlieben, tage } = planeTage(a, false);
+      fehler.push(...pruefePlan({ id, ziel, tage, vorlieben, ernaehrung: a.ernaehrung, appetit: a.appetit, gewicht: a.gewicht, laktosefrei: lf }));
+    }
   }
   return fehler;
 }

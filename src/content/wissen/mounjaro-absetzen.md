@@ -18,7 +18,7 @@ faq:
   - q: "Muss ich Mounjaro ausschleichen?"
     a: "<p>Die Fachinformation sieht kein Ausschleichen vor; SURMOUNT-4 hat abrupt auf Placebo gewechselt, ohne Entzugserscheinungen. Mit sechs Dosisstufen ist ein schrittweises Reduzieren technisch möglich. Ob es sinnvoll ist, entscheidet deine Ärztin; ein Beleg für einen kleineren Jojo-Effekt fehlt.</p>"
   - q: "Ist der Jojo-Effekt nach Mounjaro stärker als nach Wegovy?"
-    a: "<p>In Prozentpunkten ja, weil der Verlust vorher größer ist: In SURMOUNT-5 verloren Teilnehmende unter Tirzepatid 20,2 %, unter Semaglutid 13,7 %. Mehr Verlust heißt mehr, das zurückkommen kann. Der Anteil, der zurückkommt, ist in den Studien ähnlich: rund zwei Drittel innerhalb eines Jahres.</p>"
+    a: "<p>In Prozentpunkten ja, weil der Verlust vorher größer ist: In SURMOUNT-5 verloren Teilnehmende unter Tirzepatid 20,2 %, unter Semaglutid 13,7 %. Mehr Verlust heißt mehr, das zurückkommen kann. Zurück kommt bei Tirzepatid etwa die Hälfte innerhalb eines Jahres: In SURMOUNT-4 lag das Gewicht nach vorher −20,9 % ein Jahr nach dem Wechsel auf Placebo noch knapp 10 % unter dem Start.</p>"
   - q: "Was passiert mit dem Körper, wenn man Mounjaro absetzt?"
     a: "<p>Tirzepatid ist nach rund 25 Tagen weitgehend abgebaut; der Appetit kommt früher zurück, der Magen entleert sich wieder schneller, Übelkeit und Völlegefühl lassen nach. Ein Entzugssyndrom gibt es nicht. In SURMOUNT-4 stieg das Gewicht nach dem Wechsel auf Placebo in 52 Wochen um etwa 14 %, und Blutzucker, Blutdruck und Blutfette bewegten sich mit dem Gewicht zurück Richtung Ausgangswert. Bei Typ-2-Diabetes gehört die übrige Therapie dann angepasst, deshalb nur in Absprache mit der Ärztin.</p>"
   - q: "Kann ich Mounjaro absetzen, ohne zuzunehmen?"
@@ -76,7 +76,7 @@ Wegen der kurzen Halbwertszeit gilt bei Mounjaro besonders: früh anfangen.
 1. **Krafttraining, zwei Einheiten pro Woche**, mindestens vier Wochen vor der letzten Dosis beginnen. In der S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach dem Absetzen; nach dem Medikament allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup>
 2. **Protein auf 1,2 bis 1,6 g pro kg Körpergewicht**,<sup><a href="#fn-leidy2015">7</a></sup> verteilt auf drei bis vier Mahlzeiten. Bei einem Verlust von 20 % sind auch viele Muskeln gegangen; Protein ist der Baustoff, um sie zu halten.
 3. **Wiegen einmal pro Woche mit einer festen Reaktionsschwelle.**
-4. **Arzttermin für Woche 6 bis 10** nach der letzten Dosis, früher als bei Semaglutid.
+4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen.
 
 Der ausführliche Plan: [Gewicht halten nach der Abnehmspritze: der 12-Wochen-Plan](/wissen/gewicht-halten-nach-abnehmspritze/).
 

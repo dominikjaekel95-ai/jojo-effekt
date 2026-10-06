@@ -63,7 +63,6 @@ Der Wirkstoff ist noch im Körper, der Appetit noch klein. Das ist die einfachst
 - **Training:** Zwei feste Termine. In Woche 1 und 2 leicht, nur die Bewegungen lernen: Kniebeuge, Rudern, Drücken, Hüftstrecken, Rumpf. Ab Woche 3 die Belastung steigern.
 - **Protein:** Tagesmenge berechnen, auf Mahlzeiten verteilen, Frühstück umstellen (Skyr, Quark, Eier oder Shake). Eine Notreserve (Stick oder Shake) immer dabei.
 - **Wiegen:** Ausgangswert festhalten. Wer Kreatin startet, rechnet mit 0,5 bis 2 kg Wasser in den ersten zwei Wochen – das ist der neue Ausgangswert, nicht Fett.
-- **Ärztin:** Termin für Woche 8 bis 12 ausmachen. Jetzt, nicht später.
 
 **Ziel am Ende von Phase 1:** Acht Trainingseinheiten absolviert, Protein an mindestens fünf von sieben Tagen erreicht, ein Wiege-Protokoll mit vier Einträgen.
 
@@ -83,24 +82,24 @@ Der Wirkstoff ist weitgehend abgebaut. Der Appetit ist zurück, oft stärker als
 
 Die Zunahme wird in Studien ab jetzt messbar.<sup><a href="#fn-wu2025">1</a></sup> Das Ziel dieser Phase ist ein System, das ohne Plan läuft.
 
-- **Der Arzttermin.** Gewicht, Blutdruck, Blutzucker, Blutfette. Ehrlich berichten, wie es läuft. Optionen besprechen – auch die eines Wiedereinstiegs, falls nötig. In der STEP-1-Verlängerung näherten sich die Blutwerte ein Jahr nach dem Absetzen wieder den Ausgangswerten;<sup><a href="#fn-wilding2022ext">7</a></sup> deshalb lohnt sich die Kontrolle. Omega-3-Kapseln ersetzen sie nicht; was sie laut den zugelassenen Angaben leisten, steht unter [Omega-3 bei der Abnehmspritze](/wissen/omega-3-abnehmspritze/).
-- **Die Wiege-Regel festschreiben.** Die Zonen aus der STOP-Regain-Studie:<sup><a href="#fn-wing2006">8</a></sup> bis +1,4 kg nichts tun; ab +1,4 kg zwei Wochen lang Protein und Training protokollieren; ab +2,3 kg Ursachen klären und den Kontrolltermin vorziehen. Aufschreiben, an den Kühlschrank.
+- **Das Gespräch mit der Ärztin oder dem Arzt.** Den Gewichtsverlauf mitnehmen, ehrlich berichten, wie es läuft. Optionen besprechen – auch die eines Wiedereinstiegs, falls nötig. In der STEP-1-Verlängerung näherten sich die Blutwerte ein Jahr nach dem Absetzen wieder den Ausgangswerten.<sup><a href="#fn-wilding2022ext">7</a></sup> Was Omega-3-Kapseln laut den zugelassenen Angaben leisten, steht unter [Omega-3 bei der Abnehmspritze](/wissen/omega-3-abnehmspritze/).
+- **Die Wiege-Regel festschreiben.** Die Zonen aus der STOP-Regain-Studie:<sup><a href="#fn-wing2006">8</a></sup> bis +1,4 kg nichts tun; ab +1,4 kg zwei Wochen lang Protein und Training protokollieren; ab +2,3 kg Ursachen klären und mit der Ärztin oder dem Arzt besprechen. Aufschreiben, an den Kühlschrank.
 - **Training verstetigen.** Zwei Einheiten bleiben. Wer mag, nimmt eine dritte dazu oder ergänzt Ausdauer. Was nicht geht: pausieren, „weil das Gewicht jetzt stabil ist“.
 - **Die Woche danach planen.** Was passiert im Urlaub, bei Krankheit, in stressigen Wochen? Eine Minimalversion festlegen: ein Training, Protein zum Frühstück, einmal wiegen. Für Weihnachten und andere Feiertage, die oft genau in diese Wochen fallen, steht ein eigener Plan unter [Feiertage nach der Abnehmspritze](/wissen/feiertage-nach-abnehmspritze/).
 
 <div data-interaktiv="zonen"></div>
 
-**Ziel am Ende von Phase 3:** Gewicht stabil, Training seit 12 Wochen regelmäßig, eine schriftliche Regel für die Zeit danach, ein Arzttermin hinter dir.
+**Ziel am Ende von Phase 3:** Gewicht stabil, Training seit 12 Wochen regelmäßig, eine schriftliche Regel für die Zeit danach.
 
 ## Der Plan auf einer Seite
 
 | Woche | Training | Ernährung | Wiegen | Sonstiges |
 |---|---|---|---|---|
-| 1–2 | 2× leicht, Technik | Protein berechnen, Frühstück umstellen | Ausgangswert | Arzttermin für Woche 8–12 vereinbaren |
+| 1–2 | 2× leicht, Technik | Protein berechnen, Frühstück umstellen | Ausgangswert | – |
 | 3–4 | 2×, Belastung steigern | Protein an 5/7 Tagen erreichen | wöchentlich | Notreserve organisieren |
 | 5–6 | 2×, weiter steigern | Volumen und Ballaststoffe hoch, Struktur | wöchentlich | Schlaf priorisieren |
 | 7–8 | 2× | Keine Flüssigkalorien, feste Zeiten | wöchentlich, Korridor prüfen | Protein/Training ehrlich prüfen |
-| 9–10 | 2×, ggf. 3. Einheit | Routine, keine Änderung | wöchentlich | Arzttermin |
+| 9–10 | 2×, ggf. 3. Einheit | Routine, keine Änderung | wöchentlich | – |
 | 11–12 | 2× | Routine | wöchentlich | Wiege-Regel schriftlich festlegen |
 
 ---

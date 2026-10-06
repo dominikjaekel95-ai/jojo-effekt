@@ -4,14 +4,15 @@
  * Mengen stehen nicht hier, sondern kommen aus dem Plan (Grundrezept × Tagesfaktor). Keine Kalorien, keine Nährwert-
  * versprechen. `zeit` = Minuten aktive Zubereitung, grob.
  */
-export interface Karte { zeit: number; schritte: string[]; tipp?: string }
+/** `schritteLaktosefrei`: Schritte für laktosefreie Pläne, wo der Text eine Zutat nennt, die nicht in der Zutatenliste steht. */
+export interface Karte { zeit: number; schritte: string[]; schritteLaktosefrei?: string[]; tipp?: string }
 
 export const karten: Record<string, Karte> = {
   f01: { zeit: 5, schritte: ['Skyr in eine Schale geben, Haferflocken darüberstreuen.', 'Beeren (frisch oder aufgetaut) und etwas Zimt dazu.'], tipp: 'TK-Beeren am Abend in den Kühlschrank stellen, dann sind sie morgens aufgetaut.' },
   f02: { zeit: 10, schritte: ['Eier mit einer Prise Salz verquirlen.', 'In einer beschichteten Pfanne bei mittlerer Hitze langsam stocken lassen, dabei schieben statt rühren.', 'Mit Tomaten und Schnittlauch auf dem Brot anrichten.'] },
   f03: { zeit: 5, schritte: ['Haferflocken, Quark und Milch in einem Glas verrühren.', 'Über Nacht in den Kühlschrank stellen.', 'Morgens geriebenen Apfel und Zimt unterheben.'], tipp: 'Hält sich zwei Tage im Kühlschrank; gleich zwei Gläser ansetzen.' },
   f04: { zeit: 5, schritte: ['Brot mit Hüttenkäse bestreichen.', 'Gurke und Radieschen in Scheiben darauflegen, Kresse und Pfeffer darüber.'] },
-  f05: { zeit: 5, schritte: ['Quark mit einem Schluck Wasser oder Milch glatt rühren, mit Salz, Pfeffer und Schnittlauch würzen.', 'Auf das Brot streichen, Radieschen in Scheiben darauf.'] },
+  f05: { zeit: 5, schritte: ['Quark mit einem Schluck Wasser oder Milch glatt rühren, mit Salz, Pfeffer und Schnittlauch würzen.', 'Auf das Brot streichen, Radieschen in Scheiben darauf.'], schritteLaktosefrei: ['Quark mit einem Schluck Wasser oder laktosefreier Milch glatt rühren, mit Salz, Pfeffer und Schnittlauch würzen.', 'Auf das Brot streichen, Radieschen in Scheiben darauf.'] },
   f06: { zeit: 15, schritte: ['Eier, Haferflocken und Quark mit einer Prise Zimt zu einem dicken Teig verrühren, fünf Minuten quellen lassen.', 'In einer beschichteten Pfanne kleine Pfannkuchen von beiden Seiten goldbraun backen.', 'Mit Apfelscheiben servieren.'] },
   f07: { zeit: 10, schritte: ['Haferflocken mit der Milch aufkochen und unter Rühren drei bis vier Minuten köcheln.', 'Vom Herd nehmen, Quark unterrühren.', 'Obst und gehackte Mandeln darauf.'] },
   f08: { zeit: 12, schritte: ['Eier acht bis neun Minuten kochen, abschrecken und in Scheiben schneiden.', 'Brot mit Käse und Eischeiben belegen, Gurke und Tomate dazu.'], tipp: 'Eier für drei Tage auf einmal kochen; sie halten im Kühlschrank.' },
@@ -60,7 +61,7 @@ export const karten: Record<string, Karte> = {
   g07: { zeit: 30, schritte: ['Sojagranulat in heißer Gemüsebrühe zehn Minuten einweichen, ausdrücken und anbraten.', 'Paprika, passierte Tomaten, Bohnen und Mais dazugeben, mit Kreuzkümmel, Paprikapulver und Chili würzen.', 'Zugedeckt 15 Minuten köcheln.'], tipp: 'Eignet sich gut zum Vorkochen und Einfrieren.' },
   g08: { zeit: 35, schritte: ['Ofen auf 200 Grad vorheizen. Kichererbsen abtropfen lassen und mit Gemüse, Öl und Gewürzen aufs Blech geben, 25 Minuten backen.', 'Quinoa nach Packung garen.', 'Tahin mit Zitronensaft und Wasser cremig rühren und darübergeben.'] },
   g09: { zeit: 15, schritte: ['Räuchertofu würfeln und anbraten, Bohnen dazugeben und mit Kreuzkümmel würzen.', 'Wrap erwärmen, mit Hummus bestreichen.', 'Bohnen-Tofu-Mischung, Salat, Tomate und Mais darauf, einrollen.'] },
-  g10: { zeit: 35, schritte: ['Möhren, Lauch und Kartoffeln würfeln und in einem Topf kurz anbraten.', 'Mit Wasser oder Brühe bedecken, mit Majoran 20 Minuten köcheln.', 'Bohnen und gewürfelten Räuchertofu dazugeben und fünf Minuten mitziehen lassen.'], tipp: 'Doppelte Menge kochen; hält drei Tage im Kühlschrank.' },
+  g10: { zeit: 35, schritte: ['Möhren, Lauch und Kartoffeln würfeln und in einem Topf kurz anbraten.', 'Mit Wasser oder Gemüsebrühe bedecken, mit Majoran 20 Minuten köcheln.', 'Bohnen und gewürfelten Räuchertofu dazugeben und fünf Minuten mitziehen lassen.'], tipp: 'Doppelte Menge kochen; hält drei Tage im Kühlschrank.' },
   g11: { zeit: 20, schritte: ['Nudeln nach Packung kochen und abschrecken, Edamame kurz kochen.', 'Paprika und Frühlingszwiebel schneiden.', 'Alles mit Sojasauce, etwas Essig und Sesam mischen.'], tipp: 'Gut zum Mitnehmen.' },
   g12: { zeit: 30, schritte: ['Kartoffeln kochen und in Scheiben schneiden (oder vom Vortag).', 'Tofu würfeln, gut ausdrücken und knusprig braten, Zwiebel und Kartoffeln dazu und mitbraten.', 'Spinat unterheben, mit Paprikapulver, Salz und Pfeffer würzen.'] },
   g13: { zeit: 30, schritte: ['Reis nach Packung garen.', 'Ingwer und Kurkuma kurz anrösten, Linsen, Tomaten und die dreifache Menge Wasser dazugeben, 15 Minuten köcheln.', 'Mit Sojajoghurt und Koriander servieren.'], tipp: 'Lässt sich gut einfrieren.' },

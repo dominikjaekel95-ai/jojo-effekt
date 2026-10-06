@@ -87,7 +87,7 @@ export const grafiken: Grafik[] = [
   {
     id: 'training-s-lite',
     title: 'Liraglutid allein: 6 kg mehr Zunahme als nach Training allein',
-    subtitle: 'S-LiTE-Nachbeobachtung: Gewichtszunahme im Jahr nach Therapieende, Liraglutid allein gegenüber den Trainingsgruppen, mit 95-%-Konfidenzintervall',
+    subtitle: 'S-LiTE-Nachbeobachtung: Gewichtszunahme im Jahr ohne Behandlung, Liraglutid allein gegenüber den Trainingsgruppen',
     alt: 'Punktdiagramm mit 95-Prozent-Konfidenzintervallen aus der S-LiTE-Nachbeobachtung: Im Jahr ohne Behandlung (Woche 52 bis 104) nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein ohne Medikament (2,1 bis 10,0) und 2,5 Kilogramm mehr als nach Training plus Liraglutid (−1,5 bis 6,5, nicht signifikant). Nach Training plus Liraglutid blieben Gewichtsverlust und Fettabbau ein Jahr nach Therapieende erhalten. Studienablauf: 8 Wochen kalorienarme Diät, 52 Wochen Placebo, Training, Liraglutid oder beides, danach 52 Wochen ohne Behandlung.',
     sources: ['jensen2024'],
     used: [
@@ -106,7 +106,7 @@ export const grafiken: Grafik[] = [
   {
     id: 'weiter-oder-placebo',
     title: 'Weiter behandeln oder absetzen: zwei randomisierte Studien',
-    subtitle: 'Gewicht nach dem Wechsel auf Placebo gegenüber Fortführung in STEP 4 und SURMOUNT-4',
+    subtitle: 'Gewicht nach dem Wechsel auf Placebo gegenüber Fortführung',
     alt: 'Balkendiagramm: In STEP 4 nahmen Teilnehmende unter fortgeführtem Semaglutid in 48 Wochen weitere 7,9 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 6,9 Prozent zu. In SURMOUNT-4 nahmen Teilnehmende unter fortgeführtem Tirzepatid in 52 Wochen weitere 5,5 Prozent ab, nach dem Wechsel auf Placebo nahmen sie 14 Prozent zu.',
     sources: ['rubino2021', 'aronne2024'],
     used: [
@@ -128,8 +128,8 @@ export const grafiken: Grafik[] = [
   {
     id: 'warum-das-gewicht-zurueckkommt',
     title: 'Warum das Gewicht nach dem Absetzen zurückkommt',
-    subtitle: 'Vier belegte Mechanismen hinter dem Jojo-Effekt nach der Abnehmspritze',
-    alt: 'Vier Spalten mit den Mechanismen des Jojo-Effekts, nach Gewichtsverlust belegt und auf die Zeit nach der Abnehmspritze übertragen: Die Appetitbremse fällt weg, sobald der Wirkstoff weitgehend abgebaut ist (Semaglutid nach etwa fünf bis sieben Wochen, Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. In Studien halfen beim Halten: Krafttraining und Protein.',
+    subtitle: 'Vier Mechanismen, nach Gewichtsverlust belegt und auf die Zeit nach der Spritze übertragen',
+    alt: 'Vier Spalten mit den Mechanismen des Jojo-Effekts, nach Gewichtsverlust belegt und auf die Zeit nach der Abnehmspritze übertragen: Die Appetitbremse fällt weg, sobald der Wirkstoff weitgehend abgebaut ist (Semaglutid nach etwa 5 Wochen weitgehend abgebaut, bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer kleinen Studie mit 14 Teilnehmenden, einem Extremfall, noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. In Studien halfen beim Halten: Krafttraining und Protein.',
     sources: ['fachinfoWegovy', 'fachinfoMounjaro', 'sumithran2011', 'fothergill2016', 'wilding2021dxa', 'jensen2024', 'sardeli2018', 'leidy2015'],
     used: [{ href: '/wissen/jojo-effekt-abnehmspritze/', label: 'Jojo-Effekt nach der Abnehmspritze' }],
   },
@@ -186,8 +186,8 @@ export const grafiken: Grafik[] = [
   {
     id: 's-lite-liraglutid-und-training',
     title: 'Liraglutid mit oder ohne Training: was danach bleibt',
-    subtitle: 'S-LiTE: ein Jahr Behandlung, danach ein Jahr ohne; Gewicht und Körperfett im Vergleich der Gruppen',
-    alt: 'Drei Kennzahlen aus der S-LiTE-Studie mit Liraglutid: Im Jahr ohne Behandlung (Woche 52 bis 104) nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein ohne Medikament (95-Prozent-Konfidenzintervall 2,1 bis 10,0). Von Studienbeginn bis ein Jahr nach dem Ende (Woche 0 bis 104) lagen Teilnehmende mit Training plus Liraglutid 5,1 Kilogramm niedriger (minus 10,0 bis minus 0,2) und beim Körperfettanteil 2,3 Prozentpunkte niedriger (minus 4,3 bis minus 0,3) als nach Liraglutid allein. Nach Training blieben Gewicht und Körperzusammensetzung erhalten. Studienablauf: 8 Wochen Diät, 52 Wochen Behandlung, 52 Wochen ohne Behandlung.',
+    subtitle: 'S-LiTE: nach einer Diät ein Jahr Behandlung, danach ein Jahr ohne; Vergleiche der Gruppen mit 95-%-Konfidenzintervall',
+    alt: 'Drei Kennzahlen aus der S-LiTE-Studie mit Liraglutid: Im Jahr ohne Behandlung (Woche 52 bis 104) nahmen Teilnehmende nach Liraglutid allein 6,0 Kilogramm mehr zu als nach Training allein ohne Medikament (95-Prozent-Konfidenzintervall 2,1 bis 10,0). Von Behandlungsbeginn (Woche 0, nach der Diät) bis ein Jahr nach dem Ende (Woche 104) lagen Teilnehmende mit Training plus Liraglutid 5,1 Kilogramm niedriger (minus 10,0 bis minus 0,2) und beim Körperfettanteil 2,3 Prozentpunkte niedriger (minus 4,3 bis minus 0,3) als nach Liraglutid allein. Nach Training blieben Gewicht und Körperzusammensetzung erhalten. Studienablauf: 8 Wochen Diät, 52 Wochen Behandlung, 52 Wochen ohne Behandlung.',
     sources: ['lundgren2021', 'jensen2024'],
     used: [],
     ziel: [{ href: '/wissen/saxenda-absetzen/', label: 'Saxenda absetzen' }],
@@ -225,7 +225,7 @@ export const grafiken: Grafik[] = [
   {
     id: 'step-2-typ-2-diabetes',
     title: 'Semaglutid bei Typ-2-Diabetes: die Studie STEP 2',
-    subtitle: 'STEP 2: Semaglutid 2,4 mg und 1,0 mg gegenüber Placebo nach 68 Wochen, Erwachsene mit Typ-2-Diabetes',
+    subtitle: 'Mittlere Änderung des Körpergewichts nach 68 Wochen, Erwachsene mit Übergewicht und Typ-2-Diabetes',
     alt: 'Balkendiagramm aus der Studie STEP 2 mit Erwachsenen mit Übergewicht und Typ-2-Diabetes: Nach 68 Wochen lag das Gewicht unter Semaglutid 2,4 Milligramm im Mittel 9,6 Prozent niedriger, unter Semaglutid 1,0 Milligramm 7,0 Prozent und unter Placebo 3,4 Prozent. Weniger Verlust heißt weniger, was nach dem Absetzen zurückkommen kann.',
     sources: ['davies2021step2'],
     used: [],
@@ -269,7 +269,7 @@ export const grafiken: Grafik[] = [
   {
     id: 'training-art-fettfreie-masse',
     title: 'Kraft oder Ausdauer: fettfreie Masse und Knochen beim Abnehmen',
-    subtitle: 'Kraft, Ausdauer oder beides während einer Diät: fettfreie Masse und Knochendichte der Hüfte',
+    subtitle: 'Randomisierte Studie: 160 Erwachsene ab 65 Jahren mit Adipositas, 26 Wochen Diät, Gewicht im Mittel −9 %',
     alt: 'Zwei Balkengruppen aus einer randomisierten Studie mit 160 Erwachsenen ab 65 Jahren mit Adipositas, 26 Wochen Diät und im Mittel 9 Prozent Gewichtsverlust: Verlust an fettfreier Masse mit Krafttraining 1,0 Kilogramm, mit Kraft plus Ausdauer 1,7 Kilogramm, mit Ausdauertraining 2,7 Kilogramm. Knochendichte der Hüfte: minus 2,6 Prozent mit Ausdauertraining, minus 1,1 Prozent mit Kraft plus Ausdauer, mit Krafttraining weniger als 1 Prozent und nicht signifikant.',
     sources: ['villareal2017'],
     used: [],
@@ -281,8 +281,8 @@ export const grafiken: Grafik[] = [
   {
     id: 'wiegen-zonen-stop-regain',
     title: 'Wiegen mit Zonen: was die STOP-Regain-Studie zeigt',
-    subtitle: 'Drei Zonen mit festgelegter Reaktion: Anteil mit Wiederzunahme nach 18 Monaten',
-    alt: 'Zonen der STOP-Regain-Studie bezogen auf das Gewicht nach der Abnahme, zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, obere Zone (in der Studie rot) ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie nicht.',
+    subtitle: '314 Erwachsene nach mindestens 10 % Gewichtsverlust, 18 Monate; tägliches Wiegen mit festgelegter Reaktion je Zone',
+    alt: 'STOP-Regain-Studie mit 314 Erwachsenen nach mindestens 10 Prozent Gewichtsverlust, tägliches Wiegen über 18 Monate. Zonen bezogen auf das Gewicht nach der Abnahme, zu Studienbeginn: grün bis plus 1,4 Kilogramm, gelb bis plus 2,3 Kilogramm, obere Zone (in der Studie rot) ab plus 2,3 Kilogramm, jeweils mit vorher festgelegter Reaktion. Nach 18 Monaten hatten in der persönlich betreuten Gruppe 45,7 Prozent 2,3 Kilogramm oder mehr wieder zugenommen, in der Kontrollgruppe 72,4 Prozent. Wiegen ohne festgelegte Reaktion verhinderte die Wiederzunahme in einer späteren Studie (LIMIT, 2019) nicht.',
     sources: ['wing2006', 'daley2019'],
     used: [],
     ziel: [

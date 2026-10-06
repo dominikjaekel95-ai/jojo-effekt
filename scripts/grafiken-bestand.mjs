@@ -387,9 +387,9 @@ export function bestand({ preise, fmtDate, warn }) {
   /* 8. Warum das Gewicht zurückkommt (fachinfos, sumithran2011, fothergill2016, wilding2021dxa) */
   {
     const cols = [
-      { big: '5–7 Wochen', h: 'Die Appetitbremse fällt weg', d: 'Semaglutid ist nach etwa fünf bis sieben Wochen weitgehend abgebaut, Tirzepatid nach etwa 25 Tagen.', src: 'Fachinformationen (EMA)', c: C.ink },
+      { big: '5–7 Wochen', h: 'Die Appetitbremse fällt weg', d: 'Semaglutid ist nach etwa 5 Wochen weitgehend abgebaut, bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen.', src: 'Fachinformationen (EMA)', c: C.ink },
       { big: 'Ghrelin ↑ Leptin ↓', h: 'Hungerhormone bleiben verschoben', d: 'Noch ein Jahr nach einer Diät messbar: mehr Hunger, weniger Sättigung.', src: 'Sumithran et al., NEJM 2011', c: C.regain },
-      { big: '6 Jahre', h: 'Weniger Energie in Ruhe', d: 'Der Ruheenergieverbrauch blieb noch sechs Jahre nach starkem Gewichtsverlust abgesenkt.', src: 'Fothergill et al., Obesity 2016', c: C.regain },
+      { big: '6 Jahre', h: 'Weniger Energie in Ruhe', d: 'Der Ruheenergieverbrauch blieb noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; kleine Studie, 14 Teilnehmende, Extremfall.', src: 'Fothergill et al., Obesity 2016', c: C.regain },
       { big: 'rund 40 %', h: 'Ein Teil des Verlusts war fettfreie Masse', d: 'Rund 40 % des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse.', src: 'STEP-1-DXA-Substudie 2021', c: C.lean },
     ];
     const cw = 240;
@@ -417,7 +417,7 @@ export function bestand({ preise, fmtDate, warn }) {
         title: 'Warum das Gewicht nach dem Absetzen zurückkommt',
         subtitle: 'Vier Mechanismen, nach Gewichtsverlust belegt und auf die Zeit nach der Spritze übertragen',
         source: 'Fachinformationen (EMA); Sumithran 2011; Fothergill 2016; Wilding 2021; Jensen 2024; Sardeli 2018; Leidy 2015',
-        alt: 'Vier Spalten mit den Mechanismen des Jojo-Effekts, nach Gewichtsverlust belegt und auf die Zeit nach der Abnehmspritze übertragen: Die Appetitbremse fällt weg, sobald der Wirkstoff weitgehend abgebaut ist (Semaglutid nach etwa fünf bis sieben Wochen, Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer Studie noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. In Studien halfen beim Halten: Krafttraining und Protein.',
+        alt: 'Vier Spalten mit den Mechanismen des Jojo-Effekts, nach Gewichtsverlust belegt und auf die Zeit nach der Abnehmspritze übertragen: Die Appetitbremse fällt weg, sobald der Wirkstoff weitgehend abgebaut ist (Semaglutid nach etwa 5 Wochen weitgehend abgebaut, bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer kleinen Studie mit 14 Teilnehmenden, einem Extremfall, noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. In Studien halfen beim Halten: Krafttraining und Protein.',
       },
       b,
     );

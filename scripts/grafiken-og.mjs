@@ -48,9 +48,11 @@ export async function ogBilder({ page, fontCss, studienAnzahl, warn }) {
     b += L(xd, yt - 30, xd, yb + 10, { c: C.ink, w: 1.2 });
     b += PATH(`M${x0} ${yt} C${x0 + 60} ${yt + 14} ${xd - 80} ${yt + 18} ${xd} ${yt + 18} C${xd + 60} ${yt + 18} ${x1 - 50} ${yt + 6} ${x1} ${yt + 2}`, DOTTED);
     b += PATH(`M${x0} ${yt} C${x0 + 40} ${yt + 190} ${xd - 90} ${yb - 30} ${xd} ${yb - 30}`, { c: C.ink, w: 3.5 });
-    b += PATH(`M${xd} ${yb - 30} C${xd + 40} ${yb - 30} ${x1 - 80} ${yt + 130} ${x1} ${yt + 112}`, { c: C.regain, w: 3.5 });
+    // Endpunkt: zwei Drittel des Verlusts zurück wie in der STEP-1-Verlängerung (11,6 von 17,3 Prozentpunkten)
+    const ye = Math.round(yb - 30 - ((yb - 30 - yt) * 2) / 3);
+    b += PATH(`M${xd} ${yb - 30} C${xd + 40} ${yb - 30} ${x1 - 80} ${ye + 17} ${x1} ${ye}`, { c: C.regain, w: 3.5 });
     b += DOT(x0, yt, 6, C.ink) + DOT(xd, yb - 30, 7, C.ink);
-    b += `<circle cx="${x1}" cy="${yt + 112}" r="9" fill="${C.hl}" stroke="${C.regain}" stroke-width="3"/>`;
+    b += `<circle cx="${x1}" cy="${ye}" r="9" fill="${C.hl}" stroke="${C.regain}" stroke-width="3"/>`;
     await shot(ogFrame(b), 'og-default.png', 1200, 630);
   }
 

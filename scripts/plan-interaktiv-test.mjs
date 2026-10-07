@@ -12,12 +12,28 @@
  * 3. Nach jeder Aktion (Verschieben, Tauschen, Nicht mein Fall, Vorschlag übernehmen, Appetit wechseln) stimmt das Protein
  *    jedes Tages mit einer unabhängigen Neuberechnung aus Rezepten und Zutaten (hier im Skript) überein.
  * 4. URL-Zustand: kodiere → dekodiere ergibt denselben Zustand, und dekodiere → kodiere dieselbe Zeichenkette.
+ * 5. „Als PDF senden“: Zustand → Formularfeld `zustand` (senden.ts) → Prüfung der API → Link der Mail-Automation
+ *    (…/plan/{$plan}/?v={$vorlieben}&s={$zustand}&pdf=1) → derselbe Zustand. Länge nach typischen Aktionen (drei Tausche,
+ *    zwei Verschiebungen, einmal „Nicht mein Fall“) und nach den 24 Zufallsschritten aus 3., für alle Pläne; über 250
+ *    Zeichen geht das Feld leer mit (Blatt sagt das, die Mail zeigt den Plan mit Vorlieben ohne die Änderungen).
+ * 6. api/ernaehrungsplan.js mit nachgebautem MailerLite: Felder plan, vorlieben, zustand, quelle; Rückfall bei 422 (erst
+ *    ohne quelle, dann ohne zustand); Warteliste nur mit Häkchen, ohne MAILERLITE_GROUP_WARTELISTE kommt der Plan trotzdem;
+ *    keine Adressen und keine Zustände im Log.
+ * 7. Browser-PDF (src/lib/plan-pdf/pdf.ts, hier in Node mit den Schriften aus public/fonts/druck/) für sechs Pläne mit
+ *    Änderungen, A4 und Handy: kein Block größer als eine Seite, Mindestzahl Seiten, Seitengröße, nur eingebettete
+ *    TrueType-Schriften (keine Type 3).
  */
+import fs from 'node:fs';
+import { PDFDocument, PDFDict, PDFName } from 'pdf-lib';
 import { erstellePlan, pruefePlan } from '../src/data/ernaehrungsplan.ts';
-import { alleKombinationen, erlaubteVorlieben, planId, RANG } from '../src/data/ernaehrungsplan-id.mjs';
+import { alleKombinationen, erlaubteVorlieben, planId, kombination, leseVorlieben, RANG } from '../src/data/ernaehrungsplan-id.mjs';
 import { zutaten, gerichte } from '../src/data/ernaehrungsplan-rezepte.ts';
-import { druckHtml } from '../src/lib/ernaehrungsplan-druck.ts';
+import { druckHtml, rezepteImPlan } from '../src/lib/ernaehrungsplan-druck.ts';
 import * as M from '../src/lib/plan-interaktiv/modell.ts';
+import { zustandFeld, planAdresse, ZUSTAND_MAX } from '../src/lib/plan-interaktiv/senden.ts';
+import { erzeugePdf } from '../src/lib/plan-pdf/pdf.ts';
+import { SCHNITTE, schriftDatei } from '../src/lib/plan-pdf/schriften.ts';
+import { leseZustand, feldsaetze, POST } from '../api/ernaehrungsplan.js';
 
 const t0 = performance.now();
 const fehler = [];
@@ -117,6 +133,27 @@ function pruefeAlternativen(was, k, z) {
   }
 }
 
+// ---- 5. Zustand → Formularfeld → Link aus der Mail → Zustand
+const laengen = { typisch: [], zufall: [] };
+const zuLang = [];
+function pruefeSenden(was, kombi, vorlieben, k, z, art) {
+  const s = M.kodiere(k, z);
+  laengen[art].push(s.length);
+  const feld = zustandFeld(s);
+  if (leseZustand(feld) !== feld) melde(`${was}: API verwirft das Formularfeld (${feld})`);
+  if (s.length > ZUSTAND_MAX) {
+    zuLang.push(`${was} (${s.length})`);
+    if (feld !== '') melde(`${was}: Zustand mit ${s.length} Zeichen geht nicht leer mit`);
+  } else if (feld !== s) melde(`${was}: Formularfeld weicht vom Zustand ab`);
+  // Link der MailerLite-Automation aus den Feldern plan, vorlieben, zustand
+  const u = new URL(`https://nachderspritze.de/ernaehrungsplan/plan/${k.plan.id}/?v=${vorlieben.join(',')}&s=${leseZustand(feld)}&pdf=1`);
+  const k2 = M.kontext(erstellePlan({ ...kombi, vorlieben: leseVorlieben(u.searchParams.get('v') ?? '', kombi.ernaehrung, kombi.laktosefrei) }));
+  if (!gleich(M.dekodiere(k2, u.searchParams.get('s') ?? ''), feld ? z : k2.grund)) melde(`${was}: Link aus der Mail ergibt einen anderen Plan`);
+  // Adresse auf dem Deckblatt des PDFs und in der Mail ohne Newsletter (ohne Längengrenze)
+  const a = new URL(planAdresse(`https://nachderspritze.de/ernaehrungsplan/plan/${k.plan.id}/`, vorlieben, s));
+  if (!gleich(M.dekodiere(k2, a.searchParams.get('s') ?? ''), z)) melde(`${was}: Planadresse ergibt einen anderen Plan`);
+}
+
 // Zufall mit festem Startwert (gleiches Ergebnis bei jedem Lauf)
 let saat = 20261007;
 const zufall = (n) => {
@@ -202,6 +239,8 @@ for (const kombi of alleKombinationen()) {
       if (schritt % 6 === 5) pruefeAlternativen(`${was} nach ${name}`, k, z);
     }
 
+    pruefeSenden(`${was} nach 24 Zufallsschritten`, kombi, vorlieben, k, z, 'zufall');
+
     // Appetit wechseln: gleiche Ernährungsform, Laktose, Gewicht; Zustand übertragen
     const anderer = kombi.appetit === 'klein' ? 'normal' : 'klein';
     const idNeu = planId(kombi.ernaehrung, anderer, kombi.gewicht, kombi.laktosefrei);
@@ -215,6 +254,144 @@ for (const kombi of alleKombinationen()) {
     pruefeAlternativen(`${was} nach Appetitwechsel auf ${idNeu}`, kNeu, zNeu);
     // Hin und zurück mit unverändertem Zustand ergibt wieder den Grundplan
     if (M.kodiere(kNeu, M.uebertrage(k, k.grund, kNeu)) !== '') melde(`${was}: Appetitwechsel ohne Änderungen ist nicht der Grundplan`);
+
+    // Typische Sitzung vor „Als PDF senden“: drei Tausche, zwei Verschiebungen, einmal „Nicht mein Fall“
+    let typ = k.grund;
+    for (let i = 0; i < 3; i++) {
+      const d = zufall(typ.tage.length);
+      const p = wahl(typ.tage[d]);
+      const alt = M.alternativen(k, typ, d, p.code);
+      if (alt.length) typ = M.tausche(k, typ, d, p.code, wahl(alt).id) ?? typ;
+    }
+    for (let i = 0; i < 2; i++) {
+      const d = zufall(typ.tage.length);
+      const p = wahl(typ.tage[d]);
+      const ziele = M.zielTage(typ, d, p.code);
+      if (ziele.length) typ = M.verschiebe(typ, d, wahl(ziele), p.code) ?? typ;
+    }
+    typ = M.blendeAus(k, typ, wahl(typ.tage[zufall(typ.tage.length)]).id) ?? typ;
+    pruefeSenden(`${was} typisch`, kombi, vorlieben, k, typ, 'typisch');
+  }
+}
+
+// ---- 6. API mit nachgebautem MailerLite
+{
+  const z = '0ff101.1ff260';
+  const faelle = [[z, z], ['', ''], ['0FF101', ''], ['0ff101<x>', ''], ['a'.repeat(250), 'a'.repeat(250)], ['a'.repeat(251), ''], [undefined, ''], [['0ff101'], '']];
+  for (const [ein, aus] of faelle) if (leseZustand(ein) !== aus) melde(`API: leseZustand(${JSON.stringify(ein)?.slice(0, 20)}) ergibt „${leseZustand(ein)}“`);
+  const reihe = feldsaetze('ek21', 'lachs', true, z).map((x) => Object.keys(x).join('+')).join(' > ');
+  if (reihe !== 'plan+vorlieben+zustand+quelle > plan+vorlieben+zustand > plan+vorlieben+quelle > plan+vorlieben > plan+quelle > plan') melde(`API: Rückfall-Reihenfolge ${reihe}`);
+
+  const aufrufe = [];
+  let antworten = [];
+  const fetchVorher = globalThis.fetch;
+  globalThis.fetch = async (url, init = {}) => {
+    aufrufe.push({ url: String(url), method: init.method ?? 'GET', body: init.body ? JSON.parse(init.body) : null });
+    const r = antworten.shift() ?? { status: 200 };
+    return new Response(r.status === 204 ? null : JSON.stringify(r.json ?? {}), { status: r.status });
+  };
+  const env = { MAILERLITE_API_KEY: 'test', MAILERLITE_GROUP_NEWSLETTER: 'nl', MAILERLITE_GROUP_ERNAEHRUNGSPLAN: 'ep', MAILERLITE_GROUP_WARTELISTE: 'wl' };
+  const envVorher = Object.fromEntries(Object.keys(env).map((x) => [x, process.env[x]]));
+  Object.assign(process.env, env);
+  const logs = [];
+  const konsole = { log: console.log, error: console.error };
+  console.log = (...a) => logs.push(a.join(' '));
+  console.error = (...a) => logs.push(a.join(' '));
+  const sende = (felder) =>
+    POST(new Request('https://nachderspritze.de/api/ernaehrungsplan/', { method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(felder) }));
+  const basis = { ernaehrung: 'pescetarisch', appetit: 'klein', gewicht: '92', vorlieben: 'lachs', email: 'Test.Person@Example.org', eignung: 'ja', einwilligung: 'ja', website: '' };
+  const api = [];
+  try {
+    // a) neue Adresse mit Warteliste; Feld zustand fehlt im Konto: 422, 422, dann ohne zustand
+    aufrufe.length = 0;
+    antworten = [{ status: 404 }, { status: 422 }, { status: 422 }, { status: 201, json: { data: { id: 'S1' } } }, { status: 200 }];
+    let res = await sende({ ...basis, zustand: z, warteliste: 'ja' });
+    let neu = aufrufe.filter((x) => x.method === 'POST' && x.url.endsWith('/subscribers'));
+    if (res.status !== 303 || res.headers.get('location') !== '/ernaehrungsplan/danke/') api.push(`a) Antwort ${res.status} ${res.headers.get('location')}`);
+    if (!gleich(neu.map((x) => x.body.fields), [{ plan: 'ek21', vorlieben: 'lachs', zustand: z, quelle: 'ernaehrungsplan' }, { plan: 'ek21', vorlieben: 'lachs', zustand: z }, { plan: 'ek21', vorlieben: 'lachs', quelle: 'ernaehrungsplan' }])) api.push(`a) Feldsätze ${JSON.stringify(neu.map((x) => x.body.fields))}`);
+    if (!neu.every((x) => x.body.status === 'unconfirmed' && gleich(x.body.groups, ['nl', 'ep']) && x.body.email === 'test.person@example.org')) api.push('a) Status, Gruppen oder Adresse falsch');
+    if (aufrufe.at(-1)?.url !== 'https://connect.mailerlite.com/api/subscribers/S1/groups/wl' || aufrufe.at(-1)?.method !== 'POST') api.push(`a) Warteliste nicht zugewiesen (${aufrufe.at(-1)?.url})`);
+    // b) ohne Häkchen keine Warteliste
+    aufrufe.length = 0;
+    antworten = [{ status: 404 }, { status: 201, json: { data: { id: 'S2' } } }];
+    res = await sende({ ...basis, zustand: z });
+    if (aufrufe.some((x) => x.url.includes('/groups/wl'))) api.push('b) Warteliste ohne Häkchen');
+    // c) Warteliste gewünscht, Variable fehlt: Plan kommt trotzdem, Log sagt es
+    delete process.env.MAILERLITE_GROUP_WARTELISTE;
+    aufrufe.length = 0;
+    antworten = [{ status: 404 }, { status: 201, json: { data: { id: 'S3' } } }];
+    res = await sende({ ...basis, zustand: z, warteliste: 'ja' });
+    if (res.headers.get('location') !== '/ernaehrungsplan/danke/' || aufrufe.some((x) => x.url.includes('/groups/'))) api.push(`c) ohne Wartelisten-Gruppe: ${res.headers.get('location')}`);
+    if (!logs.some((l) => l.includes('MAILERLITE_GROUP_WARTELISTE fehlt'))) api.push('c) fehlende Variable nicht im Log');
+    process.env.MAILERLITE_GROUP_WARTELISTE = 'wl';
+    // d) bestehende Adresse: Felder mit zustand aktualisieren, Gruppen neu, Warteliste
+    aufrufe.length = 0;
+    antworten = [{ status: 200, json: { data: { id: 'S4', status: 'active' } } }, { status: 200 }, { status: 204 }, { status: 200 }, { status: 200 }, { status: 200 }];
+    res = await sende({ ...basis, zustand: z, warteliste: 'ja' });
+    const put = aufrufe.find((x) => x.method === 'PUT');
+    if (!gleich(put?.body?.fields, { plan: 'ek21', vorlieben: 'lachs', zustand: z })) api.push(`d) PUT ${JSON.stringify(put?.body)}`);
+    if (aufrufe.at(-1)?.url !== 'https://connect.mailerlite.com/api/subscribers/S4/groups/wl') api.push('d) Warteliste fehlt');
+    // e) ungültiger Zustand: Feld leer (löscht einen alten)
+    aufrufe.length = 0;
+    antworten = [{ status: 404 }, { status: 201, json: { data: { id: 'S5' } } }];
+    res = await sende({ ...basis, zustand: '0ff101<script>' });
+    if (aufrufe[1]?.body?.fields?.zustand !== '') api.push(`e) ungültiger Zustand übernommen: ${aufrufe[1]?.body?.fields?.zustand}`);
+    // f) Pflicht-Häkchen fehlen
+    res = await sende({ ...basis, einwilligung: '' });
+    if (res.headers.get('location') !== '/ernaehrungsplan/danke/?fehler=eingabe') api.push('f) ohne Einwilligung angenommen');
+    // Log: keine Adressen, keine Zustände
+    if (logs.some((l) => /example\.org|0ff101/i.test(l))) api.push(`Log enthält Adresse oder Zustand: ${logs.find((l) => /example\.org|0ff101/i.test(l))}`);
+  } finally {
+    Object.assign(console, konsole);
+    globalThis.fetch = fetchVorher;
+    for (const [x, w] of Object.entries(envVorher)) if (w === undefined) delete process.env[x];
+    else process.env[x] = w;
+  }
+  for (const a of api) melde(`API: ${a}`);
+  stat.api = `${logs.length} Log-Zeilen, z. B. „${logs[0]}“`;
+}
+
+// ---- 7. Browser-PDF in Node: Überlauf, Seiten, Seitengröße, Schriften
+const pdfStat = [];
+{
+  const schriften = Object.fromEntries(Object.keys(SCHNITTE).map((x) => [x, fs.readFileSync(new URL(`../public/fonts/druck/${schriftDatei(x)}`, import.meta.url))]));
+  const schluss = { hinweise: [[{ t: 'Hinweis.', s: 'fett' }, { t: ' Text' }, { t: '1', hoch: true }]], grenzen: [[{ t: 'Grenzen und Pflichtsatz.' }]], quellen: [{ text: 'Quelle.', url: 'https://example.org/' }] };
+  for (const id of ['ek01', 'ek08', 'ek11', 'ek24', 'ek40', 'ek52']) {
+    const kombi = kombination(id);
+    const vorlieben = erlaubteVorlieben(kombi.ernaehrung, kombi.laktosefrei).slice(-1);
+    const k = M.kontext(erstellePlan({ ...kombi, vorlieben }));
+    let z = k.grund;
+    for (let d = 0; d < z.tage.length; d++)
+      z.tage[d].forEach((p, i) => {
+        if ((d + i) % 3) return;
+        const a = M.alternativen(k, z, d, p.code)[0];
+        if (a) z = M.tausche(k, z, d, p.code, a.id) ?? z;
+      });
+    const plan = M.alsPlan(k, z);
+    const rezepte = rezepteImPlan(plan).length;
+    for (const format of ['a4', 'handy']) {
+      const b = {};
+      const bytes = await erzeugePdf({ plan, format, stand: 'Oktober 2026', schluss, adresse: planAdresse(`https://nachderspritze.de/ernaehrungsplan/plan/${id}/`, vorlieben, M.kodiere(k, z)) }, schriften, b);
+      const was = `PDF ${id} ${format}`;
+      if (b.ueberlauf) melde(`${was}: ${b.ueberlauf} Block größer als eine Seite`);
+      const doc = await PDFDocument.load(bytes);
+      if (doc.getPageCount() !== b.seiten) melde(`${was}: ${doc.getPageCount()} statt ${b.seiten} Seiten`);
+      // Mindestens: Deckblatt, je Woche Überblick, Einkauf und Tage (A4 vier Seiten, Handy sieben), Rezepte, Tauschen, Hinweise
+      const min = format === 'a4' ? 1 + 2 * 6 + Math.ceil(rezepte / 2) + 2 : 2 + 2 * 9 + rezepte + 2;
+      if (b.seiten < min) melde(`${was}: ${b.seiten} Seiten, erwartet mindestens ${min}`);
+      const groessen = [...new Set(doc.getPages().map((p) => `${Math.round((p.getWidth() / 72) * 25.4)}x${Math.round((p.getHeight() / 72) * 25.4)}`))];
+      if (format === 'a4' ? groessen.join() !== '210x297' : groessen.length !== 1 || groessen[0] !== `90x${b.hoeheMm}` || b.hoeheMm < 160) melde(`${was}: Seitengröße ${groessen.join(', ')} mm`);
+      const typen = new Set();
+      let dateien = 0;
+      for (const [, obj] of doc.context.enumerateIndirectObjects()) {
+        if (!(obj instanceof PDFDict)) continue;
+        const typ = obj.get(PDFName.of('Type'))?.toString();
+        if (typ === '/Font') typen.add(obj.get(PDFName.of('Subtype'))?.toString());
+        if (typ === '/FontDescriptor' && obj.get(PDFName.of('FontFile2'))) dateien++;
+      }
+      if ([...typen].sort().join() !== '/CIDFontType2,/Type0' || dateien !== Object.keys(SCHNITTE).length) melde(`${was}: Schriften ${[...typen].join(', ')}, eingebettet ${dateien}`);
+      pdfStat.push(`${id} ${format} ${b.seiten} S.${format === 'handy' ? ` ${b.hoeheMm} mm` : ''} ${Math.round(bytes.length / 1024)} kB`);
+    }
   }
 }
 
@@ -226,6 +403,14 @@ for (const kombi of alleKombinationen()) {
 }
 
 const ms = Math.round(performance.now() - t0);
+const median = (xs) => xs.slice().sort((a, b) => a - b)[Math.floor(xs.length / 2)] ?? 0;
+console.log(
+  `Zustand für „Als PDF senden“ (Feld zustand, höchstens ${ZUSTAND_MAX} Zeichen): typisch Median ${median(laengen.typisch)}, max ${Math.max(...laengen.typisch)} · ` +
+    `nach 24 Zufallsschritten Median ${median(laengen.zufall)}, max ${Math.max(...laengen.zufall)} · länger als ${ZUSTAND_MAX}: ${zuLang.length} von ${laengen.typisch.length + laengen.zufall.length}` +
+    (zuLang.length ? ` (z. B. ${zuLang.slice(0, 3).join('; ')}; Feld geht leer mit, das Blatt sagt es)` : ''),
+);
+console.log(`API: ${stat.api}`);
+console.log(`PDF: ${pdfStat.join(' · ')}`);
 console.log(
   `Pläne ${stat.plaene} (56 Grundpläne, je ohne, mit einer und mit zwei Vorlieben) · Aktionen ${stat.aktionen} (davon ${stat.appetit} Appetitwechsel, ${stat.vorschlaege} Vorschläge) · ` +
     `Plätze ${stat.plaetze}, Alternativen geprüft ${stat.alternativenGeprueft}, Plätze ohne Alternative ${stat.ohneAlternative}, mit nur einer ${stat.eineAlternative} · URL-Rundreisen ${stat.rundreisen} · ${ms} ms`,

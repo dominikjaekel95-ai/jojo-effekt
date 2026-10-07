@@ -4,13 +4,17 @@
  * MailerLite verlinkt hierher (Feld `plan`, Vorlieben als ?v=lachs,quark aus dem Feld `vorlieben`).
  * Ohne ?v= zeigt die Seite den Grundplan; mit ?v= rechnet das Skript den Plan mit Vorlieben im Browser neu
  * (gleicher Generator wie im Build). Mit JavaScript wird der Wochenteil interaktiv (src/lib/plan-interaktiv/: Tage
- * tauschen und verschieben, Appetit-Regler, Einkaufsliste mit Häkchen, Rezepte am Gericht, Druck des aktuellen Plans);
- * Änderungen stehen im Parameter ?s= und nur im Browser. Ohne JavaScript bleibt der statische Plan aus dem Build.
+ * tauschen und verschieben, Appetit-Regler, Einkaufsliste mit Häkchen, Rezepte am Gericht); Änderungen stehen im
+ * Parameter ?s= und nur im Browser. Ganz oben (Leiste, bleibt beim Scrollen stehen): „Als PDF senden“ (Blatt mit
+ * Formular an api/ernaehrungsplan.js, schickt Plan, Vorlieben und Zustand mit) und „PDF herunterladen“ (echtes PDF aus
+ * dem aktuellen Zustand, im Browser erzeugt, src/lib/plan-pdf/; A4 oder Handy). ?pdf=1 (Link aus der Mail) zeigt oben
+ * „Dein PDF“. Ohne JavaScript bleibt der statische Plan aus dem Build mit Links auf die fertigen PDFs.
  * Aus den Seiten ohne ?v= erzeugt `npm run pdf:ernaehrungsplan` die PDFs unter public/downloads/ernaehrungsplan/:
  * <id>.pdf (A4) und <id>-handy.pdf (?druck=handy setzt die Klasse ed-handy). Die Druckfassung ist eigenes Markup
  * (src/lib/ernaehrungsplan-druck.ts, Stile src/styles/ernaehrungsplan-druck.css), auf dem Bildschirm unsichtbar; im Druck
- * ersetzt sie die Webansicht. Die Knöpfe „PDF fürs Handy“ und „PDF zum Drucken (A4)“ drucken sie mit JavaScript aus dem
- * aktuellen Plan; ohne JavaScript (und als Rückfall-Links) öffnen sie die fertigen PDFs des Grundplans.
+ * ersetzt sie die Webansicht (Strg+P druckt den aktuellen Plan). Ohne JavaScript (und als Rückfall-Links) führen die
+ * PDF-Links zu den fertigen PDFs des Grundplans. Die letzte Seite der Druckfassung (.ed-schluss) ist auch die Quelle für
+ * Hinweise, Ausschlusskriterien, Pflichtsatz und Quellen im Browser-PDF.
  * Alte IDs ep01 bis ep18 (sieben Tage, bis 05.10.2026) leiten auf den passenden neuen Plan weiter.
  * noindex und nicht in der Sitemap. Keine Affiliate-Links, kein Produkt-Teaser, keine Präparatenamen.
  */
@@ -86,9 +90,24 @@ const muster =
   </Base>
 ) : (
   <Base title={`Dein Ernährungsplan: ${ernaehrung.label}, ${gewichtLabel[plan.gewicht]}`} description="14 Tage mit Mengen, Protein je Mahlzeit, Einkaufslisten, Austauschtabelle und Rezeptkarten für die Zeit nach der Abnehmspritze." path={path} noindex>
-    <script is:inline>if (/[?&][vs]=[^&]/.test(location.search)) document.documentElement.classList.add('ep-v');if (/[?&]druck=handy\b/.test(location.search)) document.documentElement.classList.add('ed-handy');</script>
+    <script is:inline>if (/[?&][vs]=[^&]/.test(location.search)) document.documentElement.classList.add('ep-v');if (/[?&]druck=handy\b/.test(location.search)) document.documentElement.classList.add('ed-handy');if (/[?&]pdf=1(&|$)/.test(location.search)) document.documentElement.classList.add('ep-pdf1');</script>
     <article class="ep-plan" data-ep-plan data-id={plan.id} data-fn-bls={fn('bls')}>
+      <div class="ep-leiste no-print" data-ep-leiste>
+        <div class="ep-leiste-in">
+          <p class="ep-leiste-text">Dein Plan, wie er gerade ist</p>
+          <button type="button" class="btn-primary ep-leiste-knopf" data-ep-senden aria-haspopup="dialog">Als PDF senden</button>
+          <button type="button" class="btn-secondary ep-leiste-knopf" data-ep-laden>PDF herunterladen</button>
+        </div>
+      </div>
       <div class="ep-wrap">
+        <div class="ep-dein-pdf no-print" data-ep-dein-pdf>
+          <p class="ep-dein-pdf-h">Dein PDF</p>
+          <p class="ep-klein">Mit allen Gerichten aus deinem Link. Es entsteht hier in deinem Browser, in ein paar Sekunden.</p>
+          <div class="ep-dein-pdf-zeile">
+            <button type="button" class="btn-primary" data-ep-laden>PDF herunterladen</button>
+            <div class="pi-schalter" role="group" aria-label="Format des PDFs" data-ep-format data-an="0"><button type="button" data-format="a4" aria-pressed="true">A4</button><button type="button" data-format="handy" aria-pressed="false">Handy</button><i aria-hidden="true"></i></div>
+          </div>
+        </div>
         <p class="ep-marke">Nach der Spritze · Ernährungsplan · Stand {stand}</p>
         <h1 class="ep-h1">Dein Ernährungsplan für 14 Tage</h1>
         <p class="ep-lead">Mahlzeiten mit Mengen und Protein, zwei Einkaufslisten, eine Tabelle zum Tauschen und Rezeptkarten. Ausgewählt nach deinen Angaben.</p>
@@ -103,11 +122,16 @@ const muster =
         <script is:inline define:vars={{ vLabels }}>var m = /[?&]v=([^&#]*)/.exec(location.search); var w = m ? decodeURIComponent(m[1]).toLowerCase().split(/[\s,;+]+/) : []; var t = vLabels.filter(function (x) { return w.indexOf(x[0]) >= 0; }).map(function (x) { return x[1]; }); if (t.length) document.querySelector('[data-ep-v-text]').textContent = t.join(', ');</script>
 
         <div class="ep-werkzeug no-print">
-          <div class="ep-aktionen">
-            <a class="btn-primary plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=handy" href={pdfHandy} data-ep-pdf="handy">PDF fürs Handy</a>
-            <a class="btn-secondary plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=a4" href={pdf} data-ep-pdf="a4">PDF zum Drucken (A4)</a>
+          <div class="ep-aktionen ep-ohne-js">
+            <a class="btn-primary plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=handy" href={pdfHandy}>PDF fürs Handy</a>
+            <a class="btn-secondary plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=a4" href={pdf}>PDF zum Drucken (A4)</a>
           </div>
-          <p class="ep-klein ep-pdf-rueckfall">Die Knöpfe drucken deinen Plan, wie er gerade ist (im Druckfenster „Als PDF speichern“ wählen). Fertige PDFs mit dem Grundplan ohne deine Änderungen: <a class="plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=handy" href={pdfHandy}>fürs Handy</a> · <a class="plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=a4" href={pdf}>A4</a></p>
+          <div class="ep-format ep-mit-js">
+            <div class="ep-format-zeile"><span class="ep-format-l" id="ep-format-l">Format des PDFs</span><div class="pi-schalter" role="group" aria-labelledby="ep-format-l" data-ep-format data-an="0"><button type="button" data-format="a4" aria-pressed="true">A4</button><button type="button" data-format="handy" aria-pressed="false">Handy</button><i aria-hidden="true"></i></div></div>
+            <script is:inline>(function () { var h = matchMedia('(max-width: 699px), (pointer: coarse)').matches; document.querySelectorAll('[data-ep-format]').forEach(function (s) { s.dataset.an = h ? '1' : '0'; s.querySelectorAll('button').forEach(function (b, i) { b.setAttribute('aria-pressed', String((i === 1) === h)); }); }); })();</script>
+            <p class="ep-klein ep-pdf-status" role="status" data-ep-pdf-status></p>
+            <p class="ep-klein ep-pdf-rueckfall">„PDF herunterladen“ erstellt das PDF in deinem Browser, mit allen Änderungen; dabei wird nichts übertragen. „Als PDF senden“ schickt dir den Link auf diesen Plan und das PDF per Mail. Fertige PDFs des Grundplans ohne deine Änderungen: <a class="plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=handy" href={pdfHandy}>fürs Handy</a> · <a class="plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=a4" href={pdf}>A4</a></p>
+          </div>
           <details class="ep-anpassen" data-ep-anpassen>
             <summary><span>Plan anpassen</span><span class="ep-klein">Ernährung, Gewicht, Laktose, Vorlieben</span></summary>
             <form class="ep-optionen" data-ep-varianten>
@@ -189,6 +213,46 @@ const muster =
         </div>
 
         <Footnotes ids={fnIds} />
+
+        <dialog class="pi-blatt ep-senden-blatt" data-ep-senden-blatt aria-labelledby="ep-senden-h">
+          <div class="pi-blatt-in">
+            <div class="pi-blatt-kopf">
+              <p class="pi-blatt-wo">Plan {plan.id} · {ernaehrung.label}{lf ? ', laktosefrei' : ''} · {gewichtLabel[plan.gewicht]}</p>
+              <button type="button" class="pi-zu" data-ep-zu>Schließen</button>
+              <h2 class="pi-blatt-name" id="ep-senden-h">Als PDF senden</h2>
+            </div>
+            <form method="post" action="/api/ernaehrungsplan/" class="ep-senden-form">
+              <input type="hidden" name="ernaehrung" value={plan.ernaehrung} />
+              <input type="hidden" name="appetit" value={plan.appetit} />
+              <input type="hidden" name="gewicht" value={plan.referenzKg} />
+              {plan.laktosefrei && <input type="hidden" name="laktosefrei" value="ja" />}
+              <input type="hidden" name="vorlieben" value="" />
+              <input type="hidden" name="zustand" value="" />
+              <p class="ep-senden-intro">Du bekommst eine Mail mit dem Link auf deinen Plan, so wie er jetzt ist, und dem PDF zum Herunterladen. Vorher bestätigst du deine Adresse per Link.</p>
+              <label for="ep-senden-email" class="sr-only">E-Mail-Adresse</label>
+              <input id="ep-senden-email" class="ep-senden-email" name="email" type="email" autocomplete="email" required placeholder="Deine E-Mail-Adresse" />
+              <label class="ep-check">
+                <input type="checkbox" name="eignung" value="ja" required />
+                <span>Keiner dieser Punkte trifft auf mich zu: Nierenerkrankung, Schwangerschaft oder Stillzeit, Essstörung (auch früher), jünger als 18 Jahre. <span class="ep-check-hell">Trifft einer zu, ist ein allgemeiner Plan nicht das Richtige; sprich dann mit deiner Ärztin, deinem Arzt oder einer Ernährungsfachkraft.</span></span>
+              </label>
+              <label class="ep-check">
+                <input type="checkbox" name="einwilligung" value="ja" required />
+                <span>Schickt mir den Plan per Mail und meldet mich für den Newsletter von Nach der Spritze an ({site.newsletter.cadence}: neue Artikel und Studien zur Zeit nach der Abnehmspritze, gelegentlich Neuigkeiten zum Programm). Ich willige ausdrücklich ein, dass ihr dafür meine Plannummer und die Auswahl meiner Gerichte speichert; die Plannummer steht für meine Angaben zu Ernährungsform, Gewichtsbereich, Appetit und Laktose. Der Plan kommt, sobald ich die Anmeldung per Link bestätigt habe. Abmelden geht in jeder Mail. Details in der <a href="/datenschutz/#ernaehrungsplan">Datenschutzerklärung</a>.</span>
+              </label>
+              <label class="ep-check">
+                <input type="checkbox" name="warteliste" value="ja" />
+                <span>Auch auf die Warteliste für das 12-Wochen-Programm: Ihr schreibt mir zu Start, Preis und Ablauf. Freiwillig, abmelden geht in jeder Mail.</span>
+              </label>
+              <div class="hidden" aria-hidden="true">
+                <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+              </div>
+              <p class="ep-klein ep-zu-lang" data-ep-zu-lang hidden>Du hast sehr viel geändert. Der Link in der Mail zeigt deinen Plan mit deinen Vorlieben, aber nicht alle Änderungen. Lade das PDF deshalb am besten auch hier herunter: <button type="button" class="pi-text-knopf" data-ep-laden>PDF herunterladen</button></p>
+              <button type="submit" class="btn-primary ep-senden-los">Plan senden</button>
+              <p class="ep-klein ep-senden-mikro">Kostenlos. Keine Weitergabe deiner Adresse. Gespeichert werden Adresse, Plannummer, Vorlieben und die Auswahl deiner Gerichte, nicht dein genaues Gewicht.</p>
+              <p class="ep-klein ep-senden-ohne">Lieber ohne Newsletter? Schreib mir eine Mail an <a data-ep-ohne href={`mailto:${site.owner.email}?subject=${encodeURIComponent('Ernährungsplan ohne Newsletter')}&body=${encodeURIComponent(`Hallo Dominik,\n\nich hätte gern meinen Ernährungsplan per Mail, aber ohne Newsletter.\n\nPlan: ${plan.id}\n`)}`}>{site.owner.email}</a>; Plannummer und Link auf deinen Plan stehen schon drin. Dominik</p>
+            </form>
+          </div>
+        </dialog>
       </div>
 
       <div class="ed" data-ep-druck data-stand={stand}>
@@ -235,7 +299,202 @@ const muster =
 <style is:global>
   .ep-plan {
     --ep-snack: #6e8f7d;
-    padding: clamp(2.5rem, 6vw, 4.5rem) 0 4rem;
+    --ep-leiste-h: 0rem;
+    padding: 0 0 4rem;
+  }
+  .ep-plan > .ep-wrap {
+    padding-top: clamp(2.5rem, 6vw, 4.5rem);
+  }
+  html.js .ep-plan {
+    --ep-leiste-h: calc(3.5rem + 1px);
+  }
+  html.js .ep-plan > .ep-wrap {
+    padding-top: clamp(1.75rem, 4vw, 3.25rem);
+  }
+  .ep-plan :target {
+    scroll-margin-top: calc(5.5rem + var(--ep-leiste-h));
+  }
+  /* Tagesknöpfe (plan-interaktiv.css) kleben unter der Leiste */
+  .ep-plan .pi-chips {
+    top: calc(4.25rem + var(--ep-leiste-h));
+  }
+
+  /* Leiste ganz oben: „Als PDF senden“ und „PDF herunterladen“; bleibt unter dem Seitenkopf stehen (nur mit JavaScript) */
+  .ep-leiste {
+    display: none;
+    position: sticky;
+    top: 4.25rem;
+    z-index: 8;
+    background: color-mix(in srgb, var(--color-paper) 94%, transparent);
+    -webkit-backdrop-filter: saturate(1.2) blur(10px);
+    backdrop-filter: saturate(1.2) blur(10px);
+    border-bottom: 1px solid var(--color-line);
+  }
+  html.js .ep-leiste {
+    display: block;
+  }
+  .ep-leiste-in {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: calc(52rem + 2 * var(--pad));
+    margin-inline: auto;
+    padding: 0.375rem var(--pad);
+  }
+  .ep-leiste-text {
+    display: none;
+    margin-right: auto;
+    font-size: 0.9375rem;
+    color: var(--color-ink-3);
+  }
+  .ep-leiste-knopf {
+    min-height: 2.75rem;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9375rem;
+    white-space: nowrap;
+  }
+  .ep-leiste-knopf[aria-busy='true'],
+  .ep-plan [data-ep-laden][aria-busy='true'] {
+    cursor: progress;
+  }
+  @media (max-width: 559px) {
+    .ep-leiste-knopf {
+      flex: 1 1 0;
+      padding-inline: 0.75rem;
+    }
+  }
+  @media (min-width: 760px) {
+    .ep-leiste-text {
+      display: block;
+    }
+  }
+
+  /* „Dein PDF“ (Link aus der Mail mit ?pdf=1) */
+  .ep-dein-pdf {
+    display: none;
+    margin-bottom: 2.25rem;
+    padding: 1.25rem clamp(1.1rem, 3vw, 1.75rem) 1.4rem;
+    border-radius: 18px;
+    background: var(--color-paper-2);
+  }
+  html.js.ep-pdf1 .ep-dein-pdf {
+    display: block;
+  }
+  .ep-dein-pdf-h {
+    font-size: 1.35rem;
+    line-height: 1.15;
+    font-weight: 520;
+    font-stretch: 118%;
+    letter-spacing: -0.02em;
+    color: var(--color-ink);
+  }
+  .ep-dein-pdf .ep-klein {
+    margin-top: 0.35rem;
+  }
+  .ep-dein-pdf-zeile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Format des PDFs, Status, Rückfall-Links (mit JavaScript); ohne JavaScript die Links auf die fertigen PDFs */
+  .ep-mit-js {
+    display: none;
+  }
+  html.js .ep-mit-js {
+    display: block;
+  }
+  html.js .ep-ohne-js {
+    display: none;
+  }
+  .ep-format-zeile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+  }
+  .ep-format-l {
+    font-size: 0.9375rem;
+    color: var(--color-ink-2);
+  }
+  .ep-pdf-status:empty {
+    display: none;
+  }
+  .ep-pdf-status {
+    margin-top: 0.75rem;
+    color: var(--color-ink);
+  }
+
+  /* Blatt „Als PDF senden“ (Aufbau und Bewegung wie die Blätter in plan-interaktiv.css) */
+  .ep-senden-form {
+    padding-top: 1rem;
+  }
+  .ep-senden-intro {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--color-ink-2);
+  }
+  .ep-senden-email {
+    width: 100%;
+    height: 3.25rem;
+    margin-top: 1rem;
+    padding: 0 1.375rem;
+    border: 1px solid #b4b6af;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--color-ink);
+    font: inherit;
+    font-size: 1rem;
+  }
+  .ep-senden-email:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+  .ep-check {
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    margin-top: 0.9rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-ink);
+    cursor: pointer;
+  }
+  .ep-check input {
+    flex: none;
+    width: 1.05rem;
+    height: 1.05rem;
+    margin-top: 0.15rem;
+    accent-color: var(--color-ink);
+  }
+  .ep-check a,
+  .ep-senden-ohne a {
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-underline-offset: 0.25em;
+    overflow-wrap: anywhere;
+  }
+  .ep-check-hell {
+    color: var(--color-ink-3);
+  }
+  .ep-zu-lang {
+    margin-top: 1rem;
+    color: var(--color-ink) !important;
+  }
+  .ep-senden-los {
+    width: 100%;
+    margin-top: 1.25rem;
+  }
+  .ep-senden-mikro {
+    margin-top: 0.75rem;
+  }
+  .ep-senden-ohne {
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--color-line);
   }
   .ep-wrap {
     width: 100%;
@@ -337,9 +596,6 @@ const muster =
   .ep-pdf-rueckfall {
     margin-top: 0.75rem;
     max-width: 40em;
-  }
-  html:not(.js) .ep-pdf-rueckfall {
-    display: none;
   }
   .ep-pdf-rueckfall a {
     color: var(--color-ink-2);

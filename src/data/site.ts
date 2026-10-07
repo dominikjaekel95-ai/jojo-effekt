@@ -4,7 +4,7 @@
  */
 export const site = {
   name: 'Nach der Spritze',
-  claim: 'Muskeln behalten, Gewicht halten.',
+  claim: 'Dein neues Gewicht braucht einen Plan.',
   url: import.meta.env.SITE ?? 'https://nachderspritze.de',
   locale: 'de_DE',
   lang: 'de',

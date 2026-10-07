@@ -119,3 +119,4 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/marktradar/ | Redesign „Kalk“: neue Struktur | 2026-10-06 | offen |
 | https://nachderspritze.de/wissen/ | Redesign „Kalk“: neue Struktur | 2026-10-06 | offen |
 | https://nachderspritze.de/erfahrungen/ | vorerst noindex bis zum ersten echten Bericht, dann wieder indexierbar machen und anmelden | 2026-10-07 | noindex |
+| https://nachderspritze.de/ | Neue Überschrift und neuer Titel „Dein neues Gewicht braucht einen Plan“ | 2026-10-07 | offen |

@@ -120,7 +120,7 @@ ${zeilen}
 // ---------------------------------------------------------------------------------------------------------------
 // Einkaufsliste: Packungen statt Grammzahlen, wo es Sinn ergibt
 
-interface Posten { text: string; klein?: string }
+export interface Posten { text: string; klein?: string }
 
 function posten(k: ZutatKey, menge: number, lf: boolean): Posten {
   const x = zt(k);
@@ -144,24 +144,32 @@ function posten(k: ZutatKey, menge: number, lf: boolean): Posten {
 const kasten = '<span class="ed-kasten" aria-hidden="true"></span>';
 const postenHtml = (p: Posten) => `<li>${kasten}<span class="ed-ek-text">${esc(p.text)}${p.klein ? ` <span class="ed-ek-klein">${esc(p.klein)}</span>` : ''}</span></li>`;
 
-function einkauf(w: Woche, lf: boolean) {
+/** Ein Posten der Einkaufsliste mit Schlüssel (Zutat oder „dazu:Name“), z. B. für die Häkchen der Planseite. */
+export interface EinkaufPosten extends Posten { key: string }
+export interface EinkaufDaten { gruppen: { titel: string; posten: EinkaufPosten[] }[]; frisch: EinkaufPosten[]; vorrat: string[] }
+
+/** Einkaufsliste einer Woche als Daten: Abteilungen mit Packungen, Obst/Gemüse/Kräuter, Vorrat. Druckfassung und
+ *  interaktive Planseite (src/lib/plan-interaktiv/) nutzen dieselbe Rechnung. */
+export function einkaufDaten(w: Woche, lf: boolean): EinkaufDaten {
   const summen = new Map<ZutatKey, number>();
   for (const t of w.tage) for (const mz of t.mahlzeiten) for (const p of mz.positionen) summen.set(p.key, (summen.get(p.key) ?? 0) + p.menge);
-  const sortiert = (keys: ZutatKey[]) => keys.map((k) => ({ k, p: posten(k, summen.get(k)!, lf) })).sort((a, b) => zutatName(a.k, lf).localeCompare(zutatName(b.k, lf), 'de'));
+  const sortiert = (keys: ZutatKey[]): EinkaufPosten[] =>
+    keys.map((k) => ({ k, p: posten(k, summen.get(k)!, lf) })).sort((a, b) => zutatName(a.k, lf).localeCompare(zutatName(b.k, lf), 'de')).map((x) => ({ key: x.k, ...x.p }));
   const gruppen = abteilungen
-    .map(([ab, titel]) => ({ titel, liste: sortiert([...summen.keys()].filter((k) => zt(k).abteilung === ab)) }))
-    .filter((g) => g.liste.length)
-    .map((g) => `<div class="ed-ek-gruppe"><h3 class="ed-label">${g.titel}</h3><ul>${g.liste.map((x) => postenHtml(x.p)).join('')}</ul></div>`)
-    .join('');
+    .map(([ab, titel]) => ({ titel: titel as string, posten: sortiert([...summen.keys()].filter((k) => zt(k).abteilung === ab)) }))
+    .filter((g) => g.posten.length);
   const gemuese = sortiert([...summen.keys()].filter((k) => zt(k).abteilung === 'gemuese'));
   const fuer = (aus: boolean) => [...new Set(w.dazu.filter((d) => vorrat.has(d) === aus).map((d) => dazuEinkauf[d] ?? d))].sort((a, b) => a.localeCompare(b, 'de'));
-  const frisch = fuer(false);
-  const ausVorrat = fuer(true);
+  return { gruppen, frisch: [...gemuese, ...fuer(false).map((d) => ({ key: `dazu:${d}`, text: d }))], vorrat: fuer(true) };
+}
+
+function einkauf(w: Woche, lf: boolean) {
+  const { gruppen, frisch, vorrat: ausVorrat } = einkaufDaten(w, lf);
   return `<div class="ed-einkauf">
 <div class="ed-kopf"><h2 class="ed-h">Einkaufsliste Woche ${w.nr}</h2><p class="ed-kopf-r">für Tag ${w.tage[0].nr} bis ${w.tage[w.tage.length - 1].nr}</p></div>
 <p class="ed-intro">Auf ganze Packungen aufgerundet, klein dahinter die Menge im Plan; lose Ware auf 50${nb}g.</p>
-<div class="ed-ek-gruppen">${gruppen}</div>
-<div class="ed-ek-frisch"><h3 class="ed-label">Obst, Gemüse und Kräuter <span class="ed-hell">· ohne feste Menge, nach Hunger</span></h3><ul>${gemuese.map((x) => postenHtml(x.p)).join('')}${frisch.map((d) => postenHtml({ text: d })).join('')}</ul></div>
+<div class="ed-ek-gruppen">${gruppen.map((g) => `<div class="ed-ek-gruppe"><h3 class="ed-label">${g.titel}</h3><ul>${g.posten.map(postenHtml).join('')}</ul></div>`).join('')}</div>
+<div class="ed-ek-frisch"><h3 class="ed-label">Obst, Gemüse und Kräuter <span class="ed-hell">· ohne feste Menge, nach Hunger</span></h3><ul>${frisch.map(postenHtml).join('')}</ul></div>
 ${ausVorrat.length ? `<p class="ed-ek-vorrat"><span class="ed-label">Aus dem Vorrat</span> ${esc(ausVorrat.join(', '))}</p>` : ''}
 </div>`;
 }

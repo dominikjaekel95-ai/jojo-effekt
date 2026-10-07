@@ -2,7 +2,7 @@
 /**
  * Erfahrungsberichte einreichen. Das Tally-Formular wird nur eingebettet, wenn site.experienceForm.live true ist;
  * solange es in Tally ein Entwurf ist, nimmt es keine Einträge an. Die Seite ist bis dahin noindex und nicht in der
- * Sitemap (astro.config.mjs). Verlinkt aus Artikeln (AuthorBox), nicht von der Startseite.
+ * Sitemap (astro.config.mjs); ebenso, solange site.experienceForm.index false ist (bis zum ersten echten Bericht). Verlinkt aus Artikeln (AuthorBox), nicht von der Startseite.
  * Gestaltung „Kalk“ seit 06.10.2026; Tally ODOJWR bleibt. „Getrennt vom Set“ heißt jetzt „Getrennt vom Programm“.
  */
 import Base from '../layouts/Base.astro';
@@ -24,7 +24,7 @@ const jsonLd = [
   },
 ];
 ---
-<Base title={title} description={description} path="/erfahrungen/" jsonLd={jsonLd} noindex={!form.live}>
+<Base title={title} description={description} path="/erfahrungen/" jsonLd={jsonLd} noindex={!form.live || !form.index}>
   <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: 'Erfahrungen' }]} meta="Erfahrungen" title="Deine Erfahrung nach der Abnehmspritze" size="m" width="narrow">
     <p>Die Studien sagen, was im Mittel passiert. Was einzelne Menschen erleben, steht nirgends. Wenn du abgesetzt hast oder gerade absetzt, hilft dein Bericht anderen, die vor derselben Zeit stehen.</p>
   </SeitenKopf>

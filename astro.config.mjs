@@ -71,7 +71,9 @@ function buildLastmod() {
 }
 const lastmod = buildLastmod();
 // /erfahrungen/ kommt in die Sitemap, sobald das Erfahrungsformular live ist (site.experienceForm.live in src/data/site.ts)
-const experienceLive = /experienceForm:\s*\{[^}]*live:\s*true/.test(fs.readFileSync(path.resolve('src/data/site.ts'), 'utf8'));
+// und indexierbar ist (site.experienceForm.index, vorerst false bis zum ersten echten Bericht)
+const experienceBlock = fs.readFileSync(path.resolve('src/data/site.ts'), 'utf8').match(/experienceForm:\s*\{[^}]*\}/)?.[0] ?? '';
+const experienceLive = /live:\s*true/.test(experienceBlock) && /index:\s*true/.test(experienceBlock);
 if (experienceLive) lastmod.set('/erfahrungen/', lastmod.get('/') ?? '2026-09-30');
 
 export default defineConfig({

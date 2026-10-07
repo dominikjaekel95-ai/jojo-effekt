@@ -46,7 +46,9 @@ export const site = {
   waitlist: { ownGroup: true },
   // Erfahrungsformular „Deine Erfahrung nach der Abnehmspritze“ (Tally). `live` erst auf true setzen, wenn das
   // Formular in Tally veröffentlicht ist; vorher zeigt /erfahrungen/ nur die Regeln und die E-Mail-Adresse.
-  experienceForm: { id: 'ODOJWR', live: true },
+  // `index`: /erfahrungen/ bleibt noindex und außerhalb der Sitemap, bis der erste echte Bericht online ist (Dominik,
+  // 07.10.2026; Formular und Links bleiben). Dann auf true setzen und die URL in docs/INDEXIERUNG.md anmelden.
+  experienceForm: { id: 'ODOJWR', live: true, index: false },
   // Checkliste „Die ersten 8 Wochen nach der letzten Dosis“: seit 06.10.2026 kein Tally mehr, sondern das eigene Formular
   // ChecklisteForm → api/anmeldung.js (quelle=checkliste) → MailerLite mit Double-Opt-in. `live` steuert nur, ob /checkliste/
   // das Formular zeigt (sonst steht dort der Weg per E-Mail) und ob der Datenschutz-Abschnitt 4b erscheint.

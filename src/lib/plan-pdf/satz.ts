@@ -341,14 +341,11 @@ export class Satz {
     const oben = f.hoehe - f.rand.unten + (f.name === 'a4' ? 4 : 3) * MM;
     const breiteR = font.widthOfTextAtSize(fuss.rechts(n, n).replace(/\d/g, '0'), g);
     // Links der Hinweis, rechts neben der ersten Zeile die Seitenzahl (Folgezeilen volle Breite); ungeskaliert wie die
-    // Randfelder im Druck
-    const m = f.m;
-    f.m = 1;
+    // Randfelder im Druck (umbrechen misst ohne Maßstab)
     const ersteZeile = this.umbrechen([{ t: fuss.links }], { g, lh: 1.3 }, innen - breiteR - 6)[0];
     const erste = ersteZeile.teile.map((t) => t.st.t).join('');
     const rest = fuss.links.slice(erste.length).trim();
     const zeilen = [erste, ...(rest ? this.umbrechen([{ t: rest }], { g, lh: 1.3 }, innen).map((z) => z.teile.map((t) => t.st.t).join('')) : [])];
-    f.m = m;
     this.seiten.forEach((seite, i) => {
       const grund = (j: number) => f.hoehe - oben - g - j * g * 1.3;
       zeilen.forEach((z, j) => seite.drawText(z, { x: f.rand.links, y: grund(j), size: g, font, color: FARBE.hell }));

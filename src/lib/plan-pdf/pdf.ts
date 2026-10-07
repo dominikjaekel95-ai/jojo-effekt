@@ -50,15 +50,13 @@ export async function erzeugePdf(a: PdfAuftrag, schriften: Schriften, bericht?: 
   const istHandy = a.format === 'handy';
   const liste = rezepteImPlan(a.plan);
   const rezeptNr = new Map(liste.map((r) => [r.m.id, r.nr]));
-  // Handy: Seitenhöhe nach dem längsten Tag (wie scripts/ernaehrungsplan-pdf.mjs), dafür vorab messen
-  let format = istHandy ? handy(160) : A4;
-  if (istHandy) {
-    const probe = await Satz.neu(schriften, format);
-    const max = Math.max(...a.plan.tage.map((t) => tagBlock(probe, t, rezeptNr, a.plan.laktosefrei, true).h));
-    format = handy(Math.max(160, Math.ceil(((max * format.m) / MM + 8 + 15 + 2) / 5) * 5));
-  }
-  const s = await Satz.neu(schriften, format);
+  const s = await Satz.neu(schriften, istHandy ? handy(160) : A4);
   const lf = a.plan.laktosefrei;
+  // Handy: Seitenhöhe nach dem längsten Tag (wie scripts/ernaehrungsplan-pdf.mjs); die Breite bleibt, also vorab messen
+  if (istHandy) {
+    const max = Math.max(...a.plan.tage.map((t) => tagBlock(s, t, rezeptNr, lf, true).h));
+    s.f = handy(Math.max(160, Math.ceil(((max * s.f.m) / MM + 8 + 15 + 2) / 5) * 5));
+  }
 
   deckblatt(s, a, istHandy);
   for (const w of a.plan.wochen) {
@@ -70,7 +68,7 @@ export async function erzeugePdf(a: PdfAuftrag, schriften: Schriften, bericht?: 
   tauschen(s, a.plan, istHandy);
   schluss(s, a.schluss);
 
-  if (bericht) Object.assign(bericht, { seiten: s.seiten.length, ueberlauf: s.ueberlauf, hoeheMm: Math.round(format.hoehe / MM) });
+  if (bericht) Object.assign(bericht, { seiten: s.seiten.length, ueberlauf: s.ueberlauf, hoeheMm: Math.round(s.f.hoehe / MM) });
   return s.fertig(
     { links: istHandy ? FUSS : `nachderspritze.de · ${FUSS}`, rechts: (n, von) => (istHandy ? `${n} / ${von}` : `Seite ${n} von ${von}`) },
     { titel: `Dein Ernährungsplan (${a.plan.id}, ${istHandy ? 'Handy' : 'A4'})`, thema: 'Ernährungsplan für 14 Tage, Nach der Spritze' },

@@ -37,12 +37,12 @@ const preise = ['49', '79', '99', '129'];
       </ol>
       <p class="dk-note">{own
         ? `Den Newsletter (${site.newsletter.cadence}) bekommst du nur, wenn du ihn im Formular zusätzlich angekreuzt hast.`
-        : `Mit der Bestätigung bekommst du auch den Newsletter (${site.newsletter.cadence}).`} Abmelden geht in jeder Mail. Keine Weitergabe an Dritte.</p>
+        : `Mit der Bestätigung bekommst du auch den Newsletter (${site.newsletter.cadence}).`} Abmelden geht in jeder Mail. Wir geben deine Adresse nicht an Dritte weiter.</p>
     </div>
 
     <div class="dk-block" data-preisfrage>
-      <h2 class="dk-h">Eine Frage, ein Klick: Welcher Preis wäre für dich für das 12-Wochen-Programm in Ordnung?</h2>
-      <p class="dk-note">Freiwillig und anonym; wir zählen nur die Klicks. Das hilft uns, den Preis zu setzen.</p>
+      <h2 class="dk-h">Eine Frage, ein Klick: Welchen Preis fändest du für das 12-Wochen-Programm in Ordnung?</h2>
+      <p class="dk-note">Freiwillig und anonym; wir zählen nur die Klicks. Das hilft uns, den Preis festzulegen.</p>
       <div class="dk-preise" role="group" aria-label="Preis, der für dich in Ordnung wäre">
         {preise.map((p) => (<button type="button" data-preis={p} class={`dk-preis num plausible-event-name=Preisfrage plausible-event-preis=${p}`}>{p} €</button>))}
         <button type="button" data-preis="mehr" class="dk-preis plausible-event-name=Preisfrage plausible-event-preis=mehr">mehr als 129 €</button>
@@ -70,7 +70,7 @@ const preise = ['49', '79', '99', '129'];
 
     <div class="dk-block">
       <h2 class="dk-h">Kennst du jemanden, der gerade absetzt?</h2>
-      <p class="dk-note">Wir starten, sobald genug Menschen auf der Warteliste stehen. Jede Empfehlung hilft. Der Text ist vorgeschrieben, du kannst ihn ändern.</p>
+      <p class="dk-note">Wir starten, sobald genug Menschen auf der Warteliste stehen. Jede Empfehlung hilft. Der Text ist ein Vorschlag, du kannst ihn ändern.</p>
       <ShareButtons position="danke" class="mt-4" />
     </div>
 

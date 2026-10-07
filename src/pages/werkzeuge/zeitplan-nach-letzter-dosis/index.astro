@@ -39,9 +39,9 @@ const faq = [
 ];
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
-const title = 'Zeitplan nach der letzten Dosis: Was wann passiert (Rechner)';
+const title = 'Wie lange wirkt die Abnehmspritze nach? Zeitplan mit Datum';
 const description =
-  'Letzte Dosis und Wirkstoff eingeben: wann der Wirkstoff abgebaut ist, wann der Appetit meist zurückkommt und ab welcher Woche Studien eine Zunahme messen.';
+  'Wie lange die Abnehmspritze nachwirkt: Datum der letzten Dosis und Wirkstoff eingeben, dann siehst du, wann er abgebaut ist und der Appetit meist zurückkommt.';
 const path = '/werkzeuge/zeitplan-nach-letzter-dosis/';
 const url = `${site.url}${path}`;
 
@@ -137,8 +137,8 @@ const jsonLd = [
 
     <div class="prose-site mt-10">
       <h2 id="warum">Warum ein Datum mehr hilft als eine Wochenzahl</h2>
-      <p>„Nach fünf bis sieben Wochen ist Semaglutid weitgehend abgebaut“ bleibt abstrakt. Ein Datum im Kalender nicht: Es zeigt, in welche Wochen deines Kalenders die Zeitpunkte aus Fachinformation und Studien fallen, und legt die Wiegetage dorthin, wo die Zunahme in Studien beginnt.<Fn n={fn('wu2025')} id="wu2025" /> Wer die Haltephase mit festen Terminen beginnt, merkt die Drift früher; ab welcher Zahl du dann reagierst, legt der <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> fest, und wie viel Protein in diese Wochen gehört, der <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>.</p>
-      <p>Die Mittelwerte sagen nichts über dich allein: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen im Mittel zwei Drittel des Verlusts zurück,<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> hinter dem Mittel stehen Menschen mit fast vollständiger Zunahme und Menschen, die fast nichts zugenommen haben. Was den Unterschied gemacht hat, zeigt die S-LiTE-Nachbeobachtung: Nach Liraglutid allein lag die Zunahme im Jahr nach Therapieende 6,0 kg höher als nach einem Trainingsprogramm.<Fn n={fn('jensen2024')} id="jensen2024" /></p>
+      <p>„Nach fünf bis sieben Wochen ist Semaglutid weitgehend abgebaut“ bleibt abstrakt. Ein Datum im Kalender nicht: Es zeigt, in welche Wochen deines Kalenders die Zeitpunkte aus Fachinformation und Studien fallen, und legt die Wiegetage dorthin, wo die Zunahme in Studien beginnt.<Fn n={fn('wu2025')} id="wu2025" /> Wer die Haltephase mit festen Terminen beginnt, merkt früher, wenn das Gewicht steigt. Ab welcher Zahl du dann reagierst, legt der <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> fest; wie viel Protein in diese Wochen gehört, zeigt der <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>.</p>
+      <p>Ein Mittelwert sagt nichts darüber, wie es bei dir läuft: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen im Mittel zwei Drittel des Verlusts zurück.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Hinter dem Mittel stehen Menschen, die fast alles wieder zugenommen haben, und Menschen, die fast nichts zugenommen haben. Was den Unterschied gemacht hat, zeigt die S-LiTE-Nachbeobachtung: Nach Liraglutid allein lag die Zunahme im Jahr nach Therapieende 6,0 kg höher als nach einem Trainingsprogramm.<Fn n={fn('jensen2024')} id="jensen2024" /></p>
     </div>
 
     <div class="mt-14"><Faq items={faq} id="zeitplan-faq" title="Häufige Fragen zum Zeitplan" /></div>

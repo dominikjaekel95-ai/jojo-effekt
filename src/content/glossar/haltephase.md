@@ -23,6 +23,6 @@ Die Erhaltungsdosis ist die Dosis, mit der eine Ärztin oder ein Arzt die Behand
 
 ## Was in der Haltephase den Unterschied macht
 
-In der dänischen S-LiTE-Studie hielten Teilnehmende, die während der Medikamententherapie ein Trainingsprogramm absolviert hatten, Gewicht und Körperzusammensetzung ein Jahr nach dem Ende aller Behandlungen. Wer nur das Medikament bekommen hatte, nahm im Mittel 6 kg mehr wieder zu.<sup><a href="#fn-jensen2024">3</a></sup> Die drei Hebel, die in Studien zählen, sind ausreichend Protein, Krafttraining und der Erhalt der Muskelmasse; wie das konkret aussieht, steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
+In der dänischen S-LiTE-Studie hielten Teilnehmende, die ein Jahr lang ein Trainingsprogramm absolviert hatten, Gewicht und Körperzusammensetzung auch ein Jahr nach dem Ende aller Behandlungen. Wer nur das Medikament bekommen hatte, nahm im Mittel 6 kg mehr wieder zu als die Gruppe mit Training allein.<sup><a href="#fn-jensen2024">3</a></sup> Die drei Hebel, die in Studien zählen, sind ausreichend Protein, Krafttraining und der Erhalt der Muskelmasse; wie das konkret aussieht, steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
 
 Die Studien beobachten die Haltephase meist ein Jahr lang. Danach flacht die Kurve ab, zu Ende ist sie nicht.

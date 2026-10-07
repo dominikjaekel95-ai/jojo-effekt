@@ -9,7 +9,7 @@ const MAX = 3;
 const pc = (kg: number) => ((Math.min(MAX, Math.max(0, kg)) / MAX) * 100).toFixed(2);
 
 const ZONEN = {
-  gruen: { name: 'Grün: nichts tun.', text: 'Das ist der Bereich, in dem Wasser, Salz, Zyklus und Darminhalt schwanken.' },
+  gruen: { name: 'Grün: nichts tun.', text: 'Das ist der Bereich, in dem das Gewicht durch Wasser, Salz, Zyklus und Darminhalt schwankt.' },
   gelb: { name: 'Gelb: zwei Wochen gegensteuern.', text: 'Protein an jedem Tag prüfen, zwei Krafteinheiten, Flüssigkalorien streichen, auf Schlaf achten. Dann wieder wiegen.' },
   rot: { name: 'Rot: Plan prüfen.', text: 'Hat das Gegensteuern zwei Wochen lang nicht gewirkt: Protein, Training, Schlaf und Flüssigkalorien durchgehen; die Maßnahmen aus Gelb laufen weiter.' },
 } as const;
@@ -40,6 +40,6 @@ export function zonen(a: Attr, ctx: Ctx): string {
       `<div class="zo-ergebnis" aria-live="polite"><p class="zo-name"${proWahl('x', 'zone', by((z) => ZONEN[z].name))}>${ZONEN[zone].name}</p>` +
       `<p class="zo-text"${proWahl('x', 'zone', by((z) => ZONEN[z].text))}>${ZONEN[zone].text}</p>` +
       `<p class="zo-ist">Dein Wochenmittel: <span data-z-ist>${de(kg + plus, 1)}</span> kg</p></div>`,
-    fuss: `Zonen aus der STOP-Regain-Studie, in der sich Erwachsene nach mindestens 10 % Gewichtsverlust täglich wogen und je nach Zone festgelegt reagierten.${q} Die Studie lief ohne Medikament; die Übertragung auf die Zeit nach der Spritze ist plausibel, aber nicht geprüft. Für dein Startgewicht rechnet der <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a>.`,
+    fuss: `Zonen aus der STOP-Regain-Studie, in der sich Erwachsene nach mindestens 10 % Gewichtsverlust täglich wogen und je nach Zone auf festgelegte Weise reagierten.${q} Die Studie lief ohne Medikament; die Übertragung auf die Zeit nach der Spritze ist plausibel, aber nicht geprüft. Für dein Startgewicht rechnet der <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a>.`,
   });
 }

@@ -3,7 +3,7 @@ term: "Taillenumfang"
 metaTitle: "Taillenumfang: die einfachste Messung für Bauchfett"
 description: "Der Taillenumfang zeigt Bauchfett besser als der BMI. Die WHO-Grenzwerte, wie man richtig misst und warum die Zahl nach dem Absetzen wichtiger ist als die Waage."
 short: "Der Umfang der Taille, gemessen in der Mitte zwischen unterem Rippenbogen und Beckenkamm. Laut WHO ist das Risiko für Stoffwechselerkrankungen ab 94 cm bei Männern und 80 cm bei Frauen erhöht, ab 102 beziehungsweise 88 cm deutlich erhöht."
-synonyms: ["Bauchumfang", "Waist Circumference", "Hüftumfang"]
+synonyms: ["Bauchumfang", "Waist Circumference"]
 sources: ["who2008waist", "dagLeitlinie", "donini2022"]
 related: ["koerperzusammensetzung", "bioimpedanzanalyse", "griffkraft", "sarkopene-adipositas"]
 articles: ["gewicht-halten-nach-abnehmspritze", "muskelabbau-abnehmspritze"]
@@ -14,7 +14,7 @@ Der BMI kennt nur Gewicht und Größe. Der Taillenumfang kennt den Ort des Fetts
 
 ## Die Grenzwerte
 
-Die WHO-Expertenkonsultation setzt zwei Stufen:<sup><a href="#fn-who2008waist">1</a></sup>
+Die WHO-Expertenkonsultation unterscheidet zwei Stufen:<sup><a href="#fn-who2008waist">1</a></sup>
 
 | | erhöhtes Risiko | deutlich erhöhtes Risiko |
 |---|---|---|

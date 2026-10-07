@@ -22,18 +22,18 @@ faq:
   - q: "Welche Form ist die beste: Citrat, Oxid, Glycinat?"
     a: "<p>Für die Versorgung ist die Form zweitrangig; entscheidend sind die Menge in Milligramm und die Regelmäßigkeit. Citrat gilt als gut löslich, Oxid enthält pro Tablette mehr Magnesium. Wer Durchfall bekommt, nimmt eine kleinere Menge, verteilt auf zwei Portionen.</p>"
   - q: "Kann man mit Magnesium abnehmen?"
-    a: "<p>Nein. Für Magnesium ist in der EU keine Angabe zu Gewicht, Fettabbau oder Stoffwechselanregung zugelassen, und Studien, die einen Gewichtseffekt zeigen, gibt es nicht. Zugelassen sind Angaben zu normaler Muskelfunktion, zum Energiestoffwechsel und zur Verringerung von Müdigkeit; die beziehen sich auf die Versorgung, nicht auf das Abnehmen. Wer unter der Spritze wenig isst, kann eine Lücke haben; die schließt man, schlank macht sie nicht.</p>"
+    a: "<p>Nein. Für Magnesium ist in der EU keine Angabe zu Gewicht, Fettabbau oder Stoffwechselanregung zugelassen, und Studien, die einen Gewichtseffekt zeigen, gibt es nicht. Zugelassen sind Angaben zu normaler Muskelfunktion, zum Energiestoffwechsel und zur Verringerung von Müdigkeit; die beziehen sich auf die Versorgung, nicht auf das Abnehmen. Wer unter der Spritze wenig isst, kann eine Lücke haben; die schließt man, aber schlank macht das nicht.</p>"
   - q: "Kann man mit Magnesium Bauchfett verlieren?"
-    a: "<p>Nein. Kein Mineralstoff und kein Vitamin reduziert gezielt Bauchfett, Magnesium auch nicht; Bauchfett geht mit dem Gesamtgewicht zurück, über Energiebilanz, Protein und Training. Produkte, die Magnesium als Mittel gegen Bauchfett bewerben, nutzen eine Angabe, die es in der EU nicht gibt.</p>"
+    a: "<p>Nein. Kein Mineralstoff und kein Vitamin reduziert gezielt Bauchfett, Magnesium auch nicht; Bauchfett geht mit dem Gesamtgewicht zurück, und das steuerst du über Energiebilanz, Protein und Training. Produkte, die Magnesium als Mittel gegen Bauchfett bewerben, nutzen eine Angabe, die es in der EU nicht gibt.</p>"
 ---
 
 Magnesium ist nach Kreatin das Supplement, nach dem Menschen unter der Abnehmspritze am häufigsten fragen: wegen Krämpfen, wegen Müdigkeit, wegen des Gefühls, bei kleinen Portionen „irgendetwas“ zu verpassen. Die ehrliche Antwort hat drei Teile: Ja, die Zufuhr kann unter der Spritze knapp werden. Nein, gegen Krämpfe ist Magnesium schlechter belegt, als die Werbung sagt. Und ein Präparat ist eine Ergänzung für einen klaren Fall, kein Automatismus. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
 
-> **Kurz gesagt:** Die DGE empfiehlt 300 mg (Frauen) bzw. 350 mg (Männer) Magnesium am Tag.<sup><a href="#fn-dgeReferenzwerte">1</a></sup> Schon vor der Spritze lagen in Deutschland 26 % der Männer und 29 % der Frauen darunter.<sup><a href="#fn-nvs2">2</a></sup> Bei sehr kleiner Energiezufuhr empfehlen Fachleute eine Mikronährstoff-Ergänzung,<sup><a href="#fn-almandoz2024">3</a></sup> für Krämpfe fand eine Cochrane-Übersicht keinen belegten Nutzen.<sup><a href="#fn-garrison2020">6</a></sup>
+> **Kurz gesagt:** Die DGE empfiehlt 300 mg (Frauen) bzw. 350 mg (Männer) Magnesium am Tag.<sup><a href="#fn-dgeReferenzwerte">1</a></sup> Schon vor der Spritze lagen in Deutschland 26 % der Männer und 29 % der Frauen darunter.<sup><a href="#fn-nvs2">2</a></sup> Bei sehr kleiner Energiezufuhr empfehlen Fachleute eine Mikronährstoff-Ergänzung.<sup><a href="#fn-almandoz2024">3</a></sup> Für Krämpfe fand eine Cochrane-Übersicht keinen belegten Nutzen.<sup><a href="#fn-garrison2020">6</a></sup>
 
 ## Warum Magnesium unter der Spritze knapp werden kann
 
-Magnesium steckt vor allem in Lebensmitteln mit Volumen: Vollkorn, Hülsenfrüchte, grünes Gemüse, Nüsse und Kerne. Genau diese Lebensmittel fallen bei kleinem Appetit als Erstes weg, weil sie sättigen, bevor der Teller leer ist. Wer unter der Spritze auf 1.000 bis 1.200 Kalorien am Tag kommt, isst oft Joghurt, Eier, etwas Fleisch oder Fisch und wenig davon, was Magnesium liefert. Die Expertengruppe um Almandoz empfiehlt deshalb bei sehr geringer Energiezufuhr unter Adipositas-Medikamenten eine Ergänzung von Mikronährstoffen.<sup><a href="#fn-almandoz2024">3</a></sup>
+Magnesium steckt vor allem in Lebensmitteln mit Volumen: Vollkorn, Hülsenfrüchte, grünes Gemüse, Nüsse und Kerne. Genau diese Lebensmittel fallen bei kleinem Appetit als Erstes weg, weil sie sättigen, bevor der Teller leer ist. Wer unter der Spritze auf 1.000 bis 1.200 Kalorien am Tag kommt, isst oft Joghurt, Eier, etwas Fleisch oder Fisch und wenig von dem, was Magnesium liefert. Die Expertengruppe um Almandoz empfiehlt deshalb bei sehr geringer Energiezufuhr unter Adipositas-Medikamenten eine Ergänzung von Mikronährstoffen.<sup><a href="#fn-almandoz2024">3</a></sup>
 
 <div data-interaktiv="punktfeld" data-vorlage="magnesium"></div>
 
@@ -62,11 +62,11 @@ Der Unterschied ist wichtig: „Trägt zu einer normalen Muskelfunktion bei“ h
 
 Wadenkrämpfe sind der häufigste Grund, warum Menschen zu Magnesium greifen. Die Cochrane-Übersicht von 2020 wertete die randomisierten Studien dazu aus und kam zu einem ernüchternden Ergebnis: Bei Krämpfen älterer Erwachsener hilft Magnesium wahrscheinlich nicht, und auch für andere Erwachsene gibt es keinen belegten Nutzen; nur in der Schwangerschaft ist die Lage unklar.<sup><a href="#fn-garrison2020">6</a></sup>
 
-Für die Zeit unter und nach der Spritze heißt das: Krämpfe sind eher ein Hinweis auf zu wenig Flüssigkeit, zu wenig Essen und zu viel Sitzen als auf einen isolierten Magnesiummangel. Die Reihenfolge ist deshalb: ein bis zwei Liter trinken, drei Mahlzeiten mit etwas Salz und Kohlenhydraten, Beine bewegen. Erst wenn das nicht hilft, lohnt sich ein Präparat, und dann als Versuch über zwei Wochen, nicht als Dauerlösung.
+Für die Zeit unter und nach der Spritze heißt das: Krämpfe sind eher ein Hinweis auf zu wenig Flüssigkeit, zu wenig Essen und zu viel Sitzen als auf einen isolierten Magnesiummangel. Die Reihenfolge ist deshalb: zwei bis drei Liter trinken, drei Mahlzeiten mit etwas Salz und Kohlenhydraten essen, Beine bewegen. Erst wenn das nicht hilft, lohnt sich ein Präparat, und dann als Versuch über zwei Wochen, nicht als Dauerlösung.
 
 ## Nach dem Absetzen: Haltephase statt Pillen
 
-Nach dem Absetzen kommt der Appetit zurück, und damit meist auch die Zufuhr. In der Haltephase entscheidet, womit die größeren Portionen gefüllt werden: Wer bei Vollkorn, Hülsenfrüchten, Gemüse und Nüssen bleibt, braucht kein Magnesiumpräparat. Wer auf Weißmehl und Süßes zurückfällt, hat ein größeres Problem als Magnesium. Wie ein Tag mit zurückgekehrtem Appetit aussehen kann, steht unter [Ernährung nach der Abnehmspritze](/wissen/ernaehrung-nach-abnehmspritze/). Was in den ersten Wochen nach der letzten Dosis insgesamt passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Nach dem Absetzen kommt der Appetit zurück, und damit meist auch die Zufuhr. In der Haltephase kommt es darauf an, womit du die größeren Portionen füllst: Wer bei Vollkorn, Hülsenfrüchten, Gemüse und Nüssen bleibt, braucht kein Magnesiumpräparat. Wer auf Weißmehl und Süßes zurückfällt, hat ein größeres Problem als Magnesium. Wie ein Tag mit zurückgekehrtem Appetit aussehen kann, steht unter [Ernährung nach der Abnehmspritze](/wissen/ernaehrung-nach-abnehmspritze/). Was in den ersten Wochen nach der letzten Dosis insgesamt passiert, beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 ## Wann ein Präparat sinnvoll ist, und wie viel
 
@@ -91,4 +91,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Magnesium ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Magnesium ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

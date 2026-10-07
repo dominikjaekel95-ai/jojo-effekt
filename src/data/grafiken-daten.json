@@ -38,7 +38,7 @@
       ["Appetit kommt zurück", "Woche 2 bis 5, bleibt danach", "abgeleitet aus dem sinkenden Wirkstoffspiegel, nicht gemessen"],
       ["Zunahme messbar", "ab Woche 8 signifikant, Anstieg bis etwa Woche 20", "Meta-Analyse randomisierter Studien (Wu et al. 2025)"]
     ],
-    "hinweis": "Was aus Pharmakologie und Studien ableitbar ist; der individuelle Verlauf weicht ab.",
+    "hinweis": "Was sich aus Pharmakologie und Studien ableiten lässt; der Verlauf kann im Einzelfall abweichen.",
     "quelle": "Fachinformationen Wegovy und Mounjaro (EMA); Wu et al., Meta-Analyse, BMC Medicine 2025"
   },
   "zeitachse-phasen": {
@@ -121,7 +121,7 @@
       ["90 kg", "108 g am Tag", "144 g am Tag"],
       ["100 kg", "120 g am Tag", "160 g am Tag"]
     ],
-    "hinweis": "Empfehlung für Gewichtsabnahme und -erhalt: 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag, verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 g pro Mahlzeit; bei Nierenerkrankungen vorher ärztlich klären.",
+    "hinweis": "Empfehlung beim Abnehmen und beim Halten des Gewichts: 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag, verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 g pro Mahlzeit; bei Nierenerkrankungen vorher ärztlich klären.",
     "quelle": "Leidy et al., Am J Clin Nutr 2015, 101(6), S. 1320S–1329S"
   },
   "haarausfall-zeitverlauf": {
@@ -187,7 +187,7 @@
       ["Gewichtszunahme messbar", "ab etwa Woche 8, Anstieg bis etwa Woche 20", "Meta-Analyse randomisierter Studien (Wu et al. 2025)"],
       ["Fenster: Hunger zurück, Waage zeigt noch wenig", "Woche 2 bis 8", "aus den Zeilen darüber abgeleitet"]
     ],
-    "hinweis": "Der individuelle Verlauf weicht ab.",
+    "hinweis": "Der Verlauf kann im Einzelfall abweichen.",
     "quelle": "Fachinformation Wegovy (EMA); Sumithran et al., NEJM 2011; Wu et al., Meta-Analyse, BMC Medicine 2025"
   },
   "schlaf-und-hungerhormone": {
@@ -310,7 +310,7 @@
       ["Gleichmäßig", "etwa 30 g", "etwa 30 g", "etwa 30 g", "25 % höher"],
       ["Abendlastig", "etwa 10 g", "etwa 15 g", "etwa 65 g", "Vergleichswert"]
     ],
-    "hinweis": "Gleiche Tagesmenge, gesunde Erwachsene; kleine Studie, gemessen wurde die Muskelproteinsynthese, nicht die Muskelmasse. Empfehlung für Gewichtsabnahme und -erhalt: mindestens etwa 25 bis 30 g Protein pro Mahlzeit.",
+    "hinweis": "Gleiche Tagesmenge, gesunde Erwachsene; kleine Studie, gemessen wurde die Muskelproteinsynthese, nicht die Muskelmasse. Empfehlung beim Abnehmen und beim Halten des Gewichts: mindestens etwa 25 bis 30 g Protein pro Mahlzeit.",
     "quelle": "Mamerow et al., J Nutr 2014, 144(6), S. 876–880; Leidy et al., Am J Clin Nutr 2015"
   },
   "kalorienbedarf-zwei-effekte": {

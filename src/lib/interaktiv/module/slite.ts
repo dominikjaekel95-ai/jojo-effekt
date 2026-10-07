@@ -33,7 +33,7 @@ export function slite(_a: Attr, ctx: Ctx): string {
     ctx,
     name: 'slite',
     titel: 'Training während der Therapie: was ein Jahr danach bleibt',
-    unter: 'S-LiTE-Studie: Mehr Wiederzunahme im Jahr nach Therapieende, in kg',
+    unter: 'S-LiTE-Studie: mehr Wiederzunahme im Jahr nach Therapieende, in kg',
     inhalt:
       `<div class="ia-stats sl-stats"><div class="ia-stat ia-stat-clay"><p class="ia-gross">${zahl(de(daten.zeilen[0].wert, 1))}<small> kg</small></p>` +
       `<p class="ia-klein">mehr Wiederzunahme nach Liraglutid allein als nach dem Trainingsprogramm.${q}</p></div>` +

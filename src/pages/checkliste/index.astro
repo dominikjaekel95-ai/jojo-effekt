@@ -18,9 +18,9 @@ const fnIds = ['wu2025', 'wilding2022ext', 'fachinfoWegovy', 'leidy2015', 'moore
 const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 
 const form = site.checklistForm;
-const title = 'Checkliste: Die ersten 8 Wochen nach der letzten Dosis';
+const title = 'Checkliste nach der Abnehmspritze: die ersten 8 Wochen';
 const description =
-  'Woche für Woche nach der Abnehmspritze: Messwerte, Protein, Krafttraining, Schlaf, Wiegetag. Aus den Absetz-Studien abgeleitet, mit Quellen, als Seite und PDF.';
+  'Checkliste für die ersten 8 Wochen nach der Abnehmspritze: Messwerte, Protein, Training, Schlaf, Wiegetag. Aus den Absetz-Studien abgeleitet, als Seite und PDF.';
 const jsonLd = [
   {
     '@type': 'HowTo',
@@ -105,9 +105,9 @@ const leiste = [
           <p class="cl-n" aria-hidden="true">1–2</p>
           <div>
             <h2 id="w12-h" class="cl-h">Woche 1 bis 2: die Auswaschphase</h2>
-            <p class="cl-sub">Der Wirkstoff ist noch da, der Appetit klein. Das ist das Fenster, um Gewohnheiten zu bauen, bevor der Hunger zurück ist.</p>
+            <p class="cl-sub">Der Wirkstoff ist noch da, der Appetit klein. Das ist die Zeit, um Gewohnheiten aufzubauen, bevor der Hunger zurück ist.</p>
             <ul class="cl-list">
-              <li><label><input type="checkbox" class="cl-cb" /><span>Drei Mahlzeiten mit je 25 bis 30 g Protein planen. Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag;<Fn n={fn('leidy2015')} id="leidy2015" /> pro Mahlzeit brauchen Ältere mehr als Jüngere.<Fn n={fn('moore2015')} id="moore2015" /></span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Drei Mahlzeiten mit je 25 bis 30 g Protein planen. Übersichtsarbeiten empfehlen beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag;<Fn n={fn('leidy2015')} id="leidy2015" /> pro Mahlzeit brauchen Ältere mehr als Jüngere.<Fn n={fn('moore2015')} id="moore2015" /></span></label></li>
               <li><label><input type="checkbox" class="cl-cb" /><span>Zwei Krafteinheiten in dieser Woche, je 30 Minuten, sechs Übungen für den ganzen Körper. Die WHO empfiehlt mindestens zwei Tage pro Woche.<Fn n={fn('who2020')} id="who2020" /> Einsteiger: 8 bis 12 Wiederholungen, zwei Sätze.<Fn n={fn('acsm2009')} id="acsm2009" /></span></label></li>
               <li><label><input type="checkbox" class="cl-cb" /><span>Wiegetag festlegen: einmal pro Woche, morgens, gleiche Bedingungen. Nicht täglich.</span></label></li>
               <li><label><input type="checkbox" class="cl-cb" /><span>Ballaststoffe Richtung 30 g pro Tag (DGE-Richtwert),<Fn n={fn('dgeBallaststoffe')} id="dgeBallaststoffe" /> mit reichlich Wasser.</span></label></li>
@@ -122,8 +122,8 @@ const leiste = [
           <div>
             <h2 id="w34-h" class="cl-h">Woche 3 bis 4: der Appetit kommt zurück</h2>
             <ul class="cl-list">
-              <li><label><input type="checkbox" class="cl-cb" /><span>Mahlzeitenstruktur beibehalten, auch wenn der Hunger zwischendurch kommt: Nach Gewichtsverlust bleiben Hungerhormone über Monate erhöht, das ist Biologie, kein Willensproblem.<Fn n={fn('sumithran2011')} id="sumithran2011" /></span></label></li>
-              <li><label><input type="checkbox" class="cl-cb" /><span>Umgebung aufräumen: Was nicht in Sichtweite steht, zieht weniger. Vorräte für die Proteinmahlzeiten anlegen.</span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Mahlzeitenstruktur beibehalten, auch wenn der Hunger zwischendurch kommt: Nach Gewichtsverlust bleiben Hungerhormone über Monate erhöht.<Fn n={fn('sumithran2011')} id="sumithran2011" /> Das ist Biologie, kein Willensproblem.</span></label></li>
+              <li><label><input type="checkbox" class="cl-cb" /><span>Umgebung aufräumen: Was nicht in Sichtweite steht, lockt weniger. Vorräte für die Proteinmahlzeiten anlegen.</span></label></li>
               <li><label><input type="checkbox" class="cl-cb" /><span>Training: bei zwei Sätzen bleiben und die Wiederholungen Richtung 12 steigern. Der dritte Satz kommt erst ab Woche 5, wie im <a href="/wissen/krafttraining-nach-abnehmspritze/" class="k-a">12-Wochen-Plan</a>.<Fn n={fn('acsm2009')} id="acsm2009" /></span></label></li>
               <li><label><input type="checkbox" class="cl-cb" /><span>Optional Kreatin-Monohydrat, 3 g täglich, nur zusammen mit dem Training: Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver körperlicher Betätigung.<Fn n={fn('euClaims')} id="euClaims" /> Bei Nierenerkrankungen vorher fragen.<Fn n={fn('kreider2017')} id="kreider2017" /></span></label></li>
               <li><label><input type="checkbox" class="cl-cb" /><span>Taillenumfang messen, neben dem Gewicht notieren.</span></label></li>
@@ -163,7 +163,7 @@ const leiste = [
         <div class="prose-site cl-prose">
           <h2>Und danach</h2>
           <p>
-            Die Haltephase dauert länger als acht Wochen. Ein Jahr nach dem Absetzen von Semaglutid waren in der STEP-1-Verlängerung im Mittel zwei Drittel des verlorenen Gewichts wieder da,<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> bei denen, die nichts geändert hatten. Was in Studien den Unterschied macht, steht unter <a href="/wissen/gewicht-halten-nach-abnehmspritze/">Gewicht halten nach der Abnehmspritze</a>; ein Trainingsplan für zwölf Wochen unter <a href="/wissen/krafttraining-nach-abnehmspritze/">Krafttraining nach der Abnehmspritze</a>.
+            Die Haltephase dauert länger als acht Wochen. Ein Jahr nach dem Absetzen von Semaglutid waren in der STEP-1-Verlängerung im Mittel zwei Drittel des verlorenen Gewichts wieder da.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Was in Studien hilft, steht unter <a href="/wissen/gewicht-halten-nach-abnehmspritze/">Gewicht halten nach der Abnehmspritze</a>. Einen Trainingsplan für zwölf Wochen findest du unter <a href="/wissen/krafttraining-nach-abnehmspritze/">Krafttraining nach der Abnehmspritze</a>.
           </p>
           <h2>Wann du zur Ärztin oder zum Arzt gehst</h2>
           <ul>

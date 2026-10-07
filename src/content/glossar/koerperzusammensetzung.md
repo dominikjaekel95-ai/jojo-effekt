@@ -2,7 +2,7 @@
 term: "Körperzusammensetzung"
 metaTitle: "Körperzusammensetzung: Fett, fettfreie Masse und die Messung"
 description: "Die Körperzusammensetzung teilt das Gewicht in Fettmasse und fettfreie Masse. Warum die Waage nach der Abnehmspritze nicht reicht und welche Messung was taugt."
-short: "Die Aufteilung des Körpergewichts in Fettmasse und fettfreie Masse (Muskeln, Knochen, Organe, Wasser). Sie zeigt, was beim Abnehmen und Wiederzunehmen tatsächlich verloren oder gewonnen wird, was die Waage allein nicht kann."
+short: "Die Aufteilung des Körpergewichts in Fettmasse und fettfreie Masse (Muskeln, Knochen, Organe, Wasser). Sie zeigt, was beim Abnehmen und Wiederzunehmen tatsächlich verloren oder gewonnen wird; das kann die Waage allein nicht."
 synonyms: ["Body Composition", "Körperfettanteil", "Körperkomposition"]
 sources: ["wilding2021dxa", "kyle2004", "sardeli2018", "donini2022"]
 related: ["fettfreie-masse", "dxa", "bioimpedanzanalyse", "griffkraft", "taillenumfang"]
@@ -27,4 +27,4 @@ In der STEP-1-Substudie entfielen rund 40 % des Gewichtsverlusts unter Semagluti
 
 ## Was die Zusammensetzung verändert
 
-Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">3</a></sup> In der Haltephase kann das Gewicht gleich bleiben, während sich die Zusammensetzung verbessert: weniger Fett, mehr Muskel. Die Waage zeigt dann Stillstand, Taillenumfang und Griffkraft zeigen Fortschritt. Deshalb steht in unserem Programm das Wiegeprotokoll neben Umfang und Kraft, nicht allein. Mehr dazu unter [Muskelabbau unter der Abnehmspritze](/wissen/muskelabbau-abnehmspritze/).
+Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">3</a></sup> In der Haltephase kann das Gewicht gleich bleiben, während sich die Zusammensetzung verbessert: weniger Fett, mehr Muskel. Die Waage zeigt dann Stillstand, Taillenumfang und Griffkraft zeigen Fortschritt. Deshalb lohnt es sich, neben dem Gewicht auch Taillenumfang und Kraft zu messen. Mehr dazu unter [Muskelabbau unter der Abnehmspritze](/wissen/muskelabbau-abnehmspritze/).

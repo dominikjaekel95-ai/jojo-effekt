@@ -10,7 +10,7 @@ articles: ["gewicht-halten-nach-abnehmspritze", "krafttraining-nach-abnehmspritz
 pubDate: 2026-09-30
 ---
 
-Der Energieverbrauch eines Tages besteht aus Ruheverbrauch, Verdauung, Sport und allem anderen. Dieses „alles andere“ ist NEAT: Treppen, Wege, Stehen, Hausarbeit, Gestik, Zappeln. Es ist der Teil des Verbrauchs, der sich am stärksten unterscheidet und am leichtesten unbemerkt verändert.
+Der Energieverbrauch eines Tages besteht aus Ruheverbrauch, Verdauung, Sport und allem anderen. Dieses „alles andere“ ist NEAT: Treppen, Wege, Stehen, Hausarbeit, Gestik, Zappeln. Es ist der Teil des Verbrauchs, der sich von Mensch zu Mensch am stärksten unterscheidet und am leichtesten unbemerkt verändert.
 
 ## Wie groß der Unterschied ist
 
@@ -22,4 +22,4 @@ Zu den Anpassungen an ein niedrigeres Gewicht ([metabolische Adaptation](/glossa
 
 ## Was sich daraus machen lässt
 
-NEAT ist der einzige Teil des Verbrauchs, der sich ohne Training und ohne Zeitblock erhöhen lässt: Schritte zählen, Stehen statt Sitzen, Wege zu Fuß. Die WHO empfiehlt neben Krafttraining an zwei Tagen 150 bis 300 Minuten moderate Bewegung pro Woche; Alltagswege zählen dazu.<sup><a href="#fn-who2020">3</a></sup> NEAT ersetzt kein Krafttraining, weil es Muskeln nicht erhält. Es ergänzt es. Was für die Haltephase belegt ist, steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
+NEAT ist der einzige Teil des Verbrauchs, der sich ohne Training und ohne Zeitblock erhöhen lässt: Schritte zählen, Stehen statt Sitzen, Wege zu Fuß. Die WHO empfiehlt neben Krafttraining an zwei Tagen 150 bis 300 Minuten moderate Bewegung pro Woche; Alltagswege zählen dazu.<sup><a href="#fn-who2020">3</a></sup> NEAT ersetzt kein Krafttraining, weil es Muskeln nicht erhält. Es ergänzt das Training. Was für die Haltephase belegt ist, steht unter [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).

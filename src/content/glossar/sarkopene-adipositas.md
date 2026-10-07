@@ -25,4 +25,4 @@ In der STEP-1-Substudie entfielen rund 40 % des Gewichtsverlusts unter Semagluti
 
 ## Was die Studienlage zur Vorbeugung sagt
 
-Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">3</a></sup> Die Griffkraft ist dabei mehr als ein Diagnosekriterium: In der PURE-Studie war jede 5 kg weniger Griffkraft mit einer um 16 % höheren Gesamtsterblichkeit verbunden.<sup><a href="#fn-leong2015">4</a></sup> Wie ein Einstieg ins Krafttraining aussieht, steht im [30-Minuten-Plan](/wissen/krafttraining-nach-abnehmspritze/).
+Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">3</a></sup> Die Griffkraft ist dabei mehr als ein Diagnosekriterium: In der PURE-Studie waren je 5 kg weniger Griffkraft mit einer um 16 % höheren Gesamtsterblichkeit verbunden.<sup><a href="#fn-leong2015">4</a></sup> Wie ein Einstieg ins Krafttraining aussieht, steht im [30-Minuten-Plan](/wissen/krafttraining-nach-abnehmspritze/).

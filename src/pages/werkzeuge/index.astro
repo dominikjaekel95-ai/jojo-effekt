@@ -7,15 +7,15 @@ import Faq from '../../components/Faq.astro';
 import { faqJsonLd } from '../../data/faq';
 import { site } from '../../data/site';
 
-const title = 'Werkzeuge: Zeitplan, Proteinrechner, Gewichtskorridor, Jahreskosten';
+const title = 'Rechner zur Abnehmspritze: Zeitplan, Protein, Gewicht, Kosten';
 const description =
-  'Rechner für die Zeit nach der Abnehmspritze: Zeitplan nach der letzten Dosis, Proteinrechner, Gewichtskorridor mit Reaktionsschwelle, Jahreskosten-Rechner, Checkliste für die ersten 8 Wochen. Ohne Anmeldung.';
+  'Rechner zur Abnehmspritze, kostenlos und ohne Anmeldung: Zeitplan nach der letzten Dosis, Proteinziel, Gewichtskorridor und Jahreskosten, alles im Browser.';
 const path = '/werkzeuge/';
 const url = `${site.url}${path}`;
 
 const rechner = [
   { href: '/werkzeuge/zeitplan-nach-letzter-dosis/', name: 'Zeitplan nach der letzten Dosis', text: 'Datum und Wirkstoff eingeben: wann der Wirkstoff abgebaut ist, wann der Appetit meist zurückkommt, ab welcher Woche Studien eine Zunahme messen. Mit Kalender-Export.' },
-  { href: '/ernaehrungsplan/', name: 'Ernährungsplan für 14 Tage', text: 'Vier Fragen zu Ernährungsform, Unverträglichkeit, Appetit und Gewicht, dazu deine Lieblingsspeisen: der passende Plan mit Mengen, Einkaufsliste und Rezeptkarten. Kostenlos als PDF.' },
+  { href: '/ernaehrungsplan/', name: 'Ernährungsplan für 14 Tage', text: 'Vier Fragen zu Ernährungsform, Unverträglichkeit, Appetit und Gewicht, dazu deine Lieblingsspeisen. Daraus entsteht der passende Plan mit Mengen, Einkaufsliste und Rezeptkarten. Kostenlos als PDF.' },
   { href: '/werkzeuge/proteinrechner/', name: 'Proteinrechner', text: 'Körpergewicht eingeben: Tagesziel von 1,2 bis 1,6 g pro kg, Menge pro Mahlzeit und Beispiele in Lebensmitteln.' },
   { href: '/werkzeuge/gewichtskorridor/', name: 'Gewichtskorridor', text: 'Startgewicht der Haltephase eingeben: drei Zonen mit Reaktionsschwelle (grün, gelb, rot) nach einem erprobten Programm, und was in jeder Zone zu tun ist.' },
   { href: '/abnehmspritze-kosten/#rechner', name: 'Jahreskosten-Rechner', text: 'Präparat und Dauer wählen: Kosten pro Jahr, pro Tag und für die gewählte Dauer, aus der monatlichen Preiserhebung. Größenordnung, keine Preisberatung.' },
@@ -70,7 +70,7 @@ const jsonLd = [
 ---
 <Base title={title} description={description} path={path} jsonLd={jsonLd}>
   <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: 'Werkzeuge' }]} meta="Werkzeuge, ohne Anmeldung und ohne Speicherung" title="Rechner und Hilfen für die Zeit nach der Abnehmspritze">
-    <p>Vier Rechner für die Fragen, die nach der letzten Dosis zuerst kommen: Wann ist der Wirkstoff weg, wie viel Protein brauche ich, ab welcher Zahl auf der Waage reagiere ich, und was kostet die Therapie im Jahr. Die Rechner laufen im Browser, ohne Anmeldung und ohne Speicherung, nur den Ernährungsplan schicken wir per Mail; die Zahlen dahinter stammen aus Fachinformationen und Studien, die Quellen stehen auf jeder Seite.</p>
+    <p>Vier Rechner für die Fragen, die nach der letzten Dosis zuerst kommen: Wann ist der Wirkstoff weg, wie viel Protein brauche ich, ab welcher Zahl auf der Waage reagiere ich, und was kostet die Therapie im Jahr. Die Rechner laufen im Browser, ohne Anmeldung und ohne Speicherung. Nur den Ernährungsplan schicken wir per Mail. Die Zahlen dahinter stammen aus Fachinformationen und Studien; die Quellen stehen auf jeder Seite.</p>
   </SeitenKopf>
 
   <div class="container-wide k-end">

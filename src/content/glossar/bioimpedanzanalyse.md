@@ -24,4 +24,4 @@ Geschätzt wird über Formeln, die für bestimmte Gruppen entwickelt wurden. Die
 
 ## Der Unterschied zur DXA
 
-In Studien wird die Körperzusammensetzung per [DXA](/glossar/dxa/) gemessen, so auch in der STEP-1-Substudie mit dem Befund, dass rund 40 % des Gewichtsverlusts unter Semaglutid fettfreie Masse waren.<sup><a href="#fn-wilding2021dxa">2</a></sup> Eine Körperfettwaage kann eine solche Zahl nicht liefern; sie kann zeigen, ob die Richtung stimmt. Was in der Haltephase außerdem zählt, steht unter [Muskelabbau unter der Abnehmspritze](/wissen/muskelabbau-abnehmspritze/).
+In Studien wird die Körperzusammensetzung per [DXA](/glossar/dxa/) gemessen, so auch in der STEP-1-Substudie, nach der rund 40 % des Gewichtsverlusts unter Semaglutid fettfreie Masse waren.<sup><a href="#fn-wilding2021dxa">2</a></sup> Eine Körperfettwaage kann eine solche Zahl nicht liefern; sie kann zeigen, ob die Richtung stimmt. Was in der Haltephase außerdem zählt, steht unter [Muskelabbau unter der Abnehmspritze](/wissen/muskelabbau-abnehmspritze/).

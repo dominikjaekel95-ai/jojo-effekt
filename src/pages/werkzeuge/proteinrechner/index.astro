@@ -20,11 +20,11 @@ const fnIds = ['leidy2015', 'dgeProtein', 'euClaims', 'bls'] as const;
 const faq = [
   {
     q: 'Wie viel Protein pro Tag nach der Abnehmspritze?',
-    a: '<p>Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag. Bei 80 kg sind das 96 bis 128 g. Das DGE-Minimum von 0,8 g pro kg ist die Untergrenze für die Versorgung gesunder Erwachsener, nicht das Ziel beim Abnehmen oder Halten.</p>',
+    a: '<p>Übersichtsarbeiten empfehlen beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag. Bei 80 kg sind das 96 bis 128 g. Das DGE-Minimum von 0,8 g pro kg ist die Untergrenze für die Versorgung gesunder Erwachsener, nicht das Ziel beim Abnehmen oder Halten.</p>',
   },
   {
     q: 'Wie viel Protein pro Mahlzeit?',
-    a: '<p>Dieselbe Übersichtsarbeit nennt mindestens etwa 25 bis 30 g pro Mahlzeit. Verteilt auf drei oder vier Mahlzeiten wirkt Protein besser als in einer großen Portion; bei kleinem Appetit hilft die Reihenfolge: Protein zuerst, dann Gemüse, dann der Rest.</p>',
+    a: '<p>Die Übersichtsarbeit von Leidy und Kollegen nennt mindestens etwa 25 bis 30 g pro Mahlzeit. Verteilt auf drei oder vier Mahlzeiten wirkt Protein besser als in einer großen Portion; bei kleinem Appetit hilft die Reihenfolge: Protein zuerst, dann Gemüse, dann der Rest.</p>',
   },
   {
     q: 'Wann gilt der Rechner nicht?',
@@ -50,9 +50,9 @@ const lebensmittel = [
   { name: 'Milch', portion: '250 ml', g: 8 },
 ];
 
-const title = 'Proteinrechner nach der Abnehmspritze: Tagesziel und Portionen';
+const title = 'Proteinrechner: Wie viel Protein nach der Abnehmspritze?';
 const description =
-  'Körpergewicht eingeben und das Tagesziel von 1,2 bis 1,6 g Protein pro kg erhalten, verteilt auf drei oder vier Mahlzeiten, mit Beispielen, wie viel das in Lebensmitteln ist.';
+  'Proteinrechner nach der Abnehmspritze: 1,2 bis 1,6 g pro kg Körpergewicht am Tag. Gewicht eingeben und sehen, was das pro Mahlzeit und in Lebensmitteln heißt.';
 const path = '/werkzeuge/proteinrechner/';
 const url = `${site.url}${path}`;
 
@@ -95,7 +95,7 @@ const jsonLd = [
 ---
 <Base title={title} description={description} path={path} jsonLd={jsonLd}>
   <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { href: '/werkzeuge/', label: 'Werkzeuge' }, { label: 'Proteinrechner' }]} meta="Werkzeug, rechnet nur in deinem Browser" title="Proteinrechner: dein Tagesziel nach der Abnehmspritze" size="m" width="narrow" doc="Bei Nierenerkrankungen gehört die Proteinmenge vorher in die ärztliche Sprechstunde.">
-    <p>Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<Fn n={fn('leidy2015')} id="leidy2015" /> Der Rechner macht daraus dein Tagesziel, die Menge pro Mahlzeit und zeigt, wie viel das in Lebensmitteln ist.</p>
+    <p>Übersichtsarbeiten empfehlen beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<Fn n={fn('leidy2015')} id="leidy2015" /> Der Rechner macht daraus dein Tagesziel und die Menge pro Mahlzeit und zeigt, wie viel das in Lebensmitteln ist.</p>
   </SeitenKopf>
 
   <article class="container-narrow k-end">
@@ -155,7 +155,7 @@ const jsonLd = [
               <th scope="row">{l.name}</th>
               <td data-label="Portion">{l.portion}</td>
               <td data-label="Protein" class="pr-g"><span class="pr-gb" aria-hidden="true"><span class="k-bar" style={`width:${Math.round((l.g / maxG) * 100)}%`}></span></span> ca. {l.g} g</td>
-              <td data-label="für 30 g">{(30 / l.g).toLocaleString('de-DE', { maximumFractionDigits: 1 })} Portionen</td>
+              <td data-label="für 30 g">{(() => { const n = (30 / l.g).toLocaleString('de-DE', { maximumFractionDigits: 1 }); return `${n} ${n === '1' ? 'Portion' : 'Portionen'}`; })()}</td>
             </tr>
           ))}
         </tbody>
@@ -165,17 +165,17 @@ const jsonLd = [
     <div class="prose-site mt-12">
       <h2 id="so-gerechnet">So wird gerechnet, und was dahintersteht</h2>
       <ul>
-        <li><strong>Zielkorridor:</strong> 1,2 bis 1,6 g pro kg Körpergewicht und Tag für Gewichtsabnahme und -erhalt.<Fn n={fn('leidy2015')} id="leidy2015" /> Der untere Wert ist das Ziel für die meisten; der obere, wenn du Krafttraining machst oder sehr wenig isst.</li>
+        <li><strong>Zielkorridor:</strong> 1,2 bis 1,6 g pro kg Körpergewicht und Tag beim Abnehmen und beim Halten des Gewichts.<Fn n={fn('leidy2015')} id="leidy2015" /> Der untere Wert ist das Ziel für die meisten; der obere, wenn du Krafttraining machst oder sehr wenig isst.</li>
         <li><strong>Pro Mahlzeit:</strong> Tagesziel geteilt durch drei oder vier. Verteilt wirkt Protein besser als in einer großen Portion; unter 20 g pro Mahlzeit bleibt der Reiz für den Muskel klein.</li>
         <li><strong>Minimum:</strong> Die DGE setzt für gesunde Erwachsene 0,8 g pro kg an, ab 65 Jahren 1,0 g.<Fn n={fn('dgeProtein')} id="dgeProtein" /> Das ist die Untergrenze für die Versorgung, nicht das Ziel beim Abnehmen.</li>
         <li><strong>Warum:</strong> Protein trägt zur Erhaltung von Muskelmasse bei.<Fn n={fn('euClaims')} id="euClaims" /> Beim Abnehmen mit der Spritze geht ein Teil des Gewichts als fettfreie Masse verloren; genug Protein und Krafttraining halten diesen Anteil klein.</li>
       </ul>
-      <p>Mehr zu Quellen, Timing und Tricks bei wenig Appetit unter <a href="/wissen/protein-abnehmspritze/">Protein bei der Abnehmspritze</a>, ein Beispieltag unter <a href="/wissen/ernaehrung-nach-abnehmspritze/">Ernährung nach der Abnehmspritze</a>, und wann Pulver sinnvoll ist unter <a href="/wissen/supplements-nach-abnehmspritze/">Supplements nach der Abnehmspritze</a>.</p>
+      <p>Mehr zu Quellen, Timing und Tricks bei wenig Appetit steht unter <a href="/wissen/protein-abnehmspritze/">Protein bei der Abnehmspritze</a>. Einen Beispieltag zeigt der Artikel <a href="/wissen/ernaehrung-nach-abnehmspritze/">Ernährung nach der Abnehmspritze</a>, und wann Pulver sinnvoll ist, steht unter <a href="/wissen/supplements-nach-abnehmspritze/">Supplements nach der Abnehmspritze</a>.</p>
     </div>
 
     <div class="prose-site mt-10">
       <h2 id="warum">Warum Protein nach der Abnehmspritze die erste Zahl ist</h2>
-      <p>Unter der Spritze bestimmt der Appetit die Portionen, und Protein bleibt oft als Erstes auf der Strecke. Nach der letzten Dosis kommt der Appetit zurück, der Bedarf an Protein bleibt: Es trägt zur Erhaltung von Muskelmasse bei<Fn n={fn('euClaims')} id="euClaims" /> und sättigt stärker als Kohlenhydrate oder Fett. Wer sein Tagesziel kennt und auf die Mahlzeiten verteilt, hat den einfachsten Hebel der Haltephase in der Hand. Ab welcher Zahl auf der Waage du zusätzlich reagierst, legt der <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> fest; wann der Appetit voraussichtlich zurückkommt, der <a href="/werkzeuge/zeitplan-nach-letzter-dosis/">Zeitplan nach der letzten Dosis</a>.</p>
+      <p>Unter der Spritze bestimmt der Appetit die Portionen, und Protein bleibt oft als Erstes auf der Strecke. Nach der letzten Dosis kommt der Appetit zurück, der Bedarf an Protein bleibt: Es trägt zur Erhaltung von Muskelmasse bei<Fn n={fn('euClaims')} id="euClaims" /> und sättigt stärker als Kohlenhydrate oder Fett. Wer sein Tagesziel kennt und auf die Mahlzeiten verteilt, hat den einfachsten Hebel der Haltephase in der Hand. Ab welcher Zahl auf der Waage du zusätzlich reagierst, legt der <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> fest. Wann der Appetit voraussichtlich zurückkommt, zeigt der <a href="/werkzeuge/zeitplan-nach-letzter-dosis/">Zeitplan nach der letzten Dosis</a>.</p>
     </div>
 
     <div class="mt-14"><Faq items={faq} id="protein-faq" title="Häufige Fragen zum Proteinbedarf" /></div>

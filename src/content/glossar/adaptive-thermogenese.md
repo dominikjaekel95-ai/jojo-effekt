@@ -2,7 +2,7 @@
 term: "Adaptive Thermogenese"
 metaTitle: "Adaptive Thermogenese: der Stoffwechsel nach dem Abnehmen"
 description: "Adaptive Thermogenese: Nach Gewichtsverlust sinkt der Energieverbrauch stärker, als der kleinere Körper erklärt. Wie groß der Effekt ist und was dagegen hilft."
-short: "Die Absenkung des Energieverbrauchs nach Gewichtsverlust über das Maß hinaus, das durch den kleineren Körper zu erwarten wäre. In Studien liegt sie in der Größenordnung von einigen hundert Kilokalorien am Tag."
+short: "Die zusätzliche Absenkung des Energieverbrauchs nach Gewichtsverlust, die der kleinere Körper allein nicht erklärt. In Studien liegt sie in der Größenordnung von einigen hundert Kilokalorien am Tag."
 synonyms: ["adaptive Thermogenese", "Adaptive Thermogenesis"]
 sources: ["rosenbaum2010", "fothergill2016", "sumithran2011"]
 related: ["metabolische-adaptation", "set-point-theorie", "neat", "fettfreie-masse"]
@@ -18,8 +18,8 @@ Nach einem Gewichtsverlust von 10 % liegt der Energieverbrauch nach den Messunge
 
 ## Woher er kommt
 
-Ein Teil ist Hormonstellung: Weniger Leptin und Schilddrüsenhormon senken den Verbrauch, gleichzeitig steigt der Hunger.<sup><a href="#fn-sumithran2011">3</a></sup> Ein Teil ist Muskelarbeit, die effizienter wird. Ein Teil ist unbewusst weniger Bewegung im Alltag ([NEAT](/glossar/neat/)).
+Ein Teil ist die Hormonlage: Weniger Leptin und Schilddrüsenhormon senken den Verbrauch, gleichzeitig steigt der Hunger.<sup><a href="#fn-sumithran2011">3</a></sup> Ein Teil ist Muskelarbeit, die effizienter wird. Ein Teil ist unbewusst weniger Bewegung im Alltag ([NEAT](/glossar/neat/)).
 
 ## Was das nach der Abnehmspritze heißt
 
-Wer unter dem Medikament 15 % abgenommen hat, trägt dieselbe Anpassung wie nach jeder Diät, nur dass sie unter dem Medikament kaum spürbar war, weil der Hunger gedämpft war. Nach dem Absetzen kommen beide Seiten zusammen: weniger Verbrauch und mehr Hunger. Kein Lebensmittel und kein Nahrungsergänzungsmittel hebt diesen Effekt auf. Was den Verbrauch messbar stützt, ist der Erhalt der [fettfreien Masse](/glossar/fettfreie-masse/), denn sie bestimmt den Ruheenergieverbrauch wesentlich mit.
+Wer unter dem Medikament 15 % abgenommen hat, macht dieselbe Anpassung durch wie nach jeder Diät, nur dass sie kaum spürbar war, weil das Medikament den Hunger dämpfte. Nach dem Absetzen kommen beide Seiten zusammen: weniger Verbrauch und mehr Hunger. Kein Lebensmittel und kein Nahrungsergänzungsmittel hebt diesen Effekt auf. Was den Verbrauch messbar stützt, ist der Erhalt der [fettfreien Masse](/glossar/fettfreie-masse/), denn sie bestimmt den Ruheenergieverbrauch wesentlich mit.

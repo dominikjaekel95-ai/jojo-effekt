@@ -1,7 +1,7 @@
 ---
 title: "Abnehmpille oder Spritze: Die Unterschiede, und was sie für die Zeit danach bedeuten"
 metaTitle: "Abnehmpille oder Spritze: Unterschiede, Studien, Zeit danach"
-description: "Tablette oder Spritze: Wirkstoffe, Einnahme, Wirksamkeit laut Studien, Halbwertszeit und was nach dem Absetzen bekannt ist. Faktischer Vergleich ohne Empfehlung."
+description: "Wegovy gibt es als Abnehmpille und als Spritze, mit demselben Wirkstoff: 13,6 % und 14,9 % Gewichtsverlust in den Zulassungsstudien. Vergleich ohne Empfehlung."
 category: "Abnehmpille"
 image: /grafiken/wirksamkeit-zulassungsstudien.png
 order: 17
@@ -14,20 +14,20 @@ faq:
   - q: "Wirkt die Abnehmpille genauso gut wie die Spritze?"
     a: "<p>In den Zulassungsstudien lag der Gewichtsverlust in derselben Größenordnung: 13,6 % mit der Semaglutid-Tablette nach 64 Wochen, 14,9 % mit der Semaglutid-Spritze nach 68 Wochen. Eine Studie, die beide Formen direkt vergleicht, gibt es nicht. Die Zahlen stammen aus verschiedenen Teilnehmergruppen und sind deshalb Größenordnungen, keine Rangliste.</p>"
   - q: "Ist die Abnehmpille dasselbe wie Wegovy?"
-    a: "<p>Die in Deutschland erhältliche Abnehmpille ist die Wegovy-Tablette mit Semaglutid, demselben Wirkstoff wie in der Wegovy-Spritze. Rybelsus enthält ebenfalls Semaglutid, ist aber nur für Typ-2-Diabetes zugelassen. Orforglipron, eine andere Tablette, ist in den USA zugelassen und in der EU nicht.</p>"
+    a: "<p>Die in Deutschland erhältliche Abnehmpille ist die Wegovy-Tablette mit Semaglutid, demselben Wirkstoff wie in der Wegovy-Spritze. Rybelsus enthält ebenfalls Semaglutid, ist aber nur für Typ-2-Diabetes zugelassen. Orforglipron, ein anderer Wirkstoff in Tablettenform, ist in den USA zugelassen, in der EU nicht.</p>"
   - q: "Wann kommt die Abnehmspritze als Tablette?"
     a: "<p>Sie ist da: Die Wegovy-Tablette mit Semaglutid ist seit dem 1. September 2026 in deutschen Apotheken erhältlich, verschreibungspflichtig und für Selbstzahler. Rybelsus, ebenfalls Semaglutid als Tablette, gibt es seit 2020 für Typ-2-Diabetes. Ein weiterer Wirkstoff als Tablette, Orforglipron, ist in den USA seit April 2026 zugelassen, in der EU noch nicht (Stand September 2026). Viele Suchergebnisse zu dieser Frage sind älter als der Marktstart.</p>"
   - q: "Ist die Zeit nach dem Absetzen bei Tablette und Spritze gleich?"
     a: "<p>Die Halbwertszeit von Semaglutid ist in beiden Formen gleich, etwa eine Woche. Nach der letzten Dosis läuft die Auswaschphase deshalb gleich ab, ob Tablette oder Spritze. Gemessen wurde die Wiederzunahme bisher nur nach der Spritze; für die Tablette ist ein ähnlicher Verlauf plausibel, aber nicht belegt.</p>"
   - q: "Zahlt die Krankenkasse die Abnehmpille?"
-    a: "<p>Zur Gewichtsregulierung nicht: Die gesetzlichen Kassen sind bei Arzneimitteln zur Regulierung des Körpergewichts ausgeschlossen, das gilt für Tablette und Spritze. Bei Typ-2-Diabetes sind Rybelsus, Ozempic und Mounjaro in der zugelassenen Indikation Kassenleistung. Private Versicherungen entscheiden nach Tarif.</p>"
+    a: "<p>Zur Gewichtsregulierung nicht: Arzneimittel zur Regulierung des Körpergewichts sind als Kassenleistung ausgeschlossen, das gilt für Tablette und Spritze. Bei Typ-2-Diabetes sind Rybelsus, Ozempic und Mounjaro in der zugelassenen Indikation Kassenleistung. Private Versicherungen entscheiden nach Tarif.</p>"
   - q: "Welche Tablette wirkt wie die Abnehmspritze?"
     a: "<p>Dieselbe, nur geschluckt: Die Wegovy-Tablette enthält Semaglutid, den Wirkstoff der Wegovy-Spritze; Rybelsus ist Semaglutid als Tablette für Typ-2-Diabetes. In der Zulassungsstudie OASIS 4 verloren Teilnehmende unter der Tablette in 64 Wochen im Mittel 13,6 %, unter Placebo 2,2 %; die Spritze kam in STEP 1 auf 14,9 % gegenüber 2,4 %, in einer anderen Studie mit anderen Teilnehmenden, also kein direkter Vergleich. Orforglipron ist ein weiterer Wirkstoff in Tablettenform, in der EU noch nicht zugelassen. Welche Form für dich in Frage kommt, ist eine ärztliche Entscheidung.</p>"
 ---
 
 Seit September 2026 gibt es Semaglutid in Deutschland in zwei Formen: als wöchentliche Spritze und als tägliche Tablette.<sup><a href="#fn-tabletteApotheken2026">1</a></sup> Damit stellt sich eine neue Frage: Tablette oder Spritze? Dieser Artikel vergleicht beide Formen anhand von Fachinformation und Studien: Wirkstoffe, Einnahme, Wirksamkeit, Halbwertszeit und die Datenlage für die Zeit danach. Er bewertet nicht und empfiehlt nichts; welche Form für dich passt, ist eine ärztliche Entscheidung. Was nach dem Absetzen der Tablette bekannt ist, steht im Artikel [Abnehmpille absetzen](/wissen/abnehmpille-absetzen/); die Absetz-Daten für die Spritze, Woche für Woche, stehen unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
-> **Kurz gesagt:** Wegovy-Tablette und Wegovy-Spritze enthalten denselben Wirkstoff. In den Zulassungsstudien lag der Gewichtsverlust in derselben Größenordnung: 13,6 % mit der Tablette nach 64 Wochen,<sup><a href="#fn-wharton2025oasis4">2</a></sup> 14,9 % mit der Spritze nach 68 Wochen,<sup><a href="#fn-wilding2021step1">3</a></sup> ohne direkten Vergleich. Absetz-Daten gibt es nur für die Spritzen. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
+> **Kurz gesagt:** Wegovy-Tablette und Wegovy-Spritze enthalten denselben Wirkstoff. In den Zulassungsstudien lag der Gewichtsverlust in derselben Größenordnung: 13,6 % mit der Tablette nach 64 Wochen,<sup><a href="#fn-wharton2025oasis4">2</a></sup> 14,9 % mit der Spritze nach 68 Wochen.<sup><a href="#fn-wilding2021step1">3</a></sup> Einen direkten Vergleich gibt es nicht. Absetz-Daten gibt es nur für die Spritzen. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
 
 ## Welche Präparate es gibt
 
@@ -62,7 +62,7 @@ Direkte Vergleichsstudien zwischen Tablette und Spritze gibt es nicht. Was es gi
 
 <div data-interaktiv="zulassung" data-filter="ja"></div>
 
-Lesart: Bei gleichem Wirkstoff liegen Tablette und Spritze nahe beieinander. Die größeren Unterschiede laufen nicht zwischen Tablette und Spritze, sondern zwischen den Wirkstoffen. Alle Studien mit Kernzahl und Link stehen im [Studien-Tracker](/wissen/studien/).
+Lesart: Bei gleichem Wirkstoff liegen Tablette und Spritze nahe beieinander. Die größeren Unterschiede liegen nicht zwischen Tablette und Spritze, sondern zwischen den Wirkstoffen. Alle Studien mit Kernzahl und Link stehen im [Studien-Tracker](/wissen/studien/).
 
 ## Halbwertszeit: wie lange die Wirkung nach der letzten Dosis bleibt
 
@@ -90,11 +90,11 @@ Stand September 2026: Die Wegovy-Tablette kostet Selbstzahler etwa 175 bis 280 �
 
 ## Wann die Wahl eine ärztliche ist
 
-- **Bei Typ-2-Diabetes:** Nur Präparate mit dieser Zulassung kommen infrage, und die gesamte Blutzuckertherapie gehört zusammen betrachtet.
+- **Bei Typ-2-Diabetes:** Nur Präparate mit dieser Zulassung kommen infrage, und die gesamte Blutzuckertherapie muss zusammen betrachtet werden.
 - **Bei Vorerkrankungen** von Magen, Darm, Bauchspeicheldrüse oder Schilddrüse: Die Fachinformationen nennen Gegenanzeigen, die nur die Ärztin oder der Arzt prüfen kann.
 - **Bei Kinderwunsch:** Semaglutid soll laut Fachinformation mindestens zwei Monate vor einer geplanten Schwangerschaft abgesetzt werden, in beiden Formen.<sup><a href="#fn-fachinfoWegovy">4</a></sup>
 - **Beim Wechsel** zwischen Tablette und Spritze: Wie er abläuft, regelt die Fachinformation; selbst umstellen solltest du nicht.
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Bewertung und keine Werbung für ein Arzneimittel. Wegovy, Ozempic, Rybelsus und Saxenda sind Marken von Novo Nordisk, Mounjaro und Foundayo Marken von Eli Lilly. Nach der Spritze vergleicht Präparate, empfiehlt aber keines. Unser 12-Wochen-Programm setzt nach der letzten Dosis an, mit Training, Protein und einem Plan für die Waage, und ist kein Medikament. Wer vom Start erfahren will, trägt sich auf die [Warteliste](/#warteliste) ein.*
+*Dieser Artikel ist eine allgemeine Information, keine Bewertung und keine Werbung für ein Arzneimittel. Wegovy, Ozempic, Rybelsus und Saxenda sind Marken von Novo Nordisk, Mounjaro und Foundayo Marken von Eli Lilly. Nach der Spritze vergleicht Präparate, empfiehlt aber keines. Unser 12-Wochen-Programm setzt nach der letzten Dosis an, mit Training, Protein und einem Plan, um das eigene Gewicht gezielt im Blick zu behalten. Es ist kein Medikament. Wer vom Start erfahren will, trägt sich auf die [Warteliste](/#warteliste) ein.*

@@ -2,7 +2,7 @@
 term: "DXA"
 metaTitle: "DXA: die Messung der Körperzusammensetzung in Studien"
 description: "DXA misst Fett, fettfreie Masse und Knochen getrennt und ist der Standard in Studien zur Körperzusammensetzung. Wie die Messung funktioniert und was sie kann."
-short: "Dual-Röntgen-Absorptiometrie: ein Ganzkörperscan mit sehr geringer Strahlendosis, der Fettmasse, fettfreie Masse und Knochenmineralgehalt getrennt misst. Der Standard in Studien zur Körperzusammensetzung."
+short: "Dual-Röntgen-Absorptiometrie: ein Ganzkörperscan mit sehr geringer Strahlendosis, der Fettmasse, fettfreie Masse und Knochenmineralgehalt getrennt misst. Das Verfahren ist der Standard in Studien zur Körperzusammensetzung."
 synonyms: ["DEXA", "DXA-Scan", "DEXA-Scan", "Dual-Röntgen-Absorptiometrie"]
 sources: ["wilding2021dxa", "kyle2004", "sardeli2018"]
 related: ["bioimpedanzanalyse", "fettfreie-masse", "sarkopene-adipositas"]
@@ -14,7 +14,7 @@ Die Waage misst Gewicht. DXA misst, woraus es besteht. Ein Scanner fährt in wen
 
 ## Warum die Methode in Studien Standard ist
 
-Sie ist genau, gut reproduzierbar und liefert Werte für einzelne Körperregionen, etwa die Muskelmasse an Armen und Beinen. Die STEP-1-Substudie, aus der die viel zitierte Zahl stammt, dass rund 40 % des Gewichtsverlusts unter Semaglutid auf fettfreie Masse entfielen, wurde mit DXA gemessen.<sup><a href="#fn-wilding2021dxa">1</a></sup> Auch die Diagnose der [sarkopenen Adipositas](/glossar/sarkopene-adipositas/) stützt sich auf DXA oder vergleichbare Verfahren.
+Sie ist genau, gut reproduzierbar und liefert Werte für einzelne Körperregionen, etwa die Muskelmasse an Armen und Beinen. In der STEP-1-Substudie, aus der die viel zitierte Aussage stammt, dass rund 40 % des Gewichtsverlusts unter Semaglutid auf fettfreie Masse entfielen, wurde mit DXA gemessen.<sup><a href="#fn-wilding2021dxa">1</a></sup> Auch die Diagnose der [sarkopenen Adipositas](/glossar/sarkopene-adipositas/) stützt sich auf DXA oder vergleichbare Verfahren.
 
 ## Was sie nicht kann
 

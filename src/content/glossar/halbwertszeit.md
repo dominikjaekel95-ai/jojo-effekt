@@ -24,6 +24,6 @@ Die dritte Spalte folgt einer Faustregel der Pharmakologie: Nach etwa fünf Halb
 
 ## Warum das fürs Absetzen zählt
 
-Wer Semaglutid absetzt, hat noch Wochen lang Wirkstoff im Blut. Der Appetit kehrt deshalb nicht schlagartig zurück, sondern in Stufen. Das passt zu den Absetz-Studien: Die Gewichtszunahme wird etwa ab Woche 8 messbar, also nach dem Ende der Auswaschphase.<sup><a href="#fn-wu2025">4</a></sup> Bei Liraglutid mit seiner kurzen Halbwertszeit fehlt dieser Puffer; der Appetit ist innerhalb weniger Tage zurück.
+Wer Semaglutid absetzt, hat noch wochenlang Wirkstoff im Blut. Der Appetit kehrt deshalb nicht schlagartig zurück, sondern in Stufen. Das passt zu den Absetz-Studien: Die Gewichtszunahme wird etwa ab Woche 8 messbar, also nach dem Ende der Auswaschphase.<sup><a href="#fn-wu2025">4</a></sup> Bei Liraglutid mit seiner kurzen Halbwertszeit fehlt dieser Puffer; der Appetit ist innerhalb weniger Tage zurück.
 
 Die Halbwertszeit sagt nichts darüber, ob oder wie jemand absetzen sollte. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt. Was in der Zeit danach passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).

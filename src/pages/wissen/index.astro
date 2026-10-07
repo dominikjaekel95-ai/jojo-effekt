@@ -22,9 +22,9 @@ if (ohneThema.length > 0) throw new Error(`Artikel ohne Thema in src/data/themen
 // Präparate-Artikel als Linkzeile mit Anker; die Startseite verlinkt hierher, weil dort keine Markennamen stehen
 const praeparateThema = themen.find((t) => t.slug === 'praeparate');
 const praeparate = praeparateThema ? artikel.filter((a) => gehoertZu(praeparateThema, a.id, a.data.category)) : [];
-const title = 'Wissen: Abnehmspritze absetzen, Jojo-Effekt, Muskeln erhalten';
+const title = 'Wissen zur Abnehmspritze: Absetzen, Jojo-Effekt, Muskeln';
 const description =
-  'Was nach der Abnehmspritze passiert und was nachweislich hilft: Jojo-Effekt, Absetzen, Muskelabbau, Protein, Kreatin und ein 12-Wochen-Plan. Jede Zahl mit Link zur Originalstudie.';
+  'Was nach der Abnehmspritze passiert und was hilft: Absetzen, Jojo-Effekt, Muskelabbau, Protein, Kreatin, Gewicht halten. Jede Zahl mit Link zur Originalstudie.';
 const jsonLd = [
   {
     '@type': 'CollectionPage',

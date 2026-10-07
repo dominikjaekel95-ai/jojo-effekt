@@ -47,7 +47,7 @@ export function protein(a: Attr, ctx: Ctx): string {
       .join('') +
     `</div>`;
   const lueckeHtml = luecke
-    ? regler(ctx, 'ist', 'So viel isst du an einem normalen Tag', { min: 20, max: 200, step: 5, wert: ist, einheit: 'g' }) +
+    ? regler(ctx, 'ist', 'So viel Protein isst du an einem normalen Tag', { min: 20, max: 200, step: 5, wert: ist, einheit: 'g' }) +
       `<p class="p-ltext" data-p-ltext>${ist >= lo ? 'Du liegst im Zielbereich. Ein Pulver brauchst du dafür nicht.' : `Bis zum unteren Rand fehlen ${lo - ist} g. Erst Mahlzeiten prüfen, dann einen Shake erwägen.`}</p>`
     : '';
   const legende =
@@ -69,7 +69,7 @@ export function protein(a: Attr, ctx: Ctx): string {
       lueckeHtml +
       mahlzeiten,
     fuss:
-      `Empfehlung aus Übersichtsarbeiten für Abnahme und Erhalt: 1,2 bis 1,6 g pro kg Körpergewicht und Tag.${qL}` +
+      `Empfehlung aus Übersichtsarbeiten für das Abnehmen und das Halten des Gewichts: 1,2 bis 1,6 g pro kg Körpergewicht und Tag.${qL}` +
       (dge ? ` Der DGE-Wert von 0,8 g pro kg gilt für Erwachsene, die ihr Gewicht halten, ab 65 Jahren 1,0 g.${fn(ctx, 'dgeProtein')}` : '') +
       ' Bei Nierenerkrankungen legt die Ärztin oder der Arzt die Menge fest. Den genauen Wert rechnet der <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>.',
   });

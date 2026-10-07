@@ -19,7 +19,7 @@ Die meisten Aussagen über Ballaststoffe und Gewicht sind in der EU verboten, we
 
 ## Was die Angabe nicht sagt
 
-Sie verspricht keine Sättigung, keine Appetitzügelung und keine Wirkung ohne Kalorienreduktion. Sie sagt: ein Beitrag, unter Bedingungen. Ballaststoffe insgesamt sind für die meisten Erwachsenen in Deutschland eher zu wenig als zu viel; die DGE empfiehlt mindestens 30 g am Tag.<sup><a href="#fn-dgeBallaststoffe">2</a></sup> Eine Expertengruppe hält Ballaststoffe unter Adipositas-Medikamenten für einen der Punkte, auf die geachtet werden sollte, weil kleine Portionen wenig davon liefern.<sup><a href="#fn-almandoz2024">3</a></sup>
+Sie verspricht keine Sättigung, keine Appetitzügelung und keine Wirkung ohne Kalorienreduktion. Sie sagt: ein Beitrag, unter Bedingungen. Von Ballaststoffen insgesamt essen die meisten Erwachsenen in Deutschland eher zu wenig als zu viel; die DGE empfiehlt mindestens 30 g am Tag.<sup><a href="#fn-dgeBallaststoffe">2</a></sup> Eine Expertengruppe hält Ballaststoffe unter Adipositas-Medikamenten für einen der Punkte, auf die geachtet werden sollte, weil kleine Portionen wenig davon liefern.<sup><a href="#fn-almandoz2024">3</a></sup>
 
 ## Was das praktisch heißt
 

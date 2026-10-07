@@ -47,7 +47,7 @@ export function bedarf(a: Attr, ctx: Ctx): string {
       `<div class="be-zeile"><span class="be-l">Tag</span><span class="be-spur"><span class="be-ein"><span class="be-bar" data-b-bar style="transform:${strecke(0, tag)}"></span></span></span></div>` +
       `<div class="be-zeile"><span class="be-l">eher</span><span class="be-spur"><span class="be-ein be-ein2"><span class="be-bar be-eher" data-b-eher style="transform:${strecke(0, tag - 400)}"></span><span class="be-band" data-b-band style="transform:${strecke(tag - 400, tag - 300)}"></span></span></span></div>` +
       `<div class="be-ticks">${ticks}</div></div>` +
-      `<p class="be-satz">Nach mindestens 10 % Gewichtsverlust liegt der Verbrauch in Messungen etwa 300 bis 400 kcal darunter${fn(ctx, 'rosenbaum2010')}, hier also eher bei <strong>${zahl(fmt(tag - 400), '', 'data-b-lo')} bis ${zahl(fmt(tag - 300), '', 'data-b-hi')} kcal</strong>. Ein Startwert: Was die Waage in vier Wochen zeigt, entscheidet.</p>`,
+      `<p class="be-satz">Nach mindestens 10 % Gewichtsverlust liegt der Verbrauch in Messungen etwa 300 bis 400 kcal unter dem Wert der Formel${fn(ctx, 'rosenbaum2010')}, hier also eher bei <strong>${zahl(fmt(tag - 400), '', 'data-b-lo')} bis ${zahl(fmt(tag - 300), '', 'data-b-hi')} kcal</strong>. Ein Startwert: Was die Waage in vier Wochen zeigt, entscheidet.</p>`,
     fuss: 'Eigene Rechnung mit der Formel aus dem Artikel; Faktor 1,4 bei überwiegend sitzender Tätigkeit, 1,6 mit regelmäßiger Bewegung. Keine Kalorienvorgabe und kein Diätplan. Das Werkzeug rechnet nur in deinem Browser und speichert nichts.',
   });
 }

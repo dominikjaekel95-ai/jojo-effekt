@@ -2,7 +2,7 @@
 term: "Auswaschphase"
 metaTitle: "Auswaschphase: wann die Abnehmspritze wirklich weg ist"
 description: "Die Auswaschphase ist die Zeit, bis der Wirkstoff nach der letzten Dosis ausgeschieden ist: bei Semaglutid etwa fünf bis sieben Wochen. Warum diese Wochen trügen."
-short: "Die Zeit nach der letzten Dosis, bis der Wirkstoff praktisch vollständig ausgeschieden ist; als Faustregel etwa fünf Halbwertszeiten. Bei Semaglutid etwa fünf bis sieben Wochen, bei Tirzepatid etwa vier Wochen, bei Liraglutid wenige Tage."
+short: "Die Zeit nach der letzten Dosis, bis der Wirkstoff praktisch vollständig ausgeschieden ist. Als Faustregel dauert sie etwa fünf Halbwertszeiten: bei Semaglutid etwa fünf bis sieben Wochen, bei Tirzepatid etwa vier Wochen, bei Liraglutid wenige Tage."
 synonyms: ["Washout", "Auswaschzeit", "Washout-Phase"]
 sources: ["fachinfoWegovy", "fachinfoMounjaro", "fachinfoSaxenda", "wu2025", "wilding2022ext"]
 related: ["halbwertszeit", "absetzkurve", "haltephase"]
@@ -22,8 +22,8 @@ Als Faustregel gilt: Nach etwa fünf [Halbwertszeiten](/glossar/halbwertszeit/) 
 
 ## Warum diese Wochen trügen
 
-Während der Auswaschphase ist der Appetit noch gedämpft und das Gewicht stabil. Viele schließen daraus, dass das Absetzen gut läuft. Die Studien zeigen das Gegenteil erst danach: Die Gewichtszunahme wird etwa ab Woche 8 messbar und ist zwischen Woche 8 und 20 am steilsten.<sup><a href="#fn-wu2025">4</a></sup> Ein Jahr nach dem Absetzen von Semaglutid waren im Mittel zwei Drittel des verlorenen Gewichts wieder da.<sup><a href="#fn-wilding2022ext">5</a></sup>
+Während der Auswaschphase ist der Appetit noch gedämpft und das Gewicht stabil. Viele schließen daraus, dass das Absetzen gut läuft. Das Gegenteil zeigt sich in den Studien erst danach: Die Gewichtszunahme wird etwa ab Woche 8 messbar und ist zwischen Woche 8 und 20 am steilsten.<sup><a href="#fn-wu2025">4</a></sup> Ein Jahr nach dem Absetzen von Semaglutid waren im Mittel zwei Drittel des verlorenen Gewichts wieder da.<sup><a href="#fn-wilding2022ext">5</a></sup>
 
 ## Wofür die Phase gut ist
 
-Sie ist das Zeitfenster, in dem sich Gewohnheiten aufbauen lassen, bevor der volle Hunger zurück ist: drei proteinreiche Mahlzeiten, zwei Krafteinheiten pro Woche, ein Wiegetag. Wer damit erst anfängt, wenn der Appetit wieder da ist, kämpft gegen die [Absetzkurve](/glossar/absetzkurve/) statt vor ihr. Die Auswaschphase ist keine Ausschleichphase; über Dosis und Zeitpunkt entscheidet die Ärztin oder der Arzt. Mehr unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Sie ist das Zeitfenster, in dem sich Gewohnheiten aufbauen lassen, bevor der volle Hunger zurück ist: drei proteinreiche Mahlzeiten, zwei Krafteinheiten pro Woche, ein Wiegetag. Wer damit erst anfängt, wenn der Appetit wieder da ist, kämpft gegen die [Absetzkurve](/glossar/absetzkurve/), statt ihr zuvorzukommen. Die Auswaschphase ist keine Ausschleichphase; über Dosis und Zeitpunkt entscheidet die Ärztin oder der Arzt. Mehr unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).

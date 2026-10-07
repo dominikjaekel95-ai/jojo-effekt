@@ -32,8 +32,8 @@ const maxMonat = Math.max(...rows.map((r) => r.monatEur));
 const minJahr = Math.min(...rows.map((r) => r.jahrEur));
 const maxJahr = Math.max(...rows.map((r) => r.jahrEur));
 
-const title = `Abnehmspritze: Kosten pro Monat und Jahr, Stand ${monatJahr}`;
-const description = `Was Abnehmspritzen und die Abnehmtablette Selbstzahler kosten: ca. ${eur(minMonat)} bis ${eur(maxMonat)} € im Monat, rechnerisch ${eur(minJahr)} bis ${eur(maxJahr)} € im Jahr. Mit Kassenregeln, Methodik und Quelle, monatlich aktualisiert.`;
+const title = `Abnehmspritze Kosten ${jahr}: Preise pro Monat und Jahr, Rechner`;
+const description = `Was kostet die Abnehmspritze für Selbstzahler? Je nach Präparat ca. ${eur(minMonat)} bis ${eur(maxMonat)} € im Monat, ${eur(minJahr)} bis ${eur(maxJahr)} € im Jahr. Stand ${monatJahr}, mit Kassenregeln.`;
 const path = '/abnehmspritze-kosten/';
 const url = `${site.url}${path}`;
 const published = '2026-10-01';
@@ -41,7 +41,7 @@ const published = '2026-10-01';
 const faq = [
   {
     q: 'Zahlt die Krankenkasse die Abnehmspritze?',
-    a: `<p>${kassen.regeln[0]?.regel ?? ''}</p><p>${kassen.regeln[1]?.regel ?? ''}</p>`,
+    a: kassen.regeln.slice(0, 2).map((k) => `<p>${k.gruppe}: ${k.regel}</p>`).join(''),
   },
   {
     q: 'Warum stehen hier nur Größenordnungen?',

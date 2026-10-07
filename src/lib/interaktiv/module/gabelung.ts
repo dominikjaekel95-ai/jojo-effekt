@@ -94,7 +94,7 @@ export function gabelung(a: Attr, ctx: Ctx): string {
   return rahmen({
     ctx,
     name: 'gabelung',
-    titel: 'Weiter behandeln oder absetzen: wie das Gewicht auseinandergeht',
+    titel: 'Weiter behandeln oder absetzen: wie die Gewichtskurven auseinandergehen',
     unter: 'Gewichtsänderung ab dem Wechsel, in Prozent',
     attrs: { 'data-studie': start.id },
     inhalt: umschalter + stats + `<div class="ia-buehne">${svg(false, studien, start)}${svg(true, studien, start)}</div>` + legende,

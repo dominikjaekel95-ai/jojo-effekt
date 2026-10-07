@@ -2,7 +2,7 @@
 term: "Glykogen"
 metaTitle: "Glykogen: warum das Gewicht in Tagen um Kilos schwankt"
 description: "Glykogen ist der Kohlenhydratspeicher in Muskeln und Leber und bindet Wasser. Deshalb springt die Waage nach Diät oder Training um ein bis zwei Kilo."
-short: "Die Speicherform von Kohlenhydraten in Muskeln und Leber. Jedes Gramm Glykogen bindet etwa drei Gramm Wasser; deshalb schwankt das Körpergewicht bei wenig oder viel Kohlenhydraten innerhalb von Tagen um ein bis zwei Kilogramm, ohne dass sich Fett ändert."
+short: "Die Speicherform von Kohlenhydraten in Muskeln und Leber. Jedes Gramm Glykogen bindet etwa drei Gramm Wasser; deshalb schwankt das Körpergewicht bei wenig oder viel Kohlenhydraten innerhalb von Tagen um ein bis zwei Kilogramm, ohne dass sich das Fett ändert."
 synonyms: ["Glykogenspeicher", "Kohlenhydratspeicher", "Glycogen"]
 sources: ["fernandezelias2015", "kreider2017", "wilding2021dxa"]
 related: ["fettfreie-masse", "bioimpedanzanalyse", "kreatin-monohydrat", "dxa"]
@@ -18,7 +18,7 @@ Pro Gramm gespeichertem Glykogen bindet der Muskel etwa drei Gramm Wasser.<sup><
 
 ## Warum das nach der Abnehmspritze verwirrt
 
-Unter dem Medikament sind die Portionen klein, die Speicher oft halb leer. Nach dem Absetzen kommt der Appetit zurück, die Speicher füllen sich, und die Waage macht in der ersten Woche einen Sprung, der wie der Anfang des Jojo-Effekts aussieht. Ein Teil davon ist Glykogen und Wasser, kein Fett. Umgekehrt zählt in der STEP-1-Substudie ein Teil des Verlusts an [fettfreier Masse](/glossar/fettfreie-masse/) zu diesem Wasser, weil Messverfahren wie [DXA](/glossar/dxa/) es nicht vom Muskel trennen.<sup><a href="#fn-wilding2021dxa">3</a></sup> Auch Kreatin bindet Wasser in den Muskeln, üblich sind ein bis zwei Kilogramm in den ersten Wochen.<sup><a href="#fn-kreider2017">2</a></sup>
+Unter dem Medikament sind die Portionen klein, die Speicher oft halb leer. Nach dem Absetzen kommt der Appetit zurück, die Speicher füllen sich, und die Waage macht in der ersten Woche einen Sprung, der wie der Anfang des Jojo-Effekts aussieht. Ein Teil davon ist Glykogen und Wasser, kein Fett. Umgekehrt entfällt in der STEP-1-Substudie ein Teil des Verlusts an [fettfreier Masse](/glossar/fettfreie-masse/) auf dieses Wasser, weil Messverfahren wie [DXA](/glossar/dxa/) es nicht vom Muskel trennen.<sup><a href="#fn-wilding2021dxa">3</a></sup> Auch Kreatin bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur; das zeigt die Waage, ist aber kein Fett.<sup><a href="#fn-kreider2017">2</a></sup>
 
 ## Was du daraus machst
 

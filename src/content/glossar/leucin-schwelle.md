@@ -2,7 +2,7 @@
 term: "Leucin-Schwelle"
 metaTitle: "Leucin-Schwelle: wie viel Protein pro Mahlzeit nötig ist"
 description: "Die Leucin-Schwelle ist die Proteinmenge pro Mahlzeit, ab der der Muskelaufbau anspringt. Warum sie mit dem Alter steigt und was das bei kleinem Appetit heißt."
-short: "Die Menge der Aminosäure Leucin pro Mahlzeit, ab der die Muskelproteinsynthese messbar anspringt. Sie steigt mit dem Alter, weshalb Ältere pro Mahlzeit mehr Protein brauchen."
+short: "Die Menge der Aminosäure Leucin pro Mahlzeit, ab der die Muskelproteinsynthese messbar anspringt. Die Schwelle steigt mit dem Alter, weshalb Ältere pro Mahlzeit mehr Protein brauchen."
 synonyms: ["Leucinschwelle", "Leucin", "Leucine Threshold"]
 sources: ["moore2015", "mamerow2014", "leidy2015"]
 related: ["muskelproteinsynthese", "proteinverteilung", "fettfreie-masse"]
@@ -22,4 +22,4 @@ In Protein umgerechnet: Bei jüngeren Männern war die Synthese ab etwa 0,24 g P
 
 ## Was das bei kleinem Appetit bedeutet
 
-Unter der Abnehmspritze sind Portionen klein. Drei kleine Mahlzeiten mit je 10 g Protein liegen dreimal unter der Schwelle, obwohl die Tagessumme nicht schlecht aussieht. Leucinreich sind Molkenprotein, Milchprodukte, Eier, Fleisch, Fisch und Soja; ein Shake oder Stick mit 20 g Protein erreicht die Größenordnung mit einer Portion. Was sonst noch zählt, steht unter [Protein nach der Abnehmspritze](/wissen/protein-abnehmspritze/).
+Unter der Abnehmspritze sind die Portionen klein. Drei kleine Mahlzeiten mit je 10 g Protein liegen alle drei unter der Schwelle. Leucinreich sind Molkenprotein, Milchprodukte, Eier, Fleisch, Fisch und Soja; ein Shake mit 20 g Protein erreicht die Größenordnung mit einer Portion. Was sonst noch zählt, steht unter [Protein nach der Abnehmspritze](/wissen/protein-abnehmspritze/).

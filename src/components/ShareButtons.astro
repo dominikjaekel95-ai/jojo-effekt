@@ -8,7 +8,7 @@ import { site } from '../data/site';
 interface Props { position: string; class?: string }
 const { position, class: cls = '' } = Astro.props;
 const url = `${site.url}/?utm_source=empfehlung&utm_medium=teilen&utm_campaign=${position}`;
-const text = `Ich stehe auf der Warteliste für ein 12-Wochen-Programm für die Zeit nach der Abnehmspritze: Krafttraining, genug Protein und ein Plan für die Waage, mit Studien statt Versprechen. Falls du auch gerade absetzt: ${url}`;
+const text = `Ich stehe auf der Warteliste für ein 12-Wochen-Programm für die Zeit nach der Abnehmspritze: Krafttraining, genug Protein und ein klarer Plan, um das Gewicht im Blick zu behalten. Mit Studien statt Versprechen. Falls du auch gerade absetzt: ${url}`;
 const wa = `https://wa.me/?text=${encodeURIComponent(text)}`;
 const mail = `mailto:?subject=${encodeURIComponent('Für die Zeit nach der Abnehmspritze')}&body=${encodeURIComponent(text)}`;
 const li = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;

@@ -1,6 +1,6 @@
 ---
 term: "Muskelproteinsynthese"
-metaTitle: "Muskelproteinsynthese: wie Muskeln aufgebaut und erhalten werden"
+metaTitle: "Muskelproteinsynthese: wie Muskeln wachsen und erhalten bleiben"
 description: "Muskelproteinsynthese: der Aufbau von Muskelprotein aus Aminosäuren. Was sie anstößt, wie viel Protein pro Mahlzeit nötig ist und warum das nach der Spritze zählt."
 short: "Der Prozess, mit dem Muskelzellen aus Aminosäuren neues Protein bilden. Er wird durch Proteinaufnahme und Krafttraining angestoßen und entscheidet zusammen mit dem Abbau, ob Muskelmasse bleibt."
 synonyms: ["Proteinsynthese", "MPS", "Muskelaufbau auf Zellebene"]
@@ -18,7 +18,7 @@ Zwei Reize: Protein in der Mahlzeit und Belastung durch Training. Protein liefer
 
 ## Wie viel Protein pro Mahlzeit
 
-Bei jüngeren Männern erreichte die Synthese ihr Maximum bei etwa 0,24 g Protein pro kg Körpergewicht und Mahlzeit, bei älteren erst bei etwa 0,40 g/kg.<sup><a href="#fn-moore2015">1</a></sup> Für 80 kg sind das rund 20 g beziehungsweise rund 32 g pro Mahlzeit. Verteilt über den Tag zählt das mehr als die Summe: Gleichmäßige [Proteinverteilung](/glossar/proteinverteilung/) auf drei Mahlzeiten erhöhte die Synthese über 24 Stunden um rund 25 % gegenüber einer abendlastigen Verteilung.<sup><a href="#fn-mamerow2014">2</a></sup> Für den Tag empfehlen Übersichtsarbeiten während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g pro kg.<sup><a href="#fn-leidy2015">3</a></sup>
+Bei jüngeren Männern erreichte die Synthese ihr Maximum bei etwa 0,24 g Protein pro kg Körpergewicht und Mahlzeit, bei älteren erst bei etwa 0,40 g/kg.<sup><a href="#fn-moore2015">1</a></sup> Für 80 kg sind das rund 20 g beziehungsweise rund 32 g pro Mahlzeit. Neben der Summe zählt, wie sich das Protein über den Tag verteilt: Gleichmäßige [Proteinverteilung](/glossar/proteinverteilung/) auf drei Mahlzeiten erhöhte die Synthese über 24 Stunden um rund 25 % gegenüber einer abendlastigen Verteilung.<sup><a href="#fn-mamerow2014">2</a></sup> Für den Tag empfehlen Übersichtsarbeiten beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g pro kg.<sup><a href="#fn-leidy2015">3</a></sup>
 
 ## Warum das unter und nach der Abnehmspritze zählt
 

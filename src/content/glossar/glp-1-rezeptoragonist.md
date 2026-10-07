@@ -2,7 +2,7 @@
 term: "GLP-1-Rezeptoragonist"
 metaTitle: "GLP-1-Rezeptoragonist: was hinter der Abnehmspritze steckt"
 description: "GLP-1-Rezeptoragonisten ahmen das Darmhormon GLP-1 nach, wirken aber Tage statt Minuten. Welche Wirkstoffe dazugehören und was das fürs Absetzen heißt."
-short: "Wirkstoffe, die den Rezeptor des Darmhormons GLP-1 aktivieren und dessen Wirkung nachahmen: weniger Hunger, langsamere Magenentleerung, mehr Insulin bei Bedarf. Das natürliche Hormon wirkt Minuten, die Wirkstoffe Tage bis über eine Woche."
+short: "Wirkstoffe, die den Rezeptor des Darmhormons GLP-1 aktivieren und dessen Wirkung nachahmen: weniger Hunger, langsamere Magenentleerung, mehr Insulin bei Bedarf. Das natürliche Hormon wirkt nur Minuten, die Wirkstoffe Tage bis über eine Woche."
 synonyms: ["GLP-1-Agonist", "GLP-1-Analogon", "Inkretinmimetikum", "GLP-1-Rezeptoragonisten", "GLP-1"]
 sources: ["holst2007", "fachinfoWegovy", "fachinfoMounjaro", "fachinfoSaxenda", "wilding2022ext"]
 related: ["halbwertszeit", "auswaschphase", "ghrelin", "hedonischer-hunger"]

@@ -4,11 +4,18 @@ Die Google Search Console hat keine API für die URL-Prüfung. Die Anmeldung ist
 
 **Regel:** Wer eine Seite neu anlegt oder inhaltlich wesentlich ändert (Text, Titel, Abschnitte, Struktur), hängt unten eine Zeile mit Status `offen` an. Wer die URL angemeldet hat, setzt `angemeldet YYYY-MM-DD`. Kleinigkeiten (Tippfehler, ein Link, ein Satz) brauchen keine Zeile; der nächste Crawl nimmt sie mit. Glossar-Einträge werden nicht einzeln angemeldet, Status „Sitemap genügt“. Ausnahme: eigene Begriffe (`own: true`).
 
-Die Search Console erlaubt etwa 10 bis 12 URL-Prüfungen pro Tag. Reihenfolge: neue Artikel zuerst, dann geänderte Seiten, dann der Wissens-Hub.
+Die Search Console erlaubt etwa 10 bis 12 URL-Prüfungen pro Tag. Reihenfolge der Routine: 1. neue URLs (Grund „neuer Artikel“ oder „neu in Sitemap“), 2. Startseite `/` und Hauptartikel `/wissen/abnehmspritze-absetzen/`, 3. alle übrigen offenen Zeilen in Tabellenreihenfolge (älteste zuerst).
 
 Sitemap: `https://nachderspritze.de/sitemap-index.xml` (einmalig unter „Sitemaps“ eingereicht; bei Zweifel dort nachsehen, ob sie als „Erfolgreich“ gelistet ist).
 
 **Routine (seit 30.09.2026):** Eine tägliche Claude-Routine (09:10 Uhr Berlin, läuft auf Dominiks Rechner, weil sie die Search Console im Browser bedient) liest diese Tabelle, meldet alle Zeilen mit Status `offen` in Tabellenreihenfolge an (so viele, wie das Tageskontingent zulässt), setzt `angemeldet YYYY-MM-DD`, ergänzt neue Sitemap-URLs, die hier fehlen, als `offen`, und committet nur diese Datei auf den Produktions-Branch. Montags schickt sie zusätzlich eine kurze Übersicht (indexierte Seiten laut Search Console, Klicks und Impressionen der Woche). Menschen tragen nur noch Zeilen ein; angemeldet wird automatisch. Kontingent: ~10 Anfragen je rollierende 24 Stunden – deshalb Änderungen nur eintragen, wenn Titel, Meta-Description oder Struktur betroffen sind.
+
+**Regeln der Routine (seit 08.10.2026):**
+
+- Eine Anmeldung pro URL: Stehen für eine URL mehrere offene Zeilen in der Tabelle, meldet die Routine sie einmal an und setzt alle diese Zeilen auf `angemeldet YYYY-MM-DD`.
+- Aktualisierte Artikel erkennt die Routine selbst: Für jede Artikel-URL `/wissen/<slug>/` (ohne die Themenseiten aus `src/data/themen.json`) vergleicht sie `lastmod` in der Sitemap mit dem jüngsten Datum in der Status-Spalte dieser URL. Ist `lastmod` neuer und gibt es keine offene Zeile, hängt sie `| <URL> | aktualisiert (lastmod YYYY-MM-DD) | <heute> | offen |` an. `lastmod` entsteht aus `updatedDate`: Wer einen Artikel wesentlich ändert, setzt `updatedDate`, die Anmeldung folgt automatisch. Eine Zeile von Hand braucht es nur noch für Seiten ohne Frontmatter-Datum (Startseite, Werkzeuge, Checkliste, Ernährungsplan, Themenseiten, Grafiken, Wissens-Hub) und für Textänderungen ohne `updatedDate`.
+- Seiten, die die Search Console als „Gecrawlt – zurzeit nicht indexiert“ führt, nennt die Routine im Montagsbericht. Eine neue Anfrage hilft dort nicht; die Seite braucht mehr eigenen Inhalt (siehe CLAUDE.md, „Qualität vor Menge“).
+- Höchstens 8 Anmeldungen pro Lauf. Bei „Kontingent überschritten“ bleibt der Rest `offen` und kommt am nächsten Tag in derselben Reihenfolge dran.
 
 Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wissen/studien/` und die Artikel abnehmspritze-absetzen, gewicht-halten-nach-abnehmspritze, jojo-effekt-abnehmspritze, kreatin-abnehmspritze, muskelabbau-abnehmspritze, protein-abnehmspritze, mounjaro-absetzen, ozempic-absetzen, wegovy-absetzen.
 
@@ -126,3 +133,12 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/gewicht-halten-nach-abnehmspritze/ | Neuer Einstieg (Vorsprung statt Uhr) | 2026-10-07 | offen |
 | https://nachderspritze.de/wissen/wechseljahre-abnehmspritze/ | Meta-Description ohne „Magermasse“, verständlicher | 2026-10-07 | offen |
 | https://nachderspritze.de/checkliste/ | Neues Intro (Vorsprung), Programm-Hinweis | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/wegovy-absetzen/ | Ton „Sabine“: Einstieg, Kurz gesagt und Fließtext in du, Kilo-Beispiel | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/mounjaro-absetzen/ | Ton „Sabine“: Einstieg, Kurz gesagt und Fließtext in du | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/abnehmpille-absetzen/ | Ton „Sabine“: Einstieg, Kurz gesagt und Fließtext in du | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/muskelabbau-abnehmspritze/ | Ton „Sabine“: Kurz gesagt neu, Fachbegriffe übersetzt | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/protein-abnehmspritze/ | Ton „Sabine“: Kurz gesagt mit Rechenbeispiel, du-Form | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/krafttraining-nach-abnehmspritze/ | Ton „Sabine“: Kurz gesagt neu, du-Form | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/kalorienbedarf-nach-abnehmspritze/ | Ton „Sabine“: Kurz gesagt mit Alltagsbeispiel, du-Form | 2026-10-07 | offen |
+| https://nachderspritze.de/glossar/ | Alle Kurzdefinitionen neu in Alltagssprache | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/absetzen/ | Themenseite: erster Absatz neu, du-Form | 2026-10-07 | offen |

@@ -119,7 +119,7 @@ Ein Theme, keine Varianten (`src/styles/global.css`, `src/layouts/Base.astro`). 
 - Tailwind 4: Theme-Tokens in `src/styles/global.css` (`@theme` plus CSS-Variablen in `:root`; keine Theme-Varianten mehr). `@apply` mit eigenen Klassen funktioniert nicht, eigene Utilities als `@utility`.
 - Schriften selbst gehostet (Mona Sans über `@fontsource-variable/mona-sans`; Druckschriften für die PDFs in `scripts/fonts/`). Keine externen Requests außer Tally (nur auf `/erfahrungen/`) und Plausible. Keine Cookies. Kommt ein Dienst mit Cookies dazu, braucht es ein Consent-Tool.
 - Artikel-Template: `src/components/ArticlePage.astro`, Themenseiten: `src/components/HubPage.astro`; beide laufen über die Route `src/pages/wissen/[slug].astro`. Vorlage für neue Artikel: `src/content/wissen/kreatin-abnehmspritze.md`.
-- Nach dem Merge eines neuen Artikels meldet der IndexNow-Workflow die URL an Bing. Google nur manuell in der Search Console (Dominik). Neue oder wesentlich geänderte URLs kommen als Zeile mit Status `offen` in `docs/INDEXIERUNG.md`.
+- Nach dem Merge eines neuen Artikels meldet der IndexNow-Workflow die URL an Bing. Bei Google meldet die tägliche Indexierungs-Routine die URLs in der Search Console an (Regeln in `docs/INDEXIERUNG.md`): Aktualisierte Artikel mit `updatedDate` erkennt sie über die Sitemap selbst; neue URLs, die Startseite, Werkzeuge und andere Seiten ohne Frontmatter-Datum kommen als Zeile mit Status `offen` in `docs/INDEXIERUNG.md`.
 
 ## Bei Unsicherheit
 

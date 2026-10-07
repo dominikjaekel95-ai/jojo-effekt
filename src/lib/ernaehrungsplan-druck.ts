@@ -23,7 +23,7 @@ export const REZEPT_AB_MINUTEN = 15;
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] as string);
 const nb = '\u00a0';
-const aufzaehlung = (xs: (string | number)[]) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} und ${xs[xs.length - 1]}`);
+export const aufzaehlung = (xs: (string | number)[]) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} und ${xs[xs.length - 1]}`);
 const pfeil = '<svg class="ed-pfeil" width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
 
 function mengeText(n: number, einheit: Einheit) {
@@ -39,12 +39,12 @@ const KURZ: Partial<Record<ZutatKey, [string, string?]>> = {
   linsenGekocht: ['Linsen, gekocht'], kichererbsen: ['Kichererbsen, gekocht'], kidney: ['Kidneybohnen, gekocht'], weisseBohnen: ['Weiße Bohnen, gekocht'],
   thunfisch: ['Thunfisch, abgetropft'], edamame: ['Edamame (TK)'], garnelen: ['Garnelen (TK)'], ei: ['Ei', 'Eier'],
 };
-function kurzName(k: ZutatKey, lf: boolean, mehrzahl = false) {
+export function kurzName(k: ZutatKey, lf: boolean, mehrzahl = false) {
   const e = KURZ[k];
   return e ? (mehrzahl && e[1] ? e[1] : e[0]) : zutatName(k, lf, mehrzahl);
 }
 /** „120 g Linsen, gekocht“, „2 Eier“ */
-function portionText(k: ZutatKey, menge: number, lf: boolean) {
+export function portionText(k: ZutatKey, menge: number, lf: boolean) {
   const x = zt(k);
   return x.einheit === 'Stück' ? `${menge}${nb}${kurzName(k, lf, menge !== 1)}` : `${mengeText(menge, x.einheit)} ${kurzName(k, lf)}`;
 }

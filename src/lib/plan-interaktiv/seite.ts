@@ -1,13 +1,15 @@
 /**
  * Interaktive Planseite /ernaehrungsplan/plan/<id>/: Tagesansicht (Handy ein Tag pro Bildschirm mit Wischen, Desktop
  * die Woche als Raster), Verschieben (Ziehen oder Menü „Mit Tag … tauschen“), Tauschen und „Nicht mein Fall“,
- * Proteinbalken je Tag mit Vorschlag, Appetit-Regler, Einkaufsliste mit Häkchen, Rezepte am Gericht, Druck aus dem
- * aktuellen Zustand (A4 und Handy). Regeln und URL-Zustand: modell.ts; Ziehen: ziehen.ts; Stile:
- * src/styles/plan-interaktiv.css (Klassen pi-…).
+ * Proteinbalken je Tag mit Vorschlag, Appetit-Regler, Einkaufsliste mit Häkchen, Rezepte am Gericht. „Als PDF senden“
+ * und „PDF herunterladen“ (echtes PDF aus dem aktuellen Zustand, A4 und Handy): senden.ts. Regeln und URL-Zustand:
+ * modell.ts; Ziehen: ziehen.ts; Stile: src/styles/plan-interaktiv.css (Klassen pi-…). Strg+P druckt weiter die
+ * Druckfassung mit dem aktuellen Zustand.
  *
  * Ohne JavaScript bleibt der statische Plan aus dem Build stehen; dieses Skript ersetzt nur den Wochenteil. Nichts verlässt
  * den Browser: Der Zustand steht in der Adresse (?v=…&s=…, history.replaceState nur nach einer Aktion), die Häkchen der
- * Einkaufsliste zusätzlich im localStorage (try/catch). Plausible: „Plan interaktiv“ mit `aktion`, einmal je Aktionstyp
+ * Einkaufsliste zusätzlich im localStorage (try/catch). Erst „Als PDF senden“ schickt Plan, Vorlieben und Zustand an
+ * api/ernaehrungsplan.js. Plausible: „Plan interaktiv“ mit `aktion` (bei pdf zusätzlich `format`), einmal je Aktionstyp
  * und Seitenaufruf, ohne Planinhalte.
  */
 import { erstellePlan, kombination, leseVorlieben, planId, vorliebeLabel, zutatName, type Antworten, type GeplanteMahlzeit, type Plan, type Vorliebe } from '../../data/ernaehrungsplan.ts';
@@ -16,8 +18,9 @@ import { blickHtml, grundlageHtml } from '../ernaehrungsplan-ansicht.ts';
 import { druckHtml, einkaufDaten, type EinkaufPosten } from '../ernaehrungsplan-druck.ts';
 import * as M from './modell.ts';
 import { ziehen } from './ziehen.ts';
+import { verbindeSenden } from './senden.ts';
 
-type Aktion = 'verschieben' | 'tauschen' | 'appetit' | 'einkauf' | 'pdf';
+type Aktion = 'verschieben' | 'tauschen' | 'appetit' | 'einkauf' | 'pdf' | 'senden';
 type Plausible = (name: string, o?: { props?: Record<string, string>; callback?: () => void }) => void;
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] as string);
@@ -43,20 +46,23 @@ const speicher = {
   },
 };
 
-/** Plausible-Ereignis einmal je Aktionstyp und Seitenaufruf; `danach` läuft spätestens nach 400 ms (vor einem Seitenwechsel). */
-const gemeldet = new Set<Aktion>();
-function melde(aktion: Aktion, danach?: () => void) {
+/** Plausible-Ereignis einmal je Aktionstyp und Seitenaufruf (pdf einmal je Format); `danach` läuft spätestens nach
+ *  400 ms (vor einem Seitenwechsel). `extra`: weitere Properties ohne Planinhalte (format=a4|handy). */
+const gemeldet = new Set<string>();
+function melde(aktion: Aktion, danach?: () => void, extra: Record<string, string> = {}) {
   const p = (window as unknown as { plausible?: Plausible }).plausible;
-  if (gemeldet.has(aktion) || typeof p !== 'function') return danach?.();
-  gemeldet.add(aktion);
-  if (!danach) return p('Plan interaktiv', { props: { aktion } });
+  const schluessel = [aktion, ...Object.values(extra)].join(':');
+  if (gemeldet.has(schluessel) || typeof p !== 'function') return danach?.();
+  gemeldet.add(schluessel);
+  const props = { aktion, ...extra };
+  if (!danach) return p('Plan interaktiv', { props });
   let fertig = false;
   const weiter = () => {
     if (fertig) return;
     fertig = true;
     danach();
   };
-  p('Plan interaktiv', { props: { aktion }, callback: weiter });
+  p('Plan interaktiv', { props, callback: weiter });
   setTimeout(weiter, 400);
 }
 
@@ -132,7 +138,7 @@ export function starte(root: HTMLElement) {
 <textarea class="pi-ek-text" data-pi-ek-text readonly hidden aria-label="Einkaufsliste als Text"></textarea>
 </div>
 <dialog class="pi-blatt" aria-labelledby="pi-blatt-name"></dialog>
-<div class="pi-toast" data-pi-toast hidden><p data-pi-toast-text></p><button type="button" data-aktion="zurueck">Rückgängig</button></div>
+<div class="pi-toast" data-pi-toast hidden><p data-pi-toast-text></p><button type="button" data-aktion="zurueck">Rückgängig</button><button type="button" data-pi-toast-extra hidden></button></div>
 <p class="sr-only" role="status" data-pi-live></p>`;
 
   const $ = <T extends HTMLElement = HTMLElement>(sel: string) => mount.querySelector<T>(sel)!;
@@ -261,19 +267,28 @@ ${karte ? `<details class="pi-rezept"><summary>Rezept · ${karte.zeit} Minuten</
     toast.classList.remove('an');
     setTimeout(() => !toast.classList.contains('an') && (toast.hidden = true), rm() ? 0 : 300);
   }
-  /** Sichtbar kurz (mit „Rückgängig“), für Screenreader mit dem Protein der betroffenen Tage. */
-  function sage(kurz: string, rueckgaengig: boolean, lang = kurz) {
+  /** Sichtbar kurz (mit „Rückgängig“ oder einer anderen Aktion), für Screenreader mit dem Protein der betroffenen Tage. */
+  let toastAktion: (() => void) | null = null;
+  function sage(kurz: string, rueckgaengig: boolean, lang = kurz, aktion?: { text: string; fn: () => void }) {
     const live = $('[data-pi-live]');
     live.textContent = '';
     setTimeout(() => (live.textContent = lang), 50);
     $('[data-pi-toast-text]').textContent = kurz;
     $('[data-aktion="zurueck"]').hidden = !rueckgaengig;
+    const extra = $('[data-pi-toast-extra]');
+    extra.hidden = !aktion;
+    extra.textContent = aktion?.text ?? '';
+    toastAktion = aktion?.fn ?? null;
     toast.hidden = false;
     requestAnimationFrame(() => requestAnimationFrame(() => toast.classList.add('an')));
     clearTimeout(toastZeit);
     toastZeit = window.setTimeout(versteckeToast, 5000);
   }
   toast.addEventListener('focusin', () => clearTimeout(toastZeit));
+  $('[data-pi-toast-extra]').addEventListener('click', () => {
+    toastAktion?.();
+    versteckeToast();
+  });
   toast.addEventListener('pointerenter', () => clearTimeout(toastZeit));
 
   const tagText = (d: number) => {
@@ -508,66 +523,14 @@ ${vorrat.length ? `<div class="pi-ek-gruppe pi-ek-schon"><h3 class="pi-ek-h">Has
   }
 
   // ---------------------------------------------------------------------------------------------------------
-  // Druck aus dem aktuellen Zustand
+  // Druck (Strg+P) aus dem aktuellen Zustand; die PDF-Knöpfe erzeugen echte PDFs (senden.ts)
 
   function aktualisiereDruck() {
     if (!druckAlt || !druckEl) return;
     druckEl.innerHTML = druckHtml(plan, { stand });
     druckAlt = false;
   }
-  const handyParam = /[?&]druck=handy\b/.test(location.search);
-  /** Seitenhöhe fürs Handy wie in scripts/ernaehrungsplan-pdf.mjs: längster Tag, mindestens 160 mm, auf 5 mm aufgerundet.
-   *  Gemessen mit den Druckregeln, kurz ohne @media print angewendet (im selben Durchlauf, ohne Zeichnen dazwischen). */
-  function handyHoehe() {
-    const druck = root.querySelector<HTMLElement>('[data-ep-druck]');
-    if (!druck) return 160;
-    const regeln: string[] = [];
-    for (const sheet of Array.from(document.styleSheets)) {
-      let liste: CSSRuleList;
-      try {
-        liste = sheet.cssRules;
-      } catch {
-        continue;
-      }
-      for (const r of Array.from(liste))
-        if (r instanceof CSSMediaRule && /print/.test(r.media.mediaText))
-          for (const x of Array.from(r.cssRules)) if (x instanceof CSSStyleRule && /\.ed\b/.test(x.selectorText)) regeln.push(x.cssText);
-    }
-    const st = document.createElement('style');
-    st.textContent = `${regeln.join('\n')}\n.ed{display:block !important;position:absolute !important;left:-9999px !important;top:0 !important;width:76mm !important}`;
-    document.head.append(st);
-    const h = Math.max(0, ...Array.from(druck.querySelectorAll('.ed-tag')).map((el) => el.getBoundingClientRect().height));
-    st.remove();
-    return Math.max(160, Math.ceil((h / (96 / 25.4) + 23 + 2) / 5) * 5);
-  }
-  let seitenStil: HTMLStyleElement | null = null;
-  function nachDruck() {
-    if (!handyParam) html.classList.remove('ed-handy');
-    seitenStil?.remove();
-    seitenStil = null;
-  }
   window.addEventListener('beforeprint', aktualisiereDruck);
-  window.addEventListener('afterprint', nachDruck);
-  function drucke(format: string) {
-    melde('pdf');
-    nachDruck();
-    aktualisiereDruck();
-    if (format === 'handy') {
-      html.classList.add('ed-handy');
-      seitenStil = document.createElement('style');
-      seitenStil.textContent = `@page handy { size: 90mm ${handyHoehe()}mm; }`;
-      document.head.append(seitenStil);
-    }
-    window.print();
-  }
-  root.querySelectorAll<HTMLAnchorElement>('[data-ep-pdf]').forEach((a) => {
-    // Ohne JavaScript führt der Link zum fertigen Grund-PDF; mit JavaScript druckt er den Plan, wie er gerade ist.
-    a.className = a.className.replace(/\s*plausible-event-\S+/g, '');
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      drucke(a.dataset.epPdf ?? 'a4');
-    });
-  });
 
   // ---------------------------------------------------------------------------------------------------------
   // Vorlieben (auf der Seite) und Varianten (anderer Plan, Zustand wird übertragen)
@@ -692,4 +655,14 @@ ${vorrat.length ? `<div class="pi-ek-gruppe pi-ek-schon"><h3 class="pi-ek-h">Has
   if (d0 && !desktop.matches) tageEl.scrollLeft = d0 * tageEl.clientWidth;
   bereit();
   html.classList.add('pi-an');
+
+  verbindeSenden({
+    root,
+    plan: () => plan,
+    vorlieben: () => v,
+    zustand: () => M.kodiere(k, z),
+    stand,
+    melde: (aktion, props, danach) => melde(aktion, danach, props),
+    sage: (text, aktion) => sage(text, false, text, aktion),
+  });
 }

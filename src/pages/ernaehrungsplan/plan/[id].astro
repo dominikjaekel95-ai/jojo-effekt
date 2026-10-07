@@ -4,7 +4,10 @@
  * MailerLite verlinkt hierher (Feld `plan`, Vorlieben als ?v=lachs,quark aus dem Feld `vorlieben`).
  * Ohne ?v= zeigt die Seite den Grundplan; mit ?v= rechnet das Skript den Plan mit Vorlieben im Browser neu
  * (gleicher Generator wie im Build). Varianten wechseln und „Als PDF speichern“ (Druckansicht) gehen auf der Seite.
- * Aus den Seiten ohne ?v= erzeugt `npm run pdf:ernaehrungsplan` die PDFs unter public/downloads/ernaehrungsplan/.
+ * Aus den Seiten ohne ?v= erzeugt `npm run pdf:ernaehrungsplan` die PDFs unter public/downloads/ernaehrungsplan/:
+ * <id>.pdf (A4) und <id>-handy.pdf (?druck=handy setzt die Klasse ed-handy). Die Druckfassung ist eigenes Markup
+ * (src/lib/ernaehrungsplan-druck.ts, Stile src/styles/ernaehrungsplan-druck.css), auf dem Bildschirm unsichtbar; im Druck
+ * ersetzt sie die Webansicht. „Als PDF speichern“ druckt sie im Browser, mit eingerechneten Vorlieben.
  * Alte IDs ep01 bis ep18 (sieben Tage, bis 05.10.2026) leiten auf den passenden neuen Plan weiter.
  * noindex und nicht in der Sitemap. Keine Affiliate-Links, kein Produkt-Teaser, keine Präparatenamen.
  */
@@ -26,6 +29,9 @@ import {
   type Gewicht,
 } from '../../../data/ernaehrungsplan';
 import { planHtml, blickHtml } from '../../../lib/ernaehrungsplan-ansicht';
+import { druckHtml } from '../../../lib/ernaehrungsplan-druck';
+import { getSources } from '../../../data/sources';
+import '../../../styles/ernaehrungsplan-druck.css';
 
 export function getStaticPaths() {
   const fehler = pruefePlaene();
@@ -49,6 +55,9 @@ const klein = plan.appetit === 'klein';
 const stand = new Date().toLocaleDateString('de-DE', { month: 'long', year: 'numeric' });
 const path = `/ernaehrungsplan/plan/${weiter ?? plan.id}/`;
 const pdf = `/downloads/ernaehrungsplan/${plan.id}.pdf`;
+const pdfHandy = `/downloads/ernaehrungsplan/${plan.id}-handy.pdf`;
+const quellen = getSources(fnIds);
+const lf = plan.laktosefrei && plan.ernaehrung !== 'vegan';
 const erlaubt = new Set(erlaubteVorlieben(plan.ernaehrung, plan.laktosefrei));
 const gewichte = Object.keys(gewichtLabel) as Gewicht[];
 const muster =
@@ -71,7 +80,7 @@ const muster =
   </Base>
 ) : (
   <Base title={`Dein Ernährungsplan: ${ernaehrung.label}, ${gewichtLabel[plan.gewicht]}`} description="14 Tage mit Mengen, Protein je Mahlzeit, Einkaufslisten, Austauschtabelle und Rezeptkarten für die Zeit nach der Abnehmspritze." path={path} noindex>
-    <script is:inline>if (/[?&]v=[^&]/.test(location.search)) document.documentElement.classList.add('ep-v');</script>
+    <script is:inline>if (/[?&]v=[^&]/.test(location.search)) document.documentElement.classList.add('ep-v');if (/[?&]druck=handy\b/.test(location.search)) document.documentElement.classList.add('ed-handy');</script>
     <article class="ep-plan" data-ep-plan data-id={plan.id} data-fn-bls={fn('bls')}>
       <div class="ep-wrap">
         <p class="ep-marke">Nach der Spritze · Ernährungsplan · Stand {stand}</p>
@@ -88,10 +97,11 @@ const muster =
 
         <div class="ep-werkzeug no-print">
           <div class="ep-aktionen">
-            <button type="button" class="btn-primary" data-ep-drucken>Als PDF speichern</button>
-            <a class="btn-secondary" href={pdf} data-ep-pdf>Fertiges PDF öffnen</a>
-            <span class="ep-klein" data-ep-pdf-hinweis hidden>Das fertige PDF enthält den Grundplan ohne deine Vorlieben.</span>
+            <a class="btn-primary plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=handy" href={pdfHandy}>PDF fürs Handy</a>
+            <a class="btn-secondary plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=a4" href={pdf}>PDF zum Drucken (A4)</a>
+            <button type="button" class="ep-drucken plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=browser" data-ep-drucken>Als PDF speichern</button>
           </div>
+          <p class="ep-klein ep-pdf-hinweis" data-ep-pdf-hinweis hidden>Die beiden PDFs enthalten den Grundplan ohne deine Vorlieben. „Als PDF speichern“ druckt den Plan mit deinen Vorlieben.</p>
           <details class="ep-anpassen" data-ep-anpassen>
             <summary><span>Plan anpassen</span><span class="ep-klein">Variante wechseln, Vorlieben wählen</span></summary>
             <form class="ep-optionen" data-ep-varianten>
@@ -174,6 +184,37 @@ const muster =
 
         <Footnotes ids={fnIds} />
       </div>
+
+      <div class="ed" data-ep-druck data-stand={stand}>
+        <div data-ep-druck-dyn set:html={druckHtml(plan, { stand })} />
+        <div class="ed-schluss">
+          <div class="ed-kopf"><h2 class="ed-h">Hinweise</h2></div>
+          <ul class="ed-hinweise">
+            <li><strong>So entsteht dein Ziel.</strong> Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup>{fn('leidy2015')}</sup> Dein Plan rechnet mit dem unteren Wert: {String(G_PRO_KG).replace('.', ',')} g × {plan.referenzKg} kg (Mitte deiner Gewichtsstufe{plan.gewicht === 'ueber100' ? '; wer deutlich mehr wiegt, rechnet mit dem Proteinrechner auf nachderspritze.de nach' : ''}) = rund {plan.ziel} g am Tag.</li>
+            {klein && (<li><strong>Kleine Portionen sind Absicht.</strong> Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten raten zu kleineren, häufigeren Mahlzeiten, langsamem Essen und Aufhören beim ersten Sattsein.<sup>{fn('almandoz2024')}</sup> Kommt der Appetit zurück, wechsle auf deiner Planseite auf „Wieder normal“.</li>)}
+            {!klein && (<li><strong>Satt ist genug.</strong> Die Mengen sind Richtwerte. Wenn du vorher satt bist, lass den Rest der Beilage liegen, nicht das Protein.</li>)}
+            {muster && <li><strong>Abwechslung.</strong> {muster} Kein Gericht kommt an zwei Tagen hintereinander.</li>}
+            <li><strong>Gemüse und Obst nach Hunger.</strong> Was unter „dazu“ steht, zählt nicht in die Proteinsumme und hat keine feste Menge. Eine Handvoll pro Mahlzeit ist ein guter Anfang.</li>
+            <li><strong>Ballaststoffe langsam steigern.</strong> Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<sup>{fn('dgeBallaststoffe')}</sup> Hülsenfrüchte, Haferflocken und Vollkorn im Plan bringen dich dorthin. Wer vorher wenig gegessen hat, steigert über zwei Wochen und trinkt dazu genug.</li>
+            <li><strong>Trinken.</strong> Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten nennen zwei bis drei Liter Flüssigkeit am Tag.<sup>{fn('almandoz2024')}</sup> Wasser, Tee und schwarzer Kaffee sind die Getränke, die die DGE als Standard empfiehlt.<sup>{fn('dgeEmpfehlungen')}</sup></li>
+            {lf && (<li><strong>Laktosefrei.</strong> Milch, Joghurt und Quark gibt es im Supermarkt laktosefrei; Skyr, Hüttenkäse und Feta kommen im Plan nicht vor. Gereifter Hartkäse wie Gouda oder Bergkäse ist von Natur aus praktisch laktosefrei.<sup>{fn('bls')}</sup></li>)}
+            <li><strong>So sind die Mengen gerechnet.</strong> Jedes Gericht hat ein Grundrezept für eine normale Portion; ein Faktor je Tag passt Frühstück, Mittag und Abend an, Zwischenmahlzeiten haben eine feste Portion. Protein je Zutat: gerundete Durchschnittswerte aus dem Bundeslebensmittelschlüssel,<sup>{fn('bls')}</sup> Proteinpulver und Räuchertofu nach typischen Herstellerangaben. Die Werte je Zutat stehen auf deiner Planseite.</li>
+            <li><strong>Protein und Muskeln.</strong> Protein trägt zur Erhaltung von Muskelmasse bei.<sup>{fn('euClaims')}</sup> Der Plan gibt keine Kalorienmenge vor; er steuert Protein, Ballaststoffe und Portionsgröße.</li>
+          </ul>
+          <div class="ed-grenzen">
+            <p><strong>Was dieser Plan ist und was nicht.</strong> Ein allgemeiner Beispielplan für gesunde Erwachsene, ausgewählt nach Ernährungsform, Appetit, Gewichtsbereich und Laktose. Er ist keine Ernährungstherapie und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Nicht geeignet ist er bei Nierenerkrankungen, in Schwangerschaft und Stillzeit, bei einer Essstörung (auch früher) und für unter 18-Jährige. Bei Diabetes, Medikamenten mit Ernährungsvorgaben, Allergien oder Unverträglichkeiten sprich vorher mit deiner Ärztin, deinem Arzt oder einer Ernährungsfachkraft.</p>
+            <p class="ed-arzt">{site.doctorSentence}</p>
+            <p>Nach der Spritze, ein Projekt von {site.owner.name}, {site.owner.city}. Mehr zu Protein, Ballaststoffen und dem Alltag nach dem Absetzen: nachderspritze.de/wissen/ernaehrung-nach-abnehmspritze/ · Fragen: {site.owner.email}</p>
+          </div>
+          <div class="ed-quellen">
+            <p class="ed-label">Quellen</p>
+            {/* Klassen wie die Quellenliste in Footnotes.astro: Die Textprüfung überspringt Literaturangaben daran */}
+            <ol class="mt-3 space-y-2 ed-quellen-liste">
+              {quellen.map((q, i) => (<li><span>{i + 1}</span><span>{q.full}{q.url && (<> <a class="ed-url" href={q.url}></a></>)}</span></li>))}
+            </ol>
+          </div>
+        </div>
+      </div>
     </article>
   </Base>
 )}
@@ -181,6 +222,7 @@ const muster =
 <script>
   import { erstellePlan, kombination, leseVorlieben, planId, vorliebeLabel, type Vorliebe } from '../../../data/ernaehrungsplan';
   import { planHtml, blickHtml } from '../../../lib/ernaehrungsplan-ansicht';
+  import { druckHtml } from '../../../lib/ernaehrungsplan-druck';
 
   const root = document.querySelector<HTMLElement>('[data-ep-plan]');
   const k = root ? kombination(root.dataset.id ?? '') : null;
@@ -192,6 +234,8 @@ const muster =
     const pdfHinweis = root.querySelector<HTMLElement>('[data-ep-pdf-hinweis]');
     const boxen = [...root.querySelectorAll<HTMLInputElement>('[data-ep-vorlieben] input')];
     const varianten = root.querySelector<HTMLFormElement>('[data-ep-varianten]');
+    const druck = root.querySelector<HTMLElement>('[data-ep-druck]');
+    const druckDyn = root.querySelector<HTMLElement>('[data-ep-druck-dyn]');
     let v = leseVorlieben(new URLSearchParams(location.search).get('v') ?? '', k.ernaehrung, k.laktosefrei) as Vorliebe[];
 
     // 14-Tage-Balken wachsen, sobald sie sichtbar sind
@@ -210,6 +254,7 @@ const muster =
       const plan = erstellePlan({ ...k!, vorlieben: v });
       dynBlick.innerHTML = blickHtml(plan);
       dyn.innerHTML = planHtml(plan, { fnBls });
+      if (druckDyn) druckDyn.innerHTML = druckHtml(plan, { stand: druck?.dataset.stand ?? '' });
       dyn.classList.add('ep-bereit');
       dynBlick.classList.add('ep-bereit');
       zeigeVorlieben();
@@ -354,6 +399,24 @@ const muster =
     flex-wrap: wrap;
     align-items: center;
     gap: 0.75rem 1rem;
+  }
+  .ep-drucken {
+    min-height: 3rem;
+    padding: 0.5rem 0.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-underline-offset: 0.3em;
+    cursor: pointer;
+  }
+  .ep-drucken:hover {
+    text-decoration-color: var(--color-ink);
+  }
+  .ep-pdf-hinweis {
+    margin-top: 0.75rem;
+    max-width: 40em;
   }
   .ep-anpassen {
     margin-top: 1.5rem;
@@ -935,196 +998,6 @@ const muster =
     text-decoration: underline;
   }
 
-  /* Druck und PDF: A4, ohne Werkzeug, Wochen und Rezepte auf neuer Seite */
-  @media print {
-    @page {
-      size: A4;
-      margin: 14mm 14mm 16mm;
-    }
-    html,
-    body {
-      background: #fff !important;
-    }
-    .ep-plan {
-      padding: 0;
-      font-size: 9.5pt;
-    }
-    .ep-wrap {
-      max-width: none;
-      padding: 0;
-    }
-    .ep-werkzeug {
-      display: none !important;
-    }
-    .ep-h1 {
-      font-size: 26pt;
-    }
-    .ep-lead {
-      font-size: 11pt;
-    }
-    .ep-h2 {
-      font-size: 17pt;
-    }
-    .ep-profil {
-      grid-template-columns: 1fr 1fr 1fr 1.4fr auto;
-      margin-top: 1.2rem;
-    }
-    .ep-profil-ziel {
-      grid-column: auto;
-      text-align: right;
-    }
-    .ep-profil-ziel .ep-zahl {
-      font-size: 24pt;
-    }
-    .ep-hinweise {
-      margin-top: 1.1rem;
-    }
-    .ep-hinweise .ep-h2 {
-      font-size: 13pt;
-    }
-    .ep-hinweise .prose-site {
-      font-size: 9pt;
-      line-height: 1.45;
-    }
-    .ep-hinweise .prose-site ul {
-      margin-top: 0.5rem;
-    }
-    .ep-hinweise .prose-site li {
-      margin-top: 0.1rem;
-    }
-    .ep-hinweise .prose-site p {
-      margin: 0.5rem 0 0;
-    }
-    .ep-blick {
-      margin-top: 1rem;
-      padding-top: 0.6rem;
-      break-inside: avoid;
-    }
-    .ep-blick-titel {
-      font-size: 11pt;
-    }
-    .ep-blick-flaeche {
-      height: 2.6cm;
-      margin-top: 0.9rem;
-      margin-bottom: 1.7rem;
-    }
-    .ep-blick figcaption {
-      font-size: 8pt;
-    }
-    html.js .ep-blick .ep-blick-tage i {
-      transform: scaleY(var(--h)) !important;
-      transition: none !important;
-    }
-    .ep-dyn {
-      opacity: 1 !important;
-      animation: none !important;
-    }
-    .ep-woche {
-      break-before: page;
-      margin-top: 0;
-    }
-    .ep-tag {
-      break-inside: avoid;
-      padding: 0.55rem 0 0.5rem;
-    }
-    .ep-tag-kopf h3 {
-      font-size: 12pt;
-    }
-    .ep-mz {
-      grid-template-columns: 6.2rem minmax(0, 1fr) 2.6rem;
-      padding: 0.22rem 0;
-      font-size: 9pt;
-      line-height: 1.35;
-    }
-    .ep-mz-zeit {
-      grid-column: auto;
-      font-size: 8.5pt;
-    }
-    .ep-mz-g {
-      text-align: right;
-    }
-    .ep-tag-balken {
-      margin: 0.35rem 0 0.2rem;
-      height: 4px;
-    }
-    .ep-einkauf {
-      break-before: page;
-      margin-top: 0;
-      background: none;
-      border: 1px solid var(--color-line);
-      padding: 0.9rem 1rem;
-    }
-    .ep-einkauf-gruppen {
-      columns: 3;
-    }
-    .ep-eg ul {
-      font-size: 9pt;
-    }
-    .ep-einkauf-dazu {
-      font-size: 9pt;
-    }
-    .ep-rezepte {
-      break-before: page;
-      margin-top: 0;
-    }
-    .ep-karten {
-      grid-template-columns: 1fr 1fr;
-      gap: 0 1.4rem;
-    }
-    .ep-karte {
-      break-inside: avoid;
-      padding: 0.7rem 0 0.8rem;
-    }
-    .ep-karte-spalten {
-      font-size: 8.8pt;
-      line-height: 1.4;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-    }
-    .ep-karte-name {
-      font-size: 11pt;
-    }
-    .ep-karte-meta,
-    .ep-karte-h,
-    .ep-karte-tipp {
-      font-size: 8pt;
-    }
-    .ep-grundlage,
-    .ep-tausch,
-    .ep-grenzen {
-      margin-top: 1.6rem;
-      break-inside: avoid;
-    }
-    .ep-grundlage {
-      break-before: page;
-      margin-top: 0;
-    }
-    .ep-grundlage-liste,
-    .ep-tausch table {
-      font-size: 8.8pt;
-    }
-    .ep-grundlage-liste li,
-    .ep-tausch td {
-      padding-top: 0.2rem;
-      padding-bottom: 0.2rem;
-    }
-    .ep-grenzen p {
-      font-size: 9pt;
-    }
-    .ep-fav .ep-mz-name {
-      box-shadow: inset 0 -0.42em 0 var(--color-amber-light);
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-    .ep-blick-tage b,
-    .ep-tag-balken b,
-    .ep-legende i {
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-    #quellen {
-      break-inside: avoid;
-      font-size: 8.5pt;
-    }
-  }
+  /* Druck und PDF: Die Druckfassung (Klassen ed-…) steht in src/styles/ernaehrungsplan-druck.css; sie blendet im Druck
+     die Webansicht (.ep-wrap) aus und setzt Seitengröße, Ränder und Fußzeile. */
 </style>

@@ -76,7 +76,7 @@ Status: ✅ zugelassen und Bedingung erfüllt · ⚠️ prüfen (Michi / ggf. An
 
 | # | Aussage | Wo | Einschätzung | Status |
 |---|---|---|---|---|
-| D1 | Überschrift „Nach der Spritze: Muskeln behalten, Gewicht halten.“ | Hero, Title, OG-Bild | „Gewicht halten“ beschreibt das Ziel der Nutzer, nicht eine Wirkung des Sets; kein Wirkstoffbezug. Trotzdem Bezug zu „Gewichtskontrolle“ (Art. 13 HCVO). Alternative ohne Gewichtsbezug: „Nach der Spritze: Muskeln behalten. Dranbleiben.“ (Variante B/C im Code als Kommentar). | ⚠️ |
+| D1 | Überschrift „Nach der Spritze: Dein neues Gewicht braucht einen Plan.“ (Dominik, 07.10.2026; vorher „Muskeln behalten, Gewicht halten.“) | Hero, Title, OG-Bild | Beschreibt, was das Programm ist (ein Plan), keine Wirkung und kein Ergebnis; kein Wirkstoffbezug. Trotzdem Bezug zu „Gewichtskontrolle“ (Art. 13 HCVO). Alternative ohne Gewichtsbezug: „Nach der Spritze: Muskeln behalten. Dranbleiben.“ (Variante B/C im Code als Kommentar). | ⚠️ |
 | D2 | „Vier Bausteine, ein Ziel: das Erreichte halten.“ | Set-Überschrift (seit 06.10.2026 nicht mehr verwendet) | Wie D1. | ⚠️ |
 | D3 | „Der Stick schließt die Lücke.“ (Protein) | Set-Karte | Bezieht sich auf die Proteinmenge (faktisch 20 g), nicht auf eine Wirkung. | ✅ |
 | D4 | „Wirkt nur zusammen mit Krafttraining“ (Kreatin) | Set-Karte | Konsistent mit Claim-Bedingung; keine Zusatzwirkung behauptet. | ✅ |

@@ -36,9 +36,9 @@ export async function ogBilder({ page, fontCss, studienAnzahl, warn }) {
   {
     let b = '';
     b += T(X, 92, 'Nach der Spritze', { st: 'brand', size: 28 });
-    const hs = Math.min(fit('Muskeln behalten,', 640, 'title', 88), fit('Gewicht halten.', 640, 'title', 88));
-    b += T(X, 268, 'Muskeln behalten,', { st: 'title', size: hs });
-    b += T(X, 268 + hs * 1.02, 'Gewicht halten.', { st: 'title', size: hs });
+    const hs = Math.min(fit('Dein neues Gewicht', 640, 'title', 88), fit('braucht einen Plan.', 640, 'title', 88));
+    b += T(X, 268, 'Dein neues Gewicht', { st: 'title', size: hs });
+    b += T(X, 268 + hs * 1.02, 'braucht einen Plan.', { st: 'title', size: hs });
     b += P(X, 268 + hs * 1.02 + 70, 'Das 12-Wochen-Programm für die Zeit nach der Abnehmspritze.', { size: 27, fill: C.ink2, maxW: 600, lh: 37 }).svg;
     b += T(X, 572, 'nachderspritze.de', { st: 'brand', size: 20, fill: C.ink2 });
     // Kurve: Haarlinien, Placebo gepunktet, Gewicht in Tinte, Wiederzunahme in Braun

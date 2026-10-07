@@ -22,7 +22,7 @@ faq:
     a: "<p>Protein, Ballaststoffe und Kreatin sind Lebensmittelbestandteile ohne bekannte Wechselwirkung mit GLP-1-Medikamenten. Trotzdem gehört alles, was du regelmäßig nimmst, ins Gespräch mit deiner Ärztin, besonders bei Nierenerkrankungen und vor Blutabnahmen, weil Kreatin den Kreatinin-Wert verändert.</p>"
 ---
 
-Nach dem Absetzen der Abnehmspritze bekommt man viel angeboten: Multivitamine, Fatburner, „natürliche GLP-1-Booster“, Probiotika gegen den Jojo-Effekt. Das meiste davon ist Marketing. Hier steht, was belegt ist, was nur bei einem Mangel Sinn ergibt, und was du dir sparen kannst. Der Verlauf nach der letzten Dosis, Woche für Woche, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Nach dem Absetzen der Abnehmspritze bekommst du viel angeboten: Multivitamine, Fatburner, „natürliche GLP-1-Booster“, Probiotika gegen den Jojo-Effekt. Das meiste davon ist Marketing. Hier steht, was belegt ist, was nur bei einem Mangel Sinn ergibt, und was du dir sparen kannst. Der Verlauf nach der letzten Dosis, Woche für Woche, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 <div data-interaktiv="sortierung"></div>
 
@@ -30,11 +30,11 @@ Nach dem Absetzen der Abnehmspritze bekommt man viel angeboten: Multivitamine, F
 
 ## Welche Nahrungsergänzungsmittel sind bei der Abnehmspritze sinnvoll?
 
-Drei, und alle als Ergänzung zu Ernährung und Training: Proteinpulver, wenn die 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag über Lebensmittel nicht zusammenkommen,<sup><a href="#fn-leidy2015">2</a></sup> Kreatin-Monohydrat, wenn du Krafttraining machst,<sup><a href="#fn-kreider2017">4</a></sup> und Ballaststoffe, wenn du unter 30 g am Tag bleibst.<sup><a href="#fn-dgeBallaststoffe">5</a></sup> Vitamine und Mineralstoffe wie B12, Eisen, Vitamin D oder Magnesium kommen nur bei nachgewiesener Lücke infrage. Die Expertengruppe um Almandoz zählt Versorgungslücken bei kleinen Portionen zu den Punkten, auf die man unter Adipositas-Medikamenten achten sollte.<sup><a href="#fn-almandoz2024">1</a></sup> Das gilt unter Wegovy, Mounjaro und Ozempic gleichermaßen, weil es um die Portionen geht, nicht um das Präparat. Fatburner und „GLP-1-Booster“ brauchst du nicht.
+Drei, und alle als Ergänzung zu Ernährung und Training: Proteinpulver, wenn die 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag über Lebensmittel nicht zusammenkommen,<sup><a href="#fn-leidy2015">2</a></sup> Kreatin-Monohydrat, wenn du Krafttraining machst,<sup><a href="#fn-kreider2017">4</a></sup> und Ballaststoffe, wenn du unter 30 g am Tag bleibst.<sup><a href="#fn-dgeBallaststoffe">5</a></sup> Vitamine und Mineralstoffe wie B12, Eisen, Vitamin D oder Magnesium kommen nur bei nachgewiesener Lücke infrage. Versorgungslücken bei kleinen Portionen gehören zu den Punkten, auf die man unter Adipositas-Medikamenten achten sollte; darauf weist die Expertengruppe um Almandoz hin.<sup><a href="#fn-almandoz2024">1</a></sup> Das gilt unter Wegovy, Mounjaro und Ozempic gleichermaßen, weil es um die Portionen geht, nicht um das Präparat. Fatburner und „GLP-1-Booster“ brauchst du nicht.
 
 ## Warum das Thema nach der Spritze überhaupt aufkommt
 
-Unter der Therapie essen viele so wenig, dass Protein, Ballaststoffe und Mikronährstoffe knapp werden. Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten raten deshalb, auf Protein, Ballaststoffe und Flüssigkeit zu achten und bei sehr geringer Energiezufuhr ein Multivitamin zu erwägen.<sup><a href="#fn-almandoz2024">1</a></sup> Nach dem Absetzen isst man wieder mehr, aber zwei Dinge bleiben: Ein Teil der Muskeln ist weg (in einer STEP-1-Substudie entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse<sup><a href="#fn-wilding2021dxa">8</a></sup>), und die Ernährungsstruktur muss ohne Appetitbremse funktionieren. Supplements können dabei genau zwei Rollen spielen: eine Lücke schließen, die über Lebensmittel nicht zu schließen ist, oder Training wirksamer machen. Mehr nicht.
+Unter der Therapie essen viele so wenig, dass Protein, Ballaststoffe und Mikronährstoffe knapp werden. Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten raten deshalb, auf Protein, Ballaststoffe und Flüssigkeit zu achten und bei sehr geringer Energiezufuhr ein Multivitamin zu erwägen.<sup><a href="#fn-almandoz2024">1</a></sup> Nach dem Absetzen isst du wieder mehr, aber zwei Dinge bleiben: Ein Teil der Muskeln ist weg (in einer STEP-1-Substudie entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse, also Muskeln, Wasser und Gewebe<sup><a href="#fn-wilding2021dxa">8</a></sup>), und deine Ernährung muss ohne Appetitbremse funktionieren. Supplements können dabei genau zwei Rollen spielen: eine Lücke schließen, die Lebensmittel nicht schließen, oder Training wirksamer machen. Mehr nicht.
 
 Grundregel der Verbraucherzentralen: Nahrungsergänzungsmittel sind Lebensmittel, werden nicht auf Wirksamkeit geprüft und sind bei ausgewogener Ernährung meist unnötig.<sup><a href="#fn-klartextNem">6</a></sup>
 
@@ -57,11 +57,11 @@ Grundregel der Verbraucherzentralen: Nahrungsergänzungsmittel sind Lebensmittel
 
 ## Die drei, die etwas bringen, richtig eingesetzt
 
-**Protein** ist kein Supplement im eigentlichen Sinn, sondern ein Lebensmittel in praktischer Form. Die Frage ist nur, ob du 1,2 bis 1,6 g pro kg über Mahlzeiten schaffst. Wer bei 80 kg auf 96 g kommt, braucht kein Pulver. Wer bei 60 g hängt, weil der Appetit noch klein ist oder die Zeit fehlt, für den ist ein Shake oder Stick der einfachste Weg. Details im [Protein-Artikel](/wissen/protein-abnehmspritze/).
+**Protein** ist kein Supplement im eigentlichen Sinn, sondern ein Lebensmittel in praktischer Form. Die Frage ist nur, ob du 1,2 bis 1,6 g pro kg über Mahlzeiten schaffst. Kommst du bei 80 kg auf 96 g, brauchst du kein Pulver. Hängst du bei 60 g, weil der Appetit noch klein ist oder die Zeit fehlt, ist ein Shake oder Stick der einfachste Weg. Details im [Protein-Artikel](/wissen/protein-abnehmspritze/).
 
 <div data-interaktiv="protein" data-luecke="ja"></div>
 
-**Kreatin** ist das am besten untersuchte Supplement für Kraft und Muskelmasse in Verbindung mit Training.<sup><a href="#fn-kreider2017">4</a></sup> Ohne Training bringt es fast nichts; mit zwei Krafteinheiten pro Woche macht es jede Einheit ein Stück wirksamer. Krafttraining selbst ist der Faktor mit der besten Evidenz gegen den Verlust an fettfreier Masse.<sup><a href="#fn-sardeli2018">9</a></sup> Kreatin bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur. Das zeigt die Waage, ist aber kein Fett. Alles Weitere unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
+**Kreatin** ist das am besten untersuchte Supplement für Kraft und Muskelmasse in Verbindung mit Training.<sup><a href="#fn-kreider2017">4</a></sup> Ohne Training bringt es fast nichts; mit zwei Krafteinheiten pro Woche macht es jede Einheit ein Stück wirksamer. Krafttraining selbst ist der Faktor mit der besten Evidenz gegen den Verlust an fettfreier Masse.<sup><a href="#fn-sardeli2018">9</a></sup> Kreatin bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur; das zeigt die Waage, ist aber kein Fett. Alles Weitere unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
 
 **Ballaststoffe** spielen eine Nebenrolle, aber keine unwichtige: Sie gehören zu jeder Mahlzeit, und die meisten Menschen erreichen die 30 g nicht. Ein Supplement ist nur die zweite Wahl nach Hülsenfrüchten, Vollkorn und Gemüse. Wichtig: langsam steigern und viel trinken.
 
@@ -85,7 +85,7 @@ Zwei Folgen schnellen Gewichtsverlusts, die oft als Supplement-Frage ankommen, h
 
 ## Was du nicht brauchst
 
-Alles, was mit „Stoffwechsel ankurbeln“, „Fett verbrennen“, „entgiften“ oder „natürliche Alternative zur Spritze“ wirbt. Für keines dieser Versprechen gibt es eine zugelassene gesundheitsbezogene Angabe in der EU, und für keines gibt es Studien, die einen Effekt auf das Gewicht nach dem Absetzen zeigen. Berberin, das als „Ozempic aus der Natur“ vermarktet wird, kann außerdem mit Medikamenten wechselwirken und gehört nicht in die Selbstmedikation.
+Alles, was mit „Stoffwechsel ankurbeln“, „Fett verbrennen“, „entgiften“ oder „natürliche Alternative zur Spritze“ wirbt. Für keines dieser Versprechen gibt es eine zugelassene gesundheitsbezogene Angabe in der EU und keine Studien, die einen Effekt auf das Gewicht nach dem Absetzen zeigen. Berberin, das als „Ozempic aus der Natur“ vermarktet wird, kann außerdem mit Medikamenten wechselwirken und gehört nicht in die Selbstmedikation.
 
 ## Sicherheit: drei Regeln
 

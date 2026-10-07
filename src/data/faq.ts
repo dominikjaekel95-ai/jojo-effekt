@@ -22,7 +22,7 @@ const mailText = site.waitlist.ownGroup
 export const landingFaq: FaqItem[] = [
   {
     q: 'Was ist das Programm genau?',
-    a: '<p>Zwölf Wochen Begleitung für die Zeit nach der Abnehmspritze: zwei Krafteinheiten pro Woche à 30 Minuten, zuhause mit Bändern oder im Studio, ein persönliches Proteinziel mit Rezepten für kleine Portionen, ein <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> statt Kalorienzählen und ein Check-in pro Woche per E-Mail.</p>',
+    a: '<p>Zwölf Wochen Struktur für die Zeit, in der dein Appetit zurückkommt. Konkret: zwei Krafteinheiten pro Woche à 30 Minuten, zuhause oder im Studio. Dazu: ein persönliches Proteinziel mit Rezepten für kleine Portionen. Und ein eigener <a href="/werkzeuge/gewichtskorridor/">Gewichtskorridor</a> für dich statt Kalorienzählen. Plus ein Check-in pro Woche per E-Mail.</p>',
   },
   {
     q: 'Wann geht es los, und was kostet es?',
@@ -46,7 +46,7 @@ export const landingFaq: FaqItem[] = [
   },
   {
     q: 'Kann ich anfangen, während ich noch spritze?',
-    a: '<p>Krafttraining und genug Protein sind auch während der Therapie sinnvoll, gerade weil man dann wenig isst. Stimm das Programm aber mit deiner Ärztin oder deinem Arzt ab, besonders bei Magen-Darm-Beschwerden oder einer Nierenerkrankung.</p>',
+    a: '<p>Ja – die Zeit unter der Therapie ist dafür sogar günstig: Dein Appetit ist noch klein, neue Gewohnheiten kosten weniger Kraft. Krafttraining und genug Protein sind auch während der Therapie sinnvoll. Stimm das Programm aber mit deiner Ärztin oder deinem Arzt ab, besonders bei Magen-Darm-Beschwerden oder einer Nierenerkrankung.</p>',
   },
   {
     q: 'Verhindert das Programm den Jojo-Effekt?',

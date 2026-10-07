@@ -2,7 +2,7 @@
 term: "Sarkopene Adipositas"
 metaTitle: "Sarkopene Adipositas: viel Fett, wenig Muskeln, hohes Risiko"
 description: "Sarkopene Adipositas: Adipositas und zu wenig Muskelmasse zugleich. Die europäische Definition von 2022, die Kriterien und warum das Thema nach der Spritze zählt."
-short: "Das gleichzeitige Vorliegen von Adipositas und Sarkopenie, also zu wenig Muskelmasse und Muskelkraft. Seit 2022 gibt es eine europäische Definition mit Diagnosekriterien."
+short: "Starkes Übergewicht und zu wenig Muskeln gleichzeitig: Adipositas plus Sarkopenie, also zu wenig Muskelmasse und Muskelkraft. Seit 2022 gibt es dafür eine europäische Definition mit Diagnosekriterien."
 synonyms: ["sarkopene Adipositas", "Sarcopenic Obesity", "sarkopenische Adipositas"]
 sources: ["donini2022", "wilding2021dxa", "sardeli2018", "leong2015"]
 related: ["fettfreie-masse", "griffkraft", "dxa", "muskelproteinsynthese"]

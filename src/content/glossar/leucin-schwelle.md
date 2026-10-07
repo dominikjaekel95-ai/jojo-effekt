@@ -2,7 +2,7 @@
 term: "Leucin-Schwelle"
 metaTitle: "Leucin-Schwelle: wie viel Protein pro Mahlzeit nötig ist"
 description: "Die Leucin-Schwelle ist die Proteinmenge pro Mahlzeit, ab der der Muskelaufbau anspringt. Warum sie mit dem Alter steigt und was das bei kleinem Appetit heißt."
-short: "Die Menge der Aminosäure Leucin pro Mahlzeit, ab der die Muskelproteinsynthese messbar anspringt. Die Schwelle steigt mit dem Alter, weshalb Ältere pro Mahlzeit mehr Protein brauchen."
+short: "Die Menge des Eiweißbausteins Leucin pro Mahlzeit, ab der deine Muskeln messbar neues Eiweiß aufbauen. Mit dem Alter steigt die Schwelle, deshalb brauchen Ältere pro Mahlzeit mehr Protein."
 synonyms: ["Leucinschwelle", "Leucin", "Leucine Threshold"]
 sources: ["moore2015", "mamerow2014", "leidy2015"]
 related: ["muskelproteinsynthese", "proteinverteilung", "fettfreie-masse"]

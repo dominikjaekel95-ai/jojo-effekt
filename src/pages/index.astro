@@ -77,29 +77,7 @@ const jsonLd: Record<string, unknown>[] = [];
     </div>
   </section>
 
-  <!-- ============ 2. ABSETZKURVE (klebende Bühne) ============ -->
-  <section class="story" id="kurve" aria-labelledby="kurve-h" data-kurve>
-    <div class="stage">
-      <div class="caps">
-        <h2 id="kurve-h" class="sr-only">Was nach der letzten Dosis passiert</h2>
-        <div class="cap on" data-step="0"><p class="k num">1 / 4 · Unter der Spritze</p><h3>68 Wochen mit Semaglutid: im Mittel −17,3 %.</h3><p>So viel verloren die Teilnehmenden der STEP-1-Verlängerung bis zur letzten Dosis. Unter Placebo waren es −2,0 %.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /></p></div>
-        <div class="cap" data-step="1"><p class="k num">2 / 4 · Woche 68</p><h3>Dann die letzte Dosis.</h3><p>Der Wirkstoff baut sich ab, der Appetit kommt zurück. In Studien wird die Zunahme etwa ab der achten Woche nach der letzten Dosis messbar.<Fn n={fn('wu2025')} id="wu2025" /></p></div>
-        <div class="cap" data-step="2"><p class="k num">3 / 4 · Ein Jahr später</p><h3>Zwei Drittel sind zurück.</h3><p>Nach einem Jahr ohne Medikament lag das Gewicht im Mittel bei −5,6 %, unter Placebo bei −0,1 %. Zwei Drittel des Verlusts waren wieder da.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /></p></div>
-        <div class="cap" data-step="3"><p class="k num">4 / 4 · Was verloren ging</p><h3>Und nicht alles davon war Fett.</h3><p>In einer Substudie waren rund 40 % des verlorenen Gewichts fettfreie Masse, darunter Muskeln.<Fn n={fn('wilding2021dxa')} id="wilding2021dxa" /> Deshalb setzt das Programm bei Krafttraining und Protein an.</p></div>
-        <div class="rail" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
-      </div>
-      <div class="chart" data-chart>
-        <div class="ctl"><button class="tgl" type="button" aria-pressed="true" data-placebo><i aria-hidden="true"></i>Placebo</button></div>
-        <div class="chart-box">
-          <Absetzkurve variant="d" label={kurveLabel} />
-          <Absetzkurve variant="m" label={kurveLabel} />
-        </div>
-      </div>
-      <p class="src">Messpunkte aus der STEP-1-Verlängerung,<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Linien dazwischen schematisch. Körperzusammensetzung aus der DXA-Substudie.<Fn n={fn('wilding2021dxa')} id="wilding2021dxa" /> Mehr dazu: <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a></p>
-    </div>
-  </section>
-
-  <!-- ============ 3. 65 VON 100 ============ -->
+  <!-- ============ 2. 65 VON 100 ============ -->
   <section class="sec s-a" aria-labelledby="h-65">
     <div class="container-wide people">
       <div>
@@ -114,6 +92,28 @@ const jsonLd: Record<string, unknown>[] = [];
     </div>
   </section>
 
+  <!-- ============ 3. ABSETZKURVE (klebende Bühne) ============ -->
+  <section class="story" id="kurve" aria-labelledby="kurve-h" data-kurve>
+    <div class="stage">
+      <div class="caps">
+        <h2 id="kurve-h" class="sr-only">Was nach der letzten Dosis passiert</h2>
+        <div class="cap on" data-step="0"><p class="k num">1 / 4 · Unter der Spritze</p><h3>68 Wochen mit Semaglutid: im Mittel −17,3 %.</h3><p>So viel verloren die Teilnehmenden der STEP-1-Verlängerung bis zur letzten Dosis – wer mit 100 kg startete, wog gut 17 kg weniger. Ohne Wirkstoff (Placebo): −2,0 %.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /></p></div>
+        <div class="cap" data-step="1"><p class="k num">2 / 4 · Woche 68</p><h3>Dann die letzte Dosis.</h3><p>Der Wirkstoff geht, der Appetit meldet sich zurück – erst leise, dann jeden Tag. Ab etwa Woche acht ist die Zunahme in Studien messbar.<Fn n={fn('wu2025')} id="wu2025" /></p></div>
+        <div class="cap" data-step="2"><p class="k num">3 / 4 · Ein Jahr später</p><h3>Zwei Drittel sind zurück.</h3><p>Nach einem Jahr ohne Medikament lag das Gewicht im Mittel bei −5,6 %, unter Placebo bei −0,1 %. Zwei Drittel des Verlusts waren wieder da.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Wer zum Beispiel 15 Kilo verloren hatte, hatte im Mittel 10 wieder drauf.</p></div>
+        <div class="cap" data-step="3"><p class="k num">4 / 4 · Was verloren ging</p><h3>Und nicht alles davon war Fett.</h3><p>In einer Substudie waren rund 40 % des verlorenen Gewichts fettfreie Masse: Muskeln, Wasser und Gewebe.<Fn n={fn('wilding2021dxa')} id="wilding2021dxa" /> Deshalb setzt das Programm bei Krafttraining und Protein an.</p></div>
+        <div class="rail" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="chart" data-chart>
+        <div class="ctl"><button class="tgl" type="button" aria-pressed="true" data-placebo><i aria-hidden="true"></i>Placebo</button></div>
+        <div class="chart-box">
+          <Absetzkurve variant="d" label={kurveLabel} />
+          <Absetzkurve variant="m" label={kurveLabel} />
+        </div>
+      </div>
+      <p class="src">Messpunkte aus der STEP-1-Verlängerung,<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Linien dazwischen schematisch. Körperzusammensetzung aus der DXA-Substudie.<Fn n={fn('wilding2021dxa')} id="wilding2021dxa" /> Mehr dazu: <a href="/wissen/abnehmspritze-absetzen/">Abnehmspritze absetzen</a></p>
+    </div>
+  </section>
+
   <!-- ============ 4. WAS HILFT ============ -->
   <section class="sec" id="hebel" aria-labelledby="h-help">
     <div class="container-wide">
@@ -123,14 +123,12 @@ const jsonLd: Record<string, unknown>[] = [];
         <div data-rv>
           <p class="help-n num">2<small>× pro Woche</small></p>
           <h3 class="help-t">Krafttraining</h3>
-          <p class="help-p">Krafttraining während einer Kalorienreduktion verhinderte in einer Meta-Analyse den Verlust an fettfreier Masse weitgehend.<Fn n={fn('sardeli2018')} id="sardeli2018" /> Die WHO empfiehlt muskelkräftigende Aktivität an mindestens zwei Tagen pro Woche.<Fn n={fn('who2020')} id="who2020" /></p>
-          <div class="week" data-week aria-hidden="true"><span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span><i></i><i class="tr"></i><i></i><i></i><i class="tr"></i><i></i><i></i></div>
-          <p class="help-f">Zwei Einheiten à 30 Minuten, zum Beispiel dienstags und freitags.</p>
+          <p class="help-p">Wer beim Abnehmen Kraftübungen macht, verliert kaum fettfreie Masse, also Muskeln und mageres Gewebe. Das zeigt eine Auswertung mehrerer Studien (Meta-Analyse).<Fn n={fn('sardeli2018')} id="sardeli2018" /> Die WHO empfiehlt muskelkräftigende Aktivität an mindestens zwei Tagen pro Woche.<Fn n={fn('who2020')} id="who2020" /></p>
         </div>
         <div data-rv style="--i:1">
           <p class="help-n num">1,2<small>g pro kg</small></p>
           <h3 class="help-t">Protein am Tag</h3>
-          <p class="help-p">Übersichtsarbeiten empfehlen beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g pro kg Körpergewicht,<Fn n={fn('leidy2015')} id="leidy2015" /> deutlich mehr als die 0,8 g, die die DGE für Erwachsene ansetzt.<Fn n={fn('dgeProtein')} id="dgeProtein" /></p>
+          <p class="help-p">Du brauchst jetzt mehr Protein als früher: 1,2 bis 1,6 g pro kg Körpergewicht empfehlen Übersichtsarbeiten beim Abnehmen und beim Halten des Gewichts,<Fn n={fn('leidy2015')} id="leidy2015" /> deutlich mehr als die 0,8 g, die die Deutsche Gesellschaft für Ernährung (DGE) für Erwachsene ansetzt.<Fn n={fn('dgeProtein')} id="dgeProtein" /></p>
           <div class="calc">
             <label for="kg"><span>Dein Gewicht</span><span class="num" data-kgv>80 kg</span></label>
             <input id="kg" type="range" min="50" max="150" step="1" value="80" data-kg />
@@ -143,7 +141,7 @@ const jsonLd: Record<string, unknown>[] = [];
           <h3 class="help-t">Unterschied nach einem Jahr</h3>
           <p class="help-p">In der S-LiTE-Studie hielten Teilnehmende, die trainiert hatten, ihr Gewicht auch ein Jahr nach Therapieende. Wer nur das Medikament bekommen hatte, nahm im Schnitt 6,0 kg mehr wieder zu als die Trainingsgruppe.<Fn n={fn('jensen2024')} id="jensen2024" /></p>
           <figure class="diff" data-diff>
-            <svg viewBox="0 0 320 64" width="320" height="64" role="img" aria-label="Mehr Wiederzunahme nach dem Medikament allein als nach Training allein: 6,0 Kilogramm, 95-Prozent-Konfidenzintervall 2,1 bis 10,0 Kilogramm.">
+            <svg viewBox="0 0 320 64" width="320" height="64" role="img" aria-label="Mehr Wiederzunahme nach dem Medikament allein als nach Training allein: 6,0 Kilogramm; die Spanne reicht von 2,1 bis 10,0 Kilogramm (95-Prozent-Konfidenzintervall).">
               <line class="diff-ax" x1="10" x2="310" y1="40" y2="40" />
               {[0, 2, 4, 6, 8, 10].map((k) => (<g><line class="diff-ax" x1={10 + k * 30} x2={10 + k * 30} y1="40" y2="44" /><text x={10 + k * 30} y="58" text-anchor="middle">{k}</text></g>))}
               <line class="diff-ci" x1={10 + 2.1 * 30} x2={10 + 10 * 30} y1="20" y2="20" />
@@ -152,7 +150,7 @@ const jsonLd: Record<string, unknown>[] = [];
               <rect class="diff-bar" x="10" y="14" width={6 * 30} height="12" rx="2" />
               <circle class="diff-dot" cx={10 + 6 * 30} cy="20" r="4" />
             </svg>
-            <figcaption class="help-f">Mehr Wiederzunahme nach dem Medikament allein, verglichen mit Training allein, in kg. Linie: 95-%-Konfidenzintervall 2,1 bis 10,0 kg.</figcaption>
+            <figcaption class="help-f">Mehr Wiederzunahme nach dem Medikament allein, verglichen mit Training allein, in kg. Die Linie zeigt die Spanne, in der der Unterschied sehr wahrscheinlich liegt: 2,1 bis 10,0 kg (95-%-Konfidenzintervall).</figcaption>
           </figure>
         </div>
       </div>
@@ -163,7 +161,7 @@ const jsonLd: Record<string, unknown>[] = [];
   <section class="sec s-a" id="programm" aria-labelledby="h-prog">
     <div class="container-wide">
       <h2 id="h-prog" class="sec-h" data-rv>Zwölf Wochen. Ein Plan für die Zeit danach.</h2>
-      <p class="intro" data-rv style="--i:1">Das Programm macht aus den Studien einen Plan für jede Woche. Eine eigene Studie zum Programm gibt es nicht.</p>
+      <p class="intro" data-rv style="--i:1">Gegen den zurückkehrenden Appetit hilft keine Disziplin, sondern Struktur. Das Programm setzt für dich Vorschläge aus den Studien zusammen: ein Plan für jede Woche. Eine eigene Studie zum Programm gibt es nicht.</p>
       <div class="prog">
         <div>
           <div class="cal" data-cal role="img" aria-label="Zwölf Wochen mit je sieben Tagen, davon zwei Krafteinheiten und ein Check-in pro Woche.">
@@ -173,10 +171,10 @@ const jsonLd: Record<string, unknown>[] = [];
           <div class="legend"><span><i></i>Krafteinheit, 30 Minuten</span><span><i class="c"></i>Check-in</span><span><i class="d"></i>Alltag</span></div>
         </div>
         <div class="feat">
-          <div data-rv><h3>Krafttraining</h3><p>Zwei Einheiten pro Woche à 30 Minuten. Zuhause mit Bändern oder im Studio, für Einsteiger gemacht.</p></div>
-          <div data-rv style="--i:1"><h3>Protein</h3><p>Dein Tagesziel in Gramm und Rezepte für kleine Portionen mit viel Protein.</p></div>
-          <div data-rv style="--i:2"><h3>Die Waage</h3><p>Ein Gewichtskorridor statt Kalorienzählen, mit klaren Regeln, wann du gegensteuerst. Deinen Korridor kannst du schon jetzt <a href="/werkzeuge/gewichtskorridor/">berechnen</a>.</p></div>
-          <div data-rv style="--i:3"><h3>Begleitung</h3><p>Ein Check-in pro Woche per E-Mail, mit Antworten auf deine Fragen. Orientierung, keine medizinische Beratung.</p></div>
+          <div data-rv><h3>Krafttraining</h3><p>Zwei Einheiten pro Woche, je 30 Minuten, zuhause mit Bändern oder im Studio. Gemacht für alle, die bei null anfangen.</p></div>
+          <div data-rv style="--i:1"><h3>Protein</h3><p>Dein Tagesziel in Gramm und Rezepte mit viel Protein, die auch in deinen kleinen Appetit passen.</p></div>
+          <div data-rv style="--i:2"><h3>Die Waage</h3><p>Ein Gewichtskorridor statt Kalorienzählen – du weißt vorher, was du bei welcher Zahl tust. Deinen Korridor kannst du schon jetzt <a href="/werkzeuge/gewichtskorridor/">berechnen</a>.</p></div>
+          <div data-rv style="--i:3"><h3>Begleitung</h3><p>Ein Check-in pro Woche per E-Mail; auf deine Fragen antwortet ein Mensch. Orientierung, keine medizinische Beratung.</p></div>
         </div>
       </div>
       <p class="note" data-rv>84 Tage, 24 Krafteinheiten, 12 Check-ins. Was wir nicht sagen: dass das Programm die Spritze ersetzt oder den Jojo-Effekt verhindert. Das kann kein Programm versprechen.</p>
@@ -187,7 +185,7 @@ const jsonLd: Record<string, unknown>[] = [];
   <section class="sec band cta" id="warteliste" aria-labelledby="h-cta">
     <div class="container-wide cta-grid">
       <div>
-        <h2 id="h-cta" class="cta-h" data-rv>Sei dabei, wenn es losgeht.</h2>
+        <h2 id="h-cta" class="cta-h" data-rv>Erfahr zuerst, wann es losgeht.</h2>
         <p class="intro band-muted" data-rv style="--i:1">Wir starten das Programm, sobald genug Menschen auf der Warteliste stehen. Bis dahin zahlst du nichts.</p>
       </div>
       <div data-rv style="--i:2">
@@ -195,7 +193,7 @@ const jsonLd: Record<string, unknown>[] = [];
         <p class="price">Das Basis-Programm soll für alle zwölf Wochen unter <strong>{site.price.programUnder} €</strong> kosten. Wer auf der Liste steht, erfährt Termin und Preis zuerst.</p>
       </div>
       <ol class="steps">
-        <li><strong><span class="num">1</span> Eintragen</strong><span>Nur deine E-Mail-Adresse. Keine Zahlung.</span></li>
+        <li><strong><span class="num">1</span> Eintragen</strong><span>Nur deine E-Mail-Adresse, sonst nichts.</span></li>
         <li><strong><span class="num">2</span> Bescheid bekommen</strong><span>Termin, Preis und Ablauf, bevor es losgeht.</span></li>
         <li><strong><span class="num">3</span> Entscheiden</strong><span>Erst dann meldest du dich an, oder du lässt es.</span></li>
       </ol>
@@ -274,6 +272,7 @@ const jsonLd: Record<string, unknown>[] = [];
     <div class="container-narrow">
       <Faq items={landingFaq} />
       <p class="faq-k">Deine Frage ist nicht dabei? <a href={kontakt} class="plausible-event-name=Kontakt+Klick plausible-event-kanal=faq">Schreib uns</a>, wir antworten persönlich.</p>
+      <p class="faq-k">Alles gelesen? Dann ist die <a href="#warteliste">Warteliste</a> der nächste Schritt: nur deine E-Mail-Adresse, kostenlos.</p>
       <Footnotes ids={fnIds} />
     </div>
   </section>

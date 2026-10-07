@@ -15,6 +15,7 @@ import Base from '../../layouts/Base.astro';
 import Fn from '../../components/Fn.astro';
 import Footnotes from '../../components/Footnotes.astro';
 import Faq from '../../components/Faq.astro';
+import ProductTeaser from '../../components/ProductTeaser.astro';
 import { faqJsonLd } from '../../data/faq';
 import { site } from '../../data/site';
 import { VORLIEBEN, alleKombinationen, planId } from '../../data/ernaehrungsplan-id.mjs';
@@ -289,6 +290,7 @@ const jsonLd = [
           <p class="epf-arzt">{site.doctorSentence}</p>
         </div>
 
+        <ProductTeaser position="ernaehrungsplan" />
         <div class="epf-faq"><Faq items={faq} id="plan-faq" title="Häufige Fragen zum Ernährungsplan" /></div>
 
         <Footnotes ids={fnIds} />

@@ -21,22 +21,22 @@ faq:
   - q: "Brauche ich Gewichte oder ein Studio?"
     a: "<p>Nein. Für die ersten zwölf Wochen reichen das eigene Körpergewicht und ein Set Widerstandsbänder. Ein Studio ist sinnvoll, wenn du nach drei Monaten mehr Widerstand brauchst, als Bänder bieten, oder wenn dir Termine dort helfen, dranzubleiben.</p>"
   - q: "Nehme ich durch Krafttraining zu?"
-    a: "<p>Die Waage kann in den ersten Wochen leicht steigen, weil Muskeln Wasser und Glykogen speichern, besonders wenn du gleichzeitig Kreatin nimmst. Das ist kein Fett. Miss neben dem Gewicht auch Taillenumfang und wie schwer dir Treppen fallen; das zeigt, was wirklich passiert.</p>"
+    a: "<p>Fett nimmst du dadurch nicht zu. Die Waage kann in den ersten Wochen trotzdem leicht steigen, weil Muskeln Wasser und Glykogen (gespeicherte Kohlenhydrate) speichern, besonders wenn du gleichzeitig Kreatin nimmst. Miss neben dem Gewicht auch Taillenumfang und wie schwer dir Treppen fallen; das zeigt, was wirklich passiert.</p>"
   - q: "Was ist mit Ausdauertraining?"
-    a: "<p>Gut fürs Herz und für die Stimmung, aber es hält Muskeln nicht. Wer beides schafft, macht beides. Wer nur Zeit für eines hat, nimmt nach der Abnehmspritze das Krafttraining, weil unter der Spritze Muskeln verloren gegangen sind.</p>"
+    a: "<p>Gut fürs Herz und für die Stimmung, aber es hält Muskeln nicht. Schaffst du beides, mach beides. Hast du nur Zeit für eines, nimm nach der Abnehmspritze das Krafttraining, weil unter der Spritze Muskeln verloren gegangen sind.</p>"
 ---
 
-Wer die Abnehmspritze absetzt, hört oft „mehr bewegen“. Das ist zu unpräzise. Die Studien zeigen etwas Genaueres: Krafttraining, zweimal pro Woche, mit steigender Belastung. Hier steht, warum das der stärkste Hebel ist, und dazu ein Plan, den man ohne Vorwissen in 30 Minuten zuhause machen kann. Den Verlauf der Wochen nach der letzten Dosis beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Wenn du die Abnehmspritze absetzt, hörst du oft: „Beweg dich mehr.“ Das ist zu ungenau. Die Studien zeigen etwas Konkreteres: Krafttraining, zweimal pro Woche, mit langsam steigender Belastung. Hier steht, warum gerade das zählt, und dazu ein Plan, den du ohne Vorwissen in 30 Minuten zuhause schaffst. Den Verlauf der Wochen nach der letzten Dosis beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
-> **Kurz gesagt:** Zwei Einheiten pro Woche, sechs Übungen für den ganzen Körper, zwei bis drei Sätze mit 8 bis 12 Wiederholungen, Belastung alle zwei Wochen leicht steigern. Am besten schon vor der letzten Dosis anfangen. Bei Vorerkrankungen den Start mit der Ärztin oder dem Arzt abstimmen.
+> **Kurz gesagt:** Zwei Einheiten pro Woche, sechs Übungen für den ganzen Körper, je zwei bis drei Sätze (Durchgänge) mit 8 bis 12 Wiederholungen; alle zwei Wochen machst du es ein wenig schwerer. Fang am besten schon vor der letzten Dosis an. Bei Vorerkrankungen stimmst du den Start mit deiner Ärztin oder deinem Arzt ab.
 
 ## Warum Krafttraining und nicht einfach „Bewegung“
 
 Dafür sprechen drei Befunde:
 
-1. **Es schützt Muskeln, während Gewicht verloren geht.** In einer Substudie der STEP-1-Studie entfielen rund 40 % des Gewichtsverlusts unter Semaglutid auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">8</a></sup> Eine Meta-Analyse randomisierter Studien zeigt, dass Krafttraining während einer Kalorienreduktion den Verlust an fettfreier Masse weitgehend verhindert.<sup><a href="#fn-sardeli2018">2</a></sup>
-2. **Es verändert, was nach dem Absetzen passiert.** In der dänischen S-LiTE-Studie hielten Teilnehmende mit betreutem Trainingsprogramm ihr Gewicht und ihre Körperzusammensetzung ein Jahr nach dem Ende aller Behandlungen; in der Gruppe, die nur das Medikament bekommen hatte, lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">1</a></sup>
-3. **Es braucht weniger Zeit, als die meisten denken.** Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten für alle großen Muskelgruppen.<sup><a href="#fn-who2020">3</a></sup> Eine Meta-Analyse zeigt, dass zwei Einheiten pro Muskelgruppe und Woche mehr Muskelzuwachs bringen als eine; ob drei mehr bringen als zwei, lässt sie offen.<sup><a href="#fn-schoenfeld2016">4</a></sup>
+1. **Es schützt Muskeln, während Gewicht verloren geht.** Rund 40 % des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse, also Muskeln, Wasser und Gewebe (Substudie der STEP-1-Studie).<sup><a href="#fn-wilding2021dxa">8</a></sup> Von 15 verlorenen Kilo sind das zum Beispiel 6. Krafttraining während einer Kalorienreduktion verhindert diesen Verlust weitgehend – das zeigt eine Meta-Analyse randomisierter Studien.<sup><a href="#fn-sardeli2018">2</a></sup>
+2. **Es verändert, was nach dem Absetzen passiert.** Teilnehmende mit betreutem Trainingsprogramm hielten ihr Gewicht und ihre Körperzusammensetzung ein Jahr nach dem Ende aller Behandlungen; mit Medikament allein lag die Zunahme 6 kg höher (dänische S-LiTE-Studie).<sup><a href="#fn-jensen2024">1</a></sup>
+3. **Es braucht weniger Zeit, als die meisten denken.** Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten für alle großen Muskelgruppen.<sup><a href="#fn-who2020">3</a></sup> Zwei Einheiten pro Muskelgruppe und Woche bringen mehr Muskelzuwachs als eine – das zeigt eine Meta-Analyse; ob drei mehr bringen als zwei, lässt sie offen.<sup><a href="#fn-schoenfeld2016">4</a></sup>
 
 Spazierengehen, Radfahren und Schwimmen sind gut für Herz und Kopf. Sie ersetzen aber nicht den Reiz, den Muskeln brauchen, um zu bleiben.
 
@@ -51,7 +51,7 @@ Für Frauen in und nach den Wechseljahren gilt das doppelt: Zum Verlust durch di
 
 **Ganzkörper.** Jede Einheit trainiert Beine, Rücken, Brust, Schultern und Rumpf. Das ist bei zwei Einheiten pro Woche effizienter als aufgeteilte Pläne.
 
-**8 bis 12 Wiederholungen, 2 bis 3 Sätze.** Das Positionspapier des American College of Sports Medicine empfiehlt Einsteigern 8 bis 12 Wiederholungen in 1 bis 3 Sätzen.<sup><a href="#fn-acsm2009">5</a></sup> Der Plan nutzt 2 bis 3 Sätze, mit 60 bis 90 Sekunden Pause dazwischen. Die letzten zwei Wiederholungen eines Satzes sollen anstrengend sein, aber sauber.
+**8 bis 12 Wiederholungen, 2 bis 3 Sätze.** Für Einsteiger gelten 8 bis 12 Wiederholungen in 1 bis 3 Sätzen – so das Positionspapier des American College of Sports Medicine.<sup><a href="#fn-acsm2009">5</a></sup> Der Plan nutzt 2 bis 3 Sätze, mit 60 bis 90 Sekunden Pause dazwischen. Die letzten zwei Wiederholungen eines Satzes sollen anstrengend sein, aber sauber.
 
 **Steigerung.** Der Muskel bleibt nur, wenn die Belastung wächst: mehr Wiederholungen, stärkeres Band, mehr Gewicht, alle ein bis zwei Wochen ein kleiner Schritt. Ohne Steigerung wird Training zur Gewohnheit ohne Wirkung.
 
@@ -89,7 +89,7 @@ Eine Regel für die ganze Zeit: Wenn du in allen Sätzen 12 saubere Wiederholung
 
 ## Was das Training braucht: Protein und, wenn du willst, Kreatin
 
-Training ist der Reiz, Protein ist der Baustoff. Übersichtsarbeiten empfehlen beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag,<sup><a href="#fn-leidy2015">6</a></sup> verteilt auf drei bis vier Mahlzeiten. Eine proteinreiche Mahlzeit nach dem Training ist sinnvoll; wichtiger ist die Tagesmenge. Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver körperlicher Betätigung, bei 3 g täglich.<sup><a href="#fn-euClaims">7</a></sup> Es macht jede Einheit ein Stück wirksamer, ersetzt aber keine. Mehr dazu unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
+Training ist der Reiz, Protein ist der Baustoff. Beim Abnehmen und beim Halten des Gewichts empfehlen Übersichtsarbeiten 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag,<sup><a href="#fn-leidy2015">6</a></sup> verteilt auf drei bis vier Mahlzeiten. Eine proteinreiche Mahlzeit nach dem Training ist sinnvoll; wichtiger ist die Tagesmenge. Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver körperlicher Betätigung, bei 3 g täglich.<sup><a href="#fn-euClaims">7</a></sup> Es macht jede Einheit ein Stück wirksamer, ersetzt aber keine. Mehr dazu unter [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
 
 ## Schon während der Behandlung?
 
@@ -104,7 +104,7 @@ Ja, und das ist der beste Zeitpunkt. Die Teilnehmenden der S-LiTE-Studie, die ei
 - Bei Herz-Kreislauf-Erkrankungen, Bluthochdruck ohne Einstellung, Diabetes mit Insulin oder Gelenkproblemen: Start mit der Ärztin oder dem Arzt besprechen.
 - Bei Schwindel, Brustschmerz oder Atemnot während des Trainings: aufhören und abklären lassen.
 - Muskelkater in den ersten zwei Wochen ist normal; Gelenkschmerz nicht. Dann die Übung leichter machen oder tauschen.
-- Unter der Spritze fühlen sich viele schwach oder übel. Dann kürzer trainieren, nicht auslassen: Zwei Sätze von drei Übungen sind besser als nichts.
+- Unter der Spritze fühlen sich viele schwach oder übel. Auch hier gilt: kürzer trainieren statt auslassen – zwei Sätze von drei Übungen sind besser als nichts.
 
 ---
 

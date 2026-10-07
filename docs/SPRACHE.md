@@ -71,6 +71,34 @@ Diese Vorschläge hat Dominik abgelehnt, weil sie die Stimme wegschleifen und tr
 
 Zahlen, Fußnoten und Quellen · Aussagen, deren Wortlaut CLAIMS.md festlegt · die Abschnitte „Was wir nicht sagen“ · der Pflichtsatz `site.doctorSentence` und der Arztsatz `site.medicalTeamSentence` (andere Sätze mit Arztbezug nur sprachlich glätten, nie inhaltlich) · der Preis-Wortlaut „Das Basis-Programm soll unter 129 € kosten“ (Dominik, 07.10.2026) · Einwilligungstexte in Formularen · Alt-Texte der Grafiken aus `scripts/` · `title`, `metaTitle`, `description`, H1, URLs, `pubDate` (Titel und Descriptions nur als eigene Aufgabe, siehe „Titel und Descriptions“) · Überschriften (H2/H3) nur bei echten Fehlern, und dann im PR begründet. Reine Sprachänderungen bekommen kein neues `updatedDate`.
 
+## Persona und Ton (Dominik, 07.10.2026)
+
+Primär-Persona ist **Sabine**: 45 bis 60, hat die Spritze selbst bezahlt, 12 bis 18 kg abgenommen, setzt gerade ab oder plant es. Größte Angst: Alles kommt zurück; dazu Muskeln, Gesicht, Wechseljahre. Liest abends am Handy, hat keine Medizin- oder Studiokenntnisse. (Alter und Geschlecht sind eine begründete Annahme aus Zulassungsstudien und Marktlage, keine Messung; die Situationen stammen aus der Search Console.) Mitgedacht werden „Katrin“ (spritzt noch, plant das Ende; meldet sich idealerweise vor dem Absetzen auf die Warteliste) und „die Enttäuschte“ (hat nach dem Absetzen zugenommen; braucht zuerst Entlastung). Für Diabetes-Patientinnen schreiben wir Information, nie Programm-Werbung.
+
+Kern-Narrativ aller Texte: Nicht dein Wille ist zu schwach, dein Gegner ist Biologie – und gegen Biologie hilft keine Disziplin, sondern Struktur. Entlastung („kein Charakterfehler, sondern Biologie“) gehört an die Angst-Stellen (Startseite, Jojo, Heißhunger), sparsam dosiert.
+
+Regeln, zusätzlich zu den Sprachregeln oben:
+
+1. **Erst die Leserin, dann der Beleg.** Studiennamen und Studientypen stehen am Satzende als Beleg, nie als Satzanfang oder Überschrift (Ausnahme: Studien-Tracker). Statt „In einer Meta-Analyse war …“ → „…, das zeigt eine Auswertung mehrerer Studien (Meta-Analyse)“.
+2. **Ein Kilo-Beispiel pro Seite.** Der zentrale Prozentwert wird einmal in Kilo übersetzt, als gekennzeichnetes Rechenbeispiel mit exakter Rechnung: „Wer zum Beispiel 15 Kilo verloren hatte, hatte im Mittel 10 wieder drauf“ (zwei Drittel). Die Fußnote bleibt am Zahlensatz.
+3. **Fachbegriff beim ersten Auftritt in wenigen Worten übersetzt:** „fettfreie Masse: Muskeln, Wasser und Gewebe“. Die Glossar-Box verlinkt ihn zusätzlich.
+4. **FAQ-Antworten beginnen mit der Antwort** (Ja/Nein/Zahl); sie stehen auch allein in der Google-Suche.
+5. **Ab und an das du, auch in Erklärsätzen** („Das Programm setzt für dich Vorschläge aus den Studien zusammen“, „dein Appetit“), ohne jede Zeile damit zu beginnen. Die Seite ist „wir“, die Leserin „du“.
+6. **Das Programm besitzt keine Lösung.** Es „setzt Vorschläge aus den Studien zusammen“, es „macht“ nicht die Struktur und verspricht kein Ergebnis (CLAIMS D13 bleibt: „Eine eigene Studie zum Programm gibt es nicht.“).
+
+Festgelegte Wortlaute vom 07.10.2026 (Dominik):
+
+- Programm-Intro Startseite: „Gegen den zurückkehrenden Appetit hilft keine Disziplin, sondern Struktur. Das Programm setzt für dich Vorschläge aus den Studien zusammen: ein Plan für jede Woche. Eine eigene Studie zum Programm gibt es nicht.“
+- FAQ „Was ist das Programm genau?“: „Zwölf Wochen Struktur für die Zeit, in der dein Appetit zurückkommt. Konkret: … Dazu: … Und … Plus …“ (Aufzählrhythmus).
+
+## Echte Stimmen und Zitate (Dominik, 07.10.2026)
+
+- **Erfundene Erfahrungsberichte und Testimonials bleiben verboten** (CLAUDE.md); das gilt auch für „zusammengesetzte“ oder „typisierte“ Personen.
+- Echte Zitate aus Presse oder Studien sind erlaubt als **kurze wörtliche Zitate (ein bis zwei Sätze) mit Quellenangabe und Link** (Zitatrecht, § 51 UrhG: Belegzweck, Quelle genannt). Vor jeder Verwendung: Wortlaut an der Quelle prüfen (Compliance-Prüfung); bei Bezahlschranken das vermerken.
+- **Namen nur als Vorname plus Initiale** („Donna C., 62“), nie volle Nachnamen; Pseudonyme der Redaktion als solche kennzeichnen („Name von der Redaktion geändert“). Übersetzungen kennzeichnen („aus dem Englischen übersetzt“).
+- Zitat-Abschnitte heißen „Was Betroffene berichten“, stehen nie neben dem Produkt-Teaser und enden mit dem Hinweis auf [/erfahrungen/](/erfahrungen/). Einordnung dazu: Einzelne Stimmen, keine Studienergebnisse.
+- Muster statt Einzelfall, wenn kein prüfbares Zitat vorliegt: „In Interviews beschreiben Betroffene …“ mit Studienquelle als Fußnote (z. B. devereHunt2026, „food noise“).
+
 ## Titel und Descriptions (Dominik, 07.10.2026)
 
 Ziel: mehr Klicks aus der Google-Suche, ohne reißerisch zu werden. Dominiks Regeln:

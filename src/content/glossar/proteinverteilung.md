@@ -2,7 +2,7 @@
 term: "Proteinverteilung"
 metaTitle: "Proteinverteilung: warum drei Portionen mehr bringen als eine"
 description: "Proteinverteilung heißt: die Tagesmenge auf die Mahlzeiten aufteilen. Gleichmäßig verteilt war der Muskelaufbau in einer Studie um 25 % höher. Praktische Folgen."
-short: "Die Aufteilung der täglichen Proteinmenge auf die Mahlzeiten. Bei gleichmäßiger Verteilung (etwa 30 g pro Mahlzeit) war die Muskelproteinsynthese über 24 Stunden um rund 25 % höher als bei einer abendlastigen Verteilung."
+short: "Wie du dein Protein über den Tag verteilst. Mit etwa 30 g pro Mahlzeit bauten die Muskeln über 24 Stunden rund 25 % mehr Eiweiß auf als bei einer Verteilung mit viel Protein am Abend."
 synonyms: ["Protein-Verteilung", "Protein Pacing", "Proteintiming", "Protein-Timing"]
 sources: ["mamerow2014", "moore2015", "leidy2015"]
 related: ["muskelproteinsynthese", "leucin-schwelle", "fettfreie-masse"]

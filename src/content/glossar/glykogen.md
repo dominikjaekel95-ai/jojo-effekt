@@ -2,7 +2,7 @@
 term: "Glykogen"
 metaTitle: "Glykogen: warum das Gewicht in Tagen um Kilos schwankt"
 description: "Glykogen ist der Kohlenhydratspeicher in Muskeln und Leber und bindet Wasser. Deshalb springt die Waage nach Diät oder Training um ein bis zwei Kilo."
-short: "Die Speicherform von Kohlenhydraten in Muskeln und Leber. Jedes Gramm Glykogen bindet etwa drei Gramm Wasser; deshalb schwankt das Körpergewicht bei wenig oder viel Kohlenhydraten innerhalb von Tagen um ein bis zwei Kilogramm, ohne dass sich das Fett ändert."
+short: "Der Kohlenhydratspeicher in Muskeln und Leber. Jedes Gramm bindet etwa drei Gramm Wasser. Deshalb schwankt dein Gewicht je nach Kohlenhydraten innerhalb von Tagen um ein bis zwei Kilo, ohne dass sich am Fett etwas ändert."
 synonyms: ["Glykogenspeicher", "Kohlenhydratspeicher", "Glycogen"]
 sources: ["fernandezelias2015", "kreider2017", "wilding2021dxa"]
 related: ["fettfreie-masse", "bioimpedanzanalyse", "kreatin-monohydrat", "dxa"]

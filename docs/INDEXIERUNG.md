@@ -120,3 +120,9 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/ | Redesign „Kalk“: neue Struktur | 2026-10-06 | offen |
 | https://nachderspritze.de/erfahrungen/ | vorerst noindex bis zum ersten echten Bericht, dann wieder indexierbar machen und anmelden | 2026-10-07 | noindex |
 | https://nachderspritze.de/ | Neue Überschrift und neuer Titel „Dein neues Gewicht braucht einen Plan“ | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/abnehmspritze-absetzen/ | Neuer Einstieg, Abschnitt „Was Betroffene berichten“ mit belegten Zitaten | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/jojo-effekt-abnehmspritze/ | Abschnitt „Was Betroffene berichten“, Kilo-Beispiel im Kurz-gesagt | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/heisshunger-nach-abnehmspritze/ | Neuer Einstieg, Absatz „Essensrauschen“ mit neuer Quelle | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/gewicht-halten-nach-abnehmspritze/ | Neuer Einstieg (Vorsprung statt Uhr) | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/wechseljahre-abnehmspritze/ | Meta-Description ohne „Magermasse“, verständlicher | 2026-10-07 | offen |
+| https://nachderspritze.de/checkliste/ | Neues Intro (Vorsprung), Programm-Hinweis | 2026-10-07 | offen |

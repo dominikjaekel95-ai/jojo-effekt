@@ -2,7 +2,7 @@
 term: "Sarkopenie"
 metaTitle: "Sarkopenie: Muskelschwund, Definition und Grenzwerte"
 description: "Sarkopenie: Verlust von Muskelkraft und Muskelmasse. Die europäische Definition von 2019, die Griffkraft-Grenzwerte und warum das Thema nach der Spritze zählt."
-short: "Krankhafter Verlust von Muskelkraft und Muskelmasse. Nach der europäischen Definition von 2019 (EWGSOP2) gilt geringe Muskelkraft als Leitkriterium, zum Beispiel eine Griffkraft unter 27 kg bei Männern und unter 16 kg bei Frauen."
+short: "Krankhafter Verlust von Muskelkraft und Muskelmasse. Nach der europäischen Definition von 2019 (EWGSOP2) zählt vor allem die Kraft, zum Beispiel eine Griffkraft unter 27 kg bei Männern und unter 16 kg bei Frauen."
 synonyms: ["Muskelschwund", "Sarcopenia", "altersbedingter Muskelabbau"]
 sources: ["cruzjentoft2019", "wilding2021dxa", "sardeli2018", "who2020"]
 related: ["sarkopene-adipositas", "griffkraft", "fettfreie-masse", "anabole-resistenz"]

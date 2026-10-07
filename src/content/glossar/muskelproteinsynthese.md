@@ -2,7 +2,7 @@
 term: "Muskelproteinsynthese"
 metaTitle: "Muskelproteinsynthese: wie Muskeln wachsen und erhalten bleiben"
 description: "Muskelproteinsynthese: der Aufbau von Muskelprotein aus Aminosäuren. Was sie anstößt, wie viel Protein pro Mahlzeit nötig ist und warum das nach der Spritze zählt."
-short: "Der Prozess, mit dem Muskelzellen aus Aminosäuren neues Protein bilden. Er wird durch Proteinaufnahme und Krafttraining angestoßen und entscheidet zusammen mit dem Abbau, ob Muskelmasse bleibt."
+short: "Wie deine Muskeln aus Eiweißbausteinen neues Muskeleiweiß bilden. Protein und Krafttraining stoßen das an; zusammen mit dem Abbau entscheidet es, ob deine Muskeln bleiben."
 synonyms: ["Proteinsynthese", "MPS", "Muskelaufbau auf Zellebene"]
 sources: ["moore2015", "mamerow2014", "leidy2015", "schoenfeld2016"]
 related: ["leucin-schwelle", "proteinverteilung", "fettfreie-masse", "kreatin-monohydrat"]

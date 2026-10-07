@@ -2,7 +2,7 @@
 term: "Haltephase"
 metaTitle: "Haltephase: die Zeit nach der letzten Dosis der Abnehmspritze"
 description: "Haltephase nennen wir die Monate nach der letzten Dosis, in denen das Gewicht ohne Medikament gehalten werden soll. Was Studien über diese Zeit zeigen."
-short: "Die Zeit nach der letzten Dosis eines GLP-1-Medikaments, in der das erreichte Gewicht ohne Medikament gehalten werden soll. Sie beginnt mit dem Absetzen und dauert mindestens ein Jahr."
+short: "Die Zeit nach der letzten Dosis deines GLP-1-Medikaments, in der es darum geht, dein neues Gewicht ohne Medikament zu halten. Sie beginnt mit dem Absetzen und dauert mindestens ein Jahr."
 synonyms: ["Haltephase nach der Abnehmspritze"]
 sources: ["wilding2022ext", "wu2025", "jensen2024", "rodriguez2025"]
 related: ["absetzkurve", "auswaschphase", "set-point-theorie"]

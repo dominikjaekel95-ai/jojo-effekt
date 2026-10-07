@@ -2,7 +2,7 @@
 term: "Bioimpedanzanalyse"
 metaTitle: "Bioimpedanzanalyse: was Körperfettwaagen wirklich messen"
 description: "Die Bioimpedanzanalyse schätzt Wasser, fettfreie Masse und Fett über den elektrischen Widerstand. Körperfettwaagen nutzen sie. Warum die Werte schwanken."
-short: "Ein Verfahren, das über den elektrischen Widerstand des Körpers Wasser, fettfreie Masse und Fett schätzt. Körperfettwaagen arbeiten damit; die Werte schwanken mit dem Wasserhaushalt."
+short: "Das Messverfahren von Körperfettwaagen: Ein schwacher Strom fließt durch den Körper, aus dem Widerstand schätzt das Gerät Wasser, fettfreie Masse und Fett. Die Werte schwanken mit dem Wasserhaushalt."
 synonyms: ["Bioimpedanz", "BIA", "Körperfettwaage", "Bioelektrische Impedanzanalyse"]
 sources: ["kyle2004", "wilding2021dxa"]
 related: ["dxa", "fettfreie-masse", "griffkraft"]
@@ -16,7 +16,7 @@ Eine Körperfettwaage schickt einen schwachen Wechselstrom durch den Körper. Wa
 
 Geschätzt wird über Formeln, die für bestimmte Gruppen entwickelt wurden. Die Leitlinie der europäischen Fachgesellschaft für Ernährungsmedizin beschreibt, wovon die Genauigkeit abhängt: vom Flüssigkeitsstatus, von der Tageszeit, von Essen und Bewegung vor der Messung, von der Hauttemperatur und davon, ob die Formel zur Person passt.<sup><a href="#fn-kyle2004">1</a></sup> Ein Glas Wasser, ein Saunagang oder ein kohlenhydratarmer Tag verändern das Ergebnis um mehrere Prozentpunkte. Bei starkem Übergewicht und nach schnellem Gewichtsverlust sind die Formeln zusätzlich ungenau.
 
-## Wie man sie trotzdem nutzt
+## So nutzt du sie trotzdem
 
 - Immer unter gleichen Bedingungen: morgens, nüchtern, nach dem Toilettengang, vor dem Sport.
 - Nicht auf den einzelnen Wert schauen, sondern auf den Trend über Wochen.

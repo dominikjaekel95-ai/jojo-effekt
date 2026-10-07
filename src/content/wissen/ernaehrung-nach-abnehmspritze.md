@@ -12,7 +12,7 @@ sources: ["wu2025", "sumithran2011", "leidy2015", "almandoz2024", "dgeBallaststo
 related: ["protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze", "supplements-nach-abnehmspritze"]
 faq:
   - q: "Muss ich nach der Abnehmspritze Kalorien zählen?"
-    a: "<p>Nicht dauerhaft. Wirksamer ist eine Struktur, die mit normalem Hunger funktioniert: Protein zuerst, Gemüse bei jeder Mahlzeit, drei bis vier feste Mahlzeiten, keine Flüssigkalorien. Wer zwei Wochen lang zählt, bekommt ein Gefühl für Portionen ohne Spritze; danach reicht die wöchentliche Waage.</p>"
+    a: "<p>Nicht dauerhaft. Wirksamer ist eine Struktur, die mit normalem Hunger funktioniert: Protein zuerst, Gemüse bei jeder Mahlzeit, drei bis vier feste Mahlzeiten, keine Flüssigkalorien. Zählst du zwei Wochen lang, bekommst du ein Gefühl für Portionen ohne Spritze; danach reicht die wöchentliche Waage.</p>"
   - q: "Wie viele Kalorien brauche ich nach dem Absetzen?"
     a: "<p>Weniger als vor der Therapie, weil ein leichterer Körper weniger verbraucht und der Stoffwechsel nach Gewichtsverlust zusätzlich gedrosselt ist. Eine pauschale Zahl gibt es nicht. Praktisch: Mahlzeiten so groß, dass du satt wirst, aber mit Protein und Gemüse als Basis; die Waage einmal pro Woche zeigt, ob es passt.</p>"
   - q: "Was sollte man nach der Abnehmspritze nicht essen?"
@@ -22,22 +22,22 @@ faq:
   - q: "Zahlt die Krankenkasse eine Ernährungsberatung?"
     a: "<p>Viele gesetzliche Kassen bezuschussen eine Ernährungstherapie nach § 43 SGB V, wenn eine ärztliche Notwendigkeitsbescheinigung vorliegt. Frag deine Ärztin nach der Bescheinigung und deine Kasse nach zertifizierten Beraterinnen.</p>"
   - q: "Was frühstücken nach der Abnehmspritze?"
-    a: "<p>Ein Frühstück mit mindestens 25 g Protein, weil beim Frühstück am häufigsten Protein fehlt und der Heißhunger am Nachmittag dann vorprogrammiert ist. Beispiele: 200 g Skyr oder Magerquark mit Beeren und Haferflocken (rund 23 g Protein aus dem Skyr), zwei Eier mit Vollkornbrot und Hüttenkäse (rund 20 g), oder ein Porridge mit Milch, Quark und Nüssen. Wer morgens keinen Hunger hat, verschiebt das Frühstück, lässt es aber nicht ausfallen.</p>"
+    a: "<p>Ein Frühstück mit mindestens 25 g Protein, weil beim Frühstück am häufigsten Protein fehlt und der Heißhunger am Nachmittag dann vorprogrammiert ist. Beispiele: 200 g Skyr oder Magerquark mit Beeren und Haferflocken (rund 23 g Protein aus dem Skyr), zwei Eier mit Vollkornbrot und Hüttenkäse (rund 20 g), oder ein Porridge mit Milch, Quark und Nüssen. Hast du morgens keinen Hunger, verschieb das Frühstück, lass es aber nicht ausfallen.</p>"
   - q: "Gibt es einen Ernährungsplan nach der Abnehmspritze als PDF?"
     a: "<p>Ja. Der <a href=\"/ernaehrungsplan/\">Ernährungsplan nach der Abnehmspritze</a> umfasst 14 Tage mit Mengen, Einkaufsliste, Rezeptkarten und Austauschtabelle. Vier Fragen zu Ernährungsform, Unverträglichkeit, Appetit und Gewicht führen zu einem von 56 Plänen mit rund 1,2 g Protein pro kg Körpergewicht, auf Wunsch angepasst an deine Lieblingsspeisen. Er kommt kostenlos als PDF per Mail, zusammen mit dem Newsletter; Kalorien gibt er nicht vor.</p>"
 ---
 
-Unter der Spritze war Ernährung einfach: Der Appetit hat die Portionen begrenzt. Nach dem Absetzen ist genau das weg. Dieser Artikel beschreibt, was sich ändert, welche fünf Regeln mit normalem Hunger funktionieren und wie ein Tag damit aussieht. Was unter der Therapie gilt, steht im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/); hier geht es um die Zeit danach. Was in den ersten Wochen nach der letzten Dosis insgesamt passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Unter der Spritze war Essen einfach: Der fehlende Appetit hat deine Portionen begrenzt. Nach dem Absetzen fällt diese Grenze weg. Hier stehen fünf Regeln, die auch mit normalem Hunger funktionieren, und ein Beispieltag dazu. Was während der Therapie gilt, steht unter [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/); den Verlauf der ersten Wochen findest du unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
-> **Kurz gesagt:** Protein zuerst, Volumen aus Gemüse und Ballaststoffen, drei bis vier feste Mahlzeiten, keine Flüssigkalorien, einmal pro Woche wiegen. Keine Crash-Diät. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
+> **Kurz gesagt:** Iss Protein zuerst, hol dir Volumen aus Gemüse und Ballaststoffen, bleib bei drei bis vier festen Mahlzeiten, trink keine Kalorien und wieg dich einmal pro Woche. Keine Crash-Diät. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
 
 ## Was sich nach dem Absetzen ändert
 
 Drei Dinge passieren, sobald der Wirkstoff abgebaut ist:
 
-1. **Der Appetit kommt zurück, oft stärker als vor der Therapie.** Nach jedem größeren Gewichtsverlust verschiebt der Körper seine Hormone in Richtung „Nachfüllen“: mehr Ghrelin, weniger Leptin. In einer Studie waren diese Veränderungen ein Jahr nach der Diät noch messbar.<sup><a href="#fn-sumithran2011">2</a></sup>
+1. **Der Appetit kommt zurück, oft stärker als vor der Therapie.** Nach jedem größeren Gewichtsverlust verschiebt der Körper seine Hormone in Richtung „Nachfüllen“: mehr Ghrelin (Hungerhormon), weniger Leptin (Sättigungshormon). Ein Jahr nach der Diät waren diese Veränderungen in einer Studie noch messbar.<sup><a href="#fn-sumithran2011">2</a></sup>
 2. **Der Magen entleert sich wieder schneller.** Die Sättigung kommt später und hält kürzer. Die Portion, die unter der Spritze satt gemacht hat, reicht jetzt nicht mehr.
-3. **Der Energiebedarf ist niedriger als vor der Therapie.** Ein leichterer Körper braucht weniger. Wer so isst wie früher, nimmt zu; in Studien wird die Zunahme etwa ab Woche 8 nach dem Absetzen messbar.<sup><a href="#fn-wu2025">1</a></sup>
+3. **Der Energiebedarf ist niedriger als vor der Therapie.** Ein leichterer Körper braucht weniger. Isst du so wie früher, nimmst du zu; messbar wird die Zunahme in Studien etwa ab Woche 8 nach dem Absetzen.<sup><a href="#fn-wu2025">1</a></sup>
 
 Das Problem ist also nicht Wissen, sondern Struktur: Die Ernährung muss ohne die Bremse funktionieren.
 
@@ -45,7 +45,7 @@ Das Problem ist also nicht Wissen, sondern Struktur: Die Ernährung muss ohne di
 
 ### 1. Protein zuerst, bei jeder Mahlzeit
 
-Übersichtsarbeiten empfehlen beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Am besten verteilst du die Menge auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 g pro Mahlzeit. Die Reihenfolge auf dem Teller entscheidet: erst die Proteinquelle, dann Gemüse, dann der Rest. Wenn die Sättigung kommt, ist das Wichtigste drin. Rechenhilfe und Lebensmitteltabelle im [Protein-Artikel](/wissen/protein-abnehmspritze/).
+1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag sind das Ziel beim Abnehmen und beim Halten des Gewichts – das empfehlen Übersichtsarbeiten.<sup><a href="#fn-leidy2015">3</a></sup> Am besten verteilst du die Menge auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 g pro Mahlzeit. Die Reihenfolge auf dem Teller entscheidet: erst die Proteinquelle, dann Gemüse, dann der Rest. Wenn die Sättigung kommt, ist das Wichtigste drin. Rechenhilfe und Lebensmitteltabelle im [Protein-Artikel](/wissen/protein-abnehmspritze/).
 
 ### 2. Volumen statt Verzicht
 
@@ -53,11 +53,11 @@ Sättigung hängt stark davon ab, wie viel Masse im Magen liegt, nicht nur von K
 
 ### 3. Ballaststoffe auf Zielmenge
 
-Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<sup><a href="#fn-dgeBallaststoffe">5</a></sup> Ballaststoffe verlangsamen die Magenentleerung ein Stück weit und geben den Mahlzeiten Masse. Quellen: Hülsenfrüchte, Haferflocken, Vollkorn, Gemüse, Beeren, Leinsamen. Wer unter der Spritze wenig gegessen hat, liegt oft bei 10 bis 15 g und sollte die Menge über zwei Wochen steigern, immer mit viel Wasser, sonst reagiert der Darm. Was der einzige Ballaststoff mit zugelassener Angabe zum Gewichtsverlust kann und was nicht, steht unter [Glucomannan bei der Abnehmspritze](/wissen/glucomannan-abnehmspritze/).
+Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<sup><a href="#fn-dgeBallaststoffe">5</a></sup> Ballaststoffe verlangsamen die Magenentleerung ein Stück weit und geben den Mahlzeiten Masse. Quellen: Hülsenfrüchte, Haferflocken, Vollkorn, Gemüse, Beeren, Leinsamen. Hast du unter der Spritze wenig gegessen, liegst du oft bei 10 bis 15 g. Steigere die Menge über zwei Wochen, immer mit viel Wasser, sonst reagiert der Darm. Was der einzige Ballaststoff mit zugelassener Angabe zum Gewichtsverlust kann und was nicht, steht unter [Glucomannan bei der Abnehmspritze](/wissen/glucomannan-abnehmspritze/).
 
 ### 4. Feste Mahlzeiten, keine Flüssigkalorien
 
-Drei bis vier Mahlzeiten zu festen Zeiten, dazwischen nichts aus der Hand. Der Hunger zwischen den Mahlzeiten ist in den ersten Wochen normal und geht vorbei. Säfte, Softdrinks, Milchkaffee-Spezialitäten und Alkohol liefern Kalorien ohne Sättigung; Wasser und ungesüßter Tee sind die Getränke, die die DGE empfiehlt; schwarzer Kaffee ohne Zucker liefert ebenfalls keine Kalorien.<sup><a href="#fn-dgeEmpfehlungen">6</a></sup> Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten nennen außerdem zwei bis drei Liter Flüssigkeit am Tag, weil Durst und Hunger leicht verwechselt werden.<sup><a href="#fn-almandoz2024">4</a></sup>
+Drei bis vier Mahlzeiten zu festen Zeiten, dazwischen nichts aus der Hand. Der Hunger zwischen den Mahlzeiten ist in den ersten Wochen normal und geht vorbei. Säfte, Softdrinks, Milchkaffee-Spezialitäten und Alkohol liefern Kalorien ohne Sättigung. Die DGE empfiehlt als Getränke Wasser und ungesüßten Tee; auch schwarzer Kaffee ohne Zucker liefert keine Kalorien.<sup><a href="#fn-dgeEmpfehlungen">6</a></sup> Dazu zwei bis drei Liter Flüssigkeit am Tag, weil Durst und Hunger leicht zu verwechseln sind – so die Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten.<sup><a href="#fn-almandoz2024">4</a></sup>
 
 ### 5. Wiegen mit Regel, nicht mit Gefühl
 
@@ -82,7 +82,7 @@ Haferflocken, Linsen, Fisch und Eier decken an so einem Tag nebenbei auch das, w
 
 ## Der 14-Tage-Plan zum Ausdrucken
 
-Wer das Muster nicht jeden Tag neu zusammenstellen will: Der [Ernährungsplan nach der Abnehmspritze](/ernaehrungsplan/) setzt es für 14 Tage um, mit Mengen, Einkaufslisten, Rezeptkarten und einer Austauschtabelle. Vier Fragen zu Ernährungsform (Mischkost, pescetarisch, vegetarisch, vegan), Laktose, Appetit und Gewicht führen zu einem von 56 Plänen, Lieblingsspeisen fließen auf Wunsch ein; das Proteinziel liegt bei rund 1,2 g pro kg.<sup><a href="#fn-leidy2015">3</a></sup> Die Proteinwerte sind gerundete Mittelwerte aus dem Bundeslebensmittelschlüssel.<sup><a href="#fn-bls">9</a></sup> Der Plan kommt kostenlos als PDF per Mail, zusammen mit dem Newsletter; ohne Newsletter schickt Dominik ihn auf Nachfrage persönlich. Dein genaues Tagesziel rechnet der [Proteinrechner](/werkzeuge/proteinrechner/) aus.
+Willst du das Muster nicht jeden Tag neu zusammenstellen: Der [Ernährungsplan nach der Abnehmspritze](/ernaehrungsplan/) setzt es für 14 Tage um, mit Mengen, Einkaufslisten, Rezeptkarten und einer Austauschtabelle. Vier Fragen zu Ernährungsform (Mischkost, pescetarisch, vegetarisch, vegan), Laktose, Appetit und Gewicht führen zu einem von 56 Plänen, Lieblingsspeisen fließen auf Wunsch ein; das Proteinziel liegt bei rund 1,2 g pro kg.<sup><a href="#fn-leidy2015">3</a></sup> Die Proteinwerte sind gerundete Mittelwerte aus dem Bundeslebensmittelschlüssel.<sup><a href="#fn-bls">9</a></sup> Der Plan kommt kostenlos als PDF per Mail, zusammen mit dem Newsletter; ohne Newsletter schickt Dominik ihn auf Nachfrage persönlich. Dein genaues Tagesziel rechnet der [Proteinrechner](/werkzeuge/proteinrechner/) aus.
 
 ## Was unter der Spritze funktioniert hat und jetzt nicht mehr
 
@@ -93,14 +93,14 @@ Wer das Muster nicht jeden Tag neu zusammenstellen will: Der [Ernährungsplan na
 
 ## Die vier Fehler, die das Gewicht zurückbringen
 
-1. **Crash-Diät nach dem Absetzen.** Sie senkt den Grundumsatz weiter und kostet Muskeln. Der Verlauf nach dem Absetzen ist in Studien ohnehin ungünstig: Zwei Drittel des Verlusts waren nach einem Jahr zurück.<sup><a href="#fn-wilding2022ext">7</a></sup> Eine Crash-Diät beschleunigt das, und sie ist ein neuer Auslöser für [Haarausfall](/wissen/haarausfall-abnehmspritze/).
+1. **Crash-Diät nach dem Absetzen.** Sie senkt den Grundumsatz (Energieverbrauch in Ruhe) weiter und kostet Muskeln. Der Verlauf nach dem Absetzen ist in Studien ohnehin ungünstig: Zwei Drittel des Verlusts waren nach einem Jahr zurück.<sup><a href="#fn-wilding2022ext">7</a></sup> Von 15 verlorenen Kilo sind das im Mittel 10. Eine Crash-Diät beschleunigt das, und sie ist ein neuer Auslöser für [Haarausfall](/wissen/haarausfall-abnehmspritze/).
 2. **Nur Salat.** Volumen ohne Protein sättigt kurz und lässt Muskeln ohne Baustoff.
 3. **Alkohol als Ausnahme, die zur Regel wird.** Zwei Gläser Wein am Abend sind 300 kcal ohne Sättigung.
-4. **Training weglassen.** Ernährung allein hält das Gewicht schlechter als Ernährung plus Krafttraining. In der S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach Therapieende.<sup><a href="#fn-jensen2024">8</a></sup>
+4. **Training weglassen.** Ernährung allein hält das Gewicht schlechter als Ernährung plus Krafttraining. Teilnehmende mit Trainingsprogramm hielten ihr Gewicht ein Jahr nach Therapieende (S-LiTE-Studie).<sup><a href="#fn-jensen2024">8</a></sup>
 
 ## Wann eine Ernährungsberatung sinnvoll ist
 
-Wenn das Gewicht trotz Struktur steigt, wenn Essanfälle auftreten oder wenn Typ-2-Diabetes oder eine Nierenerkrankung mitspielen. Eine zertifizierte Ernährungstherapie wird von vielen Kassen bezuschusst, wenn eine ärztliche Bescheinigung vorliegt. Deine Ärztin oder dein Arzt stellt sie aus.
+Wenn das Gewicht trotz Struktur steigt, wenn Essanfälle auftreten oder wenn Typ-2-Diabetes oder eine Nierenerkrankung mitspielen. Viele Kassen bezuschussen eine zertifizierte Ernährungstherapie, wenn eine ärztliche Bescheinigung vorliegt. Deine Ärztin oder dein Arzt stellt sie aus.
 
 ---
 

@@ -2,7 +2,7 @@
 term: "NEAT"
 metaTitle: "NEAT: der Energieverbrauch durch Alltagsbewegung"
 description: "NEAT ist die Energie, die Alltagsbewegung verbraucht. Zwischen Menschen schwankt sie um bis zu 2.000 kcal am Tag. Warum sie nach dem Abnehmen sinkt und was hilft."
-short: "Non-Exercise Activity Thermogenesis: die Energie, die durch alle Bewegung außerhalb von Sport verbraucht wird, vom Gehen über Stehen bis zum Zappeln. Zwischen Menschen kann sie um bis zu 2.000 kcal am Tag schwanken."
+short: "Kurz für Non-Exercise Activity Thermogenesis: die Energie für alle Bewegung außer Sport, also Gehen, Stehen, Treppensteigen, Zappeln. Zwischen zwei Menschen kann der Unterschied bis zu 2.000 kcal am Tag betragen."
 synonyms: ["Non-Exercise Activity Thermogenesis", "Alltagsbewegung", "Alltagsaktivität"]
 sources: ["levine2002", "rosenbaum2010", "who2020"]
 related: ["adaptive-thermogenese", "metabolische-adaptation", "set-point-theorie"]

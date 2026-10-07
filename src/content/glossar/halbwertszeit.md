@@ -2,7 +2,7 @@
 term: "Halbwertszeit"
 metaTitle: "Halbwertszeit: wie lange die Abnehmspritze im Körper bleibt"
 description: "Die Halbwertszeit sagt, wie lange ein Wirkstoff im Körper bleibt: Semaglutid etwa eine Woche, Tirzepatid etwa fünf Tage, Liraglutid etwa 13 Stunden. Was das heißt."
-short: "Die Zeit, in der die Konzentration eines Wirkstoffs im Blut auf die Hälfte sinkt. Laut Fachinformation: Semaglutid etwa eine Woche, Tirzepatid etwa fünf Tage, Liraglutid etwa 13 Stunden."
+short: "Die Zeit, in der sich die Menge eines Wirkstoffs im Blut halbiert. Laut Fachinformation: Semaglutid etwa eine Woche, Tirzepatid etwa fünf Tage, Liraglutid etwa 13 Stunden."
 synonyms: ["Eliminationshalbwertszeit", "Plasmahalbwertszeit"]
 sources: ["fachinfoWegovy", "fachinfoMounjaro", "fachinfoSaxenda", "wu2025"]
 related: ["auswaschphase", "absetzkurve", "haltephase"]

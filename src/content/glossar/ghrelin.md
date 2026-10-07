@@ -2,7 +2,7 @@
 term: "Ghrelin"
 metaTitle: "Ghrelin: das Hungerhormon nach dem Abnehmen"
 description: "Ghrelin ist das Hormon, das Hunger auslöst. Nach Gewichtsverlust steigt es und bleibt in einer Studie ein Jahr erhöht. Was Schlaf und Protein damit zu tun haben."
-short: "Ein im Magen gebildetes Hormon, das Hunger auslöst. Nach Gewichtsverlust steigt der Ghrelinspiegel; in einer Studie war er auch ein Jahr später noch erhöht."
+short: "Das Hungerhormon aus dem Magen. Nach dem Abnehmen bildet dein Körper mehr davon; in einer Studie war der Spiegel auch ein Jahr später noch erhöht."
 synonyms: ["Hungerhormon"]
 sources: ["sumithran2011", "spiegel2004", "leidy2015"]
 related: ["hedonischer-hunger", "set-point-theorie", "metabolische-adaptation"]

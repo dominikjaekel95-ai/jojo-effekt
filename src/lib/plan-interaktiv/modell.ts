@@ -382,7 +382,8 @@ export function dekodiere(k: Kontext, s: string): Zustand {
  * demselben Platz, wird getauscht (wie Verschieben), sonst ersetzt. Portionen richten sich nach dem neuen Plan.
  */
 export function uebertrage(kAlt: Kontext, zAlt: Zustand, kNeu: Kontext): Zustand {
-  const z = ersetzeAusgeblendete(kNeu, { tage: kopie(kNeu.grund).tage, aus: ordne(zAlt.aus) }) ?? { tage: kopie(kNeu.grund).tage, aus: [] };
+  const start = { tage: kopie(kNeu.grund).tage, aus: ordne(zAlt.aus) };
+  const z = ersetzeAusgeblendete(kNeu, start) ?? start;
   const aus = new Set(z.aus);
   const pins = abweichungen(kAlt, zAlt).filter((x) => x.neu);
   const fest = new Set<string>();

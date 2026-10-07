@@ -1,0 +1,738 @@
+/*
+ * Ernährungsplan: Druckfassung (PDF A4, PDF fürs Handy, „Als PDF speichern“ im Browser).
+ * Markup: src/lib/ernaehrungsplan-druck.ts (Deckblatt bis „Tauschen“) und plan/[id].astro (letzte Seite).
+ * Auf dem Bildschirm unsichtbar; im Druck ersetzt sie die Webansicht der Planseite.
+ *
+ * Typografie wie die Wissensseiten: sechs Schriftgrößen (10, 12, 14, 18, 28, 48 px), drei Textfarben (Tinte, Text 3,
+ * Grün für Protein), Abstände aus dem 8-px-Raster, Weißraum statt Linien (Haarlinien nur zwischen Tagen, Rezepten und
+ * Zeilen des Wochenrasters). Schnitte nur, die es als statische Druckschrift gibt (scripts/fonts/nds-druck-*.woff2):
+ * Breite/Gewicht 100/400 (Text), 100/560 (fett), 112/540 (Gerichtname), 118/520 (Überschrift), 125/480 (Zahlen).
+ *
+ * A4: 210 × 297 mm, Ränder 14/14/16 mm (Inhalt 182 × 267 mm). Handy: Klasse ed-handy auf <html> (?druck=handy),
+ * benannte Seite „handy“ 90 × 160 mm, ein Tag pro Seite. Fußzeile mit Hinweis und Seitenzahl als Randfeld der Seite.
+ */
+
+.ed,
+.ed-nur-handy {
+  display: none;
+}
+
+@page {
+  size: A4;
+  margin: 14mm 14mm 16mm;
+  @bottom-left {
+    content: "nachderspritze.de · Allgemeiner Beispielplan für gesunde Erwachsene, keine ärztliche oder ernährungstherapeutische Beratung.";
+    font-family: "NDS Druck", "Mona Sans Variable", Arial, sans-serif;
+    font-size: 7.5pt;
+    color: #5e605a;
+    vertical-align: top;
+    padding-top: 4mm;
+  }
+  @bottom-right {
+    content: "Seite " counter(page) " von " counter(pages);
+    font-family: "NDS Druck", "Mona Sans Variable", Arial, sans-serif;
+    font-size: 7.5pt;
+    color: #5e605a;
+    vertical-align: top;
+    padding-top: 4mm;
+    white-space: nowrap;
+  }
+}
+
+@page handy {
+  size: 90mm 160mm;
+  margin: 8mm 7mm 15mm;
+  @bottom-left {
+    content: "Allgemeiner Beispielplan für gesunde Erwachsene, keine ärztliche oder ernährungstherapeutische Beratung.";
+    font-family: "NDS Druck", "Mona Sans Variable", Arial, sans-serif;
+    font-size: 7.5pt;
+    line-height: 1.3;
+    color: #5e605a;
+    vertical-align: top;
+    padding-top: 3mm;
+  }
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+    font-family: "NDS Druck", "Mona Sans Variable", Arial, sans-serif;
+    font-size: 7.5pt;
+    color: #5e605a;
+    vertical-align: top;
+    padding-top: 3mm;
+    white-space: nowrap;
+  }
+}
+
+@media print {
+  html.ed-handy body {
+    page: handy;
+  }
+  html,
+  body {
+    background: #fff !important;
+  }
+  body {
+    display: block !important;
+    min-height: 0 !important;
+  }
+  .ep-plan {
+    padding: 0 !important;
+  }
+  .ep-plan > .ep-wrap {
+    display: none !important;
+  }
+
+  .ed {
+    --ed-1: 10px;
+    --ed-2: 12px;
+    --ed-3: 14px;
+    --ed-4: 18px;
+    --ed-5: 28px;
+    --ed-6: 48px;
+    --ed-ink: #141513;
+    --ed-hell: #5e605a;
+    --ed-gruen: #2e5944;
+    --ed-linie: #d3d4cd;
+    --ed-mark: #f3e9b5;
+    /* Höhe einer A4-Inhaltsseite (297 − 14 − 16 mm), knapp darunter, damit kein leeres Blatt entsteht */
+    --ed-seite: 266mm;
+    display: block;
+    color: var(--ed-ink);
+    font-size: var(--ed-3);
+    line-height: 1.5;
+    font-stretch: 100%;
+    font-weight: 400;
+    letter-spacing: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .ed h1,
+  .ed h2,
+  .ed h3 {
+    text-wrap: balance;
+    hyphens: manual;
+  }
+  .ed strong {
+    font-weight: 560;
+  }
+  .ed sup {
+    font-size: 0.7em;
+    line-height: 0;
+    vertical-align: 0.5em;
+    color: var(--ed-hell);
+  }
+  html.ed-handy .ed-nur-handy {
+    display: inline;
+  }
+  html.ed-handy .ed-nur-a4 {
+    display: none;
+  }
+  .ed-hell {
+    color: var(--ed-hell);
+  }
+  .ed-fav {
+    box-shadow: inset 0 -0.42em 0 var(--ed-mark);
+  }
+
+  /* Gemeinsame Bausteine */
+  .ed-kopf {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .ed-h {
+    font-size: var(--ed-5);
+    line-height: 1.15;
+    font-stretch: 118%;
+    font-weight: 520;
+    letter-spacing: -0.02em;
+  }
+  .ed-h4 {
+    font-size: var(--ed-4);
+    line-height: 1.3;
+    font-stretch: 118%;
+    font-weight: 520;
+    letter-spacing: -0.01em;
+  }
+  .ed-kopf-r,
+  .ed-label,
+  .ed-intro {
+    font-size: var(--ed-2);
+    line-height: 1.5;
+    color: var(--ed-hell);
+    font-stretch: 100%;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  .ed-kopf-r {
+    white-space: nowrap;
+  }
+  .ed-intro {
+    max-width: 560px;
+    margin: -8px 0 24px;
+  }
+
+  /* Deckblatt */
+  .ed-deck {
+    display: flex;
+    flex-direction: column;
+    height: var(--ed-seite);
+  }
+  .ed-marke {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: var(--ed-2);
+    color: var(--ed-hell);
+  }
+  .ed-titel {
+    margin-top: 96px;
+    font-size: var(--ed-6);
+    line-height: 1.05;
+    font-stretch: 118%;
+    font-weight: 520;
+    letter-spacing: -0.025em;
+  }
+  .ed-unter {
+    margin-top: 16px;
+    font-size: var(--ed-4);
+    line-height: 1.4;
+    color: var(--ed-hell);
+  }
+  .ed-zahlen {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    column-gap: 48px;
+    margin-top: 64px;
+  }
+  .ed-zahlen dt {
+    font-size: var(--ed-2);
+    color: var(--ed-hell);
+  }
+  .ed-zahlen dd {
+    margin-top: 8px;
+    font-size: var(--ed-6);
+    line-height: 1;
+    font-stretch: 125%;
+    font-weight: 480;
+    letter-spacing: -0.03em;
+  }
+  .ed-zahl-protein dd {
+    color: var(--ed-gruen);
+  }
+  .ed-zahl-zusatz {
+    display: block;
+    margin-top: 8px;
+    font-size: var(--ed-2);
+    line-height: 1.5;
+    font-stretch: 100%;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--ed-hell);
+  }
+  .ed-regeln {
+    margin-top: 64px;
+  }
+  .ed-regeln ol {
+    margin-top: 16px;
+    counter-reset: ed-regel;
+  }
+  .ed-regeln li {
+    position: relative;
+    max-width: 560px;
+    padding-left: 40px;
+  }
+  .ed-regeln li + li {
+    margin-top: 16px;
+  }
+  .ed-regeln li::before {
+    counter-increment: ed-regel;
+    content: counter(ed-regel);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-stretch: 125%;
+    font-weight: 480;
+    color: var(--ed-gruen);
+  }
+  .ed-aufbau {
+    margin-top: auto;
+    max-width: 560px;
+    font-size: var(--ed-2);
+    color: var(--ed-hell);
+  }
+
+  /* Woche auf einen Blick: Raster 7 Tage × 4 Mahlzeiten, eine Seite */
+  .ed-blick {
+    break-before: page;
+    display: flex;
+    flex-direction: column;
+    height: var(--ed-seite);
+  }
+  .ed-bl-raster {
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto repeat(7, 1fr);
+  }
+  .ed-bl-zeile {
+    display: grid;
+    grid-template-columns: 64px repeat(3, minmax(0, 1fr)) minmax(0, 1.4fr);
+    column-gap: 16px;
+    align-items: start;
+    padding: 8px 0;
+    border-top: 1px solid var(--ed-linie);
+  }
+  .ed-bl-spalten {
+    padding: 0 0 8px;
+    border-top: 0;
+    font-size: var(--ed-2);
+    color: var(--ed-hell);
+  }
+  .ed-bl-tag {
+    font-size: var(--ed-4);
+    line-height: 1.2;
+    font-stretch: 118%;
+    font-weight: 520;
+    letter-spacing: -0.01em;
+  }
+  .ed-bl-zelle {
+    font-size: var(--ed-3);
+    line-height: 1.35;
+  }
+  .ed-bl-zelle:last-child {
+    font-size: var(--ed-2);
+    line-height: 1.3;
+  }
+  .ed-bl-l {
+    display: none;
+  }
+  .ed-bl-n {
+    display: block;
+  }
+  .ed-bl-n + .ed-bl-n {
+    margin-top: 4px;
+  }
+
+  /* Einkaufsliste */
+  .ed-einkauf {
+    break-before: page;
+  }
+  .ed-ek-gruppen {
+    columns: 2;
+    column-gap: 24px;
+  }
+  .ed-ek-gruppe {
+    break-inside: avoid;
+    padding-bottom: 16px;
+  }
+  .ed-einkauf ul {
+    margin-top: 4px;
+  }
+  .ed-einkauf li {
+    display: grid;
+    grid-template-columns: 12px minmax(0, 1fr);
+    column-gap: 8px;
+    padding: 3px 0;
+    line-height: 1.35;
+    break-inside: avoid;
+  }
+  /* Eckig: abgerundete Kästchen zeichnet Chromium als Kurven, rund 25 kB mehr je PDF */
+  .ed-kasten {
+    width: 12px;
+    height: 12px;
+    margin-top: 4px;
+    border: 1px solid var(--ed-hell);
+  }
+  .ed-ek-klein {
+    font-size: var(--ed-2);
+    color: var(--ed-hell);
+    white-space: nowrap;
+  }
+  .ed-ek-frisch {
+    padding-top: 8px;
+  }
+  .ed-ek-frisch ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+  }
+  .ed-ek-vorrat {
+    margin-top: 24px;
+    font-size: var(--ed-2);
+    color: var(--ed-hell);
+  }
+  .ed-ek-vorrat .ed-label {
+    margin-right: 8px;
+    color: var(--ed-ink);
+  }
+
+  /* Tage: zwei pro Seite, Haarlinie nur zwischen den Tagen */
+  .ed-tage {
+    break-before: page;
+  }
+  .ed-tag {
+    break-inside: avoid;
+  }
+  .ed-tag + .ed-tag {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ed-linie);
+  }
+  .ed-tag .ed-kopf {
+    margin-bottom: 16px;
+  }
+  .ed-mz {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr) 48px;
+    grid-template-areas:
+      "zeit name g"
+      "zeit menge .";
+    column-gap: 16px;
+    align-items: baseline;
+  }
+  .ed-mz + .ed-mz {
+    margin-top: 16px;
+  }
+  .ed-mz + .ed-mz-snack {
+    margin-top: 8px;
+  }
+  /* Tage mit höchstens fünf Mahlzeiten (Appetit normal) bekommen mehr Luft; bei sieben reicht die Seite dafür nicht */
+  html:not(.ed-handy) .ed-mz-liste:not(:has(> li:nth-child(6))) > .ed-mz + .ed-mz {
+    margin-top: 24px;
+  }
+  html:not(.ed-handy) .ed-mz-liste:not(:has(> li:nth-child(6))) > .ed-mz + .ed-mz-snack {
+    margin-top: 16px;
+  }
+  .ed-mz-zeit {
+    grid-area: zeit;
+    font-size: var(--ed-2);
+    color: var(--ed-hell);
+  }
+  .ed-mz-name {
+    grid-area: name;
+    font-size: var(--ed-4);
+    line-height: 1.25;
+    font-stretch: 112%;
+    font-weight: 540;
+    letter-spacing: -0.005em;
+  }
+  .ed-mz-snack .ed-mz-name {
+    font-size: var(--ed-3);
+    line-height: 1.4;
+    font-stretch: 100%;
+    font-weight: 560;
+    letter-spacing: 0;
+  }
+  .ed-mz-zeit-kurz {
+    display: none;
+  }
+  .ed-mz-menge {
+    grid-area: menge;
+    margin-top: 2px;
+    font-size: var(--ed-2);
+    line-height: 1.45;
+    color: var(--ed-hell);
+  }
+  .ed-mz-g {
+    grid-area: g;
+    text-align: right;
+    font-size: var(--ed-2);
+    color: var(--ed-gruen);
+    white-space: nowrap;
+  }
+
+  /* Rezepte: eine halbe Seite je Rezept */
+  .ed-rz-seite {
+    break-before: page;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: var(--ed-seite);
+  }
+  .ed-rz {
+    overflow: hidden;
+  }
+  .ed-rz + .ed-rz {
+    padding-top: 32px;
+    border-top: 1px solid var(--ed-linie);
+  }
+  .ed-rz .ed-intro {
+    margin-bottom: 32px;
+  }
+  .ed-rz-nr {
+    font-size: var(--ed-2);
+    color: var(--ed-hell);
+  }
+  .ed-rz-name {
+    margin-top: 8px;
+    font-size: var(--ed-5);
+    line-height: 1.15;
+    font-stretch: 118%;
+    font-weight: 520;
+    letter-spacing: -0.02em;
+  }
+  .ed-rz-meta {
+    margin-top: 8px;
+    font-size: var(--ed-2);
+    color: var(--ed-hell);
+  }
+  .ed-rz-spalten {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    column-gap: 32px;
+    margin-top: 24px;
+  }
+  .ed-rz-zutaten,
+  .ed-rz-schritte {
+    margin-top: 8px;
+  }
+  .ed-rz-zutaten li + li {
+    margin-top: 4px;
+  }
+  .ed-rz-schritte {
+    counter-reset: ed-schritt;
+  }
+  .ed-rz-schritte li {
+    position: relative;
+    padding-left: 32px;
+  }
+  .ed-rz-schritte li + li {
+    margin-top: 8px;
+  }
+  .ed-rz-schritte li::before {
+    counter-increment: ed-schritt;
+    content: counter(ed-schritt);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-stretch: 125%;
+    font-weight: 480;
+    color: var(--ed-gruen);
+  }
+  .ed-rz-tipp {
+    margin-top: 16px;
+    padding-left: 32px;
+    font-size: var(--ed-2);
+    color: var(--ed-hell);
+  }
+
+  /* Tauschen */
+  .ed-tausch {
+    break-before: page;
+  }
+  .ed-ts-liste li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 48px;
+    column-gap: 16px;
+    align-items: baseline;
+    padding: 8px 0;
+    break-inside: avoid;
+  }
+  .ed-ts-statt {
+    font-weight: 560;
+  }
+  .ed-pfeil {
+    display: inline-block;
+    vertical-align: -2px;
+    margin: 0 4px;
+    color: var(--ed-hell);
+  }
+  .ed-ts-g {
+    text-align: right;
+    font-size: var(--ed-2);
+    color: var(--ed-gruen);
+    white-space: nowrap;
+  }
+
+  /* Letzte Seite: Hinweise, Grenzen, Pflichtsatz, Quellen (klein) */
+  .ed-schluss {
+    break-before: page;
+    font-size: var(--ed-2);
+    color: var(--ed-hell);
+  }
+  .ed-schluss .ed-h,
+  .ed-schluss strong,
+  .ed-arzt {
+    color: var(--ed-ink);
+  }
+  .ed-hinweise li + li,
+  .ed-grenzen p + p {
+    margin-top: 8px;
+  }
+  .ed-grenzen,
+  .ed-quellen {
+    margin-top: 24px;
+  }
+  .ed-arzt {
+    font-weight: 560;
+  }
+  .ed-quellen .ed-quellen-liste {
+    margin-top: 8px;
+  }
+  .ed-quellen .ed-quellen-liste > li {
+    margin: 0;
+  }
+  .ed-quellen li {
+    display: grid;
+    grid-template-columns: 16px minmax(0, 1fr);
+    font-size: var(--ed-1);
+    line-height: 1.5;
+  }
+  .ed-quellen .ed-quellen-liste > li + li {
+    margin-top: 4px;
+  }
+  .ed-url::after {
+    content: " " attr(href);
+  }
+
+  /* ---- Handy: 90 × 160 mm, ein Tag pro Seite, alles einspaltig ---- */
+  html.ed-handy .ed-deck {
+    display: block;
+    height: auto;
+  }
+  html.ed-handy .ed-titel {
+    margin-top: 48px;
+    font-size: var(--ed-5);
+  }
+  html.ed-handy .ed-unter {
+    margin-top: 8px;
+    font-size: var(--ed-3);
+  }
+  html.ed-handy .ed-marke {
+    display: block;
+  }
+  html.ed-handy .ed-marke span {
+    display: block;
+  }
+  html.ed-handy .ed-zahlen {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    margin-top: 48px;
+  }
+  html.ed-handy .ed-zahlen dd {
+    font-size: var(--ed-5);
+  }
+  html.ed-handy .ed-regeln {
+    break-before: page;
+    margin-top: 0;
+  }
+  html.ed-handy .ed-regeln li {
+    padding-left: 24px;
+  }
+  html.ed-handy .ed-aufbau {
+    margin-top: 32px;
+  }
+  html.ed-handy .ed-kopf {
+    display: block;
+    margin-bottom: 16px;
+  }
+  html.ed-handy .ed-kopf-r {
+    margin-top: 4px;
+  }
+  html.ed-handy .ed-intro {
+    margin: -8px 0 16px;
+  }
+
+  html.ed-handy .ed-blick {
+    display: block;
+    height: auto;
+  }
+  html.ed-handy .ed-bl-raster {
+    display: block;
+  }
+  html.ed-handy .ed-bl-zeile {
+    display: block;
+    padding: 8px 0 16px;
+    break-inside: avoid;
+  }
+  html.ed-handy .ed-bl-zeile.ed-bl-spalten {
+    display: none;
+  }
+  html.ed-handy .ed-bl-zelle,
+  html.ed-handy .ed-bl-zelle:last-child {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    column-gap: 8px;
+    margin-top: 4px;
+    font-size: var(--ed-2);
+  }
+  html.ed-handy .ed-bl-tag {
+    margin-bottom: 4px;
+    font-size: var(--ed-3);
+  }
+  html.ed-handy .ed-bl-l {
+    display: block;
+    grid-row: 1 / span 4;
+    color: var(--ed-hell);
+  }
+  html.ed-handy .ed-bl-n {
+    grid-column: 2;
+  }
+  html.ed-handy .ed-bl-n + .ed-bl-n {
+    margin-top: 0;
+  }
+
+  html.ed-handy .ed-ek-gruppen {
+    columns: 1;
+  }
+  html.ed-handy .ed-ek-gruppe {
+    padding-bottom: 16px;
+  }
+  html.ed-handy .ed-ek-frisch ul {
+    column-gap: 16px;
+  }
+
+  html.ed-handy .ed-tage {
+    break-before: auto;
+  }
+  html.ed-handy .ed-tag,
+  html.ed-handy .ed-tag + .ed-tag {
+    break-before: page;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+  html.ed-handy .ed-tag .ed-kopf {
+    display: flex;
+  }
+  /* Handy: Mahlzeit vorn in der hellen Zeile statt in einer eigenen Zeile, damit ein Tag meist auf 160 mm passt */
+  html.ed-handy .ed-mz {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "name g"
+      "menge menge";
+    column-gap: 8px;
+  }
+  html.ed-handy .ed-mz-zeit {
+    display: none;
+  }
+  html.ed-handy .ed-mz-zeit-kurz {
+    display: inline;
+    font-weight: 560;
+  }
+
+  html.ed-handy .ed-rz-seite {
+    display: block;
+    height: auto;
+    break-before: auto;
+  }
+  html.ed-handy .ed-rz,
+  html.ed-handy .ed-rz + .ed-rz {
+    break-before: page;
+    overflow: visible;
+    padding-top: 0;
+    border-top: 0;
+  }
+  html.ed-handy .ed-rz-spalten {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+    margin-top: 16px;
+  }
+  html.ed-handy .ed-rz-schritte li {
+    padding-left: 24px;
+  }
+  html.ed-handy .ed-rz-tipp {
+    padding-left: 24px;
+  }
+}

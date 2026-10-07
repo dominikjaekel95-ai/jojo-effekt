@@ -1,13 +1,21 @@
 #!/usr/bin/env node
 /**
- * Erzeugt die 56 Ernährungspläne als PDF: public/downloads/ernaehrungsplan/<id>.pdf aus den gebauten Seiten
- * dist/ernaehrungsplan/plan/<id>/index.html (Vorlage src/pages/ernaehrungsplan/plan/[id].astro, Daten
- * src/data/ernaehrungsplan.ts, Ansicht src/lib/ernaehrungsplan-ansicht.ts). Gedruckt wird der Grundplan ohne Vorlieben.
+ * Erzeugt die 56 Ernährungspläne als PDF, je zweimal: public/downloads/ernaehrungsplan/<id>.pdf (A4 zum Drucken) und
+ * <id>-handy.pdf (90 mm breit, ein Tag pro Seite), aus den gebauten Seiten dist/ernaehrungsplan/plan/<id>/index.html
+ * (Vorlage src/pages/ernaehrungsplan/plan/[id].astro, Druckfassung src/lib/ernaehrungsplan-druck.ts mit den Stilen
+ * src/styles/ernaehrungsplan-druck.css, Daten src/data/ernaehrungsplan.ts). Gedruckt wird der Grundplan ohne Vorlieben.
+ * Seitengröße, Ränder und Fußzeile (Hinweis „allgemeiner Beispielplan“, Seitenzahl) kommen aus der CSS (@page);
+ * die Handy-Fassung schaltet ?druck=handy (Klasse ed-handy, benannte Seite „handy“, 90 × 160 mm). Passt der längste Tag
+ * eines Plans nicht auf 160 mm (bei kleinem Appetit mit bis zu sieben Mahlzeiten), wird die Seite dieses Plans so hoch
+ * wie nötig (in 5-mm-Schritten); so bleibt es bei einem Tag pro Seite.
  * Dazu 18 einseitige Hinweis-PDFs ep01 bis ep18 für Links aus Mails vor dem 06.10.2026 (Verweis auf den neuen Plan).
  *
  * Kurzform: npm run pdf:ernaehrungsplan (baut vorher). Die PDFs werden mit committet; neu erzeugen nach jeder Änderung an
  * Plänen, Vorlage oder Quellen. Die Dateinamen (ek01 bis ek56, ep01 bis ep18) stehen in MailerLite-Mails und dürfen sich
  * nie ändern. Voraussetzungen wie scripts/checkliste-pdf.mjs (Playwright und Chromium). Lädt keine externen Ressourcen.
+ *
+ * Prüfung: Die A4-Fassung hat feste Seiten (Deckblatt, je Woche Überblick, Einkaufsliste und vier Tagesseiten, Rezepte
+ * zu zweit, Tauschen, Hinweise). Hat das PDF mehr Seiten, ist ein Block übergelaufen; das Skript endet dann mit Fehler.
  *
  * Schrift: Chromium bettet variable Schriften als Type-3-Glyphen ein (rund 900 kB pro Plan). Deshalb ersetzt das Skript
  * Mona Sans beim Drucken durch fünf statische Schnitte daraus (scripts/fonts/nds-druck-*.woff2, Breite/Gewicht im
@@ -108,6 +116,12 @@ const druckCss =
     })
     .join('\n') + '\n*{font-family:"NDS Druck",Helvetica,Arial,sans-serif !important;font-synthesis:none !important}';
 
+/** Seitenzahl eines von Chromium erzeugten PDFs (Seitenobjekte zählen). */
+const seitenImPdf = (datei) => (fs.readFileSync(datei, 'latin1').match(/\/Type\s*\/Page(?![s\w])/g) ?? []).length;
+const MM = 96 / 25.4;
+/** Handy: Seitenbreite 90 mm, Ränder 7/7 mm und oben/unten 8/15 mm (wie in ernaehrungsplan-druck.css), Höhe mindestens 160 mm */
+const HANDY = { breite: Math.floor((90 - 14) * MM), raender: 23, minHoehe: 160 };
+
 const { chromium } = await loadPlaywright();
 const { server, port } = await serve();
 let browser;
@@ -120,31 +134,47 @@ try {
   // Keine Requests an Dritte: alles außer dem lokalen Server abbrechen.
   await page.route('**/*', (route) => (route.request().url().startsWith(`http://127.0.0.1:${port}/`) ? route.continue() : route.abort()));
   fs.mkdirSync(outDir, { recursive: true });
-  const footer =
-    '<div style="width:100%;font-family:Helvetica,Arial,sans-serif;font-size:7.5px;color:#5e605a;padding:0 14mm;display:flex;justify-content:space-between">' +
-    '<span>nachderspritze.de · Allgemeiner Beispielplan für gesunde Erwachsene, keine ärztliche oder ernährungstherapeutische Beratung.</span>' +
-    '<span>Seite <span class="pageNumber"></span> von <span class="totalPages"></span></span></div>';
-  for (const liste of [ids, alt]) {
-    for (const id of liste) {
-      // ?druck: Die Hinweisseiten ep01 bis ep18 leiten sonst sofort auf den neuen Plan weiter.
-      await page.goto(`http://127.0.0.1:${port}/ernaehrungsplan/plan/${id}/?druck`, { waitUntil: 'networkidle' });
-      await page.emulateMedia({ media: 'print' });
-      await page.addStyleTag({ content: druckCss });
-      await page.evaluate(() => document.fonts.ready);
-      await page.waitForTimeout(150);
-      const out = path.join(outDir, `${id}.pdf`);
-      await page.pdf({
-        path: out,
-        format: 'A4',
-        printBackground: true,
-        preferCSSPageSize: false,
-        margin: { top: '14mm', right: '14mm', bottom: '16mm', left: '14mm' },
-        displayHeaderFooter: true,
-        headerTemplate: '<span></span>',
-        footerTemplate: footer,
-      });
-      console.log(`PDF geschrieben: ${path.relative(process.cwd(), out)} (${Math.round(fs.statSync(out).size / 1024)} kB)`);
-    }
+  const fehler = [];
+  /** Lädt eine Planseite in der Druckansicht mit den statischen Druckschnitten. */
+  async function lade(id, handy) {
+    await page.setViewportSize(handy ? { width: HANDY.breite, height: 900 } : { width: 1280, height: 900 });
+    // ?druck: Die Hinweisseiten ep01 bis ep18 leiten sonst sofort auf den neuen Plan weiter. ?druck=handy: Handy-Fassung.
+    await page.goto(`http://127.0.0.1:${port}/ernaehrungsplan/plan/${id}/?druck${handy ? '=handy' : ''}`, { waitUntil: 'networkidle' });
+    await page.emulateMedia({ media: 'print' });
+    await page.addStyleTag({ content: druckCss });
+    await page.evaluate(() => document.fonts.ready);
+    await page.waitForTimeout(150);
+  }
+  async function drucke(out) {
+    await page.pdf({ path: out, printBackground: true, preferCSSPageSize: true });
+    return seitenImPdf(out);
+  }
+  for (const id of ids) {
+    await lade(id, false);
+    const soll = await page.evaluate(() => document.querySelectorAll('.ed-deck, .ed-blick, .ed-einkauf, .ed-tage, .ed-rz-seite, .ed-tausch, .ed-schluss').length);
+    const a4 = path.join(outDir, `${id}.pdf`);
+    const seitenA4 = await drucke(a4);
+    if (seitenA4 !== soll) fehler.push(`${id}.pdf: ${seitenA4} statt ${soll} Seiten (ein Block ist übergelaufen)`);
+
+    await lade(id, true);
+    // Der längste Tag bestimmt die Seitenhöhe (mindestens 160 mm, 2 mm Luft, auf 5 mm aufgerundet).
+    const tagMax = await page.evaluate(() => Math.max(...[...document.querySelectorAll('.ed-tag')].map((el) => el.getBoundingClientRect().height)));
+    const hoehe = Math.max(HANDY.minHoehe, Math.ceil((tagMax / MM + HANDY.raender + 2) / 5) * 5);
+    await page.addStyleTag({ content: `@page handy { size: 90mm ${hoehe}mm; }` });
+    const handy = path.join(outDir, `${id}-handy.pdf`);
+    const seitenHandy = await drucke(handy);
+    const kb = (f) => Math.round(fs.statSync(f).size / 1024);
+    console.log(`PDF geschrieben: ${id}.pdf (${seitenA4} Seiten, ${kb(a4)} kB), ${id}-handy.pdf (90 × ${hoehe} mm, ${seitenHandy} Seiten, ${kb(handy)} kB)`);
+  }
+  for (const id of alt) {
+    await lade(id, false);
+    const out = path.join(outDir, `${id}.pdf`);
+    await drucke(out);
+    console.log(`PDF geschrieben: ${path.relative(process.cwd(), out)} (${Math.round(fs.statSync(out).size / 1024)} kB)`);
+  }
+  if (fehler.length) {
+    console.error(`\n${fehler.length} Fehler:\n${fehler.join('\n')}`);
+    process.exitCode = 1;
   }
 } finally {
   await browser?.close();

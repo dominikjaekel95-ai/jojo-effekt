@@ -3,9 +3,12 @@
  * Werkzeug: Ernährungsplan als Lead-Magnet. Fragen zu Ernährungsform, Laktose, Appetit, Gewicht und Vorlieben wählen
  * einen von 56 Grundplänen für 14 Tage (src/data/ernaehrungsplan.ts); Vorlieben tauschen Gerichte. Die Vorschau rechnet
  * mit demselben Generator im Browser (Tag 1, 14-Tage-Balken), ohne JavaScript steht ein Beispiel.
- * Das Formular postet an api/ernaehrungsplan.js: MailerLite (Double-Opt-in, Gruppen „Newsletter“ und „Ernährungsplan“,
- * Felder `plan` und `vorlieben`); nach der Bestätigung verschickt eine Automation den Link auf die Planseite
- * /ernaehrungsplan/plan/<plan>/?v=<vorlieben> und das PDF. Alternative ohne Newsletter: Mail an site.owner.email.
+ * Nach den Fragen zwei gleichwertige Wege: (a) „Plan per Mail bekommen“ = das Formular an api/ernaehrungsplan.js
+ * (MailerLite, Double-Opt-in, Gruppen „Newsletter“ und „Ernährungsplan“, Felder `plan` und `vorlieben`; nach der
+ * Bestätigung verschickt eine Automation den Link auf die Planseite /ernaehrungsplan/plan/<plan>/?v=<vorlieben> und das
+ * PDF; Alternative ohne Newsletter: Mail an site.owner.email). (b) „Plan jetzt ansehen und anpassen“ = Link direkt auf
+ * die Planseite ohne Mail (nur mit JavaScript, das den Link aus den Antworten baut); dort „Als PDF senden“ und
+ * „PDF herunterladen“. Plausible: „Ernaehrungsplan Weg“ mit weg=mail|anpassen.
  * Einrichtung, Test und Pflege: docs/ERNAEHRUNGSPLAN.md.
  */
 import Base from '../../layouts/Base.astro';
@@ -14,7 +17,7 @@ import Footnotes from '../../components/Footnotes.astro';
 import Faq from '../../components/Faq.astro';
 import { faqJsonLd } from '../../data/faq';
 import { site } from '../../data/site';
-import { VORLIEBEN, alleKombinationen } from '../../data/ernaehrungsplan-id.mjs';
+import { VORLIEBEN, alleKombinationen, planId } from '../../data/ernaehrungsplan-id.mjs';
 import {
   erstellePlan,
   ernaehrungOptionen,
@@ -38,6 +41,8 @@ const tag1 = start.tage[0];
 const SKALA = 145; // gemeinsame Höhe der 14-Tage-Balken für alle Varianten, damit sie beim Wechsel wachsen und schrumpfen
 const erlaubtStart = new Set(erlaubteVorlieben('mischkost', false));
 const varianten = alleKombinationen().length;
+/** Plan für die Startwerte (Link „Plan ansehen und anpassen“ vor der ersten Eingabe) */
+const startPlan = planId('mischkost', 'normal', '70bis85', false);
 // Gewichtsregler 45 bis 160 kg; die Stufen als Abschnitte darunter, gleich breit wie ihr Bereich auf dem Regler
 const MIN_KG = 45;
 const MAX_KG = 160;
@@ -93,7 +98,7 @@ const faq = [
   },
   {
     q: 'Warum kommt der Plan per Mail?',
-    a: '<p>Weil wir ihn zusammen mit dem Newsletter verschicken: Nach der Bestätigung deiner Adresse kommt ein Link auf deinen Plan und das PDF, danach etwa alle zwei Wochen neue Artikel und Studien. Auf der Planseite wechselst du die Variante, wenn sich etwas ändert, zum Beispiel der Appetit. Abmelden geht in jeder Mail. Wer keinen Newsletter möchte, schreibt Dominik eine Mail und bekommt den Plan persönlich.</p>',
+    a: '<p>Weil wir ihn zusammen mit dem Newsletter verschicken: Nach der Bestätigung deiner Adresse kommt ein Link auf deinen Plan und das PDF, danach etwa alle zwei Wochen neue Artikel und Studien. Auf der Planseite wechselst du die Variante, wenn sich etwas ändert, zum Beispiel der Appetit. Abmelden geht in jeder Mail. Du kannst den Plan auch ohne Mail gleich ansehen, anpassen und als PDF herunterladen. Wer keinen Newsletter möchte, schreibt Dominik eine Mail und bekommt den Plan persönlich.</p>',
   },
 ];
 
@@ -226,10 +231,16 @@ const jsonLd = [
         </aside>
         </div>
 
+        <div class="epf-wege" id="dein-plan">
+        <div class="epf-wege-kopf">
+          <p class="epf-nr">5</p>
+          <h2 class="h2 epf-wege-h">Wie möchtest du deinen Plan?</h2>
+          <p class="epf-wege-text">Kostenlos per Mail<span class="epf-nur-js">, oder du siehst ihn dir <a href="#plan-ansehen">gleich hier an</a> und passt ihn an; am Ende schickst du ihn dir als PDF oder lädst ihn herunter</span>.</p>
+        </div>
+        <div class="epf-wege-raster">
         <div class="epf-senden band">
           <div class="epf-senden-text">
-            <p class="epf-nr epf-nr-hell">5</p>
-            <h2 class="h2 epf-senden-h">Wohin sollen wir den Plan schicken?</h2>
+            <h3 class="epf-weg-h">Plan per Mail bekommen</h3>
             <p class="band-muted">Du bekommst einen Link auf deine Planseite und das PDF. Auf der Seite kannst du später die Variante wechseln oder Vorlieben ändern, ohne neue Mail.</p>
           </div>
           <div class="epf-senden-form">
@@ -252,6 +263,14 @@ const jsonLd = [
             <p class="epf-mikro band-muted">Kostenlos. Keine Weitergabe deiner Adresse. Gespeichert werden Adresse, Plannummer (steht für Ernährungsform, Gewichtsbereich, Appetit und Laktose) und deine Vorlieben, nicht dein genaues Gewicht.</p>
             <p class="epf-ohne">Lieber ohne Newsletter? Schreib mir eine Mail mit deinen Antworten an <a id="ep-mail" href={mailHref}>{site.owner.email}</a>, dann schicke ich dir den Plan persönlich. Dominik</p>
           </div>
+        </div>
+        <div class="epf-anpassen" id="plan-ansehen">
+          <h3 class="epf-weg-h">Plan jetzt ansehen und anpassen</h3>
+          <p class="epf-anpassen-text">Ohne E-Mail. Dein Plan öffnet sich sofort: Gerichte tauschen, Tage verschieben, Einkaufsliste abhaken. Bist du zufrieden, lädst du ihn als PDF herunter oder schickst ihn dir per Mail.</p>
+          <p class="epf-anpassen-hinweis"><strong>Nicht geeignet</strong> ist der Plan bei Nierenerkrankung, in Schwangerschaft oder Stillzeit, bei einer Essstörung (auch früher) und für unter 18-Jährige. Trifft einer dieser Punkte zu, ist ein allgemeiner Plan nicht das Richtige; sprich dann mit deiner Ärztin, deinem Arzt oder einer Ernährungsfachkraft.</p>
+          <a href={`/ernaehrungsplan/plan/${startPlan}/`} class="btn-primary epf-anpassen-knopf" data-ep-ansehen>Plan ansehen und anpassen <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h13M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" /></svg></a>
+        </div>
+        </div>
         </div>
       </form>
 
@@ -304,6 +323,7 @@ const jsonLd = [
     const tagZiel = $('[data-pv-tagziel]');
     const liste = $('[data-pv-liste]');
     const mail = document.getElementById('ep-mail') as HTMLAnchorElement | null;
+    const ansehen = form.querySelector<HTMLAnchorElement>('[data-ep-ansehen]');
     const rm = document.documentElement.classList.contains('rm');
     const fnRechnung = rechnung.querySelector('sup')?.outerHTML ?? '';
     const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] as string);
@@ -400,6 +420,8 @@ const jsonLd = [
 
       erstesMal = false;
 
+      if (ansehen) ansehen.href = `/ernaehrungsplan/plan/${planId(e, a, g, lf)}/${v.length ? `?v=${v.join(',')}` : ''}`;
+
       if (mail) {
         const text = `Hallo Dominik,\n\nich hätte gern den Ernährungsplan, aber ohne Newsletter.\n\nErnährungsform: ${label[e]}\nLaktosefrei: ${lf ? 'ja' : 'nein'}\nAppetit: ${label[a].replace('Appetit ', '')}\nGewicht: ${gewichtLabel[g]}\nVorlieben: ${v.length ? v.map((x) => vorliebeLabel(x, lf)).join(', ') : 'keine'}\n\n(Plan ${planId(e, a, g, lf)}${v.length ? `, v=${v.join(',')}` : ''})\n`;
         mail.href = `mailto:${mail.textContent?.trim()}?subject=${encodeURIComponent('Ernährungsplan ohne Newsletter')}&body=${encodeURIComponent(text)}`;
@@ -422,6 +444,25 @@ const jsonLd = [
     } else start();
     form.addEventListener('change', update);
     slider.addEventListener('input', update);
+
+    // Plausible „Ernaehrungsplan Weg“: Mail-Formular abgeschickt oder direkt zur Planseite (ohne Inhalte)
+    type Plausible = (name: string, o?: { props?: Record<string, string>; callback?: () => void }) => void;
+    const plausible = () => (window as unknown as { plausible?: Plausible }).plausible;
+    form.addEventListener('submit', () => plausible()?.('Ernaehrungsplan Weg', { props: { weg: 'mail' } }));
+    ansehen?.addEventListener('click', (ev) => {
+      const p = plausible();
+      if (typeof p !== 'function' || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button !== 0) return;
+      ev.preventDefault();
+      const ziel = ansehen.href;
+      let weg = false;
+      const weiter = () => {
+        if (weg) return;
+        weg = true;
+        location.assign(ziel);
+      };
+      p('Ernaehrungsplan Weg', { props: { weg: 'anpassen' }, callback: weiter });
+      setTimeout(weiter, 400);
+    });
   }
 </script>
 
@@ -948,30 +989,91 @@ const jsonLd = [
     }
   }
 
-  /* Absenden: dunkler Block */
-  .epf-senden {
+  /* Zwei Wege: Plan per Mail (dunkler Block) oder gleich ansehen und anpassen (heller Block), gleich hoch */
+  .epf-wege {
     margin-top: clamp(2.5rem, 6vw, 4.5rem);
+  }
+  .epf-wege-kopf .epf-nr {
+    font-size: 1.5rem;
+  }
+  .epf-wege-h {
+    margin-top: 0.4rem;
+  }
+  .epf-wege-text {
+    margin-top: 0.75rem;
+    max-width: 36em;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: var(--color-ink-2);
+  }
+  .epf-wege-raster {
     display: grid;
-    gap: 1.75rem 4rem;
-    padding: clamp(1.5rem, 4vw, 3rem);
-    border-radius: 20px;
+    gap: 1rem;
+    margin-top: 1.75rem;
   }
   @media (min-width: 900px) {
-    .epf-senden {
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    .epf-wege-raster {
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
     }
   }
-  .epf-nr-hell {
-    font-size: 1.5rem;
-    color: var(--dark-muted);
+  .epf-weg-h {
+    font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+    line-height: 1.15;
+    font-weight: 520;
+    font-stretch: 118%;
+    letter-spacing: -0.02em;
   }
-  .epf-senden-h {
-    margin-top: 0.5rem;
+  .epf-senden {
+    display: grid;
+    gap: 1.5rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: 20px;
   }
   .epf-senden-text p.band-muted {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     font-size: 1rem;
     line-height: 1.55;
+  }
+  .epf-anpassen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: 20px;
+    background: var(--color-paper-2);
+  }
+  html:not(.js) .epf-anpassen,
+  html:not(.js) .epf-nur-js {
+    display: none;
+  }
+  .epf-wege-text a {
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-underline-offset: 0.25em;
+  }
+  .epf-anpassen-text {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--color-ink-2);
+  }
+  .epf-anpassen-hinweis {
+    margin: 1.25rem 0 1.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-line);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-ink-3);
+  }
+  .epf-anpassen-hinweis strong {
+    color: var(--color-ink);
+    font-weight: 560;
+  }
+  .epf-anpassen-knopf svg {
+    transition: transform 0.3s var(--ease);
+  }
+  .epf-anpassen-knopf:hover svg {
+    transform: translateX(3px);
   }
   .epf-zeile {
     display: flex;

@@ -6,7 +6,7 @@ category: "Abnehmpille"
 image: /grafiken/abnehmpille-belegt-und-offen.png
 order: 16
 pubDate: 2026-09-30
-updatedDate: 2026-10-06
+updatedDate: 2026-10-07
 keywords: ["abnehmpille absetzen", "wegovy tablette absetzen", "wegovy pille absetzen", "abnehmtablette absetzen", "semaglutid tablette absetzen", "abnehmpille jojo effekt", "abnehmpille muskelabbau", "wegovy tabletten absetzen"]
 sources: ["tabletteApotheken2026", "fachinfoRybelsus", "wilding2022ext", "wu2025", "ecWegovyTablette2026", "fdaOrforglipron2026", "fachinfoWegovy", "wharton2025oasis4", "wilding2021step1", "rubino2021", "knop2023oasis1", "wharton2025attain1", "rodriguez2025", "sumithran2011", "wilding2021dxa", "leidy2015", "who2020", "jensen2024"]
 related: ["abnehmpille-oder-spritze", "wegovy-absetzen", "abnehmspritze-absetzen"]

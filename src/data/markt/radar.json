@@ -6,9 +6,9 @@
       "id": "2026-09-30-preise-erhoben",
       "date": "2026-09-30",
       "type": "preis",
-      "title": "Preise erhoben: Spritzen etwa 100 bis 490 € im Monat, Tablette etwa 175 bis 280 €",
-      "teaser": "Erste Preiserhebung: Abnehmspritzen kosten Selbstzahler etwa 170 bis 490 € im Monat, die neue Tablette etwa 175 bis 280 €.",
-      "summary": "Niedrigste Versandpreise im Preisvergleich, gerundet: Wegovy 2,4 mg etwa 280 €, Mounjaro von etwa 205 € (2,5 mg) bis etwa 490 € (12,5 und 15 mg), Ozempic etwa 100 € (Kassenleistung bei Typ-2-Diabetes). Wegovy-Tabletten laut Presse zum Marktstart etwa 175 € (1,5 und 4 mg) bis etwa 280 € (25 mg). Vollständige Tabelle mit Stand im Abschnitt Preise.",
+      "title": "Preise erhoben: Spritzen zur Gewichtsreduktion etwa 170 bis 490 € im Monat, Tablette etwa 175 bis 280 €",
+      "teaser": "Erste Preiserhebung: Die zur Gewichtsreduktion zugelassenen Spritzen kosten Selbstzahler etwa 170 bis 490 € im Monat, die neue Tablette etwa 175 bis 280 €.",
+      "summary": "Selbstzahlerpreise im Monat, niedrigster Preis im Preisvergleich, gerundet. Spritzen zur Gewichtsreduktion etwa 170 bis 490 €: Wegovy von etwa 170 € (niedrige Stufen, Anbieterangabe) bis etwa 280 € (2,4 mg), Mounjaro von etwa 205 € (2,5 mg) bis etwa 490 € (12,5 und 15 mg), Saxenda etwa 290 € (Anbieterangabe). Nicht in dieser Spanne: Ozempic etwa 100 €, nur für Typ-2-Diabetes zugelassen und dort Kassenleistung. Wegovy-Tabletten laut Presse zum Marktstart etwa 175 € (1,5 und 4 mg) bis etwa 280 € (25 mg). Vollständige Tabelle mit Stand im Abschnitt Preise.",
       "substances": ["Semaglutid", "Tirzepatid", "Liraglutid"],
       "source": { "name": "Preisvergleich medipreis.de, 25. bis 30.09.2026", "url": "https://www.medipreis.de/" },
       "links": [{ "label": "Zur Preistabelle", "href": "/marktradar/#preise" }]

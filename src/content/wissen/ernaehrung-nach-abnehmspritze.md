@@ -6,7 +6,7 @@ category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 11
 pubDate: 2026-09-30
-updatedDate: 2026-10-06
+updatedDate: 2026-10-07
 keywords: ["nach der abnehmspritze ernährung", "ernährung nach abnehmspritze", "abnehmspritze ernährung danach", "was essen nach abnehmspritze", "ernährungsplan nach abnehmspritze", "ernährungsplan nach abnehmspritze pdf", "ernährung nach wegovy", "abnehmspritze ernährung umstellen"]
 sources: ["wu2025", "sumithran2011", "leidy2015", "almandoz2024", "dgeBallaststoffe", "dgeEmpfehlungen", "wilding2022ext", "jensen2024", "bls", "wing2006"]
 related: ["protein-abnehmspritze", "gewicht-halten-nach-abnehmspritze", "supplements-nach-abnehmspritze"]
@@ -65,7 +65,7 @@ Einmal pro Woche, gleicher Tag, morgens. Vorher festlegen, ab welcher Zunahme du
 
 <div data-interaktiv="zonen"></div>
 
-## Ein Tag nach der Spritze (80 kg, Ziel 100 g Protein)
+## Ein Tag nach der Spritze (80 kg, Ziel 96 g Protein)
 
 | Zeit | Mahlzeit | Protein | Wozu |
 |---|---|---|---|

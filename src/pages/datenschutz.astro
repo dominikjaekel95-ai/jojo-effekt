@@ -4,7 +4,8 @@
  * Inhaltlich geändert am 06.10.2026: Abschnitt 4 (Zweck Starterpaket, frühere Vorbestell-Liste wird gelöscht), 4a (Tally
  * als Anbieter des eingebetteten Rahmens, IP-Adresse), 4b (Checkliste über eigenes Formular und MailerLite, Rechtsgrundlage
  * Einwilligung), erster Absatz von 4c (welche Formulare das Newsletter-Kästchen tragen; kein Formular mehr im Kopf) und
- * 4d (Plannummer, ausdrückliche Einwilligung nach Art. 9 DSGVO).
+ * 4d (Plannummer, ausdrückliche Einwilligung nach Art. 9 DSGVO). Am 07.10.2026 ergänzt: 4 und 4d (Planseite „Als PDF
+ * senden“: Auswahl der Gerichte wird mitgespeichert, Warteliste nur mit eigenem Häkchen, PDF entsteht im Browser).
  */
 import Base from '../layouts/Base.astro';
 import SeitenKopf from '../components/SeitenKopf.astro';
@@ -62,7 +63,7 @@ const inhalt = [
         Auf der Startseite kannst du dich mit deiner E-Mail-Adresse auf die Warteliste für das geplante 12-Wochen-Programm setzen.
         Unsere Website übermittelt deine E-Mail-Adresse, den Zeitpunkt, die Herkunft „Warteliste“ und, falls du das Kästchen
         ankreuzt, dein Interesse an einem Starterpaket direkt an unseren Versanddienst {site.newsletter.provider?.name ?? 'für E-Mails'} (Abschnitt 4c). <strong>Double-Opt-in:</strong> Du bekommst zuerst eine Bestätigungs-Mail; erst nach dem Klick auf den Link stehst du auf der
-        Liste.{site.waitlist.ownGroup ? ' Den Newsletter bekommst du nur, wenn du ihn im Formular zusätzlich ankreuzt.' : ' Mit derselben Einwilligung bestellst du auch den Newsletter (Abschnitt 4c); das Formular nennt beides ausdrücklich.'}
+        Liste.{site.waitlist.ownGroup ? ' Den Newsletter bekommst du nur, wenn du ihn im Formular zusätzlich ankreuzt.' : ' Mit derselben Einwilligung bestellst du auch den Newsletter (Abschnitt 4c); das Formular nennt beides ausdrücklich.'} Auch wenn du dir deinen Ernährungsplan von der Planseite aus schickst (Abschnitt 4d), kannst du dich auf die Warteliste setzen, aber nur mit einem eigenen, freiwilligen Häkchen.
       </p>
       <p>
         <strong>Zweck:</strong> Information über Start, Preis und Ablauf des Programms, außerdem, um abzuschätzen, ob wir ein
@@ -159,10 +160,15 @@ const inhalt = [
         zu Ernährungsform, Gewichtsbereich, Appetit und Laktose. Dein genaues Gewicht speichern wir nicht. Den Plan schicken wir
         zusammen mit der Anmeldung zum Newsletter (Abschnitt 4c): Nach der
         Bestätigung per Link kommt ein Link auf deine Planseite und das PDF, danach der Newsletter. Die Planseite rechnet Änderungen an
-        Variante und Vorlieben nur in deinem Browser; dabei speichern oder übertragen wir nichts. Wer den Plan ohne Newsletter möchte,
+        Variante und Vorlieben nur in deinem Browser; dabei speichern oder übertragen wir nichts. Änderungen an deinem Plan speichert nur
+        dein Browser: in der Adresse der Seite und, für die Häkchen der Einkaufsliste, im lokalen Speicher deines Browsers. Schickst du dir den Plan
+        von der Planseite aus („Als PDF senden“), übermitteln wir zusätzlich die Auswahl deiner Gerichte (ein kurzes Kürzel für getauschte, verschobene
+        und ausgeblendete Gerichte) und speichern sie mit der Plannummer, damit der Link in der Mail deinen Plan so zeigt, wie du ihn zusammengestellt
+        hast. Mit einem eigenen, freiwilligen Häkchen kommst du dabei zusätzlich auf die Warteliste (Abschnitt 4); ohne dieses Häkchen nicht. Das PDF
+        zum Herunterladen entsteht in deinem Browser; dafür überträgt die Seite nichts. Wer den Plan ohne Newsletter möchte,
         schreibt uns eine Mail (Abschnitt 7) und bekommt ihn persönlich. <strong>Rechtsgrundlage:</strong> deine ausdrückliche
         Einwilligung, Art. 6 Abs. 1 lit. a und Art. 9 Abs. 2 lit. a DSGVO. <strong>Widerruf und Speicherdauer:</strong> wie beim Newsletter (Abschnitt 4c); mit der Abmeldung löschen
-        wir auch Plannummer und Vorlieben.
+        wir auch Plannummer und Vorlieben. Das gilt auch für die Auswahl deiner Gerichte.
       </p>
 
       <h2 id="plausible">5. Reichweitenmessung (Plausible Analytics)</h2>

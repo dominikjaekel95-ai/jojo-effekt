@@ -1,0 +1,13 @@
+---
+/**
+ * Hochformat-Fassung (1080 × 1350) einer Studien-Grafik für schmale Bildschirme, als <source> unter 640 px Breite.
+ * Auf .astro-Seiten in ein <picture> vor das bestehende <img> setzen (alles auf einer Zeile, Astro-Whitespace):
+ * <picture><GrafikHochformat id="preise-im-monat" /><img src="/grafiken/preise-im-monat.png" … /></picture>
+ * Ohne Hochformat im Register (src/data/grafiken.ts) entsteht nichts. In Artikeln macht das ArticlePage.astro
+ * automatisch (mitHochformat in src/lib/grafik-daten.ts).
+ */
+import { hochformatSource } from '../lib/grafik-daten';
+interface Props { id: string }
+const html = hochformatSource(Astro.props.id);
+---
+{html && <Fragment set:html={html} />}

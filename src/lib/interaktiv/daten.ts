@@ -389,12 +389,12 @@ export const teller: Record<string, Teller> = {
   },
   'protein-lebensmittel': {
     id: 'protein-lebensmittel',
-    titel: 'Was 100 g Protein auf dem Teller bedeuten',
+    titel: 'Was 96 g Protein auf dem Teller bedeuten',
     naehrstoff: 'Protein',
     einheit: 'g',
     dec: 0,
     zielLabel: 'Ziel',
-    ziele: [{ wert: 'tag', label: 'Tag', ziel: 100, zielText: '100 g am Tag bei etwa 80 kg' }],
+    ziele: [{ wert: 'tag', label: 'Tag', ziel: 96, zielText: '96 g am Tag bei 80 kg' }],
     zielQuelle: 'leidy2015',
     speisen: [
       { name: 'Skyr oder Magerquark', menge: '200 g', min: 22, max: 24 },
@@ -409,7 +409,7 @@ export const teller: Record<string, Teller> = {
     ],
     start: [0, 1, 3],
     speisenQuelle: 'bls',
-    fuss: 'Ungefähre Werte pro Portion aus dem Bundeslebensmittelschlüssel, gerundet; 100 g entsprechen dem Ziel für etwa 80 kg. Tippe Lebensmittel an oder ab.',
+    fuss: 'Ungefähre Werte pro Portion aus dem Bundeslebensmittelschlüssel, gerundet; 96 g entsprechen dem Ziel für 80 kg (1,2 g pro kg). Tippe Lebensmittel an oder ab.',
   },
   'protein-tag-muskeln': {
     id: 'protein-tag-muskeln',
@@ -418,7 +418,7 @@ export const teller: Record<string, Teller> = {
     einheit: 'g',
     dec: 0,
     zielLabel: 'Ziel',
-    ziele: [{ wert: 'tag', label: 'Tag', ziel: 100, zielText: '100 g bei 80 kg' }],
+    ziele: [{ wert: 'tag', label: 'Tag', ziel: 96, zielText: '96 g bei 80 kg' }],
     zielQuelle: 'leidy2015',
     speisen: [
       { name: 'Morgens', menge: '200 g Skyr mit Beeren', min: 22 },
@@ -432,12 +432,12 @@ export const teller: Record<string, Teller> = {
   },
   'protein-tag-ernaehrung': {
     id: 'protein-tag-ernaehrung',
-    titel: 'Ein Tag nach der Spritze: 80 kg, Ziel 100 g Protein',
+    titel: 'Ein Tag nach der Spritze: 80 kg, Ziel 96 g Protein',
     naehrstoff: 'Protein',
     einheit: 'g',
     dec: 0,
     zielLabel: 'Ziel',
-    ziele: [{ wert: 'tag', label: 'Tag', ziel: 100, zielText: '100 g bei 80 kg' }],
+    ziele: [{ wert: 'tag', label: 'Tag', ziel: 96, zielText: '96 g bei 80 kg' }],
     zielQuelle: 'leidy2015',
     speisen: [
       { name: 'Morgens', menge: 'Skyr mit Beeren und Haferflocken', min: 24 },

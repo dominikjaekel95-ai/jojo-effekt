@@ -12,9 +12,10 @@
 import Base from '../../layouts/Base.astro';
 import SeitenKopf from '../../components/SeitenKopf.astro';
 import GrafikDaten from '../../components/GrafikDaten.astro';
+import GrafikHochformat from '../../components/GrafikHochformat.astro';
 import { getCollection } from 'astro:content';
 import { site } from '../../data/site';
-import { grafiken, hauptgrafiken, varianten } from '../../data/grafiken';
+import { grafiken, hauptgrafiken, varianten, hochformatVon, HOCH } from '../../data/grafiken';
 import { getSources } from '../../data/sources';
 import { preise } from '../../data/markt';
 import { themen } from '../../data/themen';
@@ -136,6 +137,7 @@ const filter = [...themen.map((t) => ({ slug: t.slug, name: t.name })), PREISE]
       {liste.map(({ g, i, themen: t, nr }) => {
         const quellen = getSources(g.sources);
         const alts = varianten(g.id);
+        const hoch = hochformatVon(g.id);
         return (
           <article id={g.id} class="gr scroll-mt-24" data-themen={t.join(' ')} aria-labelledby={`${g.id}-h`}>
             <div class="gr-text" data-rv>
@@ -144,7 +146,7 @@ const filter = [...themen.map((t) => ({ slug: t.slug, name: t.name })), PREISE]
               <h2 id={`${g.id}-h`} class="gr-h">{g.title}</h2>
               <p class="gr-sub">{g.subtitle}</p>
               <dl class="gr-dl">
-                <div><dt>Download</dt><dd><a href={`/grafiken/${g.id}.svg`} download class="k-q">SVG (verlustfrei, 1200 × 675)</a> · <a href={`/grafiken/${g.id}.png`} download class="k-q">PNG (1800 × 1013)</a></dd></div>
+                <div><dt>Download</dt><dd><a href={`/grafiken/${g.id}.svg`} download class="k-q">SVG (verlustfrei, 1200 × 675)</a> · <a href={`/grafiken/${g.id}.png`} download class="k-q">PNG (1800 × 1013)</a>{hoch && (<span> · <a href={`/grafiken/${hoch.id}.png`} download class="k-q">Hochformat fürs Handy, PNG ({HOCH.breite} × {HOCH.hoehe})</a></span>)}</dd></div>
                 {g.used.length > 0 && (<div><dt>Im Einsatz</dt><dd>{g.used.map((u, j) => (<span>{j > 0 ? ' · ' : ''}<a href={u.href} class="k-q">{u.label}</a></span>))}</dd></div>)}
                 {alts.length > 0 && (<div><dt>Varianten mit denselben Daten</dt><dd>{alts.map((a, j) => (<span>{j > 0 ? ' · ' : ''}<a href={`/grafiken/${a.id}.png`} class="k-q">{a.title}</a></span>))}</dd></div>)}
               </dl>
@@ -155,7 +157,7 @@ const filter = [...themen.map((t) => ({ slug: t.slug, name: t.name })), PREISE]
               </details>
             </div>
             <figure class="gr-fig" data-rv style="--i:1">
-              <a href={`/grafiken/${g.id}.png`} class="gr-imgl"><img src={`/grafiken/${g.id}.png`} alt={g.alt} width="1200" height="675" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" /></a>
+              <a href={`/grafiken/${g.id}.png`} class="gr-imgl"><picture><GrafikHochformat id={g.id} /><img src={`/grafiken/${g.id}.png`} alt={g.alt} width="1200" height="675" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" /></picture></a>
               <figcaption>
                 Quellen: {quellen.map((q, j) => (<span>{j > 0 ? '; ' : ''}<a href={q.url} rel="noopener" target="_blank">{q.short}</a></span>))}. Grafik: Nach der Spritze, CC BY 4.0.
               </figcaption>
@@ -406,6 +408,9 @@ const filter = [...themen.map((t) => ({ slug: t.slug, name: t.name })), PREISE]
     min-height: 2.5rem;
     padding: 0.4rem 1.1rem;
     font-size: 0.875rem;
+  }
+  .gr-fig picture {
+    display: block;
   }
   .gr-fig img {
     display: block;

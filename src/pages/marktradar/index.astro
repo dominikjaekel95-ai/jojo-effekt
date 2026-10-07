@@ -9,6 +9,7 @@ import Base from '../../layouts/Base.astro';
 import SeitenKopf from '../../components/SeitenKopf.astro';
 import PreisBalken from '../../components/PreisBalken.astro';
 import GrafikDaten from '../../components/GrafikDaten.astro';
+import GrafikHochformat from '../../components/GrafikHochformat.astro';
 import GrafikEinbinden from '../../components/GrafikEinbinden.astro';
 import { site } from '../../data/site';
 import { radar, radarTypeLabel, radarLastmod, zulassungen, preise, kassen, lieferbarkeit, fmtDate, type RadarType } from '../../data/markt';
@@ -196,7 +197,7 @@ const seit = new Date(aeltester).toLocaleDateString('de-DE', { month: 'long', ye
       <PreisBalken />
       <p class="k-note">Quelle: {preise.quelle.replace(/\.$/, '')}.</p>
       <figure class="mr-fig" data-rv>
-        <img src="/grafiken/preise-im-monat.png" alt={`Balkendiagramm der monatlichen Selbstzahlerpreise als Größenordnung, Stand ${fmtDate(preise.stand)}: ${preise.zeilen.map((z) => `${z.praeparat} ${z.monat}`).join('; ')}.`} width="1200" height="675" loading="lazy" />
+        <picture><GrafikHochformat id="preise-im-monat" /><img src="/grafiken/preise-im-monat.png" alt={`Balkendiagramm der monatlichen Selbstzahlerpreise als Größenordnung, Stand ${fmtDate(preise.stand)}: ${preise.zeilen.map((z) => `${z.praeparat} ${z.monat}`).join('; ')}.`} width="1200" height="675" loading="lazy" /></picture>
         <figcaption>
           <p>Dieselben Zahlen als Grafik, Stand {fmtDate(preise.stand)}; wird mit jeder Preiserhebung neu erzeugt. Frei verwendbar mit Quellenangabe, alle Grafiken unter <a href="/grafiken/" class="k-a">Grafiken</a>.</p>
           <GrafikDaten id="preise-im-monat" class="mt-3" />

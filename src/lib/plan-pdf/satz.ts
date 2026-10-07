@@ -53,6 +53,8 @@ export interface Stil {
   s?: Schnitt;
   c?: RGB;
   sp?: number;
+  /** Zeilen ausgleichen wie text-wrap: balance (Überschriften der Druck-CSS) */
+  balance?: boolean;
 }
 
 interface Stueck {
@@ -248,7 +250,18 @@ export class Satz {
   /** Absatz als Block. `ausrichtung` rechts: jede Zeile rechtsbündig. */
   absatz(laeufe: Lauf[] | string, stil: Stil, breite = this.breite, o: { rechts?: boolean } = {}): Block & { zeilen: number; breiteMax: number } {
     const ls = typeof laeufe === 'string' ? [{ t: laeufe }] : laeufe;
-    const zeilen = this.umbrechen(ls, stil, breite);
+    let zeilen = this.umbrechen(ls, stil, breite);
+    if (stil.balance && zeilen.length > 1) {
+      // schmalste Breite mit derselben Zeilenzahl suchen
+      let unten = 0;
+      let oben = breite;
+      for (let i = 0; i < 12; i++) {
+        const mitte = (unten + oben) / 2;
+        if (this.umbrechen(ls, stil, mitte).length <= zeilen.length) oben = mitte;
+        else unten = mitte;
+      }
+      zeilen = this.umbrechen(ls, stil, oben);
+    }
     const zh = stil.g * stil.lh;
     const basis = this.grundlinie(stil.g, stil.lh);
     return {

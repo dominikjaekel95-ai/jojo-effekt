@@ -187,5 +187,4 @@ export function verbindeSenden(ctx: SendenKontext) {
   });
   // Zurück aus dem Verlauf (bfcache): wieder absendbar
   window.addEventListener('pageshow', () => (gesendet = false));
-
 }

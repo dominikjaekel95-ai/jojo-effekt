@@ -85,8 +85,8 @@ const STIL = {
   label: { g: G[2], lh: 1.5, c: FARBE.hell } as Stil,
   klein: { g: G[2], lh: 1.5, c: FARBE.hell } as Stil,
   text: { g: G[3], lh: 1.5 } as Stil,
-  h: { g: G[5], lh: 1.15, s: 'kopf', sp: -0.02 } as Stil,
-  h4: { g: G[4], lh: 1.3, s: 'kopf', sp: -0.01 } as Stil,
+  h: { g: G[5], lh: 1.15, s: 'kopf', sp: -0.02, balance: true } as Stil,
+  h4: { g: G[4], lh: 1.3, s: 'kopf', sp: -0.01, balance: true } as Stil,
 };
 
 /** Seitenkopf: Überschrift links, kleiner Text rechts auf derselben Grundlinie (Handy: darunter). Mit Abstand danach. */
@@ -155,7 +155,7 @@ function deckblatt(s: Satz, a: PdfAuftrag, istHandy: boolean) {
     s.textRechts(`Stand ${a.stand}`, s.breite, s.grundlinie(G[2], 1.5), G[2], 'text', FARBE.hell);
     s.y = G[2] * 1.5;
   }
-  s.setze(s.absatz('Dein Ernährungsplan', istHandy ? STIL.h : { g: G[6], lh: 1.05, s: 'kopf', sp: -0.025 }), { vorher: istHandy ? 36 : 72 });
+  s.setze(s.absatz('Dein Ernährungsplan', istHandy ? STIL.h : { g: G[6], lh: 1.05, s: 'kopf', sp: -0.025, balance: true }), { vorher: istHandy ? 36 : 72 });
   s.setze(s.absatz(unter.join(' · '), { g: istHandy ? G[3] : G[4], lh: 1.4, c: FARBE.hell }), { vorher: istHandy ? 6 : 12 });
 
   // Drei Zahlen

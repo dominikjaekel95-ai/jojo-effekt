@@ -1,0 +1,1135 @@
+/*
+ * Interaktive Planseite /ernaehrungsplan/plan/<id>/ (Markup und Verhalten: src/lib/plan-interaktiv/seite.ts), Design „Kalk“.
+ * Am Handy zuerst: ein Tag pro Bildschirm, Tagesknöpfe bleiben oben stehen (auch Ziel beim Ziehen); ab 1100 px die Woche
+ * als Raster (Zeilen = Tage, Spalten = Mahlzeiten), dort breiter als die Textspalte. Haarlinien statt Boxen, Pillen für
+ * Knöpfe, Touch-Ziele mindestens 44 px. Bewegung nur über transform und opacity; html.rm (reduzierte Bewegung) ohne.
+ * Grün = im Zielbereich und Protein, Grau = außerhalb (neutral, kein Rot), Gelb nur als Markierung.
+ */
+
+.pi-mount[hidden] {
+  display: none;
+}
+
+/* ---- Kopf ---- */
+.pi-hilfe {
+  margin-top: 0.6rem;
+  max-width: 36em;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-ink-3);
+}
+.pi-griff-bild {
+  display: inline-block;
+  width: 10px;
+  height: 14px;
+  margin: 0 0.1rem;
+  vertical-align: -0.1rem;
+  background: radial-gradient(circle, var(--color-ink-3) 1.2px, transparent 1.7px) 0 0 / 5px 5px;
+}
+.pi-appetit {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.7rem;
+  min-height: 2.75rem;
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+.pi-ap-l {
+  margin-right: 0.3rem;
+  color: var(--color-ink-3);
+}
+.pi-ap-t {
+  color: var(--color-ink-3);
+  transition: color 0.3s;
+}
+.pi-appetit:not(:has(input:checked)) .pi-ap-klein,
+.pi-appetit:has(input:checked) .pi-ap-normal {
+  color: var(--color-ink);
+  font-weight: 540;
+}
+/* Regler: Spur mit Knopf, links noch klein, rechts wieder normal */
+.pi-appetit input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+}
+.pi-ap-spur {
+  position: relative;
+  flex: none;
+  width: 3rem;
+  height: 1.625rem;
+  border-radius: 999px;
+  background: var(--color-ink);
+}
+.pi-ap-spur::after {
+  content: '';
+  position: absolute;
+  top: 0.1875rem;
+  left: 0.1875rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: var(--color-paper);
+  transition: transform 0.35s var(--ease);
+}
+.pi-appetit input:checked + .pi-ap-spur::after {
+  transform: translateX(1.375rem);
+}
+.pi-appetit input:focus-visible + .pi-ap-spur {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+}
+.pi-wochen {
+  margin-top: 0.75rem;
+}
+
+/* Schalter: zwei Knöpfe auf einer Spur, der dunkle Knopf gleitet zur Wahl */
+.pi-schalter {
+  position: relative;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  padding: 3px;
+  border: 1px solid #b4b6af;
+  border-radius: 999px;
+}
+.pi-schalter > button,
+.pi-schalter > label {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0 1.1rem;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 520;
+  white-space: nowrap;
+  color: var(--color-ink-2);
+  cursor: pointer;
+  transition: color 0.3s var(--ease);
+}
+.pi-schalter > label input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.pi-schalter > label:has(input:focus-visible) {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+}
+.pi-schalter > i {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  width: calc((100% - 6px) / 2);
+  border-radius: 999px;
+  background: var(--color-ink);
+  transition: transform 0.35s var(--ease);
+}
+.pi-schalter[data-an='1'] > i {
+  transform: translateX(100%);
+}
+.pi-schalter[data-an='0'] > :first-child,
+.pi-schalter[data-an='1'] > :nth-child(2) {
+  color: var(--color-paper);
+}
+
+/* ---- Tagesknöpfe: bleiben beim Scrollen oben stehen (unter dem Seitenkopf) ---- */
+.pi-chips {
+  position: sticky;
+  top: 4.25rem;
+  z-index: 6;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  margin: 0.75rem calc(-1 * var(--pad)) 0;
+  padding: 0.35rem var(--pad);
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-line);
+}
+.pi-chips[data-w='0'] > .pi-chip:nth-child(n + 8),
+.pi-chips[data-w='1'] > .pi-chip:nth-child(-n + 7) {
+  display: none;
+}
+.pi-chip {
+  position: relative;
+  justify-self: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  font-size: 1.0625rem;
+  font-stretch: 118%;
+  font-weight: 500;
+  color: var(--color-ink-2);
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s, transform 0.25s var(--ease);
+}
+.pi-chip[aria-pressed='true'] {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+/* Tag außerhalb des Zielbereichs: kleiner grauer Punkt */
+.pi-chip-raus::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  border-radius: 50%;
+  background: var(--color-placebo);
+}
+.pi-chip.pi-ziel {
+  box-shadow: inset 0 0 0 1.5px var(--color-ink);
+}
+.pi-chip.pi-ziel-an {
+  background: var(--color-amber);
+  color: var(--color-ink);
+  transform: scale(1.12);
+}
+
+/* ---- Tage: am Handy ein Tag pro Bildschirm, wischen (scroll-snap) ---- */
+.pi-spalten {
+  display: none;
+}
+.pi-tage {
+  display: flex;
+  margin-inline: calc(-1 * var(--pad));
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.pi-tage::-webkit-scrollbar {
+  display: none;
+}
+.pi-tag {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 1.25rem var(--pad) 0.5rem;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.pi-tag-kopf {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: 1rem;
+}
+.pi-tag-h {
+  font-size: 1.625rem;
+  line-height: 1.1;
+  font-stretch: 118%;
+  font-weight: 520;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+.pi-tag-g {
+  font-size: 0.9375rem;
+  color: var(--color-ink-3);
+  white-space: nowrap;
+}
+.pi-tag-g b {
+  font-size: 1.625rem;
+  font-stretch: 125%;
+  font-weight: 480;
+  letter-spacing: -0.03em;
+  color: var(--color-moss);
+  transition: color 0.3s;
+}
+.pi-raus .pi-tag-g b {
+  color: var(--color-ink);
+}
+.pi-balken {
+  grid-column: 1 / -1;
+  position: relative;
+  height: 6px;
+  margin-top: 0.7rem;
+  border-radius: 999px;
+  background: var(--color-paper-2);
+}
+.pi-balken-f {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: var(--color-moss);
+  transform-origin: left center;
+  transition: transform 0.7s var(--ease), background-color 0.3s;
+}
+.pi-raus .pi-balken-f {
+  background: var(--color-placebo);
+}
+.pi-balken-z {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--color-ink);
+}
+.pi-tag-status {
+  grid-column: 1 / -1;
+  margin-top: 0.55rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-ink-2);
+}
+.pi-ok {
+  color: var(--color-moss);
+}
+.pi-vorschlag {
+  min-height: 2.75rem;
+  margin-top: 0.5rem;
+  padding: 0 1.25rem;
+  border: 1px solid var(--color-ink);
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 540;
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.pi-vorschlag:hover {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* ---- Mahlzeiten ---- */
+.pi-liste {
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0;
+}
+.pi-mz {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 2.75rem;
+  grid-template-areas:
+    'zeit g'
+    'knopf griff'
+    'rezept rezept';
+  column-gap: 0.5rem;
+  padding: 0.8rem 0 0.7rem;
+  border-top: 1px solid var(--color-line);
+}
+.pi-mz-zeit {
+  grid-area: zeit;
+  font-size: 0.8125rem;
+  color: var(--color-ink-3);
+}
+.pi-mz-g {
+  grid-area: g;
+  justify-self: end;
+  align-self: baseline;
+  font-size: 0.875rem;
+  font-weight: 560;
+  color: var(--color-moss);
+  white-space: nowrap;
+}
+.pi-mz-knopf {
+  grid-area: knopf;
+  display: block;
+  min-height: 2.75rem;
+  line-height: 1.35;
+  padding: 0.15rem 0 0.1rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.pi-mz .pi-mz-name {
+  font-size: 1.0625rem;
+  line-height: 1.35;
+  font-weight: 560;
+  font-stretch: 106%;
+  color: var(--color-ink);
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 0.2s;
+}
+.pi-mz-knopf:hover .pi-mz-name {
+  text-decoration-color: var(--color-ink-3);
+}
+.pi-snack .pi-mz-name {
+  font-size: 1rem;
+  font-weight: 520;
+  font-stretch: 100%;
+}
+.pi-mz-menge {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--color-ink-2);
+}
+.pi-mz-dazu {
+  color: var(--color-ink-3);
+}
+/* Griff zum Ziehen: sechs Punkte */
+.pi-griff {
+  grid-area: griff;
+  align-self: center;
+  position: relative;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+  transition: background-color 0.2s;
+}
+.pi-griff.pi-bereit {
+  background: var(--color-paper-2);
+}
+.pi-griff::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 18px;
+  margin: -9px 0 0 -6px;
+  background: radial-gradient(circle, var(--color-ink-3) 1.4px, transparent 1.9px) 0 0 / 6px 6px;
+}
+.pi-griff:hover::before {
+  background-image: radial-gradient(circle, var(--color-ink) 1.4px, transparent 1.9px);
+}
+html.pi-ziehen,
+html.pi-ziehen * {
+  cursor: grabbing !important;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.pi-zieht {
+  opacity: 0.4;
+}
+.pi-mz.pi-ziel {
+  outline: 1.5px dashed var(--color-ink-3);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+.pi-mz.pi-ziel-an {
+  outline: 2px solid var(--color-ink);
+  background: var(--color-amber-light);
+}
+.pi-geist {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 60;
+  max-width: 16rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-size: 0.9375rem;
+  font-weight: 520;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  will-change: transform;
+}
+/* Gerade geändert: kurz gelb hinterlegt, dann blendet die Markierung aus */
+.pi-neu::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 calc(-1 * var(--pad));
+  background: var(--color-amber-light);
+  opacity: 0;
+  pointer-events: none;
+  animation: pi-neu 1.8s var(--ease);
+}
+@keyframes pi-neu {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+html.rm .pi-neu::before {
+  animation: none;
+}
+
+/* Rezept am Gericht */
+.pi-rezept {
+  grid-area: rezept;
+}
+.pi-rezept > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  font-size: 0.875rem;
+  color: var(--color-ink-2);
+  cursor: pointer;
+  list-style: none;
+}
+.pi-rezept > summary::-webkit-details-marker {
+  display: none;
+}
+.pi-rezept > summary::after {
+  content: '';
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-top: -0.2rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.3s var(--ease);
+}
+.pi-rezept[open] > summary::after {
+  transform: translateY(0.2rem) rotate(225deg);
+}
+.pi-rezept-in {
+  padding: 0.25rem 0 0.75rem;
+}
+.pi-rezept-in > .pi-schalter > button {
+  min-height: 2.75rem;
+  font-size: 0.875rem;
+}
+.pi-rz-spalten {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--color-ink-2);
+}
+.pi-rz-h {
+  margin-bottom: 0.25rem;
+  font-size: 0.8125rem;
+  color: var(--color-ink-3);
+}
+.pi-rz-spalten ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pi-rz-spalten ol {
+  margin: 0;
+  padding-left: 1.3rem;
+  list-style: decimal;
+}
+.pi-rz-spalten ol li + li {
+  margin-top: 0.35rem;
+}
+.pi-rz-spalten ol li::marker {
+  color: var(--color-moss);
+  font-weight: 560;
+}
+.pi-rz-tipp {
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--color-ink-3);
+}
+@media (min-width: 640px) {
+  .pi-rz-spalten {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    column-gap: 2rem;
+  }
+}
+
+/* ---- Fuß: ausgeblendete Gerichte, zurücksetzen ---- */
+.pi-fuss {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--color-line);
+  font-size: 0.875rem;
+  color: var(--color-ink-3);
+}
+.pi-fuss:not(:has(> :not([hidden]))) {
+  display: none;
+}
+.pi-aus-eintrag {
+  white-space: nowrap;
+}
+.pi-aus-eintrag + .pi-aus-eintrag::before {
+  content: '· ';
+}
+.pi-text-knopf {
+  min-height: 2.75rem;
+  padding: 0 0.1rem;
+  font: inherit;
+  font-weight: 520;
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-line);
+  text-underline-offset: 0.25em;
+  cursor: pointer;
+}
+.pi-text-knopf:hover {
+  text-decoration-color: var(--color-ink);
+}
+
+/* ---- Ansage mit „Rückgängig“ (dunkler Block, Gelb-Knopf) ---- */
+.pi-toast {
+  position: fixed;
+  z-index: 50;
+  left: 50%;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: min(34rem, calc(100% - 2rem));
+  padding: 0.5rem 0.5rem 0.5rem 1.1rem;
+  border-radius: 18px;
+  background: var(--color-ink);
+  color: var(--dark-fg);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translate(-50%, 1.25rem);
+  transition: transform 0.35s var(--ease), opacity 0.25s;
+}
+.pi-toast[hidden] {
+  display: none;
+}
+.pi-toast.an {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.pi-toast p {
+  flex: 1;
+  padding: 0.35rem 0;
+}
+.pi-toast button {
+  flex: none;
+  min-height: 2.75rem;
+  padding: 0 1.1rem;
+  border-radius: 999px;
+  background: var(--color-amber);
+  color: var(--color-ink);
+  font-weight: 560;
+  cursor: pointer;
+}
+.pi-toast button[hidden] {
+  display: none;
+}
+.pi-toast button:focus-visible {
+  outline-color: var(--color-amber);
+}
+
+/* ---- Blatt (Tauschen, Mit Tag … tauschen, Nicht mein Fall): am Handy von unten, am Desktop in der Mitte ---- */
+.pi-blatt {
+  position: fixed;
+  inset: auto 0 0;
+  width: 100%;
+  max-width: 100%;
+  max-height: 88dvh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 20px 20px 0 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  transform: translateY(100%);
+  transition: transform 0.3s var(--ease);
+}
+.pi-blatt.auf {
+  transform: none;
+}
+.pi-blatt::backdrop {
+  background: rgba(20, 21, 19, 0.4);
+}
+.pi-blatt-in {
+  max-height: 88dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1.1rem var(--pad) calc(1.25rem + env(safe-area-inset-bottom));
+}
+@media (min-width: 700px) {
+  .pi-blatt {
+    inset: 0;
+    width: min(34rem, calc(100% - 2rem));
+    height: fit-content;
+    margin: auto;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform 0.3s var(--ease), opacity 0.2s;
+  }
+  .pi-blatt.auf {
+    opacity: 1;
+    transform: none;
+  }
+  .pi-blatt-in {
+    padding: 1.5rem 2rem 1.75rem;
+  }
+}
+html.rm .pi-blatt,
+html.rm .pi-toast,
+html.rm .pi-schalter > i,
+html.rm .pi-ap-spur::after,
+html.rm .pi-balken-f {
+  transition: none;
+}
+.pi-blatt-kopf {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-line);
+}
+.pi-blatt-wo {
+  font-size: 0.875rem;
+  color: var(--color-ink-3);
+}
+.pi-zu {
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border: 1px solid #b4b6af;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+.pi-zu:hover {
+  border-color: var(--color-ink);
+}
+.pi-blatt-name {
+  grid-column: 1 / -1;
+  margin-top: 0.35rem;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  font-stretch: 118%;
+  font-weight: 520;
+  letter-spacing: -0.02em;
+}
+.pi-blatt-name .ep-mz-name {
+  font-weight: inherit;
+}
+.pi-blatt-teil {
+  padding: 1.1rem 0 0.25rem;
+}
+.pi-blatt-teil + .pi-blatt-teil {
+  margin-top: 0.75rem;
+  border-top: 1px solid var(--color-line);
+}
+.pi-blatt-h {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  color: var(--color-ink-3);
+}
+.pi-blatt .ep-klein {
+  margin-top: 0.6rem;
+}
+.pi-alt {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-line);
+}
+.pi-alt li {
+  border-bottom: 1px solid var(--color-line);
+}
+.pi-alt button {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.75rem 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.35;
+  cursor: pointer;
+}
+.pi-alt .ep-mz-name {
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.2em;
+}
+.pi-alt button:hover .ep-mz-name {
+  text-decoration-color: var(--color-ink-3);
+}
+.pi-alt-g {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9375rem;
+  font-weight: 560;
+  color: var(--color-moss);
+}
+.pi-alt-g svg {
+  color: var(--color-ink);
+  transition: transform 0.25s var(--ease);
+}
+.pi-alt button:hover .pi-alt-g svg {
+  transform: translateX(3px);
+}
+.pi-mit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.pi-mit select {
+  flex: 1 1 13rem;
+  min-width: 0;
+  min-height: 3rem;
+  padding: 0 2.5rem 0 1.1rem;
+  border: 1px solid #b4b6af;
+  border-radius: 999px;
+  background: #fff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23141513' stroke-width='1.5'/%3E%3C/svg%3E")
+    right 1.1rem center / 12px 8px no-repeat;
+  color: var(--color-ink);
+  font: inherit;
+  font-size: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  text-overflow: ellipsis;
+}
+@media (max-width: 519px) {
+  .pi-mit select {
+    flex-basis: 100%;
+  }
+}
+.pi-mit select:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+/* ---- Einkaufsliste ---- */
+.pi-einkauf {
+  margin-top: 4rem;
+}
+.pi-ek-kopf {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-ink);
+}
+.pi-ek-intro {
+  margin-top: 0.75rem;
+  max-width: 42em;
+}
+.pi-ek-liste {
+  margin-top: 1.25rem;
+}
+.pi-ek-gruppe {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}
+.pi-ek-h {
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--color-line);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  color: var(--color-ink-3);
+}
+.pi-ek-gruppe ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pi-ek {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px dotted var(--color-line);
+}
+.pi-ek label {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  min-height: 2.75rem;
+  padding: 0.6rem 0;
+  cursor: pointer;
+}
+.pi-ek input {
+  flex: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0.12rem 0 0;
+  accent-color: var(--color-ink);
+}
+.pi-ek-t {
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--color-ink);
+  transition: color 0.2s;
+}
+.pi-ek-k {
+  font-size: 0.8125rem;
+  color: var(--color-ink-3);
+  white-space: nowrap;
+}
+.pi-ek-ab .pi-ek-t {
+  color: var(--color-ink-3);
+  text-decoration: line-through;
+  text-decoration-color: var(--color-ink-3);
+}
+.pi-ek .pi-text-knopf {
+  flex: none;
+  font-size: 0.8125rem;
+  font-weight: 450;
+  color: var(--color-ink-3);
+}
+.pi-ek-schon .pi-ek-t {
+  flex: 1;
+  padding: 0.6rem 0;
+  color: var(--color-ink-3);
+}
+.pi-ek-vorrat {
+  margin: 0.25rem 0 1.25rem;
+  font-size: 0.875rem;
+  color: var(--color-ink-2);
+}
+.pi-ek-vorrat span {
+  margin-right: 0.4rem;
+  font-weight: 560;
+  color: var(--color-ink);
+}
+.pi-ek-aktionen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 0.5rem;
+}
+.pi-ek-text {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #b4b6af;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--color-ink);
+  font: inherit;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+.pi-ek-text[hidden] {
+  display: none;
+}
+@media (min-width: 760px) {
+  .pi-ek-liste {
+    columns: 2;
+    column-gap: 2.5rem;
+  }
+}
+
+/* ---- Desktop: die Woche als Raster, breiter als die Textspalte ---- */
+@media (min-width: 1100px) {
+  .pi-mount {
+    --pi-breite: min(76rem, calc(100vw - 2 * var(--pad) - 1rem));
+  }
+  .pi-plan,
+  .pi-einkauf {
+    width: var(--pi-breite);
+    margin-left: calc(50% - var(--pi-breite) / 2);
+  }
+  .pi-kopf {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    column-gap: 2rem;
+  }
+  .pi-kopf > .ep-h2,
+  .pi-hilfe {
+    grid-column: 1;
+  }
+  .pi-appetit {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    margin-top: 0;
+  }
+  .pi-wochen {
+    margin-top: 1.75rem;
+  }
+  .pi-chips {
+    display: none;
+  }
+  .pi-spalten {
+    display: grid;
+    grid-template-columns: 8.5rem repeat(3, minmax(0, 1fr)) minmax(0, 1.15fr);
+    column-gap: 1.75rem;
+    margin-top: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-ink);
+    font-size: 0.8125rem;
+    color: var(--color-ink-3);
+  }
+  .pi-tage {
+    display: block;
+    margin-inline: 0;
+    overflow: visible;
+  }
+  .pi-tage[data-w='0'] > .pi-tag:nth-child(n + 8),
+  .pi-tage[data-w='1'] > .pi-tag:nth-child(-n + 7) {
+    display: none;
+  }
+  .pi-tag {
+    display: grid;
+    grid-template-columns: 8.5rem minmax(0, 1fr);
+    grid-template-rows: auto auto auto 1fr auto;
+    column-gap: 1.75rem;
+    padding: 1.1rem 0 1rem;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .pi-tag-kopf {
+    display: contents;
+  }
+  .pi-tag-h {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 1.25rem;
+  }
+  .pi-tag-g {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 0.15rem;
+  }
+  .pi-tag-g b {
+    font-size: 1.25rem;
+  }
+  .pi-balken {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 0.5rem;
+  }
+  .pi-tag-status {
+    grid-column: 1;
+    grid-row: 4;
+    font-size: 0.8125rem;
+  }
+  .pi-raus .pi-tag-status {
+    grid-column: 1 / -1;
+    grid-row: 5;
+    margin-top: 0.75rem;
+  }
+  .pi-liste {
+    grid-column: 2;
+    grid-row: 1 / 5;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 1.15fr);
+    grid-template-rows: repeat(4, auto);
+    align-items: start;
+    column-gap: 1.75rem;
+    margin: 0;
+  }
+  .pi-mz {
+    grid-template-areas:
+      'zeit g'
+      'knopf knopf'
+      'rezept griff';
+    padding: 0;
+    border-top: 0;
+  }
+  .pi-f,
+  .pi-m,
+  .pi-a {
+    grid-row: 1 / -1;
+  }
+  .pi-f {
+    grid-column: 1;
+  }
+  .pi-m {
+    grid-column: 2;
+  }
+  .pi-a {
+    grid-column: 3;
+  }
+  .pi-snack {
+    grid-column: 4;
+    grid-template-areas:
+      'zeit g'
+      'knopf griff';
+  }
+  .pi-snack ~ .pi-snack {
+    margin-top: 0.4rem;
+    padding-top: 0.6rem;
+    border-top: 1px dotted var(--color-line);
+  }
+  .pi-snack .pi-griff {
+    align-self: end;
+  }
+  .pi-f .pi-mz-zeit,
+  .pi-m .pi-mz-zeit,
+  .pi-a .pi-mz-zeit {
+    display: none;
+  }
+  .pi-mz-knopf {
+    min-height: 0;
+  }
+  .pi-mz .pi-mz-name {
+    font-size: 0.9375rem;
+    line-height: 1.3;
+  }
+  .pi-snack .pi-mz-name {
+    font-size: 0.875rem;
+  }
+  .pi-mz-menge {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+  .pi-mz-g {
+    font-size: 0.8125rem;
+  }
+  .pi-griff {
+    justify-self: end;
+    margin-right: -0.6rem;
+  }
+  .pi-rezept {
+    align-self: center;
+  }
+  .pi-rezept > summary {
+    font-size: 0.8125rem;
+  }
+  .pi-rz-spalten {
+    grid-template-columns: 1fr;
+    font-size: 0.8125rem;
+  }
+  .pi-neu::before {
+    inset: -0.4rem;
+    border-radius: 10px;
+  }
+  .pi-mz.pi-ziel,
+  .pi-mz.pi-ziel-an {
+    outline-offset: 4px;
+  }
+}
+
+/* Druck: die interaktive Ansicht steht in .ep-wrap und fällt mit ihr weg (ernaehrungsplan-druck.css) */
+@media print {
+  .pi-toast,
+  .pi-geist,
+  .pi-blatt {
+    display: none !important;
+  }
+}

@@ -92,4 +92,4 @@ Die Zahlen oben sind Mittelwerte aus kleinen Messreihen; dein Verbrauch kann dar
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze arbeitet mit einem Gewichtskorridor statt mit Kalorienzählen, dazu mit Proteinziel und zwei Krafteinheiten pro Woche; es ist kein Medikament und kein Diätplan. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze arbeitet mit einem Gewichtskorridor statt mit Kalorienzählen, dazu mit Proteinziel und zwei Krafteinheiten pro Woche; es ist kein Medikament und kein Diätplan. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

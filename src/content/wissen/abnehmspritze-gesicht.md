@@ -17,9 +17,9 @@ faq:
   - q: "Hilft Kollagen?"
     a: "<p>Es gibt eine kleine, herstellerfinanzierte Studie mit 69 Frauen, in der Kollagenpeptide die Hautelastizität nach acht Wochen gegenüber Placebo verbesserten. Das ist ein Hinweis, kein Beleg, und in der EU ist für Kollagen keine gesundheitsbezogene Angabe zugelassen. Wer es ausprobiert, tut das als Versuch.</p>"
   - q: "Soll ich langsamer abnehmen?"
-    a: "<p>Das Tempo legt die Behandlung fest, und das besprichst du mit deiner Ärztin, nicht mit einem Artikel. Was du selbst steuerst: genug Protein, Krafttraining an zwei Tagen pro Woche und eine Ernährung, die die Haut versorgt. Das verhindert, dass zum fehlenden Fett auch noch schwindende Muskeln kommen.</p>"
+    a: "<p>Das Tempo legt die Behandlung fest, und das besprichst du mit deiner Ärztin, nicht mit einem Artikel. Was du selbst steuerst: genug Protein, Krafttraining an zwei Tagen pro Woche und eine Ernährung, die die Haut versorgt. Das hilft zu verhindern, dass zum fehlenden Fett auch noch schwindende Muskeln kommen.</p>"
   - q: "Was verändert sich im Gesicht, wenn man abnimmt?"
-    a: "<p>Die Fettpolster in Wangen, Schläfen und um die Augen werden kleiner; dadurch treten Wangenknochen, Nasolabialfalten und Augenringe stärker hervor, und die Haut hat weniger Volumen unter sich. Bei schnellem Verlust kommt die Haut mit dem Zurückziehen nicht nach, und das Gesicht wirkt eingefallen. Das ist eine Folge des Gewichtsverlusts, keine Wirkung des Medikaments auf die Haut, und tritt bei jeder schnellen Abnahme auf, auch nach Operationen oder Diäten.</p>"
+    a: "<p>Die Fettpolster in Wangen, Schläfen und um die Augen werden kleiner; dadurch treten Wangenknochen, Nasolabialfalten und Augenringe stärker hervor, und die Haut hat weniger Volumen unter sich. Bei schnellem Verlust kommt die Haut mit dem Zurückziehen nicht nach, und das Gesicht wirkt eingefallen. Das ist nach allem, was bekannt ist, eine Folge des Gewichtsverlusts und keine Wirkung des Medikaments auf die Haut, und tritt bei jeder schnellen Abnahme auf, auch nach Operationen oder Diäten.</p>"
 ---
 
 „Ozempic Face“ ist ein Begriff aus den US-Medien, kein medizinisches Krankheitsbild. Gemeint sind eingefallene Wangen, tiefere Falten und lockerere Haut im Gesicht nach schnellem Gewichtsverlust unter GLP-1-Medikamenten. Das Phänomen ist real, die Erklärung ist unspektakulär: Wer viel Fett verliert, verliert es auch im Gesicht, und die Haut kommt bei diesem Tempo nicht mit. Dieser Artikel erklärt, was dabei passiert, welche drei Faktoren es sichtbar machen und was sich davon beeinflussen lässt. Er sagt nur, was belegt ist; für die Frage, wie schnell du abnimmst, ist deine Ärztin zuständig.
@@ -59,7 +59,7 @@ Für die Haut sind in der EU unter anderem diese Angaben zugelassen:<sup><a href
 | Kiwi, 1 Stück | 70 mg |
 | Kartoffeln gegart, 200 g | 25 mg |
 
-Werte aus dem Bundeslebensmittelschlüssel, gerundet.<sup><a href="#fn-bls">7</a></sup> Eine Paprika oder eine Portion Beeren am Tag deckt den Wert; ein Präparat braucht es dafür nicht.
+Werte aus dem Bundeslebensmittelschlüssel, gerundet.<sup><a href="#fn-bls">7</a></sup> 100 g Paprika decken den Wert, eine Portion Erdbeeren fast; ein Präparat braucht es dafür nicht.
 
 ### Kollagenpeptide: ein Hinweis, kein Beleg
 

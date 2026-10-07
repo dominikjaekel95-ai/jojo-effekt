@@ -101,4 +101,4 @@ Der wichtigste Satz zum Schluss: Kreatin macht Training wirksamer. Ohne Training
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Im 12-Wochen-Programm sind zwei Krafteinheiten pro Woche fest eingeplant; ein Präparat gehört nicht dazu. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Im 12-Wochen-Programm sind zwei Krafteinheiten pro Woche fest eingeplant; ein Präparat gehört nicht dazu. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

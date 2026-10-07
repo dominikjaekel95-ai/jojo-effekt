@@ -33,7 +33,7 @@ export const site = {
   sameAs: [] as string[],
 
   // Angebot (seit 06.10.2026): 12-Wochen-Programm, Warteliste statt Vorbestellung. Preis nur als Rahmen nennen
-  // („Basis-Programm geplant unter 129 €“), keine Stufen ausformulieren, kein Vergleich mit Spritzenkosten.
+  // („Das Basis-Programm soll unter 129 € kosten“, Dominik, 07.10.2026), keine Stufen ausformulieren, kein Vergleich mit Spritzenkosten.
   price: {
     programUnder: 129,
   },

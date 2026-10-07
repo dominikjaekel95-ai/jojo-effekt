@@ -18,7 +18,7 @@ Pro Gramm gespeichertem Glykogen bindet der Muskel etwa drei Gramm Wasser.<sup><
 
 ## Warum das nach der Abnehmspritze verwirrt
 
-Unter dem Medikament sind die Portionen klein, die Speicher oft halb leer. Nach dem Absetzen kommt der Appetit zurück, die Speicher füllen sich, und die Waage macht in der ersten Woche einen Sprung, der wie der Anfang des Jojo-Effekts aussieht. Ein Teil davon ist Glykogen und Wasser, kein Fett. Umgekehrt entfällt in der STEP-1-Substudie ein Teil des Verlusts an [fettfreier Masse](/glossar/fettfreie-masse/) auf dieses Wasser, weil Messverfahren wie [DXA](/glossar/dxa/) es nicht vom Muskel trennen.<sup><a href="#fn-wilding2021dxa">3</a></sup> Auch Kreatin bindet Wasser in den Muskeln, üblich sind ein bis zwei Kilogramm in den ersten Wochen.<sup><a href="#fn-kreider2017">2</a></sup>
+Unter dem Medikament sind die Portionen klein, die Speicher oft halb leer. Nach dem Absetzen kommt der Appetit zurück, die Speicher füllen sich, und die Waage macht in der ersten Woche einen Sprung, der wie der Anfang des Jojo-Effekts aussieht. Ein Teil davon ist Glykogen und Wasser, kein Fett. Umgekehrt entfällt in der STEP-1-Substudie ein Teil des Verlusts an [fettfreier Masse](/glossar/fettfreie-masse/) auf dieses Wasser, weil Messverfahren wie [DXA](/glossar/dxa/) es nicht vom Muskel trennen.<sup><a href="#fn-wilding2021dxa">3</a></sup> Auch Kreatin bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur; das zeigt die Waage, ist aber kein Fett.<sup><a href="#fn-kreider2017">2</a></sup>
 
 ## Was du daraus machst
 

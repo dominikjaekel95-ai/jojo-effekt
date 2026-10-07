@@ -20,7 +20,7 @@ faq:
   - q: "Kann man den Jojo-Effekt nach der Abnehmspritze vermeiden?"
     a: "<p>Vollständig verhindern kann ihn kein Mittel. Was in Studien hilft: ausreichend Protein, regelmäßiges Krafttraining, eine Ernährungsstruktur, die auch mit normalem Appetit funktioniert, und regelmäßiges Wiegen mit klarer Reaktionsschwelle. In der dänischen S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach Therapieende.</p>"
   - q: "Warum setzen so viele die Abnehmspritze wieder ab?"
-    a: "<p>In einer US-Auswertung von Versorgungsdaten hatten 64,8 % der Menschen ohne Typ-2-Diabetes ihre GLP-1-Therapie innerhalb eines Jahres beendet. Die Gründe sind Kosten, Nebenwirkungen, Lieferengpässe, ein erreichtes Ziel oder ein Kinderwunsch. Rund ein Drittel begann innerhalb eines Jahres erneut, meist wegen der Zunahme. Ob und wie du absetzt, entscheidest du mit deiner Ärztin oder deinem Arzt.</p>"
+    a: "<p>In einer US-Auswertung von Versorgungsdaten hatten 64,8 % der Menschen ohne Typ-2-Diabetes ihre GLP-1-Therapie innerhalb eines Jahres beendet. Die Gründe sind Kosten, Nebenwirkungen, Lieferengpässe, ein erreichtes Ziel oder ein Kinderwunsch. Rund ein Drittel begann innerhalb eines Jahres erneut. Ob und wie du absetzt, entscheidest du mit deiner Ärztin oder deinem Arzt.</p>"
   - q: "Gibt es den Jojo-Effekt nach der Abnehmspritze wirklich?"
     a: "<p>Ja, in randomisierten Studien gemessen: In STEP 4 nahmen Teilnehmende nach dem Wechsel von Semaglutid auf Placebo in 48 Wochen 6,9 % zu, in SURMOUNT-4 nach dem Wechsel von Tirzepatid auf Placebo in 52 Wochen 14 %, und in der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen zwei Drittel des Verlusts zurück. Hinter jedem Mittelwert stehen Menschen, die fast alles wieder zugenommen haben, und Menschen, die fast nichts zugenommen haben.</p>"
 ---
@@ -83,7 +83,7 @@ Mit drei Dingen, die in Studien geholfen haben: Krafttraining an mindestens zwei
 
 ### Krafttraining: der stärkste Hebel
 
-Die klarste Evidenz kommt aus Dänemark. In der S-LiTE-Studie nahmen Erwachsene mit Adipositas zuerst mit einer Diät ab und wurden dann ein Jahr lang entweder mit Liraglutid, einem betreuten Trainingsprogramm, beidem oder Placebo behandelt. Ein Jahr nach dem Ende aller Behandlungen hatten die Gruppen mit Training ihr Gewicht und ihre Körperzusammensetzung gehalten. Die Gruppe, die nur das Medikament bekommen hatte, hatte im Schnitt 6 kg mehr zugenommen als die Trainingsgruppe.<sup><a href="#fn-jensen2024">10</a></sup> Krafttraining während einer Kalorienreduktion verhindert außerdem den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">12</a></sup> Die WHO empfiehlt an mindestens zwei Tagen pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">13</a></sup> Zwei Einheiten à 30 Minuten reichen für den Einstieg.
+Die klarste Evidenz kommt aus Dänemark. In der S-LiTE-Studie nahmen Erwachsene mit Adipositas zuerst mit einer Diät ab und wurden dann ein Jahr lang entweder mit Liraglutid, einem betreuten Trainingsprogramm aus Ausdauer- und Zirkeltraining, beidem oder Placebo behandelt. Ein Jahr nach dem Ende aller Behandlungen hatten die Gruppen mit Training ihr Gewicht und ihre Körperzusammensetzung gehalten. Die Gruppe, die nur das Medikament bekommen hatte, hatte im Schnitt 6 kg mehr zugenommen als die Trainingsgruppe.<sup><a href="#fn-jensen2024">10</a></sup> Krafttraining während einer Kalorienreduktion verhindert außerdem den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">12</a></sup> Die WHO empfiehlt an mindestens zwei Tagen pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">13</a></sup> Zwei Einheiten à 30 Minuten reichen für den Einstieg.
 
 <div data-interaktiv="slite"></div>
 
@@ -93,7 +93,7 @@ Die klarste Evidenz kommt aus Dänemark. In der S-LiTE-Studie nahmen Erwachsene 
 
 ### Struktur statt Willenskraft
 
-Der Appetit kommt zurück. Das ist Biologie, keine Charakterschwäche. Was hilft, ist eine Ernährungsstruktur, die mit normalem Hunger funktioniert: feste Mahlzeiten, viel Volumen (Gemüse, Ballaststoffe, Suppen), Protein zuerst, wenig Flüssigkalorien. Und eine Waage: einmal pro Woche, gleiche Bedingungen, mit einer vorher festgelegten Schwelle, ab der du reagierst – zum Beispiel mit einem Termin bei deiner Ärztin.
+Der Appetit kommt zurück. Das ist Biologie, keine Charakterschwäche. Was hilft, ist eine Ernährungsstruktur, die mit normalem Hunger funktioniert: feste Mahlzeiten, viel Volumen (Gemüse, Ballaststoffe, Suppen), Protein zuerst, wenig Flüssigkalorien. Und eine Waage: einmal pro Woche, gleiche Bedingungen, mit vorher festgelegten Schwellen, ab denen du reagierst: ab 1,4 kg über dem Startgewicht zwei Wochen gegensteuern, ab 2,3 kg den Plan prüfen.
 
 ## Was nicht hilft
 
@@ -105,4 +105,4 @@ Ob und wie du das Medikament absetzt, entscheidest du mit deiner Ärztin oder de
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze ist kein Medikament und verhindert den Jojo-Effekt nicht. Es baut auf die drei Dinge, die sich in Studien immer wieder zeigen: Krafttraining, genug Protein und einen Plan, um das eigene Gewicht gezielt im Blick zu behalten. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze ist kein Medikament und verhindert den Jojo-Effekt nicht. Es baut auf die drei Dinge, die sich in Studien immer wieder zeigen: Krafttraining, genug Protein und einen Plan, um das eigene Gewicht gezielt im Blick zu behalten. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

@@ -80,12 +80,12 @@ Was auffällt: Um auf 100 g zu kommen, braucht es bei jeder Mahlzeit eine echte 
 Das eigentliche Problem unter der Spritze ist nicht das Wissen, sondern der fehlende Hunger. Dabei helfen sieben Dinge:
 
 1. **Protein zuerst.** Bei jeder Mahlzeit zuerst die Proteinquelle essen, dann Gemüse, dann den Rest. Wenn die Sättigung kommt, ist das Wichtigste schon drin.
-2. **Flüssig statt fest.** Ein Shake oder Stick mit 20 bis 25 g ist bei Übelkeit oft leichter als ein Stück Fleisch. Auch Milch, Kefir oder Trinkjoghurt zählen.
+2. **Flüssig statt fest.** Ein Shake mit 20 bis 25 g ist bei Übelkeit oft leichter als ein Stück Fleisch. Auch Milch, Kefir oder Trinkjoghurt zählen.
 3. **Vier kleine statt zwei große Mahlzeiten.** 25 g viermal ist machbarer als 50 g zweimal – und der Körper nutzt es besser.
 4. **Frühstück mit Protein.** Skyr, Quark, Eier oder ein Shake statt Brot mit Süßem. Das ist die Mahlzeit, die die meisten verschenken.
-5. **Immer eine Notreserve.** Ein Stick oder ein Shake in der Tasche für Tage, an denen keine Mahlzeit klappt.
+5. **Immer eine Notreserve.** Ein Proteinriegel oder ein Shake in der Tasche für Tage, an denen keine Mahlzeit klappt.
 6. **Kalt und mild bei Übelkeit.** Skyr, Hüttenkäse, kalter Fisch, Tofu – warme, fettige Gerichte verstärken die Übelkeit oft.
-7. **Ballaststoffe dazu, aber mit Wasser.** Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<sup><a href="#fn-dgeBallaststoffe">6</a></sup> Bei kleinen Portionen ist das schwer, deshalb Gemüse, Hülsenfrüchte, Haferflocken oder ein Ballaststoff-Stick – immer mit einem großen Glas Wasser. Was [Glucomannan](/wissen/glucomannan-abnehmspritze/), der einzige Ballaststoff mit zugelassener Angabe, kann und was nicht, steht in einem eigenen Artikel.
+7. **Ballaststoffe dazu, aber mit Wasser.** Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<sup><a href="#fn-dgeBallaststoffe">6</a></sup> Bei kleinen Portionen ist das schwer, deshalb Gemüse, Hülsenfrüchte, Haferflocken oder ein Ballaststoffpulver – immer mit einem großen Glas Wasser. Was [Glucomannan](/wissen/glucomannan-abnehmspritze/), der einzige Ballaststoff mit zugelassener Angabe zum Gewichtsverlust, kann und was nicht, steht in einem eigenen Artikel.
 
 <figure class="my-8">
   <img src="/grafiken/protein-verteilung.png" alt="Zwei Balkengruppen: gleichmäßige Verteilung mit etwa 30 Gramm Protein zu Frühstück, Mittag und Abend gegenüber abendlastiger Verteilung mit etwa 10, 15 und 65 Gramm bei gleicher Tagesmenge. Bei gleichmäßiger Verteilung lag die Muskelproteinsynthese über 24 Stunden um 25 Prozent höher. Kleine Studie, gemessen wurde die Muskelproteinsynthese, nicht die Muskelmasse. Empfehlung für Gewichtsabnahme und -erhalt: mindestens etwa 25 bis 30 Gramm Protein pro Mahlzeit." width="1200" height="675" loading="lazy" class="w-full" />
@@ -107,4 +107,4 @@ Protein ist Baustoff. Der Reiz, ihn zu verbauen, kommt vom Training. Krafttraini
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Bei Nierenerkrankungen die Proteinmenge mit der Ärztin abstimmen. Im 12-Wochen-Programm von Nach der Spritze bekommst du dein Tagesziel in Gramm und Rezepte für kleine Portionen. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Bei Nierenerkrankungen die Proteinmenge mit der Ärztin abstimmen. Im 12-Wochen-Programm von Nach der Spritze bekommst du dein Tagesziel in Gramm und Rezepte für kleine Portionen. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

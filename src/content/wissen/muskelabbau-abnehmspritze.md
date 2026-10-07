@@ -34,7 +34,7 @@ Die Abnehmspritze nimmt nicht nur Fett. Sie nimmt auch das, was du eigentlich be
 
 ## Wie viel Muskelmasse geht verloren?
 
-Bei jedem Gewichtsverlust verliert der Körper neben Fett auch fettfreie Masse: Muskeln, aber auch Wasser, Bindegewebe und etwas Organmasse. Bei klassischen Diäten liegt der Anteil meist bei einem Viertel. Für Semaglutid liefert die STEP-1-Studie den besten Anhaltspunkt: In einer Substudie mit 140 Teilnehmenden, deren Körperzusammensetzung per DXA gemessen wurde, entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Die Analyse war exploratorisch, also nicht auf diese Frage hin geplant, und die Zahl schwankt je nach Studie und Messmethode. Ein Randphänomen ist es jedenfalls nicht.
+Bei jedem Gewichtsverlust verliert der Körper neben Fett auch fettfreie Masse: Muskeln, aber auch Wasser, Bindegewebe und etwas Organmasse. Wie groß der Anteil ist, hängt vom Tempo, vom Ausgangsgewicht und vom Training ab. Für Semaglutid liefert die STEP-1-Studie den besten Anhaltspunkt: In einer Substudie mit 140 Teilnehmenden, deren Körperzusammensetzung per DXA gemessen wurde, entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Die Analyse war exploratorisch, also nicht auf diese Frage hin geplant, und die Zahl schwankt je nach Studie und Messmethode. Ein Randphänomen ist es jedenfalls nicht.
 
 <div data-interaktiv="zusammensetzung" data-studien="step1,surmount1" data-rechner="ja"></div>
 
@@ -44,8 +44,8 @@ Zwei Dinge relativieren das. Erstens: Wer 15 % seines Gewichts verliert, hat dan
 
 Drei Gründe:
 
-1. **Zu wenig Protein.** Die Spritze dämpft den Appetit so stark, dass viele nur auf 40 bis 60 g Protein am Tag kommen – weniger als die 0,8 g pro kg, die die DGE als Minimum nennt,<sup><a href="#fn-dgeProtein">8</a></sup> und weit unter dem, was beim Abnehmen empfohlen wird. Fehlt dieser Baustoff, baut der Körper Muskelprotein ab, um Energie und Aminosäuren zu gewinnen.
-2. **Zu schneller Verlust.** Je schneller das Gewicht sinkt, desto größer der Anteil fettfreier Masse. Unter GLP-1-Medikamenten verlieren viele in den ersten Monaten 1 bis 2 kg pro Woche.
+1. **Zu wenig Protein.** Die Spritze dämpft den Appetit so stark, dass viele sogar weniger Protein essen als die 0,8 g pro kg, die die DGE für gesunde Erwachsene empfiehlt,<sup><a href="#fn-dgeProtein">8</a></sup> und weit unter dem, was beim Abnehmen empfohlen wird. Fehlt dieser Baustoff, baut der Körper Muskelprotein ab, um Energie und Aminosäuren zu gewinnen.
+2. **Zu schneller Verlust.** Je schneller das Gewicht sinkt, desto größer der Anteil fettfreier Masse. Unter GLP-1-Medikamenten sinkt das Gewicht in den ersten Monaten oft schnell.
 3. **Kein Reiz zum Erhalt.** Muskeln bleiben, wenn sie gebraucht werden. Wer sich unter der Spritze müde fühlt und weniger bewegt, gibt dem Körper das Signal, dass die Muskeln verzichtbar sind.
 
 ## Woran du Muskelabbau erkennst
@@ -67,7 +67,7 @@ Muskeln sind mehr als Optik. Sie tragen den Alltag (Treppen, Einkäufe, Aufstehe
 
 ### 1. Krafttraining – zwei Einheiten pro Woche
 
-Die beste Evidenz gibt es für Krafttraining. Eine Meta-Analyse randomisierter Studien zeigt: Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">2</a></sup> In der dänischen S-LiTE-Studie hielten Teilnehmende, die während der Medikamententherapie trainiert hatten, Gewicht und Körperzusammensetzung ein Jahr nach dem Absetzen.<sup><a href="#fn-jensen2024">5</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten für alle großen Muskelgruppen.<sup><a href="#fn-who2020">4</a></sup>
+Die beste Evidenz gibt es für Krafttraining. Eine Meta-Analyse randomisierter Studien zeigt: Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">2</a></sup> In der dänischen S-LiTE-Studie hielten Teilnehmende, die trainiert hatten, Gewicht und Körperzusammensetzung auch ein Jahr nach dem Ende der Behandlung.<sup><a href="#fn-jensen2024">5</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten für alle großen Muskelgruppen.<sup><a href="#fn-who2020">4</a></sup>
 
 Was das praktisch heißt:
 
@@ -106,4 +106,4 @@ Zusammen: rund 100 bis 110 g. Das ist mit kleinen Portionen machbar, wenn Protei
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Bei Nierenerkrankungen sprich vor einer Erhöhung der Proteinzufuhr oder Kreatin-Einnahme mit deiner Ärztin. Das 12-Wochen-Programm von Nach der Spritze plant zwei Krafteinheiten pro Woche und ein persönliches Proteinziel; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Bei Nierenerkrankungen sprich vor einer Erhöhung der Proteinzufuhr oder Kreatin-Einnahme mit deiner Ärztin. Das 12-Wochen-Programm von Nach der Spritze plant zwei Krafteinheiten pro Woche und ein persönliches Proteinziel; es ist kein Medikament. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

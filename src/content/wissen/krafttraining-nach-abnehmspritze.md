@@ -17,7 +17,7 @@ faq:
   - q: "Reichen zwei Krafteinheiten pro Woche wirklich?"
     a: "<p>Für Einsteiger ja. Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten, und eine Meta-Analyse zeigt, dass zwei Einheiten pro Muskelgruppe und Woche mehr bringen als eine. Eine dritte Einheit ist ein Bonus, kein Muss. Entscheidend ist, dass die Belastung über die Wochen steigt.</p>"
   - q: "Kann ich mit Krafttraining anfangen, während ich noch spritze?"
-    a: "<p>Ja, und das ist der beste Zeitpunkt. In der S-LiTE-Studie hielten Teilnehmende, die während der Medikamententherapie trainiert hatten, ihr Gewicht ein Jahr nach dem Absetzen. Bei Herz-Kreislauf-Erkrankungen, Gelenkproblemen oder wenn du dich unter der Therapie sehr schwach fühlst, besprich den Start mit deiner Ärztin oder deinem Arzt.</p>"
+    a: "<p>Ja, und das ist der beste Zeitpunkt. Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier Masse weitgehend, und in der S-LiTE-Studie standen die Teilnehmenden, die während der Medikamententherapie trainiert hatten, ein Jahr nach Therapieende am besten da. Bei Herz-Kreislauf-Erkrankungen, Gelenkproblemen oder wenn du dich unter der Therapie sehr schwach fühlst, besprich den Start mit deiner Ärztin oder deinem Arzt.</p>"
   - q: "Brauche ich Gewichte oder ein Studio?"
     a: "<p>Nein. Für die ersten zwölf Wochen reichen das eigene Körpergewicht und ein Set Widerstandsbänder. Ein Studio ist sinnvoll, wenn du nach drei Monaten mehr Widerstand brauchst, als Bänder bieten, oder wenn dir Termine dort helfen, dranzubleiben.</p>"
   - q: "Nehme ich durch Krafttraining zu?"
@@ -36,7 +36,7 @@ Dafür sprechen drei Befunde:
 
 1. **Es schützt Muskeln, während Gewicht verloren geht.** In einer Substudie der STEP-1-Studie entfielen rund 40 % des Gewichtsverlusts unter Semaglutid auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">8</a></sup> Eine Meta-Analyse randomisierter Studien zeigt, dass Krafttraining während einer Kalorienreduktion den Verlust an fettfreier Masse weitgehend verhindert.<sup><a href="#fn-sardeli2018">2</a></sup>
 2. **Es verändert, was nach dem Absetzen passiert.** In der dänischen S-LiTE-Studie hielten Teilnehmende mit betreutem Trainingsprogramm ihr Gewicht und ihre Körperzusammensetzung ein Jahr nach dem Ende aller Behandlungen; in der Gruppe, die nur das Medikament bekommen hatte, lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">1</a></sup>
-3. **Es braucht weniger Zeit, als die meisten denken.** Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten für alle großen Muskelgruppen.<sup><a href="#fn-who2020">3</a></sup> Eine Meta-Analyse zeigt, dass zwei Einheiten pro Muskelgruppe und Woche mehr Muskelzuwachs bringen als eine; mehr als zwei bringen für Einsteiger wenig zusätzlich.<sup><a href="#fn-schoenfeld2016">4</a></sup>
+3. **Es braucht weniger Zeit, als die meisten denken.** Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten für alle großen Muskelgruppen.<sup><a href="#fn-who2020">3</a></sup> Eine Meta-Analyse zeigt, dass zwei Einheiten pro Muskelgruppe und Woche mehr Muskelzuwachs bringen als eine; ob drei mehr bringen als zwei, lässt sie offen.<sup><a href="#fn-schoenfeld2016">4</a></sup>
 
 Spazierengehen, Radfahren und Schwimmen sind gut für Herz und Kopf. Sie ersetzen aber nicht den Reiz, den Muskeln brauchen, um zu bleiben.
 

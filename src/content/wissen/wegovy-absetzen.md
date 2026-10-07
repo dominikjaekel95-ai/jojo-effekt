@@ -23,11 +23,11 @@ faq:
     a: "<p>Ja. Es gibt kein Entzugssyndrom; Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation bis etwa sieben Wochen nachweisbar. Was zurückkommt, sind der Appetit und, ohne Gegenmaßnahmen, das Gewicht. Was sich lohnt, ist die Vorbereitung in den letzten Wochen der Therapie mit Krafttraining, Protein und festem Wiegetag. Ob und wann du absetzt, entscheidest du mit deiner Ärztin oder deinem Arzt, bei Diabetes oder auffälligen Blutwerten besonders.</p>"
 ---
 
-Wegovy ist die Abnehmspritze, die in Deutschland am häufigsten für die Gewichtsreduktion verordnet wird. Wer sie absetzt, hat drei Fragen: Wie lange wirkt sie nach, was passiert mit dem Gewicht, und was muss ich beachten? Hier sind die Antworten aus Fachinformation und Studien, speziell für Wegovy. Was für alle Abnehmspritzen gilt, steht im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Wegovy ist die Semaglutid-Spritze, die in Deutschland zur Gewichtsreduktion zugelassen ist. Wer sie absetzt, hat drei Fragen: Wie lange wirkt sie nach, was passiert mit dem Gewicht, und was muss ich beachten? Hier sind die Antworten aus Fachinformation und Studien, speziell für Wegovy. Was für alle Abnehmspritzen gilt, steht im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 > **Kurz gesagt:** Die Halbwertszeit liegt bei etwa einer Woche, nach fünf bis sieben Wochen ist Semaglutid weitgehend abgebaut.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Ein Jahr nach dem Absetzen waren in STEP 1 zwei Drittel des Verlusts zurück.<sup><a href="#fn-wilding2022ext">3</a></sup> Ob und wie du absetzt, entscheidest du mit deiner Ärztin.
 
-## Wegovy in drei Sätzen
+## Wegovy im Überblick
 
 Wegovy enthält Semaglutid, einen GLP-1-Rezeptoragonisten, und ist in der EU seit 2022 zur Gewichtsregulierung zugelassen: bei einem BMI ab 30, oder ab 27 mit gewichtsbedingten Begleiterkrankungen, jeweils ergänzend zu Ernährungsumstellung und Bewegung.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Laut Fachinformation gibt es fünf Dosisstufen von 0,25 bis 2,4 mg pro Woche; welche Stufe wann passt, legt die Ärztin fest. In der Zulassungsstudie STEP 1 verloren die Teilnehmenden in 68 Wochen im Mittel 14,9 % ihres Gewichts, unter Placebo 2,4 %.<sup><a href="#fn-wilding2021step1">2</a></sup>
 
@@ -70,7 +70,7 @@ Wegovy gibt es in fünf Dosisstufen. Deshalb liegt es nahe, statt abrupt aufzuh�
 
 Am besten bereitest du die Zeit danach vor, solange der Appetit noch gedämpft ist:
 
-1. **Krafttraining anfangen.** In der dänischen S-LiTE-Studie hielten Teilnehmende, die während der Medikamententherapie trainiert hatten, ihr Gewicht ein Jahr nach dem Absetzen; nach dem Medikament allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup>
+1. **Krafttraining anfangen.** In der dänischen S-LiTE-Studie hielten Teilnehmende, die trainiert hatten, ihr Gewicht auch ein Jahr nach dem Ende der Behandlung; nach dem Medikament allein lag die Zunahme 6 kg höher als nach Training allein.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup>
 2. **Protein auf Zielmenge.** 1,2 bis 1,6 g pro kg Körpergewicht und Tag,<sup><a href="#fn-leidy2015">7</a></sup> verteilt auf drei bis vier Mahlzeiten. Unter Wegovy essen viele weit weniger.
 3. **Wiegen mit Regel.** Einmal pro Woche, und vorher festgelegt, ab welcher Zunahme du reagierst.
 4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen. In Studien wird die Zunahme etwa ab Woche 8 nach der letzten Dosis messbar.
@@ -85,4 +85,4 @@ Der ausführliche Plan steht unter [Gewicht halten nach der Abnehmspritze: der 1
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Wegovy ist eine Marke von Novo Nordisk. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Wochen nach der letzten Dosis, kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Wegovy ist eine Marke von Novo Nordisk. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Wochen nach der letzten Dosis, kein Medikament. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

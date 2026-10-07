@@ -27,4 +27,4 @@ In der STEP-1-Substudie entfielen rund 40 % des Gewichtsverlusts unter Semagluti
 
 ## Was die Zusammensetzung verändert
 
-Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">3</a></sup> In der Haltephase kann das Gewicht gleich bleiben, während sich die Zusammensetzung verbessert: weniger Fett, mehr Muskel. Die Waage zeigt dann Stillstand, Taillenumfang und Griffkraft zeigen Fortschritt. Deshalb steht in unserem Programm das Wiegeprotokoll neben Umfang und Kraft, nicht allein. Mehr dazu unter [Muskelabbau unter der Abnehmspritze](/wissen/muskelabbau-abnehmspritze/).
+Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-sardeli2018">3</a></sup> In der Haltephase kann das Gewicht gleich bleiben, während sich die Zusammensetzung verbessert: weniger Fett, mehr Muskel. Die Waage zeigt dann Stillstand, Taillenumfang und Griffkraft zeigen Fortschritt. Deshalb lohnt es sich, neben dem Gewicht auch Taillenumfang und Kraft zu messen. Mehr dazu unter [Muskelabbau unter der Abnehmspritze](/wissen/muskelabbau-abnehmspritze/).

@@ -28,7 +28,7 @@ Ozempic ist zur Behandlung des Typ-2-Diabetes zugelassen, wird aber in Deutschla
 
 > **Kurz gesagt:** Bei Typ-2-Diabetes nie ohne Ärztin absetzen, weil der Blutzucker wieder steigt.<sup><a href="#fn-fachinfoOzempic">1</a></sup> Die Halbwertszeit liegt bei etwa einer Woche. Zum Gewicht nach dem Absetzen gibt es für den Wirkstoff Semaglutid klare Daten: Zwei Drittel des Verlusts waren nach einem Jahr zurück.<sup><a href="#fn-wilding2022ext">3</a></sup>
 
-## Ozempic in drei Sätzen
+## Ozempic im Überblick
 
 Ozempic enthält Semaglutid, denselben Wirkstoff wie Wegovy, in vier Dosisstufen von 0,25 bis 2 mg pro Woche. Zugelassen ist es in der EU seit 2018 zur Behandlung des Typ-2-Diabetes, ergänzend zu Ernährung und Bewegung; zur Gewichtsreduktion ohne Diabetes ist es nicht zugelassen.<sup><a href="#fn-fachinfoOzempic">1</a></sup> Bei Diabetes zahlt die Krankenkasse. Semaglutid gibt es auch als Tablette: Rybelsus für Typ-2-Diabetes und seit September 2026 die Wegovy-Tablette zur Gewichtsregulierung. Was beim Absetzen der Tablette gilt, steht unter [Abnehmpille absetzen](/wissen/abnehmpille-absetzen/). Eine Verordnung außerhalb der Zulassung (off-label) zum Abnehmen ist eine ärztliche Einzelfallentscheidung; die Kosten trägt dann die Patientin oder der Patient.
 
@@ -67,4 +67,4 @@ Ozempic hat vier Dosisstufen, ein schrittweises Reduzieren ist also möglich. Di
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Ozempic ist eine Marke von Novo Nordisk. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und nicht zur Behandlung von Diabetes geeignet. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Ozempic ist eine Marke von Novo Nordisk. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und nicht zur Behandlung von Diabetes geeignet. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

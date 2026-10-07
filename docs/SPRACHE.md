@@ -1,6 +1,6 @@
 # Sprache auf nachderspritze.de
 
-Stand 07.10.2026. Grundlage: Dominiks Entscheidungen in zwei Kalibrierungsrunden (Beispiele unten) und Michaels Hinweis „natürliches Deutsch, etwa 80 % des Wegs zu ASD-STE100“. Verbindlich für alle, die Texte schreiben oder ändern: Agenten, Redaktions-Routine, Menschen. Inhaltliche Regeln bleiben in `docs/REDAKTION.md` Abschnitt 3 und `CLAIMS.md`.
+Stand 07.10.2026. Grundlage: Dominiks Entscheidungen in zwei Kalibrierungsrunden (Beispiele unten) und Michaels Hinweis „natürliches Deutsch, etwa 80 % des Wegs zu ASD-STE100“. Verbindlich für alle, die Texte schreiben oder ändern: Agenten, Redaktions-Routine, Menschen. Inhaltliche Regeln bleiben in `docs/REDAKTION.md` Abschnitt 3 und `CLAIMS.md`. Wie überall gilt: Was Dominik entscheidet, geht dieser Datei vor; sie wird dann nachgezogen.
 
 ## Grundsatz: redigieren, nicht neu schreiben
 
@@ -41,6 +41,19 @@ Diese Vorschläge hat Dominik abgelehnt, weil sie die Stimme wegschleifen und tr
 - „Wer die Abnehmspritze absetzt, hört oft denselben Satz: ‚Dann kommt eh alles zurück.‘ …“ → ~~„Ein Jahr nach dem Absetzen sind im Mittel zwei Drittel … zurück. Das ist ein Durchschnitt …“~~ (zu trocken; Original bleibt, nur „als es vielen lieb ist“.)
 - Hero-Unterzeile ~~„Du trainierst zweimal pro Woche, isst genug Protein und wiegst dich nach festen Regeln.“~~ (Anleitungston statt Produktstimme.)
 
+## Entscheidungen vom 07.10.2026 (Dominik)
+
+- Hero: „Studienbasiert: Krafttraining, genug Protein und ein klarer Plan, um das eigene Gewicht gezielt im Blick zu behalten.“ (nicht „studienverifiziert“)
+- Korridor: „Kilo für Kilo. Jedes einzelne wirkt harmlos …“ (das Kilo, also „jedes“)
+- Programm-Kasten: „Zwei Krafteinheiten pro Woche, ein Proteinziel, ein Gewichtskorridor.“
+- Preis im Satz: „Das Basis-Programm soll unter 129 € kosten.“
+- Schlusszeile der Artikel: „Start und Preis erfährst du über die Warteliste.“
+- „Absetzen ist oft nicht endgültig.“ statt „selten endgültig“ (sonst Widerspruch zur Zahl danach)
+- „Die Studien legen dafür diese Reihenfolge nahe:“ statt „geben eine klare Reihenfolge“
+- „Es ist aber genau die Zunahme, die bleibt.“ statt „die eine Zunahme im Jahr“
+- „… hat bessere Chancen, dass die Absetzkurve flach bleibt.“ statt „hat die Absetzkurve auf seiner Seite“ (Bild ohne Aussage, „seiner“ in einem Artikel für Frauen)
+- Überschriften „… in drei Sätzen“ über längeren Abschnitten heißen „… im Überblick“.
+
 ## Klarheit (der Anteil von ASD-STE100)
 
 - Ein Gedanke pro Satz. Sätze möglichst unter 25 Wörtern; längere Sätze nur, wenn sie leicht lesbar bleiben.
@@ -56,7 +69,7 @@ Diese Vorschläge hat Dominik abgelehnt, weil sie die Stimme wegschleifen und tr
 
 ## Was beim Redigieren nie geändert wird
 
-Zahlen, Fußnoten und Quellen · Aussagen, deren Wortlaut CLAIMS.md festlegt · die Abschnitte „Was wir nicht sagen“ · der Pflichtsatz `site.doctorSentence` und der Arztsatz `site.medicalTeamSentence` (andere Sätze mit Arztbezug nur sprachlich glätten, nie inhaltlich) · der Preis-Wortlaut „Basis-Programm geplant unter 129 €“ (CLAUDE.md) · Einwilligungstexte in Formularen · Alt-Texte der Grafiken aus `scripts/` · `title`, `metaTitle`, `description`, H1, URLs, `pubDate` · Überschriften (H2/H3) nur bei echten Fehlern, und dann im PR begründet. Reine Sprachänderungen bekommen kein neues `updatedDate`.
+Zahlen, Fußnoten und Quellen · Aussagen, deren Wortlaut CLAIMS.md festlegt · die Abschnitte „Was wir nicht sagen“ · der Pflichtsatz `site.doctorSentence` und der Arztsatz `site.medicalTeamSentence` (andere Sätze mit Arztbezug nur sprachlich glätten, nie inhaltlich) · der Preis-Wortlaut „Das Basis-Programm soll unter 129 € kosten“ (Dominik, 07.10.2026) · Einwilligungstexte in Formularen · Alt-Texte der Grafiken aus `scripts/` · `title`, `metaTitle`, `description`, H1, URLs, `pubDate` · Überschriften (H2/H3) nur bei echten Fehlern, und dann im PR begründet. Reine Sprachänderungen bekommen kein neues `updatedDate`.
 
 ## Ablauf
 

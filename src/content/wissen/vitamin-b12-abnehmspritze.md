@@ -14,7 +14,7 @@ affiliateTitle: "Beispiel für Vitamin B12 in Tropfenform"
 affiliateIntro: "Ein Beispiel, keine Empfehlung einer Marke. Das Produkt ist hoch dosiert; hohe Dosen gehören zur Behandlung eines nachgewiesenen Mangels, nicht zur Vorsorge. Erst Blutwert, dann Präparat."
 faq:
   - q: "Kann Ozempic einen Vitamin-B12-Mangel verursachen?"
-    a: "<p>Dafür gibt es keinen Beleg, weder für Ozempic noch für die anderen GLP-1-Medikamente. Belegt ist der Effekt von Metformin, das viele Menschen mit Typ-2-Diabetes zusätzlich nehmen: In der DPP-Studie hatten nach fünf Jahren 4,3 % unter Metformin einen B12-Mangel gegenüber 2,3 % unter Placebo. Dazu kommt unter der Spritze, dass Fleisch, Fisch und Milchprodukte bei kleinen Portionen oft wegfallen.</p>"
+    a: "<p>Dafür gibt es keinen Beleg, weder für Ozempic noch für die anderen GLP-1-Medikamente. Belegt ist der Effekt von Metformin, das viele Menschen mit Typ-2-Diabetes zusätzlich nehmen: In der Langzeitstudie DPPOS hatten nach fünf Jahren 4,3 % unter Metformin einen B12-Mangel gegenüber 2,3 % unter Placebo. Dazu kommt unter der Spritze, dass Fleisch, Fisch und Milchprodukte bei kleinen Portionen oft wegfallen.</p>"
   - q: "Wie merke ich einen B12-Mangel?"
     a: "<p>Müdigkeit, Konzentrationsprobleme, Kribbeln oder Taubheit in Händen und Füßen, eine brennende Zunge, Blässe. Die Symptome kommen langsam, weil die Leber B12 über Jahre speichert. Sicher erkennen lässt sich ein Mangel nur im Blut; die Ärztin wählt den passenden Test.</p>"
   - q: "Welche Dosis ist sinnvoll?"
@@ -27,7 +27,7 @@ faq:
 
 Vitamin B12 ist das Vitamin, bei dem zwei Dinge zusammentreffen, die unter der Abnehmspritze häufig sind: kleine Portionen mit wenig Fleisch, Fisch und Milch, und bei Typ-2-Diabetes die gleichzeitige Einnahme von Metformin. Beides verschlechtert die Versorgung, und ein Mangel entwickelt sich so langsam, dass er lange niemandem auffällt. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
 
-> **Kurz gesagt:** Die DGE setzt 4 µg Vitamin B12 am Tag an; es kommt fast nur aus tierischen Lebensmitteln.<sup><a href="#fn-dgeReferenzwerte">1</a></sup> Unter Metformin hatten in der DPP-Studie nach fünf Jahren 4,3 % einen Mangel gegenüber 2,3 % unter Placebo.<sup><a href="#fn-aroda2016">2</a></sup> Die amerikanische Diabetes-Gesellschaft empfiehlt bei Metformin regelmäßige Kontrollen des B12-Spiegels.<sup><a href="#fn-adaSoc2024">3</a></sup>
+> **Kurz gesagt:** Die DGE setzt 4 µg Vitamin B12 am Tag an; es kommt fast nur aus tierischen Lebensmitteln.<sup><a href="#fn-dgeReferenzwerte">1</a></sup> Unter Metformin hatten in der Langzeitstudie DPPOS nach fünf Jahren 4,3 % einen Mangel gegenüber 2,3 % unter Placebo.<sup><a href="#fn-aroda2016">2</a></sup> Die amerikanische Diabetes-Gesellschaft empfiehlt bei Metformin regelmäßige Kontrollen des B12-Spiegels.<sup><a href="#fn-adaSoc2024">3</a></sup>
 
 ## Warum B12 unter der Spritze knapp werden kann
 
@@ -90,4 +90,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin B12 ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin B12 ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

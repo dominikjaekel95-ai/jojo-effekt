@@ -20,11 +20,11 @@ faq:
   - q: "Hilft Glucomannan gegen Heißhunger nach dem Absetzen?"
     a: "<p>Die Angabe sagt nichts über Sättigung oder Appetit, und für die Zeit nach GLP-1-Medikamenten gibt es keine Studie. Ballaststoffe insgesamt geben Mahlzeiten Volumen, das ist belegt; gegen hedonischen Hunger, also Essen aus Lust statt aus Hunger, hilft kein Ballaststoff. Dafür braucht es Struktur, Schlaf und Protein.</p>"
   - q: "Wie wirkt Glucomannan beim Abnehmen?"
-    a: "<p>Es quillt im Magen mit Wasser zu einem Gel auf, verzögert die Magenentleerung und sättigt. Die zugelassene Angabe lautet: Glucomannan trägt im Rahmen einer kalorienarmen Ernährung zur Gewichtsabnahme bei, bei 3 g am Tag in drei Portionen von 1 g mit ein bis zwei Gläsern Wasser vor den Mahlzeiten. Die EFSA bewertete die Unterschiede zu Placebo in den Studien als klein. Es ersetzt weder die Spritze noch die Ernährungsumstellung.</p>"
+    a: "<p>Es quillt im Magen mit Wasser zu einem Gel auf. Die zugelassene Angabe lautet: Glucomannan trägt im Rahmen einer kalorienarmen Ernährung zu Gewichtsverlust bei, bei 3 g am Tag in drei Portionen von 1 g mit ein bis zwei Gläsern Wasser vor den Mahlzeiten. Die EFSA bewertete die Unterschiede zu Placebo in den Studien als klein. Es ersetzt weder die Spritze noch die Ernährungsumstellung.</p>"
   - q: "Gehört Glucomannan zum 12-Wochen-Programm?"
     a: "<p>Nein. Das Programm besteht aus Training, einem Proteinziel mit Rezepten, einem Gewichtskorridor und einem Check-in pro Woche; ein Ballaststoff-Präparat gehört nicht dazu. Für jedes Glucomannan-Produkt gilt der Warnhinweis: viel Wasser, und bei Schluckbeschwerden gar nicht.</p>"
   - q: "Wie lange dauert es, bis Glucomannan wirkt?"
-    a: "<p>Die Sättigung kommt innerhalb von Minuten, sobald das Pulver im Magen aufquillt. Den Effekt auf das Gewicht haben die Studien hinter der Angabe über Wochen bis wenige Monate gemessen, und er ist klein; die EFSA spricht von kleinen Unterschieden zu Placebo. Wer nach vier Wochen keinen Unterschied bei Hunger und Portionsgröße merkt, braucht es nicht.</p>"
+    a: "<p>Das Pulver quillt innerhalb von Minuten im Magen auf. Den Effekt auf das Gewicht haben die Studien hinter der Angabe über Wochen bis wenige Monate gemessen, und er ist klein; die EFSA spricht von kleinen Unterschieden zu Placebo. Eine zugelassene Aussage zu Hunger oder Sättigung gibt es nicht.</p>"
 ---
 
 Glucomannan taucht in zwei Suchanfragen zusammen mit der Abnehmspritze auf: „statt“ und „nach“. Wer „statt“ sucht, hofft auf eine natürliche Alternative; wer „nach“ sucht, will nach dem Absetzen etwas in der Hand haben. Beide verdienen eine klare Antwort, und die beginnt mit dem Wortlaut der einzigen Angabe, die die EU für einen Ballaststoff zum Gewichtsverlust zugelassen hat. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
@@ -33,7 +33,7 @@ Glucomannan taucht in zwei Suchanfragen zusammen mit der Abnehmspritze auf: „s
 
 ## Was die Angabe wörtlich sagt, und was nicht
 
-Glucomannan ist ein wasserlöslicher Ballaststoff aus der Wurzel der Konjakpflanze, der im Magen stark quillt. Die EFSA hat 2010 die Studien dazu bewertet. Es waren randomisierte Studien über einige Wochen, in denen Teilnehmende mit kalorienreduzierter Ernährung und Glucomannan etwas mehr Gewicht verloren als mit kalorienreduzierter Ernährung und Placebo.<sup><a href="#fn-efsa2010glucomannan">2</a></sup> Daraus entstand die Angabe mit drei Bedingungen: 1 g pro Portion, 3 g am Tag, mit ein bis zwei Gläsern Wasser vor den Mahlzeiten, im Rahmen einer kalorienarmen Ernährung. Pflicht ist ein Warnhinweis: Für Menschen mit Schluckbeschwerden oder bei zu wenig Flüssigkeit besteht Erstickungsgefahr.<sup><a href="#fn-euClaims">1</a></sup>
+Glucomannan ist ein wasserlöslicher Ballaststoff aus der Wurzel der Konjakpflanze, der im Magen stark quillt. Die EFSA hat 2010 die Studien dazu bewertet. Es waren randomisierte Studien über einige Wochen, in denen Teilnehmende mit kalorienreduzierter Ernährung und Glucomannan etwas mehr Gewicht verloren als mit kalorienreduzierter Ernährung und Placebo.<sup><a href="#fn-efsa2010glucomannan">2</a></sup> Daraus entstand die Angabe mit vier Bedingungen: 1 g pro Portion, 3 g am Tag, mit ein bis zwei Gläsern Wasser vor den Mahlzeiten, im Rahmen einer kalorienarmen Ernährung. Pflicht ist ein Warnhinweis: Für Menschen mit Schluckbeschwerden oder bei zu wenig Flüssigkeit besteht Erstickungsgefahr.<sup><a href="#fn-euClaims">1</a></sup>
 
 Was die Angabe nicht sagt, ist genauso wichtig: nichts über Sättigung, nichts über Appetit, nichts über eine Wirkung ohne Kalorienreduktion, nichts über das Halten eines Gewichts. Sie spricht von einem Beitrag, und das nur unter Bedingungen. Eine zweite Angabe betrifft den Cholesterinspiegel bei 4 g am Tag.<sup><a href="#fn-euClaims">1</a></sup>
 
@@ -90,4 +90,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Glucomannan ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze enthält kein Ballaststoff-Präparat; es setzt auf Training, Protein und Mahlzeiten mit Volumen. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Glucomannan ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze enthält kein Ballaststoff-Präparat; es setzt auf Training, Protein und Mahlzeiten mit Volumen. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

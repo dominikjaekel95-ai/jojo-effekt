@@ -52,7 +52,7 @@ Protein sättigt pro Kalorie stärker als Kohlenhydrate oder Fett. Übersichtsar
 
 ### 2. Volumen und Ballaststoffe
 
-Sättigung hängt auch davon ab, wie viel im Magen liegt. Gemüse, Salat, Suppen und Hülsenfrüchte liefern Masse mit wenig Energie. Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag;<sup><a href="#fn-dgeBallaststoffe">4</a></sup> wer unter der Spritze wenig gegessen hat, liegt oft bei der Hälfte. Langsam steigern, viel trinken. Ein Ballaststoff-Präparat ändert am Heißhunger wenig; was Glucomannan, der einzige Ballaststoff mit zugelassener Angabe, tatsächlich kann, steht unter [Glucomannan bei der Abnehmspritze](/wissen/glucomannan-abnehmspritze/).
+Sättigung hängt auch davon ab, wie viel im Magen liegt. Gemüse, Salat, Suppen und Hülsenfrüchte liefern Masse mit wenig Energie. Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag;<sup><a href="#fn-dgeBallaststoffe">4</a></sup> wer unter der Spritze wenig gegessen hat, liegt oft bei der Hälfte. Langsam steigern, viel trinken. Ein Ballaststoff-Präparat ändert am Heißhunger wenig; was Glucomannan, der einzige Ballaststoff mit zugelassener Angabe zum Gewichtsverlust, tatsächlich kann, steht unter [Glucomannan bei der Abnehmspritze](/wissen/glucomannan-abnehmspritze/).
 
 ### 3. Feste Mahlzeiten statt Snacks
 
@@ -74,7 +74,7 @@ Eine Woche lang notieren: Wann kam der Heißhunger, was ging voraus, was hast du
 
 ### 7. Krafttraining
 
-Nicht gegen den Heißhunger direkt, aber gegen das, was er anrichtet. In der S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach Therapieende; in der Gruppe, die nur das Medikament bekommen hatte, lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">7</a></sup> Wer trainiert, kann sich außerdem mehr Protein leisten, und das schließt den Kreis zu Punkt 1. Der Plan steht unter [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/).
+Nicht gegen den Heißhunger direkt, aber gegen das, was er anrichtet. In der S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach Therapieende; in der Gruppe, die nur das Medikament bekommen hatte, lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">7</a></sup> Wer trainiert, nutzt außerdem das Protein aus Punkt 1 für die Muskeln; das schließt den Kreis. Der Plan steht unter [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/).
 
 ## Was nicht hilft
 
@@ -89,4 +89,4 @@ Hungern, um den Heißhunger zu „bestrafen“: Es verstärkt ihn am nächsten T
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder psychotherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze gibt diesen Wochen einen Rahmen: feste Mahlzeiten mit Proteinziel, zwei Krafteinheiten pro Woche und ein Check-in pro Woche per E-Mail. Es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder psychotherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze gibt diesen Wochen einen Rahmen: feste Mahlzeiten mit Proteinziel, zwei Krafteinheiten pro Woche und ein Check-in pro Woche per E-Mail. Es ist kein Medikament. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

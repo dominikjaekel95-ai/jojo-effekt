@@ -15,7 +15,7 @@ faq:
   - q: "Gibt es Entzugserscheinungen, wenn ich die Abnehmspritze absetze?"
     a: "<p>Ein Entzugssyndrom wie bei manchen anderen Medikamenten ist für GLP-1-Rezeptoragonisten nicht beschrieben. Was zurückkommt, ist der Appetit, und mit ihm oft das Gefühl, ständig ans Essen zu denken. Manche berichten in den ersten Wochen von Müdigkeit oder Unruhe; das ist in Studien nicht systematisch erfasst. Bei ungewöhnlichen Beschwerden sprich mit deiner Ärztin.</p>"
   - q: "Wie lange bleibt der Wirkstoff nach der letzten Spritze im Körper?"
-    a: "<p>Semaglutid hat eine Halbwertszeit von etwa einer Woche, Tirzepatid von etwa fünf Tagen. Nach rund fünf Halbwertszeiten ist der Wirkstoff weitgehend abgebaut – also nach etwa fünf bis sieben Wochen. Die Wirkung auf den Appetit lässt schon vorher spürbar nach.</p>"
+    a: "<p>Semaglutid hat eine Halbwertszeit von etwa einer Woche, Tirzepatid von etwa fünf Tagen. Nach rund fünf Halbwertszeiten ist der Wirkstoff weitgehend abgebaut – bei Semaglutid also nach etwa fünf bis sieben Wochen, bei Tirzepatid nach etwa vier. Die Wirkung auf den Appetit lässt schon vorher spürbar nach.</p>"
   - q: "Muss ich die Abnehmspritze ausschleichen?"
     a: "<p>Ein medizinisch zwingender Grund zum Ausschleichen ist nicht belegt; die Zulassungsstudien haben abrupt abgesetzt. Ob ein schrittweises Reduzieren den Wiederanstieg des Gewichts abmildert, wird derzeit untersucht. Das Vorgehen legt deine Ärztin oder dein Arzt fest.</p>"
   - q: "Kann ich nach dem Absetzen wieder anfangen?"
@@ -28,11 +28,11 @@ Die meisten Menschen, die mit einer Abnehmspritze anfangen, hören innerhalb ein
 
 <div data-interaktiv="punktfeld" data-vorlage="absetzrate"></div>
 
-> **Kurz gesagt:** Der Wirkstoff ist nach fünf bis sieben Wochen abgebaut. Der Appetit kommt früher zurück. Die Gewichtszunahme ist in Studien ab etwa Woche 8 messbar.<sup><a href="#fn-wu2025">2</a></sup> Wer vorbereitet ist, hat einen Vorsprung. In einer Studie nahm die Trainingsgruppe im Jahr nach der Therapie rund 6 kg weniger zu als die Gruppe, die nur das Medikament bekommen hatte.<sup><a href="#fn-jensen2024">6</a></sup>
+> **Kurz gesagt:** Der Wirkstoff ist je nach Präparat nach etwa vier bis sieben Wochen abgebaut. Der Appetit kommt früher zurück. Die Gewichtszunahme ist in Studien ab etwa Woche 8 messbar.<sup><a href="#fn-wu2025">2</a></sup> Wer vorbereitet ist, hat einen Vorsprung. In einer Studie nahm die Trainingsgruppe im Jahr nach der Therapie rund 6 kg weniger zu als die Gruppe, die nur das Medikament bekommen hatte.<sup><a href="#fn-jensen2024">6</a></sup>
 
 ## Was passiert, wenn man die Abnehmspritze absetzt?
 
-Der Wirkstoff wird über Wochen abgebaut, der Appetit kommt zurück, und ohne Gegenmaßnahmen steigt das Gewicht: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen von Semaglutid im Mittel zwei Drittel des verlorenen Gewichts wieder da, und Blutzucker, Blutdruck und Blutfette näherten sich den Ausgangswerten.<sup><a href="#fn-wilding2022ext">3</a></sup> Ein Entzugssyndrom gibt es nicht; was wegfällt, ist die Appetitbremse. Wer in der Therapiezeit Krafttraining und Protein eingebaut hat, hält das Gewicht in Studien deutlich besser: In der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr nach Therapieende 6,0 kg mehr zu als nach einem Trainingsprogramm.<sup><a href="#fn-jensen2024">6</a></sup>
+Der Wirkstoff wird über Wochen abgebaut, der Appetit kommt zurück, und ohne Gegenmaßnahmen steigt das Gewicht: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen von Semaglutid im Mittel zwei Drittel des verlorenen Gewichts wieder da, und Blutzucker, Blutdruck und Blutfette näherten sich den Ausgangswerten.<sup><a href="#fn-wilding2022ext">3</a></sup> Ein Entzugssyndrom gibt es nicht; was wegfällt, ist die Appetitbremse. Wer regelmäßig trainiert, hält das Gewicht in Studien deutlich besser: In der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr nach Therapieende 6,0 kg mehr zu als nach einem Trainingsprogramm.<sup><a href="#fn-jensen2024">6</a></sup>
 
 ## Wie schnell nimmt man nach dem Absetzen zu?
 
@@ -48,7 +48,7 @@ Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche, ist
 
 Die Gründe sind selten „Ich will nicht mehr abnehmen“. Häufiger sind es:
 
-- **Kosten.** Für Selbstzahler kostet die Therapie je nach Präparat und Dosis etwa 170 bis 480 € im Monat. Die aktuelle Erhebung mit Jahreskosten steht unter [Abnehmspritze: Kosten pro Monat und Jahr](/abnehmspritze-kosten/).
+- **Kosten.** Für Selbstzahler kostet die Therapie je nach Präparat und Dosis etwa 170 bis 490 € im Monat. Die aktuelle Erhebung mit Jahreskosten steht unter [Abnehmspritze: Kosten pro Monat und Jahr](/abnehmspritze-kosten/).
 - **Nebenwirkungen.** Übelkeit, Verstopfung, Reflux, Müdigkeit – für manche über Monate.
 - **Lieferengpässe** oder ein Wechsel der Praxis.
 - **Ein erreichtes Ziel.** Das Gewicht stimmt, die Frage ist: Wie weiter?
@@ -84,7 +84,7 @@ Die Entscheidung trifft deine Ärztin oder dein Arzt mit dir. Was du selbst beei
 
 ## Vier Dinge, die du vor der letzten Dosis regelst
 
-Der beste Zeitpunkt, die Zeit nach der Spritze vorzubereiten, ist die Zeit mit der Spritze. Die Studien geben dafür eine klare Reihenfolge:
+Der beste Zeitpunkt, die Zeit nach der Spritze vorzubereiten, ist die Zeit mit der Spritze. Die Studien legen dafür diese Reihenfolge nahe:
 
 **1. Krafttraining zur Gewohnheit machen.** Das ist der Faktor mit der besten Evidenz. In der dänischen S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach dem Ende der Behandlung; nach Liraglutid allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup> Fang während der Therapie an, damit die Routine steht, wenn der Hunger kommt.
 
@@ -92,7 +92,7 @@ Der beste Zeitpunkt, die Zeit nach der Spritze vorzubereiten, ist die Zeit mit d
 
 **2. Protein auf Zielmenge bringen.** Übersichtsarbeiten empfehlen 1,2 bis 1,6 g pro kg Körpergewicht und Tag, verteilt auf die Mahlzeiten.<sup><a href="#fn-leidy2015">7</a></sup> Unter der Spritze essen viele deutlich weniger. Wer die Menge schon vor dem Absetzen erreicht, hat die Muskeln besser geschützt und eine Ernährungsstruktur, die auch dann funktioniert, wenn der Appetit zurückkommt.
 
-**3. Wiegen mit Regel.** Einmal pro Woche, morgens, gleiche Bedingungen. Lege vorher fest, ab welcher Zunahme du reagierst – zum Beispiel plus 3 kg über dem Absetz-Gewicht – und wie: Ernährung prüfen, Training prüfen, Termin bei der Ärztin.
+**3. Wiegen mit Regel.** Einmal pro Woche, morgens, gleiche Bedingungen. Lege vorher fest, ab welcher Zunahme du reagierst und wie, zum Beispiel mit den Zonen des [Gewichtskorridors](/werkzeuge/gewichtskorridor/): ab 1,4 kg über dem Startgewicht zwei Wochen gegensteuern, ab 2,3 kg den Plan prüfen.
 
 **4. Den Gewichtsverlauf notieren und mit der Ärztin oder dem Arzt besprechen.** Optionen offenhalten: Leitlinien sehen Medikamente als Teil einer langfristigen Behandlung – ein Wiedereinstieg ist eine Option, keine Niederlage.<sup><a href="#fn-dagLeitlinie">9</a></sup>
 
@@ -104,14 +104,14 @@ Vieles, was Menschen nach dem Absetzen bemerken, ist nicht das Verschwinden eine
 - **Der Appetit kommt zurück**, oft in Schüben, oft abends. Das ist die Wirkung, die wegfällt; wie du damit umgehst, steht im Artikel [Heißhunger nach dem Absetzen](/wissen/heisshunger-nach-abnehmspritze/).
 - **Blutzucker, Blutdruck und Blutfette** bewegen sich mit dem Gewicht zurück Richtung Ausgangswert.<sup><a href="#fn-wilding2022ext">3</a></sup> Bei Diabetes muss die übrige Therapie angepasst werden.
 - **Haare und Haut** reagieren mit Verzögerung auf den schnellen Gewichtsverlust, nicht auf das Absetzen: diffuser Haarausfall einige Monate nach dem Auslöser, eingefallene Wangen durch den Fettverlust. Beides steht unter [Haarausfall bei der Abnehmspritze](/wissen/haarausfall-abnehmspritze/) und [Eingefallenes Gesicht](/wissen/abnehmspritze-gesicht/).
-- **Puls und Schlaf:** Manche berichten unter der Therapie von einem leicht erhöhten Ruhepuls, der nach dem Absetzen zurückgeht. Systematisch untersucht ist das für die Zeit danach nicht.
+- **Ruhepuls:** Manche berichten unter der Therapie von einem leicht erhöhten Ruhepuls, der nach dem Absetzen zurückgeht. Systematisch untersucht ist das für die Zeit danach nicht.
 - **Kein Entzugssyndrom.** Zittern, Schwitzen, Unruhe als Absetzreaktion sind für GLP-1-Rezeptoragonisten nicht beschrieben. Treten sie auf, vor allem bei Diabetes, ist eine Unterzuckerung durch andere Medikamente die wahrscheinlichere Ursache; das gehört sofort in die Praxis.
 
 Präparatspezifische Verläufe: [Wegovy](/wissen/wegovy-absetzen/), [Mounjaro](/wissen/mounjaro-absetzen/), [Ozempic](/wissen/ozempic-absetzen/), [Saxenda](/wissen/saxenda-absetzen/). Die Zahlen in diesem Artikel stammen aus Studien mit Spritzen; für die Wegovy-Tablette ist das noch nicht untersucht, siehe [Abnehmpille absetzen](/wissen/abnehmpille-absetzen/).
 
 ## Wiedereinstieg: was die Daten sagen
 
-Absetzen ist selten endgültig. In der US-Auswertung von Versorgungsdaten begann rund ein Drittel der Menschen ohne Typ-2-Diabetes, die abgesetzt hatten, innerhalb eines Jahres erneut mit der Therapie; bei Typ-2-Diabetes war es fast die Hälfte.<sup><a href="#fn-rodriguez2025">1</a></sup> Häufigster Anlass ist die Gewichtszunahme nach dem Absetzen. Ein Wiedereinstieg ist medizinisch möglich; wie er abläuft, legt deine Ärztin oder dein Arzt fest. Was die Daten außerdem zeigen: Wer zwischen zwei Therapiephasen Muskeln, Training und Ernährungsstruktur behalten hat, startet die zweite Phase von einem besseren Punkt aus als beim ersten Mal.
+Absetzen ist oft nicht endgültig. In der US-Auswertung von Versorgungsdaten begann rund ein Drittel der Menschen ohne Typ-2-Diabetes, die abgesetzt hatten, innerhalb eines Jahres erneut mit der Therapie; bei Typ-2-Diabetes war es fast die Hälfte.<sup><a href="#fn-rodriguez2025">1</a></sup> Ein Wiedereinstieg ist medizinisch möglich; wie er abläuft, legt deine Ärztin oder dein Arzt fest. Wer zwischen zwei Therapiephasen Muskeln, Training und Ernährungsstruktur behält, startet eine zweite Phase von einem besseren Punkt aus.
 
 ## Woran du merkst, dass du früher zur Ärztin solltest
 

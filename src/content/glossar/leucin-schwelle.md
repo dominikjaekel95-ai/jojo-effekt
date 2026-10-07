@@ -22,4 +22,4 @@ In Protein umgerechnet: Bei jüngeren Männern war die Synthese ab etwa 0,24 g P
 
 ## Was das bei kleinem Appetit bedeutet
 
-Unter der Abnehmspritze sind die Portionen klein. Drei kleine Mahlzeiten mit je 10 g Protein liegen alle drei unter der Schwelle, obwohl die Tagessumme nicht schlecht aussieht. Leucinreich sind Molkenprotein, Milchprodukte, Eier, Fleisch, Fisch und Soja; ein Shake oder Stick mit 20 g Protein erreicht die Größenordnung mit einer Portion. Was sonst noch zählt, steht unter [Protein nach der Abnehmspritze](/wissen/protein-abnehmspritze/).
+Unter der Abnehmspritze sind die Portionen klein. Drei kleine Mahlzeiten mit je 10 g Protein liegen alle drei unter der Schwelle. Leucinreich sind Molkenprotein, Milchprodukte, Eier, Fleisch, Fisch und Soja; ein Shake mit 20 g Protein erreicht die Größenordnung mit einer Portion. Was sonst noch zählt, steht unter [Protein nach der Abnehmspritze](/wissen/protein-abnehmspritze/).

@@ -20,7 +20,7 @@ faq:
   - q: "Wie viel Omega-3 ist zu viel?"
     a: "<p>Die zugelassenen Angaben für höhere Mengen nennen ausdrücklich, dass aus Ergänzungen nicht mehr als 5 g EPA und DHA am Tag aufgenommen werden sollen. Präparate ab 1 g am Tag gehören in ärztliche Absprache, besonders bei blutverdünnenden Medikamenten oder vor Operationen.</p>"
   - q: "Reichen Leinöl und Walnüsse?"
-    a: "<p>Sie liefern Alpha-Linolensäure (ALA), aus der der Körper nur einen kleinen Teil in EPA und DHA umwandelt. Für die Angabe zum Cholesterinspiegel reichen 2 g ALA am Tag, also etwa ein Esslöffel Leinöl. Für die Angabe zur Herzfunktion zählen EPA und DHA direkt, also Fisch oder Algenöl.</p>"
+    a: "<p>Sie liefern Alpha-Linolensäure (ALA), aus der der Körper nur einen kleinen Teil in EPA und DHA umwandelt. Für die Angabe zum Cholesterinspiegel reichen 2 g ALA am Tag, also etwa ein Teelöffel Leinöl. Für die Angabe zur Herzfunktion zählen EPA und DHA direkt, also Fisch oder Algenöl.</p>"
   - q: "Warum werden Blutfette nach dem Absetzen wieder schlechter?"
     a: "<p>Weil das Gewicht zurückkommt. In der STEP-1-Verlängerung gingen mit der Wiederzunahme auch die Verbesserungen bei Blutfetten und Blutdruck weitgehend zurück. Omega-3 ändert daran nichts; die Haltephase entscheidet. Erhöhte Werte gehören in ärztliche Kontrolle, nicht in die Kapsel.</p>"
   - q: "Ist Omega-3 gut gegen Bauchfett?"
@@ -90,4 +90,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Omega-3-Kapseln sind Nahrungsergänzungsmittel; sie ersetzen weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Omega-3-Kapseln sind Nahrungsergänzungsmittel; sie ersetzen weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

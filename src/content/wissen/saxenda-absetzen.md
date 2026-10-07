@@ -13,7 +13,7 @@ faq:
   - q: "Wie lange bleibt Saxenda nach der letzten Spritze im Körper?"
     a: "<p>Liraglutid hat laut Fachinformation eine Halbwertszeit von etwa 13 Stunden. Nach zwei bis drei Tagen ist der Wirkstoff weitgehend abgebaut. Der Appetit kommt deshalb innerhalb von Tagen zurück, nicht wie bei Semaglutid oder Tirzepatid über Wochen.</p>"
   - q: "Nimmt man nach Saxenda wieder zu?"
-    a: "<p>Ohne Gegenmaßnahmen sehr wahrscheinlich. Die zentrale Absetz-Studie zu Liraglutid ist S-LiTE: Ein Jahr nach Ende der Behandlung hatten Teilnehmende, die nur Liraglutid bekommen hatten, im Schnitt 6 kg mehr zugenommen als jene, die trainiert hatten. Die Trainingsgruppen hielten Gewicht und Körperzusammensetzung.</p>"
+    a: "<p>Ohne Gegenmaßnahmen sehr wahrscheinlich. Die zentrale Absetz-Studie zu Liraglutid ist S-LiTE: Ein Jahr nach Ende der Behandlung hatten Teilnehmende, die nur Liraglutid bekommen hatten, im Schnitt 6 kg mehr zugenommen als jene, die nur trainiert hatten. Die Trainingsgruppen hielten Gewicht und Körperzusammensetzung.</p>"
   - q: "Muss ich Saxenda ausschleichen?"
     a: "<p>Die Fachinformation sieht kein Ausschleichen vor, und in den Studien wurde abrupt abgesetzt, ohne Entzugserscheinungen. Saxenda hat fünf Dosisstufen, ein schrittweises Reduzieren ist also technisch möglich. Ob es sinnvoll ist, entscheidet deine Ärztin oder dein Arzt; einen Beleg für einen kleineren Jojo-Effekt gibt es nicht.</p>"
   - q: "Ist der Jojo-Effekt nach Saxenda kleiner als nach Wegovy?"
@@ -26,9 +26,9 @@ Saxenda ist die Abnehmspritze, die täglich gespritzt wird, und das ändert beim
 
 <div data-interaktiv="wirkstoffspiegel" data-wirkstoffe="liraglutid,semaglutid,tirzepatid" data-tag="3"></div>
 
-> **Kurz gesagt:** Liraglutid ist nach zwei bis drei Tagen abgebaut, der Appetit kommt innerhalb von Tagen zurück.<sup><a href="#fn-fachinfoSaxenda">1</a></sup> Die zentrale Absetz-Studie zu diesem Wirkstoff zeigt: Wer während der Therapie trainiert hatte, hielt das Gewicht ein Jahr nach dem Absetzen; ohne Training kam es zurück.<sup><a href="#fn-jensen2024">3</a></sup> Ob und wie du absetzt, entscheidest du mit deiner Ärztin.
+> **Kurz gesagt:** Liraglutid ist nach zwei bis drei Tagen abgebaut, der Appetit kommt innerhalb von Tagen zurück.<sup><a href="#fn-fachinfoSaxenda">1</a></sup> Die zentrale Absetz-Studie zu diesem Wirkstoff zeigt: Wer trainiert hatte, hielt das Gewicht auch ein Jahr nach dem Ende der Behandlung; nach Liraglutid allein kam es zurück.<sup><a href="#fn-jensen2024">3</a></sup> Ob und wie du absetzt, entscheidest du mit deiner Ärztin.
 
-## Saxenda in drei Sätzen
+## Saxenda im Überblick
 
 Saxenda enthält Liraglutid, einen GLP-1-Rezeptoragonisten, und wird einmal täglich unter die Haut gespritzt. Es ist in der EU zur Gewichtsregulierung zugelassen, bei Erwachsenen ab einem BMI von 30 oder ab 27 mit Begleiterkrankungen, sowie für Jugendliche ab 12 Jahren mit Adipositas, jeweils ergänzend zu Ernährungsumstellung und Bewegung. Laut Fachinformation gibt es fünf Dosisstufen von 0,6 bis 3,0 mg; welche Stufe wann passt, legt die Ärztin fest.<sup><a href="#fn-fachinfoSaxenda">1</a></sup> In der Zulassungsstudie SCALE verloren die Teilnehmenden in 56 Wochen im Mittel 8,0 % ihres Gewichts, unter Placebo 2,6 %.<sup><a href="#fn-pisunyer2015">2</a></sup>
 
@@ -68,7 +68,7 @@ Saxenda hat fünf Dosisstufen, ein schrittweises Reduzieren ist technisch mögli
 
 Wegen des kurzen Nachlaufs gilt bei Saxenda strenger als bei Wegovy oder Mounjaro: Die Vorbereitung passiert während der Therapie.
 
-1. **Krafttraining seit mindestens vier Wochen.** Das ist bei Liraglutid keine Empfehlung aus anderen Studien, sondern der direkte Befund aus S-LiTE.<sup><a href="#fn-jensen2024">3</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup> Der Plan: [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/).
+1. **Krafttraining seit mindestens vier Wochen.** Für Liraglutid zeigt S-LiTE direkt, dass Training hilft; dort war es ein betreutes Programm aus Ausdauer- und Zirkeltraining.<sup><a href="#fn-jensen2024">3</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup> Der Plan: [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/).
 2. **Protein auf 1,2 bis 1,6 g pro kg Körpergewicht**,<sup><a href="#fn-leidy2015">7</a></sup> verteilt auf drei bis vier Mahlzeiten, und eine Ernährungsstruktur, die auch dann funktioniert, wenn der Appetit zurück ist: Protein zuerst, Volumen, feste Mahlzeiten.
 3. **Wiegen einmal pro Woche mit fester Reaktionsschwelle**, ab dem Tag der letzten Spritze.
 4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen.
@@ -83,4 +83,4 @@ Der ausführliche Plan: [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Saxenda ist eine Marke von Novo Nordisk. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information, keine Absetz-Anleitung und keine Werbung für ein Arzneimittel. Saxenda ist eine Marke von Novo Nordisk. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

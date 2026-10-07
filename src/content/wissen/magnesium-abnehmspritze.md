@@ -62,7 +62,7 @@ Der Unterschied ist wichtig: „Trägt zu einer normalen Muskelfunktion bei“ h
 
 Wadenkrämpfe sind der häufigste Grund, warum Menschen zu Magnesium greifen. Die Cochrane-Übersicht von 2020 wertete die randomisierten Studien dazu aus und kam zu einem ernüchternden Ergebnis: Bei Krämpfen älterer Erwachsener hilft Magnesium wahrscheinlich nicht, und auch für andere Erwachsene gibt es keinen belegten Nutzen; nur in der Schwangerschaft ist die Lage unklar.<sup><a href="#fn-garrison2020">6</a></sup>
 
-Für die Zeit unter und nach der Spritze heißt das: Krämpfe sind eher ein Hinweis auf zu wenig Flüssigkeit, zu wenig Essen und zu viel Sitzen als auf einen isolierten Magnesiummangel. Die Reihenfolge ist deshalb: ein bis zwei Liter trinken, drei Mahlzeiten mit etwas Salz und Kohlenhydraten essen, Beine bewegen. Erst wenn das nicht hilft, lohnt sich ein Präparat, und dann als Versuch über zwei Wochen, nicht als Dauerlösung.
+Für die Zeit unter und nach der Spritze heißt das: Krämpfe sind eher ein Hinweis auf zu wenig Flüssigkeit, zu wenig Essen und zu viel Sitzen als auf einen isolierten Magnesiummangel. Die Reihenfolge ist deshalb: zwei bis drei Liter trinken, drei Mahlzeiten mit etwas Salz und Kohlenhydraten essen, Beine bewegen. Erst wenn das nicht hilft, lohnt sich ein Präparat, und dann als Versuch über zwei Wochen, nicht als Dauerlösung.
 
 ## Nach dem Absetzen: Haltephase statt Pillen
 
@@ -91,4 +91,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Magnesium ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Magnesium ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

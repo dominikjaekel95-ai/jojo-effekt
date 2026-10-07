@@ -57,7 +57,7 @@ Die DGE empfiehlt mindestens 30 g Ballaststoffe am Tag.<sup><a href="#fn-dgeBall
 
 ### 4. Feste Mahlzeiten, keine Flüssigkalorien
 
-Drei bis vier Mahlzeiten zu festen Zeiten, dazwischen nichts aus der Hand. Der Hunger zwischen den Mahlzeiten ist in den ersten Wochen normal und geht vorbei. Säfte, Softdrinks, Milchkaffee-Spezialitäten und Alkohol liefern Kalorien ohne Sättigung; Wasser, Tee und schwarzer Kaffee sind die Getränke, die die DGE als Standard empfiehlt.<sup><a href="#fn-dgeEmpfehlungen">6</a></sup> Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten nennen außerdem zwei bis drei Liter Flüssigkeit am Tag, weil Durst und Hunger leicht verwechselt werden.<sup><a href="#fn-almandoz2024">4</a></sup>
+Drei bis vier Mahlzeiten zu festen Zeiten, dazwischen nichts aus der Hand. Der Hunger zwischen den Mahlzeiten ist in den ersten Wochen normal und geht vorbei. Säfte, Softdrinks, Milchkaffee-Spezialitäten und Alkohol liefern Kalorien ohne Sättigung; Wasser und ungesüßter Tee sind die Getränke, die die DGE empfiehlt; schwarzer Kaffee ohne Zucker liefert ebenfalls keine Kalorien.<sup><a href="#fn-dgeEmpfehlungen">6</a></sup> Expertenempfehlungen zur Ernährung unter Adipositas-Medikamenten nennen außerdem zwei bis drei Liter Flüssigkeit am Tag, weil Durst und Hunger leicht verwechselt werden.<sup><a href="#fn-almandoz2024">4</a></sup>
 
 ### 5. Wiegen mit Regel, nicht mit Gefühl
 
@@ -104,4 +104,4 @@ Wenn das Gewicht trotz Struktur steigt, wenn Essanfälle auftreten oder wenn Typ
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze baut auf dieser Ernährung auf: ein persönliches Proteinziel, Rezepte für kleine Portionen und zwei Krafteinheiten pro Woche. Es ersetzt keine Mahlzeiten und ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Das 12-Wochen-Programm von Nach der Spritze baut auf dieser Ernährung auf: ein persönliches Proteinziel, Rezepte für kleine Portionen und zwei Krafteinheiten pro Woche. Es ersetzt keine Mahlzeiten und ist kein Medikament. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

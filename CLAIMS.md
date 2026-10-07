@@ -91,7 +91,7 @@ Status: ✅ zugelassen und Bedingung erfüllt · ⚠️ prüfen (Michi / ggf. An
 
 | D13 | Programm-Beschreibung: „Zwei Krafteinheiten pro Woche à 30 Minuten“, „Dein Tagesziel in Gramm und Rezepte für kleine Portionen“, „Ein Gewichtskorridor statt Kalorienzählen“, „Ein Check-in pro Woche per E-Mail … Orientierung, keine medizinische Beratung“ | Startseite, Programm-Teaser, FAQ | Beschreibt Inhalt und Ablauf, keine Wirkung. Zahlen zu Training und Protein stehen getrennt davon als Studienaussagen mit Quelle (C6–C10). | ✅ |
 | D14 | „Was wir nicht sagen: dass das Programm die Spritze ersetzt oder den Jojo-Effekt verhindert. Das kann kein Programm versprechen.“ | Startseite (Programm), FAQ | Nachfolger von D6 für das Programm; Negativ-Abgrenzung, bewusst prominent. | ✅ |
-| D15 | Preis nur als Rahmen: „Basis-Programm geplant unter 129 €“ | Startseite (Warteliste), Programm-Teaser, FAQ, Danke-Seite | Keine Stufen ausformuliert, kein Countdown, keine Knappheit, keine Rabatt-Optik, **kein Vergleich mit den Kosten der Spritze** (früherer Set-Vergleich im Marktradar entfernt). | ✅ |
+| D15 | Preis nur als Rahmen: „Das Basis-Programm soll unter 129 € kosten“ (Dominik, 07.10.2026; vorher „Basis-Programm geplant unter 129 €“) | Startseite (Warteliste), Programm-Teaser, FAQ, Danke-Seite | Keine Stufen ausformuliert, kein Countdown, keine Knappheit, keine Rabatt-Optik, **kein Vergleich mit den Kosten der Spritze** (früherer Set-Vergleich im Marktradar entfernt). | ✅ |
 | D16 | Wartelisten-Häkchen „Ich hätte Interesse an einem Starterpaket mit Protein und Kreatin. Freiwillig, ohne Verpflichtung.“ | Wartelisten-Formular | Interessenabfrage ohne Wirkaussage; keine Health Claims neben dem Häkchen. | ✅ |
 
 ## E. Nicht verwendet (bewusst) 

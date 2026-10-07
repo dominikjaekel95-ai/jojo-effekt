@@ -36,7 +36,7 @@ Nach der letzten Dosis läuft eine Uhr. In Studien wird die Gewichtszunahme etwa
 
 ## Vorher: Was der Plan kann und was nicht
 
-Der Plan verhindert den Jojo-Effekt nicht. Das kann kein Plan und kein Produkt. Er sorgt dafür, dass die Dinge, die in Studien geholfen haben, zur Gewohnheit werden, bevor der Hunger da ist. In der dänischen S-LiTE-Studie hielten Teilnehmende, die während der Medikamententherapie trainiert hatten, ihr Gewicht ein Jahr nach Behandlungsende; nach dem Medikament allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">2</a></sup> Das ist die Größenordnung, um die es geht.
+Der Plan verhindert den Jojo-Effekt nicht. Das kann kein Plan und kein Produkt. Er sorgt dafür, dass die Dinge, die in Studien geholfen haben, zur Gewohnheit werden, bevor der Hunger da ist. In der dänischen S-LiTE-Studie hielten Teilnehmende, die trainiert hatten, ihr Gewicht auch ein Jahr nach Behandlungsende; nach dem Medikament allein lag die Zunahme 6 kg höher als nach Training allein.<sup><a href="#fn-jensen2024">2</a></sup> Das ist die Größenordnung, um die es geht.
 
 Am besten startet der Plan **vor** der letzten Dosis, während der Appetit noch gedämpft ist. Wer schon abgesetzt hat, startet heute.
 
@@ -61,7 +61,7 @@ Am besten startet der Plan **vor** der letzten Dosis, während der Appetit noch 
 Der Wirkstoff ist noch im Körper, der Appetit noch klein. Das ist die einfachste Zeit, Gewohnheiten aufzubauen, weil nichts dagegen arbeitet.
 
 - **Training:** Zwei feste Termine. In Woche 1 und 2 leicht, nur die Bewegungen lernen: Kniebeuge, Rudern, Drücken, Hüftstrecken, Rumpf. Ab Woche 3 die Belastung steigern.
-- **Protein:** Tagesmenge berechnen, auf Mahlzeiten verteilen, Frühstück umstellen (Skyr, Quark, Eier oder Shake). Eine Notreserve (Stick oder Shake) immer dabei.
+- **Protein:** Tagesmenge berechnen, auf Mahlzeiten verteilen, Frühstück umstellen (Skyr, Quark, Eier oder Shake). Eine Notreserve (Proteinriegel oder Shake) immer dabei.
 - **Wiegen:** Ausgangswert festhalten. Wer Kreatin startet: Es bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur. Das zeigt die Waage, ist aber kein Fett; der Wert danach ist der neue Ausgangswert.
 
 **Ziel am Ende von Phase 1:** Acht Trainingseinheiten absolviert, Protein an mindestens fünf von sieben Tagen erreicht, ein Wiege-Protokoll mit vier Einträgen.
@@ -85,7 +85,7 @@ Die Zunahme wird in Studien ab jetzt messbar.<sup><a href="#fn-wu2025">1</a></su
 - **Das Gespräch mit der Ärztin oder dem Arzt.** Den Gewichtsverlauf mitnehmen, ehrlich berichten, wie es läuft. Optionen besprechen – auch die eines Wiedereinstiegs, falls nötig. In der STEP-1-Verlängerung näherten sich die Blutwerte ein Jahr nach dem Absetzen wieder den Ausgangswerten.<sup><a href="#fn-wilding2022ext">7</a></sup> Was Omega-3-Kapseln laut den zugelassenen Angaben leisten, steht unter [Omega-3 bei der Abnehmspritze](/wissen/omega-3-abnehmspritze/).
 - **Die Wiege-Regel festschreiben.** Die Zonen aus der STOP-Regain-Studie:<sup><a href="#fn-wing2006">8</a></sup> bis +1,4 kg nichts tun; ab +1,4 kg zwei Wochen lang Protein und Training protokollieren; ab +2,3 kg den Plan prüfen (Protein, Training, Schlaf, Flüssigkalorien), die Maßnahmen ab +1,4 kg laufen weiter. Aufschreiben, an den Kühlschrank.
 - **Training beibehalten.** Zwei Einheiten bleiben. Wer mag, nimmt eine dritte dazu oder ergänzt Ausdauer. Was nicht geht: pausieren, „weil das Gewicht jetzt stabil ist“.
-- **Die Woche danach planen.** Was passiert im Urlaub, bei Krankheit, in stressigen Wochen? Eine Minimalversion festlegen: ein Training, Protein zum Frühstück, einmal wiegen. Für Weihnachten und andere Feiertage, die oft genau in diese Wochen fallen, steht ein eigener Plan unter [Feiertage nach der Abnehmspritze](/wissen/feiertage-nach-abnehmspritze/).
+- **Die Zeit danach planen.** Was passiert im Urlaub, bei Krankheit, in stressigen Wochen? Eine Minimalversion festlegen: ein Training, Protein zum Frühstück, einmal wiegen. Für Weihnachten und andere Feiertage, die oft genau in diese Wochen fallen, steht ein eigener Plan unter [Feiertage nach der Abnehmspritze](/wissen/feiertage-nach-abnehmspritze/).
 
 <div data-interaktiv="zonen"></div>
 

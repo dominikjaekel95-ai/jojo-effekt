@@ -20,7 +20,7 @@ faq:
   - q: "Ist ein einzelnes Festessen ein Problem?"
     a: "<p>Nein. Ein Essen macht keine Zunahme, die bleibt; die Studien messen Wochen, nicht Abende. Das Gewicht steigt durch vier Wochen Plätzchen neben dem Laptop, Alkohol an mehreren Abenden und ausgefallenes Training. Beim Festessen zuerst Protein und Gemüse, danach die Beilagen, und am nächsten Morgen die normale Routine.</p>"
   - q: "Was tue ich, wenn ich nach Neujahr zwei Kilo mehr wiege?"
-    a: "<p>Keine Crash-Diät. Ein Teil davon ist Wasser, das der Körper mit Salz und Kohlenhydraten speichert; was nach zwei Wochen normaler Ernährung noch da ist, ist die echte Zunahme. Dann gilt die gelbe Zone: zwei Wochen Protein und Training protokollieren, danach wieder wiegen. Bleibt das Gewicht über der Schwelle, die du dir gesetzt hast, gehört der Gewichtsverlauf ins Gespräch mit der Ärztin oder dem Arzt.</p>"
+    a: "<p>Keine Crash-Diät. Ein Teil davon ist Wasser, das der Körper mit Salz und Kohlenhydraten speichert; was nach zwei Wochen normaler Ernährung noch da ist, ist die echte Zunahme. Dann gilt die gelbe Zone: zwei Wochen Protein und Training protokollieren, danach wieder wiegen. Liegt das Gewicht danach mehr als 2,3 kg über dem Startgewicht, gilt Rot: den Plan prüfen, also Protein, Training, Schlaf und Flüssigkalorien durchgehen.</p>"
   - q: "Gilt das auch, wenn ich die Spritze über die Feiertage noch nehme?"
     a: "<p>Ja, nur weniger dringend, weil der Appetit noch gebremst ist. Die Feiertage sind dann eine gute Übung für die Zeit danach: wiegen, Protein zuerst, zwei Krafteinheiten. Alles, was das Medikament betrifft, also auch die Frage, ob du über die Feiertage weiterspritzt, besprichst du mit deiner Ärztin oder deinem Arzt.</p>"
 ---
@@ -33,7 +33,7 @@ Weihnachten ist der Zeitraum im Jahr, in dem fast alle zunehmen. Die Wochen nach
 
 Erwachsene nehmen zwischen Ende November und Anfang Januar im Mittel 0,4 bis 0,9 kg zu, und die Zunahme ist im Folgejahr meist nicht wieder weg.<sup><a href="#fn-diazzavala2017">3</a></sup> Die genauesten Zahlen für Deutschland stammen aus einer Studie mit vernetzten Waagen: Bei 760 Erwachsenen hierzulande lag das Gewicht zehn Tage nach Weihnachten im Mittel 0,6 % höher als zehn Tage davor, zu Ostern 0,2 %.<sup><a href="#fn-helander2016">1</a></sup> Etwa die Hälfte der Weihnachtszunahme war kurz danach wieder weg, die andere Hälfte blieb bis in die Sommermonate oder darüber hinaus.<sup><a href="#fn-helander2016">1</a></sup>
 
-Das klingt nach wenig. Es ist aber die eine Zunahme im Jahr, die bleibt. In einer prospektiven Studie mit 195 Erwachsenen nahmen die Teilnehmenden zwischen Thanksgiving und Neujahr im Mittel 0,37 kg zu; 14 % nahmen mehr als 2,3 kg zu, und Menschen mit Übergewicht häufiger als Normalgewichtige. Ein Jahr später war die Zunahme nicht abgebaut.<sup><a href="#fn-yanovski2000">2</a></sup> Wer jedes Jahr ein halbes Kilo behält, hat nach zehn Jahren fünf.
+Das klingt nach wenig. Es ist aber genau die Zunahme, die bleibt. In einer prospektiven Studie mit 195 Erwachsenen nahmen die Teilnehmenden zwischen Thanksgiving und Neujahr im Mittel 0,37 kg zu; 14 % nahmen mehr als 2,3 kg zu, und Menschen mit Übergewicht häufiger als Normalgewichtige. Ein Jahr später war die Zunahme nicht abgebaut.<sup><a href="#fn-yanovski2000">2</a></sup> Wer jedes Jahr ein halbes Kilo behält, hat nach zehn Jahren fünf.
 
 Für die Zeit nach dem Abnehmen gibt es eigene Daten: In einer europäischen Studie mit 1062 Erwachsenen in der Haltephase nach mindestens 5 % Gewichtsverlust stieg das Gewicht über Weihnachten im Mittel um 1,35 %, und die Zunahme wurde in den Folgemonaten nicht vollständig ausgeglichen.<sup><a href="#fn-turicchi2020">4</a></sup> Wer gerade abgenommen hat, nimmt über die Feiertage also eher mehr zu als der Durchschnitt, nicht weniger.
 
@@ -77,7 +77,7 @@ Das passt zu dem, was aus der Haltephase nach Diäten bekannt ist. In der STOP-R
 
 ## Wenn es trotzdem passiert ist
 
-Ein bis zwei Kilo mehr nach Neujahr sind zum Teil Wasser, das der Körper mit Salz und Kohlenhydraten speichert. Was nach zwei Wochen normaler Ernährung noch auf der Waage steht, ist die echte Zunahme. Dann gilt die gelbe Zone: zwei Wochen Protein und Training protokollieren, nicht hungern, danach wieder wiegen. Bleibt das Gewicht über der Schwelle, die du dir gesetzt hast, gehört der Gewichtsverlauf ins Gespräch mit der Ärztin oder dem Arzt. Die passende Liste für diese Wochen ist die [Checkliste: Die ersten 8 Wochen](/checkliste/).
+Ein bis zwei Kilo mehr nach Neujahr sind zum Teil Wasser, das der Körper mit Salz und Kohlenhydraten speichert. Was nach zwei Wochen normaler Ernährung noch auf der Waage steht, ist die echte Zunahme. Dann gilt die gelbe Zone: zwei Wochen Protein und Training protokollieren, nicht hungern, danach wieder wiegen. Liegt das Gewicht danach mehr als 2,3 kg über dem Startgewicht, gilt Rot: den Plan prüfen, also Protein, Training, Schlaf und Flüssigkalorien durchgehen. Die passende Liste für diese Wochen ist die [Checkliste: Die ersten 8 Wochen](/checkliste/).
 
 ## Was dieser Artikel nicht sagt
 
@@ -85,4 +85,4 @@ Ob du über die Feiertage weiterspritzt, pausierst oder absetzt, ist eine Therap
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze begleitet die Wochen nach der letzten Dosis mit zwei Krafteinheiten pro Woche, einem Proteinziel und einem Check-in pro Woche; es ist kein Medikament. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze begleitet die Wochen nach der letzten Dosis mit zwei Krafteinheiten pro Woche, einem Proteinziel und einem Check-in pro Woche; es ist kein Medikament. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

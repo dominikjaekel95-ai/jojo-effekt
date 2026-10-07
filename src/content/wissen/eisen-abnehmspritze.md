@@ -11,7 +11,7 @@ sources: ["nvs2", "dgeReferenzwerte", "euClaims", "bls", "almandoz2024", "bfrHoe
 related: ["supplements-nach-abnehmspritze", "vitamin-b12-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
 faq:
   - q: "Kann die Abnehmspritze einen Eisenmangel verursachen?"
-    a: "<p>Nicht direkt. Sie verändert, was und wie viel du isst. Rotes Fleisch, Hülsenfrüchte und Vollkorn fallen bei kleinen Portionen oft weg, und genau die liefern Eisen. Frauen vor den Wechseljahren lagen schon vor der Spritze zu 58 % unter der empfohlenen Zufuhr; unter der Spritze wird die Lücke größer.</p>"
+    a: "<p>Nicht direkt. Sie verändert, was und wie viel du isst. Rotes Fleisch, Hülsenfrüchte und Vollkorn fallen bei kleinen Portionen oft weg, und genau die liefern Eisen. 58 % der Frauen lagen schon ohne Spritze unter der empfohlenen Zufuhr; unter der Spritze wird die Lücke größer.</p>"
   - q: "Soll ich vorsorglich Eisen nehmen?"
     a: "<p>Nein. Eisen ist das Mineral, bei dem Überschuss schadet: Der Körper kann es kaum ausscheiden, und bei der erblichen Eisenspeicherkrankheit kann ein Präparat gefährlich werden. Ein Eisenpräparat gehört erst nach einem Blutwert (Ferritin, Hämoglobin) und auf ärztliche Empfehlung in den Alltag.</p>"
   - q: "Wie merke ich einen Eisenmangel?"
@@ -76,4 +76,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Eisenpräparate sind Nahrungsergänzungsmittel oder Arzneimittel und gehören nach Blutwert in ärztliche Hand. Das 12-Wochen-Programm von Nach der Spritze plant Training, Protein und einen Gewichtskorridor für die Zeit danach; ein Eisenpräparat gehört nicht dazu. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Eisenpräparate sind Nahrungsergänzungsmittel oder Arzneimittel und gehören nach Blutwert in ärztliche Hand. Das 12-Wochen-Programm von Nach der Spritze plant Training, Protein und einen Gewichtskorridor für die Zeit danach; ein Eisenpräparat gehört nicht dazu. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

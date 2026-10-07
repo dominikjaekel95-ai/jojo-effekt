@@ -82,7 +82,7 @@ Wer Fleisch, Haferflocken, Eier und Kerne isst, deckt Zink und Biotin nebenbei. 
 
 ### Was nicht hilft
 
-Shampoos und Seren „gegen Haarausfall“ erreichen die Haarwurzel beim telogenen Effluvium nicht; der Auslöser liegt im Körper, nicht auf der Kopfhaut. Für kein Kosmetikprodukt gibt es eine zugelassene Angabe zum Haarwachstum.<sup><a href="#fn-euClaims">3</a></sup> Was hilft, ist unspektakulär: Auslöser beenden, Versorgung sichern, Zeit geben.
+Shampoos und Seren „gegen Haarausfall“ erreichen die Haarwurzel beim telogenen Effluvium nicht; der Auslöser liegt im Körper, nicht auf der Kopfhaut. Was hilft, ist unspektakulär: Auslöser beenden, Versorgung sichern, Zeit geben.
 
 ## Nach dem Absetzen
 

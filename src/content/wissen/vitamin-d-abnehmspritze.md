@@ -65,7 +65,7 @@ Gemessen wird 25-OH-Vitamin-D im Blut. Der Test ist meist eine Selbstzahlerleist
 
 ## Nach dem Absetzen
 
-Der Bedarf bleibt gleich, die Lebensmittelauswahl wird leichter: Mit zurückgekehrtem Appetit kommen Lachs, Hering, Makrele und Eier wieder auf den Teller. Sie liefern einen Teil, nicht alles. Wer die Haltephase mit Krafttraining angeht, hat außerdem einen Grund, öfter draußen zu sein. Die Winterregel bleibt trotzdem: 20 µg von Oktober bis März, es sei denn, der Blutwert sagt etwas anderes. Wie die Wochen nach der letzten Dosis insgesamt verlaufen, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Der Bedarf bleibt gleich, die Lebensmittelauswahl wird leichter: Mit zurückgekehrtem Appetit kommen Lachs, Hering, Makrele und Eier wieder auf den Teller. Sie liefern einen Teil, nicht alles. Wer sich in der Haltephase mehr bewegt, ist außerdem öfter draußen. Die Winterregel bleibt trotzdem: 20 µg von Oktober bis März, es sei denn, der Blutwert sagt etwas anderes. Wie die Wochen nach der letzten Dosis insgesamt verlaufen, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 ## Wann du zur Ärztin oder zum Arzt gehst
 
@@ -78,4 +78,4 @@ Die Übersicht über alle Nährstoffe, mit Tabelle zu Evidenz und Dosis, steht u
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin D ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Vitamin D ist ein Nahrungsergänzungsmittel; es ersetzt weder eine ausgewogene Ernährung noch ein Medikament. Das 12-Wochen-Programm von Nach der Spritze ist ein Trainings- und Ernährungsprogramm für die Zeit danach, kein Medikament und kein Präparat. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

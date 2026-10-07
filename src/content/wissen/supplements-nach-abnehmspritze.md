@@ -95,4 +95,4 @@ Alles, was mit „Stoffwechsel ankurbeln“, „Fett verbrennen“, „entgiften
 
 ---
 
-*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze setzt auf das, was hier belegt ist: Protein über Mahlzeiten, Krafttraining und Ballaststoffe aus Lebensmitteln. Es ist kein Medikament und ersetzt keine Vitamine bei einem Mangel. Start und Preis über die [Warteliste](/#warteliste).*
+*Dieser Artikel ist eine allgemeine Information und ersetzt keine ärztliche Beratung. Das 12-Wochen-Programm von Nach der Spritze setzt auf das, was hier belegt ist: Protein über Mahlzeiten, Krafttraining und Ballaststoffe aus Lebensmitteln. Es ist kein Medikament und ersetzt keine Vitamine bei einem Mangel. Start und Preis erfährst du über die [Warteliste](/#warteliste).*

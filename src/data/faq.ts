@@ -26,7 +26,7 @@ export const landingFaq: FaqItem[] = [
   },
   {
     q: 'Wann geht es los, und was kostet es?',
-    a: `<p>Wir starten, sobald genug Menschen auf der Warteliste stehen. Das Basis-Programm ist geplant unter ${site.price.programUnder} € für alle zwölf Wochen. Wer auf der Liste steht, erfährt Termin und Preis zuerst und entscheidet dann. Bis dahin zahlst du nichts.</p>`,
+    a: `<p>Wir starten, sobald genug Menschen auf der Warteliste stehen. Das Basis-Programm soll für alle zwölf Wochen unter ${site.price.programUnder} € kosten. Wer auf der Liste steht, erfährt Termin und Preis zuerst und entscheidet dann. Bis dahin zahlst du nichts.</p>`,
   },
   {
     q: 'Brauche ich ein Fitnessstudio?',

@@ -1,11 +1,20 @@
 # Ernährungsplan (Lead-Magnet)
 
-Stand 06.10.2026 (Redesign „Kalk“). Kostenloser Plan für 14 Tage gegen Newsletter-Anmeldung, alternativ per persönlicher Mail an Dominik. Ersetzt die Fassung vom 02.10. (sieben Tage, 18 Pläne ep01 bis ep18); deren Links funktionieren weiter (siehe „Alte Pläne“).
+Stand 07.10.2026 (Redesign „Kalk“; PDF seit 07.10. als eigene Druckfassung, A4 und Handy). Kostenloser Plan für 14 Tage gegen Newsletter-Anmeldung, alternativ per persönlicher Mail an Dominik. Ersetzt die Fassung vom 02.10. (sieben Tage, 18 Pläne ep01 bis ep18); deren Links funktionieren weiter (siehe „Alte Pläne“).
 
 ## Was der Plan enthält
 
-- 14 Tage mit Frühstück, Mittag, Abend und je nach Appetit Zwischenmahlzeiten, jede Mahlzeit mit Mengen und Protein, jeder Tag mit Summe und Balken gegen das Ziel.
-- Überblick „14 Tage auf einen Blick“ (Protein pro Tag), Rechenweg (Ziel, Tagesfaktor), Einkaufsliste je Woche nach Abteilungen, Austauschtabelle (Menge für etwa 20 g Protein), zehn Rezeptkarten (die häufigsten Gerichte), Rechengrundlage (Protein je 100 g je Zutat), Hinweise, Ausschlusskriterien, Arztsatz, Quellen.
+- 14 Tage mit Frühstück, Mittag, Abend und je nach Appetit Zwischenmahlzeiten, jede Mahlzeit mit Mengen und Protein.
+- **Planseite** (Web): Profil, „14 Tage auf einen Blick“ (Protein pro Tag), Hinweise mit Rechenweg, Tage mit Summe und Balken gegen das Ziel, Einkaufsliste je Woche nach Abteilungen, Rezeptkarten (die zehn häufigsten Gerichte), Rechengrundlage (Protein je 100 g je Zutat), Austauschtabelle (Menge für etwa 20 g Protein), Ausschlusskriterien, Pflichtsatz, Quellen.
+- **PDF** (seit 07.10.2026 eigene Druckfassung, ruhig wie die Website, in zwei Formaten):
+  1. Deckblatt: Planname (Appetit, Gewicht, Vorlieben), drei Zahlen (Ernährungsform, 14 Tage, Protein pro Tag), drei Regeln mit je einem Satz. Keine Grafik, keine Fußnoten.
+  2. Je Woche zuerst „Woche X auf einen Blick“: Raster 7 Tage × 4 Mahlzeiten (Frühstück, Mittag, Abend, Zwischendurch), nur Gerichtnamen, zum Aufhängen.
+  3. Danach die Einkaufsliste der Woche: Packungen statt Grammzahlen, wo es Sinn ergibt (z. B. „1 Becher Skyr natur, 500 g“, auf ganze Packungen aufgerundet, klein dahinter die Menge im Plan), nach Abteilungen, Kästchen zum Abhaken; Obst, Gemüse und Kräuter ohne Menge, Gewürze und Öl als eine Zeile „Aus dem Vorrat“. Packungsgrößen: `src/data/ernaehrungsplan-packungen.ts` (nur übliche Supermarktgrößen; frisches Fleisch und Fisch, Käse, Garnelen und Edamame bleiben in Gramm, auf 50 g aufgerundet).
+  4. Tagesseiten: A4 zwei Tage pro Seite, Handy ein Tag pro Seite. Gerichtname groß, Mengen in einer hellen zweiten Zeile, Protein als kleine Zahl rechts, Verweis „Rezept N“. Keine Balken; Haarlinie nur zwischen den Tagen.
+  5. Rezepte nur für Gerichte mit mindestens 15 Minuten Zubereitung (`REZEPT_AB_MINUTEN` in `src/lib/ernaehrungsplan-druck.ts`; je Plan 14 bis 26), in der Reihenfolge des ersten Vorkommens, eine halbe A4-Seite je Rezept, Schritte nummeriert, Zutaten ohne Mengen (die stehen beim jeweiligen Tag).
+  6. „Tauschen“: 10 bis 12 Zeilen „statt X → Y oder Z“ für die Proteinquellen des Plans, je höchstens 3 g Protein Unterschied, passend zu Ernährungsform und Laktose (vegan nur vegane Partner); aus Proteingehalt und Austausch-Kennzeichen der Zutaten abgeleitet.
+  7. Letzte Seite klein: Hinweise (Rechenweg mit Fußnoten, Ballaststoffe, Trinken, Laktose, Mengen), „Was dieser Plan ist und was nicht“ mit Ausschlusskriterien, Pflichtsatz `site.doctorSentence`, Kontakt, Quellen. Die Rechengrundlage steht nicht im PDF (Planseite und „So entsteht dein Plan“ auf `/ernaehrungsplan/`).
+  - Typografie wie die Wissensseiten: sechs Schriftgrößen (10, 12, 14, 18, 28, 48 px), drei Textfarben (Tinte, Text 3, Grün für Protein), Abstände im 8-px-Raster, Weißraum statt Linien. Fußzeile auf jeder Seite: „Allgemeiner Beispielplan für gesunde Erwachsene, keine ärztliche oder ernährungstherapeutische Beratung.“ und Seitenzahl.
 - Rezeptpool: 80 Gerichte (18 Frühstücke, 40 Hauptgerichte, 22 Zwischenmahlzeiten) mit Supermarkt-Zutaten, davon je nach Variante 35 bis 72 passend. Kein Gericht an zwei Tagen hintereinander. Mischkost: Fleisch an drei, Fisch an zwei Tagen pro Woche; pescetarisch: Fisch an vier Tagen; mit passender Vorliebe je ein Tag mehr.
 - Kein Arztbezug, keine Dosierungen, keine Kalorienvorgaben, keine Medikamentennamen, keine Affiliate-Links. Hinweis „allgemeiner Beispielplan“ und Ausschlusskriterien stehen im Plan, im Formular und in der PDF-Fußzeile.
 
@@ -16,7 +25,7 @@ Stand 06.10.2026 (Redesign „Kalk“). Kostenloser Plan für 14 Tage gegen News
 3. E-Mail, Häkchen „keins der Ausschlusskriterien“ (Nierenerkrankung, Schwangerschaft/Stillzeit, Essstörung, unter 18), Häkchen „Plan plus Newsletter“. Beides Pflicht.
 4. `api/ernaehrungsplan.js` legt die Adresse bei MailerLite an (Status `unconfirmed`, Gruppen „Newsletter“ und „Ernährungsplan“, Felder `plan` = `ek01` bis `ek56`, `vorlieben` = z. B. `lachs,quark` oder leer, `quelle` = `ernaehrungsplan`) und leitet auf `/ernaehrungsplan/danke/` weiter.
 5. MailerLite schickt die Bestätigungs-Mail (Double-Opt-in). Nach dem Klick ist die Adresse aktiv, die Automation schickt den Link auf die Planseite und das PDF.
-6. Planseite `/ernaehrungsplan/plan/<plan>/?v=<vorlieben>` (noindex): zeigt den Plan und rechnet Vorlieben im Browser ein. „Plan anpassen“ wechselt Ernährungsform, Appetit, Gewicht und Laktose (öffnet den passenden Plan, Vorlieben bleiben) und Vorlieben (direkt auf der Seite, die Adresse merkt sie sich). „Als PDF speichern“ öffnet die Druckansicht, „Fertiges PDF öffnen“ das PDF des Grundplans. Damit braucht niemand eine zweite Mail, wenn sich etwas ändert.
+6. Planseite `/ernaehrungsplan/plan/<plan>/?v=<vorlieben>` (noindex): zeigt den Plan und rechnet Vorlieben im Browser ein. „Plan anpassen“ wechselt Ernährungsform, Appetit, Gewicht und Laktose (öffnet den passenden Plan, Vorlieben bleiben) und Vorlieben (direkt auf der Seite, die Adresse merkt sie sich). Zwei Download-Knöpfe für den Grundplan: „PDF fürs Handy“ (`/downloads/ernaehrungsplan/<plan>-handy.pdf`) und „PDF zum Drucken (A4)“ (`/downloads/ernaehrungsplan/<plan>.pdf`); „Als PDF speichern“ druckt die A4-Fassung im Browser mit eingerechneten Vorlieben. Plausible-Ereignis „Ernaehrungsplan PDF“ mit `format` = `handy`, `a4` oder `browser`. Damit braucht niemand eine zweite Mail, wenn sich etwas ändert.
 7. Ohne Newsletter: Mail an `site.owner.email` (Link im Formular, mit den Antworten, Plannummer und Vorlieben vorausgefüllt). Dominik antwortet mit dem Link `https://nachderspritze.de/ernaehrungsplan/plan/<plan>/?v=<vorlieben>` (Plannummer und Vorlieben stehen in der Mail).
 
 ## To-do MailerLite (einmalig, vor dem Merge des Redesigns)
@@ -31,7 +40,7 @@ Stand 06.10.2026 (Redesign „Kalk“). Kostenloser Plan für 14 Tage gegen News
      >
      > [Button: Meinen Plan öffnen] → `https://nachderspritze.de/ernaehrungsplan/plan/{$plan}/?v={$vorlieben}`
      >
-     > Auf der Seite kannst du Vorlieben ändern und die Variante wechseln, zum Beispiel wenn der Appetit zurückkommt. Speichere sie als Lesezeichen. Als PDF: `https://nachderspritze.de/downloads/ernaehrungsplan/{$plan}.pdf` (Grundplan ohne Vorlieben) oder auf der Seite „Als PDF speichern“.
+     > Auf der Seite kannst du Vorlieben ändern und die Variante wechseln, zum Beispiel wenn der Appetit zurückkommt. Speichere sie als Lesezeichen. Als PDF fürs Handy: `https://nachderspritze.de/downloads/ernaehrungsplan/{$plan}-handy.pdf`, zum Drucken (A4): `https://nachderspritze.de/downloads/ernaehrungsplan/{$plan}.pdf` (beide Grundplan ohne Vorlieben) oder auf der Seite „Als PDF speichern“.
      >
      > Der Plan ist ein allgemeiner Beispielplan für gesunde Erwachsene und ersetzt keine ärztliche oder ernährungstherapeutische Beratung. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
      >
@@ -76,7 +85,9 @@ Gruppe „Ernährungsplan“ (ID als Vercel-Variable `MAILERLITE_GROUP_ERNAEHRUN
 - `src/data/ernaehrungsplan-rezepte.ts`: Lebensmittel (Protein je 100 g/ml bzw. Stück, kleinste Ernährungsform, Laktose `ersetzbar`/`enthalten`, Abteilung, Vorliebe, Quelle) und Gerichte (Grundrezept für eine normale Portion, Mahlzeit, `dazu` ohne Menge, `ersatz` = Sojafassung nur für vegane und laktosefreie Pläne).
 - `src/data/ernaehrungsplan-karten.ts`: Zubereitung (Zeit, Schritte, Tipp) für Frühstück und Hauptgerichte; getrennt, damit die Vorschau sie nicht lädt.
 - `src/data/ernaehrungsplan.ts`: Generator `erstellePlan({ ernaehrung, appetit, gewicht, laktosefrei, vorlieben })`, deterministisch (Build und Browser rechnen gleich). Auswahl je Mahlzeit nach Punkten: bisherige Nutzung, Abstand zur letzten Nutzung, gleiche Hauptzutat am selben Tag, Vorliebe (bevorzugt), Wochenmuster Fleisch/Fisch. Tagesfaktor 0,4 bis 1,0 (Appetit klein) bzw. 0,7 bis 1,5 (normal) für Frühstück, Mittag und Abend; Zahl und Auswahl der Zwischenmahlzeiten so, dass der Faktor nahe 0,65 bzw. 1,05 liegt.
-- `src/lib/ernaehrungsplan-ansicht.ts`: HTML für Überblick, Wochen, Einkaufslisten, Rezeptkarten und Rechengrundlage (Build und Browser).
+- `src/lib/ernaehrungsplan-ansicht.ts`: HTML der Webansicht für Überblick, Wochen, Einkaufslisten, Rezeptkarten und Rechengrundlage (Build und Browser).
+- `src/lib/ernaehrungsplan-druck.ts`: HTML der Druckfassung (Deckblatt bis „Tauschen“; Build und Browser, auf dem Bildschirm unsichtbar), Stile `src/styles/ernaehrungsplan-druck.css` (`@page` A4 und benannte Seite `handy`, Fußzeile als Seitenrandfeld). Die letzte Seite (Hinweise, Quellen) steht statisch in `plan/[id].astro`. Reine Anzeige: Generator und Daten bleiben unverändert.
+- `src/data/ernaehrungsplan-packungen.ts`: Packungsart und -größe je Zutat für die Einkaufsliste im PDF, Einordnung der „dazu“-Angaben (frisch oder Vorrat).
 - Seiten: `src/pages/ernaehrungsplan/index.astro` (Formular, Vorschau), `plan/[id].astro` (Planseite, Druckvorlage, Hinweisseiten ep01 bis ep18), `danke.astro`. Startseite: `src/components/ErnaehrungsplanTeaser.astro`.
 
 ## Zahlen und Quellen
@@ -91,8 +102,12 @@ Gruppe „Ernährungsplan“ (ID als Vercel-Variable `MAILERLITE_GROUP_ERNAEHRUN
 
 ## PDFs
 
-- `npm run pdf:ernaehrungsplan` baut und druckt 56 Pläne (Grundplan ohne Vorlieben, etwa zwölf Seiten, 150 bis 200 kB) und 18 Hinweis-PDFs `ep01` bis `ep18` nach `public/downloads/ernaehrungsplan/`. Einzelne zum Prüfen: `npm run build && node scripts/ernaehrungsplan-pdf.mjs ek13 ep05`. Nach jeder Änderung an Daten, Vorlage oder Quellen alle neu erzeugen und mit committen.
-- Schrift im PDF: statische Schnitte aus Mona Sans (`scripts/fonts/nds-druck-*.woff2`, umbenannt wegen des Reserved Font Name „Mona“, Lizenz `scripts/fonts/OFL.txt`). Grund: Chromium bettet variable Schriften als Type-3-Glyphen ein; die PDFs wären fünfmal so groß.
+- `npm run pdf:ernaehrungsplan` baut und druckt je Plan zwei PDFs (Grundplan ohne Vorlieben) und 18 Hinweis-PDFs `ep01` bis `ep18` nach `public/downloads/ernaehrungsplan/`:
+  - `<plan>.pdf`: A4 zum Drucken, Ränder 14/14/16 mm, 22 bis 28 Seiten (Deckblatt, je Woche Überblick, Einkaufsliste und vier Tagesseiten, Rezepte zu zweit, Tauschen, Hinweise).
+  - `<plan>-handy.pdf`: 90 mm breit, ein Tag pro Seite, alles einspaltig. Seitenhöhe 160 mm (9:16); passt der längste Tag eines Plans nicht darauf (kleiner Appetit mit bis zu sieben Mahlzeiten), wird die Seite dieses Plans so hoch wie nötig, in 5-mm-Schritten. Die Seite fragt `?druck=handy` ab (Klasse `ed-handy`).
+  - Prüfung im Skript: Hat ein A4-PDF mehr Seiten als Blöcke (ein Block ist übergelaufen, z. B. eine Einkaufsliste über eine Seite), endet es mit Fehler.
+  - Einzelne zum Prüfen: `npm run build && node scripts/ernaehrungsplan-pdf.mjs ek13 ep05`. Nach jeder Änderung an Daten, Vorlage, Packungen oder Quellen alle neu erzeugen und mit committen.
+- Schrift im PDF: statische Schnitte aus Mona Sans (`scripts/fonts/nds-druck-*.woff2`, umbenannt wegen des Reserved Font Name „Mona“, Lizenz `scripts/fonts/OFL.txt`). Grund: Chromium bettet variable Schriften als Type-3-Glyphen ein; die PDFs wären fünfmal so groß. Die Druck-CSS nutzt nur die fünf vorhandenen Schnitte (Breite/Gewicht 100/400, 100/560, 112/540, 118/520, 125/480). Kästchen der Einkaufsliste sind eckig: abgerundete zeichnet Chromium als Kurven (rund 25 kB mehr je PDF).
 - Die PDFs sind unter ihrer URL öffentlich erreichbar (wie die Checkliste), die Planseiten auch. Bewusst so: kein Login, keine Tokens. Beide sind noindex (PDFs per Header in `vercel.json`, Planseiten per Meta-Tag) und nicht in der Sitemap.
 
 ## Alte Pläne (bis 05.10.2026)

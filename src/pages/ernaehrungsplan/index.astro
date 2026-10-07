@@ -69,7 +69,7 @@ const mailHref = `mailto:${site.owner.email}?subject=${encodeURIComponent(mailBe
 const faq = [
   {
     q: 'Für wen ist der Plan gedacht?',
-    a: '<p>Für gesunde Erwachsene in den Wochen, in denen der Appetit nach der letzten Dosis zurückkommt, und für die Zeit unter der Therapie, in der viele zu wenig Protein essen. Für die zweite Gruppe gibt es die Variante „Appetit noch klein“ mit kleineren Tellern und mehr Zwischenmahlzeiten. Nicht geeignet ist er bei Nierenerkrankungen, in Schwangerschaft und Stillzeit, bei einer Essstörung und für unter 18-Jährige.</p>',
+    a: '<p>Für gesunde Erwachsene in den Wochen, in denen der Appetit nach der letzten Dosis zurückkommt, und für die Zeit unter der Therapie, in der viele zu wenig Protein essen. Für die Zeit unter der Therapie gibt es die Variante „Appetit noch klein“ mit kleineren Tellern und mehr Zwischenmahlzeiten. Nicht geeignet ist er bei Nierenerkrankungen, in Schwangerschaft und Stillzeit, bei einer Essstörung und für unter 18-Jährige.</p>',
   },
   {
     q: 'Was bewirken die Vorlieben?',
@@ -77,7 +77,7 @@ const faq = [
   },
   {
     q: 'Muss ich mich an die Reihenfolge halten?',
-    a: '<p>Nein. Die Tage lassen sich tauschen und wiederholen; wer am Wochenende kocht, bereitet Linsen, Reis oder Quinoa für mehrere Tage vor. Wichtig ist das Muster: bei jeder Mahlzeit zuerst Protein, dazu Gemüse oder Obst, nichts Kalorienhaltiges trinken.</p>',
+    a: '<p>Nein. Die Tage lassen sich tauschen und wiederholen; wer am Wochenende kocht, kann Linsen, Reis oder Quinoa für mehrere Tage vorbereiten. Wichtig ist das Muster: bei jeder Mahlzeit zuerst Protein, dazu Gemüse oder Obst, nichts Kalorienhaltiges trinken.</p>',
   },
   {
     q: 'Was, wenn ich kein Fleisch oder keinen Fisch esse?',
@@ -185,7 +185,7 @@ const jsonLd = [
 
           <fieldset class="epf-frage">
             <legend><span class="epf-nr">4</span>Was isst du gern? <span class="epf-optional">freiwillig</span></legend>
-            <p class="epf-hinweis epf-hinweis-oben">Gerichte damit kommen öfter vor. Die Auswahl passt sich deiner Ernährungsform an.</p>
+            <p class="epf-hinweis epf-hinweis-oben">Gerichte mit diesen Zutaten kommen öfter vor. Die Auswahl passt sich deiner Ernährungsform an.</p>
             <div class="epf-vorlieben">
               {VORLIEBEN.map((v) => (
                 <label class="epf-v" data-v={v.key} data-form={v.form} data-laktose={v.laktose ? 'ja' : undefined} hidden={!erlaubtStart.has(v.key)}>
@@ -249,7 +249,7 @@ const jsonLd = [
             <div class="hidden" aria-hidden="true">
               <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
             </div>
-            <p class="epf-mikro band-muted">Kostenlos. Keine Weitergabe deiner Adresse. Gespeichert werden Adresse, Plannummer (steht für Ernährungsform, Gewichtsbereich, Appetit und Laktose) und deine Vorlieben, nicht dein genaues Gewicht.</p>
+            <p class="epf-mikro band-muted">Kostenlos. Wir geben deine Adresse nicht weiter. Gespeichert werden Adresse, Plannummer (steht für Ernährungsform, Gewichtsbereich, Appetit und Laktose) und deine Vorlieben, nicht dein genaues Gewicht.</p>
             <p class="epf-ohne">Lieber ohne Newsletter? Schreib mir eine Mail mit deinen Antworten an <a id="ep-mail" href={mailHref}>{site.owner.email}</a>, dann schicke ich dir den Plan persönlich. Dominik</p>
           </div>
         </div>
@@ -259,7 +259,7 @@ const jsonLd = [
         <div class="prose-site">
           <h2 id="so-entsteht-der-plan">So entsteht dein Plan</h2>
           <ul>
-            <li><strong>Protein nach Gewichtsbereich.</strong> Übersichtsarbeiten empfehlen während Gewichtsabnahme und Gewichtserhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<Fn n={fn('leidy2015')} id="leidy2015" /> Die Pläne rechnen mit dem unteren Wert und der Mitte der Gewichtsstufe: rund {proteinZiel.bis70} g bei {gewichtLabel.bis70}, {proteinZiel['70bis85']} g bei {gewichtLabel['70bis85']}, {proteinZiel['85bis100']} g bei {gewichtLabel['85bis100']} und {proteinZiel.ueber100} g bei {gewichtLabel.ueber100} (gerechnet mit {referenzKg.ueber100} kg; wer deutlich mehr wiegt, findet sein Ziel im <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>).</li>
+            <li><strong>Protein nach Gewichtsbereich.</strong> Übersichtsarbeiten empfehlen beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<Fn n={fn('leidy2015')} id="leidy2015" /> Die Pläne rechnen mit dem unteren Wert und der Mitte der Gewichtsstufe: rund {proteinZiel.bis70} g bei {gewichtLabel.bis70}, {proteinZiel['70bis85']} g bei {gewichtLabel['70bis85']}, {proteinZiel['85bis100']} g bei {gewichtLabel['85bis100']} und {proteinZiel.ueber100} g bei {gewichtLabel.ueber100} (gerechnet mit {referenzKg.ueber100} kg; wer deutlich mehr wiegt, findet sein Ziel im <a href="/werkzeuge/proteinrechner/">Proteinrechner</a>).</li>
             <li><strong>Mengen, die aufgehen.</strong> Jedes Gericht hat ein Grundrezept für eine normale Portion. Ein Faktor je Tag passt die Mengen an, bis der Tag im Zielbereich liegt (höchstens 5 g unter dem Ziel); jede Zutat zählt mit ihrem Proteingehalt aus dem Bundeslebensmittelschlüssel.<Fn n={fn('bls')} id="bls" /> Der Rechenweg steht im Plan.</li>
             <li><strong>Portionen nach Appetit.</strong> Ist der Appetit noch klein, sind Frühstück, Mittag und Abend kleiner, und es gibt zwei bis vier proteinreiche Zwischenmahlzeiten. Ist er wieder normal, reichen drei Mahlzeiten und bis zu zwei kleine dazwischen.</li>
             <li><strong>Abwechslung.</strong> {anzahlGerichte} Gerichte, kein Gericht an zwei Tagen hintereinander. Bei Mischkost gibt es Fleisch an drei und Fisch an zwei Tagen pro Woche als Hauptgericht, sonst Eier, Milchprodukte und Hülsenfrüchte. Deine Vorlieben verschieben die Auswahl, nicht das Ziel.</li>

@@ -34,7 +34,7 @@ export const landingFaq: FaqItem[] = [
   },
   {
     q: 'Brauche ich Nahrungsergänzungsmittel?',
-    a: '<p>Nein. Dein Proteinziel lässt sich mit normalen Lebensmitteln erreichen, das Programm zeigt wie. Wann ein Proteinpulver oder Kreatin praktisch sein kann, erklären wir mit Quellen im <a href="/wissen/supplements-nach-abnehmspritze/">Wissensbereich</a>.</p>',
+    a: '<p>Nein. Dein Proteinziel lässt sich mit normalen Lebensmitteln erreichen, das Programm zeigt, wie. Wann ein Proteinpulver oder Kreatin praktisch sein kann, erklären wir mit Quellen im <a href="/wissen/supplements-nach-abnehmspritze/">Wissensbereich</a>.</p>',
   },
   {
     q: 'Gibt es ein Starterpaket?',
@@ -42,7 +42,7 @@ export const landingFaq: FaqItem[] = [
   },
   {
     q: 'Ist das eine medizinische Beratung?',
-    a: '<p>Nein. Das Programm ist Training, Ernährung und Gewohnheiten. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.</p>',
+    a: '<p>Nein. Im Programm geht es um Training, Ernährung und Gewohnheiten. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.</p>',
   },
   {
     q: 'Kann ich anfangen, während ich noch spritze?',
@@ -50,10 +50,10 @@ export const landingFaq: FaqItem[] = [
   },
   {
     q: 'Verhindert das Programm den Jojo-Effekt?',
-    a: '<p>Das kann kein Programm versprechen, und wir behaupten es nicht. Es ersetzt auch nicht die Spritze. Was die Forschung zu Krafttraining, Protein und Gewichtserhalt zeigt, steht mit Quellen im <a href="/wissen/jojo-effekt-abnehmspritze/">Artikel zum Jojo-Effekt</a>. Eine eigene Studie zum Programm gibt es nicht; es setzt die Studienlage zu Krafttraining und Protein in einen Wochenplan um.</p>',
+    a: '<p>Das kann kein Programm versprechen, und wir behaupten es nicht. Es ersetzt auch nicht die Spritze. Was die Forschung zu Krafttraining, Protein und Gewichtserhalt zeigt, steht mit Quellen im <a href="/wissen/jojo-effekt-abnehmspritze/">Artikel zum Jojo-Effekt</a>. Eine eigene Studie zum Programm gibt es nicht; es macht aus den Studien zu Krafttraining und Protein einen Plan für jede Woche.</p>',
   },
   {
     q: 'Was passiert mit meiner E-Mail-Adresse?',
-    a: `<p>Sie liegt bei unserem Versanddienst MailerLite (EU). ${mailText} Erst nach dem Klick auf den Link in der Bestätigungs-Mail bist du eingetragen. Abmelden geht jederzeit mit einem Klick, keine Weitergabe. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>`,
+    a: `<p>Sie liegt bei unserem Versanddienst MailerLite (EU). ${mailText} Erst nach dem Klick auf den Link in der Bestätigungs-Mail bist du eingetragen. Abmelden geht jederzeit mit einem Klick. Wir geben deine Adresse nicht weiter. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>`,
   },
 ];

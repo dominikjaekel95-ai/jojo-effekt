@@ -40,7 +40,7 @@ const published = '2026-10-01';
 const faq = [
   {
     q: 'Zahlt die Krankenkasse die Abnehmspritze?',
-    a: `<p>${kassen.regeln[0]?.regel ?? ''}</p><p>${kassen.regeln[1]?.regel ?? ''}</p>`,
+    a: kassen.regeln.slice(0, 2).map((k) => `<p>${k.gruppe}: ${k.regel}</p>`).join(''),
   },
   {
     q: 'Warum stehen hier nur Größenordnungen?',

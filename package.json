@@ -13,6 +13,7 @@
     "check:all": "npm run build && npm run check && npm run check:text",
     "pdf:checkliste": "npm run build && node scripts/checkliste-pdf.mjs",
     "pdf:ernaehrungsplan": "npm run build && node scripts/ernaehrungsplan-pdf.mjs",
+    "test:plan": "node scripts/plan-interaktiv-test.mjs",
     "grafiken": "node scripts/grafiken.mjs",
     "astro": "astro"
   },

@@ -3,11 +3,14 @@
  * Persönliche Planseite und Druckvorlage: /ernaehrungsplan/plan/<id>/ für die 56 Grundpläne (ek01 bis ek56).
  * MailerLite verlinkt hierher (Feld `plan`, Vorlieben als ?v=lachs,quark aus dem Feld `vorlieben`).
  * Ohne ?v= zeigt die Seite den Grundplan; mit ?v= rechnet das Skript den Plan mit Vorlieben im Browser neu
- * (gleicher Generator wie im Build). Varianten wechseln und „Als PDF speichern“ (Druckansicht) gehen auf der Seite.
+ * (gleicher Generator wie im Build). Mit JavaScript wird der Wochenteil interaktiv (src/lib/plan-interaktiv/: Tage
+ * tauschen und verschieben, Appetit-Regler, Einkaufsliste mit Häkchen, Rezepte am Gericht, Druck des aktuellen Plans);
+ * Änderungen stehen im Parameter ?s= und nur im Browser. Ohne JavaScript bleibt der statische Plan aus dem Build.
  * Aus den Seiten ohne ?v= erzeugt `npm run pdf:ernaehrungsplan` die PDFs unter public/downloads/ernaehrungsplan/:
  * <id>.pdf (A4) und <id>-handy.pdf (?druck=handy setzt die Klasse ed-handy). Die Druckfassung ist eigenes Markup
  * (src/lib/ernaehrungsplan-druck.ts, Stile src/styles/ernaehrungsplan-druck.css), auf dem Bildschirm unsichtbar; im Druck
- * ersetzt sie die Webansicht. „Als PDF speichern“ druckt sie im Browser, mit eingerechneten Vorlieben.
+ * ersetzt sie die Webansicht. Die Knöpfe „PDF fürs Handy“ und „PDF zum Drucken (A4)“ drucken sie mit JavaScript aus dem
+ * aktuellen Plan; ohne JavaScript (und als Rückfall-Links) öffnen sie die fertigen PDFs des Grundplans.
  * Alte IDs ep01 bis ep18 (sieben Tage, bis 05.10.2026) leiten auf den passenden neuen Plan weiter.
  * noindex und nicht in der Sitemap. Keine Affiliate-Links, kein Produkt-Teaser, keine Präparatenamen.
  */
@@ -28,10 +31,11 @@ import {
   type Plan,
   type Gewicht,
 } from '../../../data/ernaehrungsplan';
-import { planHtml, blickHtml } from '../../../lib/ernaehrungsplan-ansicht';
+import { wochenHtml, rezepteHtml, grundlageHtml, blickHtml } from '../../../lib/ernaehrungsplan-ansicht';
 import { druckHtml } from '../../../lib/ernaehrungsplan-druck';
 import { getSources } from '../../../data/sources';
 import '../../../styles/ernaehrungsplan-druck.css';
+import '../../../styles/plan-interaktiv.css';
 
 export function getStaticPaths() {
   const fehler = pruefePlaene();
@@ -59,6 +63,8 @@ const pdfHandy = `/downloads/ernaehrungsplan/${plan.id}-handy.pdf`;
 const quellen = getSources(fnIds);
 const lf = plan.laktosefrei && plan.ernaehrung !== 'vegan';
 const erlaubt = new Set(erlaubteVorlieben(plan.ernaehrung, plan.laktosefrei));
+/** Vorlieben des Plans in fester Reihenfolge mit Anzeige-Text (für das Profil vor dem ersten Zeichnen, ohne Verschiebung) */
+const vLabels = VORLIEBEN.filter((v) => erlaubt.has(v.key)).map((v) => [v.key, vorliebeLabel(v.key, plan.laktosefrei)]);
 const gewichte = Object.keys(gewichtLabel) as Gewicht[];
 const muster =
   plan.ernaehrung === 'mischkost'
@@ -80,7 +86,7 @@ const muster =
   </Base>
 ) : (
   <Base title={`Dein Ernährungsplan: ${ernaehrung.label}, ${gewichtLabel[plan.gewicht]}`} description="14 Tage mit Mengen, Protein je Mahlzeit, Einkaufslisten, Austauschtabelle und Rezeptkarten für die Zeit nach der Abnehmspritze." path={path} noindex>
-    <script is:inline>if (/[?&]v=[^&]/.test(location.search)) document.documentElement.classList.add('ep-v');if (/[?&]druck=handy\b/.test(location.search)) document.documentElement.classList.add('ed-handy');</script>
+    <script is:inline>if (/[?&][vs]=[^&]/.test(location.search)) document.documentElement.classList.add('ep-v');if (/[?&]druck=handy\b/.test(location.search)) document.documentElement.classList.add('ed-handy');</script>
     <article class="ep-plan" data-ep-plan data-id={plan.id} data-fn-bls={fn('bls')}>
       <div class="ep-wrap">
         <p class="ep-marke">Nach der Spritze · Ernährungsplan · Stand {stand}</p>
@@ -94,27 +100,21 @@ const muster =
           <div><dt>Vorlieben</dt><dd data-ep-v-text>keine angegeben</dd></div>
           <div class="ep-profil-ziel"><dt>Protein pro Tag</dt><dd><span class="ep-zahl">{plan.ziel}</span> g</dd></div>
         </dl>
+        <script is:inline define:vars={{ vLabels }}>var m = /[?&]v=([^&#]*)/.exec(location.search); var w = m ? decodeURIComponent(m[1]).toLowerCase().split(/[\s,;+]+/) : []; var t = vLabels.filter(function (x) { return w.indexOf(x[0]) >= 0; }).map(function (x) { return x[1]; }); if (t.length) document.querySelector('[data-ep-v-text]').textContent = t.join(', ');</script>
 
         <div class="ep-werkzeug no-print">
           <div class="ep-aktionen">
-            <a class="btn-primary plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=handy" href={pdfHandy}>PDF fürs Handy</a>
-            <a class="btn-secondary plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=a4" href={pdf}>PDF zum Drucken (A4)</a>
-            <button type="button" class="ep-drucken plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=browser" data-ep-drucken>Als PDF speichern</button>
+            <a class="btn-primary plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=handy" href={pdfHandy} data-ep-pdf="handy">PDF fürs Handy</a>
+            <a class="btn-secondary plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=a4" href={pdf} data-ep-pdf="a4">PDF zum Drucken (A4)</a>
           </div>
-          <p class="ep-klein ep-pdf-hinweis" data-ep-pdf-hinweis hidden>Die beiden PDFs enthalten den Grundplan ohne deine Vorlieben. „Als PDF speichern“ druckt den Plan mit deinen Vorlieben.</p>
+          <p class="ep-klein ep-pdf-rueckfall">Die Knöpfe drucken deinen Plan, wie er gerade ist (im Druckfenster „Als PDF speichern“ wählen). Fertige PDFs mit dem Grundplan ohne deine Änderungen: <a class="plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=handy" href={pdfHandy}>fürs Handy</a> · <a class="plausible-event-name=Ernaehrungsplan+PDF plausible-event-format=a4" href={pdf}>A4</a></p>
           <details class="ep-anpassen" data-ep-anpassen>
-            <summary><span>Plan anpassen</span><span class="ep-klein">Variante wechseln, Vorlieben wählen</span></summary>
+            <summary><span>Plan anpassen</span><span class="ep-klein">Ernährung, Gewicht, Laktose, Vorlieben</span></summary>
             <form class="ep-optionen" data-ep-varianten>
               <fieldset>
                 <legend><span>Ernährung</span></legend>
                 <div class="ep-wahl">
                   {ernaehrungOptionen.map((o) => (<label><input type="radio" name="e" value={o.value} checked={o.value === plan.ernaehrung} /><span>{o.label}</span></label>))}
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend><span>Appetit</span></legend>
-                <div class="ep-wahl">
-                  {appetitOptionen.map((o) => (<label><input type="radio" name="a" value={o.value} checked={o.value === plan.appetit} /><span>{o.label}</span></label>))}
                 </div>
               </fieldset>
               <fieldset>
@@ -138,11 +138,17 @@ const muster =
                 ))}
               </div>
             </fieldset>
-            <p class="ep-klein ep-anpassen-hinweis">Ernährung, Appetit, Gewicht und Laktose öffnen den passenden Plan. Vorlieben tauschen Gerichte direkt auf dieser Seite. Die Adresse merkt sich beides; speichere sie als Lesezeichen.</p>
+            <p class="ep-klein ep-anpassen-hinweis">Ernährung, Gewicht und Laktose öffnen den passenden Plan; deine Änderungen kommen mit, soweit sie passen. Den Appetit stellst du unten bei „Tag für Tag“ um. Vorlieben tauschen Gerichte direkt auf dieser Seite. Die Adresse merkt sich alles; speichere sie als Lesezeichen.</p>
           </details>
         </div>
 
         <div class="ep-dyn" data-ep-dyn-blick set:html={blickHtml(plan)} />
+
+        <div class="ep-tagfuertag" id="tag-fuer-tag">
+          <div class="ep-dyn" data-ep-dyn set:html={wochenHtml(plan)} />
+          <div class="pi-mount" data-pi hidden></div>
+        </div>
+        <div data-ep-rezepte set:html={rezepteHtml(plan)} />
 
         <div class="ep-hinweise">
           <h2 class="ep-h2">So funktioniert der Plan</h2>
@@ -162,7 +168,7 @@ const muster =
           </div>
         </div>
 
-        <div class="ep-dyn" data-ep-dyn set:html={planHtml(plan, { fnBls: fn('bls') })} />
+        <div data-ep-grundlage set:html={grundlageHtml(plan, { fnBls: fn('bls') })} />
 
         <div class="ep-tausch" id="austauschtabelle">
           <h2 class="ep-h2">Austauschtabelle</h2>
@@ -220,81 +226,10 @@ const muster =
 )}
 
 <script>
-  import { erstellePlan, kombination, leseVorlieben, planId, vorliebeLabel, type Vorliebe } from '../../../data/ernaehrungsplan';
-  import { planHtml, blickHtml } from '../../../lib/ernaehrungsplan-ansicht';
-  import { druckHtml } from '../../../lib/ernaehrungsplan-druck';
+  import { starte } from '../../../lib/plan-interaktiv/seite.ts';
 
   const root = document.querySelector<HTMLElement>('[data-ep-plan]');
-  const k = root ? kombination(root.dataset.id ?? '') : null;
-  if (root && k) {
-    const dyn = root.querySelector<HTMLElement>('[data-ep-dyn]')!;
-    const dynBlick = root.querySelector<HTMLElement>('[data-ep-dyn-blick]')!;
-    const fnBls = Number(root.dataset.fnBls) || 1;
-    const vText = root.querySelector<HTMLElement>('[data-ep-v-text]');
-    const pdfHinweis = root.querySelector<HTMLElement>('[data-ep-pdf-hinweis]');
-    const boxen = [...root.querySelectorAll<HTMLInputElement>('[data-ep-vorlieben] input')];
-    const varianten = root.querySelector<HTMLFormElement>('[data-ep-varianten]');
-    const druck = root.querySelector<HTMLElement>('[data-ep-druck]');
-    const druckDyn = root.querySelector<HTMLElement>('[data-ep-druck-dyn]');
-    let v = leseVorlieben(new URLSearchParams(location.search).get('v') ?? '', k.ernaehrung, k.laktosefrei) as Vorliebe[];
-
-    // 14-Tage-Balken wachsen, sobald sie sichtbar sind
-    const io = 'IntersectionObserver' in window
-      ? new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && (e.target.classList.add('in'), io?.unobserve(e.target))), { threshold: 0.3 })
-      : null;
-    const beobachte = () => root.querySelectorAll('[data-ep-blick]').forEach((el) => (io ? io.observe(el) : el.classList.add('in')));
-
-    function zeigeVorlieben() {
-      if (vText) vText.textContent = v.length ? v.map((x) => vorliebeLabel(x, k!.laktosefrei)).join(', ') : 'keine angegeben';
-      boxen.forEach((b) => (b.checked = v.includes(b.value as Vorliebe)));
-      if (pdfHinweis) pdfHinweis.hidden = !v.length;
-    }
-
-    function render() {
-      const plan = erstellePlan({ ...k!, vorlieben: v });
-      dynBlick.innerHTML = blickHtml(plan);
-      dyn.innerHTML = planHtml(plan, { fnBls });
-      if (druckDyn) druckDyn.innerHTML = druckHtml(plan, { stand: druck?.dataset.stand ?? '' });
-      dyn.classList.add('ep-bereit');
-      dynBlick.classList.add('ep-bereit');
-      zeigeVorlieben();
-      beobachte();
-    }
-
-    if (v.length) render();
-    else {
-      zeigeVorlieben();
-      beobachte();
-    }
-    dyn.classList.add('ep-bereit');
-    dynBlick.classList.add('ep-bereit');
-
-    boxen.forEach((b) =>
-      b.addEventListener('change', () => {
-        v = leseVorlieben(boxen.filter((x) => x.checked).map((x) => x.value), k.ernaehrung, k.laktosefrei) as Vorliebe[];
-        const url = new URL(location.href);
-        if (v.length) url.searchParams.set('v', v.join(','));
-        else url.searchParams.delete('v');
-        history.replaceState(null, '', url.pathname + url.search.replace(/%2C/g, ','));
-        render();
-      }),
-    );
-
-    varianten?.addEventListener('change', () => {
-      const f = new FormData(varianten);
-      const e = String(f.get('e') ?? k.ernaehrung);
-      const lf = e === 'vegan' || f.get('lf') === 'ja';
-      const id = planId(e, String(f.get('a') ?? k.appetit), String(f.get('g') ?? k.gewicht), lf);
-      if (!id || id === k.id) return;
-      const neu = leseVorlieben(v, e, lf);
-      location.href = `/ernaehrungsplan/plan/${id}/${neu.length ? `?v=${neu.join(',')}` : ''}`;
-    });
-
-    root.querySelector('[data-ep-drucken]')?.addEventListener('click', () => {
-      root.querySelectorAll('[data-ep-blick]').forEach((el) => el.classList.add('in'));
-      window.print();
-    });
-  }
+  if (root) starte(root);
 </script>
 
 <style is:global>
@@ -390,7 +325,6 @@ const muster =
   .ep-werkzeug {
     margin-top: 1.75rem;
   }
-  html:not(.js) .ep-werkzeug [data-ep-drucken],
   html:not(.js) .ep-anpassen {
     display: none;
   }
@@ -400,23 +334,18 @@ const muster =
     align-items: center;
     gap: 0.75rem 1rem;
   }
-  .ep-drucken {
-    min-height: 3rem;
-    padding: 0.5rem 0.25rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--color-ink);
-    text-decoration: underline;
-    text-decoration-color: var(--color-line);
-    text-underline-offset: 0.3em;
-    cursor: pointer;
-  }
-  .ep-drucken:hover {
-    text-decoration-color: var(--color-ink);
-  }
-  .ep-pdf-hinweis {
+  .ep-pdf-rueckfall {
     margin-top: 0.75rem;
     max-width: 40em;
+  }
+  html:not(.js) .ep-pdf-rueckfall {
+    display: none;
+  }
+  .ep-pdf-rueckfall a {
+    color: var(--color-ink-2);
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-underline-offset: 0.25em;
   }
   .ep-anpassen {
     margin-top: 1.5rem;
@@ -552,13 +481,21 @@ const muster =
     margin-top: 1.25rem;
   }
 
-  /* Veränderlicher Teil; mit ?v= erst zeigen, wenn neu gerechnet (spätestens nach 1,5 s) */
+  /* Veränderlicher Teil; mit ?v= oder ?s= erst zeigen, wenn neu gerechnet (spätestens nach 1,5 s). Die statischen Wochen
+     ersetzt mit JavaScript die interaktive Ansicht; bis dahin unsichtbar, ohne Skript nach 1,5 s sichtbar. */
   .ep-dyn {
     transition: opacity 0.4s var(--ease);
   }
-  html.ep-v .ep-dyn:not(.ep-bereit) {
+  html.ep-v .ep-dyn:not(.ep-bereit),
+  html.js .ep-dyn[data-ep-dyn]:not(.ep-bereit) {
     opacity: 0;
     animation: ep-zeigen 0s 1.5s forwards;
+  }
+  .ep-tagfuertag {
+    margin-top: 4rem;
+  }
+  .ep-tagfuertag > .ep-dyn > .ep-woche:first-child {
+    margin-top: 0;
   }
   @keyframes ep-zeigen {
     to {

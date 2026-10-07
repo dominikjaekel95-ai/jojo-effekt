@@ -93,17 +93,32 @@ ${r ? `<div><p class="ep-karte-h">So geht’s</p><ol>${schritte.map((s) => `<li>
 </article>`;
 }
 
-/** Der veränderliche Teil der Planseite ab Woche 1 als HTML (der Überblick steht weiter oben, siehe blickHtml). */
-export function planHtml(plan: Plan, o: AnsichtOptionen): string {
-  return `${plan.wochen.map((w) => woche(plan, w)).join('\n')}
-<div class="ep-rezepte" id="rezepte">
+/** Die zwei Wochen mit Tagen und Einkaufslisten (statischer Plan; mit JavaScript ersetzt ihn die interaktive Ansicht). */
+export function wochenHtml(plan: Plan): string {
+  return plan.wochen.map((w) => woche(plan, w)).join('\n');
+}
+
+/** Rezeptkarten der häufigsten Gerichte (statisch; mit JavaScript hängen die Rezepte direkt an den Gerichten). */
+export function rezepteHtml(plan: Plan): string {
+  return `<div class="ep-rezepte" id="rezepte">
 <h2 class="ep-h2">Rezeptkarten</h2>
 <p class="ep-klein ep-rezepte-intro">Die ${plan.karten.length} Gerichte, die in deinem Plan am häufigsten vorkommen. Die Mengen gelten für den genannten Tag; an anderen Tagen weichen sie etwas ab.</p>
 <div class="ep-karten">${plan.karten.map((k) => karte(k, plan.laktosefrei)).join('')}</div>
-</div>
-<div class="ep-grundlage" id="rechengrundlage">
+</div>`;
+}
+
+/** Rechengrundlage: Protein je Zutat, die im Plan vorkommt. */
+export function grundlageHtml(plan: Plan, o: AnsichtOptionen): string {
+  return `<div class="ep-grundlage" id="rechengrundlage">
 <h2 class="ep-h2">Rechengrundlage</h2>
 <p class="ep-klein">Protein je 100 g oder 100 ml, bei Eiern und Wraps je Stück. Gerundete Durchschnittswerte aus dem Bundeslebensmittelschlüssel${fnRef(o.fnBls, 'bls')}; Proteinpulver und Räuchertofu nach typischen Herstellerangaben (mit * markiert). Gemüse und Obst unter „dazu“ zählen nicht mit.</p>
 <ul class="ep-grundlage-liste">${plan.grundlage.map((g) => `<li><span>${esc(g.name)}${g.quelle === 'hersteller' ? ' *' : ''}</span><span>${esc(g.wert)}</span></li>`).join('')}</ul>
 </div>`;
+}
+
+/** Der veränderliche Teil der Planseite ab Woche 1 als HTML (der Überblick steht weiter oben, siehe blickHtml). */
+export function planHtml(plan: Plan, o: AnsichtOptionen): string {
+  return `${wochenHtml(plan)}
+${rezepteHtml(plan)}
+${grundlageHtml(plan, o)}`;
 }

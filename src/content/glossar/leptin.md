@@ -14,7 +14,7 @@ Leptin wird von Fettzellen gebildet, und zwar umso mehr, je mehr Fett gespeicher
 
 ## Was nach dem Abnehmen passiert
 
-Der Leptinspiegel sinkt beim Abnehmen schneller, als das Fett schwindet, und er bleibt niedrig. In einer australischen Studie war Leptin ein Jahr nach einer Diät weiter erniedrigt, zusammen mit anderen sättigenden Hormonen, während das Hungerhormon [Ghrelin](/glossar/ghrelin/) erhöht war.<sup><a href="#fn-sumithran2011">1</a></sup> Rosenbaum und Leibel sehen im niedrigen Leptin einen zentralen Auslöser der [adaptiven Thermogenese](/glossar/adaptive-thermogenese/); in Experimenten ließ sich ein Teil der Anpassung durch Leptingabe wieder aufheben, was zeigt, wie stark das Signal wiegt.<sup><a href="#fn-rosenbaum2010">2</a></sup> Als Medikament zum Abnehmen taugt Leptin trotzdem nicht: Bei Adipositas ist der Spiegel bereits hoch, das Gehirn reagiert nur schwach darauf.
+Der Leptinspiegel sinkt beim Abnehmen schneller, als das Fett schwindet, und er bleibt niedrig. In einer australischen Studie war Leptin ein Jahr nach einer Diät weiter erniedrigt, zusammen mit anderen sättigenden Hormonen, während das Hungerhormon [Ghrelin](/glossar/ghrelin/) erhöht war.<sup><a href="#fn-sumithran2011">1</a></sup> Rosenbaum und Leibel sehen im niedrigen Leptin einen zentralen Auslöser der [adaptiven Thermogenese](/glossar/adaptive-thermogenese/); in Experimenten ließ sich ein Teil der Anpassung durch Leptingabe wieder aufheben, was zeigt, wie schwer das Signal wiegt.<sup><a href="#fn-rosenbaum2010">2</a></sup> Als Medikament zum Abnehmen taugt Leptin trotzdem nicht: Bei Adipositas ist der Spiegel bereits hoch, das Gehirn reagiert nur schwach darauf.
 
 ## Was Schlaf damit zu tun hat
 

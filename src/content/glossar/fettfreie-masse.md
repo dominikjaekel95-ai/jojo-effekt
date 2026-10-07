@@ -18,11 +18,11 @@ In einer Substudie der STEP-1-Studie wurde die Körperzusammensetzung von 140 Te
 
 ## Fettfreie Masse ist nicht gleich Muskel
 
-Ein Teil des Verlusts ist Wasser: Mit dem Glykogen in Muskeln und Leber verschwindet gebundenes Wasser, das kommt beim Essen zurück. Ein Teil sind Organe, die mit dem Körper kleiner werden. Der Rest ist Muskulatur, und der ist der Teil, der Kraft, Alltag und Ruheenergieverbrauch bestimmt. Wie viel genau Muskel war, zeigen die verfügbaren Daten nicht.
+Ein Teil des Verlusts ist Wasser: Mit dem Glykogen in Muskeln und Leber verschwindet gebundenes Wasser, das beim Essen zurückkommt. Ein Teil sind Organe, die mit dem Körper kleiner werden. Der Rest ist Muskulatur, und das ist der Teil, der Kraft, Alltag und Ruheenergieverbrauch bestimmt. Wie viel genau Muskel war, zeigen die verfügbaren Daten nicht.
 
 ## Was den Verlust begrenzt
 
-Eine Meta-Analyse randomisierter Studien zeigt, dass Krafttraining während einer Kalorienreduktion den Verlust an fettfreier Masse weitgehend verhindert.<sup><a href="#fn-sardeli2018">2</a></sup> Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Beides zusammen ist der Kern dessen, was unter [Muskelabbau unter der Abnehmspritze](/wissen/muskelabbau-abnehmspritze/) steht.
+Eine Meta-Analyse randomisierter Studien zeigt, dass Krafttraining während einer Kalorienreduktion den Verlust an fettfreier Masse weitgehend verhindert.<sup><a href="#fn-sardeli2018">2</a></sup> Übersichtsarbeiten empfehlen beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Beides zusammen ist der Kern dessen, was unter [Muskelabbau unter der Abnehmspritze](/wissen/muskelabbau-abnehmspritze/) steht.
 
 ## Warum das in der Haltephase zählt
 

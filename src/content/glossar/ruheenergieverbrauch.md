@@ -2,7 +2,7 @@
 term: "Ruheenergieverbrauch"
 metaTitle: "Ruheenergieverbrauch: der Grundumsatz und wovon er abhängt"
 description: "Der Ruheenergieverbrauch ist die Energie, die der Körper in Ruhe verbraucht. Wovon er abhängt, wie er geschätzt wird und warum er nach dem Abnehmen tiefer liegt."
-short: "Die Energie, die der Körper in völliger Ruhe für Organe, Atmung und Zellarbeit verbraucht, meist der größte Anteil des Tagesverbrauchs. Er hängt vor allem von der fettfreien Masse ab und sinkt nach Gewichtsverlust stärker, als der Körper kleiner wird."
+short: "Die Energie, die der Körper in völliger Ruhe für Organe, Atmung und Zellarbeit verbraucht, meist der größte Anteil des Tagesverbrauchs. Sie hängt vor allem von der fettfreien Masse ab und sinkt nach Gewichtsverlust stärker, als der kleinere Körper erklärt."
 synonyms: ["Grundumsatz", "Ruheumsatz", "RMR", "Resting Metabolic Rate", "BMR"]
 sources: ["mifflin1990", "rosenbaum2010", "fothergill2016"]
 related: ["adaptive-thermogenese", "fettfreie-masse", "neat", "metabolische-adaptation"]

@@ -14,7 +14,7 @@ Der BMI kennt nur Gewicht und Größe. Der Taillenumfang kennt den Ort des Fetts
 
 ## Die Grenzwerte
 
-Die WHO-Expertenkonsultation setzt zwei Stufen:<sup><a href="#fn-who2008waist">1</a></sup>
+Die WHO-Expertenkonsultation unterscheidet zwei Stufen:<sup><a href="#fn-who2008waist">1</a></sup>
 
 | | erhöhtes Risiko | deutlich erhöhtes Risiko |
 |---|---|---|

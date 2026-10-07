@@ -2,7 +2,7 @@
 term: "Anabole Resistenz"
 metaTitle: "Anabole Resistenz: warum ältere Muskeln mehr Protein brauchen"
 description: "Anabole Resistenz heißt: Der Muskel reagiert im Alter und bei Inaktivität schwächer auf Protein und Training. Was das für die Proteinmenge pro Mahlzeit bedeutet."
-short: "Die abgeschwächte Reaktion der Muskelproteinsynthese auf Protein und Training, typisch im höheren Alter, bei Inaktivität und Bettruhe. Deshalb brauchen Ältere pro Mahlzeit etwa 0,40 g Protein pro kg Körpergewicht statt 0,24 g."
+short: "Die abgeschwächte Reaktion der Muskelproteinsynthese auf Protein und Training. Typisch ist sie im höheren Alter, bei Inaktivität und Bettruhe. Deshalb brauchen Ältere pro Mahlzeit etwa 0,40 g Protein pro kg Körpergewicht statt 0,24 g."
 synonyms: ["anabolic resistance", "anabole Resistenz des Muskels"]
 sources: ["burd2013", "moore2015", "sardeli2018"]
 related: ["muskelproteinsynthese", "leucin-schwelle", "sarkopenie", "proteinverteilung"]

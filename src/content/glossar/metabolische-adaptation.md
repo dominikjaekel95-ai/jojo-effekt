@@ -2,7 +2,7 @@
 term: "Metabolische Adaptation"
 metaTitle: "Metabolische Adaptation: was nach dem Gewichtsverlust bleibt"
 description: "Metabolische Adaptation ist die Summe aller Anpassungen an ein niedrigeres Gewicht: weniger Verbrauch, mehr Hunger, weniger Bewegung. Was Studien dazu zeigen."
-short: "Oberbegriff für alle Anpassungen des Körpers an ein niedrigeres Gewicht: weniger Energieverbrauch, mehr Hunger, weniger Sättigung, weniger spontane Bewegung. Sie hält nach Diäten mindestens ein Jahr an."
+short: "Oberbegriff für alle Anpassungen des Körpers an ein niedrigeres Gewicht: weniger Energieverbrauch, mehr Hunger, weniger Sättigung, weniger spontane Bewegung. Sie halten nach Diäten mindestens ein Jahr an."
 synonyms: ["metabolische Anpassung", "Metabolic Adaptation", "Stoffwechselanpassung"]
 sources: ["sumithran2011", "fothergill2016", "rosenbaum2010", "levine2002"]
 related: ["adaptive-thermogenese", "ghrelin", "neat", "set-point-theorie"]
@@ -10,7 +10,7 @@ articles: ["jojo-effekt-abnehmspritze", "heisshunger-nach-abnehmspritze"]
 pubDate: 2026-09-30
 ---
 
-„Mein Stoffwechsel ist kaputt“ ist die Alltagsversion. Die Forschung nennt es metabolische Adaptation und meint damit kein Defekt, sondern eine Reihe normaler Reaktionen auf einen Gewichtsverlust.
+„Mein Stoffwechsel ist kaputt“ ist die Alltagsversion. Die Forschung nennt es metabolische Adaptation und meint damit keinen Defekt, sondern eine Reihe normaler Reaktionen auf einen Gewichtsverlust.
 
 ## Die vier Bausteine
 

@@ -25,7 +25,7 @@ faq:
     a: "<p>Nein. Vitamin B12 hat keine zugelassene Angabe zu Gewicht oder Fettabbau; die Angaben betreffen Energiestoffwechsel, Müdigkeit, Nerven und Blutbildung. Wer einen Mangel ausgleicht, fühlt sich weniger müde, nimmt davon aber nicht ab. „B12-Spritzen zum Abnehmen“ sind Marketing.</p>"
 ---
 
-Vitamin B12 ist das Vitamin, bei dem zwei Dinge zusammentreffen, die unter der Abnehmspritze häufig sind: kleine Portionen mit wenig Fleisch, Fisch und Milch, und bei Typ-2-Diabetes die gleichzeitige Einnahme von Metformin. Beides senkt die Versorgung, und ein Mangel entwickelt sich so langsam, dass er lange niemandem auffällt. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
+Vitamin B12 ist das Vitamin, bei dem zwei Dinge zusammentreffen, die unter der Abnehmspritze häufig sind: kleine Portionen mit wenig Fleisch, Fisch und Milch, und bei Typ-2-Diabetes die gleichzeitige Einnahme von Metformin. Beides verschlechtert die Versorgung, und ein Mangel entwickelt sich so langsam, dass er lange niemandem auffällt. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
 
 > **Kurz gesagt:** Die DGE setzt 4 µg Vitamin B12 am Tag an; es kommt fast nur aus tierischen Lebensmitteln.<sup><a href="#fn-dgeReferenzwerte">1</a></sup> Unter Metformin hatten in der DPP-Studie nach fünf Jahren 4,3 % einen Mangel gegenüber 2,3 % unter Placebo.<sup><a href="#fn-aroda2016">2</a></sup> Die amerikanische Diabetes-Gesellschaft empfiehlt bei Metformin regelmäßige Kontrollen des B12-Spiegels.<sup><a href="#fn-adaSoc2024">3</a></sup>
 
@@ -61,7 +61,7 @@ Für Vitamin B12 sind in der EU unter anderem diese Angaben zugelassen:<sup><a h
 
 ## Woran du einen Mangel bemerkst, und warum spät
 
-Die Leber speichert B12 für Jahre. Deshalb fällt ein Mangel oft erst auf, wenn die Speicher leer sind: Müdigkeit, Konzentrationsprobleme, Blässe, Kribbeln oder Taubheit in Händen und Füßen, eine brennende Zunge. Unter der Spritze werden Müdigkeit und Konzentration gern auf das wenige Essen geschoben, und oft ist das auch richtig. Wer aber seit Monaten wenig tierische Lebensmittel isst oder Metformin nimmt, sollte die einfache Frage stellen lassen: Wie steht der B12-Wert?
+Die Leber speichert B12 für Jahre. Deshalb fällt ein Mangel oft erst auf, wenn die Speicher leer sind: Müdigkeit, Konzentrationsprobleme, Blässe, Kribbeln oder Taubheit in Händen und Füßen, eine brennende Zunge. Unter der Spritze werden Müdigkeit und Konzentrationsprobleme gern auf das wenige Essen geschoben, und oft ist das auch richtig. Wer aber seit Monaten wenig tierische Lebensmittel isst oder Metformin nimmt, sollte die einfache Frage stellen: Wie steht der B12-Wert?
 
 ## Wie viel, in welcher Form
 
@@ -77,7 +77,7 @@ Das BfR schlägt für Nahrungsergänzungsmittel eine Höchstmenge von 25 µg pro
 
 ## Nach dem Absetzen
 
-Mit dem Appetit kommen Fleisch, Fisch, Eier und Milchprodukte zurück, und damit meist die Zufuhr. Wer weiter Metformin nimmt, bleibt in der Kontrolle. Wer vegan lebt, bleibt beim Präparat. Für alle anderen gilt: Ein einmal aufgefüllter Speicher reicht lange, und die Haltephase ist der richtige Zeitpunkt, die Lebensmittelauswahl so zu setzen, dass B12 nebenbei kommt. Den Verlauf nach der letzten Dosis, Woche für Woche, beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Mit dem Appetit kommen Fleisch, Fisch, Eier und Milchprodukte zurück, und damit meist die Zufuhr. Wer weiter Metformin nimmt, bleibt bei den Kontrollen. Wer vegan lebt, bleibt beim Präparat. Für alle anderen gilt: Ein einmal aufgefüllter Speicher reicht lange, und die Haltephase ist der richtige Zeitpunkt, die Lebensmittelauswahl so zu treffen, dass B12 nebenbei kommt. Den Verlauf nach der letzten Dosis, Woche für Woche, beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 ## Wann du zur Ärztin oder zum Arzt gehst
 

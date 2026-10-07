@@ -19,10 +19,10 @@ faq:
   - q: "Soll ich langsamer abnehmen?"
     a: "<p>Das Tempo legt die Behandlung fest, und das besprichst du mit deiner Ärztin, nicht mit einem Artikel. Was du selbst steuerst: genug Protein, Krafttraining an zwei Tagen pro Woche und eine Ernährung, die die Haut versorgt. Das verhindert, dass zum fehlenden Fett auch noch schwindende Muskeln kommen.</p>"
   - q: "Was verändert sich im Gesicht, wenn man abnimmt?"
-    a: "<p>Die Fettpolster in Wangen, Schläfen und um die Augen werden kleiner; dadurch treten Wangenknochen, Nasolabialfalten und Augenringe stärker hervor, und die Haut hat weniger Volumen unter sich. Bei schnellem Verlust kommt die Haut mit dem Zurückziehen nicht nach, das wirkt eingefallen. Das ist eine Folge des Gewichtsverlusts, keine Wirkung des Medikaments auf die Haut, und tritt bei jeder schnellen Abnahme auf, auch nach Operationen oder Diäten.</p>"
+    a: "<p>Die Fettpolster in Wangen, Schläfen und um die Augen werden kleiner; dadurch treten Wangenknochen, Nasolabialfalten und Augenringe stärker hervor, und die Haut hat weniger Volumen unter sich. Bei schnellem Verlust kommt die Haut mit dem Zurückziehen nicht nach, und das Gesicht wirkt eingefallen. Das ist eine Folge des Gewichtsverlusts, keine Wirkung des Medikaments auf die Haut, und tritt bei jeder schnellen Abnahme auf, auch nach Operationen oder Diäten.</p>"
 ---
 
-„Ozempic Face“ ist ein Begriff aus den US-Medien, kein medizinisches Krankheitsbild. Gemeint sind eingefallene Wangen, tiefere Falten und lockerere Haut im Gesicht nach schnellem Gewichtsverlust unter GLP-1-Medikamenten. Das Phänomen ist real, die Erklärung ist unspektakulär: Wer viel Fett verliert, verliert es auch im Gesicht, und die Haut kommt beim Tempo nicht mit. Dieser Artikel erklärt, was dabei passiert, welche drei Faktoren es sichtbar machen und was sich davon beeinflussen lässt. Er sagt nur, was belegt ist; für die Frage, wie schnell du abnimmst, ist deine Ärztin zuständig.
+„Ozempic Face“ ist ein Begriff aus den US-Medien, kein medizinisches Krankheitsbild. Gemeint sind eingefallene Wangen, tiefere Falten und lockerere Haut im Gesicht nach schnellem Gewichtsverlust unter GLP-1-Medikamenten. Das Phänomen ist real, die Erklärung ist unspektakulär: Wer viel Fett verliert, verliert es auch im Gesicht, und die Haut kommt bei diesem Tempo nicht mit. Dieser Artikel erklärt, was dabei passiert, welche drei Faktoren es sichtbar machen und was sich davon beeinflussen lässt. Er sagt nur, was belegt ist; für die Frage, wie schnell du abnimmst, ist deine Ärztin zuständig.
 
 > **Kurz gesagt:** In der Zulassungsstudie der Spritze verloren Teilnehmende im Mittel 14,9 % ihres Gewichts in 68 Wochen;<sup><a href="#fn-wilding2021step1">1</a></sup> ein Teil davon fehlt im Gesicht. Beeinflussen lassen sich der Muskelanteil des Verlusts (Protein 1,2 bis 1,6 g pro kg,<sup><a href="#fn-leidy2015">3</a></sup> Krafttraining<sup><a href="#fn-who2020">4</a></sup>) und die Versorgung der Haut (Vitamin C trägt zu einer normalen Kollagenbildung für eine normale Funktion der Haut bei<sup><a href="#fn-euClaims">5</a></sup>). Kein Supplement füllt die Wangen wieder.
 
@@ -36,13 +36,13 @@ Das passiert bei jeder schnellen Gewichtsabnahme, nach Magenoperationen genauso 
 
 1. **Das Tempo.** Je schneller das Fett verschwindet, desto weniger Zeit hat die Haut, sich anzupassen. Das Tempo legt die Behandlung fest; es ist eine Frage für den Termin bei der Ärztin, nicht für diesen Artikel.
 2. **Das Alter.** Mit zunehmendem Alter bildet die Haut weniger Kollagen und Elastin und zieht sich langsamer zurück. Dieselben 15 kg sehen mit 30 anders aus als mit 55.
-3. **Das Ausmaß.** Wer 25 % seines Gewichts verliert, verliert mehr Gesichtsfett als jemand mit 10 %. Das ist der Preis eines Erfolgs, nicht ein Fehler.
+3. **Das Ausmaß.** Wer 25 % seines Gewichts verliert, verliert mehr Gesichtsfett als jemand mit 10 %. Das ist der Preis eines Erfolgs, kein Fehler.
 
 ## Was sich beeinflussen lässt
 
 ### Den Muskelanteil des Verlusts klein halten
 
-Beim Abnehmen mit Semaglutid entfielen in einer Substudie rund 40 % des Gewichtsverlusts auf fettfreie Masse, darunter Muskeln.<sup><a href="#fn-wilding2021dxa">2</a></sup> Das macht die Wangen nicht voller, aber es entscheidet, wie der Körper insgesamt aussieht: Fett weg und Muskeln da ist etwas anderes als Fett weg und Muskeln weg. Was den Muskelanteil klein hält, ist belegt: 1,2 bis 1,6 g Protein pro kg Körpergewicht<sup><a href="#fn-leidy2015">3</a></sup> und Krafttraining an mindestens zwei Tagen pro Woche.<sup><a href="#fn-who2020">4</a></sup> Wie das praktisch aussieht, steht unter [Muskelabbau bei der Abnehmspritze](/wissen/muskelabbau-abnehmspritze/) und [Protein nach der Abnehmspritze](/wissen/protein-abnehmspritze/).
+Beim Abnehmen mit Semaglutid entfielen in einer Substudie rund 40 % des Gewichtsverlusts auf fettfreie Masse, darunter Muskeln.<sup><a href="#fn-wilding2021dxa">2</a></sup> Muskeln zu erhalten macht die Wangen nicht voller, aber es entscheidet, wie der Körper insgesamt aussieht: Fett weg und Muskeln da ist etwas anderes als Fett weg und Muskeln weg. Was den Muskelanteil klein hält, ist belegt: 1,2 bis 1,6 g Protein pro kg Körpergewicht<sup><a href="#fn-leidy2015">3</a></sup> und Krafttraining an mindestens zwei Tagen pro Woche.<sup><a href="#fn-who2020">4</a></sup> Wie das praktisch aussieht, steht unter [Muskelabbau bei der Abnehmspritze](/wissen/muskelabbau-abnehmspritze/) und [Protein nach der Abnehmspritze](/wissen/protein-abnehmspritze/).
 
 <div data-interaktiv="zusammensetzung"></div>
 
@@ -67,7 +67,7 @@ Kollagenpulver wird genau für diesen Fall beworben. Die Studienlage ist dünn: 
 
 ### Zeit, Sonne, Nikotin
 
-Die Haut zieht sich nach dem Gewichtsverlust über Monate ein Stück zurück; wie weit, hängt von Alter und Ausmaß ab. Wer das Gewicht hält, gibt ihr diese Zeit. Sonne ohne Schutz und Nikotin beschleunigen den Elastizitätsverlust der Haut; das ist allgemeine Dermatologie und gilt mit und ohne Spritze.
+Die Haut zieht sich nach dem Gewichtsverlust über Monate ein Stück zurück; wie weit, hängt von Alter und Ausmaß ab. Wer das Gewicht hält, gibt ihr diese Zeit. Sonne ohne Schutz und Nikotin lassen die Haut schneller an Elastizität verlieren; das ist allgemeine Dermatologie und gilt mit und ohne Spritze.
 
 ## Was wir nicht bewerten
 

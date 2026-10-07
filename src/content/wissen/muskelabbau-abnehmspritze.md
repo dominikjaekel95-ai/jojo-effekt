@@ -17,24 +17,24 @@ faq:
   - q: "Wie viel Muskelmasse verliert man unter der Abnehmspritze?"
     a: "<p>In einer Substudie der STEP-1-Studie entfielen rund 40 % des verlorenen Gewichts unter Semaglutid auf fettfreie Masse; die Analyse war exploratorisch und umfasste 140 Teilnehmende. Fettfreie Masse ist nicht nur Muskel, sondern auch Wasser, Organgewebe und Bindegewebe, die bei jedem Gewichtsverlust mit abnehmen. Der reine Muskelverlust ist also geringer, aber nicht null.</p>"
   - q: "Was tun gegen Muskelabbau beim Abnehmen?"
-    a: "<p>Zwei Dinge, beide gut belegt: Krafttraining an mindestens zwei Tagen pro Woche, weil es den Verlust an fettfreier Masse während einer Kalorienreduktion weitgehend verhindert, und 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag, verteilt auf die Mahlzeiten. Ausdauersport allein schützt die Muskeln nicht. Welcher Sport bei der Abnehmspritze also: der mit Gewichten oder dem eigenen Körpergewicht, zwei Einheiten à 30 Minuten reichen für den Einstieg.</p>"
+    a: "<p>Zwei Dinge, beide gut belegt: Krafttraining an mindestens zwei Tagen pro Woche, weil es den Verlust an fettfreier Masse während einer Kalorienreduktion weitgehend verhindert, und 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag, verteilt auf die Mahlzeiten. Ausdauersport allein schützt die Muskeln nicht. Welcher Sport bei der Abnehmspritze passt also? Der mit Gewichten oder dem eigenen Körpergewicht. Zwei Einheiten à 30 Minuten reichen für den Einstieg.</p>"
   - q: "Kann ich verlorene Muskeln nach dem Absetzen wieder aufbauen?"
     a: "<p>Ja. Muskeln reagieren in jedem Alter auf Krafttraining und ausreichend Protein. Der Aufbau dauert länger als der Abbau, ist aber gut belegt. Zwei Krafteinheiten pro Woche mit steigender Belastung sind ein realistischer Einstieg.</p>"
   - q: "Hilft Kreatin gegen Muskelabbau bei der Abnehmspritze?"
     a: "<p>Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining und kann bei Erwachsenen über 55 Jahren die Wirkung von Krafttraining auf die Muskelkraft verstärken (zugelassene EU-Angaben, jeweils bei 3 g pro Tag; die zweite setzt Krafttraining an mindestens drei Tagen pro Woche voraus). Ohne Training bringt es wenig. Speziell für Menschen unter oder nach GLP-1-Therapie gibt es noch keine eigenen Studien.</p>"
   - q: "Baut Mounjaro Muskeln ab?"
-    a: "<p>Wie jede schnelle Gewichtsabnahme kostet auch die mit Tirzepatid fettfreie Masse. In der DXA-Substudie von SURMOUNT-1 mit 160 Teilnehmenden sank die fettfreie Masse unter Tirzepatid in 72 Wochen um 10,9 %, die Fettmasse um 33,9 %; rund ein Viertel des verlorenen Gewichts war fettfreie Masse, in der Placebogruppe derselbe Anteil. Das ist eine Eigenschaft des Abnehmens, keine Bewertung des Medikaments. Was dagegen hilft, ist dasselbe wie bei Semaglutid: Krafttraining und Protein.</p>"
+    a: "<p>Wie jede schnelle Gewichtsabnahme kostet auch die mit Tirzepatid fettfreie Masse. In der DXA-Substudie von SURMOUNT-1 mit 160 Teilnehmenden sank die fettfreie Masse unter Tirzepatid in 72 Wochen um 10,9 %, die Fettmasse um 33,9 %; rund ein Viertel des verlorenen Gewichts war fettfreie Masse, in der Placebogruppe war der Anteil gleich. Das gehört zum Abnehmen dazu und ist keine Bewertung des Medikaments. Was dagegen hilft, ist dasselbe wie bei Semaglutid: Krafttraining und Protein.</p>"
   - q: "Was macht Ozempic mit Muskeln?"
     a: "<p>Ozempic enthält denselben Wirkstoff wie Wegovy, Semaglutid, in niedrigerer Dosis. Eigene Daten zur Körperzusammensetzung unter Ozempic gibt es nicht; die STEP-1-Substudie mit der Wegovy-Dosis zeigte, dass rund 40 % des verlorenen Gewichts auf fettfreie Masse entfielen, also Muskeln, Wasser, Organ- und Bindegewebe. Je weniger Gewicht verloren wird, desto kleiner die absolute Zahl; der Schutz ist derselbe: Krafttraining und genug Protein.</p>"
 ---
 
-Die Abnehmspritze nimmt nicht nur Fett. Sie nimmt auch das, was du eigentlich behalten willst: Muskeln. Wie viel, warum, und was nachweislich hilft – ohne Panik, mit Zahlen. Den Gesamtverlauf nach dem Absetzen beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/); den konkreten Trainingsplan mit sechs Übungen gibt es unter [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/).
+Die Abnehmspritze nimmt nicht nur Fett. Sie nimmt auch das, was du eigentlich behalten willst: Muskeln. Wie viel, warum und was nachweislich hilft – ohne Panik, mit Zahlen. Den Gesamtverlauf nach dem Absetzen beschreibt [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/); den konkreten Trainingsplan mit sechs Übungen gibt es unter [Krafttraining nach der Abnehmspritze](/wissen/krafttraining-nach-abnehmspritze/).
 
-> **Kurz gesagt:** Rund 40 % des Gewichtsverlusts unter Semaglutid waren in einer Substudie fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Krafttraining während einer Kalorienreduktion verhindert den Verlust weitgehend.<sup><a href="#fn-sardeli2018">2</a></sup> Dazu 1,2 bis 1,6 g Protein pro kg Körpergewicht<sup><a href="#fn-leidy2015">3</a></sup> und, wer trainiert, [Kreatin](/wissen/kreatin-abnehmspritze/).
+> **Kurz gesagt:** Rund 40 % des Gewichtsverlusts unter Semaglutid waren in einer Substudie fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Krafttraining während einer Kalorienreduktion verhindert den Verlust weitgehend.<sup><a href="#fn-sardeli2018">2</a></sup> Dazu kommen 1,2 bis 1,6 g Protein pro kg Körpergewicht<sup><a href="#fn-leidy2015">3</a></sup> und, wenn du trainierst, [Kreatin](/wissen/kreatin-abnehmspritze/).
 
 ## Wie viel Muskelmasse geht verloren?
 
-Bei jedem Gewichtsverlust verliert der Körper neben Fett auch fettfreie Masse: Muskeln, aber auch Wasser, Bindegewebe und etwas Organmasse. Bei klassischen Diäten liegt der Anteil meist bei einem Viertel. Für Semaglutid liefert die STEP-1-Studie den besten Anhaltspunkt: In einer Substudie mit 140 Teilnehmenden, deren Körperzusammensetzung per DXA gemessen wurde, entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Die Analyse war exploratorisch, also nicht auf diese Frage hin geplant, und die Zahl schwankt je nach Studie und Messmethode. Sicher ist: Es ist kein Randphänomen.
+Bei jedem Gewichtsverlust verliert der Körper neben Fett auch fettfreie Masse: Muskeln, aber auch Wasser, Bindegewebe und etwas Organmasse. Bei klassischen Diäten liegt der Anteil meist bei einem Viertel. Für Semaglutid liefert die STEP-1-Studie den besten Anhaltspunkt: In einer Substudie mit 140 Teilnehmenden, deren Körperzusammensetzung per DXA gemessen wurde, entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">1</a></sup> Die Analyse war exploratorisch, also nicht auf diese Frage hin geplant, und die Zahl schwankt je nach Studie und Messmethode. Ein Randphänomen ist es jedenfalls nicht.
 
 <div data-interaktiv="zusammensetzung" data-studien="step1,surmount1" data-rechner="ja"></div>
 
@@ -44,7 +44,7 @@ Zwei Dinge relativieren das. Erstens: Wer 15 % seines Gewichts verliert, hat dan
 
 Drei Gründe:
 
-1. **Zu wenig Protein.** Die Spritze dämpft den Appetit so stark, dass viele auf 40 bis 60 g Protein am Tag kommen – weniger als die 0,8 g pro kg, die die DGE als Minimum nennt,<sup><a href="#fn-dgeProtein">8</a></sup> und weit unter dem, was beim Abnehmen empfohlen wird. Ohne Baustoff baut der Körper Muskelprotein ab, um Energie und Aminosäuren zu gewinnen.
+1. **Zu wenig Protein.** Die Spritze dämpft den Appetit so stark, dass viele nur auf 40 bis 60 g Protein am Tag kommen – weniger als die 0,8 g pro kg, die die DGE als Minimum nennt,<sup><a href="#fn-dgeProtein">8</a></sup> und weit unter dem, was beim Abnehmen empfohlen wird. Fehlt dieser Baustoff, baut der Körper Muskelprotein ab, um Energie und Aminosäuren zu gewinnen.
 2. **Zu schneller Verlust.** Je schneller das Gewicht sinkt, desto größer der Anteil fettfreier Masse. Unter GLP-1-Medikamenten verlieren viele in den ersten Monaten 1 bis 2 kg pro Woche.
 3. **Kein Reiz zum Erhalt.** Muskeln bleiben, wenn sie gebraucht werden. Wer sich unter der Spritze müde fühlt und weniger bewegt, gibt dem Körper das Signal, dass die Muskeln verzichtbar sind.
 
@@ -53,15 +53,15 @@ Drei Gründe:
 Die Waage zeigt ihn nicht, sie zeigt nur, dass Gewicht weg ist. Vier Zeichen, die auf verlorene Muskelmasse hindeuten:
 
 - **Alltagskraft lässt nach.** Treppen, Einkaufstaschen, das Aufstehen vom Sofa ohne Abstützen fallen schwerer als vor der Therapie, obwohl weniger Gewicht zu tragen ist.
-- **Griffkraft sinkt.** Gläser öffnen, schwere Töpfe halten. Griffkraft ist in der Medizin ein Standardmaß für Muskelstatus, und sie lässt sich beim Arzt in Sekunden messen.
-- **Arme und Beine wirken weicher**, obwohl der Umfang abnimmt. Fett und Muskel gehen gleichzeitig, aber die Kontur verschwindet.
+- **Griffkraft sinkt.** Gläser öffnen und schwere Töpfe halten wird mühsamer. Griffkraft ist in der Medizin ein Standardmaß für Muskelstatus, und sie lässt sich beim Arzt in Sekunden messen.
+- **Arme und Beine wirken weicher**, obwohl der Umfang abnimmt. Fett und Muskel gehen gleichzeitig, und mit dem Muskel verschwindet die Kontur.
 - **Schnelle Erschöpfung** bei Belastungen, die früher normal waren.
 
-Messbar wird es mit einer Körperzusammensetzungsanalyse: DXA beim Arzt oder in Radiologien, BIA-Waagen in Studios und Praxen als grobe Näherung. Wer vor der Therapie keinen Ausgangswert hat, misst jetzt und vergleicht in zwölf Wochen. Was dagegen hilft, steht unten; die Rolle von Kreatin dabei im Artikel [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
+Messbar wird der Verlust mit einer Körperzusammensetzungsanalyse: DXA beim Arzt oder in Radiologien, BIA-Waagen in Studios und Praxen als grobe Näherung. Wer vor der Therapie keinen Ausgangswert hat, misst jetzt und vergleicht in zwölf Wochen. Was dagegen hilft, steht unten; die Rolle von Kreatin dabei im Artikel [Kreatin und Abnehmspritze](/wissen/kreatin-abnehmspritze/).
 
 ## Warum es wichtig ist
 
-Muskeln sind mehr als Optik. Sie tragen den Alltag (Treppen, Einkäufe, Aufstehen), schützen vor Stürzen im Alter, nehmen Zucker aus dem Blut auf und verbrauchen auch in Ruhe Energie. Weniger Muskelmasse heißt ein niedrigerer Grundumsatz – und der Stoffwechsel ist nach starkem Gewichtsverlust ohnehin gedrosselt.<sup><a href="#fn-fothergill2016">9</a></sup> Genau das ist einer der Mechanismen hinter dem [Jojo-Effekt nach der Abnehmspritze](/wissen/jojo-effekt-abnehmspritze/). Wie viel der Verbrauch nach dem Abnehmen in Messungen tatsächlich sinkt, steht unter [Kalorienbedarf nach der Abnehmspritze](/wissen/kalorienbedarf-nach-abnehmspritze/).
+Muskeln sind mehr als Optik. Sie tragen den Alltag (Treppen, Einkäufe, Aufstehen), schützen vor Stürzen im Alter, nehmen Zucker aus dem Blut auf und verbrauchen auch in Ruhe Energie. Weniger Muskelmasse bedeutet einen niedrigeren Grundumsatz – und der Stoffwechsel ist nach starkem Gewichtsverlust ohnehin gedrosselt.<sup><a href="#fn-fothergill2016">9</a></sup> Genau das ist einer der Mechanismen hinter dem [Jojo-Effekt nach der Abnehmspritze](/wissen/jojo-effekt-abnehmspritze/). Wie viel der Verbrauch nach dem Abnehmen in Messungen tatsächlich sinkt, steht unter [Kalorienbedarf nach der Abnehmspritze](/wissen/kalorienbedarf-nach-abnehmspritze/).
 
 ## Was nachweislich hilft
 
@@ -77,7 +77,7 @@ Was das praktisch heißt:
 
 ### 2. Protein – 1,2 bis 1,6 g pro kg, verteilt
 
-Übersichtsarbeiten empfehlen während Gewichtsabnahme und -erhalt 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Protein trägt zur Erhaltung von Muskelmasse bei.<sup><a href="#fn-euClaims">6</a></sup> Wichtig ist die Verteilung: mindestens etwa 25 bis 30 g pro Mahlzeit, drei- bis viermal am Tag, und bei jeder Mahlzeit das Protein zuerst – gerade, wenn der Appetit klein ist. Wie viel das für dein Gewicht ist und wie du es mit wenig Hunger schaffst, steht im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/).
+Übersichtsarbeiten empfehlen beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">3</a></sup> Protein trägt zur Erhaltung von Muskelmasse bei.<sup><a href="#fn-euClaims">6</a></sup> Wichtig ist die Verteilung: mindestens etwa 25 bis 30 g pro Mahlzeit, drei- bis viermal am Tag, und bei jeder Mahlzeit das Protein zuerst – gerade, wenn der Appetit klein ist. Wie viel das für dein Gewicht ist und wie du es mit wenig Hunger schaffst, steht im Artikel [Protein bei der Abnehmspritze](/wissen/protein-abnehmspritze/).
 
 <div data-interaktiv="protein" data-dge="ja"></div>
 

@@ -104,7 +104,7 @@ export function wirkstoffspiegel(a: Attr, ctx: Ctx): string {
     `<div class="ia-stat"><p class="ia-gross"><span class="ia-z" data-ia-zahl${proWahl('x', 'wirkstoff', by(hwzZahl))}>${hwzZahl(start)}</span><small${proWahl('x', 'wirkstoff', by(hwzEinheit))}>${hwzEinheit(start)}</small></p>` +
     `<p class="ia-klein">Halbwertszeit von <span${proWahl('x', 'wirkstoff', by((w) => w.name))}>${start.name}</span>: Danach ist noch die Hälfte im Körper.</p></div>` +
     `<div class="ia-stat"><p class="ia-gross">≈ <span class="ia-z" data-ia-zahl${proWahl('x', 'wirkstoff', by(fuenfZahl))}>${fuenfZahl(start)}</span><small> Tage</small></p>` +
-    `<p class="ia-klein">dauern fünf Halbwertszeiten. Dann ist noch etwa 3\u00a0% übrig.</p></div>` +
+    `<p class="ia-klein">dauern fünf Halbwertszeiten. Dann sind noch etwa 3\u00a0% übrig.</p></div>` +
     `</div>`;
   const buehne =
     `<div class="ia-buehne s-buehne">` +
@@ -121,6 +121,6 @@ export function wirkstoffspiegel(a: Attr, ctx: Ctx): string {
     unter: 'Anteil im Körper, bezogen auf den Tag der letzten Dosis',
     attrs,
     inhalt: umschalter + stats + buehne + rechnen,
-    fuss: `Vereinfachte Rechnung: Nach jeder Halbwertszeit ist noch die Hälfte im Körper. Halbwertszeiten laut Fachinformation.${fnAlle} Die Kurve zeigt den Anteil, nicht die Wirkung, und keine Dosis; der Verlauf beim Einzelnen weicht ab.`,
+    fuss: `Vereinfachte Rechnung: Nach jeder Halbwertszeit ist noch die Hälfte im Körper. Halbwertszeiten laut Fachinformation.${fnAlle} Die Kurve zeigt den Anteil, nicht die Wirkung, und keine Dosis; der Verlauf kann im Einzelfall abweichen.`,
   });
 }

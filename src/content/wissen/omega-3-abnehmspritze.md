@@ -14,7 +14,7 @@ affiliateTitle: "Beispiele für Omega-3 aus Fischöl und Algenöl"
 affiliateIntro: "Zwei Beispiele, keine Empfehlung einer Marke, und nur für den Fall, dass kein Fisch auf den Teller kommt. Es zählt der Gehalt an EPA und DHA pro Tagesdosis, nicht die Menge Öl."
 faq:
   - q: "Welche Wirkung hat Omega-3 auf die Gewichtsabnahme?"
-    a: "<p>Nein, dafür gibt es keine Belege, und in der EU ist für Omega-3-Fettsäuren keine Angabe zu Gewicht oder Körperfett zugelassen. Was das Gewicht nach dem Absetzen hält, ist in Studien die Kombination aus Protein, Krafttraining und einer festen Mahlzeitenstruktur. Omega-3 gehört aus einem anderen Grund in die Ernährung: wegen der Herzfunktion.</p>"
+    a: "<p>Keine, die belegt ist. In der EU ist für Omega-3-Fettsäuren auch keine Angabe zu Gewicht oder Körperfett zugelassen. Was das Gewicht nach dem Absetzen hält, ist in Studien die Kombination aus Protein, Krafttraining und einer festen Mahlzeitenstruktur. Omega-3 gehört aus einem anderen Grund in die Ernährung: wegen der Herzfunktion.</p>"
   - q: "Brauche ich unter der Spritze Omega-3-Kapseln?"
     a: "<p>Nur, wenn kein Fisch auf den Teller kommt. Eine Portion fetter Fisch pro Woche deckt den Referenzwert von 250 mg EPA und DHA am Tag im Wochenschnitt. Wer keinen Fisch isst oder ihn unter der Spritze nicht mag, kann eine Kapsel mit 250 bis 500 mg EPA und DHA nehmen; bei veganer Ernährung Algenöl.</p>"
   - q: "Wie viel Omega-3 ist zu viel?"
@@ -24,10 +24,10 @@ faq:
   - q: "Warum werden Blutfette nach dem Absetzen wieder schlechter?"
     a: "<p>Weil das Gewicht zurückkommt. In der STEP-1-Verlängerung gingen mit der Wiederzunahme auch die Verbesserungen bei Blutfetten und Blutdruck weitgehend zurück. Omega-3 ändert daran nichts; die Haltephase entscheidet. Erhöhte Werte gehören in ärztliche Kontrolle, nicht in die Kapsel.</p>"
   - q: "Ist Omega-3 gut gegen Bauchfett?"
-    a: "<p>Nein, nicht belegt. Es gibt keine zugelassene Angabe und keine überzeugenden Studien, dass Omega-3-Fettsäuren Bauchfett verringern. Was sie belegt tun: EPA und DHA tragen ab 250 mg täglich zu einer normalen Herzfunktion bei. Das ist der Grund, zwei Portionen Fisch pro Woche zu essen, nicht der Bauch.</p>"
+    a: "<p>Nein, nicht belegt. Es gibt keine zugelassene Angabe dazu und keine überzeugenden Studien, die zeigen, dass Omega-3-Fettsäuren Bauchfett verringern. Belegt ist etwas anderes: EPA und DHA tragen ab 250 mg täglich zu einer normalen Herzfunktion bei. Das ist der Grund, zwei Portionen Fisch pro Woche zu essen, nicht der Bauch.</p>"
 ---
 
-Omega-3 steht auf fast jeder Liste „Supplements nach der Abnehmspritze“, meist ohne Begründung. Die ehrliche Einordnung ist kurz: Für das Gewicht und für die Muskeln nach dem Absetzen gibt es keine Belege, und in unserer [Supplement-Übersicht](/wissen/supplements-nach-abnehmspritze/) steht Omega-3 deshalb bei „nicht nötig“. Trotzdem lohnt sich dieser Artikel, aus zwei anderen Gründen: Fetter Fisch ist eines der ersten Lebensmittel, das bei kleinen Portionen vom Teller verschwindet, und die Verbesserungen bei Blutfetten und Blutdruck, die mit dem Gewicht kamen, gehen nach dem Absetzen mit dem Gewicht wieder. Hier steht, was EPA und DHA laut den zugelassenen Angaben leisten, wie viel Fisch dafür reicht und wann eine Kapsel sinnvoll ist.
+Omega-3 steht auf fast jeder Liste „Supplements nach der Abnehmspritze“, meist ohne Begründung. Die ehrliche Einordnung ist kurz: Für das Gewicht und für die Muskeln nach dem Absetzen gibt es keine Belege, und in unserer [Supplement-Übersicht](/wissen/supplements-nach-abnehmspritze/) steht Omega-3 deshalb bei „nicht nötig“. Trotzdem lohnt sich dieser Artikel, aus zwei anderen Gründen: Fetter Fisch ist eines der ersten Lebensmittel, die bei kleinen Portionen vom Teller verschwinden, und die Verbesserungen bei Blutfetten und Blutdruck, die mit dem Gewicht kamen, gehen nach dem Absetzen mit dem Gewicht wieder. Hier steht, was EPA und DHA laut den zugelassenen Angaben leisten, wie viel Fisch dafür reicht und wann eine Kapsel sinnvoll ist.
 
 > **Kurz gesagt:** Die EFSA setzt für Erwachsene 250 mg EPA plus DHA am Tag an.<sup><a href="#fn-efsa2010fats">1</a></sup> Die zugelassene Angabe dazu lautet: EPA und DHA tragen zu einer normalen Herzfunktion bei.<sup><a href="#fn-euClaims">2</a></sup> Die DGE empfiehlt ein- bis zweimal pro Woche Fisch;<sup><a href="#fn-dgeEmpfehlungen">3</a></sup> eine Portion fetter Fisch deckt den Wochenbedarf. Für Gewicht und Muskeln nach der Spritze: keine Belege.
 
@@ -39,7 +39,7 @@ Beim Abnehmen mit Semaglutid entfielen in einer Substudie rund 40 % des Gewichts
 
 Für Omega-3-Fettsäuren sind in der EU unter anderem diese Angaben zugelassen:<sup><a href="#fn-euClaims">2</a></sup> EPA und DHA tragen zu einer normalen Herzfunktion bei (ab 250 mg EPA und DHA am Tag). DHA trägt zur Erhaltung einer normalen Gehirnfunktion und zur Erhaltung normaler Sehkraft bei (ab 250 mg DHA am Tag). Alpha-Linolensäure (ALA) trägt zur Aufrechterhaltung eines normalen Cholesterinspiegels im Blut bei (ab 2 g ALA am Tag). Zwei weitere Angaben zu Blutfetten und Blutdruck gelten erst ab 2 bzw. 3 g EPA und DHA am Tag, mit dem Hinweis, dass die Aufnahme aus Ergänzungen 5 g nicht überschreiten soll. Solche Mengen sind keine Alltagsergänzung, sondern eine Sache für das ärztliche Gespräch.
 
-Die Formulierung ist wie bei allen zugelassenen Angaben vorsichtig gemeint: „Trägt zu einer normalen Herzfunktion bei“ heißt, dass die Versorgung ab 250 mg ausreicht. Es heißt nicht, dass mehr Omega-3 das Herz stärker macht.
+Die Formulierung ist wie bei allen zugelassenen Angaben vorsichtig gewählt: „Trägt zu einer normalen Herzfunktion bei“ heißt, dass die Versorgung ab 250 mg ausreicht. Es heißt nicht, dass mehr Omega-3 das Herz stärker macht.
 
 ## Fisch oder Kapsel: die Mengen
 
@@ -56,13 +56,13 @@ Die Formulierung ist wie bei allen zugelassenen Angaben vorsichtig gemeint: „T
 
 Werte aus dem Bundeslebensmittelschlüssel, gerundet.<sup><a href="#fn-bls">4</a></sup>
 
-Lesart: Eine Portion Lachs oder Makrele pro Woche liefert rund 2,5 g EPA und DHA, also mehr als die 1,75 g, die sich aus 250 mg am Tag für eine Woche ergeben. Die DGE-Empfehlung von ein- bis zweimal Fisch pro Woche ist damit auch rechnerisch die Lösung.<sup><a href="#fn-dgeEmpfehlungen">3</a></sup> Wer keinen Fisch isst, deckt den Wert über eine Kapsel mit 250 bis 500 mg EPA und DHA; bei veganer Ernährung über Algenöl, das DHA und meist auch EPA enthält. Leinöl, Rapsöl und Walnüsse liefern ALA; der Körper wandelt davon nur einen kleinen Teil in EPA und DHA um.<sup><a href="#fn-efsa2010fats">1</a></sup>
+Das heißt: Eine Portion Lachs oder Makrele pro Woche liefert rund 2,5 g EPA und DHA, also mehr als die 1,75 g, die sich aus 250 mg am Tag für eine Woche ergeben. Die DGE-Empfehlung von ein- bis zweimal Fisch pro Woche geht damit auch rechnerisch auf.<sup><a href="#fn-dgeEmpfehlungen">3</a></sup> Wer keinen Fisch isst, deckt den Wert über eine Kapsel mit 250 bis 500 mg EPA und DHA; bei veganer Ernährung über Algenöl, das DHA und meist auch EPA enthält. Leinöl, Rapsöl und Walnüsse liefern ALA; der Körper wandelt davon nur einen kleinen Teil in EPA und DHA um.<sup><a href="#fn-efsa2010fats">1</a></sup>
 
 <div data-interaktiv="teller" data-vorlage="omega-3"></div>
 
 ## Unter der Spritze: wenn die Portionen klein werden
 
-Wer unter der Spritze auf 1.000 bis 1.200 Kalorien am Tag kommt, isst meist auch wenig Fett, und fetter Fisch gehört zu den Lebensmitteln, die bei kleinem Appetit als Erstes gestrichen werden. Die Expertengruppe um Almandoz empfiehlt bei sehr geringer Energiezufuhr unter Adipositas-Medikamenten, auf Protein, Ballaststoffe, Flüssigkeit und Mikronährstoffe zu achten.<sup><a href="#fn-almandoz2024">6</a></sup> Praktisch löst Fisch als Proteinportion zweimal pro Woche drei Dinge auf einmal: Protein, EPA und DHA und einen Teil des Vitamin D, das in fettem Fisch steckt. Mehr dazu unter [Vitamin D bei der Abnehmspritze](/wissen/vitamin-d-abnehmspritze/).
+Wer unter der Spritze auf 1.000 bis 1.200 Kalorien am Tag kommt, isst meist auch wenig Fett, und fetter Fisch gehört zu den Lebensmitteln, die bei kleinem Appetit als Erstes gestrichen werden. Die Expertengruppe um Almandoz empfiehlt bei sehr geringer Energiezufuhr unter Adipositas-Medikamenten, auf Protein, Ballaststoffe, Flüssigkeit und Mikronährstoffe zu achten.<sup><a href="#fn-almandoz2024">6</a></sup> Praktisch deckt Fisch als Proteinportion zweimal pro Woche drei Dinge auf einmal ab: Protein, EPA und DHA und einen Teil des Vitamin D, das in fettem Fisch steckt. Mehr dazu unter [Vitamin D bei der Abnehmspritze](/wissen/vitamin-d-abnehmspritze/).
 
 ## Nach dem Absetzen: Herz, Blutfette, Haltephase
 
@@ -77,7 +77,7 @@ Die STEP-1-Verlängerung zeigt, was nach dem Absetzen mit den Begleitwerten pass
 | Erhöhte Blutfette nach dem Absetzen | Ärztliche Kontrolle; höhere Dosen nur in Absprache |
 | Blutverdünnende Medikamente, anstehende Operation | Vorher fragen, besonders bei Dosen über 1 g |
 
-Kapseln sind für die zugelassenen Angaben nicht besser als Fisch, nur praktischer. Wer sie nimmt, nimmt sie zu einer Mahlzeit; auf leeren Magen stoßen viele unangenehm auf.
+Gemessen an den zugelassenen Angaben sind Kapseln nicht besser als Fisch, nur praktischer. Wer sie nimmt, nimmt sie zu einer Mahlzeit; auf leeren Magen stoßen viele unangenehm auf.
 
 ## Wann du zur Ärztin oder zum Arzt gehst
 

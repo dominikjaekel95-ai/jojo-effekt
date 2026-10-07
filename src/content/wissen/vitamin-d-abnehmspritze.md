@@ -20,14 +20,14 @@ faq:
   - q: "Wie viel Vitamin D ist zu viel?"
     a: "<p>Das BfR schlägt für Nahrungsergänzungsmittel höchstens 20 µg (800 I.E.) pro Tag vor. Deutlich höhere Dosen über Monate können den Kalziumspiegel im Blut gefährlich erhöhen. Hochdosierte Präparate gehören deshalb nur nach Blutwert und in ärztliche Hand.</p>"
   - q: "Reicht Sonne im Sommer?"
-    a: "<p>Von April bis September bildet die Haut bei regelmäßigem Aufenthalt im Freien meist genug Vitamin D, ein Teil wird für den Winter gespeichert. Wer tagsüber drinnen arbeitet, Sonnenschutz nutzt oder sich bedeckt kleidet, bildet weniger. Dann ist der Blutwert im Spätwinter der ehrliche Test.</p>"
+    a: "<p>Von April bis September bildet die Haut bei regelmäßigem Aufenthalt im Freien meist genug Vitamin D, ein Teil wird für den Winter gespeichert. Wer tagsüber drinnen arbeitet, Sonnenschutz nutzt oder sich bedeckt kleidet, bildet weniger. Dann ist der Blutwert im Spätwinter der verlässliche Test.</p>"
   - q: "Kann Vitamin D Bauchfett reduzieren?"
     a: "<p>Nein. Für Vitamin D ist keine Angabe zu Gewicht oder Körperfett zugelassen; die Angaben betreffen Knochen, Muskelfunktion, Immunsystem und Zähne. Vitamin D nachzufüllen schließt eine Versorgungslücke, die unter der Spritze bei kleinen Portionen und wenig Sonne entstehen kann; Fett schmelzen lässt es nicht.</p>"
   - q: "Kann zu viel Vitamin D zu Gewichtszunahme führen?"
     a: "<p>Nein, Gewichtszunahme ist keine bekannte Folge. Zu viel Vitamin D über lange Zeit, deutlich über den 20 µg am Tag, die das BfR für Nahrungsergänzung als Höchstmenge nennt, kann den Kalziumspiegel erhöhen, mit Übelkeit, Durst und Nierenproblemen. Hochdosierte Präparate gehören deshalb zu einem gemessenen Mangel und in ärztliche Begleitung.</p>"
 ---
 
-Vitamin D ist das Supplement, das in Deutschland fast jeder irgendwann nimmt, oft ohne zu wissen, warum. Unter der Abnehmspritze kommt eine Frage dazu: Wenn ich kaum esse und viel abnehme, brauche ich dann mehr? Die kurze Antwort: Der Bedarf ändert sich nicht, aber die Chance auf einen Mangel war schon vor der Spritze hoch, und die zugelassene Angabe zur Muskelfunktion macht Vitamin D für die Zeit danach interessant. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
+Vitamin D ist das Supplement, das in Deutschland fast jeder irgendwann nimmt, oft ohne zu wissen, warum. Unter der Abnehmspritze kommt eine Frage dazu: Wenn ich kaum esse und viel abnehme, brauche ich dann mehr? Die kurze Antwort: Der Bedarf ändert sich nicht, aber das Risiko für einen Mangel war schon vor der Spritze hoch, und die zugelassene Angabe zur Muskelfunktion macht Vitamin D für die Zeit danach interessant. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
 
 > **Kurz gesagt:** 30,2 % der Erwachsenen in Deutschland haben laut der DEGS1-Studie einen Vitamin-D-Mangel, 61,6 % liegen unter dem Wert, den viele Fachgesellschaften als ausreichend ansehen.<sup><a href="#fn-rabenberg2015">1</a></sup> Die DGE setzt 20 µg am Tag an, wenn die Haut kein Vitamin D bildet.<sup><a href="#fn-dgeReferenzwerte">2</a></sup> Vitamin D trägt zur Erhaltung einer normalen Muskelfunktion bei;<sup><a href="#fn-euClaims">3</a></sup> mehr als normal wird der Muskel davon nicht.
 
@@ -37,13 +37,13 @@ Vitamin D kommt nur zu einem kleinen Teil aus der Nahrung (fetter Fisch, Eier, P
 
 <div data-interaktiv="punktfeld" data-vorlage="vitamin-d"></div>
 
-Das hat mit der Spritze nichts zu tun, es ist der Normalzustand. Die Spritze ändert zwei Dinge: Die Nahrungsquellen werden bei kleinen Portionen noch unwichtiger, und wer wenig Energie hat, geht seltener raus. Beides macht einen Mangel wahrscheinlicher, aber nicht die Spritze selbst.
+Das hat mit der Spritze nichts zu tun, es ist der Normalzustand. Die Spritze ändert zwei Dinge: Bei kleinen Portionen kommt noch weniger Vitamin D aus der Nahrung, und wer wenig Energie hat, geht seltener raus. Beides macht einen Mangel wahrscheinlicher; die Spritze selbst tut das nicht.
 
 ## Was die zugelassenen Angaben sagen
 
 Für Vitamin D sind in der EU unter anderem diese Angaben zugelassen:<sup><a href="#fn-euClaims">3</a></sup> Vitamin D trägt zur Erhaltung einer normalen Muskelfunktion bei, zur Erhaltung normaler Knochen, zu einer normalen Aufnahme und Verwertung von Calcium und Phosphor und zu einer normalen Funktion des Immunsystems. Nicht zugelassen sind Aussagen zum Abnehmen, zum Gewichterhalt oder zum Muskelaufbau.
 
-Für die Zeit nach der Spritze zählt die erste Angabe. Beim Abnehmen mit Semaglutid entfielen in einer Substudie rund 40 % des Gewichtsverlusts auf fettfreie Masse, darunter Muskeln.<sup><a href="#fn-wilding2021dxa">7</a></sup> Ein Vitamin-D-Mangel ist dabei ein Handicap, das sich leicht beheben lässt; den Muskel erhalten müssen trotzdem Protein und Krafttraining an mindestens zwei Tagen pro Woche.<sup><a href="#fn-who2020">6</a></sup> Wer beides tut und zusätzlich im Winter 20 µg Vitamin D nimmt, hat die Reihenfolge richtig.
+Für die Zeit nach der Spritze zählt die erste Angabe. Beim Abnehmen mit Semaglutid entfielen in einer Substudie rund 40 % des Gewichtsverlusts auf fettfreie Masse, darunter Muskeln.<sup><a href="#fn-wilding2021dxa">7</a></sup> Ein Vitamin-D-Mangel ist dabei ein Handicap, das sich leicht beheben lässt; den Muskel erhalten müssen trotzdem Protein und Krafttraining an mindestens zwei Tagen pro Woche.<sup><a href="#fn-who2020">6</a></sup> Wer auf beides achtet und zusätzlich im Winter 20 µg Vitamin D nimmt, setzt die Prioritäten richtig.
 
 ## Wie viel, und woher
 

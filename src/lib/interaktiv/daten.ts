@@ -177,9 +177,9 @@ export const punktfelder: Record<string, Punktfeld> = {
     wahlLabel: 'Gruppe',
     gruppen: [
       { wert: 'ohne', label: 'Ohne Typ-2-Diabetes', an: 65, zahl: '64,8', satz: 'der Menschen ohne Typ-2-Diabetes hatten ein Jahr nach Beginn der Therapie abgesetzt.' },
-      { wert: 'alle', label: 'Alle', an: 54, zahl: '53,6', satz: 'über alle Gruppen, mit und ohne Typ-2-Diabetes, hatten ein Jahr nach Beginn der Therapie abgesetzt.' },
+      { wert: 'alle', label: 'Alle', an: 54, zahl: '53,6', satz: 'der Menschen insgesamt, mit und ohne Typ-2-Diabetes, hatten ein Jahr nach Beginn der Therapie abgesetzt.' },
     ],
-    fuss: 'US-Versorgungsdaten, Menschen mit Übergewicht oder Adipositas. Ein Punkt steht für einen Menschen, gerundet.',
+    fuss: 'US-Versorgungsdaten, Menschen mit Übergewicht oder Adipositas. Ein Punkt steht für einen Menschen; die Zahl der Punkte ist gerundet.',
     quellen: ['rodriguez2025'],
   },
   'stop-regain': {
@@ -192,7 +192,7 @@ export const punktfelder: Record<string, Punktfeld> = {
       { wert: 'zonen', label: 'Wiegen mit Zonen', an: 46, zahl: '45,7', satz: 'der persönlich betreuten Gruppe mit täglichem Wiegen und festen Zonen.' },
       { wert: 'kontrolle', label: 'Kontrollgruppe', an: 72, zahl: '72,4', satz: 'der Kontrollgruppe ohne dieses Programm.' },
     ],
-    fuss: 'STOP-Regain-Studie, 314 Erwachsene nach mindestens 10 % Gewichtsverlust. Ein Punkt steht für einen Menschen, gerundet.',
+    fuss: 'STOP-Regain-Studie, 314 Erwachsene nach mindestens 10 % Gewichtsverlust. Ein Punkt steht für einen Menschen; die Zahl der Punkte ist gerundet.',
     quellen: ['wing2006'],
   },
   eisen: {
@@ -227,10 +227,10 @@ export const punktfelder: Record<string, Punktfeld> = {
     basis: 100,
     farbe: 'ink',
     gruppen: [
-      { wert: 'alle', label: 'Erwachsene', an: 30, an2: 32, zahl: '30,2', satz: 'der Erwachsenen hatten einen Mangel unter 30 nmol/l, zusammen 61,6 % lagen unter 50 nmol/l.' },
+      { wert: 'alle', label: 'Erwachsene', an: 30, an2: 32, zahl: '30,2', satz: 'der Erwachsenen hatten einen Mangel unter 30 nmol/l, insgesamt 61,6 % lagen unter 50 nmol/l.' },
     ],
     legende: ['Mangel, unter 30 nmol/l', 'unter 50 nmol/l'],
-    fuss: 'DEGS1-Studie des Robert Koch-Instituts mit fast 7.000 Erwachsenen; im Winter mehr als im Sommer. Ein Punkt steht für einen Menschen, gerundet.',
+    fuss: 'DEGS1-Studie des Robert Koch-Instituts mit fast 7.000 Erwachsenen; im Winter ist der Mangel häufiger als im Sommer. Ein Punkt steht für einen Menschen; die Zahl der Punkte ist gerundet.',
     quellen: ['rabenberg2015'],
   },
   b12: {
@@ -277,7 +277,7 @@ export interface Teller {
 export const teller: Record<string, Teller> = {
   magnesium: {
     id: 'magnesium',
-    titel: 'Wie viel Magnesium ein kleiner Tag liefert',
+    titel: 'Wie viel Magnesium ein Tag mit kleinen Portionen liefert',
     naehrstoff: 'Magnesium',
     einheit: 'mg',
     dec: 0,
@@ -298,7 +298,7 @@ export const teller: Record<string, Teller> = {
     ],
     start: [2, 0, 7],
     speisenQuelle: 'bls',
-    fuss: 'Werte aus dem Bundeslebensmittelschlüssel, gerundet. Tippe Lebensmittel an oder ab.',
+    fuss: 'Werte aus dem Bundeslebensmittelschlüssel, gerundet. Tippe Lebensmittel an, um sie hinzuzufügen oder zu entfernen.',
   },
   'vitamin-c': {
     id: 'vitamin-c',
@@ -321,7 +321,7 @@ export const teller: Record<string, Teller> = {
     ],
     start: [0],
     speisenQuelle: 'bls',
-    fuss: 'Werte aus dem Bundeslebensmittelschlüssel, gerundet. Tippe Lebensmittel an oder ab.',
+    fuss: 'Werte aus dem Bundeslebensmittelschlüssel, gerundet. Tippe Lebensmittel an, um sie hinzuzufügen oder zu entfernen.',
   },
   'omega-3': {
     id: 'omega-3',
@@ -343,11 +343,11 @@ export const teller: Record<string, Teller> = {
     ],
     start: [0],
     speisenQuelle: 'bls',
-    fuss: 'Werte aus dem Bundeslebensmittelschlüssel, gerundet; Ziel aus 250 mg am Tag mal sieben. Tippe Lebensmittel an oder ab.',
+    fuss: 'Werte aus dem Bundeslebensmittelschlüssel, gerundet; Ziel aus 250 mg am Tag mal sieben. Tippe Lebensmittel an, um sie hinzuzufügen oder zu entfernen.',
   },
   b12: {
     id: 'b12',
-    titel: 'Was ein kleiner Tag an Vitamin B12 liefert',
+    titel: 'Was ein Tag mit kleinen Portionen an Vitamin B12 liefert',
     naehrstoff: 'Vitamin B12',
     einheit: 'µg',
     dec: 1,
@@ -364,7 +364,7 @@ export const teller: Record<string, Teller> = {
     ],
     start: [0, 1],
     speisenQuelle: 'bls',
-    fuss: 'Werte aus dem Bundeslebensmittelschlüssel, gerundet. Tippe Lebensmittel an oder ab.',
+    fuss: 'Werte aus dem Bundeslebensmittelschlüssel, gerundet. Tippe Lebensmittel an, um sie hinzuzufügen oder zu entfernen.',
   },
   ballaststoffe: {
     id: 'ballaststoffe',
@@ -385,7 +385,7 @@ export const teller: Record<string, Teller> = {
     ],
     start: [0],
     speisenQuelle: 'bls',
-    fuss: 'Werte aus dem Bundeslebensmittelschlüssel, gerundet. Tippe Lebensmittel an oder ab.',
+    fuss: 'Werte aus dem Bundeslebensmittelschlüssel, gerundet. Tippe Lebensmittel an, um sie hinzuzufügen oder zu entfernen.',
   },
   'protein-lebensmittel': {
     id: 'protein-lebensmittel',
@@ -428,7 +428,7 @@ export const teller: Record<string, Teller> = {
     ],
     start: [0, 1, 2, 3],
     tag: true,
-    fuss: 'Beispiel aus der Tabelle unten im Artikel, Werte ca. Tippe eine Mahlzeit ab, um zu sehen, was dann fehlt.',
+    fuss: 'Beispiel aus der Tabelle unten im Artikel, ungefähre Werte. Tippe eine Mahlzeit an, um sie zu entfernen und zu sehen, was dann fehlt.',
   },
   'protein-tag-ernaehrung': {
     id: 'protein-tag-ernaehrung',
@@ -447,7 +447,7 @@ export const teller: Record<string, Teller> = {
     ],
     start: [0, 1, 2, 3],
     tag: true,
-    fuss: 'Beispiel aus der Tabelle unten, Werte ca. Tippe eine Mahlzeit ab, um zu sehen, was dann fehlt.',
+    fuss: 'Beispiel aus der Tabelle unten, ungefähre Werte. Tippe eine Mahlzeit an, um sie zu entfernen und zu sehen, was dann fehlt.',
   },
 };
 
@@ -558,7 +558,7 @@ export const vergleiche: Record<string, Vergleich> = {
     gruppen: [
       {
         balken: [
-          { label: 'Nach etwa 14 kg Diät, Frauen', sub: 'Ruheverbrauch, direkt danach', wert: 92, text: '92 kcal', farbe: 'clay', quelle: 'martins2020' },
+          { label: 'Nach etwa 14 kg Abnahme, Frauen', sub: 'Ruheverbrauch, direkt danach', wert: 92, text: '92 kcal', farbe: 'clay', quelle: 'martins2020' },
           { label: 'Dieselben Frauen, nach vier Wochen stabil', sub: 'Ruheverbrauch', wert: 38, text: '38 kcal', farbe: 'clay', quelle: 'martins2020' },
           { label: 'Nach 10 % Gewichtsverlust', sub: 'Gesamtverbrauch, Übersichtsarbeit', wert: 300, bis: 400, text: '300 bis 400 kcal', farbe: 'clay', quelle: 'rosenbaum2010' },
           { label: 'Sechs Jahre nach extremem Verlust', sub: 'Ruheverbrauch, 14 Personen', wert: 500, text: 'rund 500 kcal', farbe: 'clay', quelle: 'fothergill2016' },

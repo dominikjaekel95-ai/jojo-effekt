@@ -14,18 +14,18 @@ faq:
   - q: "Wie lange bleibt Wegovy nach der letzten Spritze im Körper?"
     a: "<p>Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche. Nach rund fünf Wochen ist der größte Teil abgebaut, nach etwa sieben Wochen fast alles. Die Wirkung auf den Appetit lässt schon in der zweiten und dritten Woche spürbar nach.</p>"
   - q: "Muss ich Wegovy ausschleichen?"
-    a: "<p>Die Fachinformation sieht kein Ausschleichen vor, und die Studien haben abrupt abgesetzt, ohne Entzugserscheinungen. Weil Wegovy in fünf Dosisstufen existiert, ist ein schrittweises Reduzieren technisch einfach möglich. Ob es sinnvoll ist, entscheidet deine Ärztin oder dein Arzt; einen Beleg, dass es den Jojo-Effekt abmildert, gibt es bisher nicht.</p>"
+    a: "<p>Die Fachinformation sieht kein Ausschleichen vor, und die Studien haben abrupt abgesetzt, ohne Entzugserscheinungen. Weil es Wegovy in fünf Dosisstufen gibt, ist ein schrittweises Reduzieren technisch einfach möglich. Ob es sinnvoll ist, entscheidet deine Ärztin oder dein Arzt; einen Beleg, dass es den Jojo-Effekt abmildert, gibt es bisher nicht.</p>"
   - q: "Nimmt man nach dem Absetzen von Wegovy wieder zu?"
-    a: "<p>In den Studien ja, im Mittel: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen zwei Drittel des verlorenen Gewichts zurück, von −17,3 % auf −5,6 % gegenüber dem Start. In STEP 4 stieg das Gewicht nach dem Wechsel auf Placebo um 6,9 % in 48 Wochen. Die Streuung zwischen einzelnen Menschen ist groß; wer in der Therapiezeit Krafttraining und Protein eingebaut hat, hält in Studien deutlich besser.</p>"
+    a: "<p>In den Studien ja, im Mittel: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen zwei Drittel des verlorenen Gewichts zurück, von −17,3 % auf −5,6 % gegenüber dem Start. In STEP 4 stieg das Gewicht nach dem Wechsel auf Placebo um 6,9 % in 48 Wochen. Die Streuung zwischen einzelnen Menschen ist groß; wer in der Therapiezeit Krafttraining und Protein eingebaut hat, hält das Gewicht in Studien deutlich besser.</p>"
   - q: "Kann ich Wegovy bei Kinderwunsch einfach absetzen?"
     a: "<p>Laut Fachinformation soll Wegovy mindestens zwei Monate vor einer geplanten Schwangerschaft abgesetzt werden, weil der Wirkstoff so lange im Körper bleibt. Besprich den Zeitpunkt mit deiner Ärztin oder deinem Arzt.</p>"
   - q: "Kann man die Abnehmspritze auch wieder absetzen?"
-    a: "<p>Ja. Es gibt kein Entzugssyndrom; Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation bis etwa sieben Wochen nachweisbar. Was zurückkommt, sind der Appetit und, ohne Gegenmaßnahmen, das Gewicht; was sich lohnt, ist die Vorbereitung in den letzten Wochen der Therapie mit Krafttraining, Protein und festem Wiegetag. Ob und wann du absetzt, entscheidest du mit deiner Ärztin oder deinem Arzt, bei Diabetes oder auffälligen Blutwerten besonders.</p>"
+    a: "<p>Ja. Es gibt kein Entzugssyndrom; Semaglutid ist nach etwa fünf Wochen weitgehend abgebaut und laut Fachinformation bis etwa sieben Wochen nachweisbar. Was zurückkommt, sind der Appetit und, ohne Gegenmaßnahmen, das Gewicht. Was sich lohnt, ist die Vorbereitung in den letzten Wochen der Therapie mit Krafttraining, Protein und festem Wiegetag. Ob und wann du absetzt, entscheidest du mit deiner Ärztin oder deinem Arzt, bei Diabetes oder auffälligen Blutwerten besonders.</p>"
 ---
 
-Wegovy ist die Abnehmspritze, die in Deutschland am häufigsten für die Gewichtsreduktion verordnet wird. Wer sie absetzt, hat drei Fragen: Wie lange wirkt sie nach, was passiert mit dem Gewicht, und was muss ich beachten? Hier sind die Antworten aus Fachinformation und Studien, präparatspezifisch. Was für alle Abnehmspritzen gilt, steht im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Wegovy ist die Abnehmspritze, die in Deutschland am häufigsten für die Gewichtsreduktion verordnet wird. Wer sie absetzt, hat drei Fragen: Wie lange wirkt sie nach, was passiert mit dem Gewicht, und was muss ich beachten? Hier sind die Antworten aus Fachinformation und Studien, speziell für Wegovy. Was für alle Abnehmspritzen gilt, steht im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
-> **Kurz gesagt:** Halbwertszeit etwa eine Woche, nach fünf bis sieben Wochen ist Semaglutid weitgehend abgebaut.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Ein Jahr nach dem Absetzen waren in STEP 1 zwei Drittel des Verlusts zurück.<sup><a href="#fn-wilding2022ext">3</a></sup> Ob und wie du absetzt, entscheidest du mit deiner Ärztin.
+> **Kurz gesagt:** Die Halbwertszeit liegt bei etwa einer Woche, nach fünf bis sieben Wochen ist Semaglutid weitgehend abgebaut.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Ein Jahr nach dem Absetzen waren in STEP 1 zwei Drittel des Verlusts zurück.<sup><a href="#fn-wilding2022ext">3</a></sup> Ob und wie du absetzt, entscheidest du mit deiner Ärztin.
 
 ## Wegovy in drei Sätzen
 
@@ -39,7 +39,7 @@ Seit dem 1. September 2026 gibt es Semaglutid auch als Wegovy-Tablette mit 25 mg
 
 ## Wie lange Wegovy nachwirkt
 
-Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Das ist lang: Nach der letzten Spritze ist nach einer Woche noch die Hälfte im Körper, nach zwei Wochen ein Viertel, nach fünf Wochen etwa 3 %. Praktisch heißt das:
+Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Das ist lang: Eine Woche nach der letzten Spritze ist noch die Hälfte im Körper, nach zwei Wochen ein Viertel, nach fünf Wochen etwa 3 %. Praktisch heißt das:
 
 - **Woche 1 bis 2:** kaum Veränderung, die Wirkung ist noch da.
 - **Woche 2 bis 5:** Der Appetit kommt zurück, die Magenentleerung normalisiert sich, das Sättigungsgefühl kommt später.
@@ -58,22 +58,22 @@ Für Semaglutid 2,4 mg gibt es zwei Studien, die das Absetzen direkt untersucht 
 | STEP 1 Extension<sup><a href="#fn-wilding2022ext">3</a></sup> | Nach 68 Wochen Wegovy: −17,3 %. Ein Jahr ohne Medikament: netto noch −5,6 %. Zwei Drittel des Verlusts waren zurück. Blutdruck, Blutzucker und Blutfette näherten sich wieder den Ausgangswerten. |
 | STEP 4<sup><a href="#fn-rubino2021">4</a></sup> | Nach 20 Wochen Aufdosierung Wechsel auf Placebo: +6,9 % in 48 Wochen. Wer weiter spritzte: −7,9 %. |
 
-Eine Meta-Analyse über verschiedene Adipositas-Medikamente zeigt, wann es losgeht: Die Zunahme wird etwa ab Woche 8 nach dem Absetzen messbar und setzt sich bis etwa Woche 20 fort.<sup><a href="#fn-wu2025">5</a></sup> Für Wegovy passt das zur Halbwertszeit: Woche 5 bis 7 ist der Wirkstoff weg, ab Woche 8 zeigt es die Waage.
+Eine Meta-Analyse über verschiedene Adipositas-Medikamente zeigt, wann es losgeht: Die Zunahme wird etwa ab Woche 8 nach dem Absetzen messbar und setzt sich bis etwa Woche 20 fort.<sup><a href="#fn-wu2025">5</a></sup> Für Wegovy passt das zur Halbwertszeit: In Woche 5 bis 7 ist der Wirkstoff weg, ab Woche 8 zeigt es die Waage.
 
 <div data-interaktiv="absetzkurve" data-acht="ja"></div>
 
 ## Ausschleichen: möglich, aber unbelegt
 
-Wegovy gibt es in fünf Dosisstufen. Deshalb liegt es nahe, statt abrupt aufzuhören die Dosis über Wochen zu reduzieren. Die Fachinformation sieht das nicht vor, und die Studien haben abrupt abgesetzt; ein Entzugssyndrom trat dabei nicht auf.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Ob langsames Reduzieren den Wiederanstieg abmildert, ist nicht durch randomisierte Studien belegt. Das mögliche Argument ist psychologisch: Man erlebt den zurückkehrenden Appetit in Etappen und kann Routinen anpassen. Die Entscheidung, ob und wie du absetzt, trifft deine Ärztin oder dein Arzt mit dir.
+Wegovy gibt es in fünf Dosisstufen. Deshalb liegt es nahe, statt abrupt aufzuhören, die Dosis über Wochen zu reduzieren. Die Fachinformation sieht das nicht vor, und die Studien haben abrupt abgesetzt; ein Entzugssyndrom trat dabei nicht auf.<sup><a href="#fn-fachinfoWegovy">1</a></sup> Ob langsames Reduzieren den Wiederanstieg abmildert, ist nicht durch randomisierte Studien belegt. Ein mögliches Argument dafür ist psychologisch: Man erlebt den zurückkehrenden Appetit in Etappen und kann Routinen anpassen. Die Entscheidung, ob und wie du absetzt, trifft deine Ärztin oder dein Arzt mit dir.
 
 ## Was in den letzten Wochen mit Wegovy zu tun ist
 
-Der beste Zeitpunkt, die Zeit danach vorzubereiten, ist, solange der Appetit noch gedämpft ist:
+Am besten bereitest du die Zeit danach vor, solange der Appetit noch gedämpft ist:
 
 1. **Krafttraining anfangen.** In der dänischen S-LiTE-Studie hielten Teilnehmende, die während der Medikamententherapie trainiert hatten, ihr Gewicht ein Jahr nach dem Absetzen; nach dem Medikament allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup>
 2. **Protein auf Zielmenge.** 1,2 bis 1,6 g pro kg Körpergewicht und Tag,<sup><a href="#fn-leidy2015">7</a></sup> verteilt auf drei bis vier Mahlzeiten. Unter Wegovy essen viele weit weniger.
 3. **Wiegen mit Regel.** Einmal pro Woche, und vorher festgelegt, ab welcher Zunahme du reagierst.
-4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen. In Studien beginnt die Zunahme etwa ab Woche 8 nach der letzten Dosis.
+4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen. In Studien wird die Zunahme etwa ab Woche 8 nach der letzten Dosis messbar.
 
 Der ausführliche Plan steht unter [Gewicht halten nach der Abnehmspritze: der 12-Wochen-Plan](/wissen/gewicht-halten-nach-abnehmspritze/).
 

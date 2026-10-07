@@ -79,7 +79,7 @@ function absetzen(a: Attr, ctx: Ctx): string {
         `<p class="z-datum-satz" aria-live="polite"${proWahl('x', 'datum', Object.fromEntries(XMAS.map((x) => [x.wert, x.satz])))}>${esc(xmasStart.satz)}</p>`
       : '');
   const fensterSatz = ja(a, 'fenster')
-    ? `<p class="z-fenster-satz">Das Fenster: Der Appetit kommt zurück, bevor die Waage etwas zeigt. In diesen Wochen macht Struktur den Unterschied.</p>`
+    ? `<p class="z-fenster-satz">Das Fenster: Der Appetit kommt zurück, bevor die Waage etwas zeigt. In diesen Wochen kommt es auf Struktur an.</p>`
     : '';
   const legende =
     `<div class="ia-legende">` +
@@ -116,7 +116,7 @@ function haar(ctx: Ctx): string {
     { m: 'Monat 9', text: 'Nachwachsende Haare werden sichtbar.', klasse: 'z-nach' },
     { m: 'Monat 10', text: '', klasse: 'z-nach' },
     { m: 'Monat 11', text: '', klasse: 'z-nach' },
-    { m: 'Monat 12', text: 'Bis zur alten Länge dauert es länger.', klasse: 'z-nach' },
+    { m: 'Monat 12', text: 'Bis zur alten Länge dauert es noch eine Weile.', klasse: 'z-nach' },
   ];
   const n = zeilen.length;
   const reihen = zeilen

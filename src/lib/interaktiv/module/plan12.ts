@@ -11,7 +11,7 @@ const BLOECKE = [
   { w: '3–4', s: 2, r: 10, txt: '2 × 10', ziel: 'Belastung so wählen, dass die letzten zwei Wiederholungen schwer sind.' },
   { w: '5–6', s: 3, r: 8, txt: '3 × 8', ziel: 'Der dritte Satz kommt dazu.' },
   { w: '7–8', s: 3, r: 10, txt: '3 × 10', ziel: 'Stärkeres Band oder mehr Gewicht bei Kniebeuge, Rudern und Hüftstrecken.' },
-  { w: '9–10', s: 3, r: 12, txt: '3 × 12', ziel: 'Zuhause-Varianten auf die nächste Stufe, zum Beispiel Liegestütz tiefer.' },
+  { w: '9–10', s: 3, r: 12, txt: '3 × 12', ziel: 'Zuhause-Varianten auf die nächste Stufe bringen, zum Beispiel Liegestütz tiefer.' },
   { w: '11–12', s: 3, r: 8, txt: '3 × 8', ziel: 'Widerstand erhöhen, Wiederholungen zurück auf 8: das ist die eigentliche Steigerung.', schwer: true },
 ];
 

@@ -14,26 +14,26 @@ affiliateTitle: "Beispiel für Vitamin D3 in Tropfenform"
 affiliateIntro: "Ein Beispiel, keine Empfehlung einer Marke. Es zählt die Dosis: 20 µg (800 I.E.) am Tag für die Winterregel; mehr nur nach Blutwert und ärztlicher Absprache."
 faq:
   - q: "Soll ich unter der Abnehmspritze Vitamin D nehmen?"
-    a: "<p>Von Oktober bis März ist eine Ergänzung von 20 µg am Tag für die meisten Erwachsenen in Deutschland vertretbar, mit oder ohne Spritze, weil die Haut in dieser Zeit kaum Vitamin D bildet. Wer sicher wissen will, ob ein Mangel vorliegt, lässt den Blutwert 25-OH-Vitamin-D bestimmen. Höhere Dosen nur nach Blutwert und ärztlicher Absprache.</p>"
+    a: "<p>Von Oktober bis März ist eine Ergänzung von 20 µg am Tag für die meisten Erwachsenen in Deutschland vertretbar, mit oder ohne Spritze, weil die Haut in dieser Zeit kaum Vitamin D bildet. Willst du sicher wissen, ob ein Mangel vorliegt, lass den Blutwert 25-OH-Vitamin-D bestimmen. Höhere Dosen nur nach Blutwert und ärztlicher Absprache.</p>"
   - q: "Hilft Vitamin D gegen Muskelabbau beim Abnehmen?"
-    a: "<p>Die zugelassene Angabe lautet, dass Vitamin D zur Erhaltung einer normalen Muskelfunktion beiträgt. Das gilt bei ausreichender Versorgung; ein Mangel schadet dem Muskel, ein Überschuss bringt nichts zusätzlich. Gegen den Muskelabbau beim Abnehmen helfen in Studien Protein und Krafttraining, nicht Vitamin D allein.</p>"
+    a: "<p>Allein nicht. Die zugelassene Angabe lautet, dass Vitamin D zur Erhaltung einer normalen Muskelfunktion beiträgt. Das gilt bei ausreichender Versorgung; ein Mangel schadet dem Muskel, ein Überschuss bringt nichts zusätzlich. Gegen den Muskelabbau beim Abnehmen helfen in Studien Protein und Krafttraining.</p>"
   - q: "Wie viel Vitamin D ist zu viel?"
-    a: "<p>Das BfR schlägt für Nahrungsergänzungsmittel höchstens 20 µg (800 I.E.) pro Tag vor. Deutlich höhere Dosen über Monate können den Kalziumspiegel im Blut gefährlich erhöhen. Hochdosierte Präparate gehören deshalb nur nach Blutwert und in ärztliche Hand.</p>"
+    a: "<p>Mehr als 20 µg (800 I.E.) pro Tag sollten es aus Nahrungsergänzungsmitteln nicht sein; das schlägt das BfR als Höchstmenge vor. Deutlich höhere Dosen über Monate können den Kalziumspiegel im Blut gefährlich erhöhen. Hochdosierte Präparate gehören deshalb nur nach Blutwert und in ärztliche Hand.</p>"
   - q: "Reicht Sonne im Sommer?"
-    a: "<p>Von April bis September bildet die Haut bei regelmäßigem Aufenthalt im Freien meist genug Vitamin D, ein Teil wird für den Winter gespeichert. Wer tagsüber drinnen arbeitet, Sonnenschutz nutzt oder sich bedeckt kleidet, bildet weniger. Dann ist der Blutwert im Spätwinter der verlässliche Test.</p>"
+    a: "<p>Meist ja: Von April bis September bildet die Haut bei regelmäßigem Aufenthalt im Freien genug Vitamin D, ein Teil wird für den Winter gespeichert. Arbeitest du tagsüber drinnen, nutzt Sonnenschutz oder kleidest dich bedeckt, bildest du weniger. Dann ist der Blutwert im Spätwinter der verlässliche Test.</p>"
   - q: "Kann Vitamin D Bauchfett reduzieren?"
     a: "<p>Nein. Für Vitamin D ist keine Angabe zu Gewicht oder Körperfett zugelassen; die Angaben betreffen Knochen, Muskelfunktion, Immunsystem und Zähne. Vitamin D nachzufüllen schließt eine Versorgungslücke, die unter der Spritze bei kleinen Portionen und wenig Sonne entstehen kann; Fett schmelzen lässt es nicht.</p>"
   - q: "Kann zu viel Vitamin D zu Gewichtszunahme führen?"
     a: "<p>Nein, Gewichtszunahme ist keine bekannte Folge. Zu viel Vitamin D über lange Zeit, deutlich über den 20 µg am Tag, die das BfR für Nahrungsergänzung als Höchstmenge nennt, kann den Kalziumspiegel erhöhen, mit Übelkeit, Durst und Nierenproblemen. Hochdosierte Präparate gehören deshalb zu einem gemessenen Mangel und in ärztliche Begleitung.</p>"
 ---
 
-Vitamin D ist das Supplement, das in Deutschland fast jeder irgendwann nimmt, oft ohne zu wissen, warum. Unter der Abnehmspritze kommt eine Frage dazu: Wenn ich kaum esse und viel abnehme, brauche ich dann mehr? Die kurze Antwort: Der Bedarf ändert sich nicht, aber das Risiko für einen Mangel war schon vor der Spritze hoch, und die zugelassene Angabe zur Muskelfunktion macht Vitamin D für die Zeit danach interessant. Die Übersicht über alle Supplements steht unter [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
+Vitamin D nimmt in Deutschland fast jeder irgendwann, oft ohne zu wissen, warum. Unter der Spritze kommt eine Frage dazu: Wenn du kaum isst und viel abnimmst, brauchst du dann mehr? Die kurze Antwort: Der Bedarf ändert sich nicht, aber ein Mangel war schon vor der Spritze häufig, und die zugelassene Angabe zur Muskelfunktion macht Vitamin D für die Zeit danach interessant. Alle Supplements im Überblick: [Supplements nach der Abnehmspritze](/wissen/supplements-nach-abnehmspritze/).
 
-> **Kurz gesagt:** 30,2 % der Erwachsenen in Deutschland haben laut der DEGS1-Studie einen Vitamin-D-Mangel, 61,6 % liegen unter dem Wert, den viele Fachgesellschaften als ausreichend ansehen.<sup><a href="#fn-rabenberg2015">1</a></sup> Die DGE setzt 20 µg am Tag an, wenn die Haut kein Vitamin D bildet.<sup><a href="#fn-dgeReferenzwerte">2</a></sup> Vitamin D trägt zur Erhaltung einer normalen Muskelfunktion bei;<sup><a href="#fn-euClaims">3</a></sup> mehr als normal wird der Muskel davon nicht.
+> **Kurz gesagt:** Fast jeder dritte Erwachsene in Deutschland hat einen Vitamin-D-Mangel (30,2 %), 61,6 % liegen unter dem Wert, den viele Fachgesellschaften als ausreichend ansehen (DEGS1-Studie).<sup><a href="#fn-rabenberg2015">1</a></sup> Bildet deine Haut kein Vitamin D, setzt die DGE 20 µg am Tag an.<sup><a href="#fn-dgeReferenzwerte">2</a></sup> Vitamin D trägt zur Erhaltung einer normalen Muskelfunktion bei;<sup><a href="#fn-euClaims">3</a></sup> stärker als normal wird der Muskel davon nicht.
 
 ## Die Ausgangslage: Mangel ist in Deutschland normal
 
-Vitamin D kommt nur zu einem kleinen Teil aus der Nahrung (fetter Fisch, Eier, Pilze); den Hauptteil bildet die Haut unter Sonnenlicht. In Deutschland reicht die Sonne dafür etwa von April bis September. Die DEGS1-Studie des Robert Koch-Instituts mit fast 7.000 Erwachsenen fand entsprechend: 30,2 % hatten Werte unter 30 nmol/l, also einen Mangel, 61,6 % lagen unter 50 nmol/l; im Winter waren es deutlich mehr als im Sommer.<sup><a href="#fn-rabenberg2015">1</a></sup>
+Vitamin D kommt nur zu einem kleinen Teil aus der Nahrung (fetter Fisch, Eier, Pilze); den Hauptteil bildet die Haut unter Sonnenlicht. In Deutschland reicht die Sonne dafür etwa von April bis September. Entsprechend hatten 30,2 % der Erwachsenen Werte unter 30 nmol/l, also einen Mangel, und 61,6 % lagen unter 50 nmol/l – im Winter deutlich mehr als im Sommer; das zeigt die DEGS1-Studie des Robert Koch-Instituts mit fast 7.000 Erwachsenen.<sup><a href="#fn-rabenberg2015">1</a></sup>
 
 <div data-interaktiv="punktfeld" data-vorlage="vitamin-d"></div>
 
@@ -43,7 +43,7 @@ Das hat mit der Spritze nichts zu tun, es ist der Normalzustand. Die Spritze än
 
 Für Vitamin D sind in der EU unter anderem diese Angaben zugelassen:<sup><a href="#fn-euClaims">3</a></sup> Vitamin D trägt zur Erhaltung einer normalen Muskelfunktion bei, zur Erhaltung normaler Knochen, zu einer normalen Aufnahme und Verwertung von Calcium und Phosphor und zu einer normalen Funktion des Immunsystems. Nicht zugelassen sind Aussagen zum Abnehmen, zum Gewichterhalt oder zum Muskelaufbau.
 
-Für die Zeit nach der Spritze zählt die erste Angabe. Beim Abnehmen mit Semaglutid entfielen in einer Substudie rund 40 % des Gewichtsverlusts auf fettfreie Masse, darunter Muskeln.<sup><a href="#fn-wilding2021dxa">7</a></sup> Ein Vitamin-D-Mangel ist dabei ein Handicap, das sich leicht beheben lässt; den Muskel erhalten müssen trotzdem Protein und Krafttraining an mindestens zwei Tagen pro Woche.<sup><a href="#fn-who2020">6</a></sup> Wer auf beides achtet und zusätzlich im Winter 20 µg Vitamin D nimmt, setzt die Prioritäten richtig.
+Für die Zeit nach der Spritze zählt die erste Angabe. Beim Abnehmen mit Semaglutid entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse, also Muskeln, Wasser und Gewebe; das zeigt eine Substudie.<sup><a href="#fn-wilding2021dxa">7</a></sup> Ein Vitamin-D-Mangel ist dabei ein Nachteil, der sich leicht beheben lässt; den Muskel erhalten trotzdem Protein und Krafttraining an mindestens zwei Tagen pro Woche.<sup><a href="#fn-who2020">6</a></sup> Achtest du auf beides und nimmst im Winter zusätzlich 20 µg Vitamin D, setzt du die Prioritäten richtig.
 
 ## Wie viel, und woher
 
@@ -61,11 +61,11 @@ Das BfR schlägt für Nahrungsergänzungsmittel eine Tageshöchstmenge von 20 µ
 
 ## Der Blutwert: wann er sich lohnt
 
-Gemessen wird 25-OH-Vitamin-D im Blut. Der Test ist meist eine Selbstzahlerleistung. Er lohnt sich im Spätwinter, wenn der Wert am niedrigsten ist, und immer dann, wenn du eine höhere Dosis als 20 µg erwägst. Wer ihn einmal im Februar und einmal im September misst, kennt seinen Jahresverlauf und kann die Ergänzung danach einstellen. Ohne Blutwert bleibt die Winterdosis von 20 µg die vertretbare Standardlösung.
+Gemessen wird 25-OH-Vitamin-D im Blut. Der Test ist meist eine Selbstzahlerleistung. Er lohnt sich im Spätwinter, wenn der Wert am niedrigsten ist, und immer dann, wenn du eine höhere Dosis als 20 µg erwägst. Misst du ihn einmal im Februar und einmal im September, kennst du deinen Jahresverlauf und kannst die Ergänzung danach einstellen. Ohne Blutwert bleibt die Winterdosis von 20 µg die vertretbare Standardlösung.
 
 ## Nach dem Absetzen
 
-Der Bedarf bleibt gleich, die Lebensmittelauswahl wird leichter: Mit zurückgekehrtem Appetit kommen Lachs, Hering, Makrele und Eier wieder auf den Teller. Sie liefern einen Teil, nicht alles. Wer sich in der Haltephase mehr bewegt, ist außerdem öfter draußen. Die Winterregel bleibt trotzdem: 20 µg von Oktober bis März, es sei denn, der Blutwert sagt etwas anderes. Wie die Wochen nach der letzten Dosis insgesamt verlaufen, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Der Bedarf bleibt gleich, die Lebensmittelauswahl wird leichter: Mit zurückgekehrtem Appetit kommen Lachs, Hering, Makrele und Eier wieder auf den Teller. Sie liefern einen Teil, nicht alles. Bewegst du dich in der Haltephase mehr, bist du außerdem öfter draußen. Die Winterregel bleibt trotzdem: 20 µg von Oktober bis März, es sei denn, der Blutwert sagt etwas anderes. Wie die Wochen nach der letzten Dosis insgesamt verlaufen, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 ## Wann du zur Ärztin oder zum Arzt gehst
 

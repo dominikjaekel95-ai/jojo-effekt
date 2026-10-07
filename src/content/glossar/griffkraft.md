@@ -1,8 +1,8 @@
 ---
 term: "Griffkraft"
 metaTitle: "Griffkraft: der einfachste Marker für Muskelkraft"
-description: "Griffkraft ist die Kraft der Hand am Messgerät. Je 5 kg weniger war die Sterblichkeit in der PURE-Studie um 16 % höher. Wie man sie misst und wozu sie taugt."
-short: "Die Kraft, mit der die Hand ein Messgerät zusammendrückt. In der PURE-Studie waren je 5 kg weniger Griffkraft mit einer um 16 % höheren Gesamtsterblichkeit verbunden; Griffkraft gilt als Marker für die Muskelkraft des ganzen Körpers."
+description: "Griffkraft ist die Kraft der Hand am Messgerät. Je 5 kg weniger war die Sterblichkeit in der PURE-Studie um 16 % höher. Wie du sie misst und wozu sie taugt."
+short: "Wie fest deine Hand ein Messgerät zusammendrücken kann. Sie gilt als Zeichen für die Muskelkraft des ganzen Körpers: In der PURE-Studie gingen je 5 kg weniger Griffkraft mit einer um 16 % höheren Sterblichkeit einher."
 synonyms: ["Handkraft", "Grip Strength", "Handgriffkraft"]
 sources: ["leong2015", "donini2022", "who2020"]
 related: ["sarkopene-adipositas", "fettfreie-masse", "bioimpedanzanalyse"]
@@ -10,7 +10,7 @@ articles: ["muskelabbau-abnehmspritze", "krafttraining-nach-abnehmspritze"]
 pubDate: 2026-09-30
 ---
 
-Ein Handdynamometer kostet wenig, die Messung dauert zehn Sekunden, und das Ergebnis sagt mehr über die Muskulatur des ganzen Körpers, als man einer Hand zutrauen würde. Deshalb ist Griffkraft in der Altersmedizin ein Standardmaß.
+Ein Handdynamometer kostet wenig, die Messung dauert zehn Sekunden, und das Ergebnis sagt mehr über die Muskulatur des ganzen Körpers, als du einer Hand zutrauen würdest. Deshalb ist Griffkraft in der Altersmedizin ein Standardmaß.
 
 ## Die Zahl dahinter
 

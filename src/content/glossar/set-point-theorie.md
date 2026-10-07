@@ -2,7 +2,7 @@
 term: "Set-Point-Theorie"
 metaTitle: "Set-Point-Theorie: warum der Körper sein altes Gewicht verteidigt"
 description: "Die Set-Point-Theorie erklärt, warum nach dem Abnehmen Hunger steigt und Energieverbrauch sinkt. Was dafür spricht, was dagegen, und was das nach der Spritze heißt."
-short: "Ein Modell, nach dem der Körper ein bestimmtes Gewicht wie einen Sollwert verteidigt: Nach Gewichtsverlust steigt der Hunger und sinkt der Energieverbrauch, bis das alte Gewicht wieder erreicht ist."
+short: "Ein Modell: Dein Körper verteidigt ein bestimmtes Gewicht wie ein Thermostat die eingestellte Temperatur. Nach dem Abnehmen steigt der Hunger und sinkt der Verbrauch, bis das alte Gewicht wieder erreicht ist."
 synonyms: ["Set Point", "Sollwert-Theorie", "Settling Point"]
 sources: ["speakman2011", "sumithran2011", "fothergill2016"]
 related: ["adaptive-thermogenese", "metabolische-adaptation", "ghrelin", "absetzkurve"]

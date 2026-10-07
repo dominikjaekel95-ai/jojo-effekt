@@ -12,9 +12,9 @@ sources: ["dgeProtein", "leidy2015", "wilding2021dxa", "euClaims", "sardeli2018"
 related: ["ernaehrung-nach-abnehmspritze", "supplements-nach-abnehmspritze", "muskelabbau-abnehmspritze"]
 faq:
   - q: "Wie viel Protein pro Tag brauche ich unter der Abnehmspritze?"
-    a: "<p>Übersichtsarbeiten empfehlen beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag. Bei 80 kg sind das 96 bis 128 g. Bei starkem Übergewicht rechnen viele Fachleute mit dem Zielgewicht statt dem aktuellen Gewicht, sonst werden die Mengen unrealistisch.</p>"
+    a: "<p>1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag – das empfehlen Übersichtsarbeiten beim Abnehmen und beim Halten des Gewichts. Bei 80 kg sind das 96 bis 128 g. Bei starkem Übergewicht rechnen viele Fachleute mit dem Zielgewicht statt dem aktuellen Gewicht, sonst werden die Mengen unrealistisch.</p>"
   - q: "Ist viel Protein schädlich für die Nieren?"
-    a: "<p>Bei gesunden Nieren gibt es für Mengen bis etwa 1,6 bis 2 g pro kg keine Hinweise auf Schäden. Bei einer bestehenden Nierenerkrankung ist das anders: Dann legt die Ärztin oder der Arzt die Proteinmenge fest. Im Zweifel Nierenwerte kontrollieren lassen.</p>"
+    a: "<p>Bei gesunden Nieren nein: Für Mengen bis etwa 1,6 bis 2 g pro kg gibt es keine Hinweise auf Schäden. Bei einer bestehenden Nierenerkrankung ist das anders: Dann legt die Ärztin oder der Arzt die Proteinmenge fest. Im Zweifel Nierenwerte kontrollieren lassen.</p>"
   - q: "Kann ich Proteinshakes nehmen, während ich die Abnehmspritze nehme?"
     a: "<p>Ja. Proteinpulver ist ein Lebensmittel; eine Wechselwirkung mit GLP-1-Medikamenten ist nicht bekannt. Gerade bei Übelkeit und kleinem Appetit ist flüssiges Protein oft leichter als eine feste Mahlzeit. Achte auf Produkte mit mindestens 20 g Protein pro Portion und wenig Zucker.</p>"
   - q: "Molke oder pflanzliches Protein – was ist besser?"
@@ -26,17 +26,17 @@ affiliateTitle: "Beispiele für Proteinpulver mit mindestens 20 g Protein pro Po
 affiliateIntro: "Drei Beispiele, keine Empfehlung einer Marke. Worauf du achtest, steht oben: mindestens 20 g Protein pro Portion, wenig Zucker, bei empfindlichem Magen neutral oder Isolat."
 ---
 
-Unter der Abnehmspritze essen viele so wenig, dass sie nicht einmal das Minimum an Protein erreichen. Das kostet Muskeln. Hier steht, wie viel Protein du brauchst, wo es drinsteckt und wie du die Menge schaffst, wenn du kaum Hunger hast. Was nach der letzten Dosis mit Appetit und Gewicht passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Unter der Spritze isst du oft so wenig, dass nicht einmal das Minimum an Protein zusammenkommt. Das kostet Muskeln. Hier steht, wie viel Protein du brauchst, wo es drinsteckt und wie du die Menge schaffst, wenn du kaum Hunger hast. Was nach der letzten Dosis mit Appetit und Gewicht passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
-> **Kurz gesagt:** 1,2 bis 1,6 g Protein pro kg Körpergewicht und Tag.<sup><a href="#fn-leidy2015">2</a></sup> Verteilt auf drei bis vier Mahlzeiten mit mindestens etwa 25 bis 30 g, Protein immer zuerst.
+> **Kurz gesagt:** Du brauchst 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag, bei 80 kg also etwa 96 bis 128 g.<sup><a href="#fn-leidy2015">2</a></sup> Verteil das auf drei bis vier Mahlzeiten mit je mindestens etwa 25 bis 30 g, und iss das Protein immer zuerst.
 
 ## Wie viel Protein beim Abnehmen?
 
-Die DGE setzt für gesunde Erwachsene 0,8 g Protein pro kg Körpergewicht und Tag an, ab 65 Jahren 1,0 g.<sup><a href="#fn-dgeProtein">1</a></sup> Das ist ein Wert für Menschen, die ihr Gewicht halten und keinen Muskelabbau riskieren. Beim Abnehmen ist die Lage anders: Der Körper ist im Defizit und baut auch Muskelprotein ab. Übersichtsarbeiten empfehlen deshalb beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g pro kg.<sup><a href="#fn-leidy2015">2</a></sup> Protein trägt zur Erhaltung von Muskelmasse bei.<sup><a href="#fn-euClaims">4</a></sup> Warum Frauen in und nach den Wechseljahren eher am oberen Rand liegen sollten, steht unter [Wechseljahre und Abnehmspritze](/wissen/wechseljahre-abnehmspritze/).
+Die DGE setzt für gesunde Erwachsene 0,8 g Protein pro kg Körpergewicht und Tag an, ab 65 Jahren 1,0 g.<sup><a href="#fn-dgeProtein">1</a></sup> Das ist ein Wert für Menschen, die ihr Gewicht halten und keinen Muskelabbau riskieren. Beim Abnehmen ist die Lage anders: Der Körper ist im Defizit, bekommt also weniger Energie, als er verbraucht, und baut auch Muskelprotein ab. Deshalb empfehlen Übersichtsarbeiten beim Abnehmen und beim Halten des Gewichts 1,2 bis 1,6 g pro kg.<sup><a href="#fn-leidy2015">2</a></sup> Protein trägt zur Erhaltung von Muskelmasse bei.<sup><a href="#fn-euClaims">4</a></sup> Warum Frauen in und nach den Wechseljahren eher am oberen Rand liegen sollten, steht unter [Wechseljahre und Abnehmspritze](/wissen/wechseljahre-abnehmspritze/).
 
 <div data-interaktiv="protein" data-dge="ja"></div>
 
-Unter der Abnehmspritze ist das besonders relevant: In einer Substudie der STEP-1-Studie entfielen rund 40 % des Gewichtsverlusts auf fettfreie Masse.<sup><a href="#fn-wilding2021dxa">3</a></sup> Ein Grund dafür ist, dass viele bei gedämpftem Appetit zu wenig Protein essen.
+Unter der Abnehmspritze zählt das besonders: Rund 40 % des Gewichtsverlusts entfielen auf fettfreie Masse, also Muskeln, Wasser und Gewebe (Substudie der STEP-1-Studie).<sup><a href="#fn-wilding2021dxa">3</a></sup> Ein Grund dafür ist, dass viele bei gedämpftem Appetit zu wenig Protein essen.
 
 ### Tabelle: Proteinbedarf nach Körpergewicht
 
@@ -49,7 +49,7 @@ Unter der Abnehmspritze ist das besonders relevant: In einer Substudie der STEP-
 | 100 kg | 120 g | 160 g | 30–40 g |
 | 120 kg | 144 g | 192 g | 36–48 g |
 
-Bei starkem Übergewicht (BMI über 35) rechnen viele Fachleute mit dem Zielgewicht statt dem aktuellen Gewicht, weil die Mengen sonst unrealistisch werden. Wer 120 kg wiegt und 90 kg anstrebt, zielt also auf 108 bis 144 g.
+Bei starkem Übergewicht (BMI über 35) rechnen viele Fachleute mit dem Zielgewicht statt dem aktuellen Gewicht, weil die Mengen sonst unrealistisch werden. Wiegst du 120 kg und strebst 90 kg an, zielst du also auf 108 bis 144 g.
 
 **Ausnahme Nierenerkrankung:** Dann legt die Ärztin oder der Arzt die Proteinmenge fest. Bei gesunden Nieren gibt es für diese Mengen keine Hinweise auf Schäden.
 
@@ -98,7 +98,7 @@ Zwei Folgen einer zu geringen Zufuhr zeigen sich mit Verzögerung: [Haarausfall]
 
 - **Molkenprotein (Whey):** schnell verfügbar, viel Leucin, günstig. Bei Laktoseintoleranz Isolat wählen.
 - **Casein:** langsam, sättigt länger, gut abends.
-- **Pflanzlich:** Erbse, Reis, Soja oder Mischungen. Portion etwas größer wählen (30 bis 35 g Pulver), damit die Aminosäuren ausreichen.
+- **Pflanzlich:** Erbse, Reis, Soja oder Mischungen. Portion etwas größer wählen (30 bis 35 g Pulver), damit die Aminosäuren (Eiweißbausteine) ausreichen.
 - **Worauf achten:** mindestens 20 g Protein pro Portion, wenig Zucker, keine lange Zutatenliste. Aromen sind Geschmackssache – bei Übelkeit ist neutral oft besser.
 
 ## Protein allein reicht nicht

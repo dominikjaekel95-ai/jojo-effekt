@@ -2,7 +2,7 @@
 term: "Metabolische Adaptation"
 metaTitle: "Metabolische Adaptation: was nach dem Gewichtsverlust bleibt"
 description: "Metabolische Adaptation ist die Summe aller Anpassungen an ein niedrigeres Gewicht: weniger Verbrauch, mehr Hunger, weniger Bewegung. Was Studien dazu zeigen."
-short: "Oberbegriff für alle Anpassungen des Körpers an ein niedrigeres Gewicht: weniger Energieverbrauch, mehr Hunger, weniger Sättigung, weniger spontane Bewegung. Sie halten nach Diäten mindestens ein Jahr an."
+short: "Der Sammelbegriff dafür, wie sich dein Körper an das niedrigere Gewicht anpasst: weniger Energieverbrauch, mehr Hunger, schwächere Sättigung, weniger Bewegung nebenbei. Nach Diäten hält das mindestens ein Jahr an."
 synonyms: ["metabolische Anpassung", "Metabolic Adaptation", "Stoffwechselanpassung"]
 sources: ["sumithran2011", "fothergill2016", "rosenbaum2010", "levine2002"]
 related: ["adaptive-thermogenese", "ghrelin", "neat", "set-point-theorie"]

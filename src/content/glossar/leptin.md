@@ -2,7 +2,7 @@
 term: "Leptin"
 metaTitle: "Leptin: das Sättigungshormon, das nach dem Abnehmen fehlt"
 description: "Leptin meldet dem Gehirn die Energiereserven des Fettgewebes. Nach Gewichtsverlust fällt es stark und bleibt niedrig. Was das für Hunger und Verbrauch heißt."
-short: "Ein Hormon des Fettgewebes, das dem Gehirn die Größe der Energiereserven meldet. Nach Gewichtsverlust fällt der Leptinspiegel überproportional; das Gehirn liest das als Mangel und steuert mit mehr Hunger und weniger Energieverbrauch gegen."
+short: "Ein Hormon aus dem Fettgewebe, das dem Gehirn meldet, wie groß deine Reserven sind. Nach dem Abnehmen fällt es stärker als das Fett. Das Gehirn liest das als Mangel und steuert gegen: mehr Hunger, weniger Verbrauch."
 synonyms: ["Sättigungshormon"]
 sources: ["sumithran2011", "rosenbaum2010", "spiegel2004"]
 related: ["ghrelin", "set-point-theorie", "adaptive-thermogenese", "metabolische-adaptation"]

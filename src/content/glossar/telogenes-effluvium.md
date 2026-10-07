@@ -2,7 +2,7 @@
 term: "Telogenes Effluvium"
 metaTitle: "Telogenes Effluvium: Haarausfall nach schnellem Gewichtsverlust"
 description: "Telogenes Effluvium ist diffuser Haarausfall zwei bis drei Monate nach einem Auslöser wie schnellem Gewichtsverlust. Warum er kommt, wie lange er dauert."
-short: "Diffuser, vorübergehender Haarausfall, bei dem viele Haare gleichzeitig in die Ruhephase wechseln. Er beginnt meist zwei bis drei Monate nach einem Auslöser wie schnellem Gewichtsverlust und klingt in der Regel innerhalb von etwa sechs Monaten ab."
+short: "Vorübergehender Haarausfall am ganzen Kopf: Viele Haare gehen gleichzeitig in die Ruhephase und fallen dann aus. Meist beginnt er zwei bis drei Monate nach einem Auslöser wie schnellem Abnehmen und hört in der Regel nach etwa sechs Monaten auf."
 synonyms: ["Haarausfall nach Gewichtsverlust", "Telogen Effluvium", "diffuser Haarausfall"]
 sources: ["malkud2015", "leidy2015", "almandoz2024"]
 related: ["fettfreie-masse", "proteinverteilung", "haltephase"]

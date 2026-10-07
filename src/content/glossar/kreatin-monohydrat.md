@@ -2,7 +2,7 @@
 term: "Kreatin-Monohydrat"
 metaTitle: "Kreatin-Monohydrat: die untersuchte Form von Kreatin"
 description: "Kreatin-Monohydrat ist die am besten untersuchte Kreatinform. Welche EU-Angaben bei 3 g täglich gelten, was zur Sicherheit bekannt ist, warum Training dazugehört."
-short: "Die am besten untersuchte Form von Kreatin. Bei 3 g täglich gilt die EU-Angabe zur körperlichen Leistung bei Schnellkrafttraining; für Erwachsene über 55 zusätzlich die Angabe zur Wirkung von Krafttraining auf die Muskelkraft."
+short: "Die gängige, gut untersuchte Form von Kreatin. Bei 3 g täglich gilt die EU-Angabe zur körperlichen Leistung bei Schnellkrafttraining; für Erwachsene über 55 zusätzlich die Angabe zur Wirkung von Krafttraining auf die Muskelkraft."
 synonyms: ["Kreatin", "Creatin", "Creatine", "Creatine Monohydrate"]
 sources: ["euClaims", "kreider2017"]
 related: ["muskelproteinsynthese", "fettfreie-masse", "griffkraft"]

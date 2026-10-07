@@ -2,7 +2,7 @@
 term: "Hedonischer Hunger"
 metaTitle: "Hedonischer Hunger: Appetit ohne Energiebedarf"
 description: "Hedonischer Hunger ist Verlangen nach Essen aus Lust, nicht aus Energiebedarf. Woher der Begriff kommt und warum er nach der Spritze zuerst zurückkommt."
-short: "Das Verlangen nach Essen aus Lust und Belohnung, unabhängig vom Energiebedarf. Es wird durch hochschmackhafte Lebensmittel ausgelöst und ist vom homöostatischen Hunger zu unterscheiden, der Energie nachfordert."
+short: "Appetit aus Lust, nicht aus Bedarf: das Verlangen nach Chips oder Schokolade, obwohl du satt bist. Ausgelöst wird er durch sehr schmackhaftes Essen, anders als der normale Hunger, mit dem der Körper Energie nachfordert."
 synonyms: ["hedonischer Hunger", "Hedonic Hunger", "Belohnungshunger", "Lusthunger"]
 sources: ["lowe2007", "sumithran2011"]
 related: ["ghrelin", "set-point-theorie", "metabolische-adaptation"]

@@ -13,15 +13,15 @@ sources: ["rodriguez2025", "wu2025", "wilding2022ext", "aronne2024", "sumithran2
 related: ["jojo-effekt-abnehmspritze", "gewicht-halten-nach-abnehmspritze", "protein-abnehmspritze"]
 faq:
   - q: "Gibt es Entzugserscheinungen, wenn ich die Abnehmspritze absetze?"
-    a: "<p>Ein Entzugssyndrom wie bei manchen anderen Medikamenten ist für GLP-1-Rezeptoragonisten nicht beschrieben. Was zurückkommt, ist der Appetit, und mit ihm oft das Gefühl, ständig ans Essen zu denken. Manche berichten in den ersten Wochen von Müdigkeit oder Unruhe; das ist in Studien nicht systematisch erfasst. Bei ungewöhnlichen Beschwerden sprich mit deiner Ärztin.</p>"
+    a: "<p>Nein, ein Entzugssyndrom wie bei manchen anderen Medikamenten ist für GLP-1-Rezeptoragonisten nicht beschrieben. Was zurückkommt, ist der Appetit, und mit ihm oft das Gefühl, ständig ans Essen zu denken. Manche berichten in den ersten Wochen von Müdigkeit oder Unruhe; systematisch erfasst ist das nicht. Bei ungewöhnlichen Beschwerden sprich mit deiner Ärztin.</p>"
   - q: "Wie lange bleibt der Wirkstoff nach der letzten Spritze im Körper?"
-    a: "<p>Semaglutid hat eine Halbwertszeit von etwa einer Woche, Tirzepatid von etwa fünf Tagen. Nach rund fünf Halbwertszeiten ist der Wirkstoff weitgehend abgebaut – bei Semaglutid also nach etwa fünf bis sieben Wochen, bei Tirzepatid nach etwa vier. Die Wirkung auf den Appetit lässt schon vorher spürbar nach.</p>"
+    a: "<p>Etwa vier bis sieben Wochen, je nach Wirkstoff. Semaglutid hat eine Halbwertszeit von etwa einer Woche, Tirzepatid von etwa fünf Tagen; nach rund fünf Halbwertszeiten ist der Wirkstoff weitgehend abgebaut – bei Semaglutid also nach etwa fünf bis sieben Wochen, bei Tirzepatid nach etwa vier. Die Wirkung auf den Appetit lässt schon vorher spürbar nach.</p>"
   - q: "Muss ich die Abnehmspritze ausschleichen?"
-    a: "<p>Ein medizinisch zwingender Grund zum Ausschleichen ist nicht belegt; die Zulassungsstudien haben abrupt abgesetzt. Ob ein schrittweises Reduzieren den Wiederanstieg des Gewichts abmildert, wird derzeit untersucht. Das Vorgehen legt deine Ärztin oder dein Arzt fest.</p>"
+    a: "<p>Nein, ein medizinisch zwingender Grund zum Ausschleichen ist nicht belegt; die Zulassungsstudien haben abrupt abgesetzt. Ob ein schrittweises Reduzieren den Wiederanstieg des Gewichts abmildert, wird derzeit untersucht. Das Vorgehen legt deine Ärztin oder dein Arzt fest.</p>"
   - q: "Kann ich nach dem Absetzen wieder anfangen?"
-    a: "<p>Ja, das ist medizinisch möglich und in der Praxis häufig. In einer US-Auswertung hatte innerhalb eines Jahres nach dem Absetzen etwa jeder Zweite mit Typ-2-Diabetes und etwa jeder Dritte ohne Diabetes die Therapie wieder aufgenommen. Wie der Wiedereinstieg abläuft, legt deine Ärztin oder dein Arzt fest.</p>"
+    a: "<p>Ja, das ist medizinisch möglich und in der Praxis häufig. Innerhalb eines Jahres nach dem Absetzen hatte etwa jeder Zweite mit Typ-2-Diabetes und etwa jeder Dritte ohne Diabetes die Therapie wieder aufgenommen – das zeigt eine US-Auswertung. Wie der Wiedereinstieg abläuft, legt deine Ärztin oder dein Arzt fest.</p>"
   - q: "Was passiert mit Blutzucker und Blutdruck nach dem Absetzen?"
-    a: "<p>Die Verbesserungen, die mit dem Gewichtsverlust gekommen sind, gehen mit dem Gewicht zum Teil wieder zurück. In der STEP-1-Verlängerung näherten sich Blutzucker, Blutdruck und Blutfette ein Jahr nach dem Absetzen wieder den Ausgangswerten. Wer vorher auffällige Werte hatte, sollte sie nach dem Absetzen kontrollieren lassen.</p>"
+    a: "<p>Die Verbesserungen, die mit dem Gewichtsverlust gekommen sind, gehen mit dem Gewicht zum Teil wieder zurück. Ein Jahr nach dem Absetzen näherten sich Blutzucker, Blutdruck und Blutfette wieder den Ausgangswerten – das zeigt die STEP-1-Verlängerung. Hattest du vorher auffällige Werte, lass sie nach dem Absetzen kontrollieren.</p>"
 ---
 
 Du setzt ab – und merkst, dass dir kaum jemand sagt, wie es jetzt weitergeht. Damit bist du nicht allein: Die meisten hören innerhalb eines Jahres wieder auf, in einer großen US-Auswertung fast zwei Drittel (64,8 %) derer, die die Spritze zum Abnehmen nahmen.<sup><a href="#fn-rodriguez2025">1</a></sup> Dieser Artikel zeigt Woche für Woche, was die Studien erwarten lassen – und womit du dich vorbereitest.
@@ -32,7 +32,7 @@ Du setzt ab – und merkst, dass dir kaum jemand sagt, wie es jetzt weitergeht. 
 
 ## Was passiert, wenn man die Abnehmspritze absetzt?
 
-Der Wirkstoff wird über Wochen abgebaut, der Appetit kommt zurück, und ohne Gegenmaßnahmen steigt das Gewicht: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen von Semaglutid im Mittel zwei Drittel des verlorenen Gewichts wieder da, und Blutzucker, Blutdruck und Blutfette näherten sich den Ausgangswerten.<sup><a href="#fn-wilding2022ext">3</a></sup> Ein Entzugssyndrom gibt es nicht; was wegfällt, ist die Appetitbremse. Wer regelmäßig trainiert, hält das Gewicht in Studien deutlich besser: In der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr nach Therapieende 6,0 kg mehr zu als nach einem Trainingsprogramm.<sup><a href="#fn-jensen2024">6</a></sup>
+Dein Körper baut den Wirkstoff über Wochen ab, der Appetit kommt zurück, und ohne Gegenmaßnahmen steigt das Gewicht: Ein Jahr nach dem Absetzen von Semaglutid waren im Mittel zwei Drittel des verlorenen Gewichts wieder da, und Blutzucker, Blutdruck und Blutfette näherten sich den Ausgangswerten – das zeigt die STEP-1-Verlängerung.<sup><a href="#fn-wilding2022ext">3</a></sup> Ein Entzugssyndrom gibt es nicht; was wegfällt, ist die Appetitbremse. Wer regelmäßig trainiert, hält das Gewicht in Studien deutlich besser: Nach Liraglutid allein nahmen Teilnehmende im Jahr nach Therapieende 6,0 kg mehr zu als nach einem Trainingsprogramm (S-LiTE-Nachbeobachtung).<sup><a href="#fn-jensen2024">6</a></sup>
 
 ## Was Betroffene berichten
 
@@ -48,13 +48,13 @@ Einzelne Stimmen, keine Studienergebnisse – die Zahlen stehen in den Abschnitt
 
 ## Wie schnell nimmt man nach dem Absetzen zu?
 
-Messbar ab etwa Woche 8: In einer Meta-Analyse randomisierter Studien war der Gewichtsunterschied zur Kontrollgruppe ab etwa acht Wochen nach dem Absetzen signifikant und stieg bis etwa Woche 20 weiter.<sup><a href="#fn-wu2025">2</a></sup> Nach einem Jahr ohne Medikament lag das Gewicht in der STEP-1-Verlängerung bei minus 5,6 % statt minus 17,3 % gegenüber dem Start; zwei Drittel des Verlusts waren zurück.<sup><a href="#fn-wilding2022ext">3</a></sup> Die ersten ein bis zwei Kilo in den ersten Wochen sind meist Wasser und Darminhalt, weil du wieder mehr isst; die Fettzunahme kommt langsamer und bleibt, wenn du nichts dagegen tust.
+Ab etwa Woche 8 ist die Zunahme im Vergleich zu Menschen, die weiter spritzen, deutlich messbar, bis etwa Woche 20 wächst der Unterschied weiter. Das zeigt eine Auswertung mehrerer Studien (Meta-Analyse).<sup><a href="#fn-wu2025">2</a></sup> Nach einem Jahr ohne Medikament lag das Gewicht in der STEP-1-Verlängerung bei minus 5,6 % statt minus 17,3 % gegenüber dem Start; zwei Drittel des Verlusts waren zurück.<sup><a href="#fn-wilding2022ext">3</a></sup> Wer zum Beispiel 15 Kilo verloren hatte, hatte im Mittel 10 wieder drauf. Die ersten ein bis zwei Kilo sind meist Wasser und Darminhalt, weil du wieder mehr isst; die Fettzunahme kommt langsamer und bleibt, wenn du nichts dagegen tust.
 
 <div data-interaktiv="absetzkurve" data-acht="ja"></div>
 
 ## Wie lange wirkt die Abnehmspritze nach dem Absetzen?
 
-Semaglutid hat laut Fachinformation eine Halbwertszeit von etwa einer Woche, ist nach etwa fünf Wochen weitgehend abgebaut und bis etwa sieben Wochen nach der letzten Dosis nachweisbar.<sup><a href="#fn-fachinfoWegovy">11</a></sup> Tirzepatid hat eine Halbwertszeit von etwa fünf Tagen und ist nach rund 25 Tagen weitgehend abgebaut.<sup><a href="#fn-fachinfoMounjaro">12</a></sup> Die Wirkung auf den Appetit lässt schon vorher nach, meist zwischen Woche 2 und 5. Diese Auswaschphase ist der Grund, warum die ersten Wochen trügen: Das Gewicht steht noch, der Wirkstoff ist schon fast weg. Die Zeitachse weiter unten zeigt beides nebeneinander; dein eigenes Datum rechnet der [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/) aus.
+Semaglutid hat laut Fachinformation eine Halbwertszeit (die Zeit, bis die Hälfte des Wirkstoffs abgebaut ist) von etwa einer Woche, ist nach etwa fünf Wochen weitgehend abgebaut und bis etwa sieben Wochen nach der letzten Dosis nachweisbar.<sup><a href="#fn-fachinfoWegovy">11</a></sup> Tirzepatid hat eine Halbwertszeit von etwa fünf Tagen und ist nach rund 25 Tagen weitgehend abgebaut.<sup><a href="#fn-fachinfoMounjaro">12</a></sup> Die Wirkung auf den Appetit lässt schon vorher nach, meist zwischen Woche 2 und 5. Diese Auswaschphase – die Wochen, in denen der Wirkstoff den Körper verlässt – ist der Grund, warum die ersten Wochen trügen: Dein Gewicht steht noch, der Wirkstoff ist schon fast weg. Die Zeitachse weiter unten zeigt beides nebeneinander; dein eigenes Datum rechnet der [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/) aus.
 
 ## Warum Menschen die Abnehmspritze absetzen
 
@@ -70,27 +70,27 @@ Was auch immer der Grund ist: Ob und wie du dein Medikament absetzt, besprichst 
 
 ## Was nach der letzten Dosis passiert – Woche für Woche
 
-Die folgende Übersicht fasst zusammen, was sich aus Pharmakologie und Studien ableiten lässt. Dein Verlauf kann davon abweichen. Wer die Punkte als Kalenderdaten für die eigene letzte Dosis sehen will, nutzt den [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/).
+Die Übersicht zeigt, was sich aus Pharmakologie und Studien ableiten lässt; dein Verlauf kann davon abweichen. Willst du die Punkte als Kalenderdaten für deine letzte Dosis sehen, nutze den [Zeitplan nach der letzten Dosis](/werkzeuge/zeitplan-nach-letzter-dosis/).
 
 <div data-interaktiv="zeitachse" data-wirkstoffe="semaglutid,tirzepatid"></div>
 
-**Woche 1 bis 2: Noch wenig Veränderung.** Semaglutid hat eine Halbwertszeit von etwa einer Woche, Tirzepatid von etwa fünf Tagen. In den ersten Tagen ist noch genug Wirkstoff im Körper; viele merken keinen Unterschied.
+**Woche 1 bis 2: Noch wenig Veränderung.** In den ersten Tagen ist noch genug Wirkstoff im Körper; viele merken keinen Unterschied.
 
-**Woche 2 bis 5: Der Appetit kommt zurück.** Mit sinkendem Wirkstoffspiegel arbeitet der Magen wieder schneller, das Sättigungssignal kommt später, und die Gedanken ans Essen werden lauter. Gleichzeitig wirken die hormonellen Anpassungen, die jeder starke Gewichtsverlust auslöst: mehr Ghrelin, weniger Leptin – in einer Studie war das noch ein Jahr nach der Diät messbar.<sup><a href="#fn-sumithran2011">5</a></sup> Das ist die kritische Phase: Der Hunger ist da, die Routinen noch nicht.
+**Woche 2 bis 5: Der Appetit kommt zurück.** Mit sinkendem Wirkstoffspiegel arbeitet dein Magen wieder schneller, das Sättigungssignal kommt später, und die Gedanken ans Essen werden lauter. Gleichzeitig wirken die hormonellen Anpassungen, die jeder starke Gewichtsverlust auslöst: mehr Ghrelin (Hungerhormon), weniger Leptin (Sättigungshormon) – in einer Studie war das noch ein Jahr nach der Diät messbar.<sup><a href="#fn-sumithran2011">5</a></sup> Das ist die kritische Phase: Der Hunger ist da, die Routinen noch nicht.
 
 **Woche 5 bis 8: Der Wirkstoff ist praktisch weg.** Nach etwa fünf Halbwertszeiten ist der größte Teil abgebaut. Was jetzt zählt, ist ausschließlich das, was du isst und wie du dich bewegst.
 
-**Ab Woche 8: Die Zunahme wird messbar.** In einer Meta-Analyse randomisierter Studien war der Gewichtsunterschied zur Kontrollgruppe ab etwa Woche 8 nach dem Absetzen signifikant und wuchs bis etwa Woche 20 weiter.<sup><a href="#fn-wu2025">2</a></sup>
+**Ab Woche 8: Die Zunahme wird messbar.** Jetzt zeigt die Waage deutlich mehr als bei Menschen, die weiter spritzen, und der Abstand wächst bis etwa Woche 20.<sup><a href="#fn-wu2025">2</a></sup>
 
-**Nach einem Jahr:** In der STEP-1-Verlängerung waren im Mittel zwei Drittel des verlorenen Gewichts zurück, und Blutzucker, Blutdruck und Blutfette hatten sich den Ausgangswerten wieder angenähert.<sup><a href="#fn-wilding2022ext">3</a></sup> Nach dem Absetzen von Tirzepatid lag die Zunahme in 52 Wochen bei etwa 14 % des Körpergewichts.<sup><a href="#fn-aronne2024">4</a></sup> Ein systematischer Review von 2026 bestätigt diese Verlaufskurve über verschiedene Studien hinweg.<sup><a href="#fn-eclinmed2026">10</a></sup>
+**Nach einem Jahr:** Im Mittel waren zwei Drittel des verlorenen Gewichts zurück, und Blutzucker, Blutdruck und Blutfette hatten sich den Ausgangswerten wieder angenähert (STEP-1-Verlängerung).<sup><a href="#fn-wilding2022ext">3</a></sup> Nach dem Absetzen von Tirzepatid lag die Zunahme in 52 Wochen bei etwa 14 % des Körpergewichts.<sup><a href="#fn-aronne2024">4</a></sup> Diesen Verlauf bestätigt über verschiedene Studien hinweg auch ein systematischer Review von 2026.<sup><a href="#fn-eclinmed2026">10</a></sup>
 
 ## Ausschleichen oder abrupt absetzen?
 
-Hier gehen die Empfehlungen im Netz auseinander. Manche Anbieter raten zum langsamen Reduzieren, andere sagen, das sei nicht nötig. Der Stand der Evidenz:
+Hier gehen die Empfehlungen im Netz auseinander. Manche Anbieter raten zum langsamen Reduzieren, andere halten das für unnötig. Die Studienlage:
 
 - Die Zulassungsstudien haben **abrupt** abgesetzt (Wechsel auf Placebo). Ein Entzugssyndrom ist dabei nicht aufgetreten.
 - Dass ein **schrittweises Ausschleichen** den Wiederanstieg des Gewichts abmildert, ist plausibel, aber nicht durch randomisierte Studien belegt. Erste Beobachtungen aus der Praxis werden derzeit ausgewertet.
-- Ein Argument für langsames Reduzieren ist psychologisch: Man erlebt den zurückkehrenden Appetit in Etappen und kann Routinen anpassen, bevor er ganz da ist.
+- Ein Argument für langsames Reduzieren ist psychologisch: Du erlebst den zurückkehrenden Appetit in Etappen und kannst deine Routinen anpassen, bevor er ganz da ist.
 
 Die Entscheidung trifft deine Ärztin oder dein Arzt mit dir. Was du selbst beeinflussen kannst, ist die Vorbereitung.
 
@@ -98,19 +98,19 @@ Die Entscheidung trifft deine Ärztin oder dein Arzt mit dir. Was du selbst beei
 
 Der beste Zeitpunkt, die Zeit nach der Spritze vorzubereiten, ist die Zeit mit der Spritze. Die Studien legen dafür diese Reihenfolge nahe:
 
-**1. Krafttraining zur Gewohnheit machen.** Das ist der Faktor mit der besten Evidenz. In der dänischen S-LiTE-Studie hielten Teilnehmende mit Trainingsprogramm ihr Gewicht ein Jahr nach dem Ende der Behandlung; nach Liraglutid allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup> Fang während der Therapie an, damit die Routine steht, wenn der Hunger kommt.
+**1. Krafttraining zur Gewohnheit machen.** Das ist der am besten belegte Faktor: Teilnehmende mit Trainingsprogramm hielten ihr Gewicht ein Jahr nach dem Ende der Behandlung; nach Liraglutid allein lag die Zunahme 6 kg höher – das zeigt die dänische S-LiTE-Studie.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup> Fang während der Therapie an, damit die Routine steht, wenn der Hunger kommt.
 
 <div data-interaktiv="slite"></div>
 
-**2. Protein auf Zielmenge bringen.** Übersichtsarbeiten empfehlen 1,2 bis 1,6 g pro kg Körpergewicht und Tag, verteilt auf die Mahlzeiten.<sup><a href="#fn-leidy2015">7</a></sup> Unter der Spritze essen viele deutlich weniger. Wer die Menge schon vor dem Absetzen erreicht, hat die Muskeln besser geschützt und eine Ernährungsstruktur, die auch dann funktioniert, wenn der Appetit zurückkommt.
+**2. Protein auf Zielmenge bringen.** Dein Ziel: 1,2 bis 1,6 g pro kg Körpergewicht und Tag, verteilt auf die Mahlzeiten – das empfehlen Übersichtsarbeiten.<sup><a href="#fn-leidy2015">7</a></sup> Unter der Spritze essen viele deutlich weniger. Erreichst du die Menge schon vor dem Absetzen, sind deine Muskeln besser geschützt und du hast eine Ernährungsstruktur, die auch funktioniert, wenn der Appetit zurückkommt.
 
 **3. Wiegen mit Regel.** Einmal pro Woche, morgens, gleiche Bedingungen. Lege vorher fest, ab welcher Zunahme du reagierst und wie, zum Beispiel mit den Zonen des [Gewichtskorridors](/werkzeuge/gewichtskorridor/): ab 1,4 kg über dem Startgewicht zwei Wochen gegensteuern, ab 2,3 kg den Plan prüfen.
 
-**4. Den Gewichtsverlauf notieren und mit der Ärztin oder dem Arzt besprechen.** Optionen offenhalten: Leitlinien sehen Medikamente als Teil einer langfristigen Behandlung – ein Wiedereinstieg ist eine Option, keine Niederlage.<sup><a href="#fn-dagLeitlinie">9</a></sup>
+**4. Den Gewichtsverlauf notieren und mit der Ärztin oder dem Arzt besprechen.** Halte dir Optionen offen: Leitlinien sehen Medikamente als Teil einer langfristigen Behandlung – ein Wiedereinstieg ist eine Option, keine Niederlage.<sup><a href="#fn-dagLeitlinie">9</a></sup>
 
 ## Was beim Absetzen körperlich passiert – und was nicht
 
-Vieles, was Menschen nach dem Absetzen bemerken, ist nicht das Verschwinden einer Wirkung, sondern das Verschwinden einer Nebenwirkung:
+Vieles, was du nach dem Absetzen bemerkst, ist nicht das Verschwinden einer Wirkung, sondern einer Nebenwirkung:
 
 - **Übelkeit, Völlegefühl, Aufstoßen und Verstopfung** lassen nach, sobald der Magen wieder normal arbeitet. Viele berichten in Woche 2 bis 4 von mehr Energie und besserem Appetit auf feste Mahlzeiten.
 - **Der Appetit kommt zurück**, oft in Schüben, oft abends. Das ist die Wirkung, die wegfällt; wie du damit umgehst, steht im Artikel [Heißhunger nach dem Absetzen](/wissen/heisshunger-nach-abnehmspritze/).
@@ -123,7 +123,7 @@ Präparatspezifische Verläufe: [Wegovy](/wissen/wegovy-absetzen/), [Mounjaro](/
 
 ## Wiedereinstieg: was die Daten sagen
 
-Absetzen ist oft nicht endgültig. In der US-Auswertung von Versorgungsdaten begann rund ein Drittel der Menschen ohne Typ-2-Diabetes, die abgesetzt hatten, innerhalb eines Jahres erneut mit der Therapie; bei Typ-2-Diabetes war es fast die Hälfte.<sup><a href="#fn-rodriguez2025">1</a></sup> Ein Wiedereinstieg ist medizinisch möglich; wie er abläuft, legt deine Ärztin oder dein Arzt fest. Wer zwischen zwei Therapiephasen Muskeln, Training und Ernährungsstruktur behält, startet eine zweite Phase von einem besseren Punkt aus.
+Absetzen ist oft nicht endgültig. Rund ein Drittel derer, die ohne Typ-2-Diabetes abgesetzt hatten, begann innerhalb eines Jahres erneut mit der Therapie; bei Typ-2-Diabetes war es fast die Hälfte – das zeigt die US-Auswertung von Versorgungsdaten.<sup><a href="#fn-rodriguez2025">1</a></sup> Ein Wiedereinstieg ist medizinisch möglich; wie er abläuft, legt deine Ärztin oder dein Arzt fest. Behältst du zwischen zwei Therapiephasen Muskeln, Training und Ernährungsstruktur, startest du die zweite Phase von einem besseren Punkt aus.
 
 ## Woran du merkst, dass du früher zur Ärztin solltest
 

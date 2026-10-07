@@ -2,7 +2,7 @@
 term: "Progressive Belastungssteigerung"
 metaTitle: "Progressive Belastungssteigerung: Training muss schwerer werden"
 description: "Progressive Belastungssteigerung: Gewicht, Wiederholungen oder Widerstand steigen planmäßig. Ohne sie bleibt Muskelaufbau aus. Die Regel des ACSM-Positionspapiers."
-short: "Das Trainingsprinzip, die Belastung planmäßig zu erhöhen, sobald die vorgegebenen Wiederholungen sauber gelingen: mehr Gewicht, stärkeres Band, mehr Wiederholungen oder Sätze. Das ACSM empfiehlt Steigerungen von etwa 2 bis 10 %."
+short: "Das Prinzip, das Training Schritt für Schritt schwerer zu machen, sobald alle Wiederholungen sauber gelingen: mehr Gewicht, ein stärkeres Band, mehr Wiederholungen oder Sätze. Der US-Sportmedizinerverband ACSM empfiehlt Steigerungen von etwa 2 bis 10 %."
 synonyms: ["Progressive Overload", "progressive Überlastung", "Belastungssteigerung", "Progression"]
 sources: ["acsm2009", "schoenfeld2016", "sardeli2018"]
 related: ["muskelproteinsynthese", "kreatin-monohydrat", "griffkraft"]
@@ -16,7 +16,7 @@ Ein Muskel wächst nur, wenn die Anforderung wächst. Wer drei Monate lang diese
 
 Das Positionspapier des American College of Sports Medicine empfiehlt Einsteigern 8 bis 12 Wiederholungen in ein bis drei Sätzen und, sobald die Zielwiederholungen sauber gelingen, eine Steigerung der Last um etwa 2 bis 10 %.<sup><a href="#fn-acsm2009">1</a></sup> Praktisch heißt das: Wenn du in allen Sätzen 12 saubere Wiederholungen schaffst, wird die Übung beim nächsten Mal schwerer, nicht länger.
 
-## Womit man steigert
+## Womit du steigerst
 
 - **Widerstand:** mehr Gewicht, ein stärkeres Band, ein Rucksack, der Übergang vom Wand-Liegestütz zur Tischkante zum Boden.
 - **Umfang:** ein dritter Satz, zwei Wiederholungen mehr.

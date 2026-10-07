@@ -11,7 +11,7 @@ sources: ["mifflin1990", "dgeEnergie", "leibel1995", "rosenbaum2010", "rosenbaum
 related: ["jojo-effekt-abnehmspritze", "ernaehrung-nach-abnehmspritze", "muskelabbau-abnehmspritze"]
 faq:
   - q: "Wie viele Kalorien brauche ich nach dem Absetzen der Abnehmspritze?"
-    a: "<p>Weniger als vor der Therapie, und weniger, als eine Formel für dein neues Gewicht ausrechnet. Nach einem Gewichtsverlust von 10 % liegt der Energieverbrauch in Messungen etwa 300 bis 400 kcal am Tag unter dem Wert, den man für das neue Gewicht erwarten würde. Eine pauschale Zahl gibt es nicht; die Formel liefert einen Startwert, die Waage über vier Wochen sagt, ob er stimmt.</p>"
+    a: "<p>Weniger als vor der Therapie, und weniger, als eine Formel für dein neues Gewicht ausrechnet. Nach einem Gewichtsverlust von 10 % liegt der Energieverbrauch in Messungen etwa 300 bis 400 kcal am Tag unter dem Wert, den du für dein neues Gewicht erwarten würdest. Eine pauschale Zahl gibt es nicht; die Formel liefert einen Startwert, die Waage über vier Wochen sagt, ob er stimmt.</p>"
   - q: "Wie berechne ich meinen Grundumsatz?"
     a: "<p>Mit der Mifflin-St-Jeor-Formel: Männer 10 × Gewicht in kg + 6,25 × Größe in cm − 5 × Alter + 5; Frauen dasselbe mit − 161 statt + 5. Das Ergebnis ist der Ruheenergieverbrauch in kcal pro Tag; bei sitzender Tätigkeit ergibt er mal 1,4 den Tagesbedarf. Die Formel schätzt den Verbrauch von Menschen ohne Gewichtsverlust; nach dem Abnehmen liegt der gemessene Wert meist darunter.</p>"
   - q: "Ist mein Stoffwechsel nach dem Abnehmen kaputt?"
@@ -24,9 +24,9 @@ faq:
     a: "<p>Nicht dauerhaft. Wer zwei Wochen zählt, bekommt ein Gefühl dafür, wie klein die Portion ist, die den neuen Bedarf deckt; danach reicht eine Struktur mit Protein zuerst, Gemüse bei jeder Mahlzeit, festen Essenszeiten und ohne Flüssigkalorien. Ob die Menge passt, zeigt die Waage, nicht die Rechnung.</p>"
 ---
 
-Nach dem Absetzen stellt sich die Frage, die unter der Spritze niemand stellen musste: Wie viel darf ich eigentlich essen? Die ehrliche Antwort hat zwei Teile. Erstens weniger als vor der Therapie, weil ein leichterer Körper weniger braucht. Zweitens weniger, als eine Formel für das neue Gewicht ausrechnet, weil der Körper nach Gewichtsverlust sparsamer arbeitet. Dieser Artikel sagt, wie groß beide Effekte in Messungen sind, wie du deinen Bedarf schätzt, was die Spritze selbst mit dem Verbrauch macht und was das für die Portionen heißt. Warum das Gewicht zurückkommt, steht unter [Jojo-Effekt nach der Abnehmspritze](/wissen/jojo-effekt-abnehmspritze/).
+Unter der Spritze musstest du dir die Frage nie stellen, jetzt ist sie da: Wie viel darfst du eigentlich essen? Die ehrliche Antwort hat zwei Teile. Weniger als vor der Therapie, weil ein leichterer Körper weniger braucht. Und weniger, als eine Formel für dein neues Gewicht ausrechnet, weil der Körper nach dem Abnehmen sparsamer arbeitet. Hier steht, wie groß beide Effekte sind, wie du deinen Bedarf schätzt, was die Spritze selbst mit dem Verbrauch macht und was das für deine Portionen heißt. Warum das Gewicht zurückkommt, steht unter [Jojo-Effekt nach der Abnehmspritze](/wissen/jojo-effekt-abnehmspritze/).
 
-> **Kurz gesagt:** Nach 10 % Gewichtsverlust liegt der Energieverbrauch etwa 300 bis 400 kcal am Tag unter dem Wert, den Gewicht und Körperzusammensetzung erwarten lassen.<sup><a href="#fn-rosenbaum2010">4</a></sup> Die Formel liefert einen Startwert, kein Urteil; die Waage über vier Wochen sagt, ob er stimmt. Die Spritze selbst verändert den Verbrauch nicht. Kein Lebensmittel und kein Präparat hebt den Grundumsatz; was ihn hält, ist fettfreie Masse. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
+> **Kurz gesagt:** Nach 10 % Gewichtsverlust verbraucht dein Körper etwa 300 bis 400 kcal am Tag weniger, als Gewicht und Körperzusammensetzung erwarten lassen, etwa so viel wie ein belegtes Brötchen.<sup><a href="#fn-rosenbaum2010">4</a></sup> Die Formel gibt dir einen Startwert; ob er stimmt, zeigt deine Waage über vier Wochen. Die Spritze selbst verändert den Verbrauch nicht. Kein Lebensmittel und kein Präparat hebt den Grundumsatz; was ihn hält, ist fettfreie Masse, also vor allem Muskeln. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
 
 ## Wie viele Kalorien brauche ich nach dem Absetzen?
 
@@ -88,7 +88,7 @@ Zwei Schlüsse daraus. Die Spritze hebt den Verbrauch nicht; wer unter ihr abnim
 
 ## Was dieser Artikel nicht sagt
 
-Die Zahlen oben sind Mittelwerte aus kleinen Messreihen; dein Verbrauch kann darüber oder darunter liegen, und keine Formel ersetzt die Waage. Wir nennen keine Kalorienvorgabe als Diätplan und keine Zahl, unter die man „gehen muss“. Ob und wann du dein Medikament absetzt, und ob ein Wiedereinstieg in Frage kommt, ist eine Therapieentscheidung für das Arztgespräch.
+Die Zahlen oben sind Mittelwerte aus kleinen Messreihen; dein Verbrauch kann darüber oder darunter liegen, und keine Formel ersetzt die Waage. Wir nennen keine Kalorienvorgabe als Diätplan und keine Zahl, unter die du „gehen musst“. Ob und wann du dein Medikament absetzt, und ob ein Wiedereinstieg in Frage kommt, ist eine Therapieentscheidung für das Arztgespräch.
 
 ---
 

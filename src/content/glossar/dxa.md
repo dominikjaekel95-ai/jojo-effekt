@@ -2,7 +2,7 @@
 term: "DXA"
 metaTitle: "DXA: die Messung der Körperzusammensetzung in Studien"
 description: "DXA misst Fett, fettfreie Masse und Knochen getrennt und ist der Standard in Studien zur Körperzusammensetzung. Wie die Messung funktioniert und was sie kann."
-short: "Dual-Röntgen-Absorptiometrie: ein Ganzkörperscan mit sehr geringer Strahlendosis, der Fettmasse, fettfreie Masse und Knochenmineralgehalt getrennt misst. Das Verfahren ist der Standard in Studien zur Körperzusammensetzung."
+short: "Kurz für Dual-Röntgen-Absorptiometrie: ein Ganzkörperscan mit sehr wenig Strahlung, der Fett, fettfreie Masse und Knochen getrennt misst. In Studien ist er der Standard, um die Körperzusammensetzung zu bestimmen."
 synonyms: ["DEXA", "DXA-Scan", "DEXA-Scan", "Dual-Röntgen-Absorptiometrie"]
 sources: ["wilding2021dxa", "kyle2004", "sardeli2018"]
 related: ["bioimpedanzanalyse", "fettfreie-masse", "sarkopene-adipositas"]
@@ -20,6 +20,6 @@ Sie ist genau, gut reproduzierbar und liefert Werte für einzelne Körperregione
 
 DXA unterscheidet nicht zwischen Muskel und Wasser innerhalb der fettfreien Masse. Ein Wasserverlust nach kohlenhydratarmen Tagen sieht wie Muskelverlust aus. Die Werte hängen deshalb, wie bei der [Bioimpedanzanalyse](/glossar/bioimpedanzanalyse/), von standardisierten Bedingungen ab: gleiche Tageszeit, gleicher Flüssigkeitsstatus.<sup><a href="#fn-kyle2004">2</a></sup>
 
-## Wo man sie bekommt
+## Wo du sie bekommst
 
 Universitätskliniken, sportmedizinische Institute und einige Praxen bieten DXA als Selbstzahlerleistung an. Für die meisten Menschen reicht in der Haltephase eine einfachere Verlaufsmessung: Taillenumfang, Griffkraft, Wiederholungen bei Kniebeuge und Liegestütz. Was Krafttraining an der Körperzusammensetzung ändert, zeigt eine Meta-Analyse: Es verhindert den Verlust an fettfreier Masse während einer Kalorienreduktion weitgehend.<sup><a href="#fn-sardeli2018">3</a></sup>

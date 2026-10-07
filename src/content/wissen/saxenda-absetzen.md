@@ -11,22 +11,22 @@ sources: ["fachinfoSaxenda", "pisunyer2015", "jensen2024", "lundgren2021", "wu20
 related: ["abnehmspritze-absetzen", "wegovy-absetzen", "gewicht-halten-nach-abnehmspritze"]
 faq:
   - q: "Wie lange bleibt Saxenda nach der letzten Spritze im Körper?"
-    a: "<p>Liraglutid hat laut Fachinformation eine Halbwertszeit von etwa 13 Stunden. Nach zwei bis drei Tagen ist der Wirkstoff weitgehend abgebaut. Der Appetit kommt deshalb innerhalb von Tagen zurück, nicht wie bei Semaglutid oder Tirzepatid über Wochen.</p>"
+    a: "<p>Zwei bis drei Tage: Dann ist der Wirkstoff weitgehend abgebaut. Liraglutid hat laut Fachinformation eine Halbwertszeit von etwa 13 Stunden. Der Appetit kommt deshalb innerhalb von Tagen zurück, nicht wie bei Semaglutid oder Tirzepatid über Wochen.</p>"
   - q: "Nimmt man nach Saxenda wieder zu?"
-    a: "<p>Ohne Gegenmaßnahmen sehr wahrscheinlich. Die zentrale Absetz-Studie zu Liraglutid ist S-LiTE: Ein Jahr nach Ende der Behandlung hatten Teilnehmende, die nur Liraglutid bekommen hatten, im Schnitt 6 kg mehr zugenommen als jene, die nur trainiert hatten. Die Trainingsgruppen hielten Gewicht und Körperzusammensetzung.</p>"
+    a: "<p>Ohne Gegenmaßnahmen sehr wahrscheinlich. Ein Jahr nach Ende der Behandlung hatten Teilnehmende, die nur Liraglutid bekommen hatten, im Schnitt 6 kg mehr zugenommen als jene, die nur trainiert hatten; das zeigt S-LiTE, die zentrale Absetz-Studie zu Liraglutid. Die Trainingsgruppen hielten Gewicht und Körperzusammensetzung.</p>"
   - q: "Muss ich Saxenda ausschleichen?"
-    a: "<p>Die Fachinformation sieht kein Ausschleichen vor, und in den Studien wurde abrupt abgesetzt, ohne Entzugserscheinungen. Saxenda hat fünf Dosisstufen, ein schrittweises Reduzieren ist also technisch möglich. Ob es sinnvoll ist, entscheidet deine Ärztin oder dein Arzt; einen Beleg für einen kleineren Jojo-Effekt gibt es nicht.</p>"
+    a: "<p>Nein. Die Fachinformation sieht kein Ausschleichen vor, und in den Studien wurde abrupt abgesetzt, ohne Entzugserscheinungen. Saxenda hat fünf Dosisstufen, ein schrittweises Reduzieren ist also technisch möglich. Ob es sinnvoll ist, entscheidet deine Ärztin oder dein Arzt; einen Beleg für einen kleineren Jojo-Effekt gibt es nicht.</p>"
   - q: "Ist der Jojo-Effekt nach Saxenda kleiner als nach Wegovy?"
-    a: "<p>In Kilogramm meist ja, weil der Verlust unter Liraglutid kleiner ist: In der Zulassungsstudie SCALE waren es 8,0 % nach 56 Wochen, unter Semaglutid 2,4 mg rund 15 %. Weniger Verlust heißt weniger, was zurückkommen kann. Der Mechanismus ist derselbe, und der Appetit kommt bei Saxenda sogar schneller zurück.</p>"
+    a: "<p>In Kilogramm meist ja, weil der Verlust unter Liraglutid kleiner ist: 8,0 % nach 56 Wochen in der Zulassungsstudie SCALE, unter Semaglutid 2,4 mg rund 15 %. Weniger Verlust heißt weniger, was zurückkommen kann. Der Mechanismus ist derselbe, und der Appetit kommt bei Saxenda sogar schneller zurück.</p>"
   - q: "Nimmt man nach dem Absetzen der Abnehmspritze wieder zu?"
     a: "<p>In den Studien ja, im Mittel: Ein Jahr nach dem Absetzen von Semaglutid waren in der STEP-1-Verlängerung zwei Drittel des Verlusts zurück. Für Liraglutid, den Wirkstoff von Saxenda, zeigt die dänische S-LiTE-Studie, worauf es ankommt: Nach Liraglutid allein lag die Zunahme im Jahr nach Therapieende 6,0 kg höher als nach einem betreuten Trainingsprogramm. Wer Training und Protein schon während der Therapie einbaut, nimmt deutlich weniger wieder zu.</p>"
 ---
 
-Saxenda ist die Abnehmspritze, die täglich gespritzt wird, und das ändert beim Absetzen mehr, als viele erwarten. Hier steht, was für Liraglutid spezifisch ist. Die Grundlagen für alle Abnehmspritzen stehen im Artikel [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Saxenda spritzt du jeden Tag, nicht einmal pro Woche, und das ändert beim Absetzen mehr, als viele erwarten. Hier steht, was für den Wirkstoff Liraglutid gilt. Die Grundlagen für alle Abnehmspritzen findest du unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 <div data-interaktiv="wirkstoffspiegel" data-wirkstoffe="liraglutid,semaglutid,tirzepatid" data-tag="3"></div>
 
-> **Kurz gesagt:** Liraglutid ist nach zwei bis drei Tagen abgebaut, der Appetit kommt innerhalb von Tagen zurück.<sup><a href="#fn-fachinfoSaxenda">1</a></sup> Die zentrale Absetz-Studie zu diesem Wirkstoff zeigt: Wer trainiert hatte, hielt das Gewicht auch ein Jahr nach dem Ende der Behandlung; nach Liraglutid allein kam es zurück.<sup><a href="#fn-jensen2024">3</a></sup> Ob und wie du absetzt, entscheidest du mit deiner Ärztin.
+> **Kurz gesagt:** Liraglutid ist nach zwei bis drei Tagen abgebaut, der Appetit kommt innerhalb von Tagen zurück.<sup><a href="#fn-fachinfoSaxenda">1</a></sup> In der zentralen Absetz-Studie zu diesem Wirkstoff hielten Teilnehmende, die trainiert hatten, ihr Gewicht auch ein Jahr nach Behandlungsende; nach Liraglutid allein kam es zurück (S-LiTE).<sup><a href="#fn-jensen2024">3</a></sup> Ob und wie du absetzt, entscheidest du mit deiner Ärztin.
 
 ## Saxenda im Überblick
 

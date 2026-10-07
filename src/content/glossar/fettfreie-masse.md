@@ -2,7 +2,7 @@
 term: "Fettfreie Masse"
 metaTitle: "Fettfreie Masse: was beim Abnehmen außer Fett verloren geht"
 description: "Fettfreie Masse umfasst Muskeln, Knochen, Organe und Wasser. Unter Semaglutid entfielen in einer Substudie rund 40 % des Gewichtsverlusts darauf. Was das bedeutet."
-short: "Alles am Körpergewicht, was nicht Fett ist: Muskeln, Knochen, Organe, Wasser. In der STEP-1-Substudie entfielen rund 40 % des Gewichtsverlusts unter Semaglutid auf fettfreie Masse."
+short: "Alles an deinem Gewicht, was nicht Fett ist: Muskeln, Knochen, Organe, Wasser. In der STEP-1-Substudie waren rund 40 % des Gewichtsverlusts unter Semaglutid fettfreie Masse, von 10 verlorenen Kilo also etwa 4."
 synonyms: ["fettfreie Masse", "Magermasse", "Lean Mass", "FFM", "Fat-Free Mass"]
 sources: ["wilding2021dxa", "sardeli2018", "leidy2015"]
 related: ["sarkopene-adipositas", "dxa", "muskelproteinsynthese", "bioimpedanzanalyse"]

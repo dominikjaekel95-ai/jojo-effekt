@@ -1,7 +1,7 @@
 ---
 title: "Ernährung nach der Abnehmspritze: Was du isst, wenn der Appetit zurückkommt"
 metaTitle: "Ernährung nach der Abnehmspritze: 5 Regeln und ein Beispieltag"
-description: "Nach dem Absetzen kommt der Appetit zurück. Fünf Regeln, die mit normalem Hunger funktionieren, ein Beispieltag und die Fehler, die das Gewicht zurückbringen."
+description: "Ernährung nach der Abnehmspritze: fünf Regeln, die mit normalem Hunger funktionieren, ein Beispieltag und die vier Fehler, die das Gewicht zurückbringen."
 category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 11

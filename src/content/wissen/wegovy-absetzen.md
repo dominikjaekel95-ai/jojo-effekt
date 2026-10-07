@@ -1,7 +1,7 @@
 ---
 title: "Wegovy absetzen: Was passiert danach, und was die Fachinformation sagt"
-metaTitle: "Wegovy absetzen: Verlauf, Halbwertszeit, Studien, Vorbereitung"
-description: "Wie lange Semaglutid im Körper bleibt, was in STEP 1 und STEP 4 nach dem Absetzen passierte, was die Fachinformation vorschreibt und wie du dich vorbereitest."
+metaTitle: "Wegovy absetzen: Was nach der letzten Spritze passiert"
+description: "Wegovy absetzen: Semaglutid ist nach 5 bis 7 Wochen abgebaut, ein Jahr später waren in STEP 1 zwei Drittel des Verlusts zurück. Was du vorbereiten kannst."
 category: "Präparate"
 image: /grafiken/weiter-oder-placebo.png
 order: 7

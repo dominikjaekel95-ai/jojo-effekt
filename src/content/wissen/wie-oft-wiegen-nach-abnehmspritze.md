@@ -1,7 +1,7 @@
 ---
 title: "Wie oft wiegen nach der Abnehmspritze? Was Studien zeigen"
 metaTitle: "Wie oft wiegen nach der Abnehmspritze? Was Studien zeigen"
-description: "Täglich, wöchentlich oder gar nicht? Was Studien zum Wiegen nach dem Abnehmen zeigen, warum die Regel wichtiger ist als die Häufigkeit und wann die Waage schadet."
+description: "Täglich, wöchentlich oder gar nicht? Wiegen nach der Abnehmspritze: warum die Regel mehr zählt als die Häufigkeit und wann die Waage schadet."
 category: "Gewicht halten"
 order: 27
 pubDate: 2026-10-03

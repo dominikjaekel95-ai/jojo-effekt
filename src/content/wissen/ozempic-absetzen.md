@@ -1,7 +1,7 @@
 ---
 title: "Ozempic absetzen: Was bei Diabetes anders ist, und was mit dem Gewicht passiert"
-metaTitle: "Ozempic absetzen: Diabetes, Gewicht, Halbwertszeit, Studien"
-description: "Warum das bei Typ-2-Diabetes nie ohne Ärztin geht, wie lange Semaglutid nachwirkt, was Studien zum Gewicht danach zeigen und was Off-label-Nutzer wissen sollten."
+metaTitle: "Ozempic absetzen: Was mit Blutzucker und Gewicht passiert"
+description: "Ozempic absetzen: Bei Diabetes nie ohne Ärztin, der Blutzucker steigt oft schon in den ersten Wochen. Wie lange es nachwirkt und was mit dem Gewicht passiert."
 category: "Präparate"
 order: 8
 pubDate: 2026-09-30

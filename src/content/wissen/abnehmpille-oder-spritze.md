@@ -1,7 +1,7 @@
 ---
 title: "Abnehmpille oder Spritze: Die Unterschiede, und was sie für die Zeit danach bedeuten"
 metaTitle: "Abnehmpille oder Spritze: Unterschiede, Studien, Zeit danach"
-description: "Tablette oder Spritze: Wirkstoffe, Einnahme, Wirksamkeit laut Studien, Halbwertszeit und was nach dem Absetzen bekannt ist. Faktischer Vergleich ohne Empfehlung."
+description: "Abnehmpille oder Spritze: gleicher Wirkstoff, in den Zulassungsstudien 13,6 % Gewichtsverlust mit der Tablette, 14,9 % mit der Spritze. Vergleich ohne Empfehlung."
 category: "Abnehmpille"
 image: /grafiken/wirksamkeit-zulassungsstudien.png
 order: 17

@@ -1,7 +1,7 @@
 ---
 title: "Jojo-Effekt nach der Abnehmspritze: Warum das Gewicht zurückkommt – und was hilft"
-metaTitle: "Jojo-Effekt nach der Abnehmspritze: Ursachen, Zahlen, was hilft"
-description: "Nach dem Absetzen kommt in Studien ein Großteil des Gewichts zurück. Warum das passiert, wie schnell, und was nachweislich dagegen hilft – mit Quellen."
+metaTitle: "Jojo-Effekt nach dem Absetzen der Abnehmspritze: was hilft"
+description: "Jojo-Effekt nach der Abnehmspritze: Ein Jahr nach dem Absetzen waren im Mittel zwei Drittel des verlorenen Gewichts zurück. Warum, wie schnell und was hilft."
 category: "Gewicht halten"
 image: /grafiken/warum-das-gewicht-zurueckkommt.png
 order: 1

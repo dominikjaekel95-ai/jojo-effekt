@@ -69,7 +69,33 @@ Diese Vorschläge hat Dominik abgelehnt, weil sie die Stimme wegschleifen und tr
 
 ## Was beim Redigieren nie geändert wird
 
-Zahlen, Fußnoten und Quellen · Aussagen, deren Wortlaut CLAIMS.md festlegt · die Abschnitte „Was wir nicht sagen“ · der Pflichtsatz `site.doctorSentence` und der Arztsatz `site.medicalTeamSentence` (andere Sätze mit Arztbezug nur sprachlich glätten, nie inhaltlich) · der Preis-Wortlaut „Das Basis-Programm soll unter 129 € kosten“ (Dominik, 07.10.2026) · Einwilligungstexte in Formularen · Alt-Texte der Grafiken aus `scripts/` · `title`, `metaTitle`, `description`, H1, URLs, `pubDate` · Überschriften (H2/H3) nur bei echten Fehlern, und dann im PR begründet. Reine Sprachänderungen bekommen kein neues `updatedDate`.
+Zahlen, Fußnoten und Quellen · Aussagen, deren Wortlaut CLAIMS.md festlegt · die Abschnitte „Was wir nicht sagen“ · der Pflichtsatz `site.doctorSentence` und der Arztsatz `site.medicalTeamSentence` (andere Sätze mit Arztbezug nur sprachlich glätten, nie inhaltlich) · der Preis-Wortlaut „Das Basis-Programm soll unter 129 € kosten“ (Dominik, 07.10.2026) · Einwilligungstexte in Formularen · Alt-Texte der Grafiken aus `scripts/` · `title`, `metaTitle`, `description`, H1, URLs, `pubDate` (Titel und Descriptions nur als eigene Aufgabe, siehe „Titel und Descriptions“) · Überschriften (H2/H3) nur bei echten Fehlern, und dann im PR begründet. Reine Sprachänderungen bekommen kein neues `updatedDate`.
+
+## Titel und Descriptions (Dominik, 07.10.2026)
+
+Ziel: mehr Klicks aus der Google-Suche, ohne reißerisch zu werden. Dominiks Regeln:
+
+1. Title-Tag (`metaTitle`) und Meta-Description enthalten dasselbe Keyword, in der Form, in der gesucht wird (Search Console → Leistung → Suchanfragen).
+2. Beide beantworten die Frage hinter der Suche. Die Description nennt die Antwort im ersten Satz, möglichst mit einer Zahl oder einem Zeitpunkt aus dem Artikel.
+3. Sie machen neugierig auf das, was nur diese Seite hat: den Verlauf Woche für Woche, einen Rechner, sieben konkrete Punkte, die Kernzahl einer Studie.
+4. Sie grenzen sich von dem ab, was schon rankt: vor dem Schreiben das Keyword googeln.
+5. Nicht reißerisch: keine Superlative, keine Versprechen, keine Ausrufezeichen, kein „Schock“, „Geheimnis“ oder „die Wahrheit über“.
+
+Umsetzung:
+
+- Titel bis etwa 580 px Breite (Arial 20 px), meist 55 bis 62 Zeichen. Der Zusatz „· Nach der Spritze“ zählt nicht mit; Google zeigt den Seitennamen getrennt. Build-Grenze für `metaTitle`: 65 Zeichen.
+- Description 140 bis 160 Zeichen (Build-Grenze 165), Keyword am Anfang, das Wichtigste in den ersten 120 Zeichen (so viel zeigt das Handy).
+- Zahlen nur aus dem Artikel und mit Bezug („im Mittel“, „in einer Studie“, „in STEP 1“).
+- Geändert werden nur `metaTitle` und `description` (bei Seiten die Konstanten `title` und `description`). H1, URL und `pubDate` bleiben, ein neues `updatedDate` gibt es dafür nicht.
+- Titel mit guter Klickrate bleiben (Stand 07.10.2026: Kreatin, Muskelabbau, Saxenda).
+- Themen- und Übersichtsseiten nehmen einem Artikel nicht das Keyword weg: Die Themenseite Absetzen heißt „Absetzen oder pausieren: Alle Fragen zur Abnehmspritze“, der Hauptartikel „Abnehmspritze absetzen: …“.
+- Den Grund jeder Änderung im Pull Request nennen (CLAUDE.md, SEO-Invarianten).
+
+Beispiele vom 07.10.2026:
+
+- „Wegovy absetzen: Verlauf, Halbwertszeit, Studien, Vorbereitung“ → „Wegovy absetzen: Was nach der letzten Spritze passiert“ (Frage statt Stichwortliste).
+- „Mounjaro absetzen: Verlauf, Halbwertszeit, SURMOUNT-4, Tipps“ → „Mounjaro absetzen: Wie lange es nachwirkt, was dann passiert“ (Suchanfrage „wie lange wirkt mounjaro nach absetzen“); die Description beantwortet die Frage: „Tirzepatid ist nach etwa vier Wochen abgebaut …“
+- „Abnehmspritze: Kosten pro Monat und Jahr, Stand September 2026“ → „Abnehmspritze Kosten 2026: Preise pro Monat und Jahr, Rechner“ (die Suchanfrage wörtlich vorn).
 
 ## Ablauf
 

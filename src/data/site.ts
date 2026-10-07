@@ -8,9 +8,10 @@ export const site = {
   url: import.meta.env.SITE ?? 'https://nachderspritze.de',
   locale: 'de_DE',
   lang: 'de',
-  // Startseiten-Description (≤ 165 Zeichen). Seit 06.10.2026 Programm statt Set: Angebot geändert.
+  // Startseiten-Description (≤ 165 Zeichen). Seit 06.10.2026 Programm statt Set: Angebot geändert. Seit 07.10.2026 dieselben drei
+  // Bausteine wie der Programm-Kasten, mit „Gewichtskorridor“ (Dominik, 07.10.2026).
   description:
-    'Das 12-Wochen-Programm für die Zeit nach der Abnehmspritze: Krafttraining, genug Protein, ein Plan für die Waage. Jetzt kostenlos auf die Warteliste.',
+    'Das 12-Wochen-Programm nach der Abnehmspritze: zwei Krafteinheiten pro Woche, ein Proteinziel, ein Gewichtskorridor. Jetzt kostenlos auf die Warteliste.',
 
   // Allgemeine Kontaktadresse (Impressum, Datenschutz, Organization-Schema). Weiterleitung über ImprovMX.
   email: 'hallo@nachderspritze.de',

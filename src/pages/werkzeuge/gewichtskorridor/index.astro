@@ -24,9 +24,9 @@ const fn = (id: (typeof fnIds)[number]) => fnIds.indexOf(id) + 1;
 /* Ampelfarben aus dem Design „Kalk“ mit fester Bedeutung: Grün = halten, Gelb = Markierung, Braun = Wiederzunahme */
 const AMPEL = { gruen: 'var(--color-moss)', gelb: 'var(--color-amber)', rot: 'var(--color-clay)' };
 
-const title = 'Gewichtskorridor nach der Abnehmspritze: Ampel fürs Gewicht halten';
+const title = 'Gewichtskorridor: Ampel fürs Gewicht nach der Abnehmspritze';
 const description =
-  'Startgewicht der Haltephase eingeben, Ampel erhalten: grün bis 1,4 kg darüber (nichts tun), gelb bis 2,3 kg (zwei Wochen gegensteuern), rot darüber (Plan prüfen).';
+  'Gewichtskorridor: Startgewicht eingeben, Ampel erhalten. Grün bis 1,4 kg darüber: nichts tun. Gelb bis 2,3 kg: zwei Wochen gegensteuern. Rot: Plan prüfen.';
 const path = '/werkzeuge/gewichtskorridor/';
 const url = `${site.url}${path}`;
 

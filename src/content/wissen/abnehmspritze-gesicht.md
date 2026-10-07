@@ -1,7 +1,7 @@
 ---
 title: "Eingefallenes Gesicht nach der Abnehmspritze: Was dahintersteckt und was sich beeinflussen lässt"
-metaTitle: "Abnehmspritze und Gesicht: eingefallene Wangen, was hilft"
-description: "Eingefallene Wangen nach der Spritze: kein Krankheitsbild, sondern Fettverlust bei schnellem Abnehmen. Was Tempo, Alter, Protein und Vitamin C damit zu tun haben."
+metaTitle: "Abnehmspritze und Gesicht: Was ist das „Ozempic Face“?"
+description: "Das „Ozempic Face“ ist kein Krankheitsbild, sondern Fettverlust im Gesicht bei schnellem Abnehmen, etwa mit der Abnehmspritze. Was Tempo und Protein ausmachen."
 category: "Ernährung"
 order: 24
 pubDate: 2026-10-01

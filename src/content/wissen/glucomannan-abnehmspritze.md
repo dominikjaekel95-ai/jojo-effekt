@@ -1,7 +1,7 @@
 ---
 title: "Glucomannan bei und nach der Abnehmspritze: Was die zugelassene Angabe erlaubt und was nicht"
 metaTitle: "Glucomannan und Abnehmspritze: Angabe, Bedingungen, Grenzen"
-description: "Glucomannan ist der einzige Ballaststoff mit zugelassener EU-Angabe zum Gewichtsverlust. Was sie bedeutet, welche Bedingungen gelten, warum er keine Spritze ersetzt."
+description: "Glucomannan hat als einziger Ballaststoff eine EU-Angabe zum Gewichtsverlust. Unter welchen Bedingungen sie gilt und warum er keine Abnehmspritze ersetzt."
 category: "Ernährung"
 order: 23
 pubDate: 2026-10-01

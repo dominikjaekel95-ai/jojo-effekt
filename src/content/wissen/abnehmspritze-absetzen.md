@@ -1,7 +1,7 @@
 ---
 title: "Abnehmspritze absetzen: Was passiert danach?"
-metaTitle: "Abnehmspritze absetzen: Was passiert danach? Verlauf, Tipps"
-description: "Appetit, Gewicht, Blutwerte: Was nach der letzten Dosis in welcher Woche passiert, was die Studien zum Ausschleichen sagen und wie du dich vorbereitest."
+metaTitle: "Abnehmspritze absetzen: Was danach passiert, Woche für Woche"
+description: "Abnehmspritze absetzen: Der Appetit kommt meist in Woche 2 bis 5 zurück, ab Woche 8 wird die Zunahme messbar. Was Studien zeigen, wie du dich vorbereitest."
 category: "Absetzen"
 order: 2
 pubDate: 2026-09-30

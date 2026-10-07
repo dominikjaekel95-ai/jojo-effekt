@@ -1,7 +1,7 @@
 ---
 title: "Saxenda absetzen: Was bei der täglichen Spritze anders ist"
 metaTitle: "Saxenda absetzen: Verlauf, Halbwertszeit, Studien, Vorbereitung"
-description: "Saxenda wirkt nur Tage nach, nicht Wochen. Was das für den Appetit bedeutet, was SCALE und S-LiTE zum Gewicht nach dem Absetzen zeigen und wie du dich vorbereitest."
+description: "Saxenda absetzen: Liraglutid ist nach zwei bis drei Tagen abgebaut, der Appetit kommt innerhalb von Tagen zurück. Was Studien zum Gewicht danach zeigen."
 category: "Präparate"
 order: 15
 pubDate: 2026-10-01

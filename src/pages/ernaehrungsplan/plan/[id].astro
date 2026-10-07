@@ -93,7 +93,7 @@ const muster =
     <script is:inline>if (/[?&][vs]=[^&]/.test(location.search)) document.documentElement.classList.add('ep-v');if (/[?&]druck=handy\b/.test(location.search)) document.documentElement.classList.add('ed-handy');if (/[?&]pdf=1(&|$)/.test(location.search)) document.documentElement.classList.add('ep-pdf1');</script>
     <article class="ep-plan" data-ep-plan data-id={plan.id} data-fn-bls={fn('bls')}>
       <div class="ep-leiste no-print" data-ep-leiste>
-        <div class="ep-leiste-in">
+        <div class="container-wide ep-leiste-in">
           <p class="ep-leiste-text">Dein Plan, wie er gerade ist</p>
           <button type="button" class="btn-primary ep-leiste-knopf" data-ep-senden aria-haspopup="dialog">Als PDF senden</button>
           <button type="button" class="btn-secondary ep-leiste-knopf" data-ep-laden>PDF herunterladen</button>
@@ -333,14 +333,12 @@ const muster =
   html.js .ep-leiste {
     display: block;
   }
+  /* Breite wie der Seitenkopf (container-wide), die Knöpfe stehen unter „Warteliste“ */
   .ep-leiste-in {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    width: 100%;
-    max-width: calc(52rem + 2 * var(--pad));
-    margin-inline: auto;
-    padding: 0.375rem var(--pad);
+    padding-block: 0.375rem;
   }
   .ep-leiste-text {
     display: none;

@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Entwurf A · Bühne · Nach der Spritze</title>
+<style>
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/entwurf/fonts/schibsted-grotesk-normal-latin-ext-b73c42e5.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/entwurf/fonts/schibsted-grotesk-normal-latin-ad87c89a.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/entwurf/fonts/schibsted-grotesk-normal-latin-ext-b73c42e5.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/entwurf/fonts/schibsted-grotesk-normal-latin-ad87c89a.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/entwurf/fonts/schibsted-grotesk-normal-latin-ext-b73c42e5.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/entwurf/fonts/schibsted-grotesk-normal-latin-ad87c89a.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+html{background:#000000}
+</style>
+<style>
+
+/* A · Bühne. Fast-Schwarz mit leichtem Blaugrün, Schibsted Grotesk, Zahlen als Bühne.
+   Farblegende (überall gleich): Blau #58C4DD = Körpergewicht / verlorenes Gewicht · Gold #F0AC5F = zurückgekommenes Gewicht ·
+   Teal #5CD0B3 = fettfreie Masse, Muskeln · Grau = Placebo, Ereignisse, Fettmasse. */
+body{margin:0;background:#0b0d0e}
+x-dc{display:block}
+a{color:#eef1f0;text-decoration:none}a:hover{color:#fff}
+.r{--bg:#0b0d0e;--sf:#121618;--ln:#1b2022;--ln2:#283032;--ax:#6b7573;--fg:#eef1f0;--fg2:#9aa3a1;--fg3:#7d8684;--bl:#58C4DD;--te:#5CD0B3;--go:#F0AC5F;--e:cubic-bezier(.65,0,.35,1);
+  container-type:inline-size;background:var(--bg);color:var(--fg);font-family:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height:1.55;letter-spacing:-.004em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+.r *{box-sizing:border-box}
+:where(.r) :where(h1,h2,h3,h4,p,ul,ol,dl,dd,dt,figure){margin:0;padding:0}
+:where(.r) :where(ul,ol){list-style:none}
+:where(.r) b{font-weight:500;color:var(--fg)}
+.w{max-width:1296px;margin-inline:auto;padding-inline:48px}
+.t2{color:var(--fg2)}.t3{color:var(--fg3)}.bl{color:var(--bl)}.go{color:var(--go)}.te{color:var(--te)}
+.c{text-align:center}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+sup{font-size:.56em;line-height:0;vertical-align:.66em;font-weight:500;letter-spacing:0}
+sup a{color:var(--fg2);padding:0 .12em}sup a:hover{color:var(--fg)}
+.lk{text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:#4a5355;text-underline-offset:4px}
+.lk:hover{text-decoration-color:var(--fg)}
+svg text{font-family:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif}
+.r :is(a,button,summary):focus-visible{outline:2px solid var(--bl);outline-offset:3px;border-radius:4px}
+
+/* Kopf */
+.hd{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--ln)}
+.hdi{display:flex;align-items:center;gap:32px;height:64px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-size:18px;font-weight:600;letter-spacing:-.02em;white-space:nowrap;min-height:44px}
+.nav{display:flex;gap:30px;margin-inline:auto;font-size:15px}
+.nav a{color:var(--fg2);padding:12px 0}.nav a:hover{color:var(--fg)}
+.hdr{display:flex;align-items:center;gap:18px}
+.nl{font:inherit;font-size:15px;color:var(--fg2);background:none;border:0;padding:0 4px;min-height:44px;cursor:pointer}.nl:hover{color:var(--fg)}
+.menu{display:none;width:44px;height:44px;align-items:center;justify-content:center;background:transparent;border:0;color:var(--fg);padding:0;cursor:pointer}
+
+/* Knöpfe: eigene Form, kein Kapsel-Pill */
+.pill{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:14px;background:var(--fg);color:var(--bg);font-family:inherit;font-size:17px;font-weight:600;letter-spacing:-.01em;white-space:nowrap;border:0;cursor:pointer}
+.pill:hover{background:#fff;color:var(--bg)}
+.pill.sm{min-height:44px;padding:0 18px;border-radius:12px;font-size:15px}
+.pill.gh{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1px var(--ax)}
+.pill.gh:hover{box-shadow:inset 0 0 0 1px var(--fg);color:#fff}
+.tl{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:17px;color:var(--fg)}
+
+/* Bühne 1: Hero */
+.hero{padding:40px 0 64px}
+.h1{font-weight:600}
+.h1a{display:block;font-size:clamp(26px,2.8cqi,40px);font-weight:500;letter-spacing:-.022em;line-height:1.1;color:var(--fg2);margin-bottom:12px}
+.h1b{display:block;font-size:clamp(44px,7.8cqi,112px);letter-spacing:-.045em;line-height:.97}
+.hrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 96px;align-items:start;margin-top:32px}
+.hrow .lede{max-width:600px;color:var(--fg2)}
+.cta{display:flex;flex-direction:column;gap:14px;max-width:440px}
+.btns{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.price{font-size:15px;line-height:1.5;color:var(--fg2)}
+.doc{font-size:15px;line-height:1.5;color:var(--fg)}
+.chart{margin-top:44px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .cm{display:none}
+.chart figcaption{margin-top:12px;font-size:13px;line-height:1.5;color:var(--fg3);max-width:760px}
+
+.h3{font-size:26px;font-weight:600;letter-spacing:-.022em;line-height:1.2}
+
+/* Abschnitte: Abstände bewusst ungleich (Bühne / Pause) */
+.sec{padding-block:64px}
+.sec.big{padding-block:88px 64px}
+.sec.q{padding-block:52px}
+.h2{text-wrap:balance;font-size:clamp(34px,4.2cqi,60px);font-weight:600;letter-spacing:-.035em;line-height:1.05}
+.h2.c{margin-inline:auto}
+.h2s{font-size:clamp(28px,2.6cqi,38px);font-weight:600;letter-spacing:-.03em;line-height:1.1}
+.lede{font-size:clamp(20px,1.8cqi,26px);line-height:1.36;letter-spacing:-.014em}
+
+/* Bühne 2: Problem als eine Szene */
+.scene{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 96px;margin-top:64px;timeline-scope:--s1,--s2,--s3}
+.stage{position:sticky;top:120px;align-self:start}
+.stage svg{display:block;width:100%;height:auto}
+.stage .sm2{display:none}
+.steps{display:flex;flex-direction:column;gap:64px;padding-block:4px 8px}
+.step{display:flex;flex-direction:column;gap:18px;max-width:540px}
+.num{font-size:clamp(80px,9.4cqi,136px);font-weight:600;letter-spacing:-.055em;line-height:.84;font-feature-settings:'tnum';white-space:nowrap}
+.num .u{font-size:.4em;letter-spacing:-.03em;margin-left:.08em}
+.num .u.wd{margin-left:.22em;letter-spacing:-.025em}
+.pre{display:block;font-size:17px;font-weight:500;letter-spacing:0;line-height:1.2;color:var(--fg2);margin-bottom:10px}
+.step .fine{font-size:16px;line-height:1.5;color:var(--fg2)}
+.close{margin-top:64px}
+.close p{text-wrap:balance;font-size:clamp(24px,2.4cqi,34px);font-weight:600;letter-spacing:-.026em;line-height:1.2;max-width:980px;margin-inline:auto}
+
+/* Bühne 3: Set */
+.prod{margin:56px auto 0;max-width:1040px;border-bottom:1px solid var(--ln2)}
+.prod svg{display:block;width:100%;max-width:640px;height:auto;margin-inline:auto}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(236px,100%),1fr));gap:40px 40px;margin-top:48px}
+.spec .fig{margin:0;font-size:clamp(44px,3.6cqi,52px);color:var(--fg);font-weight:600;letter-spacing:-.045em;line-height:1;white-space:nowrap;font-feature-settings:'tnum'}
+.spec .fig.te{color:var(--te)}
+.fig .u{font-size:.46em;letter-spacing:-.02em;margin-left:.12em}
+.spec h3{margin-top:14px;font-size:19px;font-weight:600;letter-spacing:-.014em;line-height:1.3}
+.spec p{margin-top:6px;font-size:15px;line-height:1.55;color:var(--fg2)}
+.spec .cl{color:var(--fg)}
+.claim{margin-top:48px;font-size:17px;line-height:1.6;color:var(--fg2);max-width:980px}
+
+/* Forschung: eine Zahl auf der Bühne */
+.rh{font-size:clamp(22px,2cqi,28px);font-weight:500;letter-spacing:-.02em;color:var(--fg2)}
+.big6{margin-top:16px;font-size:clamp(104px,11.2cqi,160px);font-weight:600;letter-spacing:-.058em;line-height:.84;font-feature-settings:'tnum'}
+.big6 .u{font-size:.4em;letter-spacing:-.03em;margin-left:.08em}
+.slite .lede{margin-top:18px}
+.bars{max-width:720px;margin:28px auto 0;display:grid;gap:18px;text-align:left}
+.br{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 20px;align-items:center}
+.brl{font-size:15px;color:var(--fg2)}
+.bt{position:relative;height:14px;border-left:1px solid var(--ax)}
+.bdot{position:absolute;left:-8px;top:0;width:14px;height:14px;border-radius:50%;background:var(--fg)}
+.bg{display:block;height:14px;width:100%;background:var(--go);border-radius:0 7px 7px 0;transform-origin:0 50%}
+.bv{grid-column:2;font-size:15px;line-height:1.3}
+.sp{max-width:720px;margin:22px auto 0;font-size:17px;line-height:1.55;color:var(--fg2)}
+.rs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:28px 56px;margin-top:48px}
+.ri h3{font-size:16px;font-weight:600;letter-spacing:-.01em}
+.ri p{margin-top:6px;font-size:14px;line-height:1.55;color:var(--fg2)}
+
+/* Für wen: eine Spalte */
+.fw{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 96px;align-items:start}
+.fw h3{font-size:15px;font-weight:600;color:var(--fg2)}
+.fw h3+.ln{margin-top:12px}
+.fw .ln+h3{margin-top:32px}
+.ln{display:grid;gap:10px}
+.ln li{font-size:20px;line-height:1.4;letter-spacing:-.012em}
+.inl{margin-top:10px;font-size:16px;line-height:1.6;color:var(--fg2)}
+.inl li{display:inline}
+.inl li+li::before{content:" · ";color:var(--fg3)}
+.note{margin-top:28px;font-size:20px;line-height:1.45;letter-spacing:-.012em;color:var(--fg2);max-width:440px}
+
+/* Bühne 4: Preis, Formular, Details */
+.pr{font-weight:600}
+.prn{display:block;font-size:clamp(112px,12.5cqi,180px);letter-spacing:-.062em;line-height:.88;font-feature-settings:'tnum'}
+.prs{display:block;margin-top:20px;font-size:clamp(28px,3.3cqi,46px);letter-spacing:-.03em;line-height:1.1}
+.prd{max-width:740px;margin:24px auto 0;font-size:18px;line-height:1.55;color:var(--fg2)}
+.form{max-width:600px;margin:40px auto 0;background:var(--sf);border:1px solid var(--ln);border-radius:24px;padding:32px}
+.form label{display:block;margin:0 0 10px;font-size:15px;color:var(--fg2)}
+.frow{display:flex;gap:12px;flex-wrap:wrap}
+.form input{flex:1 1 240px;min-width:0;min-height:52px;padding:0 16px;border-radius:12px;border:1px solid var(--ax);background:var(--bg);color:var(--fg);font-family:inherit;font-size:17px}
+.form input::placeholder{color:var(--fg3)}
+.form input:focus{outline:2px solid var(--bl);outline-offset:2px;border-color:transparent}
+.form .pill{flex:1 1 auto}
+.honest{margin-top:18px;font-size:15px;line-height:1.55;color:var(--fg2)}
+.form .fs{margin-top:10px;font-size:13px;line-height:1.5;color:var(--fg3)}
+.form .doc{margin-top:16px}
+.how{margin-top:64px}
+.how .h3{font-size:22px}
+.sline{display:block;width:100%;height:2px;margin-top:22px;overflow:visible}
+.hsteps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:24px 48px;margin-top:22px}
+.hsteps li{counter-increment:st}
+.hsteps h4{font-size:26px;font-weight:600;letter-spacing:-.024em;line-height:1.15}
+.hsteps h4 span{color:var(--fg3);font-feature-settings:'tnum';margin-right:.4em}
+.hsteps p{margin-top:8px;font-size:16px;line-height:1.55;color:var(--fg2)}
+.inset{margin-top:48px}
+.inset dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));column-gap:56px;margin-top:14px;border-top:1px solid var(--ln2)}
+.tr{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:14px 0;border-bottom:1px solid var(--ln);font-size:16px;line-height:1.45}
+.tr dt{color:var(--fg2)}.tr dd{text-align:right;white-space:nowrap}
+.later{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:40px 96px;margin-top:64px}
+.later .h3{font-size:24px;max-width:520px}
+.later p{margin-top:10px;font-size:17px;line-height:1.55;color:var(--fg2);max-width:540px}
+.plr{display:flex;align-items:center;gap:20px;margin-top:20px}
+.s{font-size:14px}
+
+/* FAQ: eine ruhige Spalte */
+.faqg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(460px,100%),1fr));gap:0 56px;margin-top:20px}
+.faqc{border-top:1px solid var(--ln2)}
+.faqg details{border-bottom:1px solid var(--ln)}
+.faqg summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:52px;padding:8px 0;font-size:18px;font-weight:500;letter-spacing:-.012em;line-height:1.35;cursor:pointer}
+.faqg summary::-webkit-details-marker{display:none}
+.faqg summary svg{flex:none;color:var(--fg3)}
+.faqg details[open] summary svg{transform:rotate(45deg)}
+.fa{padding-bottom:22px;font-size:16px;line-height:1.6;color:var(--fg2)}
+.fa a{color:var(--fg);text-decoration:underline;text-decoration-color:#4a5355;text-underline-offset:3px}
+
+/* Wissen und Marktradar */
+.wf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 96px;align-items:start}
+.wp{margin-top:14px;font-size:17px;line-height:1.55;color:var(--fg2)}
+.topics{display:flex;flex-wrap:wrap;gap:0 18px;margin-top:14px;font-size:15px}
+.topics a{display:inline-flex;align-items:center;min-height:44px;color:var(--fg2)}.topics a:hover{color:var(--fg)}
+.arts{display:grid;gap:4px}
+.arts a{display:grid;grid-template-columns:minmax(0,1fr) 20px;column-gap:20px;align-items:center;padding:10px 0}
+.cat{grid-row:1;font-size:13px;color:var(--fg3)}
+.at{grid-row:2;font-size:21px;font-weight:500;letter-spacing:-.016em;line-height:1.3}
+.arts svg{grid-row:1 / 3;grid-column:2;color:var(--fg3)}
+.arts a:hover svg{color:var(--fg)}
+.more{margin-top:10px;font-size:15px;color:var(--fg3);display:flex;flex-wrap:wrap;column-gap:20px}
+.more a{display:inline-flex;align-items:center;min-height:44px;color:var(--fg2)}
+.mr{margin-top:48px}
+.mrh{display:flex;align-items:center;flex-wrap:wrap;gap:4px 18px}
+.mrh .h3{font-size:22px}
+.mrh a{margin-left:auto;display:inline-flex;align-items:center;min-height:44px;font-size:15px}
+.mrl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:24px 48px;margin-top:14px}
+.mrl .m{font-size:13px;color:var(--fg3)}
+.mrl p+p{margin-top:6px;font-size:16px;line-height:1.5}
+
+/* Quellen, Fuß */
+.fnw{padding-block:32px 16px;border-top:1px solid var(--ln)}
+.fnw h2{font-size:15px;font-weight:600}
+.fn{margin-top:14px;columns:4;column-gap:40px;font-size:12px;line-height:1.5;color:var(--fg3)}
+.r .fn{list-style:decimal;padding-left:20px}
+.fn li{margin-bottom:4px;break-inside:avoid}
+.ft{padding-block:16px 32px;font-size:14px;line-height:1.6;color:var(--fg3)}
+.fti{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:24px 96px}
+.ft .brand{color:var(--fg)}
+.ft p{margin-top:4px;max-width:560px;font-size:13px;line-height:1.55}
+.ft .doc{color:var(--fg)}
+.fl{display:flex;flex-wrap:wrap;gap:0 24px;align-content:start}
+.fl a{display:inline-flex;align-items:center;min-height:44px;color:var(--fg2)}.fl a:hover{color:var(--fg)}
+
+/* Mobil */
+@container (max-width: 760px){
+  .w{padding-inline:20px}
+  .nav,.nl{display:none}
+  .hdi{gap:8px;height:60px}
+  .hdr{margin-left:auto;gap:4px}
+  .menu{display:inline-flex}
+  .hero{padding:32px 0 48px}
+  .h1a{margin-bottom:8px}
+  .hrow{grid-template-columns:minmax(0,1fr);gap:24px;margin-top:22px}
+  .btns{flex-direction:column;align-items:stretch;gap:4px}
+  .btns .tl{justify-content:center}
+  .chart{margin-top:36px}
+  .chart .cd{display:none}.chart .cm{display:block}
+  .chart figcaption{font-size:12px}
+  .h3{font-size:23px}
+  .sec{padding-block:64px}
+  .sec.big{padding-block:72px 64px}
+  .sec.q{padding-block:56px}
+  .scene{grid-template-columns:minmax(0,1fr);margin-top:36px}
+  .stage{top:60px;z-index:2;background:var(--bg);padding:10px 0 14px;margin-inline:-20px;padding-inline:20px}
+  .stage .sd{display:none}.stage .sm2{display:block}
+  .steps{gap:64px;padding-top:28px}
+  .close{margin-top:56px}
+  .prod{margin-top:32px;overflow:hidden}
+  .prod svg{width:114%;max-width:none;margin-left:-7%}
+  .specs{gap:36px;margin-top:36px}
+  .claim{font-size:16px;margin-top:36px}
+  .plr{flex-wrap:wrap;gap:10px 16px}
+  .br{grid-template-columns:minmax(0,1fr)}
+  .bv{grid-column:1}
+  .ln li{font-size:19px}
+  .form{padding:22px 18px;border-radius:20px;margin-top:36px}
+  .form .pill{width:100%}
+  .how{margin-top:56px}
+  .sline{display:none}
+  .hsteps{gap:22px}
+  .hsteps h4{font-size:22px}
+  .inset{margin-top:48px}
+  .later{margin-top:56px;gap:40px}
+  .later .h3{font-size:21px}
+  .wf{grid-template-columns:minmax(0,1fr)}
+  .at{font-size:18px}
+  .fn{columns:1}
+  .fnw{padding-block:36px 20px}
+  .fn li{margin-bottom:2px}
+}
+
+/* Bewegung: Grundzustand ist der Endzustand */
+@keyframes up{from{opacity:0;transform:translateY(16px)}}
+@keyframes rise{from{opacity:0;transform:translateY(64px)}}
+@keyframes fade{from{opacity:0}}
+@keyframes draw{from{stroke-dashoffset:1}}
+@keyframes pop{from{opacity:0;transform:scale(0)}}
+@keyframes wipe{from{clip-path:inset(0 100% 0 0)}}
+@keyframes grow{from{transform:scaleX(0)}}
+@keyframes split{0%,30%{transform:translateX(0)}}
+@keyframes xfade{0%,35%{opacity:0}}
+@keyframes lab{0%,60%{opacity:0;transform:translateY(8px)}}
+@keyframes slidein{from{opacity:0;transform:translateX(40px)}}
+.dr{stroke-dasharray:1;stroke-dashoffset:0}
+.rsg{transform:translateX(10px)}
+.sm2 .rsg{transform:translateX(8px)}
+
+@media (prefers-reduced-motion: no-preference){
+  .ld{animation:up 1.1s var(--e) var(--d,0ms) both}
+  .lf{animation:fade .9s var(--e) var(--d,0ms) both}
+  .lw{animation:draw var(--t,1.6s) var(--e) var(--d,0ms) both}
+  .lp{animation:pop .7s var(--e) var(--d,0ms) both;transform-box:fill-box;transform-origin:center}
+  .tl svg{transition:transform .3s var(--e)}.tl:hover svg{transform:translateX(3px)}
+  .arts svg{transition:transform .3s var(--e),color .3s var(--e)}.arts a:hover svg{transform:translateX(3px)}
+  .faqg summary svg{transition:transform .4s var(--e)}
+}
+
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .sv{animation:up both;animation-timing-function:var(--e);animation-timeline:view(block 0px 140px);animation-range:entry 0% entry 100%}
+
+    /* Problem-Szene: jeder Textschritt ist eine Zeitachse, die klebende Grafik verwandelt sich */
+    .step{animation:up both;animation-timing-function:var(--e);animation-timeline:view(block 0px 120px);animation-range:entry 0% entry 60%}
+    .s1{view-timeline:--s1 block;view-timeline-inset:0px 38%}
+    .s2{view-timeline:--s2 block;view-timeline-inset:0px 38%}
+    .s3{view-timeline:--s3 block;view-timeline-inset:0px 38%}
+    .pl{animation:wipe both;animation-timing-function:var(--e);animation-timeline:--s1;animation-range:entry 0% entry 100%}
+    .rsg{animation:split both;animation-timing-function:var(--e);animation-timeline:--s2;animation-range:entry 0% entry 100%}
+    .xf{animation:xfade both;animation-timing-function:linear;animation-timeline:--s2;animation-range:entry 0% entry 100%}
+    .sl2{animation:lab both;animation-timing-function:var(--e);animation-timeline:--s2;animation-range:entry 10% entry 100%}
+    .w3a{animation:draw both;animation-timing-function:var(--e);animation-timeline:--s3;animation-range:entry 0% entry 35%}
+    .w3b{animation:pop both;animation-timing-function:var(--e);animation-timeline:--s3;animation-range:entry 25% entry 45%;transform-box:fill-box;transform-origin:center}
+    .w3c{animation:draw both;animation-timing-function:var(--e);animation-timeline:--s3;animation-range:entry 40% entry 90%}
+    .w3d{animation:lab both;animation-timing-function:var(--e);animation-timeline:--s3;animation-range:entry 30% entry 100%}
+
+    /* Produktmoment: Sticks steigen aus der Bodenlinie */
+    .prod{view-timeline:--p block;view-timeline-inset:0px 20%}
+    .st{animation:rise both;animation-timing-function:var(--e);animation-timeline:--p}
+    .st1{animation-range:entry 0% entry 55%}
+    .st2{animation-range:entry 9% entry 64%}
+    .st3{animation-range:entry 18% entry 73%}
+    .bk{animation:slidein both;animation-timing-function:var(--e);animation-timeline:--p;animation-range:entry 28% entry 85%}
+    .bkc{animation:draw both;animation-timing-function:var(--e);animation-timeline:--p;animation-range:entry 55% entry 100%}
+
+    /* S-LiTE */
+    .bars{view-timeline:--b block;view-timeline-inset:0px 160px}
+    .bdot{animation:pop both;animation-timing-function:var(--e);animation-timeline:--b;animation-range:entry 0% entry 45%}
+    .bg{animation:grow both;animation-timing-function:var(--e);animation-timeline:--b;animation-range:entry 25% entry 100%}
+
+    /* Ablauf: eine Linie zeichnet sich von links nach rechts */
+    .how{view-timeline:--h block;view-timeline-inset:0px 140px}
+    .sline path{animation:draw both;animation-timing-function:var(--e);animation-timeline:--h;animation-range:entry 0% entry 100%}
+    .hsteps li{animation:up both;animation-timing-function:var(--e);animation-timeline:--h}
+    .hsteps li:nth-child(1){animation-range:entry 0% entry 50%}
+    .hsteps li:nth-child(2){animation-range:entry 20% entry 70%}
+    .hsteps li:nth-child(3){animation-range:entry 40% entry 90%}
+  }
+}
+
+
+/* Entwurfs-Vorschau: aufgeklapptes Handy-Menü */
+#mnav[data-offen]{display:flex !important;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;z-index:100;background:#0b0d0e;border-bottom:1px solid #2c2c30;padding:8px 20px 16px}
+#mnav[data-offen] a{display:flex;align-items:center;min-height:48px;padding:0 !important;margin:0 !important;border-radius:0 !important;background:none !important;color:#f5f5f7 !important;text-decoration:none;font-size:18px;border-top:1px solid #2c2c30}
+#mnav[data-offen] a:first-child{border-top:0}
+header{position:sticky}
+</style>
+</head>
+<body>
+<div class="r">
+
+<header class="hd"><div class="w hdi">
+<a class="brand" href="/" aria-label="Nach der Spritze, Startseite"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6C7.5 6 8 17.5 13.5 17.5H21.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span>Nach der Spritze</span></a>
+<nav class="nav" aria-label="Hauptnavigation"><a href="#set">Das Set</a><a href="#vorbestellen">Preis</a><a href="/wissen/">Wissen</a><a href="/marktradar/">Marktradar</a><a href="#faq">FAQ</a></nav>
+<div class="hdr"><button class="nl" type="button" aria-haspopup="dialog">Newsletter</button><a class="pill sm" href="#vorbestellen">Vorbestellen</a><button class="menu" type="button" aria-label="Menü" aria-expanded="false" aria-controls="mnav"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 7h14M3 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div>
+</div>
+<nav id="mnav" aria-label="Menü" hidden="hidden"><a href="#set">Das Set</a><a href="#vorbestellen">Preis</a><a href="/wissen/">Wissen</a><a href="/marktradar/">Marktradar</a><a href="#faq">FAQ</a></nav>
+</header>
+
+<main>
+<section class="hero"><div class="w">
+<h1 class="h1"><span class="h1a ld" style="--d:60ms">Nach der Spritze:</span> <span class="h1b ld" style="--d:170ms">Muskeln behalten,</span> <span class="h1b ld" style="--d:290ms">Gewicht halten.</span></h1>
+
+<div class="hrow">
+<p class="lede ld" style="--d:420ms">Protein, Ballaststoffe, Kreatin und ein Programm mit zwei Krafteinheiten pro Woche. Für alle, die die Abnehmspritze absetzen oder reduzieren und das Erreichte nicht wieder verlieren wollen.</p>
+<div class="cta ld" style="--d:540ms">
+<div class="btns"><a class="pill" href="#vorbestellen">Vorbestellen – ohne Zahlung</a><a class="tl" href="#set">Was ist drin?<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<p class="price">129&nbsp;€ für 12 Wochen, rund 1,50&nbsp;€ am Tag. Kein Geld jetzt. Erste Charge ab 100 Vorbestellungen.</p>
+<p class="doc">Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.</p>
+</div>
+</div>
+
+<figure class="chart">
+<svg class="cd" viewBox="0 0 1200 252" role="img" aria-labelledby="cdt">
+<title id="cdt">Absetzkurve aus der STEP-1-Verlängerung: Mit Semaglutid sinkt das Gewicht bis Woche 68 im Mittel um 17,3 Prozent. Nach der letzten Dosis steigt es wieder, in Woche 120 liegt es bei minus 5,6 Prozent: zwei Drittel des Verlusts sind zurück. Placebo: minus 2,0 und minus 0,1 Prozent.</title>
+<g class="lf" style="--d:600ms">
+<line x1="0" y1="20" x2="1000" y2="20" stroke="#283032" stroke-width="1"/>
+<line x1="0" y1="120" x2="1000" y2="120" stroke="#1b2022" stroke-width="1"/>
+<line x1="0" y1="220" x2="1000" y2="220" stroke="#1b2022" stroke-width="1"/>
+</g>
+<g font-size="13" fill="#7d8684">
+<text class="lf" style="--d:650ms" x="-14" y="24.5" text-anchor="end">0 %</text>
+<text class="lf" style="--d:720ms" x="-14" y="124.5" text-anchor="end">−10 %</text>
+<text class="lf" style="--d:790ms" x="-14" y="224.5" text-anchor="end">−20 %</text>
+<text class="lf" style="--d:680ms" x="0" y="246">Woche 0</text>
+<text class="lf" style="--d:750ms" x="566.7" y="246" text-anchor="middle">Woche 68</text>
+<text class="lf" style="--d:820ms" x="1000" y="246" text-anchor="end">Woche 120</text>
+</g>
+<path class="dr lw" style="--d:700ms;--t:1600ms" pathLength="1" d="M0 20C150 82 330 190 566.7 193" fill="none" stroke="#58C4DD" stroke-width="3.5"/>
+<text class="lf" style="--d:1700ms" x="300" y="207" font-size="15" font-weight="500" fill="#58C4DD">Semaglutid</text>
+<path class="dr lw" style="--d:2400ms;--t:500ms" pathLength="1" d="M566.7 220V4" fill="none" stroke="#6b7573" stroke-width="1"/>
+<text class="lf" style="--d:2600ms" x="576" y="14" font-size="13" fill="#7d8684">letzte Dosis</text>
+<circle class="lp" style="--d:2300ms" cx="566.7" cy="193" r="6" fill="#58C4DD"/>
+<text class="lf" style="--d:2400ms" x="552" y="210" text-anchor="end" font-size="15" font-weight="600" fill="#eef1f0">−17,3 %</text>
+<path class="dr lw" style="--d:2500ms;--t:1200ms" pathLength="1" d="M566.7 193C640 193 800 90 1000 76" fill="none" stroke="#F0AC5F" stroke-width="3.5"/>
+<circle class="lp" style="--d:3600ms" cx="1000" cy="76" r="6" fill="#F0AC5F"/>
+<text class="lf" style="--d:3700ms" x="986" y="60" text-anchor="end" font-size="15" font-weight="600" fill="#eef1f0">−5,6 %</text>
+<path class="lf" style="--d:3650ms" d="M580 193H1010" fill="none" stroke="#6b7573" stroke-width="1" stroke-dasharray="2 5"/>
+<path class="dr lw" style="--d:3700ms;--t:500ms" pathLength="1" d="M1016 76Q1024 76 1024 84V126.5Q1024 134.5 1032 134.5Q1024 134.5 1024 142.5V185Q1024 193 1016 193" fill="none" stroke="#F0AC5F" stroke-width="1.5"/>
+<text class="lf" style="--d:3900ms" x="1042" y="130" font-size="15" font-weight="600" fill="#F0AC5F">zwei Drittel</text>
+<text class="lf" style="--d:4000ms" x="1042" y="149" font-size="15" font-weight="600" fill="#F0AC5F">zurück</text>
+<path class="dr lw" style="--d:3000ms;--t:1100ms" pathLength="1" d="M0 20C250 36 400 40 566.7 40C700 40 850 24 1000 21" fill="none" stroke="#6b7573" stroke-width="1.5"/>
+<text class="lf" style="--d:3900ms" x="880" y="48" text-anchor="end" font-size="13" fill="#7d8684">Placebo</text>
+</svg>
+<svg class="cm" viewBox="0 0 350 252" role="img" aria-labelledby="cmt">
+<title id="cmt">Absetzkurve aus der STEP-1-Verlängerung: Mit Semaglutid minus 17,3 Prozent in Woche 68, nach der letzten Dosis Anstieg auf minus 5,6 Prozent in Woche 120: zwei Drittel zurück. Placebo: minus 2,0 und minus 0,1 Prozent.</title>
+<g class="lf" style="--d:600ms">
+<line x1="40" y1="22" x2="272" y2="22" stroke="#283032" stroke-width="1"/>
+<line x1="40" y1="122" x2="272" y2="122" stroke="#1b2022" stroke-width="1"/>
+<line x1="40" y1="222" x2="272" y2="222" stroke="#1b2022" stroke-width="1"/>
+</g>
+<g font-size="12" fill="#7d8684">
+<text class="lf" style="--d:650ms" x="34" y="26" text-anchor="end">0 %</text>
+<text class="lf" style="--d:720ms" x="34" y="126" text-anchor="end">−10 %</text>
+<text class="lf" style="--d:790ms" x="34" y="226" text-anchor="end">−20 %</text>
+<text class="lf" style="--d:680ms" x="40" y="244">Woche 0</text>
+<text class="lf" style="--d:750ms" x="171.5" y="244" text-anchor="middle">Woche 68</text>
+<text class="lf" style="--d:820ms" x="272" y="244" text-anchor="end">Woche 120</text>
+</g>
+<path class="dr lw" style="--d:700ms;--t:1600ms" pathLength="1" d="M40 22C76 78 116 192 171.5 195" fill="none" stroke="#58C4DD" stroke-width="2.5"/>
+<text class="lf" style="--d:1700ms" x="48" y="150" font-size="12" font-weight="500" fill="#58C4DD">Semaglutid</text>
+<path class="dr lw" style="--d:2400ms;--t:500ms" pathLength="1" d="M171.5 222V4" fill="none" stroke="#6b7573" stroke-width="1"/>
+<text class="lf" style="--d:2600ms" x="177" y="13" font-size="12" fill="#7d8684">letzte Dosis</text>
+<circle class="lp" style="--d:2300ms" cx="171.5" cy="195" r="4.5" fill="#58C4DD"/>
+<text class="lf" style="--d:2400ms" x="162" y="212" text-anchor="end" font-size="12" font-weight="600" fill="#eef1f0">−17,3 %</text>
+<path class="dr lw" style="--d:2500ms;--t:1200ms" pathLength="1" d="M171.5 195C190 195 228 90 272 78" fill="none" stroke="#F0AC5F" stroke-width="2.5"/>
+<circle class="lp" style="--d:3600ms" cx="272" cy="78" r="4.5" fill="#F0AC5F"/>
+<text class="lf" style="--d:3700ms" x="264" y="66" text-anchor="end" font-size="12" font-weight="600" fill="#eef1f0">−5,6 %</text>
+<path class="lf" style="--d:3650ms" d="M180 195H276" fill="none" stroke="#6b7573" stroke-width="1" stroke-dasharray="2 4"/>
+<path class="dr lw" style="--d:3700ms;--t:500ms" pathLength="1" d="M280 78Q285 78 285 83V131.5Q285 136.5 290 136.5Q285 136.5 285 141.5V190Q285 195 280 195" fill="none" stroke="#F0AC5F" stroke-width="1.2"/>
+<text class="lf" style="--d:3900ms" x="296" y="124" font-size="12" font-weight="600" fill="#F0AC5F">zwei</text>
+<text class="lf" style="--d:3900ms" x="296" y="139" font-size="12" font-weight="600" fill="#F0AC5F">Drittel</text>
+<text class="lf" style="--d:4000ms" x="296" y="154" font-size="12" font-weight="600" fill="#F0AC5F">zurück</text>
+<path class="dr lw" style="--d:3000ms;--t:1100ms" pathLength="1" d="M40 22C92 38 129 42 171.5 42C204 42 238 25 272 23" fill="none" stroke="#6b7573" stroke-width="1.5"/>
+<text class="lf" style="--d:3900ms" x="226" y="54" text-anchor="end" font-size="12" fill="#7d8684">Placebo</text>
+</svg>
+<figcaption class="lf" style="--d:1200ms">Gewichtsänderung in % vom Startgewicht, Mittelwerte aus der STEP-1-Verlängerung.<sup><a href="#fn-3">3</a></sup> Verlauf zwischen den Messpunkten schematisch.</figcaption>
+</figure>
+</div></section>
+
+<section class="sec big" id="problem" aria-labelledby="problem-h"><div class="w">
+<h2 class="h2 c sv" id="problem-h">Die meisten setzen ab.<br> <span class="t2">Und dann kommt das Gewicht zurück –<br> oft ohne die Muskeln.</span></h2>
+
+<div class="scene">
+<div class="stage" aria-hidden="true">
+<svg class="sd" viewBox="0 0 560 440">
+<text x="0" y="14" font-size="13" fill="#7d8684">Von 20 Menschen setzen 13 ab</text>
+<g fill="#283032"><rect x="4" y="32" width="8" height="56" rx="4"/><rect x="32" y="32" width="8" height="56" rx="4"/><rect x="60" y="32" width="8" height="56" rx="4"/><rect x="88" y="32" width="8" height="56" rx="4"/><rect x="116" y="32" width="8" height="56" rx="4"/><rect x="144" y="32" width="8" height="56" rx="4"/><rect x="172" y="32" width="8" height="56" rx="4"/><rect x="200" y="32" width="8" height="56" rx="4"/><rect x="228" y="32" width="8" height="56" rx="4"/><rect x="256" y="32" width="8" height="56" rx="4"/><rect x="284" y="32" width="8" height="56" rx="4"/><rect x="312" y="32" width="8" height="56" rx="4"/><rect x="340" y="32" width="8" height="56" rx="4"/><rect x="368" y="32" width="8" height="56" rx="4"/><rect x="396" y="32" width="8" height="56" rx="4"/><rect x="424" y="32" width="8" height="56" rx="4"/><rect x="452" y="32" width="8" height="56" rx="4"/><rect x="480" y="32" width="8" height="56" rx="4"/><rect x="508" y="32" width="8" height="56" rx="4"/><rect x="536" y="32" width="8" height="56" rx="4"/></g>
+<g class="pl" fill="#eef1f0"><rect x="4" y="32" width="8" height="56" rx="4"/><rect x="32" y="32" width="8" height="56" rx="4"/><rect x="60" y="32" width="8" height="56" rx="4"/><rect x="88" y="32" width="8" height="56" rx="4"/><rect x="116" y="32" width="8" height="56" rx="4"/><rect x="144" y="32" width="8" height="56" rx="4"/><rect x="172" y="32" width="8" height="56" rx="4"/><rect x="200" y="32" width="8" height="56" rx="4"/><rect x="228" y="32" width="8" height="56" rx="4"/><rect x="256" y="32" width="8" height="56" rx="4"/><rect x="284" y="32" width="8" height="56" rx="4"/><rect x="312" y="32" width="8" height="56" rx="4"/><rect x="340" y="32" width="8" height="56" rx="4"/></g>
+
+<text x="0" y="150" font-size="13" fill="#58C4DD">Verlorenes Gewicht</text>
+<g><rect x="0" y="166" width="330" height="20" rx="4" fill="#58C4DD"/><rect class="xf" x="0" y="166" width="330" height="20" rx="4" fill="#6b7573"/></g>
+<g class="rsg"><rect x="330" y="166" width="220" height="20" rx="4" fill="#58C4DD"/><rect class="xf" x="330" y="166" width="220" height="20" rx="4" fill="#5CD0B3"/></g>
+<text class="sl2" x="0" y="214" font-size="13" fill="#9aa3a1">rund 60 % Fettmasse</text>
+<text class="sl2" x="340" y="214" font-size="13" font-weight="500" fill="#5CD0B3">rund 40 % fettfreie Masse</text>
+
+<path d="M0 290H550" stroke="#4a5355" stroke-width="1" stroke-dasharray="2 5"/>
+<text x="0" y="280" font-size="13" fill="#7d8684">Startgewicht</text>
+<path d="M86 400H550" stroke="#283032" stroke-width="1" stroke-dasharray="2 5"/>
+<path class="dr w3a" pathLength="1" d="M0 400H86" fill="none" stroke="#58C4DD" stroke-width="3.5" stroke-linecap="round"/>
+<text x="0" y="386" font-size="13" fill="#7d8684">letzte Dosis</text>
+<path class="dr w3c" pathLength="1" d="M86 400C220 400 380 344 550 326.7" fill="none" stroke="#F0AC5F" stroke-width="3.5" stroke-linecap="round"/>
+<circle class="w3b" cx="86" cy="400" r="6" fill="#F0AC5F"/>
+<text class="w3d" x="86" y="428" text-anchor="middle" font-size="13" font-weight="600" fill="#eef1f0">8 Wochen</text>
+<text class="w3d" x="550" y="314" text-anchor="end" font-size="13" font-weight="600" fill="#F0AC5F">ein Jahr: zwei Drittel wieder da</text>
+</svg>
+<svg class="sm2" viewBox="0 0 350 300">
+<text x="0" y="13" font-size="12" fill="#7d8684">Von 20 Menschen setzen 13 ab</text>
+<g fill="#283032"><rect x="2" y="24" width="6" height="40" rx="3"/><rect x="19.5" y="24" width="6" height="40" rx="3"/><rect x="37" y="24" width="6" height="40" rx="3"/><rect x="54.5" y="24" width="6" height="40" rx="3"/><rect x="72" y="24" width="6" height="40" rx="3"/><rect x="89.5" y="24" width="6" height="40" rx="3"/><rect x="107" y="24" width="6" height="40" rx="3"/><rect x="124.5" y="24" width="6" height="40" rx="3"/><rect x="142" y="24" width="6" height="40" rx="3"/><rect x="159.5" y="24" width="6" height="40" rx="3"/><rect x="177" y="24" width="6" height="40" rx="3"/><rect x="194.5" y="24" width="6" height="40" rx="3"/><rect x="212" y="24" width="6" height="40" rx="3"/><rect x="229.5" y="24" width="6" height="40" rx="3"/><rect x="247" y="24" width="6" height="40" rx="3"/><rect x="264.5" y="24" width="6" height="40" rx="3"/><rect x="282" y="24" width="6" height="40" rx="3"/><rect x="299.5" y="24" width="6" height="40" rx="3"/><rect x="317" y="24" width="6" height="40" rx="3"/><rect x="334.5" y="24" width="6" height="40" rx="3"/></g>
+<g class="pl" fill="#eef1f0"><rect x="2" y="24" width="6" height="40" rx="3"/><rect x="19.5" y="24" width="6" height="40" rx="3"/><rect x="37" y="24" width="6" height="40" rx="3"/><rect x="54.5" y="24" width="6" height="40" rx="3"/><rect x="72" y="24" width="6" height="40" rx="3"/><rect x="89.5" y="24" width="6" height="40" rx="3"/><rect x="107" y="24" width="6" height="40" rx="3"/><rect x="124.5" y="24" width="6" height="40" rx="3"/><rect x="142" y="24" width="6" height="40" rx="3"/><rect x="159.5" y="24" width="6" height="40" rx="3"/><rect x="177" y="24" width="6" height="40" rx="3"/><rect x="194.5" y="24" width="6" height="40" rx="3"/><rect x="212" y="24" width="6" height="40" rx="3"/></g>
+
+<text x="0" y="100" font-size="12" fill="#58C4DD">Verlorenes Gewicht</text>
+<g><rect x="0" y="110" width="204" height="14" rx="3" fill="#58C4DD"/><rect class="xf" x="0" y="110" width="204" height="14" rx="3" fill="#6b7573"/></g>
+<g class="rsg"><rect x="204" y="110" width="136" height="14" rx="3" fill="#58C4DD"/><rect class="xf" x="204" y="110" width="136" height="14" rx="3" fill="#5CD0B3"/></g>
+<text class="sl2" x="0" y="144" font-size="12" fill="#9aa3a1">rund 60 %</text>
+<text class="sl2" x="0" y="159" font-size="12" fill="#9aa3a1">Fettmasse</text>
+<text class="sl2" x="212" y="144" font-size="12" font-weight="500" fill="#5CD0B3">rund 40 %</text>
+<text class="sl2" x="212" y="159" font-size="12" font-weight="500" fill="#5CD0B3">fettfreie Masse</text>
+
+<path d="M0 194H340" stroke="#4a5355" stroke-width="1" stroke-dasharray="2 4"/>
+<text x="0" y="186" font-size="12" fill="#7d8684">Startgewicht</text>
+<path d="M52 270H340" stroke="#283032" stroke-width="1" stroke-dasharray="2 4"/>
+<path class="dr w3a" pathLength="1" d="M0 270H52" fill="none" stroke="#58C4DD" stroke-width="2.5" stroke-linecap="round"/>
+<text x="0" y="258" font-size="12" fill="#7d8684">letzte Dosis</text>
+<path class="dr w3c" pathLength="1" d="M52 270C135 270 230 228 340 219.3" fill="none" stroke="#F0AC5F" stroke-width="2.5" stroke-linecap="round"/>
+<circle class="w3b" cx="52" cy="270" r="4.5" fill="#F0AC5F"/>
+<text class="w3d" x="52" y="291" text-anchor="middle" font-size="12" font-weight="600" fill="#eef1f0">8 Wochen</text>
+<text class="w3d" x="340" y="210" text-anchor="end" font-size="12" font-weight="600" fill="#F0AC5F">ein Jahr: zwei Drittel wieder da</text>
+</svg>
+</div>
+
+<div class="steps">
+<div class="step s1">
+<p class="num">65<span class="u">%</span></p>
+<p class="lede">der Menschen ohne Typ-2-Diabetes setzen die Abnehmspritze innerhalb eines Jahres wieder ab.<sup><a href="#fn-1">1</a></sup></p>
+</div>
+<div class="step s2">
+<p class="num te"><span class="pre">rund</span>40<span class="u">%</span></p>
+<p class="lede">des verlorenen Gewichts waren in einer Substudie von STEP 1 <span class="te">fettfreie Masse</span>, darunter Muskeln. Nicht nur Fett.<sup><a href="#fn-2">2</a></sup></p>
+</div>
+<div class="step s3">
+<p class="num"><span class="pre">etwa</span>8<span class="u wd">Wochen</span></p>
+<p class="lede">nach der letzten Dosis beginnt in Studien die Zunahme.<sup><a href="#fn-4">4</a></sup></p>
+<p class="fine">Ein Jahr nach dem Absetzen von Semaglutid waren im Mittel <span class="go">zwei Drittel des verlorenen Gewichts wieder da</span>.<sup><a href="#fn-3">3</a></sup></p>
+</div>
+</div>
+</div>
+
+<div class="close c sv">
+<p>Regain nach dem Absetzen ist in den Studien die Regel, nicht die Ausnahme. Was in Studien den Unterschied macht: genug Protein, Krafttraining, Dranbleiben.</p>
+</div>
+</div></section>
+
+<section class="sec" id="set" aria-labelledby="set-h"><div class="w">
+<h2 class="h2 c sv" id="set-h">Vier Bausteine, ein Ziel: das Erreichte halten.</h2>
+
+<div class="prod">
+<svg viewBox="200 24 640 377" role="img" aria-labelledby="prt">
+<title id="prt">Das 12-Wochen-Set: drei Sticks für Protein, Ballaststoffe und Kreatin neben dem Programmheft „12 Wochen“. Entwurfsdarstellung, kein Foto.</title>
+<defs>
+<linearGradient id="gP" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#a9adae"/><stop offset=".3" stop-color="#eceff0"/><stop offset=".72" stop-color="#d4d8d9"/><stop offset="1" stop-color="#959a9b"/></linearGradient>
+<linearGradient id="gB" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#33393b"/><stop offset=".3" stop-color="#5d6567"/><stop offset=".72" stop-color="#485052"/><stop offset="1" stop-color="#2a2f31"/></linearGradient>
+<linearGradient id="gK" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#101315"/><stop offset=".3" stop-color="#2a3032"/><stop offset=".72" stop-color="#1d2224"/><stop offset="1" stop-color="#0d1011"/></linearGradient>
+<linearGradient id="gTop" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".25" stop-color="#fff" stop-opacity="0"/><stop offset=".8" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></linearGradient>
+<linearGradient id="gBk" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1c2123"/><stop offset=".5" stop-color="#121618"/><stop offset="1" stop-color="#0c0f10"/></linearGradient>
+<pattern id="rid" width="3" height="8" patternUnits="userSpaceOnUse"><rect width="1" height="8" fill="#000" fill-opacity=".16"/></pattern>
+</defs>
+
+<g class="bk">
+<rect x="528" y="80" width="272" height="320" rx="4" fill="url(#gBk)" stroke="#283032" stroke-width="1"/>
+<rect x="528" y="80" width="5" height="320" fill="#000" fill-opacity=".35"/>
+<path d="M558 116C562 116 562.5 124.5 567 124.5H573" fill="none" stroke="#eef1f0" stroke-width="1.8" stroke-linecap="round"/>
+<text x="580" y="124.5" font-size="12" font-weight="500" fill="#9aa3a1">Nach der Spritze</text>
+<path class="dr bkc" pathLength="1" d="M558 290C602 290 612 232 652 232H772" fill="none" stroke="#5CD0B3" stroke-width="2.6" stroke-linecap="round"/>
+<text x="558" y="352" font-size="32" font-weight="600" fill="#eef1f0" letter-spacing="-1.2">12 Wochen</text>
+<text x="558" y="376" font-size="13" fill="#9aa3a1">Training · Rezepte</text>
+</g>
+
+<g class="st st1">
+<rect x="240" y="56" width="72" height="344" rx="5" fill="url(#gP)"/>
+<rect x="240" y="56" width="72" height="344" rx="5" fill="url(#gTop)"/>
+<rect x="240" y="56" width="72" height="24" fill="url(#rid)"/>
+<rect x="240" y="376" width="72" height="24" fill="url(#rid)"/>
+<rect x="240" y="92" width="72" height="4" fill="#1C8F76"/>
+<path d="M265 118C268.5 118 269 126 273 126H283" fill="none" stroke="#0b0d0e" stroke-width="1.8" stroke-linecap="round"/>
+<text transform="rotate(-90 276 248)" x="276" y="256" text-anchor="middle" font-size="25" font-weight="600" fill="#0b0d0e" letter-spacing="-.4">Protein</text>
+<text x="276" y="360" text-anchor="middle" font-size="13" font-weight="600" fill="#2a2f31">≥ 20 g</text>
+</g>
+
+<g class="st st2">
+<rect x="330" y="56" width="72" height="344" rx="5" fill="url(#gB)"/>
+<rect x="330" y="56" width="72" height="344" rx="5" fill="url(#gTop)"/>
+<rect x="330" y="56" width="72" height="24" fill="url(#rid)"/>
+<rect x="330" y="376" width="72" height="24" fill="url(#rid)"/>
+<rect x="330" y="92" width="72" height="4" fill="#9aa3a1"/>
+<path d="M355 118C358.5 118 359 126 363 126H373" fill="none" stroke="#eef1f0" stroke-width="1.8" stroke-linecap="round"/>
+<text transform="rotate(-90 366 248)" x="366" y="256" text-anchor="middle" font-size="25" font-weight="600" fill="#eef1f0" letter-spacing="-.4">Ballaststoffe</text>
+<text x="366" y="360" text-anchor="middle" font-size="13" font-weight="600" fill="#eef1f0">5 g</text>
+</g>
+
+<g class="st st3">
+<rect x="420" y="56" width="72" height="344" rx="5" fill="url(#gK)" stroke="#283032" stroke-width="1"/>
+<rect x="420" y="56" width="72" height="344" rx="5" fill="url(#gTop)"/>
+<rect x="420" y="56" width="72" height="24" fill="url(#rid)"/>
+<rect x="420" y="376" width="72" height="24" fill="url(#rid)"/>
+<rect x="420" y="92" width="72" height="4" fill="#5CD0B3"/>
+<path d="M445 118C448.5 118 449 126 453 126H463" fill="none" stroke="#eef1f0" stroke-width="1.8" stroke-linecap="round"/>
+<text transform="rotate(-90 456 248)" x="456" y="256" text-anchor="middle" font-size="25" font-weight="600" fill="#eef1f0" letter-spacing="-.4">Kreatin</text>
+<text x="456" y="360" text-anchor="middle" font-size="13" font-weight="600" fill="#9aa3a1">3 g</text>
+</g>
+</svg>
+</div>
+
+<div class="specs">
+<div class="spec sv"><p class="fig te">≥&nbsp;20<span class="u">g</span></p><h3>Protein-Stick</h3><p>Täglich ein Stick. <span class="cl">„Protein trägt zur Erhaltung von Muskelmasse bei.“</span><sup><a href="#fn-6">6</a></sup> Ziel im Programm: 1,2&nbsp;g pro kg Körpergewicht am Tag.<sup><a href="#fn-5">5</a></sup> Molke oder pflanzlich, du wählst.</p></div>
+<div class="spec sv"><p class="fig">5<span class="u">g</span></p><h3>Ballaststoff-Stick</h3><p>Täglich ein Stick, geschmacksneutral, mit einem großen Glas Wasser. Die DGE empfiehlt mindestens 30&nbsp;g Ballaststoffe am Tag.<sup><a href="#fn-11">11</a></sup></p></div>
+<div class="spec sv"><p class="fig te">3<span class="u">g</span></p><h3>Kreatin-Monohydrat</h3><p>Täglich. <span class="cl">„Kreatin erhöht die körperliche Leistung bei Schnellkrafttraining im Rahmen kurzzeitiger intensiver körperlicher Betätigung.“</span><sup><a href="#fn-6">6</a></sup> Eines der am besten untersuchten Supplemente.<sup><a href="#fn-10">10</a></sup> Wirkt nur zusammen mit Krafttraining.</p></div>
+<div class="spec sv"><p class="fig">2&nbsp;×&nbsp;30<span class="u">min</span></p><h3>Programm, 12 Wochen</h3><p>Zwei Krafteinheiten à 30 Minuten pro Woche, zuhause mit Bändern oder im Studio. Wöchentlicher Check-in per E-Mail, Rezepte für kleine Portionen mit viel Protein, Wiegeprotokoll statt Kalorienzählen.</p></div>
+</div>
+<p class="claim">Alle Aussagen zum Set entsprechen den in der EU zugelassenen gesundheitsbezogenen Angaben.<sup><a href="#fn-6">6</a></sup> <b>Was wir nicht sagen:</b> dass das Set die Spritze ersetzt oder den Jojo-Effekt verhindert. Das kann kein Lebensmittel.</p>
+</div></section>
+
+<section class="sec" id="forschung" aria-labelledby="fo-h"><div class="w">
+<figure class="slite c">
+<h2 class="rh sv" id="fo-h">Was die Forschung sagt</h2>
+<p class="big6 go sv">6<span class="u">kg</span></p>
+<p class="lede">Unterschied, ein Jahr nach dem Absetzen.<sup><a href="#fn-8">8</a></sup></p>
+<div class="bars" aria-hidden="true">
+<div class="br"><span class="brl">Mit Training</span><div class="bt"><span class="bdot"></span></div><span class="bv">Gewicht gehalten</span></div>
+<div class="br"><span class="brl">Nur Medikament</span><div class="bt"><span class="bg"></span></div><span class="bv go">im Schnitt 6 kg mehr wieder zugenommen</span></div>
+</div>
+<p class="sp">In der dänischen S-LiTE-Studie hielten Teilnehmende, die während der Therapie trainiert hatten, ihr Gewicht. Wer nur das Medikament bekommen hatte, nahm im Schnitt 6&nbsp;kg mehr wieder zu.<sup><a href="#fn-8">8</a></sup></p>
+</figure>
+<div class="rs">
+<div class="ri sv"><h3>Protein</h3><p>Übersichtsarbeiten empfehlen während Gewichtsabnahme und&nbsp;‑erhalt 1,2 bis 1,6&nbsp;g Protein pro kg Körpergewicht und Tag, deutlich mehr als die 0,8&nbsp;g, die die DGE als Minimum ansetzt.<sup><a href="#fn-5">5</a></sup></p></div>
+<div class="ri sv"><h3>Krafttraining</h3><p>Eine Meta-Analyse zeigt: Krafttraining während einer Kalorienreduktion verhindert den Verlust an fettfreier Masse weitgehend.<sup><a href="#fn-7">7</a></sup> Die WHO empfiehlt an mindestens zwei Tagen pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-9">9</a></sup></p></div>
+<div class="ri sv"><h3>Kreatin</h3><p>Kreatin-Monohydrat gilt in üblichen Dosen bei gesunden Erwachsenen als sicher und gehört zu den am besten untersuchten Nahrungsergänzungen.<sup><a href="#fn-10">10</a></sup> Ohne Training bringt es wenig.</p></div>
+</div>
+</div></section>
+
+<section class="sec q" id="fuer-wen" aria-labelledby="fw-h"><div class="w fw">
+<div class="sv">
+<h2 class="h2" id="fw-h">Für wen das Set gedacht ist.</h2>
+<p class="note">Das Set ist kein Medikament und keine Absetz-Anleitung. Es ergänzt das Gespräch mit deiner Ärztin, es ersetzt es nicht.</p>
+</div>
+<div class="sv">
+<h3>Für dich, wenn du</h3>
+<ul class="ln">
+<li>die Abnehmspritze absetzt, reduzierst oder das planst und dein Gewicht halten willst.</li>
+<li>unter der Spritze wenig gegessen hast und merkst, dass Kraft und Muskeln nachgelassen haben.</li>
+<li>einen einfachen Plan willst: zwei Einheiten pro Woche, drei Portionen am Tag, ein Check-in.</li>
+<li>keine Wunder erwartest, sondern etwas, das du 12 Wochen durchhalten kannst.</li>
+</ul>
+<h3>Nicht für dich, wenn du</h3>
+<ul class="inl">
+<li>schwanger bist oder stillst</li><li>unter 18 bist</li><li>eine Nierenerkrankung hast (dann nur nach Rücksprache mit Ärztin oder Arzt, vor allem wegen Kreatin und Protein)</li><li>Schluckbeschwerden hast</li><li>eine Essstörung hast oder hattest (bitte sprich zuerst mit deiner Behandlerin).</li>
+</ul>
+</div>
+</div></section>
+
+<section class="sec big" id="vorbestellen" aria-labelledby="pr-h"><div class="w">
+<h2 class="pr c sv" id="pr-h"><span class="prn">129&nbsp;€</span> <span class="prs">einmalig. <span class="t2">Oder 49&nbsp;€ im&nbsp;Monat.</span></span></h2>
+<p class="prd c">129&nbsp;€ für 12 Wochen, das entspricht 43&nbsp;€ im Monat oder rund 1,50&nbsp;€ am Tag. 49&nbsp;€ monatlich sind jederzeit kündbar. Versand innerhalb Deutschlands inklusive.</p>
+
+<form class="form" action="#vorbestellen" method="post">
+<label for="em">E-Mail-Adresse</label>
+<div class="frow">
+<input id="em" name="email" type="email" autocomplete="email" placeholder="name@beispiel.de" required="required">
+<button class="pill" type="submit">Vorbestellen – ohne Zahlung</button>
+</div>
+<p class="honest">Wir sammeln gerade Vorbestellungen, um zu sehen, ob es das Set geben soll. Erst ab 100 Vorbestellungen produzieren wir. Deshalb jetzt keine Zahlung, kein Countdown, keine künstliche Knappheit.</p>
+<p class="fs">Das Formular wird von Tally (Belgien, EU) bereitgestellt.</p>
+<p class="doc">Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.</p>
+</form>
+
+<div class="how">
+<h3 class="h3">So läuft es</h3>
+<svg class="sline" viewBox="0 0 1200 2" preserveAspectRatio="none" aria-hidden="true"><path class="dr" pathLength="1" d="M0 1H1200" stroke="#6b7573" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
+<ol class="hsteps">
+<li><h4><span>1</span>Eintragen</h4><p>E-Mail und drei kurze Angaben. Keine Zahlung, keine Zahlungsdaten.</p></li>
+<li><h4><span>2</span>Bescheid bekommen</h4><p>Sobald 100 Vorbestellungen zusammen sind: Sorten, Liefertermin, Bestellmöglichkeit. Realistisch 8 bis 12 Wochen nach Erreichen der Marke.</p></li>
+<li><h4><span>3</span>Entscheiden</h4><p>Erst dann bestellst du, oder du lässt es. Austragen jederzeit per E-Mail.</p></li>
+</ol>
+</div>
+
+<div class="inset sv">
+<h3 class="h3">Im Set</h3>
+<dl>
+<div class="tr"><dt>Protein-Sticks</dt><dd>84 × ≥&nbsp;20&nbsp;g Protein</dd></div>
+<div class="tr"><dt>Ballaststoff-Sticks</dt><dd>84 × 5&nbsp;g</dd></div>
+<div class="tr"><dt>Kreatin-Monohydrat</dt><dd>84 × 3&nbsp;g</dd></div>
+<div class="tr"><dt>Programm</dt><dd>12 Wochen</dd></div>
+<div class="tr"><dt>Versand in Deutschland</dt><dd>inklusive</dd></div>
+<div class="tr"><dt>Nicht im Set</dt><dd>Widerstandsbänder</dd></div>
+</dl>
+</div>
+
+<div class="later">
+<div class="sv">
+<h3 class="h3">Dein kostenloser Ernährungsplan für die Zeit nach der Spritze</h3>
+<p>Drei Fragen, sieben Tage: Mahlzeiten mit Mengen, genug Protein für deinen Gewichtsbereich, Einkaufsliste und eine Tabelle zum Tauschen.</p>
+<div class="plr"><a class="pill gh" href="/ernaehrungsplan/">Plan zusammenstellen</a><span class="s t3">Dauert eine Minute.</span></div>
+</div>
+<div class="sv">
+<h3 class="h3">Noch nicht so weit?</h3>
+<p>Die Checkliste für die ersten 8 Wochen nach der letzten Dosis ordnet die Zeit nach der Spritze, kostenlos und mit Quellen.</p>
+<div class="plr"><a class="tl" href="/checkliste/">Zur Checkliste<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+</div>
+</div>
+</div></section>
+
+<section class="sec q" id="faq" aria-labelledby="faq-h"><div class="w">
+<h2 class="h2s sv" id="faq-h">Häufige Fragen</h2>
+<div class="faqg">
+<div class="faqc">
+<details><summary>Schmeckt das?<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="fa"><p>Geplant sind zwei Sorten Protein-Stick (Vanille und neutral); der Ballaststoff-Stick ist geschmacksneutral und löst sich in Wasser, Joghurt oder Suppe. Kreatin-Monohydrat ist geschmacklos. Bei der Bestellung fragen wir dich, ob du Molke oder eine pflanzliche Variante möchtest. Die erste Charge geht als Probierpaket an die ersten Vorbestellerinnen und Vorbesteller, bevor wir größer produzieren.</p></div></details>
+<details><summary>Wann kommt das Set?<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="fa"><p>Wir produzieren die erste Charge, sobald 100 Vorbestellungen zusammen sind. Realistisch sind das 8 bis 12 Wochen ab Erreichen der Marke. Du bekommst als Erste Bescheid und entscheidest dann, ob du wirklich bestellst. Bis dahin zahlst du nichts.</p></div></details>
+<details><summary>Was passiert mit meiner E-Mail-Adresse?<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="fa"><p>Sie landet in einer Warteliste bei Tally (Belgien, EU). Wir nutzen sie, um dich über das Set zu informieren: Produktionsstart, Preis, Bestellmöglichkeit. Den Newsletter bekommst du nur, wenn du ihn im Formular ankreuzt. Kein Weitergeben. Löschung jederzeit per E-Mail an uns. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p></div></details>
+<details><summary>Ist das ein Medikament?<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="fa"><p>Nein. Das Set besteht aus Lebensmitteln (Protein, Ballaststoffe, Kreatin-Monohydrat) und einem Ernährungs- und Trainingsprogramm. Es ersetzt weder die Abnehmspritze noch das Gespräch mit deiner Ärztin oder deinem Arzt.</p></div></details>
+</div>
+<div class="faqc">
+<details><summary>Kann ich das Set nehmen, während ich noch spritze?<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="fa"><p>Protein und Ballaststoffe sind normale Lebensmittelbestandteile und auch während der Therapie sinnvoll, denn gerade dann isst man wenig. Wegen der kleinen Portionen und möglicher Magen-Darm-Beschwerden unter der Spritze solltest du das Programm aber mit deiner Ärztin oder deinem Arzt abstimmen. Bei Nierenerkrankungen sprich vor Kreatin unbedingt mit deiner Ärztin.</p></div></details>
+<details><summary>Ersetzt das Set die Spritze oder verhindert es den Jojo-Effekt?<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="fa"><p>Nein, und das behaupten wir auch nicht. Das Set liefert Protein (trägt zur Erhaltung von Muskelmasse bei), Kreatin (erhöht die körperliche Leistung bei Schnellkrafttraining) und Ballaststoffe, dazu ein Programm mit zwei Krafteinheiten pro Woche. Was die Forschung zu Protein, Krafttraining und Gewichtserhalt sagt, erklären wir mit Quellen im <a href="/wissen/">Wissensbereich</a>. Ob es bei dir funktioniert, hängt vor allem davon ab, ob du dranbleibst.</p></div></details>
+<details><summary>Was kostet das, und was ist im Preis drin?<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="fa"><p>129 € für 12 Wochen (entspricht 43 € pro Monat) oder 49 € pro Monat. Enthalten: 84 Protein-Sticks, 84 Ballaststoff-Sticks, 84 Portionen Kreatin, das 12-Wochen-Programm mit Trainingsplänen, Rezepten und wöchentlichem Check-in per E-Mail. Versand innerhalb Deutschlands inklusive.</p></div></details>
+<details><summary>Brauche ich ein Fitnessstudio?<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="fa"><p>Nein. Das Programm hat zwei Krafteinheiten pro Woche à etwa 30 Minuten, wahlweise zuhause mit Widerstandsbändern oder im Studio. Beide Varianten sind im Plan enthalten.</p></div></details>
+</div>
+</div>
+</div></section>
+
+<section class="sec q" id="wissen" aria-labelledby="wi-h"><div class="w">
+<div class="wf">
+<div class="sv">
+<h2 class="h2s" id="wi-h">Absetzen, Jojo-Effekt, Muskeln: die Fakten, mit Quellen.</h2>
+<p class="wp">Was in Studien passiert, wenn die Spritze wegfällt, und was nachweislich hilft. Nüchtern, jede Zahl mit Link zur Originalstudie.</p>
+<nav class="topics" aria-label="Themen"><a href="/wissen/absetzen/">Absetzen und Pausieren</a><a href="/wissen/praeparate/">Nach Präparat</a><a href="/wissen/abnehmpille/">Abnehmpille</a><a href="/wissen/muskeln/">Muskeln</a><a href="/wissen/ernaehrung/">Ernährung</a><a href="/wissen/gewicht-halten/">Gewicht halten</a></nav>
+</div>
+<div>
+<ul class="arts">
+<li><a href="/wissen/jojo-effekt-abnehmspritze/"><span class="cat">Gewicht halten</span><span class="at">Jojo-Effekt nach der Abnehmspritze: Warum das Gewicht zurückkommt – und was hilft</span><svg width="16" height="16" viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+<li><a href="/wissen/abnehmspritze-absetzen/"><span class="cat">Absetzen</span><span class="at">Abnehmspritze absetzen: Was passiert danach?</span><svg width="16" height="16" viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+<li><a href="/wissen/muskelabbau-abnehmspritze/"><span class="cat">Muskeln</span><span class="at">Muskelabbau bei der Abnehmspritze vermeiden: Was wirklich hilft</span><svg width="16" height="16" viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2.5 9.5 7 5 11.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+</ul>
+<p class="more"><a href="/wissen/#praeparate">Übersicht nach Wirkstoff und Präparat</a><a href="/wissen/studien/">Studien-Tracker</a><a href="/glossar/">Glossar</a><a href="/grafiken/">Grafiken</a></p>
+</div>
+</div>
+
+<section class="mr" aria-labelledby="mr-h">
+<div class="mrh"><h2 class="h3" id="mr-h">Marktradar</h2><span class="s t3">Stand 30.09.2026</span><a class="lk" href="/marktradar/">Alle Meldungen</a></div>
+<ul class="mrl">
+<li><p class="m">Preis · 30.09.2026</p><p>Erste Preiserhebung: Abnehmspritzen kosten Selbstzahler etwa 170 bis 490&nbsp;€ im Monat, die neue Tablette etwa 175 bis 280&nbsp;€.</p></li>
+<li><p class="m">Studie · 30.09.2026</p><p>Alle Studien zum Absetzen der Abnehmspritze in einer Tabelle, mit Kernzahl und Link zum Original.</p></li>
+<li><p class="m">Markt · 01.09.2026</p><p>Die erste Abnehm-Tablette ist seit dem 1. September in deutschen Apotheken erhältlich. Deutschland ist das erste EU-Land.</p></li>
+</ul>
+</section>
+</div></section>
+
+<section class="fnw" aria-labelledby="fn-h"><div class="w">
+<h2 id="fn-h">Quellen</h2>
+<ol class="fn">
+<li id="fn-1">Rodriguez et al., JAMA Netw Open 2025</li>
+<li id="fn-2">Wilding et al., STEP 1 Körperzusammensetzung, J Endocr Soc 2021</li>
+<li id="fn-3">Wilding et al., STEP 1 Extension, Diabetes Obes Metab 2022</li>
+<li id="fn-4">Wu et al., Meta-Analyse, BMC Medicine 2025</li>
+<li id="fn-5">Leidy et al., Am J Clin Nutr 2015</li>
+<li id="fn-6">EU-Register zugelassener Health Claims (VO (EU) Nr. 432/2012, VO (EU) 2017/672)</li>
+<li id="fn-7">Sardeli et al., Meta-Analyse, Nutrients 2018</li>
+<li id="fn-8">Jensen et al., S-LiTE Nachbeobachtung, eClinicalMedicine 2024</li>
+<li id="fn-9">WHO-Bewegungsempfehlungen 2020</li>
+<li id="fn-10">Kreider et al., ISSN Position Stand Kreatin, 2017</li>
+<li id="fn-11">DGE, Richtwert Ballaststoffe</li>
+</ol>
+</div></section>
+</main>
+
+<footer class="ft"><div class="w fti">
+<div>
+<a class="brand" href="/"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6C7.5 6 8 17.5 13.5 17.5H21.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span>Nach der Spritze</span></a>
+<p>Ein Projekt von Dominik Jäkel, Berlin. Lebensmittel und ein Ernährungs- und Trainingsprogramm – kein Medikament, keine medizinische Beratung.</p>
+<p class="doc">Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.</p>
+</div>
+<nav class="fl" aria-label="Fußnavigation"><a href="#set">Das Set</a><a href="#vorbestellen">Preis und Vorbestellung</a><a href="#faq">Häufige Fragen</a><a href="/wissen/">Wissen</a><a href="/wissen/studien/">Studien-Tracker</a><a href="/glossar/">Glossar</a><a href="/marktradar/">Marktradar</a><a href="/abnehmspritze-kosten/">Kosten</a><a href="/grafiken/">Grafiken</a><a href="/werkzeuge/">Werkzeuge</a><a href="/ueber/">Über diese Seite</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a></nav>
+</div></footer>
+
+</div>
+<script>
+// Nur für die Entwurfs-Vorschau: Handy-Menü auf- und zuklappen, Formulare senden nichts.
+(function () {
+  document.querySelectorAll('button[aria-controls]').forEach(function (b) {
+    var t = document.getElementById(b.getAttribute('aria-controls'));
+    if (!t) return;
+    b.addEventListener('click', function () {
+      var open = b.getAttribute('aria-expanded') === 'true';
+      b.setAttribute('aria-expanded', open ? 'false' : 'true');
+      if (open) { t.removeAttribute('data-offen'); if (t.dataset.warHidden) t.setAttribute('hidden', 'hidden'); }
+      else { if (t.hasAttribute('hidden')) { t.dataset.warHidden = '1'; t.removeAttribute('hidden'); } t.setAttribute('data-offen', ''); }
+    });
+    t.addEventListener('click', function (e) { if (e.target.closest('a')) { b.click(); } });
+  });
+  var hinweis = 'Entwurf: Hier steht auf der echten Seite das Formular. In dieser Vorschau wird nichts gesendet.';
+  document.querySelectorAll('form').forEach(function (f) { f.addEventListener('submit', function (e) { e.preventDefault(); alert(hinweis); }); });
+  document.querySelectorAll('form button[type="button"]').forEach(function (b) { b.addEventListener('click', function () { alert(hinweis); }); });
+  document.querySelectorAll('button[aria-haspopup="dialog"]').forEach(function (b) { b.addEventListener('click', function () { alert('Entwurf: Auf der echten Seite öffnet sich hier das Newsletter-Fenster.'); }); });
+})();
+</script>
+</body>
+</html>

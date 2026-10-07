@@ -1,7 +1,7 @@
 ---
 title: "Wegovy absetzen: Was passiert danach, und was die Fachinformation sagt"
 metaTitle: "Wegovy absetzen: Was nach der letzten Spritze passiert"
-description: "Wegovy absetzen: Semaglutid ist nach 5 bis 7 Wochen abgebaut, ein Jahr später waren in STEP 1 zwei Drittel des Verlusts zurück. Was du vorbereiten kannst."
+description: "Nach dem Absetzen von Wegovy ist Semaglutid in 5 bis 7 Wochen abgebaut. Ein Jahr nach der letzten Dosis waren in STEP 1 zwei Drittel des Verlusts zurück."
 category: "Präparate"
 image: /grafiken/weiter-oder-placebo.png
 order: 7

@@ -1,7 +1,7 @@
 ---
 title: "Omega-3 bei der Abnehmspritze: Fisch, Kapseln und was die zugelassenen Angaben wirklich sagen"
 metaTitle: "Omega-3 und Abnehmspritze: Fisch oder Kapsel, was belegt ist"
-description: "Omega-3 bei der Abnehmspritze: Für Gewicht und Muskeln fehlen Belege. Was EPA und DHA laut EU-Angaben leisten, wie viel Fisch reicht, wann eine Kapsel passt."
+description: "Unter der Abnehmspritze hält Omega-3 weder Gewicht noch Muskeln, Belege fehlen. Was EPA und DHA laut EU-Angaben leisten und wie viel Fisch reicht."
 category: "Ernährung"
 order: 22
 pubDate: 2026-10-01

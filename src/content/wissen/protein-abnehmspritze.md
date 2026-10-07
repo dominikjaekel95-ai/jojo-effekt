@@ -1,7 +1,7 @@
 ---
 title: "Protein bei der Abnehmspritze: Wie viel, welches, und wie mit wenig Appetit?"
 metaTitle: "Protein bei der Abnehmspritze: Wie viel pro Tag? Tabelle & Tipps"
-description: "Protein bei der Abnehmspritze: Fachleute empfehlen 1,2 bis 1,6 g pro kg Körpergewicht. Mit Tabelle für dein Gewicht und Tricks bei kleinem Appetit."
+description: "1,2 bis 1,6 g pro kg Körpergewicht: So viel Protein empfehlen Fachleute beim Abnehmen. Was das unter der Abnehmspritze heißt, mit Tabelle für dein Gewicht."
 category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 4

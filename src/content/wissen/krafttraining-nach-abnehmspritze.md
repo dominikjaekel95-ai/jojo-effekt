@@ -1,7 +1,7 @@
 ---
 title: "Krafttraining nach der Abnehmspritze: Der 30-Minuten-Plan für Einsteiger"
 metaTitle: "Krafttraining nach der Abnehmspritze: der 30-Minuten-Plan"
-description: "Krafttraining nach der Abnehmspritze: zwei Einheiten pro Woche, sechs Übungen, zuhause oder im Studio. Der 12-Wochen-Plan für Einsteiger, mit Steigerung."
+description: "Zwei Einheiten pro Woche, sechs Übungen, zuhause oder im Studio: warum Krafttraining nach der Abnehmspritze zählt, und ein 12-Wochen-Plan mit Steigerung."
 category: "Muskeln"
 image: /grafiken/training-s-lite.png
 order: 13

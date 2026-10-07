@@ -1,7 +1,7 @@
 ---
 title: "Gewicht halten nach der Abnehmspritze: Der 12-Wochen-Plan"
 metaTitle: "Gewicht halten nach der Abnehmspritze: der 12-Wochen-Plan"
-description: "Gewicht halten nach der Abnehmspritze: ein Plan für die ersten 12 Wochen in drei Phasen, mit Training, Protein, Wiege-Regel und einem Ziel für jede Phase."
+description: "Ein Plan, um das Gewicht nach der Abnehmspritze zu halten: drei Phasen für die ersten 12 Wochen, mit Training, Protein, Wiege-Regel und einem Ziel je Phase."
 category: "Gewicht halten"
 image: /grafiken/training-s-lite.png
 order: 6

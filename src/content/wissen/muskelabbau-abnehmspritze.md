@@ -1,7 +1,7 @@
 ---
 title: "Muskelabbau bei der Abnehmspritze vermeiden: Was wirklich hilft"
 metaTitle: "Muskelabbau bei Abnehmspritze vermeiden: Protein & Training"
-description: "Muskelabbau bei der Abnehmspritze: In einer Studie waren rund 40 % des verlorenen Gewichts fettfreie Masse. Was Protein, Training und Kreatin dagegen tun."
+description: "In einer Studie waren rund 40 % des Gewichtsverlusts unter der Abnehmspritze fettfreie Masse. Was gegen Muskelabbau hilft: Protein, Training, Kreatin."
 category: "Muskeln"
 image: /grafiken/koerperzusammensetzung-step-1.png
 order: 3

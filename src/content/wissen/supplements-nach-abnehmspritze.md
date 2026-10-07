@@ -1,7 +1,7 @@
 ---
 title: "Supplements nach der Abnehmspritze: Was sinnvoll ist, was nicht"
 metaTitle: "Supplements nach der Abnehmspritze: was belegt ist, was nicht"
-description: "Supplements nach der Abnehmspritze: Für Protein, Kreatin und Ballaststoffe gibt es Belege, für Vitamine nur bei Mangel, für „GLP-1-Booster“ keine. Mit Tabelle."
+description: "Protein, Kreatin, Ballaststoffe: Für diese Supplements gibt es Belege. Vitamine nur bei Mangel, Fatburner und „GLP-1-Booster“ gar nicht. Mit Tabelle."
 category: "Ernährung"
 order: 12
 pubDate: 2026-09-30

@@ -83,18 +83,19 @@ Ziel: mehr Klicks aus der Google-Suche, ohne reißerisch zu werden. Dominiks Reg
 
 Umsetzung:
 
-- Titel bis etwa 580 px Breite (Arial 20 px), meist 55 bis 62 Zeichen. Der Zusatz „· Nach der Spritze“ zählt nicht mit; Google zeigt den Seitennamen getrennt. Build-Grenze für `metaTitle`: 65 Zeichen.
-- Description 140 bis 160 Zeichen (Build-Grenze 165), Keyword am Anfang, das Wichtigste in den ersten 120 Zeichen (so viel zeigt das Handy).
+- Titel höchstens 600 px breit (Arial 20 px), meist 55 bis 62 Zeichen. Der Zusatz „· Nach der Spritze“ zählt nicht mit; Google zeigt den Seitennamen getrennt. Build-Grenze für `metaTitle`: 65 Zeichen.
+- Description 140 bis 160 Zeichen (Build-Grenze 165), Keyword früh im Satz, das Wichtigste in den ersten 120 Zeichen (so viel zeigt das Handy).
+- Bei Artikeln ist die Description zugleich der sichtbare Lead unter der H1 und der Teaser in den Listen (Themenseiten, `/wissen/`, `llms.txt`). Sie beginnt deshalb nicht mit den Wörtern der H1 und setzt kein „Keyword:“ voran; das Keyword steht im Satz: „Nach dem Absetzen von Mounjaro ist Tirzepatid in etwa vier Wochen abgebaut …“ statt „Mounjaro absetzen: Tirzepatid ist …“.
 - Zahlen nur aus dem Artikel und mit Bezug („im Mittel“, „in einer Studie“, „in STEP 1“).
 - Geändert werden nur `metaTitle` und `description` (bei Seiten die Konstanten `title` und `description`). H1, URL und `pubDate` bleiben, ein neues `updatedDate` gibt es dafür nicht.
 - Titel mit guter Klickrate bleiben (Stand 07.10.2026: Kreatin, Muskelabbau, Saxenda).
-- Themen- und Übersichtsseiten nehmen einem Artikel nicht das Keyword weg: Die Themenseite Absetzen heißt „Absetzen oder pausieren: Alle Fragen zur Abnehmspritze“, der Hauptartikel „Abnehmspritze absetzen: …“.
+- Themen- und Übersichtsseiten nehmen einem Artikel nicht das Keyword weg: Die Themenseite Absetzen heißt „Absetzen und Pausieren: Überblick zur Abnehmspritze“, der Hauptartikel „Abnehmspritze absetzen: …“.
 - Den Grund jeder Änderung im Pull Request nennen (CLAUDE.md, SEO-Invarianten).
 
 Beispiele vom 07.10.2026:
 
 - „Wegovy absetzen: Verlauf, Halbwertszeit, Studien, Vorbereitung“ → „Wegovy absetzen: Was nach der letzten Spritze passiert“ (Frage statt Stichwortliste).
-- „Mounjaro absetzen: Verlauf, Halbwertszeit, SURMOUNT-4, Tipps“ → „Mounjaro absetzen: Wie lange es nachwirkt, was dann passiert“ (Suchanfrage „wie lange wirkt mounjaro nach absetzen“); die Description beantwortet die Frage: „Tirzepatid ist nach etwa vier Wochen abgebaut …“
+- „Mounjaro absetzen: Verlauf, Halbwertszeit, SURMOUNT-4, Tipps“ → „Mounjaro absetzen: Wie lange es nachwirkt, was danach kommt“ (Suchanfrage „wie lange wirkt mounjaro nach absetzen“); die Description beantwortet die Frage: „Nach dem Absetzen von Mounjaro ist Tirzepatid in etwa vier Wochen abgebaut …“
 - „Abnehmspritze: Kosten pro Monat und Jahr, Stand September 2026“ → „Abnehmspritze Kosten 2026: Preise pro Monat und Jahr, Rechner“ (die Suchanfrage wörtlich vorn).
 
 ## Ablauf

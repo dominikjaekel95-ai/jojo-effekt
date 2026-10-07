@@ -1,7 +1,7 @@
 ---
 title: "Ozempic absetzen: Was bei Diabetes anders ist, und was mit dem Gewicht passiert"
 metaTitle: "Ozempic absetzen: Was mit Blutzucker und Gewicht passiert"
-description: "Ozempic absetzen: Bei Diabetes nie ohne Ärztin, der Blutzucker steigt oft schon in den ersten Wochen. Wie lange es nachwirkt und was mit dem Gewicht passiert."
+description: "Bei Diabetes Ozempic nie ohne Ärztin absetzen: Der Blutzucker steigt oft schon in den ersten Wochen. Wie lange es nachwirkt, was Studien zum Gewicht zeigen."
 category: "Präparate"
 order: 8
 pubDate: 2026-09-30

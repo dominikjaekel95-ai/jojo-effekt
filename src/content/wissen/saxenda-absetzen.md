@@ -1,7 +1,7 @@
 ---
 title: "Saxenda absetzen: Was bei der täglichen Spritze anders ist"
 metaTitle: "Saxenda absetzen: Verlauf, Halbwertszeit, Studien, Vorbereitung"
-description: "Saxenda absetzen: Liraglutid ist nach zwei bis drei Tagen abgebaut, der Appetit kommt innerhalb von Tagen zurück. Was Studien zum Gewicht danach zeigen."
+description: "Nach dem Absetzen von Saxenda ist Liraglutid in zwei bis drei Tagen abgebaut, der Appetit ist nach wenigen Tagen zurück. Was Studien zum Gewicht danach zeigen."
 category: "Präparate"
 order: 15
 pubDate: 2026-10-01

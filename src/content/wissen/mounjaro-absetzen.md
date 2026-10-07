@@ -1,7 +1,7 @@
 ---
 title: "Mounjaro absetzen: Halbwertszeit, SURMOUNT-4 und was danach kommt"
 metaTitle: "Mounjaro absetzen: Wie lange es nachwirkt, was danach kommt"
-description: "Mounjaro absetzen: Tirzepatid ist nach etwa vier Wochen abgebaut, schneller als Semaglutid. In SURMOUNT-4 stieg das Gewicht danach in einem Jahr um 14 %."
+description: "Nach dem Absetzen von Mounjaro ist Tirzepatid in etwa vier Wochen abgebaut, schneller als Semaglutid. In SURMOUNT-4 stieg das Gewicht im Jahr danach um 14 %."
 category: "Präparate"
 image: /grafiken/halbwertszeiten-praeparate.png
 order: 9

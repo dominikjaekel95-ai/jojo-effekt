@@ -32,7 +32,7 @@ const minJahr = Math.min(...rows.map((r) => r.jahrEur));
 const maxJahr = Math.max(...rows.map((r) => r.jahrEur));
 
 const title = `Abnehmspritze Kosten ${jahr}: Preise pro Monat und Jahr, Rechner`;
-const description = `Was kostet die Abnehmspritze? Je nach Präparat ca. ${eur(minMonat)} bis ${eur(maxMonat)} € im Monat, rechnerisch ${eur(minJahr)} bis ${eur(maxJahr)} € im Jahr. Stand ${monatJahr}, mit Kassenregeln.`;
+const description = `Was kostet die Abnehmspritze für Selbstzahler? Je nach Präparat ca. ${eur(minMonat)} bis ${eur(maxMonat)} € im Monat, ${eur(minJahr)} bis ${eur(maxJahr)} € im Jahr. Stand ${monatJahr}, mit Kassenregeln.`;
 const path = '/abnehmspritze-kosten/';
 const url = `${site.url}${path}`;
 const published = '2026-10-01';

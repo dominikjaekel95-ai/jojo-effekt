@@ -1,7 +1,7 @@
 ---
 title: "Abnehmpille absetzen: Was für die Tablette gilt und was aus den Spritzen-Studien übertragbar ist"
 metaTitle: "Abnehmpille absetzen: Was für die Wegovy-Tablette bekannt ist"
-description: "Abnehmpille absetzen: Die Wegovy-Tablette ist wie die Spritze nach fünf bis sieben Wochen abgebaut. Was die Studien offenlassen und was du tun kannst."
+description: "Nach dem Absetzen der Abnehmpille ist Semaglutid wie bei der Wegovy-Spritze in fünf bis sieben Wochen abgebaut. Was die Studien offenlassen, was du tun kannst."
 category: "Abnehmpille"
 image: /grafiken/abnehmpille-belegt-und-offen.png
 order: 16

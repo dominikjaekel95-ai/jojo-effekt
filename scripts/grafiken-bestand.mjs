@@ -7,9 +7,43 @@ import { C, W, M, F, T, P, L, R, PATH, DOT, DOTTED, HL, BRACKET, ARROW_R, legend
 
 const NB = ' ';
 
+/* Daten der Grafiken, die auch eine Hochformat-Fassung haben (grafiken-hoch.mjs): eine Quelle für beide Formate */
+
+/** Weiter oder Placebo (rubino2021, aronne2024) */
+export const WEITER = {
+  hinweis: 'Änderung des Körpergewichts ab dem Zeitpunkt des Wechsels; alle Teilnehmenden hatten davor mit dem Medikament abgenommen.',
+  gruppen: [
+    { name: 'STEP 4', sub: 'Semaglutid, 48 Wochen nach dem Wechsel', cont: -7.9, plac: 6.9 },
+    { name: 'SURMOUNT-4', sub: 'Tirzepatid, 52 Wochen nach dem Wechsel', cont: -5.5, plac: 14 },
+  ],
+  weiter: 'Weiter behandelt',
+  placebo: 'Wechsel auf Placebo',
+};
+
+/** Warum das Gewicht zurückkommt (fachinfos, sumithran2011, fothergill2016, wilding2021dxa; jensen2024, sardeli2018, leidy2015) */
+export const WARUM = {
+  cols: [
+    { big: '5–7 Wochen', h: 'Die Appetitbremse fällt weg', d: 'Semaglutid ist nach etwa 5 Wochen weitgehend abgebaut, bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen.', src: 'Fachinformationen (EMA)', c: C.ink },
+    { big: 'Ghrelin ↑ Leptin ↓', h: 'Hungerhormone bleiben verschoben', d: 'Noch ein Jahr nach einer Diät messbar: mehr Hunger, weniger Sättigung.', src: 'Sumithran et al., NEJM 2011', c: C.regain },
+    { big: '6 Jahre', h: 'Weniger Energie in Ruhe', d: 'Der Ruheenergieverbrauch blieb noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; kleine Studie, 14 Teilnehmende, Extremfall.', src: 'Fothergill et al., Obesity 2016', c: C.regain },
+    { big: 'rund 40 %', h: 'Ein Teil des Verlusts war fettfreie Masse', d: 'Rund 40 % des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse.', src: 'STEP-1-DXA-Substudie 2021', c: C.lean },
+  ],
+  halten: 'In Studien halfen beim Halten: Krafttraining (Jensen 2024, Sardeli 2018) und Protein (Leidy 2015).',
+};
+
+/** Preise im Monat (src/data/markt/preise.json) */
+export const preisZeilen = (preise) =>
+  preise.zeilen.map((z) => ({
+    name: z.praeparat,
+    eur: Number(String(z.monat).replace(/[^0-9]/g, '')),
+    flag: /Anbieterangabe/.test(z.hinweis) ? '*' : '',
+    kasse: /Kassenleistung/.test(z.hinweis),
+  }));
+export const PREISE_HINWEIS = '* Anbieterangabe, Prüfung gegen den Preisvergleich folgt. Heller Balken: bei Typ-2-Diabetes Kassenleistung. Größenordnungen, gerundet auf 5 €; keine Preisberatung.';
+
 export function bestand({ preise, fmtDate, warn }) {
   const figures = [];
-  const add = (file, meta, body) => figures.push({ file, svg: frame({ file, ...meta, body, warn }) });
+  const add = (file, meta, body) => figures.push({ file, meta, svg: frame({ file, ...meta, body, warn }) });
   const STEP1EXT = 'Wilding et al., STEP-1-Verlängerung, Diabetes Obes Metab 2022;24(8):1553–1564';
 
   /* 1. Absetzkurve STEP-1-Verlängerung (wilding2022ext) */
@@ -308,13 +342,10 @@ export function bestand({ preise, fmtDate, warn }) {
 
   /* 6. Weiter oder Placebo (rubino2021, aronne2024) */
   {
-    const groups = [
-      { name: 'STEP 4', sub: 'Semaglutid, 48 Wochen nach dem Wechsel', cont: -7.9, plac: 6.9 },
-      { name: 'SURMOUNT-4', sub: 'Tirzepatid, 52 Wochen nach dem Wechsel', cont: -5.5, plac: 14 },
-    ];
+    const groups = WEITER.gruppen;
     const py = (p) => 372 - p * 11;
     let b = '';
-    b += T(M, 146, 'Änderung des Körpergewichts ab dem Zeitpunkt des Wechsels; alle Teilnehmenden hatten davor mit dem Medikament abgenommen.', { size: F.small, fill: C.ink3 });
+    b += T(M, 146, WEITER.hinweis, { size: F.small, fill: C.ink3 });
     b += gridY([-10, -5, 0, 5, 10, 15], py, 210, W - M, (p) => `${p > 0 ? '+' : p < 0 ? '−' : ''}${Math.abs(p)} %`, { zero: 0 });
     groups.forEach((g, i) => {
       const gx = 300 + i * 450;
@@ -325,8 +356,8 @@ export function bestand({ preise, fmtDate, warn }) {
         s += T(x + 75, p > 0 ? py(0) + 24 : py(0) - 12, label, { st: 'head', size: F.text, fill: C.ink2, anchor: 'middle' });
         return s;
       };
-      b += bar(gx, g.cont, C.ink, 'Weiter behandelt');
-      b += bar(gx + 190, g.plac, C.regain, 'Wechsel auf Placebo');
+      b += bar(gx, g.cont, C.ink, WEITER.weiter);
+      b += bar(gx + 190, g.plac, C.regain, WEITER.placebo);
       b += T(gx + 170, 530, g.name, { st: 'head', size: F.value, anchor: 'middle' });
       b += T(gx + 170, 554, g.sub, { size: F.small, fill: C.ink3, anchor: 'middle' });
     });
@@ -385,12 +416,7 @@ export function bestand({ preise, fmtDate, warn }) {
 
   /* 8. Warum das Gewicht zurückkommt (fachinfos, sumithran2011, fothergill2016, wilding2021dxa) */
   {
-    const cols = [
-      { big: '5–7 Wochen', h: 'Die Appetitbremse fällt weg', d: 'Semaglutid ist nach etwa 5 Wochen weitgehend abgebaut, bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen.', src: 'Fachinformationen (EMA)', c: C.ink },
-      { big: 'Ghrelin ↑ Leptin ↓', h: 'Hungerhormone bleiben verschoben', d: 'Noch ein Jahr nach einer Diät messbar: mehr Hunger, weniger Sättigung.', src: 'Sumithran et al., NEJM 2011', c: C.regain },
-      { big: '6 Jahre', h: 'Weniger Energie in Ruhe', d: 'Der Ruheenergieverbrauch blieb noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; kleine Studie, 14 Teilnehmende, Extremfall.', src: 'Fothergill et al., Obesity 2016', c: C.regain },
-      { big: 'rund 40 %', h: 'Ein Teil des Verlusts war fettfreie Masse', d: 'Rund 40 % des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse.', src: 'STEP-1-DXA-Substudie 2021', c: C.lean },
-    ];
+    const cols = WARUM.cols;
     const cw = 240;
     const size = Math.min(...cols.map((c) => fit(c.big, cw, 'num', F.big)));
     let b = '';
@@ -409,14 +435,14 @@ export function bestand({ preise, fmtDate, warn }) {
       b += T(x, sy, c.src, { size: F.small, fill: C.ink3 });
     });
     b += L(M, sy + 40, W - M, sy + 40);
-    b += P(M, sy + 76, 'In Studien halfen beim Halten: Krafttraining (Jensen 2024, Sardeli 2018) und Protein (Leidy 2015).', { size: F.text, fill: C.ink2, lh: 23 }).svg;
+    b += P(M, sy + 76, WARUM.halten, { size: F.text, fill: C.ink2, lh: 23 }).svg;
     add(
       'warum-das-gewicht-zurueckkommt.svg',
       {
         title: 'Warum das Gewicht nach dem Absetzen zurückkommt',
         subtitle: 'Vier Mechanismen, nach Gewichtsverlust belegt und auf die Zeit nach der Spritze übertragen',
         source: 'Fachinformationen (EMA); Sumithran 2011; Fothergill 2016; Wilding 2021; Jensen 2024; Sardeli 2018; Leidy 2015',
-        alt: 'Vier Spalten mit den Mechanismen des Jojo-Effekts, nach Gewichtsverlust belegt und auf die Zeit nach der Abnehmspritze übertragen: Die Appetitbremse fällt weg, sobald der Wirkstoff weitgehend abgebaut ist (Semaglutid nach etwa 5 Wochen weitgehend abgebaut, bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer kleinen Studie mit 14 Teilnehmenden, einem Extremfall, noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. In Studien halfen beim Halten: Krafttraining und Protein.',
+        alt: 'Vier Mechanismen des Jojo-Effekts, nach Gewichtsverlust belegt und auf die Zeit nach der Abnehmspritze übertragen: Die Appetitbremse fällt weg, sobald der Wirkstoff weitgehend abgebaut ist (Semaglutid nach etwa 5 Wochen weitgehend abgebaut, bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer kleinen Studie mit 14 Teilnehmenden, einem Extremfall, noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. In Studien halfen beim Halten: Krafttraining und Protein.',
       },
       b,
     );
@@ -455,12 +481,7 @@ export function bestand({ preise, fmtDate, warn }) {
 
   /* 10. Preise im Monat (src/data/markt/preise.json) */
   {
-    const rows = preise.zeilen.map((z) => ({
-      name: z.praeparat,
-      eur: Number(String(z.monat).replace(/[^0-9]/g, '')),
-      flag: /Anbieterangabe/.test(z.hinweis) ? '*' : '',
-      kasse: /Kassenleistung/.test(z.hinweis),
-    }));
+    const rows = preisZeilen(preise);
     const x0 = 500;
     const px = (e) => x0 + (e / 500) * 540;
     const rh = Math.min(32, Math.floor(372 / rows.length));
@@ -473,7 +494,7 @@ export function bestand({ preise, fmtDate, warn }) {
       b += R(x0, y + rh / 2 - 10, px(row.eur) - x0, 20, row.kasse ? { fill: C.bg2, stroke: C.ink, sw: 1.4 } : { fill: C.ink });
       b += T(px(row.eur) + 8, y + rh / 2 + 6, `ca. ${row.eur} €${row.flag}`, { st: 'strong', size: F.text });
     });
-    b += P(M, y0 + rows.length * rh + 26, '* Anbieterangabe, Prüfung gegen den Preisvergleich folgt. Heller Balken: bei Typ-2-Diabetes Kassenleistung. Größenordnungen, gerundet auf 5 €; keine Preisberatung.', { size: F.small, fill: C.ink3, lh: 19 }).svg;
+    b += P(M, y0 + rows.length * rh + 26, PREISE_HINWEIS, { size: F.small, fill: C.ink3, lh: 19 }).svg;
     add(
       'preise-im-monat.svg',
       {

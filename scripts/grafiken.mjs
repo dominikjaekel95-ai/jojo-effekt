@@ -8,18 +8,21 @@
  * `npm run grafiken -- absetzkurve-step-1 wiegen-zonen`; nur OG-Bilder und Icon: `npm run grafiken -- --og`.
  *
  * Aufbau: grafiken-lib.mjs (Farben, Schrift, Textmaße, Rahmen), grafiken-bestand.mjs (die Grafiken von vor dem
- * Redesign, gleiche Dateinamen), grafiken-neu.mjs (neue Grafiken je Artikel), grafiken-og.mjs (OG-Bilder, Icon).
- * Die SVGs laufen ohne Webfont (Ersatzschrift system-ui); die PNG-Fassungen werden mit Mona Sans gerendert.
+ * Redesign, gleiche Dateinamen), grafiken-neu.mjs (neue Grafiken je Artikel), grafiken-hoch.mjs (Hochformat-Fassungen
+ * 1080 × 1350 fürs Handy, <id>-hoch.svg/.png; `npm run grafiken -- <id>` erzeugt sie mit), grafiken-og.mjs (OG-Bilder, Icon).
+ * Die SVGs laufen ohne Webfont (Ersatzschrift system-ui); die PNG-Fassungen werden mit Mona Sans gerendert
+ * (Querformat mit Faktor 1,5 als 1800 × 1013, Hochformat mit Faktor 1 als 1080 × 1350).
  * Nach dem Rendern prüft das Skript jede Grafik: Text innerhalb des Bildes, keine Überlappung von Texten, kein Text
- * über Balken (außer ausdrücklich innen beschrifteten), Schrift mindestens 13 px. Treffer werden ausgegeben.
+ * über Balken (außer ausdrücklich innen beschrifteten), Schrift mindestens 13 px (Hochformat 28 px). Treffer werden ausgegeben.
  * Die Liste wird von src/data/grafiken.ts gespiegelt (Seite /grafiken/); Datentabellen in src/data/grafiken-daten.json.
  */
 import { mkdirSync, writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { W, H, FONT, ST, CHARSET, setMetrics, unsafeChars } from './grafiken-lib.mjs';
+import { W, H, WH, HH, FH, FONT, ST, CHARSET, setMetrics, unsafeChars } from './grafiken-lib.mjs';
 import { bestand } from './grafiken-bestand.mjs';
 import { neu } from './grafiken-neu.mjs';
+import { hoch } from './grafiken-hoch.mjs';
 import { ogBilder } from './grafiken-og.mjs';
 
 const OUT = resolve('public/grafiken');
@@ -105,7 +108,9 @@ const warn = (m) => hinweise.push(m);
 const ctx = { preise, fmtDate, warn, studienAnzahl };
 
 let figures = nurOg ? [] : [...bestand(ctx), ...neu(ctx)];
-if (nur.length) figures = figures.filter((f) => nur.includes(f.file.replace('.svg', '')));
+if (!nurOg) figures.push(...hoch(ctx, figures));
+// eine Hochformat-Fassung entsteht mit, wenn ihre Hauptgrafik genannt ist
+if (nur.length) figures = figures.filter((f) => nur.includes(f.file.replace('.svg', '')) || (f.hoch && nur.includes(f.file.replace('-hoch.svg', ''))));
 
 for (const f of figures) {
   const bad = unsafeChars(f.svg.replace(/<title[\s\S]*?<\/desc>/, '').replace(/<[^>]+>/g, '')).filter((ch) => !/\s/.test(ch));
@@ -114,10 +119,10 @@ for (const f of figures) {
 }
 if (figures.length) console.log(`SVG geschrieben: ${figures.length}`);
 
-/** Prüft eine gerenderte Grafik im Browser: Ränder, Überlappungen, Schriftgröße */
-async function pruefen(file) {
-  return page.evaluate(
-    ({ W, H, file }) => {
+/** Prüft eine gerenderte Grafik im Browser: Ränder, Überlappungen, Schriftgröße (Hochformat: eigene Maße, mindestens 28 px) */
+async function pruefen(pg, f) {
+  return pg.evaluate(
+    ({ W, H, file, minFs }) => {
       const svg = document.querySelector('svg');
       const issues = [];
       const shrink = (b, fs) => ({ x: b.x + 0.5, y: b.y + fs * 0.16, w: b.width - 1, h: b.height - fs * 0.3 });
@@ -131,7 +136,7 @@ async function pruefen(file) {
       const M = 64;
       const hit = (a, b, pad = 0) => a.x < b.x + b.width - pad && a.x + a.w > b.x + pad && a.y < b.y + b.height - pad && a.y + a.h > b.y + pad;
       for (const t of texts) {
-        if (t.fs < 13) issues.push(`Schrift ${t.fs}px: „${t.s}“`);
+        if (t.fs < minFs) issues.push(`Schrift ${t.fs}px: „${t.s}“`);
         if (t.b.x < M - 2 || t.b.x + t.b.w > W - M + 2 || t.b.y < 8 || t.b.y + t.b.h > H - 4) issues.push(`über den Rand (64 px): „${t.s}“`);
         if (!t.foot && t.b.y + t.b.h > FY - 20) issues.push(`zu nah an der Fußlinie: „${t.s}“`);
         if (!t.inside) for (const m of marks) if (hit(t.b, m, 1)) issues.push(`Text über Fläche: „${t.s}“`);
@@ -157,16 +162,19 @@ async function pruefen(file) {
         }
       return issues.map((m) => `${file}: ${m}`);
     },
-    { W, H, file },
+    f.hoch ? { W: WH, H: HH, file: f.file, minFs: FH.foot } : { W, H, file: f.file, minFs: 13 },
   );
 }
 
 if (page) {
+  // Hochformat in eigener Seite: 1080 × 1350 mit Faktor 1 (am Handy rund 360 px breit bei dreifacher Pixeldichte)
+  const pageHoch = figures.some((f) => f.hoch) ? await (await browser.newContext({ viewport: { width: WH, height: HH }, deviceScaleFactor: 1 })).newPage() : null;
   for (const f of figures) {
-    await page.setContent(`<!doctype html><html><head><style>${fontCss}body{margin:0}</style></head><body>${f.svg.replace(/^<\?xml[^>]*>\s*/, '')}</body></html>`);
-    await page.evaluate(() => document.fonts.ready);
-    hinweise.push(...(await pruefen(f.file)));
-    await page.screenshot({ path: resolve(OUT, f.file.replace('.svg', '.png')), clip: { x: 0, y: 0, width: W, height: H } });
+    const pg = f.hoch ? pageHoch : page;
+    await pg.setContent(`<!doctype html><html><head><style>${fontCss}body{margin:0}</style></head><body>${f.svg.replace(/^<\?xml[^>]*>\s*/, '')}</body></html>`);
+    await pg.evaluate(() => document.fonts.ready);
+    hinweise.push(...(await pruefen(pg, f)));
+    await pg.screenshot({ path: resolve(OUT, f.file.replace('.svg', '.png')), clip: { x: 0, y: 0, width: f.hoch ? WH : W, height: f.hoch ? HH : H } });
   }
   if (figures.length) console.log(`PNG-Fassungen erzeugt: ${figures.length}`);
   if (nurOg || !nur.length) await ogBilder({ page, fontCss, studienAnzahl, warn });

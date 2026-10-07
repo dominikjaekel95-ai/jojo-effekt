@@ -17,7 +17,7 @@ function ereignis(woche: number, w: Wirkstoff): string {
   if (woche === 0) return w.hwzTage < 1 ? 'Letzte Dosis. Nach knapp drei Tagen ist Liraglutid weitgehend abgebaut.' : 'Letzte Dosis.';
   if (w.hwzTage < 1) return woche === 1 ? 'Der Wirkstoff ist praktisch weg. Ab jetzt zählen Ernährung und Bewegung.' : '';
   if (woche === 1) return w.hwzTage >= 7 ? 'Noch die Hälfte im Körper. Viele merken kaum einen Unterschied.' : 'Weniger als die Hälfte im Körper. Viele merken gegen Ende der Woche mehr Appetit.';
-  if (woche === 2) return w.hwzTage >= 7 ? 'Noch ein Viertel. Der Appetit kommt zurück, meist zwischen Woche 2 und 5.' : 'Der Appetit ist weitgehend zurück.';
+  if (woche === 2) return w.hwzTage >= 7 ? 'Noch ein Viertel. Der Appetit kommt zurück, abgeleitet aus dem Wirkstoffabbau etwa zwischen Woche 2 und 5.' : 'Der Appetit ist weitgehend zurück.';
   if (woche === fuenf) return `Fünf Halbwertszeiten vorbei: ${w.name} ist weitgehend abgebaut.`;
   return '';
 }

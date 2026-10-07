@@ -6,7 +6,7 @@ category: "Präparate"
 image: /grafiken/weiter-oder-placebo.png
 order: 7
 pubDate: 2026-09-30
-updatedDate: 2026-10-06
+updatedDate: 2026-10-07
 keywords: ["wegovy absetzen", "wegovy absetzen gewicht", "wegovy absetzen jojo", "wegovy absetzen was passiert", "wegovy ausschleichen", "wegovy halbwertszeit", "wegovy absetzen erfahrungen"]
 sources: ["fachinfoWegovy", "wilding2021step1", "wilding2022ext", "rubino2021", "wu2025", "jensen2024", "leidy2015", "who2020", "tabletteApotheken2026", "wharton2025oasis4"]
 related: ["abnehmspritze-absetzen", "abnehmpille-absetzen", "gewicht-halten-nach-abnehmspritze"]
@@ -73,7 +73,7 @@ Der beste Zeitpunkt, die Zeit danach vorzubereiten, ist, solange der Appetit noc
 1. **Krafttraining anfangen.** In der dänischen S-LiTE-Studie hielten Teilnehmende, die während der Medikamententherapie trainiert hatten, ihr Gewicht ein Jahr nach dem Absetzen; nach dem Medikament allein lag die Zunahme 6 kg höher.<sup><a href="#fn-jensen2024">6</a></sup> Die WHO empfiehlt mindestens zwei Tage pro Woche muskelkräftigende Aktivitäten.<sup><a href="#fn-who2020">8</a></sup>
 2. **Protein auf Zielmenge.** 1,2 bis 1,6 g pro kg Körpergewicht und Tag,<sup><a href="#fn-leidy2015">7</a></sup> verteilt auf drei bis vier Mahlzeiten. Unter Wegovy essen viele weit weniger.
 3. **Wiegen mit Regel.** Einmal pro Woche, und vorher festgelegt, ab welcher Zunahme du reagierst.
-4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen. In Studien beginnt die Zunahme etwa ab Woche 8 nach der letzten Dosis.
+4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen. In Studien wird die Zunahme etwa ab Woche 8 nach der letzten Dosis messbar.
 
 Der ausführliche Plan steht unter [Gewicht halten nach der Abnehmspritze: der 12-Wochen-Plan](/wissen/gewicht-halten-nach-abnehmspritze/).
 

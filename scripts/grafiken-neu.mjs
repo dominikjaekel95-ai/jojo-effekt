@@ -7,9 +7,46 @@ import { C, W, M, F, T, P, L, R, PATH, DOT, HL, ARROW_R, gridY, gridX, placeboBa
 
 const NB = ' ';
 
+/* Daten der Grafiken, die auch eine Hochformat-Fassung haben (grafiken-hoch.mjs): eine Quelle für beide Formate */
+
+/** STEP 2: Semaglutid bei Typ-2-Diabetes (davies2021step2) */
+export const STEP2 = {
+  bars: [
+    { label: 'Semaglutid 2,4 mg', v: -9.6, kind: 'ink' },
+    { label: 'Semaglutid 1,0 mg', v: -7.0, kind: 'ink' },
+    { label: 'Placebo', v: -3.4, kind: 'placebo' },
+  ],
+  einordnenH: 'Zum Einordnen',
+  einordnen: 'Weniger Verlust heißt weniger, was nach dem Absetzen zurückkommen kann. Am Mechanismus ändert das nichts.',
+  hinweis: 'Mittelwerte nach 68 Wochen; randomisierte, placebokontrollierte Studie.',
+};
+
+/** Versorgung in Deutschland (nvs2, rabenberg2015); d = Nachkommastellen der Werte */
+export const VERSORGUNG = {
+  teile: [
+    {
+      h: 'Zufuhr unter der Empfehlung', studie: 'Nationale Verzehrsstudie II', d: 0,
+      rows: [
+        ['Magnesium, Männer', 26],
+        ['Magnesium, Frauen', 29],
+        ['Eisen, Männer', 14],
+        ['Eisen, Frauen', 58],
+      ],
+    },
+    {
+      h: 'Vitamin-D-Wert im Blut', studie: 'Gesundheitsstudie DEGS1', d: 1,
+      rows: [
+        ['unter 30 nmol/l (Mangel)', 30.2],
+        ['unter 50 nmol/l', 61.6],
+      ],
+    },
+  ],
+  hinweis: 'Erhoben vor der Zeit der GLP-1-Medikamente; Vitamin D im Winter deutlich niedriger als im Sommer. Wer unter der Spritze kleine Portionen isst, startet von dieser Ausgangslage.',
+};
+
 export function neu({ warn }) {
   const figures = [];
-  const add = (file, meta, body) => figures.push({ file, svg: frame({ file, ...meta, body, warn }) });
+  const add = (file, meta, body) => figures.push({ file, meta, svg: frame({ file, ...meta, body, warn }) });
 
   /* N1. Kreatinspeicher im Muskel (hultman1996; Wasser im Muskel: kreider2017) */
   {
@@ -276,11 +313,7 @@ export function neu({ warn }) {
   /* N7. STEP 2: Semaglutid bei Typ-2-Diabetes (davies2021step2) */
   {
     const py = (p) => 214 + (-p / 12) * 290;
-    const bars = [
-      { x: 230, label: 'Semaglutid 2,4 mg', v: -9.6, kind: 'ink' },
-      { x: 470, label: 'Semaglutid 1,0 mg', v: -7.0, kind: 'ink' },
-      { x: 710, label: 'Placebo', v: -3.4, kind: 'placebo' },
-    ];
+    const bars = STEP2.bars.map((bar, i) => ({ ...bar, x: 230 + i * 240 }));
     let b = '';
     b += gridY([0, -5, -10], py, 200, 900, (p) => `${de(p, 0)} %`, { zero: 0 });
     for (const bar of bars) {
@@ -290,9 +323,9 @@ export function neu({ warn }) {
       b += T(cx, py(bar.v) + 40, `${de(bar.v)} %`, { st: 'num', size: F.big, fill: bar.kind === 'placebo' ? C.ink3 : C.ink, anchor: 'middle' });
     }
     const x = 950, mw = W - M - x;
-    b += T(x, 250, 'Zum Einordnen', { st: 'head', size: F.label });
-    b += P(x, 278, 'Weniger Verlust heißt weniger, was nach dem Absetzen zurückkommen kann. Am Mechanismus ändert das nichts.', { size: F.small, fill: C.ink2, maxW: mw, lh: 20 }).svg;
-    b += T(M, 562, 'Mittelwerte nach 68 Wochen; randomisierte, placebokontrollierte Studie.', { size: F.small, fill: C.ink3 });
+    b += T(x, 250, STEP2.einordnenH, { st: 'head', size: F.label });
+    b += P(x, 278, STEP2.einordnen, { size: F.small, fill: C.ink2, maxW: mw, lh: 20 }).svg;
+    b += T(M, 562, STEP2.hinweis, { size: F.small, fill: C.ink3 });
     add(
       'step-2-typ-2-diabetes.svg',
       {
@@ -370,36 +403,29 @@ export function neu({ warn }) {
   {
     const x0 = 400;
     const px = (p) => x0 + (p / 100) * 640;
-    const A = [
-      ['Magnesium, Männer', 26],
-      ['Magnesium, Frauen', 29],
-      ['Eisen, Männer', 14],
-      ['Eisen, Frauen', 58],
-    ];
-    const B = [
-      ['unter 30 nmol/l (Mangel)', 30.2],
-      ['unter 50 nmol/l', 61.6],
-    ];
+    const [TA, TB] = VERSORGUNG.teile;
+    const A = TA.rows;
+    const B = TB.rows;
     let b = '';
     b += gridX([0, 25, 50, 75, 100], px, 182, 334, () => '', 0);
     b += gridX([0, 25, 50, 75, 100], px, 396, 476, (p) => `${p} %`, 500);
-    b += T(M, 166, 'Zufuhr unter der Empfehlung', { st: 'head', size: F.label });
-    b += T(M + tw('Zufuhr unter der Empfehlung', 'head', F.label) + 12, 166, 'Nationale Verzehrsstudie II', { size: F.small, fill: C.ink3 });
+    b += T(M, 166, TA.h, { st: 'head', size: F.label });
+    b += T(M + tw(TA.h, 'head', F.label) + 12, 166, TA.studie, { size: F.small, fill: C.ink3 });
     A.forEach(([lab, v], i) => {
       const y = 202 + i * 38;
       b += T(M, y + 6, lab, { size: F.text });
       b += R(x0, y - 11, px(v) - x0, 22, { fill: C.ink, rx: 1 });
       b += T(px(v) + 10, y + 8, `${de(v, 0)} %`, { st: 'num', size: F.value });
     });
-    b += T(M, 378, 'Vitamin-D-Wert im Blut', { st: 'head', size: F.label });
-    b += T(M + tw('Vitamin-D-Wert im Blut', 'head', F.label) + 12, 378, 'Gesundheitsstudie DEGS1', { size: F.small, fill: C.ink3 });
+    b += T(M, 378, TB.h, { st: 'head', size: F.label });
+    b += T(M + tw(TB.h, 'head', F.label) + 12, 378, TB.studie, { size: F.small, fill: C.ink3 });
     B.forEach(([lab, v], i) => {
       const y = 416 + i * 38;
       b += T(M, y + 6, lab, { size: F.text });
       b += R(x0, y - 11, px(v) - x0, 22, { fill: C.ink, rx: 1 });
       b += T(px(v) + 10, y + 8, `${de(v)} %`, { st: 'num', size: F.value });
     });
-    b += P(M, 536, 'Erhoben vor der Zeit der GLP-1-Medikamente; Vitamin D im Winter deutlich niedriger als im Sommer. Wer unter der Spritze kleine Portionen isst, startet von dieser Ausgangslage.', { size: F.small, fill: C.ink3, lh: 19 }).svg;
+    b += P(M, 536, VERSORGUNG.hinweis, { size: F.small, fill: C.ink3, lh: 19 }).svg;
     add(
       'versorgung-in-deutschland.svg',
       {

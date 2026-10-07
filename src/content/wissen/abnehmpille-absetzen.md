@@ -6,7 +6,7 @@ category: "Abnehmpille"
 image: /grafiken/abnehmpille-belegt-und-offen.png
 order: 16
 pubDate: 2026-09-30
-updatedDate: 2026-10-06
+updatedDate: 2026-10-07
 keywords: ["abnehmpille absetzen", "wegovy tablette absetzen", "wegovy pille absetzen", "abnehmtablette absetzen", "semaglutid tablette absetzen", "abnehmpille jojo effekt", "abnehmpille muskelabbau", "wegovy tabletten absetzen"]
 sources: ["tabletteApotheken2026", "fachinfoRybelsus", "wilding2022ext", "wu2025", "ecWegovyTablette2026", "fdaOrforglipron2026", "fachinfoWegovy", "wharton2025oasis4", "wilding2021step1", "rubino2021", "knop2023oasis1", "wharton2025attain1", "rodriguez2025", "sumithran2011", "wilding2021dxa", "leidy2015", "who2020", "jensen2024"]
 related: ["abnehmpille-oder-spritze", "wegovy-absetzen", "abnehmspritze-absetzen"]
@@ -88,7 +88,7 @@ Die Zeit, in der der Wirkstoff noch wirkt, ist die beste Zeit für Vorbereitung:
 1. **Krafttraining anfangen**, zwei Einheiten pro Woche, 30 Minuten, zuhause oder im Studio.<sup><a href="#fn-who2020">17</a></sup>
 2. **Protein auf Zielmenge**, verteilt auf drei bis vier Mahlzeiten.<sup><a href="#fn-leidy2015">16</a></sup>
 3. **Wiegetag festlegen**, einmal pro Woche, und vorher entscheiden, ab welcher Zunahme du reagierst.
-4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen. In Studien beginnt die Zunahme etwa ab Woche 8.<sup><a href="#fn-wu2025">4</a></sup>
+4. **Den Gewichtsverlauf notieren** und mit der Ärztin oder dem Arzt besprechen. In Studien wird die Zunahme etwa ab Woche 8 messbar.<sup><a href="#fn-wu2025">4</a></sup>
 
 Die Wochen im Einzelnen stehen in der [Checkliste für die ersten 8 Wochen](/checkliste/); den Plan für die Haltephase danach beschreibt [Gewicht halten nach der Abnehmspritze](/wissen/gewicht-halten-nach-abnehmspritze/).
 

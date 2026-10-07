@@ -19,7 +19,7 @@ export function sortierung(_a: Attr, ctx: Ctx): string {
       titel: 'Sinnvoll',
       satz: 'als Ergänzung zu Essen und Training',
       eintraege: [
-        { name: 'Proteinpulver', warum: 'Wenn 1,2 bis 1,6 g pro kg über Lebensmittel nicht zusammenkommen; 20 bis 30 g pro Portion.', quelle: 'leidy2015', link: '/wissen/protein-abnehmspritze/' },
+        { name: 'Proteinpulver', warum: 'Wenn 1,2 bis 1,6 g pro kg über Lebensmittel nicht zusammenkommen; 25 bis 30 g Protein pro Portion.', quelle: 'leidy2015', link: '/wissen/protein-abnehmspritze/' },
         { name: 'Kreatin-Monohydrat', warum: 'Nur mit Krafttraining; 3 g täglich, auch an trainingsfreien Tagen.', quelle: 'kreider2017', link: '/wissen/kreatin-abnehmspritze/' },
         { name: 'Ballaststoffe', warum: 'Wenn du trotz Gemüse und Vollkorn unter 30 g am Tag bleibst; langsam steigern, viel Wasser.', quelle: 'dgeBallaststoffe', link: '/wissen/glucomannan-abnehmspritze/' },
       ],

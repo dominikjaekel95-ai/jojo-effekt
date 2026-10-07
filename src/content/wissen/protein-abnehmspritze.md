@@ -6,7 +6,7 @@ category: "Ernährung"
 image: /grafiken/proteinbedarf-nach-abnehmspritze.png
 order: 4
 pubDate: 2026-09-30
-updatedDate: 2026-10-06
+updatedDate: 2026-10-07
 keywords: ["abnehmspritze protein", "abnehmspritze protein wie viel", "eiweiß abnehmspritze", "wegovy protein", "ozempic eiweiß wie viel", "proteinshake abnehmspritze", "abnehmspritze ernährung eiweiß"]
 sources: ["dgeProtein", "leidy2015", "wilding2021dxa", "euClaims", "sardeli2018", "dgeBallaststoffe", "bls", "mamerow2014"]
 related: ["ernaehrung-nach-abnehmspritze", "supplements-nach-abnehmspritze", "muskelabbau-abnehmspritze"]
@@ -71,7 +71,7 @@ Ungefähre Werte pro Portion:
 | Molkenprotein-Pulver | 30 g | 22–25 g |
 | Milch | 250 ml | 8 g |
 
-Was auffällt: Um auf 100 g zu kommen, braucht es bei jeder Mahlzeit eine echte Proteinquelle. Ein Brötchen mit Marmelade und ein Salat bringen zusammen unter 10 g.
+Was auffällt: Um bei 80 kg auf 96 g zu kommen, braucht es bei jeder Mahlzeit eine echte Proteinquelle. Ein Brötchen mit Marmelade und ein Salat bringen zusammen unter 10 g.
 
 <div data-interaktiv="teller" data-vorlage="protein-lebensmittel"></div>
 

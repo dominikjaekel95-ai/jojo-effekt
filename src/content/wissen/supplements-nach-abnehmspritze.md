@@ -5,7 +5,7 @@ description: "Protein, Kreatin, Ballaststoffe: dafür gibt es Belege. Vitamine n
 category: "Ernährung"
 order: 12
 pubDate: 2026-09-30
-updatedDate: 2026-10-06
+updatedDate: 2026-10-07
 keywords: ["nach der abnehmspritze supplements", "abnehmspritze supplements", "abnehmspritze nahrungsergänzung", "nahrungsergänzungsmittel nach abnehmspritze", "abnehmspritze vitamine", "abnehmspritze welche supplements", "supplements nach wegovy"]
 sources: ["almandoz2024", "leidy2015", "euClaims", "kreider2017", "dgeBallaststoffe", "klartextNem", "adaSoc2024", "wilding2021dxa", "sardeli2018", "who2020", "nvs2", "rabenberg2015"]
 related: ["kreatin-abnehmspritze", "protein-abnehmspritze", "ernaehrung-nach-abnehmspritze"]
@@ -57,7 +57,7 @@ Grundregel der Verbraucherzentralen: Nahrungsergänzungsmittel sind Lebensmittel
 
 ## Die drei, die etwas bringen, richtig eingesetzt
 
-**Protein** ist kein Supplement im eigentlichen Sinn, sondern ein Lebensmittel in praktischer Form. Die Frage ist nur, ob du 1,2 bis 1,6 g pro kg über Mahlzeiten schaffst. Wer bei 80 kg auf 100 g kommt, braucht kein Pulver. Wer bei 60 g hängt, weil der Appetit noch klein ist oder die Zeit fehlt, für den ist ein Shake oder Stick der einfachste Weg. Details im [Protein-Artikel](/wissen/protein-abnehmspritze/).
+**Protein** ist kein Supplement im eigentlichen Sinn, sondern ein Lebensmittel in praktischer Form. Die Frage ist nur, ob du 1,2 bis 1,6 g pro kg über Mahlzeiten schaffst. Wer bei 80 kg auf 96 g kommt, braucht kein Pulver. Wer bei 60 g hängt, weil der Appetit noch klein ist oder die Zeit fehlt, für den ist ein Shake oder Stick der einfachste Weg. Details im [Protein-Artikel](/wissen/protein-abnehmspritze/).
 
 <div data-interaktiv="protein" data-luecke="ja"></div>
 

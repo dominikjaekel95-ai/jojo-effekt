@@ -10,6 +10,7 @@ import Base from '../../layouts/Base.astro';
 import SeitenKopf from '../../components/SeitenKopf.astro';
 import PreisBalken from '../../components/PreisBalken.astro';
 import GrafikDaten from '../../components/GrafikDaten.astro';
+import GrafikHochformat from '../../components/GrafikHochformat.astro';
 import Faq from '../../components/Faq.astro';
 import GrafikEinbinden from '../../components/GrafikEinbinden.astro';
 import { site } from '../../data/site';
@@ -134,7 +135,7 @@ const jsonLd = [
     <p class="k-note">Quelle: {preise.quelle.replace(/\.$/, '')}. Jahr rechnerisch: Monatspreis × 13 bei Pens, die vier Wochen reichen, × 12 bei Tabletten (30 Stück) und Saxenda (etwa 30 Tage). Dosissteigerung und Pausen nicht eingerechnet.</p>
 
     <figure class="ko-fig" data-rv>
-      <img src="/grafiken/preise-im-monat.png" alt={`Balkendiagramm der monatlichen Selbstzahlerpreise als Größenordnung, Stand ${fmtDate(preise.stand)}: ${preise.zeilen.map((z) => `${z.praeparat} ${z.monat}`).join('; ')}.`} width="1200" height="675" loading="lazy" />
+      <picture><GrafikHochformat id="preise-im-monat" /><img src="/grafiken/preise-im-monat.png" alt={`Balkendiagramm der monatlichen Selbstzahlerpreise als Größenordnung, Stand ${fmtDate(preise.stand)}: ${preise.zeilen.map((z) => `${z.praeparat} ${z.monat}`).join('; ')}.`} width="1200" height="675" loading="lazy" /></picture>
       <figcaption>
         <p>Dieselben Zahlen als Grafik; frei verwendbar mit Quellenangabe (CC BY 4.0), Download unter <a href="/grafiken/#preise-im-monat" class="k-a">Grafiken</a>.</p>
         <GrafikDaten id="preise-im-monat" class="mt-3" />

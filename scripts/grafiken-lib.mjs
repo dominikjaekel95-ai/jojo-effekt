@@ -304,3 +304,107 @@ ${foot}
 </svg>
 `;
 }
+
+/* ---------- Hochformat (1080 × 1350) für schmale Bildschirme ---------- */
+/* Die Hochformat-Fassungen (grafiken-hoch.mjs, Dateien <id>-hoch.svg/.png) zeigen dieselben Daten wie die Hauptgrafik
+ * und werden per <picture> unter 640 px Breite ausgeliefert. Am Handy steht das Bild etwa 360 px breit, also rund ein
+ * Drittel der Pixelgröße: Grundtext 30 px (am Handy etwa 10 px), Fußzeile und Quellen 28 px. Die Prüfung in
+ * grafiken.mjs meldet im Hochformat jede Schrift unter 28 px. */
+export const WH = 1080;
+export const HH = 1350;
+export const FH = { foot: 28, small: 28, axis: 30, text: 30, label: 34, value: 44, big: 52, title: 50, sub: 28 };
+
+/** Kopf und Fuß des Hochformats vorab setzen: Titel und Untertitel umbrechen, Quelle, Lizenzzeile und Domain im Fuß.
+ * Gibt die Inhaltsfläche zurück: top (oberste Kante für Inhalt), bottom (tiefste Grundlinie), dazu FY (Fußlinie). */
+export function rahmenHoch({ title, subtitle, source }) {
+  const maxW = WH - 2 * M;
+  const tl = wrap(title, maxW, 'title', FH.title);
+  const tlh = Math.round(FH.title * 1.14);
+  const ty = M + Math.round(FH.title * 0.74);
+  const sl = wrap(subtitle, maxW, 'body', FH.sub);
+  const slh = Math.round(FH.sub * 1.32);
+  const sy = ty + (tl.length - 1) * tlh + Math.round(FH.sub * 1.9);
+  const top = sy + (sl.length - 1) * slh + 40;
+  const brand = 'nachderspritze.de';
+  const bw = tw(brand, 'brand', FH.foot + 2);
+  // „(CC BY 4.0)“ bricht nicht um (geschützte Leerzeichen)
+  const fl = [...wrap(`Quelle: ${source}`, maxW, 'body', FH.foot), ...wrap(LIZENZ.replace('CC BY 4.0', 'CC BY 4.0'), maxW, 'body', FH.foot)];
+  const brandOwnLine = tw(fl[fl.length - 1], 'body', FH.foot) + bw + 32 > maxW;
+  const flh = Math.round(FH.foot * 1.3);
+  const n = fl.length + (brandOwnLine ? 1 : 0);
+  const FYh = HH - 40 - (n - 1) * flh - Math.round(FH.foot * 1.5);
+  return { tl, tlh, ty, sl, slh, sy, top, fl, flh, brand, brandOwnLine, FY: FYh, bottom: FYh - 32 };
+}
+
+/** Rahmen im Hochformat: wie frame(), Titel und Untertitel mehrzeilig, Fuß mit Quelle, Lizenzzeile und Domain */
+export function frameHoch({ file, title, subtitle, source, alt, body, warn = console.warn }) {
+  const k = rahmenHoch({ title, subtitle, source });
+  if (k.tl.length > 3) warn(`${file}: Titel länger als drei Zeilen`);
+  if (k.sl.length > 3) warn(`${file}: Untertitel länger als drei Zeilen`);
+  const inner = knockout(body);
+  clearBoxes();
+  const head =
+    k.tl.map((l, i) => T(M, k.ty + i * k.tlh, l, { st: 'title', size: FH.title })).join('') +
+    k.sl.map((l, i) => T(M, k.sy + i * k.slh, l, { size: FH.sub, fill: C.ink2 })).join('');
+  const fy0 = k.FY + Math.round(FH.foot * 1.5);
+  const last = fy0 + (k.fl.length - 1 + (k.brandOwnLine ? 1 : 0)) * k.flh;
+  const foot =
+    k.fl.map((l, i) => T(M, fy0 + i * k.flh, l, { size: FH.foot, fill: C.ink3, cls: 'ft' })).join('') +
+    T(WH - M, last, k.brand, { st: 'brand', size: FH.foot + 2, anchor: 'end', cls: 'ft' });
+  clearBoxes();
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${WH}" height="${HH}" viewBox="0 0 ${WH} ${HH}" role="img" aria-labelledby="t d" font-family="${esc(FONT)}">
+<title id="t">${esc(title)}</title>
+<desc id="d">${esc(alt)}</desc>
+<rect width="${WH}" height="${HH}" fill="${C.bg}"/>
+${head}
+${inner}
+<line class="fy" x1="${M}" y1="${k.FY}" x2="${WH - M}" y2="${k.FY}" stroke="${C.line}" stroke-width="1"/>
+${foot}
+</svg>
+`;
+}
+
+/** Absatz aus Läufen mit eigenem Schnitt und eigener Farbe (etwa: Überschrift fett, dann Text), Umbruch an Leerzeichen.
+ * runs: [{ s, st, fill }]; o: size, lh, maxW, fill (Grundfarbe). Gibt { svg, lines, bottom } zurück. */
+export function PM(x, y, runs, o = {}) {
+  const size = o.size ?? 16;
+  const lh = o.lh ?? Math.round(size * 1.4);
+  const maxW = o.maxW ?? W - 2 * M;
+  const words = runs.flatMap((ru) => String(ru.s).split(' ').map((w) => ({ w, st: ru.st || 'body', fill: ru.fill ?? o.fill ?? C.ink })));
+  const lines = [];
+  let cur = [];
+  for (const wd of words) {
+    const test = [...cur, wd];
+    if (!cur.length || lineW(test, size) <= maxW) cur = test;
+    else {
+      lines.push(cur);
+      cur = [wd];
+    }
+  }
+  if (cur.length) lines.push(cur);
+  let svg = '';
+  lines.forEach((ln, i) => {
+    const yy = y + i * lh;
+    BOXES.push({ x0: x, x1: x + lineW(ln, size), y0: yy - size * 0.8, y1: yy + size * 0.26 });
+    // aufeinanderfolgende Wörter mit gleichem Schnitt und gleicher Farbe in einem tspan
+    const parts = [];
+    for (const wd of ln) {
+      const p = parts[parts.length - 1];
+      if (p && p.st === wd.st && p.fill === wd.fill) p.s += ` ${wd.w}`;
+      else parts.push({ st: wd.st, fill: wd.fill, s: parts.length ? ` ${wd.w}` : wd.w });
+    }
+    const tsp = parts
+      .map((p) => {
+        const S = ST[p.st];
+        return `<tspan font-weight="${S.w}" fill="${p.fill}" style="font-stretch:${S.s}%;letter-spacing:${S.ls}em">${esc(p.s)}</tspan>`;
+      })
+      .join('');
+    svg += `<text x="${r(x)}" y="${r(yy)}" font-size="${size}" stroke="${C.bg}" stroke-width="5" stroke-linejoin="round" paint-order="stroke">${tsp}</text>`;
+  });
+  return { svg, lines, bottom: y + (lines.length - 1) * lh };
+}
+/** Breite einer Zeile aus Wörtern mit eigenem Schnitt (das Leerzeichen zählt zum folgenden Wort) */
+function lineW(words, size) {
+  return words.reduce((a, wd, i) => a + tw(i ? ` ${wd.w}` : wd.w, wd.st, size), 0);
+}

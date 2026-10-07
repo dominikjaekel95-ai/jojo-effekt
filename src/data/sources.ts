@@ -34,7 +34,7 @@ export const sources: Record<string, Source> = {
     full:
       'Wilding JPH, Batterham RL, Davies M, et al. Weight regain and cardiometabolic effects after withdrawal of semaglutide: The STEP 1 trial extension. Diabetes Obes Metab. 2022;24(8):1553–1564.',
     url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9542252/',
-    note: 'Ein Jahr nach dem Absetzen waren im Mittel zwei Drittel des verlorenen Gewichts wieder da: nach 68 Wochen Semaglutid −17,3 % (Placebo −2,0 %), nach 120 Wochen −5,6 % (Placebo −0,1 %), also 11,6 Prozentpunkte zurück.',
+    note: 'Ein Jahr nach dem Absetzen waren im Mittel zwei Drittel des verlorenen Gewichts wieder da: nach 68 Wochen Semaglutid −17,3 % (Placebo −2,0 %), nach 120 Wochen −5,6 % (Placebo −0,1 %); laut Studie kamen nach dem Absetzen im Mittel 11,6 Prozentpunkte zurück (Placebo 1,9).',
   },
   rubino2021: {
     id: 'rubino2021',
@@ -50,7 +50,7 @@ export const sources: Record<string, Source> = {
     full:
       'Aronne LJ, Sattar N, Horn DB, et al. Continued Treatment With Tirzepatide for Maintenance of Weight Reduction in Adults With Obesity: The SURMOUNT-4 Randomized Clinical Trial. JAMA. 2024;331(1):38–48.',
     url: 'https://jamanetwork.com/journals/jama/fullarticle/2812936',
-    note: 'Nach Wechsel auf Placebo: +14 % Körpergewicht in 52 Wochen; unter Fortführung −5,5 %.',
+    note: 'Nach Wechsel auf Placebo: +14 % Körpergewicht in 52 Wochen; unter Fortführung −5,5 %. Davor eine offene Einleitungsphase von 36 Wochen Tirzepatid für alle mit im Mittel −20,9 %.',
   },
   wu2025: {
     id: 'wu2025',
@@ -119,7 +119,7 @@ export const sources: Record<string, Source> = {
     full:
       'Verordnung (EU) Nr. 432/2012 der Kommission zur Festlegung einer Liste zulässiger anderer gesundheitsbezogener Angaben über Lebensmittel; ergänzt u. a. durch Verordnung (EU) 2017/672 (Kreatin und Krafttraining ab 55 Jahren).',
     url: 'https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32012R0432',
-    note: 'Grundlage aller gesundheitsbezogenen Aussagen zu Lebensmitteln und Nahrungsergänzung auf dieser Seite.',
+    note: 'Grundlage aller gesundheitsbezogenen Aussagen zu Lebensmitteln und Nahrungsergänzung auf dieser Seite. Kreatin: Beide zugelassenen Angaben setzen eine tägliche Aufnahme von 3 g Kreatin voraus (Schnellkraft bei kurzzeitiger intensiver Belastung; nach VO (EU) 2017/672 Muskelkraft bei Krafttraining für Erwachsene über 55 Jahre).',
   },
   kreider2017: {
     id: 'kreider2017',
@@ -151,7 +151,7 @@ export const sources: Record<string, Source> = {
     full:
       'Fothergill E, Guo J, Howard L, et al. Persistent metabolic adaptation 6 years after "The Biggest Loser" competition. Obesity. 2016;24(8):1612–1619.',
     url: 'https://onlinelibrary.wiley.com/doi/10.1002/oby.21538',
-    note: 'Der Ruheenergieverbrauch blieb sechs Jahre nach starkem Gewichtsverlust deutlich abgesenkt.',
+    note: 'Der Ruheenergieverbrauch blieb sechs Jahre nach starkem Gewichtsverlust deutlich abgesenkt: 14 Teilnehmende, Ruheumsatz im Mittel 704 kcal/Tag unter dem Ausgangswert und rund 500 kcal/Tag (−499) unter dem für Gewicht und Körperzusammensetzung erwarteten Wert.',
   },
   dagLeitlinie: {
     id: 'dagLeitlinie',
@@ -199,7 +199,7 @@ export const sources: Record<string, Source> = {
     full:
       'Almandoz JP, Wadden TA, Tewksbury C, et al. Nutritional considerations with antiobesity medications. Obesity (Silver Spring). 2024;32(9):1613–1631.',
     url: 'https://doi.org/10.1002/oby.24067',
-    note: 'Expertenempfehlungen zu Ernährung unter Adipositas-Medikamenten: Protein, Ballaststoffe, Flüssigkeit, Mikronährstoffe bei sehr geringer Energiezufuhr.',
+    note: 'Expertenempfehlungen zu Ernährung unter Adipositas-Medikamenten: Protein, Ballaststoffe, Flüssigkeit, Mikronährstoffe bei sehr geringer Energiezufuhr. Flüssigkeit: im Allgemeinen 2 bis 3 Liter am Tag.',
   },
   dgeEmpfehlungen: {
     id: 'dgeEmpfehlungen',
@@ -490,7 +490,7 @@ export const sources: Record<string, Source> = {
     short: 'Rabenberg et al., DEGS1, BMC Public Health 2015',
     full: 'Rabenberg M, Scheidt-Nave C, Busch MA, et al. Vitamin D status among adults in Germany: results from the German Health Interview and Examination Survey for Adults (DEGS1). BMC Public Health. 2015;15:641.',
     url: 'https://doi.org/10.1186/s12889-015-2016-7',
-    note: '30,2 % der Erwachsenen in Deutschland lagen unter 30 nmol/l (Mangel), 61,6 % unter 50 nmol/l; im Winter deutlich mehr als im Sommer.',
+    note: 'Bundesweite Untersuchung, 6.995 Erwachsene mit Vitamin-D-Messwert (fast 7.000). 30,2 % der Erwachsenen in Deutschland lagen unter 30 nmol/l (Mangel), 61,6 % unter 50 nmol/l; im Winter deutlich mehr als im Sommer.',
   },
   aroda2016: {
     id: 'aroda2016',

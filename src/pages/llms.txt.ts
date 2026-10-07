@@ -42,7 +42,7 @@ export const GET: APIRoute = async () => {
     ...glossar.map((g) => `- [${g.data.term}](${u(`/glossar/${g.id}/`)}): ${g.data.short}`),
     '',
     '## Grafiken (CC BY 4.0, Quelle im Bild, frei verwendbar mit Quellenangabe)',
-    ...grafiken.map((g) => `- [${g.title}](${u(`/grafiken/#${g.id}`)}): ${g.alt} Datei: ${u(`/grafiken/${g.id}.png`)}`),
+    ...grafiken.filter((g) => !g.hochformat).map((g) => `- [${g.title}](${u(`/grafiken/#${g.id}`)}): ${g.alt} Datei: ${u(`/grafiken/${g.id}.png`)}`),
     '',
     '## Marktradar, neueste Einträge',
     ...radar.eintraege.slice(0, 6).map((e) => `- ${e.date}: [${e.title}](${u(`/marktradar/#${e.id}`)}) (Quelle: ${e.source.name})`),

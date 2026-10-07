@@ -2,7 +2,9 @@
  * Register der Studien-Grafiken unter public/grafiken/ (erzeugt von scripts/grafiken.mjs, `npm run grafiken`).
  * Die Seite /grafiken/ listet die Einträge mit Download, Einbettungscode und Quellen. Alle Zahlen stammen aus
  * src/data/sources.ts; `sources` nennt die IDs. Alternativen (gleiche Daten, andere Form) hängen über `variantOf`
- * am Haupteintrag und werden auf der Seite als Varianten angeboten.
+ * am Haupteintrag und werden auf der Seite als Varianten angeboten. Hochformat-Fassungen fürs Handy (`hochformat: true`,
+ * Liste HOCHFORMAT unten) sind ebenfalls Varianten, aber ohne eigene Kachel: /grafiken/ bietet sie als Download
+ * „Hochformat“ beim Haupteintrag an, Artikel und Seiten liefern sie per <picture> unter 640 px Breite aus.
  */
 import { preise, fmtDate } from './markt';
 
@@ -26,6 +28,8 @@ export interface Grafik {
   variantOf?: string;
   /** true = wird aus src/data/markt/preise.json erzeugt und ändert sich mit jeder Erhebung */
   monatlich?: boolean;
+  /** true = Hochformat-Fassung (1080 × 1350) des Haupteintrags `variantOf` für schmale Bildschirme */
+  hochformat?: boolean;
 }
 
 export const grafiken: Grafik[] = [
@@ -116,7 +120,7 @@ export const grafiken: Grafik[] = [
     id: 'warum-das-gewicht-zurueckkommt',
     title: 'Warum das Gewicht nach dem Absetzen zurückkommt',
     subtitle: 'Vier Mechanismen, nach Gewichtsverlust belegt und auf die Zeit nach der Spritze übertragen',
-    alt: 'Vier Spalten mit den Mechanismen des Jojo-Effekts, nach Gewichtsverlust belegt und auf die Zeit nach der Abnehmspritze übertragen: Die Appetitbremse fällt weg, sobald der Wirkstoff weitgehend abgebaut ist (Semaglutid nach etwa 5 Wochen weitgehend abgebaut, bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer kleinen Studie mit 14 Teilnehmenden, einem Extremfall, noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. In Studien halfen beim Halten: Krafttraining und Protein.',
+    alt: 'Vier Mechanismen des Jojo-Effekts, nach Gewichtsverlust belegt und auf die Zeit nach der Abnehmspritze übertragen: Die Appetitbremse fällt weg, sobald der Wirkstoff weitgehend abgebaut ist (Semaglutid nach etwa 5 Wochen weitgehend abgebaut, bis etwa 7 Wochen nachweisbar; Tirzepatid nach etwa 25 Tagen); die Hungerhormone Ghrelin und Leptin bleiben noch ein Jahr nach einer Diät verschoben; der Ruheenergieverbrauch blieb in einer kleinen Studie mit 14 Teilnehmenden, einem Extremfall, noch sechs Jahre nach starkem Gewichtsverlust abgesenkt; rund 40 Prozent des Gewichtsverlusts unter Semaglutid entfielen auf fettfreie Masse. In Studien halfen beim Halten: Krafttraining und Protein.',
     sources: ['fachinfoWegovy', 'fachinfoMounjaro', 'sumithran2011', 'fothergill2016', 'wilding2021dxa', 'jensen2024', 'sardeli2018', 'leidy2015'],
     used: [{ href: '/wissen/jojo-effekt-abnehmspritze/', label: 'Jojo-Effekt nach der Abnehmspritze' }],
   },
@@ -312,10 +316,27 @@ export const grafiken: Grafik[] = [
     subtitle: `Apothekenverkaufspreise für Selbstzahler als Größenordnung, Stand ${fmtDate(preise.stand)}, aus der monatlichen Erhebung im Marktradar`,
     alt: `Balkendiagramm der monatlichen Selbstzahlerpreise für Abnehmspritzen und die Abnehmtablette als Größenordnung, gerundet auf 5 Euro, Stand ${fmtDate(preise.stand)}: ${preise.zeilen.map((z) => `${z.praeparat} ${z.monat}`).join('; ')}.${kassenPraeparate.length ? ` ${kassenPraeparate.join(', ')} ist nur für Typ-2-Diabetes zugelassen und dort Kassenleistung.` : ''}`,
     sources: ['medipreis2026', 'tabletteApotheken2026'],
-    used: [{ href: '/marktradar/#preise', label: 'Marktradar: Preise' }],
+    used: [{ href: '/abnehmspritze-kosten/', label: 'Was Abnehmspritzen kosten' }, { href: '/marktradar/#preise', label: 'Marktradar: Preise' }],
     monatlich: true,
   },
 ];
 
+/**
+ * Hochformat-Fassungen (scripts/grafiken-hoch.mjs, Dateien <id>-hoch.svg/.png, 1080 × 1350): gleiche Daten, Titel,
+ * Alt-Text, Quellen und Einsatzorte wie der Haupteintrag, deshalb hier aus ihm abgeleitet. Neue Fassung: Layout in
+ * grafiken-hoch.mjs anlegen, `npm run grafiken`, dann die ID hier anhängen.
+ */
+export const HOCHFORMAT = ['preise-im-monat', 'weiter-oder-placebo', 'warum-das-gewicht-zurueckkommt', 'step-2-typ-2-diabetes', 'versorgung-in-deutschland'];
+for (const id of HOCHFORMAT) {
+  const g = grafiken.find((x) => x.id === id);
+  if (!g) throw new Error(`src/data/grafiken.ts: Hochformat zu unbekannter Grafik ${id}`);
+  grafiken.push({ ...g, ziel: undefined, id: `${id}-hoch`, variantOf: id, hochformat: true });
+}
+/** Maße und Umschaltbreite der Hochformat-Fassungen (unter 640 px Viewport-Breite) */
+export const HOCH = { breite: 1080, hoehe: 1350, media: '(max-width: 639px)' };
+
 export const hauptgrafiken = grafiken.filter((g) => !g.variantOf);
-export const varianten = (id: string) => grafiken.filter((g) => g.variantOf === id);
+/** Varianten mit anderer Form (ohne Hochformat-Fassung) */
+export const varianten = (id: string) => grafiken.filter((g) => g.variantOf === id && !g.hochformat);
+/** Hochformat-Fassung einer Grafik, falls vorhanden */
+export const hochformatVon = (id: string) => grafiken.find((g) => g.variantOf === id && g.hochformat);

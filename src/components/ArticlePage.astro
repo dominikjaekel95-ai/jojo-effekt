@@ -24,7 +24,7 @@ import type { AffiliateKey } from '../data/affiliate';
 import { getCollection, render } from 'astro:content';
 import { site } from '../data/site';
 import { themaByCategory, gehoertZu } from '../data/themen';
-import { mitGrafikDaten } from '../lib/grafik-daten';
+import { mitGrafikDaten, mitHochformat } from '../lib/grafik-daten';
 import { mitInteraktiv } from '../lib/interaktiv';
 import Interaktiv from './interaktiv/Interaktiv.astro';
 
@@ -33,8 +33,9 @@ const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 /* Datentabelle unter jeder Grafik (GEO): das gerenderte HTML wird ergänzt, sonst bleibt <Content /> der Weg */
 /* Tabellen aus dem Markdown bekommen einen Rahmen, der bei Bedarf waagerecht scrollt (Lesespalte 42rem, breite Tabellen) */
+/* Grafiken mit Hochformat-Fassung kommen in ein <picture> (unter 640 px das Hochformat); nach der Datentabelle */
 const mitTabellenRahmen = (h: string) => h.replace(/<table>/g, '<div class="art-tab"><table>').replace(/<\/table>/g, '</table></div>');
-const html = entry.rendered?.html ? mitInteraktiv(mitGrafikDaten(mitTabellenRahmen(entry.rendered.html)), entry.data.sources, entry.id) : undefined;
+const html = entry.rendered?.html ? mitInteraktiv(mitHochformat(mitGrafikDaten(mitTabellenRahmen(entry.rendered.html))), entry.data.sources, entry.id) : undefined;
 /* Inhaltsverzeichnis aus den H2: aufklappbar unter dem Lesekopf, standardmäßig zu (das Feld toc im Frontmatter wirkt nicht mehr) */
 const inhalt = headings.filter((h) => h.depth === 2);
 const all = await getCollection('wissen', (a) => !a.data.draft);
@@ -409,7 +410,8 @@ const jsonLd = [
   .art-prose :global(blockquote) {
     margin-block: 4rem;
   }
-  .art-prose :global(figure img) {
+  .art-prose :global(figure img),
+  .art-prose :global(figure picture) {
     display: block;
   }
   .art-prose :global(figure > figcaption) {

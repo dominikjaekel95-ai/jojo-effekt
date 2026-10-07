@@ -2,7 +2,7 @@
 
 Die Google Search Console hat keine API für die URL-Prüfung. Die Anmeldung ist Handarbeit: Search Console → URL-Prüfung → „Indexierung beantragen“. Bing und die IndexNow-Partner bekommen jede Änderung automatisch über `.github/workflows/indexnow.yml`.
 
-**Regel:** Wer eine Seite neu anlegt oder inhaltlich wesentlich ändert (Text, Titel, Abschnitte, Struktur), hängt unten eine Zeile mit Status `offen` an. Wer die URL angemeldet hat, setzt `angemeldet YYYY-MM-DD`. Kleinigkeiten (Tippfehler, ein Link, ein Satz) brauchen keine Zeile; der nächste Crawl nimmt sie mit.
+**Regel:** Wer eine Seite neu anlegt oder inhaltlich wesentlich ändert (Text, Titel, Abschnitte, Struktur), hängt unten eine Zeile mit Status `offen` an. Wer die URL angemeldet hat, setzt `angemeldet YYYY-MM-DD`. Kleinigkeiten (Tippfehler, ein Link, ein Satz) brauchen keine Zeile; der nächste Crawl nimmt sie mit. Glossar-Einträge werden nicht einzeln angemeldet, Status „Sitemap genügt“. Ausnahme: eigene Begriffe (`own: true`).
 
 Die Search Console erlaubt etwa 10 bis 12 URL-Prüfungen pro Tag. Reihenfolge: neue Artikel zuerst, dann geänderte Seiten, dann der Wissens-Hub.
 
@@ -64,48 +64,48 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/wechseljahre-abnehmspritze/ | neuer Artikel: Wechseljahre und Abnehmspritze (Körperzusammensetzung, Wirksamkeit, Knochen, Training, Protein) | 2026-10-05 | angemeldet 2026-10-06 |
 | https://nachderspritze.de/wissen/ | Grafik Zeitachse im Hub | 2026-10-01 | angemeldet 2026-10-06 |
 | https://nachderspritze.de/marktradar/ | Preisgrafik ergänzt | 2026-10-01 | indexiert (geprüft 2026-10-03) |
-| https://nachderspritze.de/werkzeuge/ | neue Seite: Übersicht der Werkzeuge | 2026-10-01 | offen |
+| https://nachderspritze.de/werkzeuge/ | neue Seite: Übersicht der Werkzeuge | 2026-10-01 | angemeldet 2026-10-07 |
 | https://nachderspritze.de/werkzeuge/zeitplan-nach-letzter-dosis/ | neues Werkzeug: Zeitplan aus Datum und Wirkstoff, Kalender-Export | 2026-10-01 | angemeldet 2026-10-02 |
 | https://nachderspritze.de/werkzeuge/proteinrechner/ | neues Werkzeug: Proteinrechner | 2026-10-01 | angemeldet 2026-10-02 |
 | https://nachderspritze.de/werkzeuge/gewichtskorridor/ | neues Werkzeug: Gewichtskorridor mit drei Zonen (Wing 2006) | 2026-10-01 | angemeldet 2026-10-02 |
 | https://nachderspritze.de/wissen/ozempic-absetzen/ | FAQ nach „Weitere Fragen“, updatedDate | 2026-10-01 | angemeldet 2026-10-02 |
 | https://nachderspritze.de/abnehmspritze-kosten/ | neue Seite: monatliche Preiserhebung mit Jahreskosten, Kassenregeln, Methodik, Zitierhinweis (Link-Magnet) | 2026-10-01 | indexiert (geprüft 2026-10-02) |
 | https://nachderspritze.de/wissen/absetzen/ | neue Seite: Themenseite Absetzen und Pausieren (nach Merge des Hub-PR) | 2026-09-30 | angemeldet 2026-10-02 |
-| https://nachderspritze.de/wissen/praeparate/ | neue Seite: Themenseite Absetzen nach Präparat (nach Merge des Hub-PR) | 2026-09-30 | offen |
-| https://nachderspritze.de/wissen/abnehmpille/ | neue Seite: Themenseite Abnehmpille (Priorität) (nach Merge des Hub-PR) | 2026-09-30 | offen |
-| https://nachderspritze.de/wissen/muskeln/ | neue Seite: Themenseite Muskeln (nach Merge des Hub-PR) | 2026-09-30 | offen |
+| https://nachderspritze.de/wissen/praeparate/ | neue Seite: Themenseite Absetzen nach Präparat (nach Merge des Hub-PR) | 2026-09-30 | angemeldet 2026-10-07 |
+| https://nachderspritze.de/wissen/abnehmpille/ | neue Seite: Themenseite Abnehmpille (Priorität) (nach Merge des Hub-PR) | 2026-09-30 | angemeldet 2026-10-07 |
+| https://nachderspritze.de/wissen/muskeln/ | neue Seite: Themenseite Muskeln (nach Merge des Hub-PR) | 2026-09-30 | angemeldet 2026-10-07 |
 | https://nachderspritze.de/wissen/ernaehrung/ | neue Seite: Themenseite Ernährung (nach Merge des Hub-PR) | 2026-09-30 | indexiert (geprüft 2026-10-04, letztes Crawling 04.10.) |
-| https://nachderspritze.de/wissen/gewicht-halten/ | neue Seite: Themenseite Gewicht halten (nach Merge des Hub-PR) | 2026-09-30 | offen |
+| https://nachderspritze.de/wissen/gewicht-halten/ | neue Seite: Themenseite Gewicht halten (nach Merge des Hub-PR) | 2026-09-30 | angemeldet 2026-10-07 |
 | https://nachderspritze.de/wissen/ | Hub nach Themen gegliedert, verlinkt sechs Themenseiten | 2026-09-30 | angemeldet 2026-10-01 |
 | https://nachderspritze.de/wissen/protein-abnehmspritze/ | Priorität laut Dominik; war „Gefunden – zurzeit nicht indexiert“ | 2026-10-01 | angemeldet 2026-10-01 |
-| https://nachderspritze.de/glossar/set-point-theorie/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/adaptive-thermogenese/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/sarkopene-adipositas/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/auswaschphase/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/halbwertszeit/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/anabole-resistenz/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/bioimpedanzanalyse/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/dxa/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/fettfreie-masse/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/ghrelin/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/glp-1-rezeptoragonist/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/glucomannan/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/glykogen/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/griffkraft/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/hedonischer-hunger/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/koerperzusammensetzung/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/kreatin-monohydrat/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/leptin/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/leucin-schwelle/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/metabolische-adaptation/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/muskelproteinsynthese/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/neat/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/progressive-belastungssteigerung/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/proteinverteilung/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/ruheenergieverbrauch/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/sarkopenie/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/taillenumfang/ | neu in Sitemap | 2026-10-01 | offen |
-| https://nachderspritze.de/glossar/telogenes-effluvium/ | neu in Sitemap | 2026-10-01 | offen |
+| https://nachderspritze.de/glossar/set-point-theorie/ | neu in Sitemap | 2026-10-01 | angemeldet 2026-10-07 |
+| https://nachderspritze.de/glossar/adaptive-thermogenese/ | neu in Sitemap | 2026-10-01 | angemeldet 2026-10-07 |
+| https://nachderspritze.de/glossar/sarkopene-adipositas/ | neu in Sitemap | 2026-10-01 | angemeldet 2026-10-07 |
+| https://nachderspritze.de/glossar/auswaschphase/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/halbwertszeit/ | neu in Sitemap | 2026-10-01 | indexiert (Search Console, Stand 04.10.) |
+| https://nachderspritze.de/glossar/anabole-resistenz/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/bioimpedanzanalyse/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/dxa/ | neu in Sitemap | 2026-10-01 | indexiert (Search Console, Stand 04.10.) |
+| https://nachderspritze.de/glossar/fettfreie-masse/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/ghrelin/ | neu in Sitemap | 2026-10-01 | indexiert (Search Console, Stand 04.10.) |
+| https://nachderspritze.de/glossar/glp-1-rezeptoragonist/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/glucomannan/ | neu in Sitemap | 2026-10-01 | indexiert (Search Console, Stand 04.10.) |
+| https://nachderspritze.de/glossar/glykogen/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/griffkraft/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/hedonischer-hunger/ | neu in Sitemap | 2026-10-01 | indexiert (Search Console, Stand 04.10.) |
+| https://nachderspritze.de/glossar/koerperzusammensetzung/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/kreatin-monohydrat/ | neu in Sitemap | 2026-10-01 | indexiert (Search Console, Stand 04.10.) |
+| https://nachderspritze.de/glossar/leptin/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/leucin-schwelle/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/metabolische-adaptation/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/muskelproteinsynthese/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/neat/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/progressive-belastungssteigerung/ | neu in Sitemap | 2026-10-01 | indexiert (Search Console, Stand 04.10.) |
+| https://nachderspritze.de/glossar/proteinverteilung/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/ruheenergieverbrauch/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/sarkopenie/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/taillenumfang/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
+| https://nachderspritze.de/glossar/telogenes-effluvium/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
 | https://nachderspritze.de/ | Redesign „Kalk“: Programm und Warteliste statt Set, neue Meta-Description | 2026-10-06 | offen |
 | https://nachderspritze.de/ernaehrungsplan/ | Redesign „Kalk“: 14 Tage, 56 Pläne, Vorlieben; Titel und Description neu | 2026-10-06 | offen |
 | https://nachderspritze.de/wissen/kreatin-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
@@ -118,5 +118,4 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/grafiken/ | Redesign „Kalk“: alle Grafiken neu gezeichnet, 18 neue | 2026-10-06 | offen |
 | https://nachderspritze.de/marktradar/ | Redesign „Kalk“: neue Struktur | 2026-10-06 | offen |
 | https://nachderspritze.de/wissen/ | Redesign „Kalk“: neue Struktur | 2026-10-06 | offen |
-
-Die übrigen 18 Glossar-Einträge stehen in der Sitemap und brauchen keine einzelne Anmeldung; wer Tageskontingent übrig hat, nimmt zuerst `set-point-theorie`, `adaptive-thermogenese`, `sarkopene-adipositas`, `auswaschphase` und `halbwertszeit`.
+| https://nachderspritze.de/erfahrungen/ | vorerst noindex bis zum ersten echten Bericht, dann wieder indexierbar machen und anmelden | 2026-10-07 | noindex |

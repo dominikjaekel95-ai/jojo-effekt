@@ -34,7 +34,7 @@ Es ist Abend, der Tag war lang, und du denkst schon wieder ans Essen. Unter der 
 
 **Die Bremse fällt weg.** GLP-1-Medikamente dämpfen den Appetit, verlangsamen die Magenentleerung und verändern die Signale zwischen Darm und Gehirn. Nach der letzten Dosis baut dein Körper den Wirkstoff ab, bei Semaglutid mit einer Halbwertszeit (Zeit, bis die Hälfte abgebaut ist) von etwa einer Woche,<sup><a href="#fn-fachinfoWegovy">8</a></sup> also über fünf bis sieben Wochen. Dein Magen arbeitet wieder schneller, die Sättigung kommt später, die Gedanken ans Essen werden lauter.
 
-**Das Essensrauschen wird wieder laut.** In Interviews beschreiben Betroffene, dass unter der Therapie das ständige Kreisen der Gedanken ums Essen verstummt – im Englischen gibt es dafür ein eigenes Wort, „food noise“ – und nach dem Absetzen zurückkehrt.<sup><a href="#fn-devereHunt2026">9</a></sup> Wenn dich das gerade beschäftigt: Es ist der beschriebene Normalfall, kein Rückfall in alte Schwäche.
+**Das Essensrauschen wird wieder laut.** Unter der Therapie verstummt bei vielen das ständige Kreisen der Gedanken ums Essen, nach dem Absetzen kommt es zurück; so beschreiben es Betroffene in Interviews.<sup><a href="#fn-devereHunt2026">9</a></sup> Das ist der Normalfall, keine Schwäche.
 
 **Die Hormone stehen auf Nachfüllen.** Das ist der Teil, der überrascht. Nach jedem größeren Gewichtsverlust, mit oder ohne Medikament, steigt das Hungerhormon Ghrelin und sinken Sättigungshormone wie Leptin. Ein Jahr nach der Diät waren diese Veränderungen in einer Studie noch messbar, und die Teilnehmenden berichteten mehr Hunger als vor dem Abnehmen.<sup><a href="#fn-sumithran2011">1</a></sup> Unter der Spritze war das verdeckt. Danach nicht mehr.
 

@@ -15,7 +15,7 @@ affiliateTitle: "Beispiel für ein Griffkraft-Messgerät"
 affiliateIntro: "Ein Beispiel, keine Empfehlung einer Marke. Griffkraft ist der einzige Muskelwert, den du zu Hause verlässlich misst; einmal pro Woche messen und notieren zeigt, ob die Kraft hält."
 faq:
   - q: "Wie viel Muskelmasse verliert man unter der Abnehmspritze?"
-    a: "<p>Rund 40 % des verlorenen Gewichts entfielen unter Semaglutid auf fettfreie Masse – das zeigt eine Substudie der STEP-1-Studie; die Analyse war exploratorisch und umfasste 140 Teilnehmende. Fettfreie Masse ist nicht nur Muskel, sondern auch Wasser, Organgewebe und Bindegewebe, die bei jedem Gewichtsverlust mit abnehmen. Der reine Muskelverlust ist also geringer, aber nicht null.</p>"
+    a: "<p>Rund 40 % des verlorenen Gewichts entfielen unter Semaglutid auf fettfreie Masse – das zeigt eine kleinere Substudie der STEP-1-Studie mit 140 Teilnehmenden. Fettfreie Masse ist nicht nur Muskel, sondern auch Wasser, Organgewebe und Bindegewebe, die bei jedem Gewichtsverlust mit abnehmen. Der reine Muskelverlust ist also geringer, aber nicht null.</p>"
   - q: "Was tun gegen Muskelabbau beim Abnehmen?"
     a: "<p>Zwei Dinge, beide gut belegt: Krafttraining an mindestens zwei Tagen pro Woche, weil es den Verlust an fettfreier Masse während einer Kalorienreduktion weitgehend verhindert, und 1,2 bis 1,6 g Protein pro kg Körpergewicht am Tag, verteilt auf die Mahlzeiten. Ausdauersport allein schützt die Muskeln nicht. Welcher Sport bei der Abnehmspritze passt also? Der mit Gewichten oder dem eigenen Körpergewicht. Zwei Einheiten à 30 Minuten reichen für den Einstieg.</p>"
   - q: "Kann ich verlorene Muskeln nach dem Absetzen wieder aufbauen?"
@@ -34,7 +34,7 @@ Die Abnehmspritze nimmt nicht nur Fett. Sie nimmt auch das, was du eigentlich be
 
 ## Wie viel Muskelmasse geht verloren?
 
-Bei jedem Gewichtsverlust verliert der Körper neben Fett auch fettfreie Masse: Muskeln, aber auch Wasser, Bindegewebe und etwas Organmasse. Wie groß der Anteil ist, hängt vom Tempo, vom Ausgangsgewicht und vom Training ab. Für Semaglutid liefert die STEP-1-Studie den besten Anhaltspunkt: Rund 40 % des Gewichtsverlusts entfielen auf fettfreie Masse – gemessen in einer Substudie mit 140 Teilnehmenden per DXA, einer Röntgen-Messung der Körperzusammensetzung.<sup><a href="#fn-wilding2021dxa">1</a></sup> Ein Rechenbeispiel: Wer 15 Kilo verloren hat, hat davon rund 6 nicht als Fett verloren. Die Analyse war exploratorisch, also nicht auf diese Frage hin geplant, und die Zahl schwankt je nach Studie und Messmethode. Ein Randphänomen ist es jedenfalls nicht.
+Bei jedem Gewichtsverlust verliert der Körper neben Fett auch fettfreie Masse: Muskeln, aber auch Wasser, Bindegewebe und etwas Organmasse. Wie groß der Anteil ist, hängt vom Tempo, vom Ausgangsgewicht und vom Training ab. Für Semaglutid liefert die STEP-1-Studie den besten Anhaltspunkt: Rund 40 % des Gewichtsverlusts entfielen auf fettfreie Masse – gemessen in einer Substudie mit 140 Teilnehmenden per DXA, einer Röntgen-Messung der Körperzusammensetzung.<sup><a href="#fn-wilding2021dxa">1</a></sup> Ein Rechenbeispiel: Wer 15 Kilo verloren hat, hat davon rund 6 nicht als Fett verloren. Die Zahl schwankt je nach Studie und Messmethode. Ein Randphänomen ist es jedenfalls nicht.
 
 <div data-interaktiv="zusammensetzung" data-studien="step1,surmount1" data-rechner="ja"></div>
 

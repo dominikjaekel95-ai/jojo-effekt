@@ -38,13 +38,13 @@ Dein Körper baut den Wirkstoff über Wochen ab, der Appetit kommt zurück, und 
 
 > „Mit der Abnehmspritze musste ich jeden Tag auf Lebensfreude verzichten. Das ist, als habe man bisher Musik geliebt, könnte das aber nun nicht mehr empfinden.“
 
-Daniela K., 58, hat mit Wegovy zehn Kilo abgenommen und die Spritze abgesetzt ([Tagesspiegel, Oktober 2025](https://www.tagesspiegel.de/wissen/lieber-dick-als-unglucklich-warum-so-viele-menschen-die-abnehmspritze-absetzen-14476502.html); Name von der Redaktion geändert, Artikel hinter Bezahlschranke).
+Daniela K., 58, hat mit Wegovy zehn Kilo abgenommen und die Spritze abgesetzt ([Tagesspiegel, Oktober 2025](https://www.tagesspiegel.de/wissen/lieber-dick-als-unglucklich-warum-so-viele-menschen-die-abnehmspritze-absetzen-14476502.html), Name geändert).
 
 > „Für mich ist das eine Hilfe, eine Stütze. Irgendwann muss man davon runterkommen – ich will sie nicht für immer nehmen.“
 
-Donna C., 62, kurz vor dem Absetzen, gegenüber der Nachrichtenagentur [AP, März 2024](https://www.news4jax.com/health/2024/03/06/weight-loss-drugs-like-wegovy-are-meant-for-long-term-use-some-patients-want-to-stop/) (aus dem Englischen übersetzt).
+Donna C., 62, kurz vor dem Absetzen ([AP, März 2024](https://www.news4jax.com/health/2024/03/06/weight-loss-drugs-like-wegovy-are-meant-for-long-term-use-some-patients-want-to-stop/), übersetzt).
 
-Einzelne Stimmen, keine Studienergebnisse – die Zahlen stehen in den Abschnitten darüber und darunter. Wenn du selbst abgesetzt hast: [Teile deine Erfahrung](/erfahrungen/); veröffentlicht wird gekürzt, ohne Namen und nur mit deiner Einwilligung.
+*Einzelne Stimmen, keine Studienergebnisse.*
 
 ## Wie schnell nimmt man nach dem Absetzen zu?
 

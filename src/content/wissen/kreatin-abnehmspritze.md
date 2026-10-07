@@ -83,7 +83,7 @@ Kreatin bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur, bis de
 
 ## Kreatin und Wegovy
 
-Wegovy enthält Semaglutid, das einmal pro Woche gespritzt wird; seine Halbwertszeit, also die Zeit, bis der Körper die Hälfte des Wirkstoffs abgebaut hat, liegt bei etwa einer Woche. Eine Wechselwirkung mit Kreatin-Monohydrat ist nicht bekannt: Kreatin wird über die Nieren ausgeschieden, Semaglutid im Körper abgebaut. Drei Dinge sind trotzdem wichtig. Erstens: Unter Wegovy essen viele wenig, und Kreatin wirkt nur mit Krafttraining; hast du keine Energie für zwei Einheiten pro Woche, spar es dir besser. Zweitens: Der Laborwert Kreatinin steigt unter Kreatin, ohne dass die Nieren schlechter arbeiten; das gehört vor jede Blutabnahme ins Gespräch. Drittens: Kreatin bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur; das zeigt die Waage auch, während das Gewicht unter Wegovy sinkt – Fett ist es nicht. Wer das nicht weiß, erschrickt.
+Wegovy enthält Semaglutid, das einmal pro Woche gespritzt wird; seine Halbwertszeit liegt bei etwa einer Woche. Eine Wechselwirkung mit Kreatin-Monohydrat ist nicht bekannt: Kreatin wird über die Nieren ausgeschieden, Semaglutid im Körper abgebaut. Drei Dinge sind trotzdem wichtig. Erstens: Unter Wegovy essen viele wenig, und Kreatin wirkt nur mit Krafttraining; hast du keine Energie für zwei Einheiten pro Woche, spar es dir besser. Zweitens: Der Laborwert Kreatinin steigt unter Kreatin, ohne dass die Nieren schlechter arbeiten; das gehört vor jede Blutabnahme ins Gespräch. Drittens: Kreatin bindet in den ersten Wochen zusätzlich Wasser in der Muskulatur; das zeigt die Waage auch, während das Gewicht unter Wegovy sinkt – Fett ist es nicht. Wer das nicht weiß, erschrickt.
 
 ## Kreatin und Mounjaro
 

@@ -39,9 +39,9 @@ Wer die Abnehmspritze absetzt, hört oft denselben Satz: „Dann kommt eh alles 
 
 > „Es macht mir furchtbare Angst, die Zahlen auf der Waage wieder steigen zu sehen.“
 
-Tara R., 48, nach dem Absetzen, gegenüber der Nachrichtenagentur [AP, März 2024](https://www.news4jax.com/health/2024/03/06/weight-loss-drugs-like-wegovy-are-meant-for-long-term-use-some-patients-want-to-stop/) (aus dem Englischen übersetzt).
+Tara R., 48, nach dem Absetzen ([AP, März 2024](https://www.news4jax.com/health/2024/03/06/weight-loss-drugs-like-wegovy-are-meant-for-long-term-use-some-patients-want-to-stop/), übersetzt).
 
-Die Angst vor der Waage ist in Berichten von Betroffenen das wiederkehrende Thema. Genau dagegen hilft eine vorher festgelegte Regel: der [Gewichtskorridor](/werkzeuge/gewichtskorridor/) sagt dir, bei welcher Zahl du nichts tust und ab wann du gegensteuerst.
+Gegen die Angst vor der Waage hilft eine Regel, die du vorher festlegst: Der [Gewichtskorridor](/werkzeuge/gewichtskorridor/) sagt dir, bei welcher Zahl du nichts tust und ab wann du gegensteuerst.
 
 ## Die Zahlen aus den Studien
 

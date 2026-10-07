@@ -55,7 +55,7 @@ npm run preview        # dist/ lokal ansehen
 - Die Abschnitte „Was wir nicht sagen“ und der Pflichtsatz `site.doctorSentence` („Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.“) bleiben unangetastet.
 - Frontmatter-Limits: `metaTitle` bis 65, `description` bis 165 Zeichen. Der Build bricht sonst ab.
 - Ton: nüchtern, ruhig, „du“, keine Superlative, keine Emojis, zurückhaltend beim Angebot.
-- Sprache: Texte werden redigiert, nicht neu geschrieben. Was ersetzt wird, was bleibt und Dominiks Beispiele stehen in `docs/SPRACHE.md`; vor jeder Textarbeit lesen.
+- Sprache und Zielgruppe: Primär-Persona „Sabine“ und die Ton-Regeln (erst die Leserin, dann der Beleg; ein Kilo-Beispiel pro Seite; FAQ beginnt mit der Antwort; echte Zitate nur mit Initialen und geprüfter Quelle, erfundene nie) stehen in `docs/SPRACHE.md`, Abschnitte „Persona und Ton“ und „Echte Stimmen“ (Dominik, 07.10.2026). Texte werden redigiert, nicht neu geschrieben. Was ersetzt wird, was bleibt und Dominiks Beispiele stehen in `docs/SPRACHE.md`; vor jeder Textarbeit lesen.
 
 ## Qualität vor Menge (Google „scaled content abuse“, seit März 2024)
 

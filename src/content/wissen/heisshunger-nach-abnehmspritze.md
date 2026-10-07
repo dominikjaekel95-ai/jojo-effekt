@@ -5,9 +5,9 @@ description: "Sobald die Wirkung nachlässt, kommt der Hunger oft als Heißhunge
 category: "Absetzen"
 order: 14
 pubDate: 2026-10-01
-updatedDate: 2026-10-06
+updatedDate: 2026-10-07
 keywords: ["heißhunger nach abnehmspritze", "abnehmspritze absetzen hunger", "abnehmspritze appetit zurück", "hunger nach abnehmspritze", "heißhunger nach absetzen abnehmspritze", "appetit nach absetzen wegovy", "abnehmspritze abgesetzt ständig hunger"]
-sources: ["sumithran2011", "wu2025", "leidy2015", "dgeBallaststoffe", "spiegel2004", "almandoz2024", "jensen2024", "fachinfoWegovy"]
+sources: ["sumithran2011", "wu2025", "leidy2015", "dgeBallaststoffe", "spiegel2004", "almandoz2024", "jensen2024", "fachinfoWegovy", "devereHunt2026"]
 related: ["abnehmspritze-absetzen", "ernaehrung-nach-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
 faq:
   - q: "Wie lange dauert der Heißhunger nach dem Absetzen?"
@@ -24,7 +24,7 @@ faq:
     a: "<p>Weil nach Gewichtsverlust die Hungerhormone verschoben bleiben und der Körper schnelle Energie bevorzugt; in einer Studie waren diese Veränderungen ein Jahr nach einer Diät noch messbar. Dazu kommen Schlafmangel, der Ghrelin steigen und Leptin sinken lässt, und Mahlzeiten ohne Protein, nach denen der Blutzucker schneller fällt. Was hilft: Protein zuerst bei jeder Mahlzeit, ein Frühstück mit mindestens 25 g Protein, Süßes geplant nach einer Mahlzeit statt verboten, und sieben Stunden Schlaf.</p>"
 ---
 
-Unter der Spritze war Essen eine Nebensache. Ein paar Wochen nach der letzten Dosis ist es plötzlich das Hauptthema: Gedanken ans Essen, Lust auf Süßes und Salziges, ein Hunger, der sich anders anfühlt als vor der Therapie. Das ist kein Charakterfehler, sondern Biologie, und man kann damit umgehen. Hier steht, was passiert und was hilft. Der Gesamtverlauf nach der letzten Dosis steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Es ist Abend, der Tag war lang, und du denkst schon wieder ans Essen. Unter der Spritze war das eine Nebensache; ein paar Wochen nach der letzten Dosis ist es das Hauptthema: Gedanken ans Essen, Lust auf Süßes und Salziges, ein Hunger, der sich anders anfühlt als vor der Therapie. Das ist kein Charakterfehler, sondern Biologie, und man kann damit umgehen. Hier steht, was passiert und was hilft. Der Gesamtverlauf nach der letzten Dosis steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 <div data-interaktiv="zeitachse" data-wirkstoffe="semaglutid" data-fenster="ja"></div>
 
@@ -33,6 +33,8 @@ Unter der Spritze war Essen eine Nebensache. Ein paar Wochen nach der letzten Do
 ## Was im Körper passiert
 
 **Die Bremse fällt weg.** GLP-1-Medikamente dämpfen den Appetit, verlangsamen die Magenentleerung und verändern die Signale zwischen Darm und Gehirn. Nach der letzten Dosis wird der Wirkstoff abgebaut, bei Semaglutid mit einer Halbwertszeit von etwa einer Woche,<sup><a href="#fn-fachinfoWegovy">8</a></sup> also über fünf bis sieben Wochen. Der Magen arbeitet wieder schneller, die Sättigung kommt später, die Gedanken ans Essen werden lauter.
+
+**Das Essensrauschen wird wieder laut.** In Interviews beschreiben Betroffene, dass unter der Therapie das ständige Kreisen der Gedanken ums Essen verstummt – im Englischen gibt es dafür ein eigenes Wort, „food noise“ – und nach dem Absetzen zurückkehrt.<sup><a href="#fn-devereHunt2026">9</a></sup> Wenn dich das gerade beschäftigt: Es ist der beschriebene Normalfall, kein Rückfall in alte Schwäche.
 
 **Die Hormone stehen auf Nachfüllen.** Das ist der Teil, der überrascht. Nach jedem größeren Gewichtsverlust, mit oder ohne Medikament, steigt das Hungerhormon Ghrelin und sinken Sättigungshormone wie Leptin. In einer Studie waren diese Veränderungen ein Jahr nach der Diät noch messbar, und die Teilnehmenden berichteten mehr Hunger als vor dem Abnehmen.<sup><a href="#fn-sumithran2011">1</a></sup> Unter der Spritze war das verdeckt. Danach nicht mehr.
 

@@ -6,7 +6,7 @@ category: "Gewicht halten"
 image: /grafiken/warum-das-gewicht-zurueckkommt.png
 order: 1
 pubDate: 2026-09-30
-updatedDate: 2026-10-06
+updatedDate: 2026-10-07
 keywords: ["jojo effekt abnehmspritze", "abnehmspritze jojo effekt", "wegovy jojo effekt", "ozempic jojo effekt", "mounjaro jojo effekt", "abnehmspritze zunehmen danach", "jojo effekt abnehmspritze vermeiden"]
 sources: ["wilding2022ext", "rubino2021", "aronne2024", "wu2025", "eclinmed2026", "sumithran2011", "fothergill2016", "wilding2021dxa", "rodriguez2025", "jensen2024", "leidy2015", "sardeli2018", "who2020", "dagLeitlinie"]
 related: ["abnehmspritze-absetzen", "muskelabbau-abnehmspritze", "gewicht-halten-nach-abnehmspritze"]
@@ -25,15 +25,23 @@ faq:
     a: "<p>Ja, in randomisierten Studien gemessen: In STEP 4 nahmen Teilnehmende nach dem Wechsel von Semaglutid auf Placebo in 48 Wochen 6,9 % zu, in SURMOUNT-4 nach dem Wechsel von Tirzepatid auf Placebo in 52 Wochen 14 %, und in der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen zwei Drittel des Verlusts zurück. Hinter jedem Mittelwert stehen Menschen, die fast alles wieder zugenommen haben, und Menschen, die fast nichts zugenommen haben.</p>"
 ---
 
-Wer die Abnehmspritze absetzt, hört oft denselben Satz: „Dann kommt eh alles zurück.“ Das stimmt so pauschal nicht. Aber es stimmt öfter, als es vielen lieb ist. Hier steht, was die Studien zeigen, warum der Körper nach dem Absetzen gegen dich arbeitet, und welche drei Dinge den Unterschied machen. Was in den Wochen nach der letzten Dosis konkret passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
+Wer die Abnehmspritze absetzt, hört oft denselben Satz: „Dann kommt eh alles zurück.“ Das stimmt so pauschal nicht. Aber es stimmt öfter, als es vielen lieb ist. Hier steht, was die Studien zeigen, warum nach dem Absetzen die Biologie gegen dich arbeitet – nicht dein Wille zu schwach ist – und welche drei Dinge den Unterschied machen. Was in den Wochen nach der letzten Dosis konkret passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
 <div data-interaktiv="absetzkurve" data-acht="ja" data-komposition="ja"></div>
 
-> **Kurz gesagt:** Ein Jahr nach dem Absetzen von Semaglutid waren im Mittel zwei Drittel des verlorenen Gewichts zurück.<sup><a href="#fn-wilding2022ext">1</a></sup> Die Zunahme wird etwa ab Woche 8 messbar.<sup><a href="#fn-wu2025">4</a></sup> Wer in der Therapiezeit trainiert hatte, hielt sein Gewicht in einer Studie auch ein Jahr ohne Medikament.<sup><a href="#fn-jensen2024">10</a></sup>
+> **Kurz gesagt:** Ein Jahr nach dem Absetzen von Semaglutid waren im Mittel zwei Drittel des verlorenen Gewichts zurück.<sup><a href="#fn-wilding2022ext">1</a></sup> Von 15 verlorenen Kilo sind das im Mittel 10. Die Zunahme wird etwa ab Woche 8 messbar.<sup><a href="#fn-wu2025">4</a></sup> Wer in der Therapiezeit trainiert hatte, hielt sein Gewicht in einer Studie auch ein Jahr ohne Medikament.<sup><a href="#fn-jensen2024">10</a></sup>
 
 ## Was der Jojo-Effekt nach der Abnehmspritze ist
 
 „Jojo-Effekt“ meint: Nach einer Phase des Abnehmens steigt das Gewicht wieder, oft bis zum Ausgangswert oder darüber. Bei GLP-1-Rezeptoragonisten wie Semaglutid oder Tirzepatid kommt eine Besonderheit dazu. Die Medikamente dämpfen den Appetit, verlangsamen die Magenentleerung und verändern die Signale zwischen Darm und Gehirn – aber nur, solange der Wirkstoff im Körper ist. Nach der letzten Dosis wird er innerhalb weniger Wochen abgebaut. Der Appetit kommt zurück, die Gewohnheiten aus der Therapiezeit bleiben. Wenn diese Gewohnheiten nur funktioniert haben, weil man keinen Hunger hatte, tragen sie jetzt nicht mehr.
+
+## Was Betroffene berichten
+
+> „Es macht mir furchtbare Angst, die Zahlen auf der Waage wieder steigen zu sehen.“
+
+Tara R., 48, nach dem Absetzen, gegenüber der Nachrichtenagentur [AP, März 2024](https://www.news4jax.com/health/2024/03/06/weight-loss-drugs-like-wegovy-are-meant-for-long-term-use-some-patients-want-to-stop/) (aus dem Englischen übersetzt).
+
+Die Angst vor der Waage ist in Berichten von Betroffenen das wiederkehrende Thema. Genau dagegen hilft eine vorher festgelegte Regel: der [Gewichtskorridor](/werkzeuge/gewichtskorridor/) sagt dir, bei welcher Zahl du nichts tust und ab wann du gegensteuerst.
 
 ## Die Zahlen aus den Studien
 

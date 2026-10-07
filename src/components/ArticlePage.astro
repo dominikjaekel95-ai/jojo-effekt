@@ -155,11 +155,11 @@ const jsonLd = [
         <GrafikEinbinden />
       </div>
 
+      <ProductTeaser position={`artikel-${entry.id}`} />
+
       <GlossarBox text={`${entry.body ?? ''} ${faqText}`} class="art-block" />
 
       <ChecklistBox position={`artikel-${entry.id}`} class="art-block" />
-
-      <ProductTeaser position={`artikel-${entry.id}`} />
 
       {entry.data.affiliate.length > 0 && (
         <AffiliateLinks

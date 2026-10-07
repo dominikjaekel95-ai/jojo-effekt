@@ -32,6 +32,8 @@ Vorlage: jeder bestehende Artikel, z. B. `src/content/wissen/kreatin-abnehmsprit
 
 ## 3. Regeln, die nie gebrochen werden
 
+- **Persona und Ton:** Jeder Text wird für die Primär-Persona „Sabine“ geschrieben (`docs/SPRACHE.md`, Abschnitte „Persona und Ton“ und „Echte Stimmen“, Dominik 07.10.2026): erst die Leserin, dann der Beleg; ein Kilo-Beispiel pro Seite; Fachbegriff beim ersten Auftritt übersetzt; echte Zitate nur nach den dortigen Regeln.
+
 - **Keine Wirkaussage über das Programm** („funktioniert“, „wirkt“, „garantiert“): Eine eigene Studie zum Programm gibt es nicht; es setzt die Studienlage in einen Wochenplan um. **Kein Health Claim** außer dem zugelassenen Wortlaut (siehe `CLAIMS.md` A), und nur für ein mögliches Starterpaket oder im Affiliate-Kontext. Nie: „verhindert den Jojo-Effekt“, „ersetzt die Spritze“, „von Ärzten empfohlen“, „kurbelt den Stoffwechsel an“.
 - **Keine Dosierungsschemata** für Medikamente: keine Titrations-, Ausschleich- oder Wiedereinstiegsschemata. Nur „Dosisstufen laut Fachinformation von x bis y mg“ und „legt die Ärztin fest“.
 - **Keine Absetz-Anleitung.** Der Satz „Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt“ steht in der Kurz-gesagt-Box oder im Einstieg, nicht öfter als zweimal pro Artikel.

@@ -772,6 +772,13 @@ export const sources: Record<string, Source> = {
     url: 'https://doi.org/10.1152/jappl.1996.81.1.232',
     note: '31 Männer, Muskelbiopsien: 20 g Kreatin pro Tag über 6 Tage erhöhten das Gesamtkreatin im Muskel um etwa 20 %; 3 g pro Tag erreichten denselben Anstieg allmählich über 28 Tage. Ohne weitere Einnahme lag der Wert 30 Tage nach dem Ende wieder beim Ausgangswert.',
   },
+  devereHunt2026: {
+    id: 'devereHunt2026',
+    short: 'de Vere Hunt et al., JAMA Netw Open 2026',
+    full: 'de Vere Hunt I, Ramirez-Posada M, Babu CS, et al. Patient Experiences With GLP-1 Receptor Agonists. JAMA Netw Open. 2026;9:e2616951.',
+    url: 'https://doi.org/10.1001/jamanetworkopen.2026.16951',
+    note: 'Qualitative Interviewstudie mit 30 Erwachsenen in den USA, die GLP-1-Rezeptoragonisten nahmen oder genommen hatten: Unter Therapie beschreiben Teilnehmende das Verstummen der ständigen Essensgedanken („food noise“); nach dem Absetzen kehren Appetit und Essensgedanken zurück, häufigste Absetzgründe waren Kosten und Nebenwirkungen.',
+  },
 };
 
 export function getSources(ids: readonly string[]): Source[] {

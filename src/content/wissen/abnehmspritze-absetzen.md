@@ -5,7 +5,7 @@ description: "Nach dem Absetzen der Abnehmspritze kommt der Appetit meist in Woc
 category: "Absetzen"
 order: 2
 pubDate: 2026-09-30
-updatedDate: 2026-10-06
+updatedDate: 2026-10-07
 toc: true
 image: /grafiken/absetzkurve-step-1.png
 keywords: ["abnehmspritze absetzen", "abnehmspritze absetzen was passiert", "wegovy absetzen", "ozempic absetzen", "mounjaro absetzen", "abnehmspritze ausschleichen", "abnehmspritze absetzen nebenwirkungen", "abnehmspritze absetzen gewicht halten", "abnehmspritze absetzen gewichtskurve"]
@@ -24,15 +24,27 @@ faq:
     a: "<p>Die Verbesserungen, die mit dem Gewichtsverlust gekommen sind, gehen mit dem Gewicht zum Teil wieder zurück. In der STEP-1-Verlängerung näherten sich Blutzucker, Blutdruck und Blutfette ein Jahr nach dem Absetzen wieder den Ausgangswerten. Wer vorher auffällige Werte hatte, sollte sie nach dem Absetzen kontrollieren lassen.</p>"
 ---
 
-Die meisten Menschen, die mit einer Abnehmspritze anfangen, hören innerhalb eines Jahres wieder auf: In einer großen US-Auswertung waren es 64,8 % der Menschen ohne Typ-2-Diabetes.<sup><a href="#fn-rodriguez2025">1</a></sup> Trotzdem gibt es kaum verlässliche Informationen darüber, was danach passiert. Dieser Artikel fasst zusammen, was die Studien zeigen – Woche für Woche – und wie du die Zeit nach der letzten Dosis vorbereitest.
+Du setzt ab – und merkst, dass dir kaum jemand sagt, wie es jetzt weitergeht. Damit bist du nicht allein: Die meisten hören innerhalb eines Jahres wieder auf, in einer großen US-Auswertung fast zwei Drittel (64,8 %) derer, die die Spritze zum Abnehmen nahmen.<sup><a href="#fn-rodriguez2025">1</a></sup> Dieser Artikel zeigt Woche für Woche, was die Studien erwarten lassen – und womit du dich vorbereitest.
 
 <div data-interaktiv="punktfeld" data-vorlage="absetzrate"></div>
 
-> **Kurz gesagt:** Der Wirkstoff ist je nach Präparat nach etwa vier bis sieben Wochen abgebaut. Der Appetit kommt früher zurück. Die Gewichtszunahme ist in Studien ab etwa Woche 8 messbar.<sup><a href="#fn-wu2025">2</a></sup> Wer vorbereitet ist, hat einen Vorsprung. In einer Studie nahm die Trainingsgruppe im Jahr nach der Therapie rund 6 kg weniger zu als die Gruppe, die nur das Medikament bekommen hatte.<sup><a href="#fn-jensen2024">6</a></sup>
+> **Kurz gesagt:** Erst passiert wenig – und genau das täuscht. Der Wirkstoff ist je nach Präparat nach etwa vier bis sieben Wochen abgebaut. Der Appetit kommt früher zurück. Die Gewichtszunahme ist in Studien ab etwa Woche 8 messbar.<sup><a href="#fn-wu2025">2</a></sup> Wer vorbereitet ist, hat einen Vorsprung. In einer Studie nahm die Trainingsgruppe im Jahr nach der Therapie rund 6 kg weniger zu als die Gruppe, die nur das Medikament bekommen hatte.<sup><a href="#fn-jensen2024">6</a></sup>
 
 ## Was passiert, wenn man die Abnehmspritze absetzt?
 
 Der Wirkstoff wird über Wochen abgebaut, der Appetit kommt zurück, und ohne Gegenmaßnahmen steigt das Gewicht: In der STEP-1-Verlängerung waren ein Jahr nach dem Absetzen von Semaglutid im Mittel zwei Drittel des verlorenen Gewichts wieder da, und Blutzucker, Blutdruck und Blutfette näherten sich den Ausgangswerten.<sup><a href="#fn-wilding2022ext">3</a></sup> Ein Entzugssyndrom gibt es nicht; was wegfällt, ist die Appetitbremse. Wer regelmäßig trainiert, hält das Gewicht in Studien deutlich besser: In der S-LiTE-Nachbeobachtung nahmen Teilnehmende nach Liraglutid allein im Jahr nach Therapieende 6,0 kg mehr zu als nach einem Trainingsprogramm.<sup><a href="#fn-jensen2024">6</a></sup>
+
+## Was Betroffene berichten
+
+> „Mit der Abnehmspritze musste ich jeden Tag auf Lebensfreude verzichten. Das ist, als habe man bisher Musik geliebt, könnte das aber nun nicht mehr empfinden.“
+
+Daniela K., 58, hat mit Wegovy zehn Kilo abgenommen und die Spritze abgesetzt ([Tagesspiegel, Oktober 2025](https://www.tagesspiegel.de/wissen/lieber-dick-als-unglucklich-warum-so-viele-menschen-die-abnehmspritze-absetzen-14476502.html); Name von der Redaktion geändert, Artikel hinter Bezahlschranke).
+
+> „Für mich ist das eine Hilfe, eine Stütze. Irgendwann muss man davon runterkommen – ich will sie nicht für immer nehmen.“
+
+Donna C., 62, kurz vor dem Absetzen, gegenüber der Nachrichtenagentur [AP, März 2024](https://www.news4jax.com/health/2024/03/06/weight-loss-drugs-like-wegovy-are-meant-for-long-term-use-some-patients-want-to-stop/) (aus dem Englischen übersetzt).
+
+Einzelne Stimmen, keine Studienergebnisse – die Zahlen stehen in den Abschnitten darüber und darunter. Wenn du selbst abgesetzt hast: [Teile deine Erfahrung](/erfahrungen/); veröffentlicht wird gekürzt, ohne Namen und nur mit deiner Einwilligung.
 
 ## Wie schnell nimmt man nach dem Absetzen zu?
 

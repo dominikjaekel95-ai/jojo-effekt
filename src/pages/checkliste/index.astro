@@ -10,6 +10,7 @@
 import Base from '../../layouts/Base.astro';
 import SeitenKopf from '../../components/SeitenKopf.astro';
 import ChecklisteForm from '../../components/ChecklisteForm.astro';
+import ProductTeaser from '../../components/ProductTeaser.astro';
 import Fn from '../../components/Fn.astro';
 import Footnotes from '../../components/Footnotes.astro';
 import { site } from '../../data/site';
@@ -54,7 +55,7 @@ const leiste = [
 ---
 <Base title={title} description={description} path="/checkliste/" jsonLd={jsonLd}>
   <SeitenKopf crumbs={[{ href: '/', label: 'Start' }, { label: 'Checkliste' }]} meta="Checkliste zum Abhaken, als Seite und als PDF" title="Die ersten 8 Wochen nach der letzten Dosis">
-    <p>Die Absetz-Studien zeigen immer denselben Verlauf: ein paar ruhige Wochen, dann ab etwa Woche 8 die Zunahme.<Fn n={fn('wu2025')} id="wu2025" /> Diese Checkliste ordnet die acht Wochen davor. Sie sagt nicht, ob oder wann du absetzt; das legst du mit deiner Ärztin oder deinem Arzt fest. Sie sagt, was du in dieser Zeit für Muskeln, Gewicht und Alltag tun kannst.</p>
+    <p>Die ersten Wochen nach der letzten Dosis fühlen sich ruhig an. In Studien bleibt das bis etwa Woche 8, dann wird die Zunahme messbar.<Fn n={fn('wu2025')} id="wu2025" /> Diese Liste macht aus den ruhigen Wochen deinen Vorsprung: messen, Protein, Training – Woche für Woche zum Abhaken. Ob und wann du absetzt, legst du mit deiner Ärztin oder deinem Arzt fest.</p>
   </SeitenKopf>
 
   <div class="container-wide k-end">
@@ -165,6 +166,7 @@ const leiste = [
           <p>
             Die Haltephase dauert länger als acht Wochen. Ein Jahr nach dem Absetzen von Semaglutid waren in der STEP-1-Verlängerung im Mittel zwei Drittel des verlorenen Gewichts wieder da.<Fn n={fn('wilding2022ext')} id="wilding2022ext" /> Was in Studien hilft, steht unter <a href="/wissen/gewicht-halten-nach-abnehmspritze/">Gewicht halten nach der Abnehmspritze</a>. Einen Trainingsplan für zwölf Wochen findest du unter <a href="/wissen/krafttraining-nach-abnehmspritze/">Krafttraining nach der Abnehmspritze</a>.
           </p>
+          <ProductTeaser position="checkliste" />
           <h2>Wann du zur Ärztin oder zum Arzt gehst</h2>
           <ul>
             <li>Bei Typ-2-Diabetes: sobald Blutzuckerwerte steigen.</li>

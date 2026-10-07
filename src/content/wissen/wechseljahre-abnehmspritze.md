@@ -1,7 +1,7 @@
 ---
 title: "Wechseljahre und Abnehmspritze: Muskeln, Knochen und Gewicht nach dem Absetzen"
 metaTitle: "Abnehmspritze in den Wechseljahren: Muskeln, Knochen, Absetzen"
-description: "Wechseljahre: Der Fettzuwachs verdoppelt sich, die Magermasse sinkt. Was das für die Abnehmspritze und die Zeit danach heißt und was bei Frauen ab 50 belegt hilft."
+description: "In den Wechseljahren wächst die Fettmasse schneller, Muskeln gehen langsam verloren. Was das für die Abnehmspritze heißt und was Frauen ab 50 belegt hilft."
 category: "Muskeln"
 order: 29
 pubDate: 2026-10-05
@@ -26,7 +26,7 @@ faq:
 
 Viele Frauen, die eine Abnehmspritze bekommen, sind mitten in oder kurz nach den Wechseljahren. Trotzdem gibt es dazu kaum eigene Studien, und die meisten Texte zum Thema enden bei „der Stoffwechsel wird langsamer“. Dieser Artikel sagt, was sich in den Wechseljahren nach Messungen tatsächlich ändert, ob die Spritze dann anders wirkt, warum das Absetzen in dieser Lebensphase zwei Verluste zusammenbringt und was in Studien an Frauen nach den Wechseljahren belegt hilft. Was in den Wochen nach der letzten Dosis insgesamt passiert, steht unter [Abnehmspritze absetzen](/wissen/abnehmspritze-absetzen/).
 
-> **Kurz gesagt:** Die Wechseljahre beschleunigen die Gewichtszunahme nicht, aber sie verdoppeln den Fettzuwachs und senken die fettfreie Masse um etwa 0,2 % pro Jahr.<sup><a href="#fn-greendale2019">1</a></sup> Die Spritze wirkt in dieser Phase nach den vorliegenden Daten nicht schlechter.<sup><a href="#fn-tchang2025">4</a></sup> Beim Absetzen trifft der Muskelverlust durch die Therapie auf den durch das Alter; dazu kommt der Verlust an Knochendichte. Was belegt dagegen wirkt: zwei Krafteinheiten pro Woche, Protein am oberen Rand, Alltagsbewegung. Hormontherapie bewerten wir nicht; das ist ein Arztgespräch. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
+> **Kurz gesagt:** Die Wechseljahre beschleunigen die Gewichtszunahme nicht, aber sie verdoppeln den Fettzuwachs und senken die fettfreie Masse – also auch Muskeln – um etwa 0,2 % pro Jahr.<sup><a href="#fn-greendale2019">1</a></sup> Die Spritze wirkt in dieser Phase nach den vorliegenden Daten nicht schlechter.<sup><a href="#fn-tchang2025">4</a></sup> Beim Absetzen trifft der Muskelverlust durch die Therapie auf den durch das Alter; dazu kommt der Verlust an Knochendichte. Was belegt dagegen wirkt: zwei Krafteinheiten pro Woche, Protein am oberen Rand, Alltagsbewegung. Hormontherapie bewerten wir nicht; das ist ein Arztgespräch. Ob und wie du dein Medikament absetzt, besprichst du mit deiner Ärztin oder deinem Arzt.
 
 ## Was sich in den Wechseljahren wirklich ändert
 

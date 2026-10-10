@@ -114,22 +114,22 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/glossar/taillenumfang/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
 | https://nachderspritze.de/glossar/telogenes-effluvium/ | neu in Sitemap | 2026-10-01 | Sitemap genügt (keine Einzelanmeldung) |
 | https://nachderspritze.de/ | Redesign „Kalk“: Programm und Warteliste statt Set, neue Meta-Description | 2026-10-06 | angemeldet 2026-10-07 |
-| https://nachderspritze.de/ernaehrungsplan/ | Redesign „Kalk“: 14 Tage, 56 Pläne, Vorlieben; Titel und Description neu | 2026-10-06 | offen |
-| https://nachderspritze.de/wissen/kreatin-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
-| https://nachderspritze.de/wissen/saxenda-absetzen/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
+| https://nachderspritze.de/ernaehrungsplan/ | Redesign „Kalk“: 14 Tage, 56 Pläne, Vorlieben; Titel und Description neu | 2026-10-06 | angemeldet 2026-10-10 |
+| https://nachderspritze.de/wissen/kreatin-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | angemeldet 2026-10-10 |
+| https://nachderspritze.de/wissen/saxenda-absetzen/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | angemeldet 2026-10-10 |
 | https://nachderspritze.de/wissen/jojo-effekt-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | angemeldet 2026-10-07 |
 | https://nachderspritze.de/wissen/abnehmspritze-absetzen/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | angemeldet 2026-10-07 |
-| https://nachderspritze.de/wissen/heisshunger-nach-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
-| https://nachderspritze.de/wissen/ozempic-absetzen/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
-| https://nachderspritze.de/wissen/supplements-nach-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | offen |
-| https://nachderspritze.de/grafiken/ | Redesign „Kalk“: alle Grafiken neu gezeichnet, 18 neue | 2026-10-06 | offen |
+| https://nachderspritze.de/wissen/heisshunger-nach-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | angemeldet 2026-10-10 |
+| https://nachderspritze.de/wissen/ozempic-absetzen/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | angemeldet 2026-10-10 |
+| https://nachderspritze.de/wissen/supplements-nach-abnehmspritze/ | Redesign „Kalk“: neue Struktur, interaktive Elemente | 2026-10-06 | angemeldet 2026-10-10 |
+| https://nachderspritze.de/grafiken/ | Redesign „Kalk“: alle Grafiken neu gezeichnet, 18 neue | 2026-10-06 | angemeldet 2026-10-10 |
 | https://nachderspritze.de/marktradar/ | Redesign „Kalk“: neue Struktur | 2026-10-06 | offen |
 | https://nachderspritze.de/wissen/ | Redesign „Kalk“: neue Struktur | 2026-10-06 | offen |
 | https://nachderspritze.de/erfahrungen/ | vorerst noindex bis zum ersten echten Bericht, dann wieder indexierbar machen und anmelden | 2026-10-07 | noindex |
 | https://nachderspritze.de/ | Neue Überschrift und neuer Titel „Dein neues Gewicht braucht einen Plan“ | 2026-10-07 | angemeldet 2026-10-07 |
 | https://nachderspritze.de/wissen/abnehmspritze-absetzen/ | Neuer Einstieg, Abschnitt „Was Betroffene berichten“ mit belegten Zitaten | 2026-10-07 | angemeldet 2026-10-07 |
 | https://nachderspritze.de/wissen/jojo-effekt-abnehmspritze/ | Abschnitt „Was Betroffene berichten“, Kilo-Beispiel im Kurz-gesagt | 2026-10-07 | angemeldet 2026-10-07 |
-| https://nachderspritze.de/wissen/heisshunger-nach-abnehmspritze/ | Neuer Einstieg, Absatz „Essensrauschen“ mit neuer Quelle | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/heisshunger-nach-abnehmspritze/ | Neuer Einstieg, Absatz „Essensrauschen“ mit neuer Quelle | 2026-10-07 | angemeldet 2026-10-10 |
 | https://nachderspritze.de/wissen/gewicht-halten-nach-abnehmspritze/ | Neuer Einstieg (Vorsprung statt Uhr) | 2026-10-07 | offen |
 | https://nachderspritze.de/wissen/wechseljahre-abnehmspritze/ | Meta-Description ohne „Magermasse“, verständlicher | 2026-10-07 | offen |
 | https://nachderspritze.de/checkliste/ | Neues Intro (Vorsprung), Programm-Hinweis | 2026-10-07 | offen |
@@ -142,3 +142,14 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/kalorienbedarf-nach-abnehmspritze/ | Ton „Sabine“: Kurz gesagt mit Alltagsbeispiel, du-Form | 2026-10-07 | offen |
 | https://nachderspritze.de/glossar/ | Alle Kurzdefinitionen neu in Alltagssprache | 2026-10-07 | offen |
 | https://nachderspritze.de/wissen/absetzen/ | Themenseite: erster Absatz neu, du-Form | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/abnehmspritze-gesicht/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/eisen-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/feiertage-nach-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/glucomannan-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/magnesium-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/omega-3-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/vitamin-b12-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/vitamin-d-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/ernaehrung-nach-abnehmspritze/ | aktualisiert (lastmod 2026-10-07) | 2026-10-10 | offen |

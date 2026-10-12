@@ -136,9 +136,9 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/wegovy-absetzen/ | Ton „Sabine“: Einstieg, Kurz gesagt und Fließtext in du, Kilo-Beispiel | 2026-10-07 | angemeldet 2026-10-11 |
 | https://nachderspritze.de/wissen/mounjaro-absetzen/ | Ton „Sabine“: Einstieg, Kurz gesagt und Fließtext in du | 2026-10-07 | angemeldet 2026-10-11 |
 | https://nachderspritze.de/wissen/abnehmpille-absetzen/ | Ton „Sabine“: Einstieg, Kurz gesagt und Fließtext in du | 2026-10-07 | angemeldet 2026-10-11 |
-| https://nachderspritze.de/wissen/muskelabbau-abnehmspritze/ | Ton „Sabine“: Kurz gesagt neu, Fachbegriffe übersetzt | 2026-10-07 | offen |
-| https://nachderspritze.de/wissen/protein-abnehmspritze/ | Ton „Sabine“: Kurz gesagt mit Rechenbeispiel, du-Form | 2026-10-07 | offen |
-| https://nachderspritze.de/wissen/krafttraining-nach-abnehmspritze/ | Ton „Sabine“: Kurz gesagt neu, du-Form | 2026-10-07 | offen |
+| https://nachderspritze.de/wissen/muskelabbau-abnehmspritze/ | Ton „Sabine“: Kurz gesagt neu, Fachbegriffe übersetzt | 2026-10-07 | angemeldet 2026-10-12 |
+| https://nachderspritze.de/wissen/protein-abnehmspritze/ | Ton „Sabine“: Kurz gesagt mit Rechenbeispiel, du-Form | 2026-10-07 | angemeldet 2026-10-12 |
+| https://nachderspritze.de/wissen/krafttraining-nach-abnehmspritze/ | Ton „Sabine“: Kurz gesagt neu, du-Form | 2026-10-07 | angemeldet 2026-10-12 |
 | https://nachderspritze.de/wissen/kalorienbedarf-nach-abnehmspritze/ | Ton „Sabine“: Kurz gesagt mit Alltagsbeispiel, du-Form | 2026-10-07 | offen |
 | https://nachderspritze.de/glossar/ | Alle Kurzdefinitionen neu in Alltagssprache | 2026-10-07 | offen |
 | https://nachderspritze.de/wissen/absetzen/ | Themenseite: erster Absatz neu, du-Form | 2026-10-07 | offen |

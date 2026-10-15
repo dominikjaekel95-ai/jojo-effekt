@@ -139,14 +139,14 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/muskelabbau-abnehmspritze/ | Ton „Sabine“: Kurz gesagt neu, Fachbegriffe übersetzt | 2026-10-07 | angemeldet 2026-10-12 |
 | https://nachderspritze.de/wissen/protein-abnehmspritze/ | Ton „Sabine“: Kurz gesagt mit Rechenbeispiel, du-Form | 2026-10-07 | angemeldet 2026-10-12 |
 | https://nachderspritze.de/wissen/krafttraining-nach-abnehmspritze/ | Ton „Sabine“: Kurz gesagt neu, du-Form | 2026-10-07 | angemeldet 2026-10-12 |
-| https://nachderspritze.de/wissen/kalorienbedarf-nach-abnehmspritze/ | Ton „Sabine“: Kurz gesagt mit Alltagsbeispiel, du-Form | 2026-10-07 | offen |
-| https://nachderspritze.de/glossar/ | Alle Kurzdefinitionen neu in Alltagssprache | 2026-10-07 | offen |
-| https://nachderspritze.de/wissen/absetzen/ | Themenseite: erster Absatz neu, du-Form | 2026-10-07 | offen |
-| https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
-| https://nachderspritze.de/wissen/abnehmspritze-gesicht/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
-| https://nachderspritze.de/wissen/eisen-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
-| https://nachderspritze.de/wissen/feiertage-nach-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
-| https://nachderspritze.de/wissen/glucomannan-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/kalorienbedarf-nach-abnehmspritze/ | Ton „Sabine“: Kurz gesagt mit Alltagsbeispiel, du-Form | 2026-10-07 | angemeldet 2026-10-15 |
+| https://nachderspritze.de/glossar/ | Alle Kurzdefinitionen neu in Alltagssprache | 2026-10-07 | angemeldet 2026-10-15 |
+| https://nachderspritze.de/wissen/absetzen/ | Themenseite: erster Absatz neu, du-Form | 2026-10-07 | angemeldet 2026-10-15 |
+| https://nachderspritze.de/wissen/abnehmpille-oder-spritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-15 |
+| https://nachderspritze.de/wissen/abnehmspritze-gesicht/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-15 |
+| https://nachderspritze.de/wissen/eisen-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-15 |
+| https://nachderspritze.de/wissen/feiertage-nach-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-15 |
+| https://nachderspritze.de/wissen/glucomannan-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-15 |
 | https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
 | https://nachderspritze.de/wissen/magnesium-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
 | https://nachderspritze.de/wissen/omega-3-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |

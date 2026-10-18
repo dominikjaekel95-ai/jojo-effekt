@@ -147,9 +147,9 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/eisen-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-15 |
 | https://nachderspritze.de/wissen/feiertage-nach-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-15 |
 | https://nachderspritze.de/wissen/glucomannan-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-15 |
-| https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
-| https://nachderspritze.de/wissen/magnesium-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
-| https://nachderspritze.de/wissen/omega-3-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
-| https://nachderspritze.de/wissen/vitamin-b12-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
-| https://nachderspritze.de/wissen/vitamin-d-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | offen |
-| https://nachderspritze.de/wissen/ernaehrung-nach-abnehmspritze/ | aktualisiert (lastmod 2026-10-07) | 2026-10-10 | offen |
+| https://nachderspritze.de/wissen/haarausfall-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-18 |
+| https://nachderspritze.de/wissen/magnesium-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-18 |
+| https://nachderspritze.de/wissen/omega-3-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-18 |
+| https://nachderspritze.de/wissen/vitamin-b12-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-18 |
+| https://nachderspritze.de/wissen/vitamin-d-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-18 |
+| https://nachderspritze.de/wissen/ernaehrung-nach-abnehmspritze/ | aktualisiert (lastmod 2026-10-07) | 2026-10-10 | angemeldet 2026-10-18 |

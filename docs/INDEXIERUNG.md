@@ -153,3 +153,4 @@ Angemeldet vor dieser Datei (Stand 29./30.09.): `/`, `/wissen/`, `/ueber/`, `/wi
 | https://nachderspritze.de/wissen/vitamin-b12-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-18 |
 | https://nachderspritze.de/wissen/vitamin-d-abnehmspritze/ | aktualisiert (lastmod 2026-10-06) | 2026-10-10 | angemeldet 2026-10-18 |
 | https://nachderspritze.de/wissen/ernaehrung-nach-abnehmspritze/ | aktualisiert (lastmod 2026-10-07) | 2026-10-10 | angemeldet 2026-10-18 |
+| https://nachderspritze.de/wissen/studien/ | neu in Sitemap | 2026-11-07 | bereits indexiert 2026-11-07 (laut URL-Prüfung auf Google, keine Anmeldung nötig) |
